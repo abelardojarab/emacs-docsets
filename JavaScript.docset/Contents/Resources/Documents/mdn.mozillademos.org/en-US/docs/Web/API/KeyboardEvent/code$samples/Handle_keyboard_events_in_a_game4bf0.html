@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/KeyboardEvent/code$samples/Handle_keyboard_events_in_a_game?revision=1111279 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:54:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            .world {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  width: 400px;
+  height: 400px;
+}
+
+#spaceship {
+  fill: orange;
+  stroke: red;
+  stroke-width: 2px;
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <p>Use the WASD (ZQSD on AZERTY) keys to move and steer.</p>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world">
+  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+</svg>
+<script>refresh();</script>
+        
+        
+            <script type="text/javascript">
+                let shipSize = {
+  width: 30,
+  height: 30
+};
+
+let position = {
+  x: 200,
+  y: 200
+};
+
+let moveRate = 9;
+let turnRate = 5;
+
+let angle = 0;
+
+let spaceship = document.getElementById("spaceship"); function updatePosition(offset) {
+  let rad = angle * (Math.PI/180);
+  position.x += (Math.sin(rad) * offset);
+  position.y -= (Math.cos(rad) * offset);
+ 
+  if (position.x < 0) {
+    position.x = 399;
+  } else if (position.x > 399) {
+    position.x = 0;
+  }
+ 
+  if (position.y < 0) {
+    position.y = 399;
+  } else if (position.y > 399) {
+    position.y = 0;
+  }
+} function refresh() {
+  let x = position.x - (shipSize.width/2);
+  let y = position.y - (shipSize.height/2);
+  let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
+
+  spaceship.setAttribute("transform", transform);
+} window.addEventListener("keydown", function(event) {
+  if (event.preventDefaulted) {
+    return; // Do nothing if event already handled
+  }
+ 
+  switch(event.code) {
+    case "KeyS":
+    case "ArrowDown":
+      // Handle "back"
+      updatePosition(-moveRate);
+      break;
+    case "KeyW":
+    case "ArrowUp":
+      // Handle "forward"
+      updatePosition(moveRate);
+      break;
+    case "KeyA":
+    case "ArrowLeft":
+      // Handle "turn left"
+      angle -= turnRate;
+      break;
+    case "KeyD":
+    case "ArrowRight":
+      // Handle "turn right"
+      angle += turnRate;
+      break;
+  }
+ 
+  refresh();
+ 
+  // Consume the event so it doesn't get handled twice
+  event.preventDefault();
+}, true);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/KeyboardEvent/code$samples/Handle_keyboard_events_in_a_game?revision=1111279 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:54:32 GMT -->
+</html>

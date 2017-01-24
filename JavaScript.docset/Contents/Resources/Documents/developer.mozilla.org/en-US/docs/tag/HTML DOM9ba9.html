@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML DOM?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:06:26 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML DOM?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:49:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FHTML%2520DOM%3Fpage%3D3" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/HTML%20DOM?page=3" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/HTML%20DOM?page=3" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FHTML%2520DOM%3Fpage%3D3" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FHTML%2520DOM%3Fpage%3D3" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/HTML%2520DOM%3Fpage%3D3">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -301,13 +283,97 @@
   
   </ol>
 
-        <p>Found 336 documents</p>
+        <p>Found 362 documents</p>
         <ul class="document-list">
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/currentTime.html">Web/API/HTMLMediaElement/currentTime</a>
+                
+                  <small>The HTMLMediaElement.currentTime property gives the current playback time in seconds. Setting ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/defaultMuted.html">Web/API/HTMLMediaElement/defaultMuted</a>
+                
+                  <small>The HTMLMediaElement.defaultMuted property reflects the muted HTML attribute, which indicates ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/defaultPlaybackRate.html">Web/API/HTMLMediaElement/defaultPlaybackRate</a>
+                
+                  <small>The HTMLMediaElement.defaultPlaybackRate property indicates the default playback rate for the media.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/duration.html">Web/API/HTMLMediaElement/duration</a>
+                
+                  <small>The HTMLMediaElement.duration property gives the length of the media in seconds, or zero if no ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/ended.html">Web/API/HTMLMediaElement/ended</a>
+                
+                  <small>The HTMLMediaElement.ended indicates whether the media element has ended playback.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/error.html">Web/API/HTMLMediaElement/error</a>
+                
+                  <small>The HTMLMediaElement.error is the MediaError object for the most recent error, or null if there ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/initialTime.html">Web/API/HTMLMediaElement/initialTime</a>
+                
+                  <small>The HTMLMediaElement.initialTime is&nbsp;the initial playback position in seconds.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/loop.html">Web/API/HTMLMediaElement/loop</a>
+                
+                  <small>The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/mediaGroup.html">Web/API/HTMLMediaElement/mediaGroup</a>
+                
+                  <small>The HTMLMediaElement.mediaGroup property reflects the mediagroup HTML attribute, which indicates ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/muted.html">Web/API/HTMLMediaElement/muted</a>
+                
+                  <small>The HTMLMediaElement.muted indicates whether the media element muted.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/networkState.html">Web/API/HTMLMediaElement/networkState</a>
+                
+                  <small>The HTMLMediaElement.networkState property indicates the current state of the fetching of media ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/paused.html">Web/API/HTMLMediaElement/paused</a>
+                
+                  <small>The read-only HTMLMediaElement.paused property tells&nbsp;whether the media element is paused.</small>
+                
+            </li>
           
             <li>
               <a href="../Web/API/HTMLMediaElement/playbackRate.html">Web/API/HTMLMediaElement/playbackRate</a>
                 
-                  <small>The HTMLMediaElement.playbackRate property sets&nbsp;the&nbsp;rate at which the media is being played back. ...</small>
+                  <small>The HTMLMediaElement.playbackRate property sets&nbsp;the&nbsp;rate at which the media is being played ...</small>
                 
             </li>
           
@@ -315,6 +381,20 @@
               <a href="../Web/API/HTMLMediaElement/readyState.html">Web/API/HTMLMediaElement/readyState</a>
                 
                   <small>The HTMLMediaElement.readyState property indicates the readiness state of the media.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/src.html">Web/API/HTMLMediaElement/src</a>
+                
+                  <small>The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLMediaElement/srcObject.html">Web/API/HTMLMediaElement/srcObject</a>
+                
+                  <small>The srcObject property of the HTMLMediaElement interface sets or returns the object which serves ...</small>
                 
             </li>
           
@@ -335,7 +415,7 @@
             <li>
               <a href="../Web/API/HTMLModElement.html">Web/API/HTMLModElement</a>
                 
-                  <small>The HTMLModElement interface provides special properties (beyond the regular methods and properties ...</small>
+                  <small>The HTMLModElement interface provides special properties (beyond the regular methods and ...</small>
                 
             </li>
           
@@ -349,7 +429,7 @@
             <li>
               <a href="../Web/API/HTMLObjectElement/typeMustMatch.html">Web/API/HTMLObjectElement/typeMustMatch</a>
                 
-                  <small>The HTMLObjectElement.typeMustMatch property is a Boolean reflects the typemustmatch attribute of ...</small>
+                  <small>The HTMLObjectElement.typeMustMatch property is a Boolean reflects the typemustmatch attribute ...</small>
                 
             </li>
           
@@ -370,14 +450,14 @@
             <li>
               <a href="../Web/API/HTMLOptionElement.html">Web/API/HTMLOptionElement</a>
                 
-                  <small>The HTMLOptionElement interface represents option elements and inherits all classes and methods of ...</small>
+                  <small>The HTMLOptionElement interface represents option elements and inherits all classes and methods ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLOptionElement/Option.html">Web/API/HTMLOptionElement/Option</a>
                 
-                  <small>Constructor&nbsp;for creating an HTMLOptionElement. The Option constructor is from the very early days ...</small>
+                  <small>Constructor&nbsp;for creating an HTMLOptionElement. The Option constructor is from the very early ...</small>
                 
             </li>
           
@@ -405,14 +485,14 @@
             <li>
               <a href="../Web/API/HTMLParamElement.html">Web/API/HTMLParamElement</a>
                 
-                  <small>The HTMLParamElement interface provides special properties (beyond those of the regular HTMLElement ...</small>
+                  <small>The HTMLParamElement interface provides special properties (beyond those of the regular ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLPictureElement.html">Web/API/HTMLPictureElement</a>
                 
-                  <small>The HTMLPictureElement interface represents a picture HTML element. It doesn't implement specific ...</small>
+                  <small>The HTMLPictureElement interface represents a picture HTML element. It doesn't implement ...</small>
                 
             </li>
           
@@ -440,14 +520,14 @@
             <li>
               <a href="../Web/API/HTMLScriptElement.html">Web/API/HTMLScriptElement</a>
                 
-                  <small>HTML script elements expose the HTMLScriptElement interface, which provides special properties and ...</small>
+                  <small>HTML script elements expose the HTMLScriptElement interface, which provides special properties ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLSelectElement.html">Web/API/HTMLSelectElement</a>
                 
-                  <small>The HTMLSelectElement interface represents a select HTML Element. These elements also share all of ...</small>
+                  <small>The HTMLSelectElement interface represents a select HTML Element. These elements also share all ...</small>
                 
             </li>
           
@@ -462,6 +542,13 @@
               <a href="../Web/API/HTMLSelectElement/checkValidity.html">Web/API/HTMLSelectElement/checkValidity</a>
                 
                   <small>The HTMLSelectElement.checkValidity() method checks whether the element has any constraints and ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLSelectElement/disabled.html">Web/API/HTMLSelectElement/disabled</a>
+                
+                  <small>The HTMLSelectElement.disabled Is a Boolean that reflects the disabled HTML attribute, which ...</small>
                 
             </li>
           
@@ -482,21 +569,28 @@
             <li>
               <a href="../Web/API/HTMLSelectElement/remove.html">Web/API/HTMLSelectElement/remove</a>
                 
-                  <small>The HTMLSelectElement.remove() method removes the element at the specified index from the options ...</small>
+                  <small>The HTMLSelectElement.remove() method removes the element at the specified index from the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLSelectElement/selectedIndex.html">Web/API/HTMLSelectElement/selectedIndex</a>
+                
+                  <small>The HTMLSelectElement.selectedIndex is a long that reflects the index of the first selected ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLSelectElement/setCustomValidity.html">Web/API/HTMLSelectElement/setCustomValidity</a>
                 
-                  <small>The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection ...</small>
+                  <small>The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLSelectElement/type.html">Web/API/HTMLSelectElement/type</a>
                 
-                  <small>The HTMLSelectElement.type read-only property returns the form control's type. The possible values ...</small>
+                  <small>The HTMLSelectElement.type read-only property returns the form control's type. The possible ...</small>
                 
             </li>
           
@@ -517,21 +611,21 @@
             <li>
               <a href="../Web/API/HTMLSourceElement.html">Web/API/HTMLSourceElement</a>
                 
-                  <small>The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement object ...</small>
+                  <small>The HTMLSourceElement interface provides special properties (beyond the regular HTMLElement ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLSpanElement.html">Web/API/HTMLSpanElement</a>
                 
-                  <small>The HTMLSpanElement interface represents a span element and derives from the HTMLElement interface, ...</small>
+                  <small>The HTMLSpanElement interface represents a span element and derives from the HTMLElement ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLStyleElement.html">Web/API/HTMLStyleElement</a>
                 
-                  <small>The HTMLStyleElement interface represents a style element. It inherits properties and methods from ...</small>
+                  <small>The HTMLStyleElement interface represents a style element. It inherits properties and methods ...</small>
                 
             </li>
           
@@ -559,7 +653,7 @@
             <li>
               <a href="../Web/API/HTMLTableCaptionElement.html">Web/API/HTMLTableCaptionElement</a>
                 
-                  <small>The HTMLTableCaptionElement interface special properties (beyond the regular HTMLElement interface ...</small>
+                  <small>The HTMLTableCaptionElement interface special properties (beyond the regular HTMLElement ...</small>
                 
             </li>
           
@@ -573,14 +667,14 @@
             <li>
               <a href="../Web/API/HTMLTableColElement.html">Web/API/HTMLTableColElement</a>
                 
-                  <small>The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface it ...</small>
+                  <small>The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLTableDataCellElement.html">Web/API/HTMLTableDataCellElement</a>
                 
-                  <small>The HTMLTableDataCellElement interface provides special properties and methods (beyond the regular ...</small>
+                  <small>The HTMLTableDataCellElement interface provides special properties and methods (beyond the ...</small>
                 
             </li>
           
@@ -622,7 +716,7 @@
             <li>
               <a href="../Web/API/HTMLTableElement/cellPadding.html">Web/API/HTMLTableElement/cellPadding</a>
                 
-                  <small>The HTMLTableElement.cellPadding property represents the padding around the individual cells of the ...</small>
+                  <small>The HTMLTableElement.cellPadding property represents the padding around the individual cells of ...</small>
                 
             </li>
           
@@ -643,14 +737,14 @@
             <li>
               <a href="../Web/API/HTMLTableElement/createTFoot.html">Web/API/HTMLTableElement/createTFoot</a>
                 
-                  <small>The HTMLTableElement.createTFoot() method returns the tfoot element associated with the table, of ...</small>
+                  <small>The HTMLTableElement.createTFoot() method returns the tfoot element associated with the table, ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLTableElement/createTHead.html">Web/API/HTMLTableElement/createTHead</a>
                 
-                  <small>The HTMLTableElement.createTHead() method returns the thead element association with the table, of ...</small>
+                  <small>The HTMLTableElement.createTHead() method returns the thead element association with the table, ...</small>
                 
             </li>
           
@@ -699,7 +793,7 @@
             <li>
               <a href="../Web/API/HTMLTableElement/rows.html">Web/API/HTMLTableElement/rows</a>
                 
-                  <small>The HTMLTableElement.rows read-only property returns a live HTMLCollection of all the rows in the ...</small>
+                  <small>The HTMLTableElement.rows read-only property returns a live HTMLCollection of all the rows in ...</small>
                 
             </li>
           
@@ -727,14 +821,14 @@
             <li>
               <a href="../Web/API/HTMLTableElement/tFoot.html">Web/API/HTMLTableElement/tFoot</a>
                 
-                  <small>The HTMLTableElement.tFoot property represents the table's tfoot element. Its value can be null if ...</small>
+                  <small>The HTMLTableElement.tFoot property represents the table's tfoot element. Its value can be null ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLTableElement/tHead.html">Web/API/HTMLTableElement/tHead</a>
                 
-                  <small>The HTMLTableElement.tHead represents&nbsp; the table's thead element. Its value can be null if there is ...</small>
+                  <small>The HTMLTableElement.tHead represents&nbsp; the table's thead element. Its value can be null if there ...</small>
                 
             </li>
           
@@ -755,7 +849,7 @@
             <li>
               <a href="../Web/API/HTMLTableRowElement.html">Web/API/HTMLTableRowElement</a>
                 
-                  <small>The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement ...</small>
+                  <small>The HTMLTableRowElement interface provides special properties and methods (beyond the ...</small>
                 
             </li>
           
@@ -769,7 +863,7 @@
             <li>
               <a href="../Web/API/HTMLTableRowElement/rowIndex.html">Web/API/HTMLTableRowElement/rowIndex</a>
                 
-                  <small>The HTMLTableRowElement.rowIndex property represents the position of a row in relation to the whole ...</small>
+                  <small>The HTMLTableRowElement.rowIndex property represents the position of a row in relation to the ...</small>
                 
             </li>
           
@@ -783,14 +877,14 @@
             <li>
               <a href="../Web/API/HTMLTextAreaElement.html">Web/API/HTMLTextAreaElement</a>
                 
-                  <small>The HTMLTextAreaElement interface, which provides special properties and methods (beyond the ...</small>
+                  <small>The HTMLTextAreaElement interface provides special properties and methods for manipulating the ...</small>
                 
             </li>
           
             <li>
               <a href="../Web/API/HTMLTimeElement.html">Web/API/HTMLTimeElement</a>
                 
-                  <small>The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface ...</small>
+                  <small>The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement ...</small>
                 
             </li>
           
@@ -804,7 +898,7 @@
             <li>
               <a href="../Web/API/HTMLTitleElement.html">Web/API/HTMLTitleElement</a>
                 
-                  <small>The HTMLTitleElement interface contains the title for a document. This element inherits all of the ...</small>
+                  <small>The HTMLTitleElement interface contains the title for a document. This element inherits all of ...</small>
                 
             </li>
           
@@ -812,6 +906,13 @@
               <a href="../Web/API/HTMLTrackElement.html">Web/API/HTMLTrackElement</a>
                 
                   <small>The HTMLTrackElement interface provides access to the properties of track elements, as well as ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/HTMLTrackElement/src.html">Web/API/HTMLTrackElement/src</a>
+                
+                  <small>The HTMLTrackElement.src property reflects the value of the track element's src attribute, which ...</small>
                 
             </li>
           
@@ -846,14 +947,7 @@
             <li>
               <a href="../Web/API/Location.html">Web/API/Location</a>
                 
-                  <small>The Location interface represents the location (URL) of the object it is linked to. Changes done on ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Navigator.html">Web/API/Navigator</a>
-                
-                  <small>The Navigator interface represents the state and the identity of the user agent. It allows scripts ...</small>
+                  <small>The Location interface represents the location (URL) of the object it is linked to. Changes done ...</small>
                 
             </li>
           
@@ -889,118 +983,6 @@
               <a href="../Web/API/NavigatorID.html">Web/API/NavigatorID</a>
                 
                   <small>The NavigatorID interface contains methods and properties related to the identity of the browser.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/PromiseRejectionEvent.html">Web/API/PromiseRejectionEvent</a>
-                
-                  <small>The PromiseRejectionEvent interface represents events which are fired when JavaScript Promise s are ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/PromiseRejectionEvent/promise.html">Web/API/PromiseRejectionEvent/promise</a>
-                
-                  <small>The PromiseRejectionEvent.promise read-only property indicates the JavaScript Promise which has ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/PromiseRejectionEvent/PromiseRejectionEvent.html">Web/API/PromiseRejectionEvent/PromiseRejectionEvent</a>
-                
-                  <small>The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/PromiseRejectionEvent/reason.html">Web/API/PromiseRejectionEvent/reason</a>
-                
-                  <small>The PromiseRejectionEvent.reason read-only property is any JavaScript value or Object which ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/RadioNodeList.html">Web/API/RadioNodeList</a>
-                
-                  <small>The RadioNodeList interface represents a collection of elements in a form or a fieldset element.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/RadioNodeList/value.html">Web/API/RadioNodeList/value</a>
-                
-                  <small>If the underlying element collection contains radio buttons, the RadioNodeList.value property ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/TimeRanges.html">Web/API/TimeRanges</a>
-                
-                  <small>The TimeRanges interface is used to represent a set of time ranges, primarily for the purpose of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/TimeRanges/end.html">Web/API/TimeRanges/end</a>
-                
-                  <small>Returns the time offset at which a specified time range ends.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/TimeRanges/length.html">Web/API/TimeRanges/length</a>
-                
-                  <small>The TimeRanges.length read-only property returns the number of ranges in the object.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/TimeRanges/start.html">Web/API/TimeRanges/start</a>
-                
-                  <small>Returns the time offset at which a specified time range begins.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/ValidityState.html">Web/API/ValidityState</a>
-                
-                  <small>The ValidityState interface represents the validity states that an element can be in, with respect ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/ValidityState/badInput.html">Web/API/ValidityState/badInput</a>
-                
-                  <small>The read-only property ValidityState.badInput indicates if the user has provided input that the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Window/applicationCache.html">Web/API/Window/applicationCache</a>
-                
-                  <small>Returns a reference to the application cache object for the window.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Window/closed.html">Web/API/Window/closed</a>
-                
-                  <small>This read-only property indicates whether the referenced window is closed or not.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Window/controllers.html">Web/API/Window/controllers</a>
-                
-                  <small>Returns the XUL controllers of the chrome window.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Window/convertPointFromNodeToPage.html">Web/API/Window/convertPointFromNodeToPage</a>
-                
-                  <small>The Window.convertPointFromNodeToPage() method converts a Point object from coordinates based on ...</small>
                 
             </li>
           
@@ -1048,12 +1030,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1061,14 +1043,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1076,127 +1059,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1211,28 +1317,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML DOM?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:06:26 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/HTML DOM?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:49:21 GMT -->
 </body></html>

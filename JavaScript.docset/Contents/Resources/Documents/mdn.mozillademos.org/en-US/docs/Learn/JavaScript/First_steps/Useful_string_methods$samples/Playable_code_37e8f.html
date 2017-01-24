@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$samples/Playable_code_3?revision=1149160 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <div class="output" style="min-height: 125px;">
+
+<ul>
+
+</ul>
+
+</div>
+
+<textarea id="code" class="playable-code" style="height: 285px;">
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                'GNF576746573fhdg4737dh4;Greenfield',
+                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                'SYB4f65hf75f736463;Stalybridge',
+                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for(var i = 0; i < stations.length; i++) {
+  var input = stations[i];
+  // write your code just below here   
+
+  var result = input;
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+        
+        
+            <script type="text/javascript">
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var final = code + \': \' + name;\n  var result = final;\n var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$samples/Playable_code_3?revision=1149160 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+</html>

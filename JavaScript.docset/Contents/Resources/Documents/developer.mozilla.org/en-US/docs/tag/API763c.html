@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:56 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:30:37 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D38" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/API?page=38" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/API?page=38" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D38" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D38" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D38">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -281,14 +263,6 @@
   
   
     <li>
-      <a href="APIbd1b.html?page=33">33</a>
-    </li>
-  
-    <li>
-      <a href="APIe51f.html?page=34">34</a>
-    </li>
-  
-    <li>
       <a href="APIe24e.html?page=35">35</a>
     </li>
   
@@ -312,6 +286,15 @@
       <a href="APIce8a.html?page=40">40</a>
     </li>
   
+    <li>
+      <a href="API6c2f.html?page=41">41</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -322,706 +305,706 @@
   
   </ol>
 
-        <p>Found 3965 documents</p>
+        <p>Found 4384 documents</p>
         <ul class="document-list">
           
             <li>
-              <a href="../Web/API/WebRTC_API/Overview.html">Web/API/WebRTC_API/Overview</a>
+              <a href="../Web/API/TextEncoder/encoding.html">Web/API/TextEncoder/encoding</a>
                 
-                  <small>WebRTC consists of several interrelated APIs and protocols which work together to support the ...</small>
+                  <small>The TextEncoder.encoding read-only property returns a DOMString containing the name of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebRTC_API/Protocols.html">Web/API/WebRTC_API/Protocols</a>
+              <a href="../Web/API/TextEncoder/TextEncoder.html">Web/API/TextEncoder/TextEncoder</a>
                 
-                  <small>This article introduces the protocols on top of which the WebRTC API is built.</small>
+                  <small>The TextEncoder() constructor returns a newly created utf-8 TextEncoder object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebRTC_API/Signaling_and_video_calling.html">Web/API/WebRTC_API/Signaling_and_video_calling</a>
+              <a href="../Web/API/TextMetrics.html">Web/API/TextMetrics</a>
                 
-                  <small>Although WebRTC is billed as a fully peer-to-peer technology for the real-time exchange of audio, ...</small>
+                  <small>The TextMetrics interface represents the dimension of a text in the canvas, as created by the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebRTC_API/Simple_RTCDataChannel_sample.html">Web/API/WebRTC_API/Simple_RTCDataChannel_sample</a>
+              <a href="../Web/API/TextMetrics/width.html">Web/API/TextMetrics/width</a>
                 
-                  <small>The RTCDataChannel interface is a feature of the WebRTC API which lets you open a channel between ...</small>
+                  <small>The readonly TextMetrics.width property contains the text's advance width (the width of that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebRTC_API/Taking_still_photos.html">Web/API/WebRTC_API/Taking_still_photos</a>
+              <a href="../Web/API/TimeEvent.html">Web/API/TimeEvent</a>
                 
-                  <small>This article shows how to use WebRTC to access the camera on a computer or mobile phone with WebRTC ...</small>
+                  <small>Extends Event.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebSocket.html">Web/API/WebSocket</a>
+              <a href="../Web/API/TimeRanges.html">Web/API/TimeRanges</a>
                 
-                  <small>The WebSocket object provides the API for creating and managing a WebSocket connection to a server, ...</small>
+                  <small>The TimeRanges interface is used to represent a set of time ranges, primarily for the purpose of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebVR_API.html">Web/API/WebVR_API</a>
+              <a href="../Web/API/TimeRanges/end.html">Web/API/TimeRanges/end</a>
                 
-                  <small>WebVR provides support for exposing virtual reality devices — for example head-mounted displays ...</small>
+                  <small>Returns the time offset at which a specified time range ends.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebVR_API/Using_the_WebVR_API.html">Web/API/WebVR_API/Using_the_WebVR_API</a>
+              <a href="../Web/API/TimeRanges/length.html">Web/API/TimeRanges/length</a>
                 
-                  <small>The WebVR API is a fantastic addition to the web developer's toolkit, allowing access to virtual ...</small>
+                  <small>The TimeRanges.length read-only property returns the number of ranges in the object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Animations_API.html">Web/API/Web_Animations_API</a>
+              <a href="../Web/API/TimeRanges/start.html">Web/API/TimeRanges/start</a>
                 
-                  <small>The Web Animations API provides a common language for browsers and developers to describe ...</small>
+                  <small>Returns the time offset at which a specified time range begins.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Animations_API/Animation_timing_options.html">Web/API/Web_Animations_API/Animation_timing_options</a>
+              <a href="../Web/API/Touch.html">Web/API/Touch</a>
                 
-                  <small>Both Element.animate() and KeyframeEffect.KeyframeEffect() accept a timing options object. The ...</small>
+                  <small>The Touch interface represents a single contact point on a touch-sensitive device. The contact ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Audio_API.html">Web/API/Web_Audio_API</a>
+              <a href="../Web/API/Touch/clientX.html">Web/API/Touch/clientX</a>
                 
-                  <small>The Web Audio API involves handling audio operations inside an audio context, and has been designed ...</small>
+                  <small>The Touch.clientX read-only property returns the X coordinate of the touch point relative to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext.html">Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext</a>
+              <a href="../Web/API/Touch/clientY.html">Web/API/Touch/clientY</a>
                 
-                  <small>The Web Audio standard was first implemented in WebKit, and the implementation was built in ...</small>
+                  <small>The Touch.clientY read-only property returns the Y coordinate of the touch point relative to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Audio_API/Using_Web_Audio_API.html">Web/API/Web_Audio_API/Using_Web_Audio_API</a>
+              <a href="../Web/API/Touch/force.html">Web/API/Touch/force</a>
                 
-                  <small>The Web Audio API provides a simple yet powerful mechanism to implement and manipulate audio ...</small>
+                  <small>The Touch.force read-only property returns the amount of pressure the user is applying to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API.html">Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API</a>
+              <a href="../Web/API/Touch/identifier.html">Web/API/Touch/identifier</a>
                 
-                  <small>To extract data from your audio source, you need an AnalyserNode, which is created using the ...</small>
+                  <small>The Touch.identifier returns a value uniquely identifying this point of contact with the touch ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Bluetooth_API.html">Web/API/Web_Bluetooth_API</a>
+              <a href="../Web/API/Touch/pageX.html">Web/API/Touch/pageX</a>
                 
-                  <small>[1] Behind a flag. Chrome OS only.</small>
+                  <small>The Touch.pageX read-only property returns the X coordinate of the touch point relative to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Crypto_API.html">Web/API/Web_Crypto_API</a>
+              <a href="../Web/API/Touch/pageY.html">Web/API/Touch/pageY</a>
                 
-                  <small>The Web Crypto API is an interface allowing a script to use cryptographic primitives in order to ...</small>
+                  <small>The Touch.pageY read-only property returns the Y coordinate of the touch point relative to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Crypto_API/Supported_algorithms.html">Web/API/Web_Crypto_API/Supported_algorithms</a>
+              <a href="../Web/API/Touch/radiusX.html">Web/API/Touch/radiusX</a>
                 
-                  <small>Different algorithms are supported for the different functions provided by the Web Crypto API. ...</small>
+                  <small>Returns the X radius of the ellipse that most closely circumscribes the area of contact with the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Speech_API.html">Web/API/Web_Speech_API</a>
+              <a href="../Web/API/Touch/radiusY.html">Web/API/Touch/radiusY</a>
                 
-                  <small>The Web Speech API makes web apps able to handle voice data. There are two components to this API:</small>
+                  <small>Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Speech_API/Using_the_Web_Speech_API.html">Web/API/Web_Speech_API/Using_the_Web_Speech_API</a>
+              <a href="../Web/API/Touch/rotationAngle.html">Web/API/Touch/rotationAngle</a>
                 
-                  <small>The Web Speech API provides two distinct areas of functionality — speech recognition, and speech ...</small>
+                  <small>Returns the rotation angle, in degrees, of the contact area ellipse defined by Touch.radiusX and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Storage_API.html">Web/API/Web_Storage_API</a>
+              <a href="../Web/API/Touch/screenX.html">Web/API/Touch/screenX</a>
                 
-                  <small>The Web Storage API provides mechanisms by which browsers can store key/value pairs, in a much more ...</small>
+                  <small>Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Storage_API/Using_the_Web_Storage_API.html">Web/API/Web_Storage_API/Using_the_Web_Storage_API</a>
+              <a href="../Web/API/Touch/screenY.html">Web/API/Touch/screenY</a>
                 
-                  <small>Storage objects are simple key-value stores, similar to objects, but they stay intact through page ...</small>
+                  <small>Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Video_Text_Tracks_Format.html">Web/API/Web_Video_Text_Tracks_Format</a>
+              <a href="../Web/API/Touch/target.html">Web/API/Touch/target</a>
                 
-                  <small>WebVTT is a format for displaying timed text tracks (e.g. subtitles or captions) with the track ...</small>
+                  <small>Returns the Element (EventTarget) on which the touch contact started when it was first placed on ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Web_Workers_API.html">Web/API/Web_Workers_API</a>
+              <a href="../Web/API/Touch/Touch.html">Web/API/Touch/Touch</a>
                 
-                  <small>Web Workers are a mechanism by which a script operation can be made to run in a background thread ...</small>
+                  <small>The Touch() constructor creates a new Touch object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WheelEvent.html">Web/API/WheelEvent</a>
+              <a href="../Web/API/TouchEvent.html">Web/API/TouchEvent</a>
                 
-                  <small>The WheelEvent interface represents events that occur due to the user moving a mouse wheel or ...</small>
+                  <small>The TouchEvent interface represents an event sent when the state of contacts with a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WheelEvent/deltaMode.html">Web/API/WheelEvent/deltaMode</a>
+              <a href="../Web/API/TouchEvent/altKey.html">Web/API/TouchEvent/altKey</a>
                 
-                  <small>The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the ...</small>
+                  <small>A Boolean value indicating whether or not the alt (Alternate) key is enabled when the touch ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WheelEvent/deltaX.html">Web/API/WheelEvent/deltaX</a>
+              <a href="../Web/API/TouchEvent/changedTouches.html">Web/API/TouchEvent/changedTouches</a>
                 
-                  <small>The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount in ...</small>
+                  <small>A TouchList whose touch points (Touch objects) varies depending on the event type, as follows:</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WheelEvent/deltaY.html">Web/API/WheelEvent/deltaY</a>
+              <a href="../Web/API/TouchEvent/ctrlKey.html">Web/API/TouchEvent/ctrlKey</a>
                 
-                  <small>The WheelEvent.deltaY read-only property is a double representing the vertical scroll amount in the ...</small>
+                  <small>A Boolean value indicating whether the control (Control) key is enabled when the touch event is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window.html">Web/API/Window</a>
+              <a href="../Web/API/TouchEvent/metaKey.html">Web/API/TouchEvent/metaKey</a>
                 
-                  <small>The window object represents a window containing a DOM document; the document property points to ...</small>
+                  <small>A Boolean value indicating whether or not the Meta key is enabled when the touch event is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/alert.html">Web/API/Window/alert</a>
+              <a href="../Web/API/TouchEvent/shiftKey.html">Web/API/TouchEvent/shiftKey</a>
                 
-                  <small>The Window.alert() method displays an alert dialog with the optional specified content and an OK ...</small>
+                  <small>A Boolean value indicating whether or not the shift key is enabled when the touch event is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/applicationCache.html">Web/API/Window/applicationCache</a>
+              <a href="../Web/API/TouchEvent/targetTouches.html">Web/API/TouchEvent/targetTouches</a>
                 
-                  <small>Returns a reference to the application cache object for the window.</small>
+                  <small>A TouchList listing all the Touch objects for touch points that are still in contact with the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/back.html">Web/API/Window/back</a>
+              <a href="../Web/API/TouchEvent/touches.html">Web/API/TouchEvent/touches</a>
                 
-                  <small>Returns the window to the previous item in the history. This was a Gecko-specific method. Use the ...</small>
+                  <small>A TouchList listing all the Touch objects for touch points that are currently in contact with ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/blur.html">Web/API/Window/blur</a>
+              <a href="../Web/API/TouchEvent/TouchEvent.html">Web/API/TouchEvent/TouchEvent</a>
                 
-                  <small>Shifts focus away from the window.</small>
+                  <small>The Touch Event() constructor creates a new TouchEvent.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/caches.html">Web/API/Window/caches</a>
+              <a href="../Web/API/TouchList.html">Web/API/TouchList</a>
                 
-                  <small>The Window.caches read-only property returns the CacheStorage object associated with the current ...</small>
+                  <small>The TouchList interface represents a list of contact points with a touch surface; for example, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/cancelAnimationFrame.html">Web/API/Window/cancelAnimationFrame</a>
+              <a href="../Web/API/TouchList/identifiedTouch.html">Web/API/TouchList/identifiedTouch</a>
                 
-                  <small>Cancels an animation frame request previously scheduled through a call to ...</small>
+                  <small>The identifiedTouch method returns the first Touch item in the TouchList matching the specified ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/cancelIdleCallback.html">Web/API/Window/cancelIdleCallback</a>
+              <a href="../Web/API/TouchList/item.html">Web/API/TouchList/item</a>
                 
-                  <small>The Window.cancelIdleCallback() enables you to cancel a callback previously scheduled with ...</small>
+                  <small>Returns the Touch object at the specified index in the TouchList.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/captureEvents.html">Web/API/Window/captureEvents</a>
+              <a href="../Web/API/TouchList/length.html">Web/API/TouchList/length</a>
                 
-                  <small>Registers the window to capture all events of the specified type.</small>
+                  <small>This read-only property indicates the number of items (touch points) in a TouchList.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/clearImmediate.html">Web/API/Window/clearImmediate</a>
+              <a href="../Web/API/TrackDefault.html">Web/API/TrackDefault</a>
                 
-                  <small>This method clears the action specified by window.setImmediate.</small>
+                  <small>The TrackDefault interface provides a SourceBuffer with kind, label, and language information ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/close.html">Web/API/Window/close</a>
+              <a href="../Web/API/TrackDefault/byteStreamTrackID.html">Web/API/TrackDefault/byteStreamTrackID</a>
                 
-                  <small>The Window.close() method closes the current window, or the window on which it was called.</small>
+                  <small>The byteStreamTrackID read-only property of the TrackDefault interface returns the ID of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/closed.html">Web/API/Window/closed</a>
+              <a href="../Web/API/TrackDefault/kinds.html">Web/API/TrackDefault/kinds</a>
                 
-                  <small>This read-only property indicates whether the referenced window is closed or not.</small>
+                  <small>The kinds read-only property of the TrackDefault interface returns default kinds for an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/confirm.html">Web/API/Window/confirm</a>
+              <a href="../Web/API/TrackDefault/label.html">Web/API/TrackDefault/label</a>
                 
-                  <small>The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK ...</small>
+                  <small>The label read-only property of the TrackDefault interface returns the default label for an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/controllers.html">Web/API/Window/controllers</a>
+              <a href="../Web/API/TrackDefault/language.html">Web/API/TrackDefault/language</a>
                 
-                  <small>Returns the XUL controllers of the chrome window.</small>
+                  <small>The language read-only property of the TrackDefault interface returns a default language for an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/convertPointFromPageToNode.html">Web/API/Window/convertPointFromPageToNode</a>
+              <a href="../Web/API/TrackDefault/TrackDefault.html">Web/API/TrackDefault/TrackDefault</a>
                 
-                  <small>Converts a Point object from coordinates based on the page to coordinates based on the given CSS ...</small>
+                  <small>The TrackDefault() constructor of the TrackDefault interface constructs and returns a new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/crypto.html">Web/API/Window/crypto</a>
+              <a href="../Web/API/TrackDefault/type.html">Web/API/TrackDefault/type</a>
                 
-                  <small>The Window.crypto read-only property returns the Crypto object associated to the global object. ...</small>
+                  <small>The type read-only property of the TrackDefault interface returns the type of track that this ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/defaultStatus.html">Web/API/Window/defaultStatus</a>
+              <a href="../Web/API/TrackDefaultList.html">Web/API/TrackDefaultList</a>
                 
-                  <small>Gets/sets the status bar text for the given window.</small>
+                  <small>The TrackDefaultList interface represents a simple container list for multiple TrackDefault objects.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/devicePixelRatio.html">Web/API/Window/devicePixelRatio</a>
+              <a href="../Web/API/TrackDefaultList/length.html">Web/API/TrackDefaultList/length</a>
                 
-                  <small>The Window.devicePixelRatio read-only property returns the ratio of the (vertical) size of one ...</small>
+                  <small>The length read-only property of the TrackDefaultList interface returns the number of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/dialogArguments.html">Web/API/Window/dialogArguments</a>
+              <a href="../Web/API/TrackDefaultList/TrackDefault.html">Web/API/TrackDefaultList/TrackDefault</a>
                 
-                  <small>The dialogArguments property returns the parameters that were passed into the ...</small>
+                  <small>The TrackDefault() getter method of the TrackDefaultList interface allows the TrackDefault ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/directories.html">Web/API/Window/directories</a>
+              <a href="../Web/API/TrackDefaultList/TrackDefaultList.html">Web/API/TrackDefaultList/TrackDefaultList</a>
                 
-                  <small>Returned the window personalbar toolbar object. Use the window.personalbar instead.</small>
+                  <small>The TrackDefaultList() constructor of the TrackDefaultList interface constructs and returns a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/document.html">Web/API/Window/document</a>
+              <a href="../Web/API/Transferable.html">Web/API/Transferable</a>
                 
-                  <small>Returns a reference to the document contained in the window.</small>
+                  <small>The Transferable interface represents an object that can be transfered between different ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/dump.html">Web/API/Window/dump</a>
+              <a href="../Web/API/TransitionEvent.html">Web/API/TransitionEvent</a>
                 
-                  <small>Prints messages to the (native) console.</small>
+                  <small>The Transition Event interface represents events providing information related to transitions.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/event.html">Web/API/Window/event</a>
+              <a href="../Web/API/TransitionEvent/animationName.html">Web/API/TransitionEvent/animationName</a>
                 
-                  <small>window.event is a proprietary Microsoft Internet Explorer property which is only available while a ...</small>
+                  <small>The TransitionEvent.transitionName read-only property is a DOMString containing the name of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/find.html">Web/API/Window/find</a>
+              <a href="../Web/API/TransitionEvent/elapsedTime.html">Web/API/TransitionEvent/elapsedTime</a>
                 
-                  <small>Finds a string in a window.</small>
+                  <small>The TransitionEvent.elapsedTime read-only property is a float giving the amount of time the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/focus.html">Web/API/Window/focus</a>
+              <a href="../Web/API/TransitionEvent/initTransitionEvent.html">Web/API/TransitionEvent/initTransitionEvent</a>
                 
-                  <small>Makes a request to bring the window to the front. It may fail due to user settings and the window ...</small>
+                  <small>The TransitionEvent.initTransitionEvent() method Initializes a transition event created using ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/forward.html">Web/API/Window/forward</a>
+              <a href="../Web/API/TransitionEvent/pseudoElement.html">Web/API/TransitionEvent/pseudoElement</a>
                 
-                  <small>Moves the window one document forward in the history. This was a Gecko-specific method. Use the ...</small>
+                  <small>The TransitionEvent.pseudoElement read-only property is a DOMString, starting with '::', ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/frameElement.html">Web/API/Window/frameElement</a>
+              <a href="../Web/API/TransitionEvent/TransitionEvent.html">Web/API/TransitionEvent/TransitionEvent</a>
                 
-                  <small>Returns the element (such as iframe or object) in which the window is embedded, or null if the ...</small>
+                  <small>The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/frames.html">Web/API/Window/frames</a>
+              <a href="../Web/API/TreeWalker.html">Web/API/TreeWalker</a>
                 
-                  <small>Returns the window itself, which is an array-like object, listing the direct sub-frames of the ...</small>
+                  <small>The TreeWalker object represents the nodes of a document subtree and a position within them.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/fullScreen.html">Web/API/Window/fullScreen</a>
+              <a href="../Web/API/TreeWalker/currentNode.html">Web/API/TreeWalker/currentNode</a>
                 
-                  <small>This property indicates whether the window is displayed in full screen mode or not. It is only ...</small>
+                  <small>The TreeWalker.currentNode property represents the Node on which the TreeWalker is currently ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/getAttention.html">Web/API/Window/getAttention</a>
+              <a href="../Web/API/TreeWalker/expandEntityReferences.html">Web/API/TreeWalker/expandEntityReferences</a>
                 
-                  <small>Attempts to get the user's attention. How this happens varies based on OS and window manager.</small>
+                  <small>The TreeWalker.expandEntityReferences read-only property returns a Boolean flag indicating ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/getComputedStyle.html">Web/API/Window/getComputedStyle</a>
+              <a href="../Web/API/TreeWalker/filter.html">Web/API/TreeWalker/filter</a>
                 
-                  <small>The Window.getComputedStyle() method gives the values of all the CSS properties of an element after ...</small>
+                  <small>The TreeWalker.filter read-only property returns a NodeFilter that is the filtering object ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/window/getDefaultComputedStyle-2.html">Web/API/window/getDefaultComputedStyle</a>
+              <a href="../Web/API/TreeWalker/firstChild.html">Web/API/TreeWalker/firstChild</a>
                 
-                  <small>getDefaultComputedStyle() gives the default computed values of all the CSS properties of an ...</small>
+                  <small>The TreeWalker.firstChild() method moves the current Node to the first visible child of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/getSelection.html">Web/API/Window/getSelection</a>
+              <a href="../Web/API/TreeWalker/lastChild.html">Web/API/TreeWalker/lastChild</a>
                 
-                  <small>Returns a Selection object representing the range of text selected by the user or the current ...</small>
+                  <small>The TreeWalker.lastChild() method moves the current Node to the last visible child of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/history.html">Web/API/Window/history</a>
+              <a href="../Web/API/TreeWalker/nextNode.html">Web/API/TreeWalker/nextNode</a>
                 
-                  <small>The Window. history read-only property returns a reference to the History object, which provides an ...</small>
+                  <small>The TreeWalker.nextNode() method moves the current Node to the next visible node in the document ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/home.html">Web/API/Window/home</a>
+              <a href="../Web/API/TreeWalker/nextSibling.html">Web/API/TreeWalker/nextSibling</a>
                 
-                  <small>Returns the window to the home page.</small>
+                  <small>The TreeWalker.nextSibling() method moves the current Node to its next sibling, if any, and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/innerHeight.html">Web/API/Window/innerHeight</a>
+              <a href="../Web/API/TreeWalker/parentNode.html">Web/API/TreeWalker/parentNode</a>
                 
-                  <small>Height (in pixels) of the browser window viewport including, if rendered, the horizontal scrollbar.</small>
+                  <small>The TreeWalker.parentNode() method moves the current Node to the first visible ancestor node in ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/innerWidth.html">Web/API/Window/innerWidth</a>
+              <a href="../Web/API/TreeWalker/previousNode.html">Web/API/TreeWalker/previousNode</a>
                 
-                  <small>Width (in pixels) of the browser window viewport including, if rendered, the vertical scrollbar.</small>
+                  <small>The TreeWalker.previousNode() method moves the current Node to the previous visible node in the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/isSecureContext.html">Web/API/Window/isSecureContext</a>
+              <a href="../Web/API/TreeWalker/previousSibling.html">Web/API/TreeWalker/previousSibling</a>
                 
-                  <small>The Window.isSecureContext read-only property indicates whether a context is capable of using ...</small>
+                  <small>The TreeWalker.previousSibling() method moves the current Node to its previous sibling, if any, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/length.html">Web/API/Window/length</a>
+              <a href="../Web/API/TreeWalker/root.html">Web/API/TreeWalker/root</a>
                 
-                  <small>Returns the number of frames (either frame or iframe elements) in the window.</small>
+                  <small>The TreeWalker.root read-only property returns the node that is the root of what the TreeWalker ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/localStorage.html">Web/API/Window/localStorage</a>
+              <a href="../Web/API/TreeWalker/whatToShow.html">Web/API/TreeWalker/whatToShow</a>
                 
-                  <small>The localStorage property allows you to access a local Storage object. localStorage is similar to ...</small>
+                  <small>The TreeWalker.whatToShow read-only property returns an unsigned long being a bitmask made of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/location.html">Web/API/Window/location</a>
+              <a href="../Web/API/TypeInfo.html">Web/API/TypeInfo</a>
                 
-                  <small>The Window.location read-only property returns a Location object with information about the current ...</small>
+                  <small></small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/locationbar.html">Web/API/Window/locationbar</a>
+              <a href="../Web/API/UIEvent.html">Web/API/UIEvent</a>
                 
-                  <small>Returns the locationbar object, whose visibility can be checked.</small>
+                  <small>The UIEvent interface represents simple user interface events.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/matchMedia.html">Web/API/Window/matchMedia</a>
+              <a href="../Web/API/UIEvent/cancelBubble.html">Web/API/UIEvent/cancelBubble</a>
                 
-                  <small>Returns a new MediaQueryList object representing the parsed results of the specified media query ...</small>
+                  <small>The UIEvent.cancelBubble property indicates if event bubbling for this event has been canceled ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/menubar.html">Web/API/Window/menubar</a>
+              <a href="../Web/API/UIEvent/detail.html">Web/API/UIEvent/detail</a>
                 
-                  <small>Returns the menubar object, whose visibility can be checked.</small>
+                  <small>The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/messageManager.html">Web/API/Window/messageManager</a>
+              <a href="../Web/API/UIEvent/initUIEvent.html">Web/API/UIEvent/initUIEvent</a>
                 
-                  <small>Returns the message manager object for this window. See The message manager for details.</small>
+                  <small>The UIEvent.initUIEvent() method initializes a UI event once it's been created.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/minimize.html">Web/API/Window/minimize</a>
+              <a href="../Web/API/UIEvent/isChar.html">Web/API/UIEvent/isChar</a>
                 
-                  <small>Sets a window to minimized state (a way to undo it programatically is by calling window.moveTo()).</small>
+                  <small>The UIEvent.isChar read-only property returns a Boolean indicating whether the event produced a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/moveBy.html">Web/API/Window/moveBy</a>
+              <a href="../Web/API/UIEvent/layerX.html">Web/API/UIEvent/layerX</a>
                 
-                  <small>Moves the current window by a specified amount.</small>
+                  <small>The UIEvent.layerX read-only property returns the horizontal coordinate of the event relative to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/moveTo.html">Web/API/Window/moveTo</a>
+              <a href="../Web/API/UIEvent/layerY.html">Web/API/UIEvent/layerY</a>
                 
-                  <small>Moves the window to the specified coordinates.</small>
+                  <small>The UIEvent.layerY read-only property returns the vertical coordinate of the event relative to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/mozAnimationStartTime.html">Web/API/Window/mozAnimationStartTime</a>
+              <a href="../Web/API/UIEvent/pageX.html">Web/API/UIEvent/pageX</a>
                 
-                  <small>Returns the time, in milliseconds since the epoch, at which animations started now should be ...</small>
+                  <small>The UIEvent.pageX read-only property returns the horizontal coordinate of the event relative to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/mozInnerScreenX.html">Web/API/Window/mozInnerScreenX</a>
+              <a href="../Web/API/UIEvent/pageY.html">Web/API/UIEvent/pageY</a>
                 
-                  <small>Gets the X coordinate of the top-left corner of the window's viewport, in screen coordinates.</small>
+                  <small>The UIEvent.pageY read-only property returns the vertical coordinate of the event relative to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/mozInnerScreenY.html">Web/API/Window/mozInnerScreenY</a>
+              <a href="../Web/API/UIEvent/sourceCapabilities.html">Web/API/UIEvent/sourceCapabilities</a>
                 
-                  <small>Gets the Y coordinate of the top-left corner of the window's viewport, in screen coordinates.</small>
+                  <small>The UIEvent.sourceCapabilities read-only property returns an instance of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/mozPaintCount.html">Web/API/Window/mozPaintCount</a>
+              <a href="../Web/API/UIEvent/UIEvent.html">Web/API/UIEvent/UIEvent</a>
                 
-                  <small>Returns the number of times the current document has been painted to the screen in this window.</small>
+                  <small>The UIEvent() constructor creates a new UIEvent.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/name.html">Web/API/Window/name</a>
+              <a href="../Web/API/UIEvent/view.html">Web/API/UIEvent/view</a>
                 
-                  <small>Gets/sets the name of the window.</small>
+                  <small>The UIEvent.view read-only property returns the WindowProxy object from which the event was ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/navigator.html">Web/API/Window/navigator</a>
+              <a href="../Web/API/URL.html">Web/API/URL</a>
                 
-                  <small>The Window.navigator read-only property returns a reference to the Navigator object, which can be ...</small>
+                  <small>The URL interface represent an object providing static methods used for creating object URLs.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/navigator/mozNetworkStats.html">Web/API/Window/navigator/mozNetworkStats</a>
+              <a href="../Web/API/URL/createObjectURL.html">Web/API/URL/createObjectURL</a>
                 
-                  <small>The MozNetworkStatsManager interface provides methods and properties to monitor data usage.</small>
+                  <small>The URL.createObjectURL() static method creates a DOMString containing an URL representing the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondevicelight.html">Web/API/Window/ondevicelight</a>
+              <a href="../Web/API/URL/origin.html">Web/API/URL/origin</a>
                 
-                  <small>Specifies an event listener to receive devicelight events. These events occur when the device's ...</small>
+                  <small>The URL.origin read-only property returns a USVString containing the Unicode serialization of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondevicemotion.html">Web/API/Window/ondevicemotion</a>
+              <a href="../Web/API/URL/revokeObjectURL.html">Web/API/URL/revokeObjectURL</a>
                 
-                  <small>An event handler for the devicemotion events sent to the window.</small>
+                  <small>The URL.revokeObjectURL() static method releases an existing object URL which was previously ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondeviceorientation.html">Web/API/Window/ondeviceorientation</a>
+              <a href="../Web/API/URL/searchParams.html">Web/API/URL/searchParams</a>
                 
-                  <small>An event handler for the deviceorientation event, which contains information about a relative ...</small>
+                  <small>The searchParams property of the URL interface returns&nbsp;a URLSearchParams object allowing to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondeviceorientationabsolute.html">Web/API/Window/ondeviceorientationabsolute</a>
+              <a href="../Web/API/URL/URL.html">Web/API/URL/URL</a>
                 
-                  <small>An event handler for the deviceorientationabsolute event, which contains information about an ...</small>
+                  <small>The URL() constructor returns a newly created URL object representing the URL defined by the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondeviceproximity.html">Web/API/Window/ondeviceproximity</a>
+              <a href="../Web/API/URLSearchParams.html">Web/API/URLSearchParams</a>
                 
-                  <small>Specifies an event listener to receive deviceproximity events. These events occur when the device ...</small>
+                  <small>The URLSearchParams interface defines utility methods to work with the query string of a URL.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/ondragdrop.html">Web/API/Window/ondragdrop</a>
+              <a href="../Web/API/URLSearchParams/append.html">Web/API/URLSearchParams/append</a>
                 
-                  <small>An event handler for drag and drop events sent to the window.</small>
+                  <small>The append() method of the URLSearchParams interface appends&nbsp;a specified key/value pair as a new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/onmozbeforepaint.html">Web/API/Window/onmozbeforepaint</a>
+              <a href="../Web/API/URLSearchParams/delete.html">Web/API/URLSearchParams/delete</a>
                 
-                  <small>An event handler for the MozBeforePaint event. This is used in concert with the ...</small>
+                  <small>The delete() method of the URLSearchParams interface deletes the given search parameter&nbsp;and its ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/onpaint.html">Web/API/Window/onpaint</a>
+              <a href="../Web/API/URLSearchParams/entries.html">Web/API/URLSearchParams/entries</a>
                 
-                  <small>An event handler for the paint event on the window. Not working in Gecko -based applications ...</small>
+                  <small>The URLSearchParams.entries() method returns an iterator allowing to go through all key/value ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/onuserproximity.html">Web/API/Window/onuserproximity</a>
+              <a href="../Web/API/URLSearchParams/get.html">Web/API/URLSearchParams/get</a>
                 
-                  <small>The Window.onuserproxymity property represents an EventHandler, that is a function to be called ...</small>
+                  <small>The get() method of the URLSearchParams interface returns the first value associated to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/open.html">Web/API/Window/open</a>
+              <a href="../Web/API/URLSearchParams/getAll.html">Web/API/URLSearchParams/getAll</a>
                 
-                  <small>Loads a resource into either a new browsing context (such as a window) or one that already exists, ...</small>
+                  <small>The getAll() method of the URLSearchParams interface returns all the values associated&nbsp;with a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/openDialog.html">Web/API/Window/openDialog</a>
+              <a href="../Web/API/URLSearchParams/has.html">Web/API/URLSearchParams/has</a>
                 
-                  <small>window.openDialog() is an extension to window.open(). It behaves the same, except that it can ...</small>
+                  <small>The has() method of the URLSearchParams interface returns a Boolean that indicates whether a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/opener.html">Web/API/Window/opener</a>
+              <a href="../Web/API/URLSearchParams/keys.html">Web/API/URLSearchParams/keys</a>
                 
-                  <small>Returns a reference to the window that opened this current window.</small>
+                  <small>The URLSearchParams.keys() method returns an iterator allowing to go through all keys contained ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/outerHeight.html">Web/API/Window/outerHeight</a>
+              <a href="../Web/API/URLSearchParams/set.html">Web/API/URLSearchParams/set</a>
                 
-                  <small>Window.outerHeight gets the height in pixels of the whole browser window. It represents the height ...</small>
+                  <small>The set() method of the URLSearchParams interface sets the value associated with a given search ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/outerWidth.html">Web/API/Window/outerWidth</a>
+              <a href="../Web/API/URLSearchParams/toString.html">Web/API/URLSearchParams/toString</a>
                 
-                  <small>Window.outerWidth gets the width of the outside of the browser window. It represents the width of ...</small>
+                  <small>The toString() method of the URLSearchParams interface returns a string containg a query string ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/parent.html">Web/API/Window/parent</a>
+              <a href="../Web/API/URLSearchParams/URLSearchParams.html">Web/API/URLSearchParams/URLSearchParams</a>
                 
-                  <small>A reference to the parent of the current window or subframe.</small>
+                  <small>The URLSearchParams() constructor creates and returns a new URLSearchParams object. Leading '?' ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/performance.html">Web/API/Window/performance</a>
+              <a href="../Web/API/URLSearchParams/values.html">Web/API/URLSearchParams/values</a>
                 
-                  <small>The Web Performance API allows web pages access to certain functions for measuring the performance ...</small>
+                  <small>The URLSearchParams.values() method returns an iterator allowing to go through all values ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/personalbar.html">Web/API/Window/personalbar</a>
+              <a href="../Web/API/URLUtilsReadOnly.html">Web/API/URLUtilsReadOnly</a>
                 
-                  <small>Returns the personalbar object, whose visibility can be toggled in the window.</small>
+                  <small>The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Window/pkcs11.html">Web/API/Window/pkcs11</a>
+              <a href="../Web/API/URLUtilsReadOnly/hash.html">Web/API/URLUtilsReadOnly/hash</a>
                 
-                  <small>Returns the pkcs11 object, which is used to install drivers and other software associated with the ...</small>
+                  <small>The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by ...</small>
                 
             </li>
           
@@ -1043,14 +1026,6 @@
   
   
     <li>
-      <a href="APIbd1b.html?page=33">33</a>
-    </li>
-  
-    <li>
-      <a href="APIe51f.html?page=34">34</a>
-    </li>
-  
-    <li>
       <a href="APIe24e.html?page=35">35</a>
     </li>
   
@@ -1074,6 +1049,15 @@
       <a href="APIce8a.html?page=40">40</a>
     </li>
   
+    <li>
+      <a href="API6c2f.html?page=41">41</a>
+    </li>
+  
+  
+    
+      <li class="skip">…</li>
+    
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -1090,12 +1074,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1103,14 +1087,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1118,127 +1103,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1253,28 +1361,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:56 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=38 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:30:37 GMT -->
 </body></html>

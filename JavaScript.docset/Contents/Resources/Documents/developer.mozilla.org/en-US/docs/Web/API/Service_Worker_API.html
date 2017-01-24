@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:02:41 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:26:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -68,6 +67,8 @@
     
       <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API" title="Service Worker API">
     
+      <link rel="alternate" hreflang="id" href="https://developer.mozilla.org/id/docs/Web/API/Service_Worker_API" title="Service Worker API">
+    
       <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/ServiceWorker_API" title="ServiceWorker API">
     
       <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API" title="Service Worker API">
@@ -88,6 +89,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -103,10 +111,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -156,8 +164,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -173,9 +181,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -192,34 +198,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FService_Worker_API" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Service_Worker_API" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Service_Worker_API" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FService_Worker_API" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FService_Worker_API" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -229,18 +221,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -251,10 +245,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -268,8 +259,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -308,22 +299,26 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Service_Worker_API" title="Service Worker API">Deutsch</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API" title="Service Worker API">Français</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/ServiceWorker_API" title="ServiceWorker API">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Service_Worker_API" title="German">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API" title="Service Worker API">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Service_Worker_API" title="French">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API" title="Service Worker API">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/id/docs/Web/API/Service_Worker_API" title="Indonesian">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/ServiceWorker_API" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -335,7 +330,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -346,7 +343,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -396,13 +392,18 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/mouki" title="View profile: mouki">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="mouki" data-src="../../../../../secure.gravatar.com/avatar/84fd847cd6c835de9c9ed16b64a3dfe26c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">mouki</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/jaffathecake" title="View profile: jaffathecake">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jaffathecake" data-src="../../../../../secure.gravatar.com/avatar/34551f266d9bfdeed1e7f287c59f789d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jaffathecake</noscript></a>
                 </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/mouki" title="View profile: mouki">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="mouki" data-src="../../../../../secure.gravatar.com/avatar/84fd847cd6c835de9c9ed16b64a3dfe26c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">mouki</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -420,7 +421,7 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/fbender" title="View profile: fbender">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fbender" data-src="../../../../../secure.gravatar.com/avatar/89db5ccbe71d2e916c218c85076fbd966c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fbender</noscript></a>
                 </li>
@@ -511,10 +512,6 @@
                     <div>
 <p></p><section id="Quick_Links"><!-- --></section><p></p>
 
-<p></p><div class="notice experimental"> 
-    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
-</div><p></p>
-
 <p class="summary">Service workers essentially act as proxy servers that sit between web applications, and the browser and network (when available). They are intended to (amongst other things) enable the creation of effective offline experiences, intercepting network requests and taking appropriate action based on whether the network is available and updated assets reside on the server. They will also allow access to push notifications and background sync APIs.</p>
 </div>
 
@@ -524,7 +521,7 @@
 
 <p>A service worker is run in a worker context: it therefore has no DOM access, and runs on a different thread to the main JavaScript that powers your app, so it is not blocking. It is designed to be fully async; as a consequence, APIs such as synchronous <a href="XMLHttpRequest.html">XHR</a> and <a href="Web_Storage_API.html">localStorage</a> can't be used inside a service worker.</p>
 
-<p>Service workers only run over HTTPS, for security reasons. Having modified network requests wide open to man in the middle attacks would be really bad.</p>
+<p>Service workers only run over HTTPS, for security reasons. Having modified network requests wide open to man in the middle attacks would be really bad. In Firefox, Service Worker APIs are also hidden and cannot be used when the user is in <a href="https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history" class="external">private browsing mode</a>.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Service Workers win over previous attempts in this area such as <a href="http://alistapart.com/article/application-cache-is-a-douchebag" class="external">AppCache</a> because they don't make assumptions about what you are trying to do and then break when those assumptions are not exactly right; you have granular control over everything.</p>
@@ -536,7 +533,7 @@
 
 <h3 id="Registration">Registration</h3>
 
-<p>A service worker is first registered using the <a href="ServiceWorkerContainer/register.html" title="The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL."><code>ServiceWorkerContainer.register()</code></a> method. If successful, your service worker will be downloaded to the client and attempt installation/activation (see below) for URLs accessed by the user inside the whole origin, or inside a subset specified by you.</p>
+<p>A service worker is first registered using the <a title="The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL." href="ServiceWorkerContainer/register.html"><code>ServiceWorkerContainer.register()</code></a> method. If successful, your service worker will be downloaded to the client and attempt installation/activation (see below) for URLs accessed by the user inside the whole origin, or inside a subset specified by you.</p>
 
 <h3 id="Download_install_and_activate">Download, install and activate</h3>
 
@@ -558,11 +555,11 @@
 
 <p>If there is an existing service worker available, the new version is installed in the background, but not yet activated — at this point it is called the <em>worker in waiting</em>. It is only activated when there are no longer any pages loaded that are still using the old service worker. As soon as there are no more such pages still loaded, the new service worker activates (becoming the <em>active worker</em>).</p>
 
-<p>You can listen out for the <a href="InstallEvent.html" title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation."><code>InstallEvent</code></a>; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built in storage API, and placing assets inside it that you'll want for running your app offline.</p>
+<p>You can listen out for the <a title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation." href="InstallEvent.html"><code>InstallEvent</code></a>; a standard action is to prepare your service worker for usage when this fires, for example by creating a cache using the built in storage API, and placing assets inside it that you'll want for running your app offline.</p>
 
 <p>There is also an <code>activate</code> event. The point where this event fires is generally a good time to clean up old caches and other things associated with the previous version of your service worker.</p>
 
-<p>Your service worker can respond to requests using the <a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a> event. You can modify the response to these requests in any way you want, using the <a href="FetchEvent/respondWith.html" title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch."><code>FetchEvent.respondWith</code></a> method.</p>
+<p>Your service worker can respond to requests using the <a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a> event. You can modify the response to these requests in any way you want, using the <a title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch." href="FetchEvent/respondWith.html"><code>FetchEvent.respondWith</code></a> method.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Because <code>oninstall</code>/<code>onactivate</code> could take a while to complete, the service worker spec provides a <code>waitUntil</code> method that, when called <code>oninstall</code> or <code>onactivate</code>, passes a promise. Functional events are not dispatched to the service worker until the promise successfully resolves.</p>
@@ -596,44 +593,44 @@
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
- <dt><a href="Cache.html" title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a></dt>
- <dd>Represents the storage for <a href="Request.html" title="The Request interface of the Fetch API represents a resource request."><code>Request</code></a> / <a href="Response.html" title="The Response interface of the Fetch API represents the response to a request."><code>Response</code></a> object pairs that are cached as part of the <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a> life cycle.</dd>
- <dt><a href="CacheStorage.html" title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a></dt>
- <dd>Represents the storage for <a href="Cache.html" title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects. It provides a master directory of all the named caches that a <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>&nbsp;can access and maintains a mapping of string names to corresponding <a href="Cache.html" title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects.</dd>
- <dt><a href="Client.html" title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker."><code>Client</code></a></dt>
- <dd>Represents the scope of a service worker client. A service worker client is either a document in a browser context or a <a href="SharedWorker.html" title="The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope."><code>SharedWorker</code></a>, which is controlled by an active worker.</dd>
- <dt><a href="Clients.html" title="The Clients interface of the Service Workers API represents a container for a list of Client&nbsp;objects."><code>Clients</code></a></dt>
- <dd>Represents a container for a list of <a href="Client.html" title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker."><code>Client</code></a>&nbsp;objects; the main way to access the active service worker clients at the current origin.</dd>
- <dt><a href="ExtendableEvent.html" title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries."><code>ExtendableEvent</code></a></dt>
- <dd>Extends the lifetime of the <code>install</code> and <code>activate</code> events dispatched on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a>&nbsp;as part of the service worker lifecycle. This ensures that any functional events (like <a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a>) are not dispatched to the <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>&nbsp;until it upgrades database schemas, deletes outdated cache entries, etc.</dd>
- <dt><a href="ExtendableMessageEvent.html" title="The ExtendableMessageEvent interface of the ServiceWorker API represents the event object of a message event fired on a service worker (when a channel message is received on the ServiceWorkerGlobalScope from another context) — extends the lifetime of such events."><code>ExtendableMessageEvent</code></a></dt>
- <dd>The event object of a <code><a href="../Events/message_(ServiceWorker).html" title="/en-US/docs/Web/Events/message_(ServiceWorker)">message</a></code> event fired on a service worker (when a channel message is received on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a> from another context) — extends the lifetime of such events.</dd>
- <dt><a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a></dt>
- <dd>The parameter passed into the <a href="ServiceWorkerGlobalScope/onfetch.html" title="The onfetch property of the ServiceWorkerGlobalScope interface is an event handler fired whenever a fetch event occurs (usually when the ServiceWorkerGlobalScope.fetch method is called.)"><code>ServiceWorkerGlobalScope.onfetch</code></a> handler, <code>FetchEvent</code> represents a fetch action that is dispatched on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a> of a <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>. It contains information about the request and resulting response, and provides the <a href="FetchEvent/respondWith.html" title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch."><code>FetchEvent.respondWith()</code></a> method, which allows us to provide an arbitrary response back to the controlled page.</dd>
- <dt><a href="InstallEvent.html" title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation."><code>InstallEvent</code></a></dt>
- <dd>The parameter passed into the <a href="ServiceWorkerGlobalScope/oninstall.html" title=""><code>oninstall</code></a> handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a> of a <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>. As a child of <a href="ExtendableEvent.html" title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries."><code>ExtendableEvent</code></a>,&nbsp;it ensures that functional events such as <a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a>&nbsp;are not dispatched during installation.&nbsp;</dd>
- <dt><a href="Navigator/serviceWorker.html" title="The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker."><code>Navigator.serviceWorker</code></a></dt>
- <dd>Returns a <a href="ServiceWorkerContainer.html" title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations."><code>ServiceWorkerContainer</code></a>&nbsp;object, which provides access to registration, removal, upgrade, and communication with the&nbsp;<a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a> objects&nbsp;for the&nbsp;<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window" class="external">associated document</a>.</dd>
- <dt><a href="NotificationEvent.html" title="The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker."><code>NotificationEvent</code></a></dt>
- <dd>The parameter passed into the <a href="ServiceWorkerGlobalScope/onnotificationclick.html" title=""><code>onnotificationclick</code></a> handler, the <code>NotificationEvent</code> interface represents a notification click event that is dispatched on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a> of a <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>.</dd>
- <dt><a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a></dt>
+ <dt><a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a></dt>
+ <dd>Represents the storage for <a title="The Request interface of the Fetch API represents a resource request." href="Request.html"><code>Request</code></a> / <a title="The Response interface of the Fetch API represents the response to a request." href="Response.html"><code>Response</code></a> object pairs that are cached as part of the <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a> life cycle.</dd>
+ <dt><a title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects." href="CacheStorage.html"><code>CacheStorage</code></a></dt>
+ <dd>Represents the storage for <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects. It provides a master directory of all the named caches that a <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>&nbsp;can access and maintains a mapping of string names to corresponding <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects.</dd>
+ <dt><a title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker." href="Client.html"><code>Client</code></a></dt>
+ <dd>Represents the scope of a service worker client. A service worker client is either a document in a browser context or a <a title="The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope." href="SharedWorker.html"><code>SharedWorker</code></a>, which is controlled by an active worker.</dd>
+ <dt><a title="The Clients interface of the Service Workers API represents a container for a list of Client&nbsp;objects." href="Clients.html"><code>Clients</code></a></dt>
+ <dd>Represents a container for a list of <a title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker." href="Client.html"><code>Client</code></a>&nbsp;objects; the main way to access the active service worker clients at the current origin.</dd>
+ <dt><a title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries." href="ExtendableEvent.html"><code>ExtendableEvent</code></a></dt>
+ <dd>Extends the lifetime of the <code>install</code> and <code>activate</code> events dispatched on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a>&nbsp;as part of the service worker lifecycle. This ensures that any functional events (like <a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a>) are not dispatched to the <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>&nbsp;until it upgrades database schemas, deletes outdated cache entries, etc.</dd>
+ <dt><a title="The ExtendableMessageEvent interface of the ServiceWorker API represents the event object of a message event fired on a service worker (when a channel message is received on the ServiceWorkerGlobalScope from another context) — extends the lifetime of such events." href="ExtendableMessageEvent.html"><code>ExtendableMessageEvent</code></a></dt>
+ <dd>The event object of a <code><a title="/en-US/docs/Web/Events/message_(ServiceWorker)" href="../Events/message_(ServiceWorker).html">message</a></code> event fired on a service worker (when a channel message is received on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a> from another context) — extends the lifetime of such events.</dd>
+ <dt><a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a></dt>
+ <dd>The parameter passed into the <a title="The onfetch property of the ServiceWorkerGlobalScope interface is an event handler fired whenever a fetch event occurs (usually when the ServiceWorkerGlobalScope.fetch method is called.)" href="ServiceWorkerGlobalScope/onfetch.html"><code>ServiceWorkerGlobalScope.onfetch</code></a> handler, <code>FetchEvent</code> represents a fetch action that is dispatched on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a> of a <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>. It contains information about the request and resulting response, and provides the <a title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch." href="FetchEvent/respondWith.html"><code>FetchEvent.respondWith()</code></a> method, which allows us to provide an arbitrary response back to the controlled page.</dd>
+ <dt><a title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation." href="InstallEvent.html"><code>InstallEvent</code></a></dt>
+ <dd>The parameter passed into the <a title="" href="ServiceWorkerGlobalScope/oninstall.html"><code>oninstall</code></a> handler, the <code>InstallEvent</code> interface represents an install action that is dispatched on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a> of a <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>. As a child of <a title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries." href="ExtendableEvent.html"><code>ExtendableEvent</code></a>,&nbsp;it ensures that functional events such as <a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a>&nbsp;are not dispatched during installation.&nbsp;</dd>
+ <dt><a title="The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker." href="Navigator/serviceWorker.html"><code>Navigator.serviceWorker</code></a></dt>
+ <dd>Returns a <a title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations." href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a>&nbsp;object, which provides access to registration, removal, upgrade, and communication with the&nbsp;<a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a> objects&nbsp;for the&nbsp;<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window" class="external">associated document</a>.</dd>
+ <dt><a title="The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker." href="NotificationEvent.html"><code>NotificationEvent</code></a></dt>
+ <dd>The parameter passed into the <a title="" href="ServiceWorkerGlobalScope/onnotificationclick.html"><code>onnotificationclick</code></a> handler, the <code>NotificationEvent</code> interface represents a notification click event that is dispatched on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a> of a <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>.</dd>
+ <dt><a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a></dt>
  <dd>Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same <code>ServiceWorker</code> object.</dd>
- <dt><a href="ServiceWorkerContainer.html" title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations."><code>ServiceWorkerContainer</code></a></dt>
+ <dt><a title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations." href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a></dt>
  <dd>Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations.</dd>
- <dt><a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a></dt>
+ <dt><a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a></dt>
  <dd>Represents the global execution context of a service worker.</dd>
- <dt><a href="ServiceWorkerMessageEvent.html" title="The ServiceWorkerMessageEvent interface of the ServiceWorker API contains information about an event sent to a ServiceWorkerContainer&nbsp;target. This extends the default message event to allow setting a ServiceWorker object as the source of a message. The event object is accessed via the handler function of a message event, when fired by a message received from a service worker."><code>ServiceWorkerMessageEvent</code></a></dt>
- <dd>Contains information about an event sent to a&nbsp;<a href="ServiceWorkerContainer.html" title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations."><code>ServiceWorkerContainer</code></a>&nbsp;target.&nbsp;</dd>
- <dt><a href="ServiceWorkerRegistration.html" title="The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin."><code>ServiceWorkerRegistration</code></a></dt>
+ <dt><a title="The ServiceWorkerMessageEvent interface of the ServiceWorker API contains information about an event sent to a ServiceWorkerContainer&nbsp;target. This extends the default message event to allow setting a ServiceWorker object as the source of a message. The event object is accessed via the handler function of a message event, when fired by a message received from a service worker." href="ServiceWorkerMessageEvent.html"><code>ServiceWorkerMessageEvent</code></a></dt>
+ <dd>Contains information about an event sent to a&nbsp;<a title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations." href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a>&nbsp;target.&nbsp;</dd>
+ <dt><a title="The ServiceWorkerRegistration interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin." href="ServiceWorkerRegistration.html"><code>ServiceWorkerRegistration</code></a></dt>
  <dd>Represents a service worker registration.</dd>
- <dt><a href="SyncEvent.html" title="Editorial review completed."><code>SyncEvent</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dt><a title="Editorial review completed." href="SyncEvent.html"><code>SyncEvent</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
  <dd>
- <p>The SyncEvent interface represents a sync action that is dispatched on the <a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a>&nbsp;of a ServiceWorker.&nbsp;</p>
+ <p>The SyncEvent interface represents a sync action that is dispatched on the <a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a>&nbsp;of a ServiceWorker.&nbsp;</p>
  </dd>
- <dt><a href="SyncManager.html" title="Editorial review completed."><code>SyncManager</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dt><a title="Editorial review completed." href="SyncManager.html"><code>SyncManager</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
  <dd>Provides an interface for registering and listing sync registrations.</dd>
- <dt><a href="WindowClient.html" title="The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources."><code>WindowClient</code></a></dt>
- <dd>Represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. This is a special type of <a href="Client.html" title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker."><code>Client</code></a> object, with some additional methods and properties available.</dd>
+ <dt><a title="The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources." href="WindowClient.html"><code>WindowClient</code></a></dt>
+ <dd>Represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. This is a special type of <a title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker." href="Client.html"><code>Client</code></a> object, with some additional methods and properties available.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -646,7 +643,7 @@
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://www.w3.org/TR/service-workers/" class="external" lang="en" title="The 'Service Workers' specification" hreflang="en">Service Workers</a></td>
+   <td><a lang="en" title="The 'Service Workers' specification" class="external" href="https://www.w3.org/TR/service-workers/" hreflang="en">Service Workers</a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>Initial definition.</td>
   </tr>
@@ -677,7 +674,7 @@
   <tr>
    <td>Basic support</td>
    <td>40.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44.0</a> (44.0)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44.0</a> (44.0)<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>24</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -685,7 +682,7 @@
   <tr>
    <td>install/activate events</td>
    <td>40.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44.0</a> (44.0)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44.0</a> (44.0)<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -694,7 +691,7 @@
    <td>fetch event/request/<br>
     <code>respondWith()</code></td>
    <td>40.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44.0</a> (44.0)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44.0</a> (44.0)<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -704,7 +701,7 @@
    <td>
     <p class="p1">42.0</p>
    </td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/39" title="Released on 2015-06-30.">39.0</a> (39.0)<sup>[1]</sup></td>
+   <td><a title="Released on 2015-06-30." href="https://developer.mozilla.org/en-US/Firefox/Releases/39">39.0</a> (39.0)<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -782,29 +779,11 @@
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/" class="external">Is ServiceWorker ready?</a></li>
  <li><a href="../JavaScript/Reference/Global_Objects/Promise.html">Promises</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
+ <li><a href="https://www.fastly.com/blog/best-practices-for-using-the-vary-header" class="external">Best Practices for using the VARY header</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FService_Worker_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Service+Worker+API+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Service Worker API on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Service Worker API on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FService_Worker_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Service Worker API on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -822,9 +801,9 @@
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Landing">Landing</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/offline">offline</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Offline">Offline</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/offline">offline</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Overview">Overview</a></li>
       
@@ -840,9 +819,11 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/mouki">mouki</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/jaffathecake">jaffathecake</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/mouki">mouki</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
     
@@ -870,11 +851,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/mouki">mouki</a>,
-                      <time datetime="2016-04-27T07:54:34-07:00">Apr 27, 2016, 7:54:34 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/jaffathecake">jaffathecake</a>,
+                      <time datetime="2016-08-23T01:57:25-07:00">Aug 23, 2016, 1:57:25 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -901,26 +919,26 @@
   </li> 
   <li data-default-state="open"><a href="#"><strong>Interfaces</strong></a> 
    <ol> 
-    <li><a href="Cache.html" title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a></li> 
-    <li><a href="CacheStorage.html" title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a></li> 
-    <li><a href="Client.html" title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker."><code>Client</code></a></li> 
-    <li><a href="Clients.html" title="The Clients interface of the Service Workers API represents a container for a list of Client&nbsp;objects."><code>Clients</code></a></li> 
-    <li><a href="ExtendableEvent.html" title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries."><code>ExtendableEvent</code></a></li> 
-    <li><a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a></li> 
-    <li><a href="InstallEvent.html" title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation."><code>InstallEvent</code></a></li> 
-    <li><a href="Navigator/serviceWorker.html" title="The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker."><code>Navigator.serviceWorker</code></a></li> 
-    <li><a href="NotificationEvent.html" title="The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker."><code>NotificationEvent</code></a></li> 
-    <li><a href="PeriodicSyncEvent.html" title="Editorial review completed."><code>PeriodicSyncEvent</code></a></li> 
-    <li><a href="PeriodicSyncManager.html" title="Technical review completed. Editorial review completed."><code>PeriodicSyncManager</code></a></li> 
-    <li><a href="PeriodicSyncRegistration.html" title="The PeriodicSyncRegistration interface of the ServiceWorker API provides an object for managing periodic background synchronization."><code>PeriodicSyncRegistration</code></a></li> 
-    <li><a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a></li> 
-    <li><a href="ServiceWorkerContainer.html" title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations."><code>ServiceWorkerContainer</code></a></li> 
-    <li><a href="ServiceWorkerGlobalScope.html" title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."><code>ServiceWorkerGlobalScope</code></a></li> 
-    <li><a href="ServiceWorkerRegistration.html" title="The ServiceWorkerRegistion interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin."><code>ServiceWorkerRegistration</code></a></li> 
-    <li><a href="SyncEvent.html" title="Editorial review completed."><code>SyncEvent</code></a></li> 
-    <li><a href="SyncManager.html" title="Editorial review completed."><code>SyncManager</code></a></li> 
-    <li><a href="SyncRegistration.html" title="The SyncRegistration interface of the the ServiceWorker API provides an object for managing background synchronization."><code>SyncRegistration</code></a></li> 
-    <li><a href="WindowClient.html" title="The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources."><code>WindowClient</code></a></li> 
+    <li><a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a></li> 
+    <li><a title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects." href="CacheStorage.html"><code>CacheStorage</code></a></li> 
+    <li><a title="The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker." href="Client.html"><code>Client</code></a></li> 
+    <li><a title="The Clients interface of the Service Workers API represents a container for a list of Client&nbsp;objects." href="Clients.html"><code>Clients</code></a></li> 
+    <li><a title="The ExtendableEvent interface extends the lifetime of the install and activate events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like FetchEvent) are not dispatched until it upgrades database schemas and deletes the outdated cache entries." href="ExtendableEvent.html"><code>ExtendableEvent</code></a></li> 
+    <li><a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a></li> 
+    <li><a title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation." href="InstallEvent.html"><code>InstallEvent</code></a></li> 
+    <li><a title="The Navigator.serviceWorker read-only property returns the ServiceWorkerContainer object for the associated document, which provides access to registration, removal, upgrade, and communication with the ServiceWorker." href="Navigator/serviceWorker.html"><code>Navigator.serviceWorker</code></a></li> 
+    <li><a title="The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker." href="NotificationEvent.html"><code>NotificationEvent</code></a></li> 
+    <li><a title="Editorial review completed." href="PeriodicSyncEvent.html"><code>PeriodicSyncEvent</code></a></li> 
+    <li><a title="Technical review completed. Editorial review completed." href="PeriodicSyncManager.html"><code>PeriodicSyncManager</code></a></li> 
+    <li><a title="The PeriodicSyncRegistration interface of the ServiceWorker API provides an object for managing periodic background synchronization." href="PeriodicSyncRegistration.html"><code>PeriodicSyncRegistration</code></a></li> 
+    <li><a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a></li> 
+    <li><a title="The ServiceWorkerContainer interface of the ServiceWorker API provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister and update service workers, and access the state of service workers and their registrations." href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a></li> 
+    <li><a title="The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker." href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a></li> 
+    <li><a title="The ServiceWorkerRegistration interface of the ServiceWorker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin." href="ServiceWorkerRegistration.html"><code>ServiceWorkerRegistration</code></a></li> 
+    <li><a title="Editorial review completed." href="SyncEvent.html"><code>SyncEvent</code></a></li> 
+    <li><a title="Editorial review completed." href="SyncManager.html"><code>SyncManager</code></a></li> 
+    <li><a title="The SyncRegistration interface of the the ServiceWorker API provides an object for managing background synchronization." href="SyncRegistration.html"><code>SyncRegistration</code></a></li> 
+    <li><a title="The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources." href="WindowClient.html"><code>WindowClient</code></a></li> 
    </ol> 
   </li> 
   <li data-default-state="open"><a href="#"><strong>Related APIs</strong></a> 
@@ -968,12 +986,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -981,9 +999,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -992,24 +1009,27 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/Service_Worker_API" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/Service_Worker_API" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/de/docs/Web/API/Service_Worker_API">
-            Deutsch
+          <option title="German" value="/de/docs/Web/API/Service_Worker_API">
+            Deutsch (de)
           </option>
-          <option value="/fr/docs/Web/API/Service_Worker_API">
-            Français
+          <option title="French" value="/fr/docs/Web/API/Service_Worker_API">
+            Français (fr)
           </option>
-          <option value="/ja/docs/Web/API/ServiceWorker_API">
-            日本語
+          <option title="Indonesian" value="/id/docs/Web/API/Service_Worker_API">
+            Bahasa Indonesia (id)
           </option>
-          <option value="/ru/docs/Web/API/Service_Worker_API">
-            Русский
+          <option title="Japanese" value="/ja/docs/Web/API/ServiceWorker_API">
+            日本語 (ja)
           </option>
-          <option value="/zh-CN/docs/Web/API/Service_Worker_API">
-            中文 (简体)
+          <option title="Russian" value="/ru/docs/Web/API/Service_Worker_API">
+            Русский (ru)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/Service_Worker_API">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1026,33 +1046,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:02:43 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:26:29 GMT -->
 </body></html>

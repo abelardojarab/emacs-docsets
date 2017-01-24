@@ -1,0 +1,842 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/WebAPI?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:47:00 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Articles tagged: WebAPI</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: WebAPI" href="../feeds/atom/tag/WebAPI">
+  
+
+  
+    
+
+
+
+  
+</head>
+<body class="">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#content" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FWebAPI%3Fpage%3D3" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/WebAPI%3Fpage%3D3">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: WebAPI</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="WebAPI4658.html?page=2">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="WebAPI2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="WebAPI4658.html?page=2">2</a>
+    </li>
+  
+    <li class="selected">
+      <a href="WebAPI9ba9.html?page=3">3</a>
+    </li>
+  
+  
+  
+  </ol>
+
+        <p>Found 231 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/stopTone.html">Mozilla/B2G_OS/API/Telephony/stopTone</a>
+                
+                  <small>The startTone() method of the Telephony Interface stops transmitting the currently-playing DTMF ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall.html">Mozilla/B2G_OS/API/TelephonyCall</a>
+                
+                  <small>The TelephonyCall interface of the Web Telephony API represents one telephone call, providing ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/answer.html">Mozilla/B2G_OS/API/TelephonyCall/answer</a>
+                
+                  <small>The answer() method of the TelephonyCall interface answers an incoming call.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/emergency.html">Mozilla/B2G_OS/API/TelephonyCall/emergency</a>
+                
+                  <small>The emergency read-only property of the TelephonyCall interface indicates whether the current ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/group.html">Mozilla/B2G_OS/API/TelephonyCall/group</a>
+                
+                  <small>The group read-only property of the TelephonyCall interface indicates the TelephonyCallGroup ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/hangUp.html">Mozilla/B2G_OS/API/TelephonyCall/hangUp</a>
+                
+                  <small>The hangUp () method of the TelephonyCall interface hangs up an ongoing call.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/hold.html">Mozilla/B2G_OS/API/TelephonyCall/hold</a>
+                
+                  <small>The hold() method of the TelephonyCall interface is used to put a call on hold.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/id.html">Mozilla/B2G_OS/API/TelephonyCall/id</a>
+                
+                  <small>The id read-only property of the TelephonyCall interface indicates the caller id (usually the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/number.html">Mozilla/B2G_OS/API/TelephonyCall/number</a>
+                
+                  <small>The number read-only property of the TelephonyCall interface indicates the telephone number ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onalerting.html">Mozilla/B2G_OS/API/TelephonyCall/onalerting</a>
+                
+                  <small>The onalerting event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onbusy.html">Mozilla/B2G_OS/API/TelephonyCall/onbusy</a>
+                
+                  <small>A reference to a function to be called to handle the Telephony API's busy event. This event ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onconnected.html">Mozilla/B2G_OS/API/TelephonyCall/onconnected</a>
+                
+                  <small>The onconnected event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onconnecting.html">Mozilla/B2G_OS/API/TelephonyCall/onconnecting</a>
+                
+                  <small>The onconnecting event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondialing.html">Mozilla/B2G_OS/API/TelephonyCall/ondialing</a>
+                
+                  <small>The ondialing event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondisconnected.html">Mozilla/B2G_OS/API/TelephonyCall/ondisconnected</a>
+                
+                  <small>The ondisconnected event handler of the TelephonyCall interface is a reference to a function to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondisconnecting.html">Mozilla/B2G_OS/API/TelephonyCall/ondisconnecting</a>
+                
+                  <small>The ondisconnecting event handler of the TelephonyCall interface is a reference to a function to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onincoming.html">Mozilla/B2G_OS/API/TelephonyCall/onincoming</a>
+                
+                  <small>The onincoming () property of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onstatechange.html">Mozilla/B2G_OS/API/TelephonyCall/onstatechange</a>
+                
+                  <small>The onstatechange event handler of the TelephonyCall interface is a reference to a function to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/resume.html">Mozilla/B2G_OS/API/TelephonyCall/resume</a>
+                
+                  <small>The resume() method of the TelephonyCall interface is used to resume a call that was previously ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/state.html">Mozilla/B2G_OS/API/TelephonyCall/state</a>
+                
+                  <small>The state read-only property of the TelephonyCall interface returns the current state of the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TPC_Socket_API.html">Mozilla/B2G_OS/API/TPC_Socket_API</a>
+                
+                  <small>The TCPSocket API offers a whole API to open and use a TCP connection. This allows app makers to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/WebFM_API.html">Mozilla/B2G_OS/API/WebFM_API</a>
+                
+                  <small>The WebFM API provides access to the device FM radio. It allows turning the radio on/off and ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Web_Telephony_API.html">Mozilla/B2G_OS/API/Web_Telephony_API</a>
+                
+                  <small>Web Telephony is an API that makes it possible for web content to handle voice phone calls using ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Web_Telephony_API/Using_the_Web_Telephony_API.html">Mozilla/B2G_OS/API/Web_Telephony_API/Using_the_Web_Telephony_API</a>
+                
+                  <small>This article explains the basics of getting started with the Web Telephony API.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/WiFi_Information_API.html">Mozilla/B2G_OS/API/WiFi_Information_API</a>
+                
+                  <small>The WiFi Information API is specifically made to handle WiFi connections on a Firefox OS device. ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Window/onmoztimechange.html">Mozilla/B2G_OS/API/Window/onmoztimechange</a>
+                
+                  <small>An event handler for the moztimechange events sent to the window.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Projects/Social_API/MozSocial.html">Mozilla/Projects/Social_API/MozSocial</a>
+                
+                  <small>The MozSocial object, returned by the navigator.mozSocial property, is available within the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/Projects/Social_API/MozSocial/getWorker.html">Mozilla/Projects/Social_API/MozSocial/getWorker</a>
+                
+                  <small>Returns a reference to the service worker for the social media service. Once you have this, you ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Blob.html">Web/API/Blob</a>
+                
+                  <small>A Blob object represents a file-like object of immutable, raw data. Blobs represent data that ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/PushManager/subscribe.html">Web/API/PushManager/subscribe</a>
+                
+                  <small>The subscribe() method of the PushManager interface subscribes to a push service.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data">Web/Apps/Fundamentals/gather_and_modify_data</a>
+                
+                  <small>The following flowchart illustrates the typical workflow for retrieving data from the device ...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="WebAPI4658.html?page=2">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="WebAPI2679.html?page=1">1</a>
+    </li>
+  
+    <li>
+      <a href="WebAPI4658.html?page=2">2</a>
+    </li>
+  
+    <li class="selected">
+      <a href="WebAPI9ba9.html?page=3">3</a>
+    </li>
+  
+  
+  
+  </ol>
+
+      
+    </div>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+              
+
+<form class="languages go" method="get" action="#">
+  <label for="language">Other languages:</label>
+  
+    
+    <input type="hidden" name="page" value="3">
+    
+  
+  <select id="language" class="autosubmit" name="lang">
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
+  </select>
+  <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+</form>
+          
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/WebAPI?page=3 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:47:00 GMT -->
+</body></html>

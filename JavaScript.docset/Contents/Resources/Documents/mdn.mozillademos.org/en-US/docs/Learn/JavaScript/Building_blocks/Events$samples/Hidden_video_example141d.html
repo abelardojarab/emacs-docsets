@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/Hidden_video_example?revision=1149102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show video box example</title>
+    <style>
+      div {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 480px;
+        height: 380px;
+        border-radius: 10px;
+        background-color: #eee;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+      }
+
+      .hidden {
+        left: -50%;
+      }
+
+      .showing {
+        left: 50%;
+      }
+
+      div video {
+        display: block;
+        width: 400px;
+        margin: 40px auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button>Display video</button>
+
+    <div class="hidden">
+      <video>
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
+        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.html">link to the video</a> instead.</p>
+      </video>
+    </div>
+
+    <script>
+
+      var btn = document.querySelector('button');
+      var videoBox = document.querySelector('div');
+      var video = document.querySelector('video');
+
+      btn.onclick = function() {
+        displayVideo();
+      }
+
+      function displayVideo() {
+        if(videoBox.getAttribute('class') === 'hidden') {
+          videoBox.setAttribute('class','showing');
+        }
+      }
+
+      videoBox.addEventListener('click',function() {
+        videoBox.setAttribute('class','hidden');
+      });
+
+      video.addEventListener('click',function() {
+        video.play();
+      });
+      
+    </script>
+  </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/Hidden_video_example?revision=1149102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:42 GMT -->
+</html>
+        
+        
+    </body>
+</html>

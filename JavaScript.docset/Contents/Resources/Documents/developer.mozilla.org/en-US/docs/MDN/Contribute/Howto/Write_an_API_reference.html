@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:21:15 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:54:40 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,6 +75,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FMDN%2FContribute%2FHowto%2FWrite_an_API_reference" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FMDN%2FContribute%2FHowto%2FWrite_an_API_reference" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FMDN%2FContribute%2FHowto%2FWrite_an_API_reference" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -376,8 +366,23 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -387,20 +392,15 @@
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/essymo" title="View profile: essymo">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="essymo" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">essymo</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="essymo" data-src="../../../../../../secure.gravatar.com/avatar/2478214c6915c5d95a2de37706f62b446c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">essymo</noscript></a>
                 </li>
             
-                <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
-                </li>
-            
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/maybe" title="View profile: maybe">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="maybe" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">maybe</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="maybe" data-src="../../../../../../secure.gravatar.com/avatar/042d8ebd24bf86bd98a76a8233f275e96c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">maybe</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/ifilin" title="View profile: ifilin">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ifilin" data-src="../../../../../../secure.gravatar.com/avatar/85aadf6a2940a36e8d737f088180371c6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ifilin</noscript></a>
                 </li>
@@ -443,7 +443,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Prerequisite_knowledge" rel="internal">Prerequisite knowledge</a></li><li><a href="#Prerequisite_resources" rel="internal">Prerequisite resources</a></li><li><a href="#Take_some_time_to_play_with_the_API" rel="internal">Take some time to play with the API</a></li><li><a href="#Create_the_list_of_documents_you_need_to_write_or_update" rel="internal">Create the list of documents you need to write or update</a><ol><li><a href="#Overview_page" rel="internal">Overview page</a></li><li><a href="#Interfaces" rel="internal">Interfaces</a></li><li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Constructors" rel="internal">Constructors</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Listing_them_all" rel="internal">Listing them all</a></li></ol></li><li><a href="#Structure_of_an_overview_page" rel="internal">Structure of an overview page</a></li><li><a href="#Structure_of_an_interface_page" rel="internal">Structure of an interface page</a></li><li><a href="#Structure_of_a_property_page" rel="internal">Structure of a property page</a></li><li><a href="#Structure_of_a_method_page" rel="internal">Structure of a method page</a></li><li><a href="#Specific_page_component_coverage" rel="internal">Specific page component coverage</a><ol><li><a href="#Referencing_other_API_features_with_the_domxref_macro" rel="internal">Referencing other API features with the {{domxref}} macro</a></li><li><a href="#Creating_a_browser_support_table" rel="internal">Creating a browser support table</a></li><li><a href="#Creating_a_spec_reference_table" rel="internal">Creating a spec reference table</a><ol><li><a href="#Below_Specification" rel="internal">Below "Specification"</a></li><li><a href="#Under_Status" rel="internal">Under "Status"</a></li><li><a href="#Under_Comment" rel="internal">Under "Comment"</a></li></ol></li></ol></li><li><a href="#Examples" rel="internal">Examples</a></li><li><a href="#Tagging" rel="internal">Tagging</a>
+                  <li><a href="#Prerequisite_knowledge" rel="internal">Prerequisite knowledge</a></li><li><a href="#Prerequisite_resources" rel="internal">Prerequisite resources</a></li><li><a href="#Take_some_time_to_play_with_the_API" rel="internal">Take some time to play with the API</a></li><li><a href="#Create_the_list_of_documents_you_need_to_write_or_update" rel="internal">Create the list of documents you need to write or update</a><ol><li><a href="#Overview_page" rel="internal">Overview page</a></li><li><a href="#Interfaces" rel="internal">Interfaces</a></li><li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Constructors" rel="internal">Constructors</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Listing_them_all" rel="internal">Listing them all</a></li></ol></li><li><a href="#Structure_of_an_overview_page" rel="internal">Structure of an overview page</a></li><li><a href="#Structure_of_an_interface_page" rel="internal">Structure of an interface page</a><ol><li><a href="#Interface_page_examples" rel="internal">Interface page examples</a></li></ol></li><li><a href="#Structure_of_a_property_page" rel="internal">Structure of a property page</a><ol><li><a href="#Property_page_examples" rel="internal">Property page examples</a></li></ol></li><li><a href="#Structure_of_a_method_page" rel="internal">Structure of a method page</a><ol><li><a href="#Method_page_examples" rel="internal">Method page examples</a></li></ol></li><li><a href="#Specific_page_component_coverage" rel="internal">Specific page component coverage</a><ol><li><a href="#Referencing_other_API_features_with_the_domxref_macro" rel="internal">Referencing other API features with the {{domxref}} macro</a></li><li><a href="#Creating_a_browser_support_table" rel="internal">Creating a browser support table</a></li><li><a href="#Creating_a_spec_reference_table" rel="internal">Creating a spec reference table</a><ol><li><a href="#Below_Specification" rel="internal">Below "Specification"</a></li><li><a href="#Under_Status" rel="internal">Under "Status"</a></li><li><a href="#Under_Comment" rel="internal">Under "Comment"</a></li></ol></li></ol></li><li><a href="#Examples" rel="internal">Examples</a></li><li><a href="#Tagging" rel="internal">Tagging</a>
                 </li></ol>
               </div>
               
@@ -494,13 +494,13 @@
 
 <ol>
  <li>The latest spec: Whether it is a W3C Recommendation or an early&nbsp; editor's draft, you should refer to the latest available draft of the&nbsp; spec that covers (or specs that cover) that API. To find it, you can usually do a Web search. The latest&nbsp; version will often be linked to from all versions of the spec, listed under "latest draft" or similar.</li>
- <li>The latest modern web browsers: These should be experimental/alpha builds such as <a href="https://nightly.mozilla.org/" class="external">Firefox Nightly</a>/<a href="http://www.google.com/intl/en/chrome/browser/canary.html" class="external">Chrome Canary</a> that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental API.</li>
+ <li>The latest modern web browsers: These should be experimental/alpha builds such as <a href="https://nightly.mozilla.org/" class="external">Firefox Nightly</a>/<a href="https://www.google.com/intl/en/chrome/browser/canary.html" class="external">Chrome Canary</a> that are more likely to support the features you are documenting. This is especially pertinent if you are documenting a nascent/experimental API.</li>
  <li>Demos/blog posts/other info: Find as much info as you can.</li>
  <li>Useful engineering contacts: It is really useful to find yourself a friendly engineering contact to ask questions about the spec, someone who is involved in the standardization of the API, or its implementation in a browser. Good places to find them are:
   <ul>
    <li>Your internal company address book, if you work for a relevant company.</li>
-   <li>A public mailing list that is involved in the discussion of that API,&nbsp; such as Mozilla's <a href="https://lists.mozilla.org/listinfo/dev-platform" class="external">dev-platform</a> or <a href="https://lists.mozilla.org/listinfo/dev-webapi" class="external">dev-webapi</a> lists, or a W3C list like <a href="http://lists.w3.org/Archives/Public/public-webapps/" class="external">public-webapps</a>.</li>
-   <li>The spec itself. For example, the <a href="http://webaudio.github.io/web-audio-api/" class="external">Web Audio API spec</a> lists the authors and their contact details at the top.</li>
+   <li>A public mailing list that is involved in the discussion of that API,&nbsp; such as Mozilla's <a href="https://lists.mozilla.org/listinfo/dev-platform" class="external">dev-platform</a> or <a href="https://lists.mozilla.org/listinfo/dev-webapi" class="external">dev-webapi</a> lists, or a W3C list like <a href="https://lists.w3.org/Archives/Public/public-webapps/" class="external">public-webapps</a>.</li>
+   <li>The spec itself. For example, the <a href="https://webaudio.github.io/web-audio-api/" class="external">Web Audio API spec</a> lists the authors and their contact details at the top.</li>
   </ul>
  </li>
 </ol>
@@ -517,7 +517,7 @@
 
 <h2 id="Create_the_list_of_documents_you_need_to_write_or_update">Create the list of documents you need to write or update</h2>
 
-<p>Reference documents for an API are quite numerous. There is an overview page for the API, a page for each interfaces, one for each method (including constructors) and property (including event handlers properties). There is also one page per event.</p>
+<p>Reference documents for an API are quite numerous. There is an overview page for the API, a page for each interface, one for each method (including constructors) and property (including event handlers properties). There is also one page per event.</p>
 
 <h3 id="Overview_page">Overview page</h3>
 
@@ -544,18 +544,18 @@
 <ul>
  <li>Title: <em>AudioNode</em></li>
  <li>Slug: <em>Web/API/AudioNode</em></li>
- <li>Tags: must include the API name as a tag (here <em>Web Audio API</em>), as well as <em>Interface.</em></li>
+ <li>Tags: must include the API name as a tag (here <em>Web Audio API</em>), as well as <em>Interface</em>.</li>
 </ul>
 
 <div class="note">
-<p><strong>Note:<em> </em></strong>We document every property and interface appearing in the <u>prototype</u> of an object implementing this interface. This has the following consequences:</p>
+<p><strong>Note:</strong> We document every property and interface appearing in the <u>prototype</u> of an object implementing this interface. This has the following consequences:</p>
 
 <ul>
  <li>We do not document inherited properties and methods of the interface: they are listed on the respective parent interface. We do hint at their existence though.</li>
- <li>We do implement properties and methods defined in mixins, though we use the mixin name as interface name. (This is not optimal as the mixin name will not appear in the console, but prevents the duplication of documentation. We may revisit this in the future.)</li>
+ <li>We do document properties and methods defined in mixins, though we use the mixin name as interface name. (This is not optimal as the mixin name will not appear in the console, but prevents the duplication of documentation. We may revisit this in the future.)</li>
  <li>There is one subpage per method, or constructor: if there are several variants, with different parameters, we still create one subpage and use its Syntax section to list all variants.</li>
- <li>Special methods like the stringfier (toString()) and the jsonizier (toJSON()) are also listed if they do exist.</li>
- <li>Named constructors (like Image()&nbsp; for <a href="../../../Web/API/HTMLImageElement.html" title="The HTMLImageElement interface provides special properties and methods &nbsp;for manipulating the layout and presentation of &lt;img&gt; elements."><code>HTMLImageElement</code></a> ) are also listed, if relevant.</li>
+ <li>Special methods like the stringfier (<code>toString()</code>) and the jsonizier (<code>toJSON()</code>) are also listed if they do exist.</li>
+ <li>Named constructors (like <code>Image()</code>&nbsp; for <a href="../../../Web/API/HTMLImageElement.html" title="The HTMLImageElement interface provides special properties and methods &nbsp;for manipulating the layout and presentation of &lt;img&gt; elements."><code>HTMLImageElement</code></a> ) are also listed, if relevant.</li>
 </ul>
 </div>
 
@@ -579,10 +579,10 @@
 
 <h3 id="Methods">Methods</h3>
 
-<p>Like for properties, methods are listed on the interface's <a href="Write_an_API_reference/Information_contained_in_a_WebIDL_file.html#Methods">WebIDL</a> and we document each method in a single page. It will describe the purpose of the property, its syntax, and provide examples of use, in isolation. Its slug, without the parenthesis, is the property name, as a subpage of the interface:</p>
+<p>Like for properties, methods are listed on the interface's <a href="Write_an_API_reference/Information_contained_in_a_WebIDL_file.html#Methods">WebIDL</a> and we document each method in a single page. It will describe the purpose of the method, its syntax, and provide examples of use, in isolation. Its slug, without the parenthesis, is the method name, as a subpage of the interface:</p>
 
 <ul>
- <li>Title: <em>AudioContext.createBuffer()</em> Note the parenthesis, making it clear that it is a method.</li>
+ <li>Title: <em>AudioContext.createBuffer()</em> Note the parentheses, making it clear that it is a method.</li>
  <li>Slug: <em>Web/API/AudioContext/createBuffer </em>No parenthesis here.</li>
  <li>Tags: must include the API name as a tag (here <em>Web Audio API</em>), the interface name (here <em>AudioContext</em>) as well as <em>Method</em>.</li>
 </ul>
@@ -643,7 +643,7 @@
  </li>
 </ul>
 
-<p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for <a href="../../../Web/API/AudioContext.html" title="An AudioContext can be a target of events, therefore it implements the EventTarget interface."><code>AudioContext</code></a> would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each <a href="#Interface_pages">interface page</a> explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, <a href="../../../Web/API/AudioContext/currentTime.html" title="A double."><code>AudioContext.currentTime</code></a> is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
+<p>Each interface in the list has a separate page created for it as a subpage of https://developer.mozilla.org/en-US/docs/Web/API; for example, the document for <a href="../../../Web/API/AudioContext.html" title="An AudioContext can be a target of events, therefore it implements the EventTarget interface."><code>AudioContext</code></a> would be located at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext. Each <a href="#Interface_pages">interface page</a> explains what that interface does and provides a list of the methods and properties that comprise the interface. Then each method and property is documented on its own page, which is created as a subpage of the interface it's a member of. For instance, <a href="../../../Web/API/AudioContext/currentTime.html" title="The documentation about this has not yet been written; please consider contributing!"><code>AudioContext.currentTime</code></a> is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/currentTime.</p>
 
 <p>For example, given the list above, the <a href="../../../Web/API/AudioContext.html" title="An AudioContext can be a target of events, therefore it implements the EventTarget interface."><code>AudioContext</code></a> interface is documented at https://developer.mozilla.org/en-US/docs/Web/API/AudioContext</p>
 
@@ -692,7 +692,7 @@
 <p>Now you should be ready to start writing your interface pages. Each interface reference page should observe the following structure:</p>
 
 <ol>
- <li><strong>{{APIRef()}}</strong>: Include the {{APIRef()}} macro in the first line of each interface page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+ <li><strong>{{APIRef}}</strong>: Include the {{APIRef}} macro in the first line of each interface page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
   <img src="../../../../../../mdn.mozillademos.org/files/8783/apiref-links.png" style="border-style: solid; border-width: 1px; display: block; height: 384px; margin: 0px auto; width: 302px;" alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro "></li>
  <li><strong>Standardization status</strong>: The banner indicating the standardization status should be added next (these can be placed on the same line as the {{APIRef}} macro.):
   <ul>
@@ -702,22 +702,23 @@
    <li>{{Non-standard_header}}</li>
   </ul>
  </li>
- <li><strong>Description</strong>: the first paragraph of the interface page should provide&nbsp; a&nbsp; short concise description of the interface's overarching purpose.&nbsp; You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces.</li>
+ <li><strong>Description</strong>: the first paragraph of the interface page should provide&nbsp; a&nbsp; short concise description of the interface's overarching purpose.&nbsp; You may also want to include a couple more paragraphs if any additional description is required. Note that if the interface defines a mixin, you shouldn't use the term "Interface" to describe it, but mixin instead — it isn't really a standalone interface as such, but a mixin that adds functionality to multiple other interfaces. Similarly, if the interface is actually a dictionary, you should use that term instead of "interface".</li>
+ <li><strong>Inheritance diagram:</strong> Use the <span class="templateLink"><code><a href="https://developer.mozilla.org/en-US/docs/Template:InheritanceDiagram">InheritanceDiagram</a></code></span> macro to embed an SVG inheritance diagram for the interface. For most interfaces, you won't need any parameters, but if the inheritance chain is long, you may need to use {{InheritanceDiagram(600, 120)}} to make room vertically for two rows of boxes.</li>
  <li>
   <p><strong>List of properties, List of methods</strong>: These sections should be titled&nbsp; "Properties" and "Methods", and provide links (using the {{domxref}} macro) to a reference&nbsp; page for each property/method of that interface, along with a description of what&nbsp; each one does. These should be marked up using description/definition&nbsp; lists, which can be created using the&nbsp; "Definition List", "Definition&nbsp; Term", and "Definition Description" buttons on the MDN editor toolbar. Each description should be short and concise — one sentence if possible. See the "Referencing other API features with the {{domxref}} macro" section for a quicker way to create links to other pages.<br>
    <br>
    At the beginning of both sections, before the beginning of the list of properties/methods, indicate inheritance using the appropriate sentence, in italics:<br>
-   <em>This interface doesn't implement any specific properties, but inherits properties from {{domxref(XYZ)}}, and {{domxref(XYZ2)}}.</em><br>
-   <em>This interface also inherits properties from </em><em>{{domxref(XYZ)}}, and {{domxref(XYZ2)}}.<br>
-   This interface doesn't implement any specific methods, <em>but inherits methods from {{domxref(XYZ)}}, and {{domxref(XYZ2)}}.</em><br>
-   <em>This interface also inherits methods from </em><em>{{domxref(XYZ)}}, and {{domxref(XYZ2)}}.</em></em></p>
+   <em>This interface doesn't implement any specific properties, but inherits properties from {{domxref("XYZ")}}, and {{domxref("XYZ2")}}.</em><br>
+   <em>This interface also inherits properties from </em><em>{{domxref("XYZ")}}, and {{domxref("XYZ2")}}.<br>
+   This interface doesn't implement any specific methods, <em>but inherits methods from {{domxref("XYZ")}}, and {{domxref("XYZ2")}}.</em><br>
+   <em>This interface also inherits methods from </em><em>{{domxref("XYZ")}}, and {{domxref("XYZ2")}}.</em></em></p>
 
   <div class="note">
   <p><strong>Note</strong>: If the interface features event handlers, put these inside the "Properties" section (they are a type of property) under a subheading of "Event handlers".</p>
   </div>
 
   <div class="note">
-  <p><strong>Note</strong>:&nbsp; Properties that are read-only should have the {{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their {{domxref()}} links (after the use of the {{experimentalInline}}, {{obsoleteInline}}, {{non-standard_Inline}} and {{deprecatedInline}} macros, if some of these are needed.</p>
+  <p><strong>Note</strong>:&nbsp; Properties that are read-only should have the {{readonlyInline}} macro, which creates a nifty little "Read only" badge, included on the same line as their {{domxref}} links (after the use of the {{experimentalInline}}, {{obsoleteInline}}, {{non-standard_Inline}} and {{deprecatedInline}} macros, if some of these are needed.</p>
   </div>
  </li>
  <li><strong>Example</strong>: Include a code listing to show typical usage of a major feature of the API. Rather than listing ALL the code, you should list an interesting subset of it. For a complete code listing, you could reference a <a href="https://github.com/" class="external">Github</a> repo containing the full example, and you could&nbsp; also link to a live example created using the <a href="https://help.github.com/articles/creating-project-pages-manually/" class="external">Github gh-pages </a>feature (so long as it uses only client-side code of course.) If the example is visual, you could also use the MDN <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Editor/Live_samples">Live Sample</a> feature to make it live and playable in the page.
@@ -739,6 +740,15 @@
  <li><strong>Tags</strong>: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.</li>
 </ol>
 
+<h3 id="Interface_page_examples">Interface page examples</h3>
+
+<p>The following are exemplary examples of Interface pages:</p>
+
+<ul>
+ <li><a href="../../../Web/API/Request.html" title="The Request interface of the Fetch API represents a resource request."><code>Request</code></a> from the <a href="../../../Web/API/Fetch_API.html">Fetch API</a>.</li>
+ <li><a href="../../../Web/API/SpeechSynthesis.html" title="The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides."><code>SpeechSynthesis</code></a> from the <a href="../../../Web/API/Web_Speech_API.html">Web Speech API</a>.</li>
+</ul>
+
 <h2 id="Structure_of_a_property_page">Structure of a property page</h2>
 
 <p>You can now fill in your interface property pages. Since the structures of all of them are the same, it usually works best to open all the property&nbsp; pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other property pages and just update the bits that need changing,&nbsp; rather than having to fill each one in from scratch.</p>
@@ -749,7 +759,7 @@
 
 <ol>
  <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.propertyName</strong>. The interface name must start with a capital letter. Although an interface is implemented in JavaScript on the prototype of objects, we don't include <code>.prototype.</code> in the title, like we do in the <a href="../../../Web/JavaScript/Reference.html">JavaScript reference</a>.</li>
- <li><strong>{{APIRef()}}</strong>: Include the {{APIRef()}} macro in the first line of each property page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+ <li><strong>{{APIRef}}</strong>: Include the {{APIRef}} macro in the first line of each property page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
   <img src="../../../../../../mdn.mozillademos.org/files/8783/apiref-links.png" style="border-style: solid; border-width: 1px; display: block; height: 384px; margin: 0px auto; width: 302px;" alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro "></li>
  <li><strong>Standardization status</strong>: The banner indicating the standardization status should be added next to the interface name (these can be placed on the same line as the {{APIRef}} macro):
   <ul style="margin-left: 40px;">
@@ -764,7 +774,7 @@
    <dt>For read-only properties</dt>
    <dd>The <code><strong>InterfaceName.property</strong></code> read-only property returns a {{domxref("type")}} that...</dd>
    <dt>For other properties</dt>
-   <dd>The <strong><code>InterfaceName.property</code></strong> property is a {<a href="../../../Web/API/Type.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>type</code></a> that…</dd>
+   <dd>The <strong><code>InterfaceName.property</code></strong> property is a {{domxref("type")}} that…</dd>
   </dl>
 
   <div class="note"><strong>Note</strong>: <code>InterfaceName.property</code> should be in <code>&lt;code&gt;</code>, and should additionally be in bold (<code>&lt;strong&gt;</code>) the first time it's used.</div>
@@ -785,6 +795,15 @@
  <li><strong>Tags</strong>: There is a set of standard tags you should include for each property page — see the "Tags" section for more.</li>
 </ol>
 
+<h3 id="Property_page_examples">Property page examples</h3>
+
+<p>The following are exemplary examples of property pages:</p>
+
+<ul>
+ <li><a href="../../../Web/API/Request/method.html" title="The method read-only property of the Request interface contains the request's method (GET, POST, etc.)"><code>Request.method</code></a> from the <a href="../../../Web/API/Fetch_API.html">Fetch API</a>.</li>
+ <li><a href="../../../Web/API/SpeechSynthesis/speaking.html" title="The speaking read-only property of the SpeechSynthesis interface is a Boolean that returns true if an utterance is currently in the process of being spoken — even if SpeechSynthesis is in a paused state."><code>SpeechSynthesis.speaking</code></a> from the <a href="../../../Web/API/Web_Speech_API.html">Web Speech API</a>.</li>
+</ul>
+
 <h2 id="Structure_of_a_method_page">Structure of a method page</h2>
 
 <p>You can now fill in your interface method pages. Since the structure of&nbsp; all of them are the same, one possible way of doing it is to open all the method pages for each interface in separate tabs. From here you can fill one in fully, then copy its contents to all the other method pages and just update the bits that need changing, rather than having to fill each one in from scratch.</p>
@@ -793,7 +812,7 @@
 
 <ol>
  <li><strong>Title</strong>: the title of the page must be <strong>InterfaceName.method()</strong> (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the&nbsp; interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put <code>.prototype.</code> in the title, like we do in the <a href="../../../Web/JavaScript/Reference.html">JavaScript reference</a>.</li>
- <li><strong>{{APIRef()}}</strong>: Include the {{APIRef()}} macro in the first line of each method page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
+ <li><strong>{{APIRef}}</strong>: Include the {{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example {{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left hand side of the interface page, including properties and methods, and other quicklinks as defined in the <a href="https://developer.mozilla.org/en-US/docs/Template:GroupData">GroupData</a> macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.<br>
   <img src="../../../../../../mdn.mozillademos.org/files/8783/apiref-links.png" style="border-style: solid; border-width: 1px; display: block; height: 384px; margin: 0px auto; width: 302px;" alt="This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro "></li>
  <li><strong>Standardization status</strong>: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the {{APIRef}} macro):
   <ul>
@@ -815,14 +834,14 @@
   <dl>
    <dt>The syntax should be of the form:</dt>
    <dd>var&nbsp; &lt;em&gt;returnValue&lt;/em&gt; =&nbsp; &lt;em&gt;ifName&lt;/em&gt;.method(&lt;em&gt;param1&lt;/em&gt;,&nbsp; &lt;em&gt;param2&lt;/em&gt;, ...)</dd>
-   <dt>If the method has no return value (void as return value in the webidl), use:</dt>
+   <dt>If the method has no return value (<code>void</code> as return value in the webidl), use:</dt>
    <dd>&lt;em&gt;ifName&lt;/em&gt;.method(&lt;em&gt;param1&lt;/em&gt;,&nbsp; &lt;em&gt;param2&lt;/em&gt;, ...)</dd>
   </dl>
   The syntax section should include three subsections (see <a href="../../../Web/API/SubtleCrypto/sign.html" title="The SubtleCrypto.sign() method returns a Promise containing the signature corresponding to the text, algorithm and key given as parameters."><code>SubtleCrypto.sign()</code></a> for an example):
 
   <ul>
    <li>"Parameters": This should contain a definition list (or unordered list) that names and describes the different parameters the method takes. You should include the <span class="inlineIndicator optional optionalInline">Optional</span> macro next to the parameter name, in the case of optional parameters. If there are no parameters, this section should be omitted.</li>
-   <li>"Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use {{domxref()}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value is "Void".</li>
+   <li>"Return value": This should say what return value the method has, be it a simple value like a double or boolean, or a more complex value like another interface object, in which case you can use {{domxref}} macro to link to the MDN API page covering that interface (if it exists.) A method might return nothing, in which case the return value should be written as "{{jsxref('undefined')}}" (which will look like this in the rendered page: <a href="../../../Web/JavaScript/Reference/Global_Objects/undefined.html" title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a>).</li>
    <li>"Exceptions": This should list the different exceptions that can be raised when invoking the method, and what circumstances cause them. If there are no exceptions, this section should be omitted.</li>
   </ul>
  </li>
@@ -832,20 +851,29 @@
  <li><strong>Polyfill</strong>: If appropriate (especially if common browsers are still shipping without support for the method), you can include a section which includes the code for a polyfill to allow the API to be used in browsers that don't implement it.</li>
 </ol>
 
+<h3 id="Method_page_examples">Method page examples</h3>
+
+<p>The following are exemplary examples of Interface pages:</p>
+
+<ul>
+ <li><a href="../../../Web/API/Document/getAnimations.html" title="The getAnimations()&nbsp;method of the&nbsp;Document&nbsp;interface returns an array&nbsp;of all Animation objects currently in effect whose target elements are descendants of the document."><code>Document.getAnimations()</code></a> from the <a href="../../../Web/API/Web_Animations_API.html">Web Animations API</a>.</li>
+ <li><a href="../../../Web/API/GlobalFetch/fetch.html" title="The fetch() method of the GlobalFetch mixin starts the process of fetching a resource. This returns a promise that resolves to the Response object representing the response to your request."><code>GlobalFetch.fetch()</code></a> from the <a href="../../../Web/API/Fetch_API.html">Fetch API</a>.</li>
+</ul>
+
 <h2 id="Specific_page_component_coverage">Specific page component coverage</h2>
 
 <p>This section outlines some methodologies for filling in specific areas of API references.</p>
 
 <h3 id="Referencing_other_API_features_with_the_domxref_macro">Referencing other API features with the {{domxref}} macro</h3>
 
-<p>You can create a link to an API page, that is, a child page of <a href="../../../Web/API/index-2.html" class="new">https://developer.mozilla.org/en-US/docs/Web/API/</a>, using the {{domxref}} macro in one of two different ways. Let's take <a href="../../../Web/API/PannerNode/setPosition.html">https://developer.mozilla.org/en-US/docs/Web/API/PannerNode.setPosition</a> as an example:</p>
+<p>You can create a link to an API page, that is, a child page of <a href="../../../Web/API.html">https://developer.mozilla.org/en-US/docs/Web/API</a>, using the {{domxref}} macro in one of two different ways. Let's take <a href="../../../Web/API/PannerNode/setPosition.html">https://developer.mozilla.org/en-US/docs/Web/API/PannerNode.setPosition</a> as an example:</p>
 
 <ol>
  <li>If you want to link to the exact page title, you can do so just by including the title slug as a single macro argument, for example {{domxref("PannerNode.setPosition()")}}. If it is a method, always add the final brackets (the macro takes care of them).</li>
  <li>If you want the link text to be different from the page title, you can include two arguments. The first will be the title slug, like before, and the second is the link text you want, for example {{domxref("PannerNode.setPosition", "setPosition()")}}. Don't include an article or the words "method" or "property" in the link.</li>
 </ol>
 
-<p>When you want to create new pages there is a quicker way than having to go to the parent page (probably <a href="../../../Web/API.html">https://developer.mozilla.org/en-US/docs/Web/API</a> in this case) and pressing "New sub-page" for each one. Instead, you can use the {{domxref()}} macro to automatically create a link to the interface page at the right place in the MDN hierarchy, for example <em>{{domxref("MyInterfacePage")}}</em> would create a link to <em>https://developer.mozilla.org/en-US/docs/Web/API/MyInterfacePage</em>.&nbsp;&nbsp; When you've saved the current page, such links will appear on the page.&nbsp; When you then follow them, you will go to the "Create a New Document"&nbsp; page&nbsp; because that page doesn't exist yet — from here, you can fill in&nbsp; the&nbsp; content of each new page.</p>
+<p>When you want to create new pages there is a quicker way than having to go to the parent page (probably <a href="../../../Web/API.html">https://developer.mozilla.org/en-US/docs/Web/API</a> in this case) and pressing "New sub-page" for each one. Instead, you can use the {{domxref}} macro to automatically create a link to the interface page at the right place in the MDN hierarchy, for example <em>{{domxref("MyInterfacePage")}}</em> would create a link to <em>https://developer.mozilla.org/en-US/docs/Web/API/MyInterfacePage</em>.&nbsp;&nbsp; When you've saved the current page, such links will appear on the page.&nbsp; When you then follow them, you will go to the "Create a New Document"&nbsp; page&nbsp; because that page doesn't exist yet — from here, you can fill in&nbsp; the&nbsp; content of each new page.</p>
 
 <h3 id="Creating_a_browser_support_table">Creating a browser support table</h3>
 
@@ -900,13 +928,13 @@
 
 <ol>
  <li>The name of the specification, e.g. "Web Audio API". This should be exactly as it is listed in the SpecName template page: <a href="https://developer.mozilla.org/en-US/docs/Template:SpecName">https://developer.mozilla.org/en-US/docs/Template:SpecName</a>. If it is not yet listed in that template page, you need to add it, or get someone else to if you don't have admin privileges. The structure is&nbsp; fairly obvious. Make sure the spec URL included is the URL of the most useful spec (usually the latest editor's draft).</li>
- <li>The document fragment from the spec pointing to the exact description of the interface, property or method the current page you are writing is about. In most specs, EVERYTHING has a separate document fragment so anything can be linked to. For example, for the spec table on the <a href="../../../Web/API/PannerNode.html">https://developer.mozilla.org/en-US/docs/Web/API/PannerNode</a> page, the document fragment included is #the-pannernode-interface.&nbsp; This&nbsp; was got from URL of the section in the spec that describes the PannerNode — <a href="http://webaudio.github.io/web-audio-api/#the-pannernode-interface" class="external">http://webaudio.github.io/web-audio-api/#the-pannernode-interface</a>.</li>
+ <li>The document fragment from the spec pointing to the exact description of the interface, property or method the current page you are writing is about. In most specs, EVERYTHING has a separate document fragment so anything can be linked to. For example, for the spec table on the <a href="../../../Web/API/PannerNode.html">https://developer.mozilla.org/en-US/docs/Web/API/PannerNode</a> page, the document fragment included is #the-pannernode-interface.&nbsp; This&nbsp; was got from URL of the section in the spec that describes the PannerNode — <a href="https://webaudio.github.io/web-audio-api/#the-pannernode-interface" class="external">https://webaudio.github.io/web-audio-api/#the-pannernode-interface</a>.</li>
  <li>The name of the interface/property/method being described. For example, for the PannerNode page, just put "PannerNode".</li>
 </ol>
 
 <p>The full macro call looks like so:</p>
 
-<pre>{{SpecName('Web Audio API', '#the-pannernode-interface', 'PannerNode')}}</pre>
+<pre class="plain">{{SpecName('Web Audio API', '#the-pannernode-interface', 'PannerNode')}}</pre>
 
 <p>This produces a link pointing to the exact description of the PannerNode in the Web Audio API specification, with an adequate tooltip.</p>
 
@@ -990,25 +1018,6 @@
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMDN%2FContribute%2FHowto%2FWrite_an_API_reference%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+How+to+write+an+API+reference+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about How to write an API reference on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about How to write an API reference on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMDN%2FContribute%2FHowto%2FWrite_an_API_reference%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about How to write an API reference on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -1021,17 +1030,17 @@
       
         <li><a href="../../../tag/API.html">API</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Documentation">Documentation</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/documentation">documentation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Documentation">Documentation</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide">Guide</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Howto">Howto</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MDN Meta">MDN Meta</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/MDN meta">MDN meta</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MDN Meta">MDN Meta</a></li>
       
     </ul>
   </div>
@@ -1039,13 +1048,17 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jswisher">jswisher</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/essymo">essymo</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/maybe">maybe</a>, 
     
@@ -1063,11 +1076,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
-                      <time datetime="2016-03-21T23:01:13-07:00">Mar 21, 2016, 11:01:13 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
+                      <time datetime="2016-10-17T06:13:18-07:00">Oct 17, 2016, 6:13:18 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -1085,12 +1135,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1098,9 +1148,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1117,33 +1166,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:21:17 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:54:46 GMT -->
 </body></html>

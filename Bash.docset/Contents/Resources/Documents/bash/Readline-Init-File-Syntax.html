@@ -1,18 +1,18 @@
 <html><!-- This text is a brief description of the features that are present in
-the Bash shell (version 4.3, 2 February 2014).
+the Bash shell (version 4.4, 7 September 2016).
 
-This is Edition 4.3, last updated 2 February 2014,
+This is Edition 4.4, last updated 7 September 2016,
 of The GNU Bash Reference Manual,
-for Bash, Version 4.3.
+for Bash, Version 4.4.
 
-Copyright (C) 1988-2014 Free Software Foundation, Inc.
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled
-"GNU Free Documentation License". --><!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ --><head>
+"GNU Free Documentation License". --><!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ --><head>
 <title>Readline Init File Syntax</title>
 
 <meta name="description" content="Bash Reference Manual: Readline Init File Syntax">
@@ -30,16 +30,16 @@ A copy of the license is included in the section entitled
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
 blockquote.smallquotation {font-size: smaller}
 div.display {margin-left: 3.2em}
 div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
 div.lisp {margin-left: 3.2em}
 div.smalldisplay {margin-left: 3.2em}
 div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
 div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
+kbd {font-style: oblique}
 pre.display {font-family: inherit}
 pre.format {font-family: inherit}
 pre.menu-comment {font-family: serif}
@@ -48,10 +48,9 @@ pre.smalldisplay {font-family: inherit; font-size: smaller}
 pre.smallexample {font-size: smaller}
 pre.smallformat {font-family: inherit; font-size: smaller}
 pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
 </style>
@@ -59,7 +58,7 @@ ul.no-bullet {list-style: none}
 
 </head>
 
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en">
 <a name="Readline-Init-File-Syntax"></a>
 <div class="header">
 <p>
@@ -121,9 +120,25 @@ the terminal’s bell.
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/bind%2Dtty%2Dspecial%2Dchars"></a><a name="index-bind_002dtty_002dspecial_002dchars"></a><code>bind-tty-special-chars</code></dt>
 <dd>
-<p>If set to ‘<samp>on</samp>’, Readline attempts to bind the control characters  
-treated specially by the kernel’s terminal driver to their Readline
-equivalents.
+<p>If set to ‘<samp>on</samp>’ (the default), Readline attempts to bind the control
+characters   treated specially by the kernel’s terminal driver to their
+Readline equivalents.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/blink%2Dmatching%2Dparen"></a><a name="index-blink_002dmatching_002dparen"></a><code>blink-matching-paren</code></dt>
+<dd>
+<p>If set to ‘<samp>on</samp>’, Readline attempts to briefly move the cursor to an
+opening parenthesis when a closing parenthesis is inserted.  The default
+is ‘<samp>off</samp>’.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/colored%2Dcompletion%2Dprefix"></a><a name="index-colored_002dcompletion_002dprefix"></a><code>colored-completion-prefix</code></dt>
+<dd>
+<p>If set to ‘<samp>on</samp>’, when listing completions, Readline displays the
+common prefix of the set of possible completions using a different color.
+The color definitions are taken from the value of the <code>LS_COLORS</code>
+environment variable.
+The default is ‘<samp>off</samp>’.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/colored%2Dstats"></a><a name="index-colored_002dstats"></a><code>colored-stats</code></dt>
@@ -191,7 +206,9 @@ The default limit is <code>100</code>.
 <p>If set to ‘<samp>on</samp>’, Readline will convert characters with the
 eighth bit set to an <small>ASCII</small> key sequence by stripping the eighth
 bit and prefixing an <tt class="key">ESC</tt> character, converting them to a
-meta-prefixed key sequence.  The default value is ‘<samp>on</samp>’.
+meta-prefixed key sequence.  The default value is ‘<samp>on</samp>’, but
+will be set to ‘<samp>off</samp>’ if the locale is one that contains
+eight-bit characters.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/disable%2Dcompletion"></a><a name="index-disable_002dcompletion"></a><code>disable-completion</code></dt>
@@ -199,6 +216,13 @@ meta-prefixed key sequence.  The default value is ‘<samp>on</samp>’.
 <p>If set to ‘<samp>On</samp>’, Readline will inhibit word completion.
 Completion  characters will be inserted into the line as if they had
 been mapped to <code>self-insert</code>.  The default is ‘<samp>off</samp>’.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/echo%2Dcontrol%2Dcharacters"></a><a name="index-echo_002dcontrol_002dcharacters"></a><code>echo-control-characters</code></dt>
+<dd>
+<p>When set to ‘<samp>on</samp>’, on operating systems that indicate they support it,
+readline echoes a character corresponding to a signal generated from the
+keyboard.  The default is ‘<samp>on</samp>’.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/editing%2Dmode"></a><a name="index-editing_002dmode"></a><code>editing-mode</code></dt>
@@ -209,10 +233,25 @@ mode, where the keystrokes are most similar to Emacs.  This variable can be
 set to either ‘<samp>emacs</samp>’ or ‘<samp>vi</samp>’.
 </p>
 </dd>
-<dt><code>echo-control-characters</code></dt>
-<dd><p>When set to ‘<samp>on</samp>’, on operating systems that indicate they support it,
-readline echoes a character corresponding to a signal generated from the
-keyboard.  The default is ‘<samp>on</samp>’.
+<dt><a class="dashAnchor" name="//apple_ref/Variable/emacs%2Dmode%2Dstring"></a><a name="index-emacs_002dmode_002dstring"></a><code>emacs-mode-string</code></dt>
+<dd>
+<p>This string is displayed immediately before the last line of the primary
+prompt when emacs editing mode is active.  The value is expanded like a
+key binding, so the standard set of meta- and control prefixes and
+backslash escape sequences is available.
+Use the ‘<samp>\1</samp>’ and ‘<samp>\2</samp>’ escapes to begin and end sequences of
+non-printing characters, which can be used to embed a terminal control
+sequence into the mode string.
+The default is ‘<samp>@</samp>’.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/enable%2Dbracketed%2Dpaste"></a><a name="index-enable_002dbracketed_002dpaste"></a><code>enable-bracketed-paste</code></dt>
+<dd>
+<p>When set to ‘<samp>On</samp>’, Readline will configure the terminal in a way
+that will enable it to insert each paste into the editing buffer as a
+single string of characters, instead of treating each character as if
+it had been read from the keyboard.  This can prevent pasted characters
+from being interpreted as editing commands.  The default is ‘<samp>off</samp>’.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/enable%2Dkeypad"></a><a name="index-enable_002dkeypad"></a><code>enable-keypad</code></dt>
@@ -251,6 +290,8 @@ are saved.
 If set to a value less than zero, the number of history entries is not
 limited.
 By default, the number of history entries is not limited.
+If an attempt is made to set <var>history-size</var> to a non-numeric value,
+the maximum number of history entries will be set to 500.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/horizontal%2Dscroll%2Dmode"></a><a name="index-horizontal_002dscroll_002dmode"></a><code>horizontal-scroll-mode</code></dt>
@@ -268,8 +309,9 @@ this variable is set to ‘<samp>off</samp>’.
 <p>If set to ‘<samp>on</samp>’, Readline will enable eight-bit input (it
 will not clear the eighth bit in the characters it reads),
 regardless of what the terminal claims it can support.  The
-default value is ‘<samp>off</samp>’.  The name <code>meta-flag</code> is a
-synonym for this variable.
+default value is ‘<samp>off</samp>’, but Readline will set it to ‘<samp>on</samp>’ if the 
+locale contains eight-bit characters.
+The name <code>meta-flag</code> is a synonym for this variable.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/isearch%2Dterminators"></a><a name="index-isearch_002dterminators"></a><code>isearch-terminators</code></dt>
@@ -292,8 +334,9 @@ Acceptable <code>keymap</code> names are
 <code>vi-move</code>,
 <code>vi-command</code>, and
 <code>vi-insert</code>.
-<code>vi</code> is equivalent to <code>vi-command</code>; <code>emacs</code> is
-equivalent to <code>emacs-standard</code>.  The default value is <code>emacs</code>.
+<code>vi</code> is equivalent to <code>vi-command</code> (<code>vi-move</code> is also a
+synonym); <code>emacs</code> is equivalent to <code>emacs-standard</code>.
+The default value is <code>emacs</code>.
 The value of the <code>editing-mode</code> variable also affects the
 default keymap.
 </p>
@@ -356,7 +399,9 @@ the list.  The default is ‘<samp>off</samp>’.
 <dd>
 <p>If set to ‘<samp>on</samp>’, Readline will display characters with the
 eighth bit set directly rather than as a meta-prefixed escape
-sequence.  The default is ‘<samp>off</samp>’.
+sequence.
+The default is ‘<samp>off</samp>’, but Readline will set it to ‘<samp>on</samp>’ if the
+locale contains eight-bit characters.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/page%2Dcompletions"></a><a name="index-page_002dcompletions"></a><code>page-completions</code></dt>
@@ -404,8 +449,8 @@ The default value is ‘<samp>off</samp>’.
 <dt><a class="dashAnchor" name="//apple_ref/Variable/show%2Dmode%2Din%2Dprompt"></a><a name="index-show_002dmode_002din_002dprompt"></a><code>show-mode-in-prompt</code></dt>
 <dd>
 <p>If set to ‘<samp>on</samp>’, add a character to the beginning of the prompt
-indicating the editing mode: emacs (‘<samp>@</samp>’), vi command (‘<samp>:</samp>’),
-or vi insertion (‘<samp>+</samp>’).
+indicating the editing mode: emacs, vi command, or vi insertion.
+The mode strings are user-settable.
 The default value is ‘<samp>off</samp>’.
 </p>
 </dd>
@@ -422,6 +467,32 @@ is after the ‘<samp>e</samp>’ in ‘<samp>Makefile</samp>’ will result in 
 rather than ‘<samp>Makefilefile</samp>’, assuming there is a single possible
 completion.
 The default value is ‘<samp>off</samp>’.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/vi%2Dcmd%2Dmode%2Dstring"></a><a name="index-vi_002dcmd_002dmode_002dstring"></a><code>vi-cmd-mode-string</code></dt>
+<dd>
+<p>This string is displayed immediately before the last line of the primary
+prompt when vi editing mode is active and in command mode.
+The value is expanded like a
+key binding, so the standard set of meta- and control prefixes and
+backslash escape sequences is available.
+Use the ‘<samp>\1</samp>’ and ‘<samp>\2</samp>’ escapes to begin and end sequences of
+non-printing characters, which can be used to embed a terminal control
+sequence into the mode string.
+The default is ‘<samp>(cmd)</samp>’.
+</p>
+</dd>
+<dt><a class="dashAnchor" name="//apple_ref/Variable/vi%2Dins%2Dmode%2Dstring"></a><a name="index-vi_002dins_002dmode_002dstring"></a><code>vi-ins-mode-string</code></dt>
+<dd>
+<p>This string is displayed immediately before the last line of the primary
+prompt when vi editing mode is active and in insertion mode.
+The value is expanded like a
+key binding, so the standard set of meta- and control prefixes and
+backslash escape sequences is available.
+Use the ‘<samp>\1</samp>’ and ‘<samp>\2</samp>’ escapes to begin and end sequences of
+non-printing characters, which can be used to embed a terminal control
+sequence into the mode string.
+The default is ‘<samp>(ins)</samp>’.
 </p>
 </dd>
 <dt><a class="dashAnchor" name="//apple_ref/Variable/visible%2Dstats"></a><a name="index-visible_002dstats"></a><code>visible-stats</code></dt>

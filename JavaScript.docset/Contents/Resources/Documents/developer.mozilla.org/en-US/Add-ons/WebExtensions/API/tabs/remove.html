@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/remove by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:23:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/remove by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:19:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,19 +12,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
-
-    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
       
@@ -32,17 +31,17 @@
       
     
 
-  <!-- common social tags -->
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -80,6 +79,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -95,10 +101,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +154,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +171,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +188,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%2Fremove" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/Add-ons/WebExtensions/API/tabs/remove" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/Add-ons/WebExtensions/API/tabs/remove" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%2Fremove" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%2Fremove" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +211,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../../../docs/Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +235,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +249,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/remove">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -310,7 +299,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -327,7 +316,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -338,7 +329,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -365,7 +355,7 @@
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" rel="v:url" property="v:title">WebExtensions</a></li>
     
-      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">JavaScript APIs</a></li>
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API.png" rel="v:url" property="v:title">JavaScript APIs</a></li>
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="../tabs.html" rel="v:url" property="v:title">tabs</a></li>
     
@@ -398,6 +388,11 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wbamberg" data-src="../../../../../../secure.gravatar.com/avatar/576b94c81f8ad97e58d63f12e5fdb00c6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wbamberg</noscript></a>
                 </li>
             
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Makyen" title="View profile: Makyen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Makyen" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Makyen</noscript></a>
+                </li>
+            
             </ul>
         </div>
         
@@ -421,7 +416,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li></ol></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Example_add-ons" rel="internal">Example add-ons</a></li></ol></li>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Example_add-ons" rel="internal">Example add-ons</a></li></ol></li>
                 </ol>
               </div>
               
@@ -455,11 +450,12 @@
 
 <p>Closes one or more tabs.</p>
 
+<p>This is an asynchronous function that returns a <code><a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/Promise.html">Promise</a></code>.</p>
+
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">browser.tabs.remove(
-  tabIds,          // integer or integer array
-  function() {...} // optional function
+<pre class="syntaxbox brush:js">var removing = browser.tabs.remove(
+  tabIds          // integer or integer array
 )
 </pre>
 
@@ -467,20 +463,75 @@
 
 <dl>
  <dt><code>tabIds</code></dt>
- <dd><code><code>integer</code></code> or <code><code>array</code> of <code><code>integer</code></code></code>. The tab or list of tabs to close.</dd>
- <dt><code>callback</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
- <dd><code>function</code>.</dd>
+ <dd><code><code>integer</code></code> or <code><code>array</code> of <code><code>integer</code></code></code>. The tab or tabs to close.</dd>
 </dl>
 
+<h3 id="Return_value">Return value</h3>
+
+<p>A <code><a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/Promise.html">Promise</a></code> that will be fulfilled with&nbsp;no arguments when the tab(s) have been removed. If any error occurs, the promise will be rejected with an error message.</p>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-<div class="htab">    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a>    <ul>        <li class="selected"><a>Desktop</a></li>        <li><a>Mobile</a></li>    </ul><div id="compat-desktop"><table class="compat-table"><tbody><tr><th></th><th>Edge</th><th>Firefox</th><th>Chrome</th><th>Opera</th></tr><tr><td>Basic support</td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><tbody><tr><th></th><th>Firefox</th></tr><tr><td>Basic support</td><td>No</td></tr></tbody></table></div></div>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p></p><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>Basic support</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><p></p>
+
 <h2 id="Examples">Examples</h2>
+
+<p>Close a single tab:</p>
+
+<pre class="brush: js">function onRemoved() {
+  console.log(`Removed`);
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
+
+var removing = browser.tabs.remove(2);
+removing.then(onRemoved, onError);</pre>
+
+<p>Close multiple tabs:</p>
+
+<pre class="brush: js">function onRemoved() {
+  console.log(`Removed`);
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
+
+var removing = browser.tabs.remove([15, 14, 1]);
+removing.then(onRemoved, onError);</pre>
 
 <p></p><h3 id="Example_add-ons">Example add-ons</h3><ul><li><a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs" class="external">tabs-tabs-tabs</a></li></ul><p></p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs#method-remove" class="external"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json" class="external"><code>tabs.json</code></a> in the Chromium code.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">
@@ -516,25 +567,6 @@
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%2Fremove%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+tabs.remove%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about tabs.remove() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about tabs.remove() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%2Fremove%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about tabs.remove() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -574,7 +606,9 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Makyen">Makyen</a>
     
                     </div>
                   
@@ -583,10 +617,47 @@
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
                       <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>,
-                      <time datetime="2016-04-14T16:20:58-07:00">Apr 14, 2016, 4:20:58 PM</time>
+                      <time datetime="2016-11-08T14:04:27-08:00">Nov 8, 2016, 2:04:27 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -609,30 +680,64 @@
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites">Prerequisites</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_Installation">Packaging and Installation</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough">Walkthrough</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Examples</a> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_">What are WebExtensions?</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Example_WebExtensions">Example WebExtensions</a> 
       </li></ol> 
     </li> 
      
-    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Guides">Guides</a> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#How_to">How to</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome">Porting from Google Chrome</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a> 
-      </li></ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Concepts">Concepts</a> 
+      <ol> 
+        <li><a href="../../API.html">Using the JavaScript APIs</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components">User interface components</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Porting">Porting</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox add-on</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Firefox_workflow">Firefox workflow</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions and the Add-on ID</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">Publishing your WebExtension</a></li> 
+ 
+      </ol> 
     </li>   
      
-    <li data-default-state="open"><a href="../../API.html">JavaScript APIs</a> 
-     <ol><li><a href="../alarms.html">alarms</a></li><li><a href="../bookmarks.html">bookmarks</a></li><li><a href="../browserAction.html">browserAction</a></li><li><a href="../contextMenus.html">contextMenus</a></li><li><a href="../cookies.html">cookies</a></li><li><a href="../downloads.html">downloads</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="../extension.html">extension</a></li><li><a href="../extensionTypes.html">extensionTypes</a></li><li><a href="../i18n.html">i18n</a></li><li><a href="../idle.html">idle</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/notifications.png">notifications</a></li><li><a href="../pageAction.html">pageAction</a></li><li><a href="../runtime.html">runtime</a></li><li><a href="../storage.html">storage</a></li><li class="webextension-api-sidebar"><a href="../tabs.html">tabs</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="captureVisibleTab.html" title="Captures the visible area of the currently active tab in the specified window. You must have &lt;all_urls&gt; permission to use this method."><code>captureVisibleTab()</code></a></li><li><a href="connect.html" title="Connects to the content script(s) in the specified tab. The runtime.onConnect event is fired in each content script running in the specified tab for the current extension. For more details, see content script messaging."><code>connect()</code></a></li><li><a href="create.html" title="Creates a new tab."><code>create()</code></a></li><li><a href="detectLanguage.html" title="Detects the primary language of the content in a tab."><code>detectLanguage()</code></a></li><li><a href="duplicate.html" title="Duplicates a tab."><code>duplicate()</code></a></li><li><a href="executeScript.html" title="Injects JavaScript code into a page. For details, see the programmatic injection section of the content scripts doc."><code>executeScript()</code></a></li><li><a href="get.html" title="Retrieves details about the specified tab."><code>get()</code></a></li><li><a href="getAllInWindow.html" title=""><code>getAllInWindow()</code></a></li><li><a href="getCurrent.html" title="Gets the tab that this script call is being made from. May be undefined if called from a non-tab context (for example: a background page or popup view)."><code>getCurrent()</code></a></li><li><a href="getSelected.html" title="Gets the tab that is selected in the specified window."><code>getSelected()</code></a></li><li><a href="getZoom.html" title="Gets the current zoom factor of a specified tab."><code>getZoom()</code></a></li><li><a href="getZoomSettings.html" title="Gets the current zoom settings of a specified tab."><code>getZoomSettings()</code></a></li><li><a href="highlight.html" title="Highlights the given tabs."><code>highlight()</code></a></li><li><a href="insertCSS.html" title="Injects CSS into a page. For details, see the programmatic injection section of the content scripts doc."><code>insertCSS()</code></a></li><li><a href="move.html" title="Moves one or more tabs to a new position in the same window or in a different window."><code>move()</code></a></li><li><a href="query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query()</code></a></li><li><a href="reload.html" title="Reload a tab."><code>reload()</code></a></li><li><em><code>remove()</code></em></li><li><a href="sendMessage.html" title="Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension."><code>sendMessage()</code></a></li><li><a href="sendRequest.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>sendRequest()</code></a></li><li><a href="setZoom.html" title="Zooms a specified tab."><code>setZoom()</code></a></li><li><a href="setZoomSettings.html" title="Sets the zoom settings for a specified tab, which define how zoom changes are handled. These settings are reset to defaults upon navigating the tab."><code>setZoomSettings()</code></a></li><li><a href="update.html" title="Modifies the properties of a tab. Properties that are not specified in updateProperties are not modified."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="TAB_ID_NONE.html" title="An ID which represents the absence of a browser tab."><code>TAB_ID_NONE</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="MutedInfo.html" title="Tab muted state and the reason for the last state change."><code>MutedInfo</code></a></li><li><a href="MutedInfoReason.html" title="Specifies the reason a tab was muted or unmuted."><code>MutedInfoReason</code></a></li><li><a href="Tab.html" title="This type contains information about a tab."><code>Tab</code></a></li><li><a href="TabStatus.html" title="Whether the tabs have completed loading."><code>TabStatus</code></a></li><li><a href="WindowType.html" title="The type of window."><code>WindowType</code></a></li><li><a href="ZoomSettings.html" title="Defines how zoom changes in a tab are handled and at what scope."><code>ZoomSettings</code></a></li><li><a href="ZoomSettingsMode.html" title="Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to automatic."><code>ZoomSettingsMode</code></a></li><li><a href="ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults to per-origin when in automatic mode, and per-tab otherwise."><code>ZoomSettingsScope</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>onActivated</code></a></li><li><a href="onActiveChanged.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActiveChanged</code></a></li><li><a href="onAttached.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>onAttached</code></a></li><li><a href="onCreated.html" title="Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>onCreated</code></a></li><li><a href="onDetached.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>onDetached</code></a></li><li><a href="onHighlightChanged.html" title="Fired when the highlighted or selected tabs in a window changes."><code>onHighlightChanged</code></a></li><li><a href="onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>onHighlighted</code></a></li><li><a href="onMoved.html" title="Fired when a tab is moved within a window. Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see tabs.onDetached."><code>onMoved</code></a></li><li><a href="onRemoved.html" title="Fired when a tab is closed."><code>onRemoved</code></a></li><li><a href="onReplaced.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>onReplaced</code></a></li><li><a href="onSelectionChanged.html" title="Fires when the selected tab in a window changes."><code>onSelectionChanged</code></a></li><li><a href="onUpdated.html" title="Fired when a tab is updated."><code>onUpdated</code></a></li><li><a href="onZoomChange.html" title="Fired when a tab is zoomed."><code>onZoomChange</code></a></li></ol></li></ol></li><li><a href="../webNavigation.html">webNavigation</a></li><li><a href="../webRequest.html">webRequest</a></li><li><a href="../windows.html">windows</a></li></ol> 
+    <li data-default-state="open"><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API.png">JavaScript APIs</a> 
+     <ol><li><a href="../../Browser_support_for_JavaScript_APIs.html">Browser support for JavaScript APIs</a></li><li><a href="../alarms.html">alarms</a></li><li><a href="../bookmarks.html">bookmarks</a></li><li><a href="../browserAction.html">browserAction</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/commands.png">commands</a></li><li><a href="../contextMenus.html">contextMenus</a></li><li><a href="../cookies.html">cookies</a></li><li><a href="../downloads.html">downloads</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="../extension.html">extension</a></li><li><a href="../extensionTypes.html">extensionTypes</a></li><li><a href="../history.html">history</a></li><li><a href="../i18n.html">i18n</a></li><li><a href="../idle.html">idle</a></li><li><a href="../management.html">management</a></li><li><a href="../notifications.html">notifications</a></li><li><a href="../pageAction.html">pageAction</a></li><li><a href="../runtime.html">runtime</a></li><li><a href="../storage.html">storage</a></li><li class="webextension-api-sidebar"><a href="../tabs.html">tabs</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="captureVisibleTab.html" title="Creates a data URI encoding an image of the visible area of the currently active tab in the specified window. You must have the &lt;all_urls&gt; permission to use this method."><code>captureVisibleTab()</code></a></li><li><a href="connect.html" title="Call this function to set up a connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab. This function returns a runtime.Port object."><code>connect()</code></a></li><li><a href="create.html" title="Creates a new tab."><code>create()</code></a></li><li><a href="detectLanguage.html" title="Detects the primary language of the content in a tab, using the Compact Language Detector (CLD)."><code>detectLanguage()</code></a></li><li><a href="duplicate.html" title="Duplicates a tab, given its ID."><code>duplicate()</code></a></li><li><a href="executeScript.html" title="Injects JavaScript code into a page."><code>executeScript()</code></a></li><li><a href="get.html" title="Given a tab ID, get the tab's details as a tabs.Tab object."><code>get()</code></a></li><li><a href="getAllInWindow.html" title="Gets details about all tabs in the specified window."><code>getAllInWindow()</code></a></li><li><a href="getCurrent.html" title="Get&nbsp;a tabs.Tab containing information about the tab that this script is running in."><code>getCurrent()</code></a></li><li><a href="getSelected.html" title="Gets the tab that is selected in the specified window."><code>getSelected()</code></a></li><li><a href="getZoom.html" title="Gets the current zoom factor for the specified tab."><code>getZoom()</code></a></li><li><a href="getZoomSettings.html" title="Gets the current zoom settings for a specified tab."><code>getZoomSettings()</code></a></li><li><a href="highlight.html" title="A Promise that will be fulfilled with a&nbsp;windows.Window object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message."><code>highlight()</code></a></li><li><a href="insertCSS.html" title="Injects CSS into a page."><code>insertCSS()</code></a></li><li><a href="move.html" title="Moves one or more tabs to a new position in the same window or to a different window."><code>move()</code></a></li><li><a href="query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query()</code></a></li><li><a href="reload.html" title="Reload a tab, optionally bypassing the local web cache."><code>reload()</code></a></li><li><em><code>remove()</code></em></li><li><a href="sendMessage.html" title="Sends a single message from the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab."><code>sendMessage()</code></a></li><li><a href="sendRequest.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>sendRequest()</code></a></li><li><a href="setZoom.html" title="Zooms the specified tab."><code>setZoom()</code></a></li><li><a href="setZoomSettings.html" title="Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab."><code>setZoomSettings()</code></a></li><li><a href="update.html" title="Navigate the tab to a new URL, or modify other properties of the tab."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="TAB_ID_NONE.html" title="A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows)."><code>TAB_ID_NONE</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="MutedInfo.html" title="This object contains a boolean indicating whether the tab is muted, and the reason for the last state change."><code>MutedInfo</code></a></li><li><a href="MutedInfoReason.html" title="Specifies the reason a tab was muted or unmuted."><code>MutedInfoReason</code></a></li><li><a href="Tab.html" title="The type tabs.Tab contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth."><code>Tab</code></a></li><li><a href="TabStatus.html" title="Indicates whether the tab has finished loading."><code>TabStatus</code></a></li><li><a href="WindowType.html" title="The type of window that hosts this tab."><code>WindowType</code></a></li><li><a href="ZoomSettings.html" title="Defines zoom settings for a tab: mode,&nbsp;scope, and default zoom factor."><code>ZoomSettings</code></a></li><li><a href="ZoomSettingsMode.html" title="Defines how zoom changes are handled. Add-ons can pass this value into tabs.setZoomSettings() to control how the browser handles attempts to change zoom settings for a tab. Defaults to &quot;automatic&quot;."><code>ZoomSettingsMode</code></a></li><li><a href="ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to per-origin when tabs.zoomSettingsMode is &quot;automatic&quot;, and is always per-tab otherwise."><code>ZoomSettingsScope</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActivated</code></a></li><li><a href="onActiveChanged.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActiveChanged</code></a></li><li><a href="onAttached.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>onAttached</code></a></li><li><a href="onCreated.html" title="Fired when a tab is created."><code>onCreated</code></a></li><li><a href="onDetached.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>onDetached</code></a></li><li><a href="onHighlightChanged.html" title="Fired when the highlighted or selected tabs in a window changes."><code>onHighlightChanged</code></a></li><li><a href="onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>onHighlighted</code></a></li><li><a href="onMoved.html" title="Fired when a tab is moved within a window."><code>onMoved</code></a></li><li><a href="onRemoved.html" title="Fired when a tab is closed."><code>onRemoved</code></a></li><li><a href="onReplaced.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>onReplaced</code></a></li><li><a href="onSelectionChanged.html" title="Fires when the selected tab in a window changes."><code>onSelectionChanged</code></a></li><li><a href="onUpdated.html" title="Fired when a tab is updated."><code>onUpdated</code></a></li><li><a href="onZoomChange.html" title="Fired when a tab is zoomed."><code>onZoomChange</code></a></li></ol></li></ol></li><li><a href="../webNavigation.html">webNavigation</a></li><li><a href="../webRequest.html">webRequest</a></li><li><a href="../windows.html">windows</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Manifest keys</a> 
-    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
+    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK"><strong>Add-on SDK</strong></a></li> 
@@ -661,7 +766,7 @@
     </li> 
  
     <li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API.png">APIs</a> 
-      <ol><li><a href="../../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/Home.png">Home.jsm</a></li><li><a href="../../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
+      <ol><li><a href="../../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Home.html">Home.jsm</a></li><li><a href="../../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
     </li>  
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions"><strong>Legacy</strong></a></li> 
@@ -737,12 +842,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -750,9 +855,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -769,63 +873,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/remove$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/remove by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:23:46 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs/remove by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:19:31 GMT -->
 </body></html>

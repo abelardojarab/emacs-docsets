@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:40:31 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:54:44 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,6 +75,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API%2FSignaling_and_video_calling" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API%2FSignaling_and_video_calling" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API%2FSignaling_and_video_calling" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -376,13 +366,18 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Jib" title="View profile: Jib">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jib" data-src="../../../../../../secure.gravatar.com/avatar/9362a14d9b87a3935eb16cfc834ed51f6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jib</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Jib" title="View profile: Jib">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jib" data-src="../../../../../../secure.gravatar.com/avatar/9362a14d9b87a3935eb16cfc834ed51f6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jib</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/denar90" title="View profile: denar90">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="denar90" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">denar90</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -400,7 +395,7 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="AFBarstow" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">AFBarstow</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/ccampbell1723" title="View profile: ccampbell1723">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ccampbell1723" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ccampbell1723</noscript></a>
                 </li>
@@ -455,6 +450,12 @@
               
                 
                 
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs an editorial review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review">How you can help.</a>
+                    </p>
+                  </div>
+                
                 
               
               
@@ -472,7 +473,7 @@
 <p>In this article, we will enhance the <a href="https://mdn-samples.mozilla.org/s/websocket-chat" class="external">WebSocket chat</a> first created as part of our WebSocket documentation (article link forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can <a href="https://mdn-samples.mozilla.org/s/webrtc-from-chat" class="external">try out the sample</a>, and you can <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat" class="external">look at the full project</a> on GitHub.</p>
 
 <div class="note">
-<p>The code on Github and on our test server does not match the code below. This article is in the process of being updated right now; that update should be done soon (you'll know it's done because this note will vanish).</p>
+<p>The code on Github and on our test server is currently newer (and better) than the code shown below. This article is in the process of being updated right now; that update should be done soon (you'll know it's done because this note will vanish).</p>
 </div>
 
 <div class="note">
@@ -573,7 +574,7 @@
 <p>Each ICE message suggests a communication protocol (TCP or UDP), IP address, port number, and connection type (for example, whether the specified IP is the peer itself or a relay server), as well as any other information needed to link the two computers together, even if there's NAT or other complications between the two.</p>
 
 <div class="note">
-<p>The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your <a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate event handler is a property containing the code to execute when the icecandidate event, of type RTCPeerConnectionIceEvent, is received by this RTCPeerConnection. Such an event is sent when a RTCIceCandidate object is added to the script."><code>onicecandidate</code></a> handler is executed, and receiving ICE candidate messages from the signaling server (when the <code>"new-ice-candidate"</code> message is received) and delivering them to your ICE layer by calling <a href="../RTCPeerConnection/addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it should react by calling RTCPeerConnection.addIceCandidate() to hand off the newly-received candidate to the browser's ICE agent so that it's added to the remote description."><code>RTCPeerConnection.addIceCandidate()</code></a>. That's it. Avoid the temptation to try to make it more complicated than that until you really know what you're doing. That way lies madness.</p>
+<p>The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your <a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server."><code>onicecandidate</code></a> handler is executed, and receiving ICE candidate messages from the signaling server (when the <code>"new-ice-candidate"</code> message is received) and delivering them to your ICE layer by calling <a href="../RTCPeerConnection/addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate()."><code>RTCPeerConnection.addIceCandidate()</code></a>. That's it. Avoid the temptation to try to make it more complicated than that until you really know what you're doing. That way lies madness.</p>
 </div>
 
 <p>All your signaling server needs to do is send the messages it's asked to send. You may also need to offer some sort of login/authentication functionality as well, but those details depend greatly on your needs and what authentication you prefer to use.</p>
@@ -622,7 +623,7 @@
         &lt;/div&gt;
       &lt;/div&gt;</pre>
 
-<p>We have some page structure defined here using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="The HTML &lt;div&gt; element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as &lt;article&gt; or &lt;nav&gt;) is appropriate."><code>&lt;div&gt;</code></a> elements, which will give us control over the layout in the page's CSS. We won't get into the details of the layout here, but you can <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css" class="external">take a look at the CSS</a> on Github. The important things to note are the two <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Editorial review completed."><code>&lt;video&gt;</code></a> elements, one for the self-view and the other for the opposition, and a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" title="The HTML &lt;button&gt; Element represents a clickable button."><code>&lt;button&gt;</code></a>.</p>
+<p>We have some page structure defined here using <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="The HTML &lt;div&gt; element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as &lt;article&gt; or &lt;nav&gt;) is appropriate."><code>&lt;div&gt;</code></a> elements, which will give us control over the layout in the page's CSS. We won't get into the details of the layout here, but you can <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css" class="external">take a look at the CSS</a> on Github. The important things to note are the two <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> elements, one for the self-view and the other for the opposition, and a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" title="The HTML &lt;button&gt; Element represents a clickable button."><code>&lt;button&gt;</code></a>.</p>
 
 <p>The <code>&lt;video&gt;</code> element with the <code>id</code> "<code>received_video</code>" will present the video received from the other end of the call once it begins. The <code>autoplay</code> attribute is specified to ensure that once the video starts arriving, it will play at once (so that we don't have to do this explicitly in our code). The "<code>local_video</code>" <code>&lt;video&gt;</code> element presents a preview of what the user's camera sees; the <code>muted</code> attribute is specified because you don't want to hear your local audio in the preview panel.</p>
 
@@ -630,7 +631,7 @@
 
 <h3 id="The_JavaScript_code">The JavaScript code</h3>
 
-<p>We'll break the code up into functional areas to better describe how it works. The main body of the code is in the <code>connect()</code> function: it opens up a <a href="../WebSocket.html" title="The WebSocket object provides the API for creating and managing a WebSocket connection to a server, as well as for sending and receiving data on the connection."><code>WebSocket</code></a> server on port 6503 and establishes a handler to receive messages which are objects in JSON format. This code continues to handle the text chat messages just as it always did, for the most part.</p>
+<p>We'll break the code up into functional areas to better describe how it works. The main body of the code is in the <code>connect()</code> function: it opens up a <a href="../WebSocket.html" title="Editorial review completed."><code>WebSocket</code></a> server on port 6503 and establishes a handler to receive messages which are objects in JSON format. This code continues to handle the text chat messages just as it always did, for the most part.</p>
 
 <h4 id="Sending_messages_to_the_signaling_server">Sending messages to the signaling server</h4>
 
@@ -707,7 +708,6 @@ function invite(evt) {
 
     navigator.mediaDevices.getUserMedia(mediaConstraints)
     .then(function(localStream) {
-      document.getElementById("local_video").src = window.URL.createObjectURL(localStream);
       document.getElementById("local_video").srcObject = localStream;
       myPeerConnection.addStream(localStream);
     })
@@ -719,13 +719,9 @@ function invite(evt) {
 
 <p>Then we record the name of the user we're calling into the variable <code>targetUsername</code> and call <code>createPeerConnection()</code>, a function which will create and do basic configuration of the <a href="../RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</p>
 
-<p>Once the <code>RTCPeerConnection</code> has been created, we request access to the user's camera and microphone by calling <a href="../MediaDevices/getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>MediaDevices.getUserMedia()</code></a>, which is exposed to us through the <a href="../Navigator/mediaDevices/getUserMedia.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Navigator.mediaDevices.getUserMedia</code></a> property. When this succeeds, thereby fulfilling the returned promise, our <code>then</code> clause is called. It receives as input a <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks."><code>MediaStream</code></a> object representing the stream from the user's camera and microphone.</p>
+<p>Once the <code>RTCPeerConnection</code> has been created, we request access to the user's camera and microphone by calling <a href="../MediaDevices/getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>MediaDevices.getUserMedia()</code></a>, which is exposed to us through the <a href="../MediaDevices/getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>Navigator.mediaDevices.getUserMedia</code></a> property. When this succeeds, thereby fulfilling the returned promise, our <code>then</code> clause is called. It receives as input a <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a> object representing the stream from the user's camera and microphone.</p>
 
-<p>We set the local video preview's <a href="../MediaElement/srcObject.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>srcObject</code></a> property to the stream and, since the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Editorial review completed."><code>&lt;video&gt;</code></a> element is configured to automatically play incoming video, the stream starts to play in the local preview box.</p>
-
-<div class="note">
-<p>To support older versions of Chrome, we also set the <a href="../MediaElement/src.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>src</code></a> property to the object URL created by calling <a href="../URL/createObjectURL.html" title="The URL.createObjectURL() static method creates a DOMString containing an URL representing the object given in parameter. The URL lifetime is tied to the document in the window on which it was created. The new object URL represents the specified File object or Blob object."><code>window.URL.createObjectURL()</code></a>, since some versions of Chrome require this.</p>
-</div>
+<p>We set the local video preview's <a href="../MediaElement/srcObject.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>srcObject</code></a> property to the stream and, since the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> element is configured to automatically play incoming video, the stream starts to play in the local preview box.</p>
 
 <p>Then we call <a href="../RTCPeerConnection/addStream.html" title="The RTCPeerConnection.addStream() method adds a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>myPeerConnection.addStream()</code></a> to add the stream to the <a href="../RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>. This starts feeding our stream to the WebRTC connection, even though it hasn't been fully set up yet. The stream needs to be added to the connection before ICE negotiation can occur since the ICE layer will use information from the stream when negotiating the connection. That comes later when we receive the <code><a href="../../Events/negotiationneeded.html" title="/en-US/docs/Web/Events/negotiationneeded">negotiationneeded</a></code> event.</p>
 
@@ -796,7 +792,7 @@ function createPeerConnection() {
 <pre class="brush: js">// …
   myPeerConnection.onicecandidate = handleICECandidateEvent;
   myPeerConnection.onaddstream = handleAddStreamEvent;
-  myPeerConnection.onnremovestream = handleRemoveStreamEvent;
+  myPeerConnection.onremovestream = handleRemoveStreamEvent;
   myPeerConnection.oniceconnectionstatechange = handleICEConnectionStateChangeEvent;
   myPeerConnection.onicegatheringstatechange = handleICEGatheringStateChangeEvent;
   myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
@@ -806,19 +802,19 @@ function createPeerConnection() {
 <p>The first two of these event handlers are required; you have to handle them to do anything involving streamed media with WebRTC. The <code><a href="../../Events/removestream.html" title="/en-US/docs/Web/Events/removestream">removestream</a></code> event is useful for detecting the cessation of streaming, so you'll probably use it, too. The other three are not mandatory but have uses that we'll look at a bit. There are a few other events available, but we're not using them at all in this example. While we'll look at the events we use in more detail later, here's a quick summary of each:</p>
 
 <dl>
- <dt><a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate event handler is a property containing the code to execute when the icecandidate event, of type RTCPeerConnectionIceEvent, is received by this RTCPeerConnection. Such an event is sent when a RTCIceCandidate object is added to the script."><code>RTCPeerConnection.onicecandidate</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server."><code>RTCPeerConnection.onicecandidate</code></a></dt>
  <dd>The local ICE layer calls your <code><a href="../../Events/icecandidate.html" title="/en-US/docs/Web/Events/icecandidate">icecandidate</a></code> event handler when it needs you to transmit an ICE candidate to the other peer through your signaling server. See <a href="#Sending_ICE_candidates">Sending ICE candidates</a> for more information and to see the code for this example.</dd>
- <dt><a href="../RTCPeerConnection/onaddstream.html" title="The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when&nbsp;the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call RTCPeerConnection.setRemoteDescription() and doesn't wait for the result of the SDP negotiation."><code>RTCPeerConnection.onaddstream</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onaddstream.html" title="The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when&nbsp;the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call setRemoteDescription() and doesn't wait for the result of the SDP negotiation."><code>RTCPeerConnection.onaddstream</code></a></dt>
  <dd>This handler for the <code><a href="../../Events/addstream.html" title="/en-US/docs/Web/Events/addstream">addstream</a></code> event is called by the local WebRTC layer to let you know when a remote stream has been added to your connection. This lets you connect the incoming stream to an element to present it, for example. See <a href="#Receiving_new_streams">Receiving new streams</a> for details.</dd>
- <dt><a href="../RTCPeerConnection/onremovestream.html" title="The RTCPeerConnection.onremovestream event handler is a property containing the code to execute whent the removestream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is removed from this connection."><code>RTCPeerConnection.onremovestream</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onremovestream.html" title="The RTCPeerConnection.onremovestream event handler is a property containing the code to execute when&nbsp;the removestream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is removed from this connection."><code>RTCPeerConnection.onremovestream</code></a></dt>
  <dd>This counterpart to <code>onaddstream</code> is called to handle the <code><a href="../../Events/removestream.html" title="/en-US/docs/Web/Events/removestream">removestream</a></code> event when the remote stream removes a stream from your connection. See <a href="#Handling_the_removal_of_streams">Handling the removal of streams</a>.</dd>
- <dt><a href="../RTCPeerConnection/oniceconnectionstatechange.html" title="The RTCPeerConnection.oniceconnectionstatechange event handler is a property containing the code to execute whent the iceconnectionstatechange event, of type Event, is received by this RTCPeerConnection. Such an event is sent when the value of&nbsp; RTCPeerConnection.iceConnectionState changes."><code>RTCPeerConnection.oniceconnectionstatechange</code></a></dt>
+ <dt><a href="../RTCPeerConnection/oniceconnectionstatechange.html" title="The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes."><code>RTCPeerConnection.oniceconnectionstatechange</code></a></dt>
  <dd>The <code><a href="../../Events/iceconnectionstatechange.html" title="/en-US/docs/Web/Events/iceconnectionstatechange">iceconnectionstatechange</a></code> event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed or been lost. We'll look at the code for this example in <a href="#ICE_connection_state">ICE connection state</a> below.</dd>
- <dt><a href="../RTCPeerConnection/onicegatheringstatechange.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.onicegatheringstatechange</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onicegatheringstatechange.html" title="The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes."><code>RTCPeerConnection.onicegatheringstatechange</code></a></dt>
  <dd>The ICE layer sends you the <code><a href="../../Events/icegatheringstatechange.html" class="new" title="/en-US/docs/Web/Events/icegatheringstatechange">icegatheringstatechange</a></code> event when the ICE agent's process of collecting candidates shifts from one state to another (such as starting to gather candidates or completing negotiation). See <a href="#ICE_gathering_state">ICE gathering state</a> below.</dd>
- <dt><a href="../RTCPeerConnection/onsignalingstatechange.html" title="The RTCPeerConnection.onsignalingstatechange event handler is a property containing the code to execute whent the signalingstatechange event, of type Event, is received by this RTCPeerConnection. Such an event is sent when the value of RTCPeerConnection.signalingState changes, as the result of a call of RTCCPeerConnection.setLocalDescription() or RTCPeerConnection.setRemoteDescription()."><code>RTCPeerConnection.onsignalingstatechange</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onsignalingstatechange.html" title="The RTCPeerConnection.onsignalingstatechange property is an EventHandler which specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface. The function receives as input the event object, of type Event; this event is sent when the value of RTCPeerConnection.signalingState changes, as the result of a call to either setLocalDescription() or setRemoteDescription()."><code>RTCPeerConnection.onsignalingstatechange</code></a></dt>
  <dd>The WebRTC infrastructure sends you the <code><a href="../../Events/signalingstatechange.html" title="/en-US/docs/Web/Events/signalingstatechange">signalingstatechange</a></code> message when the state of the signaling process (or of the connection to the signaling server) changes. See <a href="#Signaling_state">Signaling state</a> to see our code.</dd>
- <dt><a href="../RTCPeerConnection/onnegotiationneeded.html" title="The RTCPeerConnection.onnegotiationneeded event handler is a property containing the code to execute when the negotiationneeded event, of type Event, is received by this RTCPeerConnection. Such an event is sent by the browser to inform that negotiation will be required at some point in the future."><code>RTCPeerConnection.onnegotiationneeded</code></a></dt>
+ <dt><a href="../RTCPeerConnection/onnegotiationneeded.html" title="The RTCPeerConnection.onnegotiationneeded property is an EventHandler which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation."><code>RTCPeerConnection.onnegotiationneeded</code></a></dt>
  <dd>This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer to the callee, asking it to connect with us. See <a href="#Starting_negotiation">Starting negotiation</a> to see how we handle this.</dd>
 </dl>
 
@@ -841,7 +837,7 @@ function createPeerConnection() {
   .catch(reportError);
 }</pre>
 
-<p>To start the negotiation process, we need to create and send an SDP offer to the peer to which we want to connect. This offer will include a list of supported configurations for the connection, including information about the media stream we've added to the connection locally (that is, the video we want to send to the other end of the call) and any ICE candidates that may have been gathered by the ICE layer already. We create this offer by calling <a href="../RTCPeerConnection/createOffer.html" title="The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer which includes information about any MediaStreamTracks already attached to the WebRTC session, codec and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection."><code>myPeerConnection.createOffer()</code></a>. When that succeeds (fulfilling the promise), we pass the created offer into <a href="../RTCPeerConnection/setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. The description defines the properties of the connection like its codec. The connection is affected by this change and must be able to support both old and new descriptions. The method takes three parameters, a RTCSessionDescription object to set, and two callbacks, one called if the change of description succeeds, another called if it failed."><code>myPeerConnection.setLocalDescription()</code></a>, which configures the initial connection and media configuration state for the caller's end of the connection, based on the information in the offer.</p>
+<p>To start the negotiation process, we need to create and send an SDP offer to the peer to which we want to connect. This offer will include a list of supported configurations for the connection, including information about the media stream we've added to the connection locally (that is, the video we want to send to the other end of the call) and any ICE candidates that may have been gathered by the ICE layer already. We create this offer by calling <a href="../RTCPeerConnection/createOffer.html" title="The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer which includes information about any MediaStreamTracks already attached to the WebRTC session, codec and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection."><code>myPeerConnection.createOffer()</code></a>. When that succeeds (fulfilling the promise), we pass the created offer into <a href="../RTCPeerConnection/setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format."><code>myPeerConnection.setLocalDescription()</code></a>, which configures the initial connection and media configuration state for the caller's end of the connection, based on the information in the offer.</p>
 
 <div class="note">
 <p>Technically speaking, the blob returned by <code>createOffer()</code> is an <a href="http://tools.ietf.org/html/3264" class="external">RFC 3264</a> offer.</p>
@@ -887,7 +883,6 @@ function createPeerConnection() {
   .then(function(stream) {
     localStream = stream;
 
-    document.getElementById("local_video").src = window.URL.createObjectURL(localStream);
     document.getElementById("local_video").srcObject = localStream;
     return myPeerConnection.addStream(localStream);
   })
@@ -897,7 +892,7 @@ function createPeerConnection() {
 
 <p class="brush: js">This code is very similar to what we did in the <code>invite()</code> function up in <a href="#Starting_a_call">Starting a call</a>. It starts by creating and configuring an <a href="../RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> using our <code>createPeerConnection()</code> function. Then it takes the SDP offer from the received <code>"video-offer"</code> message and uses it to create a new <a href="../RTCSessionDescription.html" title="The RTCSessionDescription interface represents the parameters of a session. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a> object representing the caller's session description.</p>
 
-<p class="brush: js">The session description is then passed into <a href="../RTCPeerConnection/setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. The description defines the properties of the connection like its codec. The connection is affected by this change and must be able to support both old and new descriptions. The method takes three parameters, a RTCSessionDescription object to set, and two callbacks, one called if the change of description succeeds, another called if it failed."><code>myPeerConnection.setRemoteDescription()</code></a>. This establishes the received offer as the caller's session information. If this is successful, the promise fulfillment handler (in the <code>then()</code> clause) starts the process of getting access to the callee's camera and microphone, setting up the stream, and so forth, just like in <code>invite()</code>.</p>
+<p class="brush: js">The session description is then passed into <a href="../RTCPeerConnection/setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format."><code>myPeerConnection.setRemoteDescription()</code></a>. This establishes the received offer as the caller's session information. If this is successful, the promise fulfillment handler (in the <code>then()</code> clause) starts the process of getting access to the callee's camera and microphone, setting up the stream, and so forth, just like in <code>invite()</code>.</p>
 
 <p class="brush: js">Once the local stream is up and running, it's time to create an SDP answer and send it to the caller:</p>
 
@@ -920,7 +915,7 @@ function createPeerConnection() {
   .catch(handleGetUserMediaError);
 }</pre>
 
-<p>Once <a href="../RTCPeerConnection/addStream.html" title="The RTCPeerConnection.addStream() method adds a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>RTCPeerConnection.addStream()</code></a> successfully completes execution and the next fulfillment handler is called, we call <a href="../RTCPeerConnection/createAnswer.html" title="Creates an answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. Once the answer is created, it should be sent to the source of the offer to continue the negotiation process."><code>myPeerConnection.createAnswer()</code></a> to construct an SDP answer string, which is passed to <a href="../RTCPeerConnection/setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. The description defines the properties of the connection like its codec. The connection is affected by this change and must be able to support both old and new descriptions. The method takes three parameters, a RTCSessionDescription object to set, and two callbacks, one called if the change of description succeeds, another called if it failed."><code>myPeerConnection.setLocalDescription</code></a> in order to establish that answer's SDP as a description of the callee's local end of the connection.</p>
+<p>Once <a href="../RTCPeerConnection/addStream.html" title="The RTCPeerConnection.addStream() method adds a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>RTCPeerConnection.addStream()</code></a> successfully completes execution and the next fulfillment handler is called, we call <a href="../RTCPeerConnection/createAnswer.html" title="The createAnswer() method on the RTCPeerConnection interface creates an answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. Once the answer is created, it should be sent to the source of the offer to continue the negotiation process."><code>myPeerConnection.createAnswer()</code></a> to construct an SDP answer string, which is passed to <a href="../RTCPeerConnection/setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format."><code>myPeerConnection.setLocalDescription</code></a> in order to establish that answer's SDP as a description of the callee's local end of the connection.</p>
 
 <p>Then the answer is sent to the caller so it knows how to reach the callee; this is done by constructing a <code>"video-answer"</code> message whose <code>sdp</code> property contains the callee's answer.</p>
 
@@ -934,7 +929,7 @@ function createPeerConnection() {
 
 <p>You might think that once the caller receives an answer from the callee, everything's finished, but it's not. Behind the scenes, the ICE agents of each peer need to furiously exchange ICE candidate messages. Each peer needs to send candidates to the other repeatedly until it has told the other peer about every way in which it can be contacted for each of the needed media transports. These candidates must be sent through your signaling server; since ICE doesn't know anything about your signaling server, your code is asked to handle transmission of each candidate by calling your handler for the <code><a href="../../Events/icecandidate.html" title="/en-US/docs/Web/Events/icecandidate">icecandidate</a></code> event.</p>
 
-<p>Your <a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate event handler is a property containing the code to execute when the icecandidate event, of type RTCPeerConnectionIceEvent, is received by this RTCPeerConnection. Such an event is sent when a RTCIceCandidate object is added to the script."><code>onicecandidate</code></a> handler receives an event whose <code>candidate</code> property is the SDP describing the candidate (or <code>null</code> to mark the end of candidates); this is what you need to transmit to the other peer through your signaling server. Here's our example's implementation:</p>
+<p>Your <a href="../RTCPeerConnection/onicecandidate.html" title="The RTCPeerConnection.onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server."><code>onicecandidate</code></a> handler receives an event whose <code>candidate</code> property is the SDP describing the candidate (or <code>null</code> to mark the end of candidates); this is what you need to transmit to the other peer through your signaling server. Here's our example's implementation:</p>
 
 <pre class="brush: js">function handleICECandidateEvent(event) {
   if (event.candidate) {
@@ -974,7 +969,7 @@ function createPeerConnection() {
     .catch(reportError);
 }</pre>
 
-<p>We construct an <a href="../RTCIceCandidate.html" title="Editorial review completed."><code>RTCIceCandidate</code></a> object by passing the received SDP into its constructor, then pass the new object into <a href="../RTCPeerConnection/addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it should react by calling RTCPeerConnection.addIceCandidate() to hand off the newly-received candidate to the browser's ICE agent so that it's added to the remote description."><code>myPeerConnection.addIceCandidate()</code></a>. That hands off the newly-received ICE candidate to the local ICE layer, and our role in the process of handling that candidate is complete.</p>
+<p>We construct an <a href="../RTCIceCandidate.html" title="Editorial review completed."><code>RTCIceCandidate</code></a> object by passing the received SDP into its constructor, then pass the new object into <a href="../RTCPeerConnection/addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate()."><code>myPeerConnection.addIceCandidate()</code></a>. That hands off the newly-received ICE candidate to the local ICE layer, and our role in the process of handling that candidate is complete.</p>
 
 <p>Each peer sends to the other peer a candidate for each connection method it knows should work. Eventually, the two sides will come to agreement and open their connection; keep in mind that candidates can still keep coming and going after the conversation has begun, either while trying to find a better connection method or simply because they were already underway when the peers finished establishing their connection.</p>
 
@@ -987,7 +982,7 @@ function createPeerConnection() {
   document.getElementById("hangup-button").disabled = false;
 }</pre>
 
-<p>This function simply assigns the incoming stream to the <code>"received_video"</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Editorial review completed."><code>&lt;video&gt;</code></a> element and enables the button the user can click to hang up the call.</p>
+<p>This function simply assigns the incoming stream to the <code>"received_video"</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> element and enables the button the user can click to hang up the call.</p>
 
 <p>Once this code is done running, the video being sent by the other peer is being displayed in the local browser window!</p>
 
@@ -1029,24 +1024,15 @@ function createPeerConnection() {
   var localVideo = document.getElementById("local_video");
 
   if (myPeerConnection) {
-    myPeerConnection.onaddstream = null;
-    myPeerConnection.onremovestream = null;
-    myPeerConnection.onnicecandidate = null;
-    myPeerConnection.oniceconnectionstatechange = null;
-    myPeerConnection.onsignalingstatechange = null;
-    myPeerConnection.onicegatheringstatechange = null;
-    myPeerConnection.onnegotiationneeded = null;
-
     if (remoteVideo.srcObject) {
       remoteVideo.srcObject.getTracks().forEach(track =&gt; track.stop());
+      remoteVideo.srcObject = null;
     }
 
     if (localVideo.srcObject) {
       localVideo.srcObject.getTracks().forEach(track =&gt; track.stop());
+      localVideo.srcObject = null;
     }
-
-    remoteVideo.src = null;
-    localVideo.src = null;
 
     myPeerConnection.close();
     myPeerConnection = null;
@@ -1057,13 +1043,12 @@ function createPeerConnection() {
   targetUsername = null;
 }</pre>
 
-<p>After grabbing references to the two <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Editorial review completed."><code>&lt;video&gt;</code></a> elements, we check to see if a WebRTC connection exists at all; if it does, we proceed to disconnect and close the call, as follows:</p>
+<p>After grabbing references to the two <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> elements, we check to see if a WebRTC connection exists at all; if it does, we proceed to disconnect and close the call, as follows:</p>
 
 <ol>
- <li>Set all the event handlers to <code>null</code>. This may be superfluous, but it helps to avoid strange issues that might arise due to event handlers being triggered in the middle of the disconnect process. Better safe than sorry.</li>
  <li>For both the remote and local video streams, we iterate over the tracks, calling each track's <a href="../MediaTrack/stop.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>MediaTrack.stop()</code></a> method.</li>
- <li>Set both videos' <a href="../HTMLMediaElement/src.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>HTMLMediaElement.src</code></a> properties to <code>null</code>, clearing out the object URLs.</li>
- <li>Close the <a href="../RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> by calling <a href="../RTCPeerConnection/close.html" title="The RTCPeerConnection.close() method closes the current peer connection. This should be called when you're ending your session."><code>myPeerConnection.close()</code></a>.</li>
+ <li>Set both videos' <a href="../HTMLMediaElement/srcObject.html" title="The srcObject&nbsp;property of the HTMLMediaElement interface sets or returns the object which serves as the source of the media associated with the HTMLMediaElement. This is usually a MediaStream but can, according to the specification, be a MediaSource, Blob, or File."><code>HTMLMediaElement.srcObject</code></a> properties to <code>null</code>, releasing all references to the stream.</li>
+ <li>Close the <a href="../RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> by calling <a href="../RTCPeerConnection/close.html" title="The RTCPeerConnection.close() method closes the current peer connection."><code>myPeerConnection.close()</code></a>.</li>
  <li>Set <code>myPeerConnection</code> to <code>null</code>, to ensure that our code knows there's no ongoing call; this is primarily useful when knowing what to do when the user clicks a name in the user list.</li>
 </ol>
 
@@ -1120,25 +1105,6 @@ function createPeerConnection() {
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API%2FSignaling_and_video_calling%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Signaling+and+video+calling+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Signaling and video calling on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Signaling and video calling on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebRTC_API%2FSignaling_and_video_calling%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Signaling and video calling on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -1151,11 +1117,23 @@ function createPeerConnection() {
       
         <li><a href="../../../tag/API.html">API</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/audio">audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Audio">Audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Example">Example</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide">Guide</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Media">Media</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Signaling">Signaling</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Tutorial">Tutorial</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video">Video</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/video">video</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebRTC">WebRTC</a></li>
       
@@ -1165,9 +1143,11 @@ function createPeerConnection() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Jib">Jib</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/Jib">Jib</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/denar90">denar90</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
@@ -1185,11 +1165,48 @@ function createPeerConnection() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
-                      <time datetime="2016-04-06T09:36:07-07:00">Apr 6, 2016, 9:36:07 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Jib">Jib</a>,
+                      <time datetime="2016-11-14T13:53:48-08:00">Nov 14, 2016, 1:53:48 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -1212,11 +1229,12 @@ function createPeerConnection() {
   <li data-default-state="open"><a href="#"><strong>WebRTC Guides</strong></a> 
    <ol> 
      <li><a href="Architecture.html">WebRTC Architecture</a></li> 
-     <li><a href="WebRTC_Basics-2.html">WebRTC Basics</a></li> 
+     <li><a href="WebRTC_Basics.html">WebRTC Basics</a></li> 
      <li><a href="Protocols.html">WebRTC Protocols</a></li> 
      <li><a href="Connectivity.html">Dealing with connectivity</a></li> 
      <li><a href="Overview.html">Overview of WebRTC interfaces</a></li> 
      <li><a href="Session_lifetime.html">Lifetime of a WebRTC Session</a></li> 
+     <li><a href="Using_data_channels.html">Using data channels</a></li> 
    </ol> 
   </li> 
   <li data-default-state="open"><a href="#"><strong>WebRTC Tutorials</strong></a> 
@@ -1233,13 +1251,13 @@ function createPeerConnection() {
     <li><a href="../RTCIceCandidate.html" title="Editorial review completed."><code>RTCIceCandidate</code></a></li> 
     <li><a href="../RTCPeerConnectionIceEvent.html" title="The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection. Only one event is of this type: icecandidate."><code>RTCPeerConnectionIceEvent</code></a></li> 
     <li><a href="../MessageEvent.html" title="A MessageEvent is the interface representing a message received by a target, being a WebSocket or a WebRTC RTCDataChannel"><code>MessageEvent</code></a></li> 
-    <li><a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks."><code>MediaStream</code></a></li> 
+    <li><a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a></li> 
     <li><a href="../RTCStatsReport.html" title="WebRTC provides a method—RTCPeerConnection.getStats()—which returns a set of statistics about the state of the connection and the data transfers which have taken place. This status report is an object of type RTCStatsReport, and consists of a mapping of strings identifying objects which have had statistics recorded and a dictionary containing all of the corresponding data."><code>RTCStatsReport</code></a></li> 
     <li><a href="../RTCIdentityEvent.html" title="The RTCIdentityEvent interface represents an identity assertion&nbsp;generated by an identity provider (idP). This is usually for an RTCPeerConnection.&nbsp;The only event sent with this type is identityresult.."><code>RTCIdentityEvent</code></a></li> 
     <li><a href="../RTCIdentityErrorEvent.html" title="The RTCIdentityErrorEvent interface represents an error associated with the identity provider (idP). This is usually for an&nbsp;RTCPeerConnection.&nbsp;Two events are sent with this type: idpassertionerror and idpvalidationerror."><code>RTCIdentityErrorEvent</code></a></li> 
     <li><a href="../MediaStreamEvent.html" title="The MediaStreamEvent interface represents events that occurs in relation to a MediaStream. Two events of this type can be thrown: addstream and removestream."><code>MediaStreamEvent</code></a></li> 
-    <li><a href="../MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a media source in the User Agent, like video or audio tracks."><code>MediaStreamTrack</code></a></li> 
-    <li><a href="../MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screensharing."><code>MediaDevices</code></a></li> 
+    <li><a href="../MediaStreamTrack.html" title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."><code>MediaStreamTrack</code></a></li> 
+    <li><a href="../MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data."><code>MediaDevices</code></a></li> 
     <li> 
    </li></ol> 
   </li> 
@@ -1280,12 +1298,12 @@ function createPeerConnection() {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1293,9 +1311,8 @@ function createPeerConnection() {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1312,63 +1329,38 @@ function createPeerConnection() {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:40:35 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:54:47 GMT -->
 </body></html>

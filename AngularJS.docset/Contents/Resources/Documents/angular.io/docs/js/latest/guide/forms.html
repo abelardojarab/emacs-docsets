@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope="" itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout--><!-- Mirrored from angular.io/docs/js/latest/guide/forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:17 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<title>Forms</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"><meta name="robots" content="all"><meta name="referrer" content="origin"><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"><meta property="og:title" content="Angular"><meta property="og:image" content="../../../../resources/images/logos/standard/shield-large.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="184"><meta property="og:image:height" content="200"><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"><meta itemprop="name" content="Angular"><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"><meta itemprop="image" content="../../../../resources/images/logos/standard/shield-large.png"><link rel="icon" type="image/x-icon" href="../../../../resources/images/icons/favicon.ico"><link rel="stylesheet" href="../../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"><link href="../../../../../fonts.googleapis.com/css4765.css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"><link href="../../../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="../../../../resources/css/vendor/icomoon/style.css"><link rel="stylesheet" href="../../../../resources/css/vendor/animate.css"><link rel="stylesheet" href="../../../../resources/css/main.css"><!-- MOBILE ICONS -->
+<link rel="apple-touch-icon" sizes="57x57" href="../../../../resources/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../../../resources/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../../resources/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../../../resources/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../../resources/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../../../resources/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../../../resources/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../../../resources/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../resources/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://angular.io/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><nav data-swiftype-index="false" scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5"><h1><a href="https://angular.io/" md-button="">Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="https://angular.io/features.html" md-button="">Features</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/" md-button="">Docs</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/events.html" md-button="">Events</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/news.html" md-button="">News</a></li><li class="l-right"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/quickstart.html" md-button="">Get Started</a></li></ul></nav><!-- Include this file ONLY when current.path[2] is defined--><nav data-swiftype-index="false" ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="sidenav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="sidenav-search st-input-wrapper"><div class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="text" placeholder="SEARCH DOCS..." class="st-default-search-input"></div><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><ul class="sidenav-links"><li class="sidenav-section no-border"><a href="../index.html" class="nav-title">Docs Home</a></li><!-- CORE DOCUMENTATION--><li class="sidenav-section-divider"><h3>Core Documentation</h3></li><li class="sidenav-section"><a href="../quickstart.html" title="Get up and running with Angular" class="nav-title ">Quickstart</a></li><li class="sidenav-section"><a href="index.html" title="How to read and use this documentation" class="nav-title is-parent is-selected">Guide<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-ordered-lists"><ul><li class="nav-list-item "><a href="index.html" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="architecture.html" title="The basic building blocks of Angular applications">2. Architecture</a></li><li class="nav-list-item "><a href="displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item is-selected"><a href="forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="cheatsheet.html" title="Cheat Sheet">8. Cheat Sheet</a></li><li class="nav-list-item "><a href="style-guide.html" title="Write Angular with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="glossary.html" title="Brief definitions of the most important words in the Angular vocabulary">10. Glossary</a></li></ul></div></li><li class="sidenav-section no-border"><a href="../api/index.html" title="API Reference" class="nav-title ">API Reference</a></li><!-- ADVANCED DOCUMENATION--><li class="sidenav-section-divider"><h3>Additional Documentation</h3></li><li class="sidenav-section"><a href="../tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-parent ">Tutorial<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="../tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt6.html" title="We convert our service and components to use Angular's HTTP service">7. HTTP</a></li></ul></div></li><li class="sidenav-section"><a href="attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title is-parent ">Advanced<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="browser-support.html" title="Browser support and polyfills guide.">Browser support</a></li><li class="nav-list-item "><a href="component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="npm-packages.html" title="Recommended npm packages, and how to specify package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="router.html" title="Discover the basics of screen navigation with the Angular router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li></ul></div></li><li class="sidenav-section"><a href="../cookbook/index.html" title="A collection of recipes for common Angular application scenarios" class="nav-title is-parent ">Cookbook<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="../cookbook/index.html" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="../cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="../cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="../cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="../cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="../cookbook/dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Forms</a></li><li class="nav-list-item "><a href="../cookbook/form-validation.html" title="Validate user's form entries">Form Validation</a></li><li class="nav-list-item "><a href="../cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="../cookbook/ts-to-js.html" title="Convert Angular TypeScript examples into ES6 and ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="../cookbook/visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></li></ul><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular for JavaScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><ul ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><li><a href="https://angular.io/docs/ts/latest/guide/forms.html" md-button="">Angular for TypeScript </a></li><li><a href="forms.html" md-button="">Angular for JavaScript </a></li><li><a href="https://angular.io/docs/dart/latest/guide/forms.html" md-button="">Angular for Dart </a></li></ul></nav></nav><script>// Could put in appCtrl but only needed here and clear here
+(function scrollToSelectedLink() {
+  var sideNav = document.getElementsByClassName('sidenav')[0];
+  var link = sideNav.getElementsByClassName('is-selected')[0];
+  if(link && link.offsetTop > window.innerHeight){
+    sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
+    //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
+  }
+})()</script><header class="hero background-sky"><h1 class="hero-title ">Forms </h1><div class="clear"></div></header><div class="banner"><p class="text-body">A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.</p></div><article class="l-content-small grid-fluid docs-content"><script>function why(id, backTo) {
+  var id = "#"+id;
+  var el = document.querySelector(id);
+  el.hidden=el.hidden=!el.hidden;
+
+  if (el.hidden && backTo){
+    // the next line is required to work around a bug in WebKit (Chrome / Safari)
+    location.href = "#";
+    location.href =  "#" + backTo;
+  }
+}</script><script>function verbose(isVerbose) {
+  isVerbose = !! isVerbose;
+  var el = document.querySelector('button.verbose.off');
+  el.style.display = isVerbose ? 'block' : 'none';
+  var el = document.querySelector('button.verbose.on');
+  el.style.display = isVerbose ? 'none' : 'block';
+
+  CCSStylesheetRuleStyle('main','.l-verbose-section', 'display',
+    isVerbose ? 'block' : 'none');
+}
+</script><script>function CCSStylesheetRuleStyle(stylesheet, selectorText, style, value){
+  /* returns the value of the element style of the rule in the stylesheet
+  *  If no value is given, reads the value
+  *  If value is given, the value is changed and returned
+  *  If '' (empty string) is given, erases the value.
+  *  The browser will apply the default one
+  *
+  * string stylesheet: part of the .css name to be recognized, e.g. 'default'
+  * string selectorText: css selector, e.g. '#myId', '.myClass', 'thead td'
+  * string style: camelCase element style, e.g. 'fontSize'
+  * string value optional : the new value
+  */
+  var CCSstyle = undefined, rules, sheet;
+  for(var m in document.styleSheets){
+    sheet = document.styleSheets[m];
+    if(sheet.href && sheet.href.indexOf(stylesheet) != -1){
+    rules = sheet[document.all ? 'rules' : 'cssRules'];
+    for(var n in rules){
+      console.log(rules[n].selectorText);
+      if(rules[n].selectorText == selectorText){
+        CCSstyle = rules[n].style;
+        break;
+      }
+    }
+    break;
+    }
+  }
+  if(value == undefined)
+    return CCSstyle[style]
+  else
+    return CCSstyle[style] = value
+}
+</script><p>We’ve all used a form to login, submit a help request, place an order, book a flight,
+schedule a meeting and perform countless other data entry tasks.
+Forms are the mainstay of business applications.</p>
+<p>Any seasoned web developer can slap together an HTML form with all the right tags.
+It's more challenging to create a cohesive data entry experience that guides the
+user efficiently and effectively through the workflow behind the form.</p>
+<p><em>That</em> takes design skills that are, to be frank, well out of scope for this chapter.</p>
+<p>It also takes framework support for
+<strong>two-way data binding, change tracking, validation, and error handling</strong>
+... which we shall cover in this chapter on Angular forms.</p>
+<p>We will build a simple form from scratch, one step at a time. Along the way we'll learn</p>
+<ul>
+<li><p>How to build an Angular form with a component and template</p>
+</li>
+<li><p>The <code>ngModel</code> two-way data binding syntax for reading and writing values to input controls</p>
+</li>
+<li><p>The <code>ngModel</code> directive in combination with a form to track the change state and validity of form controls</p>
+</li>
+<li><p>The Special CSS classes that follow the state of the controls and can be used to provide strong visual feedback</p>
+</li>
+<li><p>How to display validation errors to users and enable/disable form controls</p>
+</li>
+<li><p>How to share information across controls with template local variables</p>
+</li>
+</ul>
+<p><live-example>Live Example</live-example></p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Bootstrap"></a><h2 id="bootstrap">Bootstrap</h2>
+<p>We start by showing how to bootstrap the application and add the necessary dependencies to use forms.</p>
+<p>During bootstrap we have to register the new forms module by calling <code>provideForms()</code> and pass the result to the provider array. </p>
+<div class="code-example"><header><h4>app/main.js</h4></header><code-example language="js" format="linenums">(function(app) {
+  document.addEventListener('DOMContentLoaded', function() {
+    ng.platformBrowserDynamic
+      .platformBrowserDynamic()
+      .bootstrapModule(app.AppModule);
+  });
+})(window.app || (window.app = {}));
+</code-example></div><p>The old forms API is going through a deprecation phase. During this transition Angular is supporting both form modules. </p>
+<p>To remind us that the old API is deprecated, Angular will print a warning message to the console. </p>
+<p>Since we are converting to the new API, and no longer need the old API, we call <code>disableDeprecatedForms()</code> to disable the old form functionality and the warning message. </p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Template%2DDriven%20Forms"></a><h2 id="template-driven-forms">Template-Driven Forms</h2>
+<p>Many of us will build forms by writing templates in the Angular <a href="template-syntax.html">template syntax</a> with
+the form-specific directives and techniques described in this chapter.</p>
+<div class="l-sub-section"><p>That's not the only way to create a form but it's the way we'll cover in this chapter.</p>
+</div><p>We can build almost any form we need with an Angular template — login forms, contact forms ... pretty much any business forms.
+We can lay out the controls creatively, bind them to data, specify validation rules and display validation errors,
+conditionally enable or disable specific controls, trigger built-in visual feedback, and much more.</p>
+<p>It will be pretty easy because Angular handles many of the repetitive, boiler plate tasks we'd
+otherwise wrestle with ourselves.</p>
+<p>We'll discuss and learn to build the following template-driven form:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/hero-form-1.png" width="400px" alt="Clean Form"></figure><p>Here at the <em>Hero Employment Agency</em> we use this form to maintain personal information about the
+heroes in our stable. Every hero needs a job. It's our company mission to match the right hero with the right crisis!</p>
+<p>Two of the three fields on this form are required. Required fields have a green bar on the left to make them easy to spot.</p>
+<p>If we delete the hero name, the form displays a validation error in an attention grabbing style:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/hero-form-2.png" width="400px" alt="Invalid, Name Required"></figure><p>Note that the submit button is disabled and the "required" bar to the left of the input control changed from green to red.</p>
+<div class="l-sub-section"><p>We'll' customize the colors and location of the "required" bar with standard CSS.</p></div><p>We will build this form in the following sequence of small steps</p>
+<ol>
+<li>Create the <code>Hero</code> model class</li>
+<li>Create the component that controls the form</li>
+<li>Create a template with the initial form layout</li>
+<li>Add the <strong>ngModel</strong> directive to each form input control</li>
+<li>Add the <strong>#name</strong> attribute to each form input control</li>
+<li>Add custom CSS to provide visual feedback</li>
+<li>Show and hide validation error messages</li>
+<li>Handle form submission with <strong>ngSubmit</strong></li>
+<li>Disable the form’s submit button until the form is valid</li>
+</ol>
+<a class="dashAnchor" name="//apple_ref/Section/Setup"></a><h2 id="setup">Setup</h2>
+<p>Create a new project folder (<code>angular-forms</code>) and follow the steps in the <a href="../quickstart.html">QuickStart</a>.</p>
+<a class="dashAnchor" name="//apple_ref/Section/Create%20the%20Hero%20Model%20Class"></a><h2 id="create-the-hero-model-class">Create the Hero Model Class</h2>
+<p>As users enter form data, we capture their changes and update an instance of a model.
+We can't layout the form until we know what the model looks like.</p>
+<p>A model can be as simple as a "property bag" that holds facts about a thing of application importance.
+That describes well our <code>Hero</code> class with its three required fields (<code>id</code>, <code>name</code>, <code>power</code>)
+and one optional field (<code>alterEgo</code>).</p>
+<p>Create a new file in the app folder called <code>hero.js</code> and give it the following constructor:</p>
+<div class="code-example"><header><h4>app/hero.js</h4></header><code-example language="js" format="linenums">(function(app) {
+  app.Hero = Hero;
+
+  function Hero(id, name, power, alterEgo) {
+    this.id = id;
+    this.name = name;
+    this.power = power;
+    this.alterEgo = alterEgo;
+  }
+})(window.app || (window.app = {}));
+</code-example></div><p>It's an anemic model with few requirements and no behavior. Perfect for our demo.</p>
+<p>The <code>alterEgo</code> is optional and the constructor lets us omit it by being the last argument.</p>
+<p>We can create a new hero like this:</p>
+<code-example format="">var myHero =  new Hero(42, 'SkyDog', 
+                       'Fetch any object at any distance', 'Leslie Rollover');
+console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"</code-example><p>We update the <code>&lt;head&gt;</code> of the <code>index.html</code> to include this javascript file.</p>
+<div class="code-example"><header><h4>index.html (excerpt)</h4></header><code-example language="html" format="">&lt;script src='app/hero.js'&gt;&lt;/script&gt;
+&lt;script src='app/app.component.js'&gt;&lt;/script&gt;
+&lt;script src='app/app.module.js'&gt;&lt;/script&gt;
+&lt;script src='app/main.js'&gt;&lt;/script&gt;
+</code-example></div><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Create%20a%20Form%20component"></a><h2 id="create-a-form-component">Create a Form component</h2>
+<p>An Angular form has two parts: an HTML-based template and a code-based Component to handle data and user interactions.</p>
+<p>We begin with the Component because it states, in brief, what the Hero editor can do.</p>
+<p>Create a new file called <code>hero-form.component.js</code> and give it the following definition:</p>
+<div class="code-example"><header><h4>app/hero-form.component.js</h4></header><code-example language="js" format="linenums">(function(app) {
+  app.HeroFormComponent = ng.core
+    .Component({
+      selector: 'hero-form',
+      templateUrl: 'app/hero-form.component.html'
+    })
+    .Class({
+      constructor: [function() {
+        this.powers = ['Really Smart', 'Super Flexible',
+          'Super Hot', 'Weather Changer'
+        ];
+
+        this.model = new app.Hero(18, 'Dr IQ', this.powers[0],
+          'Chuck Overstreet');
+
+        this.submitted = false;
+      }],
+      onSubmit: function() {
+        this.submitted = true;
+      },
+
+      // TODO: Remove this when we're done
+      diagnostic: function() {
+        return JSON.stringify(this.model);
+      },
+    });
+})(window.app || (window.app = {}));
+</code-example></div><p>There’s nothing special about this component, nothing form-specific, nothing to distinguish it from any component we've written before.</p>
+<p>Understanding this component requires only the Angular concepts we’ve learned in previous chapters</p>
+<ol>
+<li><p>We use the <code>ng.core</code> object from the Angular library as we usually do.</p>
+</li>
+<li><p>The <code>Component()</code> selector value of "hero-form" means we can drop this form in a parent template with a <code>&lt;hero-form&gt;</code> tag.</p>
+</li>
+<li><p>The <code>templateUrl</code> property points to a separate file for template HTML called <code>hero-form.component.html</code>.</p>
+</li>
+<li><p>We defined dummy data for <code>model</code> and <code>powers</code> as befits a demo.
+Down the road, we can inject a data service to get and save real data
+or perhaps expose these properties as <a href="template-syntax.html#inputs-outputs">inputs and outputs</a> for binding to a
+parent component. None of this concerns us now and these future changes won't affect our form.</p>
+</li>
+<li><p>We threw in a <code>diagnostic</code> method at the end to return a JSON representation of our model.
+It'll help us see what we're doing during our development; we've left ourselves a cleanup note to discard it later.</p>
+</li>
+</ol>
+<p>Why don't we write the template inline in the component file as we often do
+elsewhere in the Developer Guide?</p>
+<p>There is no “right” answer for all occasions. We like inline templates when they are short.
+Most form templates won't be short. TypeScript and JavaScript files generally aren't the best place to
+write (or read) large stretches of HTML and few editors are much help with files that have a mix of HTML and code.
+We also like short files with a clear and obvious purpose like this one.</p>
+<p>We made a good choice to put the HTML template elsewhere. 
+We'll write that template in a moment. Before we do, we'll take a step back
+and revise the <code>app.component.js</code> to make use of our new <code>HeroFormComponent</code>.</p>
+<p>Again we update the <code>&lt;head&gt;</code> of the <code>index.html</code> to include the new javascript file.</p>
+<div class="code-example"><header><h4>index.html (excerpt)</h4></header><code-example language="html" format="">    &lt;script src='app/hero.js'&gt;&lt;/script&gt;
+    &lt;script src='app/hero-form.component.js'&gt;&lt;/script&gt;
+    &lt;script src='app/app.component.js'&gt;&lt;/script&gt;
+    &lt;script src='app/app.module.js'&gt;&lt;/script&gt;
+    &lt;script src='app/main.js'&gt;&lt;/script&gt;
+</code-example></div><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Revise%20the%20app%2Ecomponent%2Ejs"></a><h2 id="revise-the-app-component-js-">Revise the <em>app.component.js</em></h2>
+<p><code>app.component.js</code> is the application's root component. It will host our new <code>HeroFormComponent</code>.</p>
+<p>Replace the contents of the "QuickStart" version with the following:</p>
+<div class="code-example"><header><h4>app/app.component.js</h4></header><code-example language="js" format="linenums">(function(app) {
+  app.AppComponent = ng.core
+    .Component({
+      selector: 'my-app',
+      template: '&lt;hero-form&gt;&lt;/hero-form&gt;'
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-example></div><div class="l-sub-section"><p>There are only two changes:</p>
+<ol>
+<li><p>The <code>template</code> is simply the new element tag identified by the component's <code>select</code> property.</p>
+</li>
+<li><p>The <code>directives</code> array tells Angular that our template depends upon the <code>HeroFormComponent</code>
+which is itself a Directive (as are all Components).</p>
+</li>
+</ol>
+</div><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Create%20an%20initial%20HTML%20Form%20Template"></a><h2 id="create-an-initial-html-form-template">Create an initial HTML Form Template</h2>
+<p>Create a new template file called <code>hero-form.component.html</code> and give it the following definition:</p>
+<div class="code-example"><header><h4>app/hero-form.component.html</h4></header><code-example language="html" format="linenums">&lt;div class="container"&gt;
+    &lt;h1&gt;Hero Form&lt;/h1&gt;
+    &lt;form&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="name"&gt;Name&lt;/label&gt;
+        &lt;input type="text" class="form-control" required&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form-group"&gt;
+        &lt;label for="alterEgo"&gt;Alter Ego&lt;/label&gt;
+        &lt;input type="text" class="form-control"&gt;
+      &lt;/div&gt;
+
+      &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code-example></div><p>That is plain old HTML 5. We're presenting two of the <code>Hero</code> fields, <code>name</code> and <code>alterEgo</code>, and
+opening them up for user input in input boxes.</p>
+<p>The <em>Name</em> <code>&lt;input&gt;</code> control has the HTML5 <code>required</code> attribute;
+the <em>Alter Ego</em> <code>&lt;input&gt;</code> control does not because <code>alterEgo</code> is optional.</p>
+<p>We've got a <em>Submit</em> button at the bottom with some classes on it.</p>
+<p><strong>We are not using Angular yet</strong>. There are no bindings. No extra directives. Just layout.</p>
+<p>The <code>container</code>,<code>form-group</code>, <code>form-control</code>, and <code>btn</code> classes 
+come from <a href="http://getbootstrap.com/css/">Twitter Bootstrap</a>. Purely cosmetic.
+We're using Bootstrap to gussy up our form.
+Hey, what's a form without a little style!</p>
+<div class="callout is-important"><header>Angular Forms Do Not Require A Style Library</header><p>Angular makes no use of the <code>container</code>, <code>form-group</code>, <code>form-control</code>, and <code>btn</code> classes or
+the styles of any external library. Angular apps can use any CSS library
+... or none at all.</p>
+</div><p>Let's add the stylesheet.</p>
+<ol><li>Open a terminal window in the application root folder and enter the command:<code-example language="html" escape="html">npm install bootstrap --save</code-example></li><li>Open <code>index.html</code> and add the following link to the <code>&lt;head&gt;</code>.<div class="code-example"><code-example language="html" format="">&lt;link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css"&gt;
+</code-example></div></li></ol><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Add%20Powers%20with%20%2AngFor"></a><h2 id="add-powers-with-ngfor-">Add Powers with <strong>*ngFor</strong></h2>
+<p>Our hero may choose one super power from a fixed list of Agency-approved powers.
+We maintain that list internally (in <code>HeroFormComponent</code>).</p>
+<p>We'll add a <code>select</code> to our
+form and bind the options to the <code>powers</code> list using <code>NgFor</code>,
+a technique we might have seen before in the <a href="displaying-data.html">Displaying Data</a> chapter.</p>
+<p>Add the following HTML <em>immediately below</em> the <em>Alter Ego</em> group.</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="">&lt;div class="form-group"&gt;
+  &lt;label for="power"&gt;Hero Power&lt;/label&gt;
+  &lt;select class="form-control" required&gt;
+    &lt;option *ngFor="let p of powers" [value]="p"&gt;{{p}}&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code-example></div><p>We are repeating the <code>&lt;options&gt;</code> tag for each power in the list of Powers.
+The <code>#p</code> local template variable is a different power in each iteration;
+we display its name using the interpolation syntax with the double-curly-braces.</p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Two%2Dway%20data%20binding%20with%20%2AngModel"></a><h2 id="two-way-data-binding-with-ngmodel-">Two-way data binding with <strong>*ngModel</strong></h2>
+<p>Running the app right now would be disappointing.</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/hero-form-3.png" width="400px" alt="Early form with no binding"></figure><p>We don't see hero data because we are not binding to the <code>Hero</code> yet.
+We know how to do that from earlier chapters.
+<a href="displaying-data.html">Displaying Data</a> taught us Property Binding.
+<a href="user-input.html">User Input</a> showed us how to listen for DOM events with an
+Event Binding and how to update a component property with the displayed value.</p>
+<p>Now we need to display, listen, and extract at the same time.</p>
+<p>We could use those techniques again in our form.
+Instead we'll introduce something new, the <code>NgModel</code> directive, that
+makes binding our form to the model super-easy.</p>
+<p>Find the <code>&lt;input&gt;</code> tag for the "Name" and update it like this</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="">&lt;input type="text"  class="form-control" required
+  [(ngModel)]="model.name" &gt;
+  TODO: remove this: {{model.name}}
+</code-example></div><div class="l-sub-section"><p>We appended a diagnostic interpolation after the input tag
+so we can see what we're doing.
+We left ourselves a note to throw it way when we're done.</p>
+</div><p>Focus on the binding syntax: <code>[(ngModel)]="..."</code>.</p>
+<p>If we ran the app right now and started typing in the <em>Name</em> input box,
+adding and deleting characters, we'd see them appearing and disappearing
+from the interpolated text.
+At some point it might look like this.</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/ng-model-in-action.png" width="400px" alt="ngModel in action"></figure><p>The diagnostic is evidence that we really are flowing values from the input box to the model and
+back again. <strong>That's two-way data binding!</strong></p>
+<p>Notice that we also added a <code>name</code> attribute to our <code>&lt;input&gt;</code> tag. This is a requirement when using <code>[(ngModel)]</code> in combination with a form, so that we can easily refer to it in the aggregate form value and validity state.</p>
+<p>Let's add similar <code>[(ngModel)]</code> bindings to <em>Alter Ego</em> and <em>Hero Power</em>.
+We'll ditch the input box binding message
+and add a new binding at the top to the component's <code>diagnostic</code> method.
+Then we can confirm that two-way data binding works <em>for the entire Hero model</em>.</p>
+<p>After revision the core of our form should have three <code>[(ngModel)]</code> bindings that
+look much like this:</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="linenums">{{diagnostic()}}
+&lt;div class="form-group"&gt;
+  &lt;label for="name"&gt;Name&lt;/label&gt;
+  &lt;input type="text" class="form-control" required
+    [(ngModel)]="model.name" name="name" &gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label for="alterEgo"&gt;Alter Ego&lt;/label&gt;
+  &lt;input type="text"  class="form-control"
+    [(ngModel)]="model.alterEgo" name="alterEgo"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group"&gt;
+  &lt;label for="power"&gt;Hero Power&lt;/label&gt;
+  &lt;select class="form-control"  required
+    [(ngModel)]="model.power" name="power"&gt;
+    &lt;option *ngFor="let p of powers" [value]="p"&gt;{{p}}&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code-example></div><p>If we ran the app right now and changed every Hero model property, the form might display like this:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/ng-model-in-action-2.png" width="400px" alt="ngModel in super action"></figure><p>The diagnostic near the top of the form
+confirms that all of our changes are reflected in the model.</p>
+<p><strong>Delete</strong> the <code>{{diagnostic()}}</code> binding at the top as it has served its purpose.</p>
+<div class="l-sub-section"><h3 id="inside-ngmodel-">Inside [(ngModel)]</h3>
+<p><em>This section is an optional deep dive into [(ngModel)]. Not interested? Skip ahead!</em></p>
+<p>The punctuation in the binding syntax, <span style="font-family:courier"><b>[()]</b></span>, is a good clue to what's going on.</p>
+<p>In a Property Binding, a value flows from the model to a target property on screen.
+We identify that target property by surrounding its name in brackets, <span style="font-family:courier"><b>[]</b></span>.
+This is a one-way data binding <strong>from the model to the view</strong>.</p>
+<p>In an Event Binding, we flow the value from the target property on screen to the model.
+We identify that target property by surrounding its name in parentheses, <span style="font-family:courier"><b>()</b></span>.
+This is a one-way data binding in the opposite direction <strong>from the view to the model</strong>.</p>
+<p>No wonder Angular chose to combine the punctuation as <span style="font-family:courier"><b>[()]</b></span>
+to signify a two-way data binding and a <strong>flow of data in both directions</strong>.</p>
+<p>In fact, we can break the <code>NgModel</code> binding into its two separate modes
+as we do in this re-write of the "Name" <code>&lt;input&gt;</code> binding:</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="">&lt;input type="text" class="form-control" required
+  [ngModel]="model.name"
+  (ngModelChange)="model.name = $event" &gt;
+  TODO: remove this: {{model.name}}
+</code-example></div><p><br>The Property Binding should feel familiar. The Event Binding might seem strange.</p>
+<p>The <code>ngModelChange</code> is not an <code>&lt;input&gt;</code> element event.
+It is actually an event property of the <code>NgModel</code> directive.
+When Angular sees a binding target in the form <span style="font-family:courier">[(x)]</span>,
+it expects the <code>x</code> directive to have an <code>x</code> input property and an <code>xChange</code> output property.</p>
+<p>The other oddity is the template expression, <code>model.name = $event</code>.
+We're used to seeing an <code>$event</code> object coming from a DOM event.
+The <code>ngModelChange</code> property doesn't produce a DOM event; it's an Angular <code>EventEmitter</code>
+property that returns the input box value when it fires — which is precisely what
+we should assign to the model's `name' property.</p>
+<p>Nice to know but is it practical? We almost always prefer <code>[(ngModel)]</code>.
+We might split the binding if we had to do something special in
+the event handling such as debounce or throttle the key strokes.</p>
+<p>Learn more about <code>NgModel</code> and other template syntax in the
+<a href="template-syntax.html">Template Syntax</a> chapter.</p>
+</div><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Track%20change%2Dstate%20and%20validity%20with%20ngModel"></a><h2 id="track-change-state-and-validity-with-ngmodel-">Track change-state and validity with <strong>ngModel</strong></h2>
+<p>A form isn't just about data binding. We'd also like to know the state of the controls on our form.</p>
+<p>Using <code>ngModel</code> in a form gives us more than just two way data binding. It also tells us if the user touched the control, if the value changed, or if the value became invalid.</p>
+<p><code>ngModel</code> doesn't just track state; it updates the control with special Angular CSS classes from the set we listed above.
+We can leverage those class names to change the appearance of the
+control and make messages appear or disappear.</p>
+<p>We'll explore those effects soon. Right now
+let's make sure we have <code>ngModel</code> and the corresponding name attribute on all three form controls,
+starting with the <em>Name</em> input box.</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="">&lt;input type="text" class="form-control" required
+  [(ngModel)]="model.name"
+  name="name" &gt;
+</code-example></div><p>We set the <code>name</code> attribute to "name" which makes sense for our app. Any unique value will do.</p>
+<div class="l-sub-section"><p>Internally Angular creates <code>FormControls</code> and registers them with an <code>NgForm</code> directive that Angular attached to the <code>&lt;form&gt;</code> tag. Each <code>FormControl</code> is registered under the name we assigned to the <code>name</code> attribute.
+We'll talk about <code>NgForm</code> <a href="#ngForm">later in the chapter</a>.</p>
+</div><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Add%20Custom%20CSS%20for%20Visual%20Feedback"></a><h2 id="add-custom-css-for-visual-feedback">Add Custom CSS for Visual Feedback</h2>
+<p><code>NgModel</code> doesn't just track state. 
+It updates the control with three classes that reflect the state.</p>
+<table><tbody><tr><th>State</th><th>Class if true</th><th>Class if false</th></tr><tr><td>Control has been visited</td><td><code>ng-touched</code></td><td><code>ng-untouched</code></td></tr><tr><td>Control's value has changed</td><td><code>ng-dirty</code></td><td><code>ng-pristine</code></td></tr><tr><td>Control's value is valid</td><td><code>ng-valid</code></td><td><code>ng-invalid</code></td></tr></tbody></table><p>Let's add a temporary <a href="template-syntax.html#local-vars">local template variable</a> named <strong>spy</strong>
+to the "Name" <code>&lt;input&gt;</code> tag and use the spy to display those classes.</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="">&lt;input type="text" class="form-control" required
+  [(ngModel)]="model.name"
+  name="name"  #spy &gt;
+&lt;br&gt;TODO: remove this: {{spy.className}}
+</code-example></div><p>Now run the app and focus on the <em>Name</em> input box.
+Follow the next four steps <em>precisely</em></p>
+<ol>
+<li>Look but don't touched</li>
+<li>Click in the input box, then click outside the text input box</li>
+<li>Add slashes to the end of the name</li>
+<li>Erase the name</li>
+</ol>
+<p>The actions and effects are as follows:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/control-state-transitions-anim.gif" alt="Control State Transition"></figure><p>We should be able to see the following four sets of class names and their transitions:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/ng-control-class-changes.png" width="400px" alt="Control State Transitions"></figure><p>The (<code>ng-valid</code> | <code>ng-invalid</code>) pair are most interesting to us. We want to send a
+strong visual signal when the data are invalid and we want to mark required fields.</p>
+<p>We realize we can do both at the same time with a colored bar on the left of the input box:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/validity-required-indicator.png" width="400px" alt="Invalid Form"></figure><p>We achieve this effect by adding two styles to a new <code>forms.css</code> file
+that we add to our project as a sibling to <code>index.html</code>.</p>
+<div class="code-example"><header><h4>forms.css</h4></header><code-example language="css" format="">.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+</code-example></div><p>These styles select for the two Angular validity classes and the HTML 5 "required" attribute.</p>
+<p>We update the <code>&lt;head&gt;</code> of the <code>index.html</code> to include this style sheet.</p>
+<div class="code-example"><header><h4>index.html (excerpt)</h4></header><code-example language="html" format="">&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;link rel="stylesheet" href="forms.css"&gt;
+</code-example></div><a class="dashAnchor" name="//apple_ref/Section/Show%20and%20Hide%20Validation%20Error%20messages"></a><h2 id="show-and-hide-validation-error-messages">Show and Hide Validation Error messages</h2>
+<p>We can do better.</p>
+<p>The "Name" input box is required. Clearing it turns the bar red. That says <em>something</em> is wrong but we
+don't know <em>what</em> is wrong or what to do about it.
+We can leverage the <code>ng-invalid</code> class to reveal a helpful message.</p>
+<p>Here's the way it should look when the user deletes the name:</p>
+<figure class="image-display"><img src="../../../../resources/images/devguide/forms/name-required-error.png" width="400px" alt="Name required"></figure><p>To achieve this effect we extend the <code>&lt;input&gt;</code> tag with</p>
+<ol>
+<li>a <a href="template-syntax.html#local-vars">local template variable</a></li>
+<li>the "<em>is required</em>" message in a nearby <code>&lt;div&gt;</code> which we'll display only if the control is invalid.</li>
+</ol>
+<p>Here's how we do it for the <em>name</em> input box:</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="linenums">&lt;input type="text" class="form-control" required
+  [(ngModel)]="model.name"
+    name="name"  #name="ngModel" &gt;
+<span class="otl">&lt;div [hidden]="name.valid" class="alert alert-danger"&gt;</span>
+  <span class="otl">Name is required</span>
+<span class="otl">&lt;/div&gt;</span>
+</code-example></div><p>We need a template reference variable to access the input box's Angular control from within the template.
+Here we created a variable called <code>name</code> and gave it the value "ngModel".</p>
+<div class="l-sub-section"><p>Why "ngModel"? 
+A directive's <a href="../api/core/index/Directive-decorator.html">exportAs</a> property 
+tells Angular how to link the reference variable to the directive.
+We set <code>name</code> to <code>ngModel</code> because the <code>ngModel</code> directive's <code>exportAs</code> property happens to be "ngModel".</p>
+<p>Now we can control visibility of the "name" error message by binding properties of the <code>name</code> control to the message <code>&lt;div&gt;</code> element's <code>hidden</code> property.</p>
+<p>The message is hidden while the control is valid; the message is revealed when the control becomes invalid.</p>
+</div><a id="ngForm"></a><div class="l-sub-section"><h3 id="the-ngform-directive">The NgForm directive</h3>
+<p>We just set a template local variable with the value of an <code>NgForm</code> directive. 
+Why did that work? We didn't add the <strong><a href="../api/forms/index/NgForm-directive.html"><code>NgForm</code></a> directive</strong> explicitly.</p>
+<p>Angular added it surreptitiously, wrapping it around the <code>&lt;form&gt;</code> element</p>
+<p>The <code>NgForm</code> directive  supplements the <code>form</code> element with additional features.
+It holds the controls we created for the elements with <code>ngModel</code> directive and <code>name</code> attribute
+and monitors their properties including their validity.
+It also has its own <code>valid</code> property which is true only if every contained
+control is valid.</p>
+</div><p>The Hero <em>Alter Ego</em> is optional so we can leave that be.</p>
+<p>Hero <em>Power</em> selection is required.
+We can add the same kind of error handling to the <code>&lt;select&gt;</code> if we  want
+but it's not imperative because the selection box already constrains the
+power to valid value.</p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Submit%20the%20form%20with%20ngSubmit"></a><h2 id="submit-the-form-with-ngsubmit-">Submit the form with <strong>ngSubmit</strong></h2>
+<p>The user should be able to submit this form after filling it in.
+The Submit button at the bottom of the form
+does nothing on its own but it will
+trigger a form submit because of its type (<code>type="submit"</code>).</p>
+<p>A "form submit" is useless at the moment.
+To make it useful, we'll update the <code>&lt;form&gt;</code> tag with another Angular directive, <code>NgSubmit</code>,
+and bind it to the <code>HeroFormComponent.submit()</code> method with an  event binding</p>
+<div class="code-example"><code-example language="html" format="">&lt;form (ngSubmit)="onSubmit()" #heroForm="ngForm"&gt;
+</code-example></div><p>We slipped in something extra there at the end!  We defined a
+template local variable, <strong><code>#heroForm</code></strong>, and initialized it with the value, "ngForm".</p>
+<p>The variable <code>heroForm</code> is now a handle to the <code>NgForm</code> directive that we <a href="#ngForm">discussed earlier</a>
+This time <code>heroForm</code> remains a reference to the form as a whole.</p>
+<p>Later in the template we bind the button's <code>disabled</code> property to the form's over-all validity via
+the <code>heroForm</code> variable. Here's that bit of markup:</p>
+<div class="code-example"><code-example language="html" format="linenums">&lt;button type="submit" class="btn btn-default"
+        [disabled]="!heroForm.form.valid"&gt;Submit&lt;/button&gt;
+</code-example></div><p>Re-run the application. The form opens in a valid state and the button is enabled.</p>
+<p>Now delete the <em>Name</em>. We violate the "name required" rule which
+is duly noted in our error message as before. And now the Submit button is also disabled.</p>
+<p>Not impressed?  Think about it for a moment. What would we have to do to
+wire the button's enable/disabled state to the form's validity without Angular's help?</p>
+<p>For us, it was as simple as</p>
+<ol>
+<li>Define a template local variable on the (enhanced) form element</li>
+<li>Reference that variable in a button some 50 lines away.</li>
+</ol>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Toggle%20two%20form%20regions%20%28extra%20credit%29"></a><h2 id="toggle-two-form-regions-extra-credit-">Toggle two form regions (extra credit)</h2>
+<p>Submitting the form isn't terribly dramatic at the moment.</p>
+<div class="l-sub-section"><p>An unsurprising observation for a demo. To be honest,
+jazzing it up won't teach us anything new about forms.
+But this is an opportunity to exercise some of our newly won
+binding skills.
+If you're not interested, you can skip to the chapter's conclusion
+and not miss a thing.</p>
+</div><p>Let's do something more strikingly visual.
+Let's hide the data entry area and display something else.</p>
+<p>Start by wrapping the form in a <code>&lt;div&gt;</code> and bind
+its <code>hidden</code> property to the <code>HeroFormComponent.submitted</code> property.</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format=""> &lt;div [hidden]="submitted"&gt;
+   &lt;h1&gt;Hero Form&lt;/h1&gt;
+   &lt;form (ngSubmit)="onSubmit()" #heroForm="ngForm"&gt;
+
+      &lt;!-- ... all of the form ... --&gt;
+
+   &lt;/form&gt;
+ &lt;/div&gt;
+</code-example></div><p>The main form is visible from the start because the
+the <code>submitted</code> property is false until we submit the form,
+as this fragment from the <code>HeroFormComponent</code> reminds us:</p>
+<div class="code-example"><code-example language="js" format="">constructor: [function() {
+  this.submitted = false;
+}],
+onSubmit: function() {
+  this.submitted = true;
+},
+</code-example></div><p>When we click the Submit button, the <code>submitted</code> flag becomes true and the form disappears
+as planned.</p>
+<p>Now we need to show something else while the form is in the submitted state.
+Add the following block of HTML below the <code>&lt;div&gt;</code> wrapper we just wrote:</p>
+<div class="code-example"><header><h4>app/hero-form.component.html (excerpt)</h4></header><code-example language="html" format="linenums">&lt;div [hidden]="!submitted"&gt;
+  &lt;h2&gt;You submitted the following:&lt;/h2&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-3"&gt;Name&lt;/div&gt;
+    &lt;div class="col-xs-9  pull-left"&gt;{{ model.name }}&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-3"&gt;Alter Ego&lt;/div&gt;
+    &lt;div class="col-xs-9 pull-left"&gt;{{ model.alterEgo }}&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-3"&gt;Power&lt;/div&gt;
+    &lt;div class="col-xs-9 pull-left"&gt;{{ model.power }}&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;button class="btn btn-default" (click)="submitted=false"&gt;Edit&lt;/button&gt;
+&lt;/div&gt;
+</code-example></div><p>There's our hero again, displayed read-only with interpolation bindings.
+This slug of HTML only appears while the component is in the submitted state.</p>
+<p>We added an Edit button whose click event is bound to an expression
+that clears the <code>submitted</code> flag.</p>
+<p>When we click it, this block disappears and the editable form reappears.</p>
+<p>That's as much drama as we can muster for now.</p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Conclusion"></a><h2 id="conclusion">Conclusion</h2>
+<p>The Angular form discussed in this chapter takes advantage of the following framework features to provide support for data modification, validation and more:</p>
+<ul>
+<li>An Angular HTML form template.</li>
+<li>A form component class with a <code>Component</code> decorator.</li>
+<li>The <code>ngSubmit</code> directive for handling the form submission.</li>
+<li>Template local variables such as <code>#heroForm</code>, <code>#name</code>, <code>#alter-ego</code> and <code>#power</code>.</li>
+<li>The <code>[(ngModel)]</code> syntax for two-way data binding, validation and change tracking.</li>
+<li>The local variable’s <code>valid</code> property on input controls to check if a control is valid and show/hide error messages.</li>
+<li>Controlling the submit button's enabled state by binding to <code>NgForm</code> validity.</li>
+<li>Custom CSS classes that provide visual feedback to users about invalid controls.</li>
+</ul>
+<p>Our final project folder structure should look like this:</p>
+<div class="filetree"><div class="file">angular-forms</div><div class="children"><div class="file">app</div><div class="children"><div class="file">app.component.js</div><div class="file">hero.js</div><div class="file">hero-form.component.html</div><div class="file">hero-form.component.js</div><div class="file">main.ts</div></div><div class="file">node_modules ...</div><div class="file">index.html</div><div class="file">package.json</div><div class="file">tsconfig.json</div></div></div><p>Here’s the final version of the source:</p>
+<code-tabs><code-pane language="js" name="hero-form.component.js" format="linenums">(function(app) {
+  app.HeroFormComponent = ng.core
+    .Component({
+      selector: 'hero-form',
+      templateUrl: 'app/hero-form.component.html'
+    })
+    .Class({
+      constructor: [function() {
+        this.powers = ['Really Smart', 'Super Flexible',
+          'Super Hot', 'Weather Changer'
+        ];
+
+        this.model = new app.Hero(18, 'Dr IQ', this.powers[0],
+          'Chuck Overstreet');
+
+        this.submitted = false;
+      }],
+      onSubmit: function() {
+        this.submitted = true;
+      },
+
+    });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="html" name="hero-form.component.html" format="linenums">&lt;div class="container"&gt;
+ &lt;div [hidden]="submitted"&gt;
+   &lt;h1&gt;Hero Form&lt;/h1&gt;
+   &lt;form (ngSubmit)="onSubmit()" #heroForm="ngForm"&gt;
+     &lt;div class="form-group"&gt;
+       &lt;label for="name"&gt;Name&lt;/label&gt;
+       &lt;input type="text" class="form-control" required
+         [(ngModel)]="model.name"
+           name="name"  #name="ngModel" &gt;
+       &lt;div [hidden]="name.valid" class="alert alert-danger"&gt;
+         Name is required
+       &lt;/div&gt;
+     &lt;/div&gt;
+
+     &lt;div class="form-group"&gt;
+       &lt;label for="alterEgo"&gt;Alter Ego&lt;/label&gt;
+       &lt;input type="text" class="form-control"
+         [(ngModel)]="model.alterEgo"
+           name="alterEgo" &gt;
+     &lt;/div&gt;
+
+     &lt;div class="form-group"&gt;
+       &lt;label for="power"&gt;Hero Power&lt;/label&gt;
+       &lt;select class="form-control" required
+         [(ngModel)]="model.power"
+           name="power" #power="ngModel" &gt;
+         &lt;option *ngFor="let p of powers" [value]="p"&gt;{{p}}&lt;/option&gt;
+       &lt;/select&gt;
+       &lt;div [hidden]="power.valid" class="alert alert-danger"&gt;
+         Power is required
+       &lt;/div&gt;
+     &lt;/div&gt;
+
+     &lt;button type="submit" class="btn btn-default"
+             [disabled]="!heroForm.form.valid"&gt;Submit&lt;/button&gt;
+   &lt;/form&gt;
+ &lt;/div&gt;
+
+ &lt;div [hidden]="!submitted"&gt;
+   &lt;h2&gt;You submitted the following:&lt;/h2&gt;
+   &lt;div class="row"&gt;
+     &lt;div class="col-xs-3"&gt;Name&lt;/div&gt;
+     &lt;div class="col-xs-9  pull-left"&gt;{{ model.name }}&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="row"&gt;
+     &lt;div class="col-xs-3"&gt;Alter Ego&lt;/div&gt;
+     &lt;div class="col-xs-9 pull-left"&gt;{{ model.alterEgo }}&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="row"&gt;
+     &lt;div class="col-xs-3"&gt;Power&lt;/div&gt;
+     &lt;div class="col-xs-9 pull-left"&gt;{{ model.power }}&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;br&gt;
+   &lt;button class="btn btn-default" (click)="submitted=false"&gt;Edit&lt;/button&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+</code-pane><code-pane language="js" name="hero.js" format="linenums">(function(app) {
+  app.Hero = Hero;
+
+  function Hero(id, name, power, alterEgo) {
+    this.id = id;
+    this.name = name;
+    this.power = power;
+    this.alterEgo = alterEgo;
+  }
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="js" name="app.module.js" format="linenums">(function(app) {
+  app.AppModule =
+    ng.core.NgModule({
+      imports: [
+        ng.platformBrowser.BrowserModule,
+        ng.forms.FormsModule
+      ],
+      declarations: [
+        app.AppComponent,
+        app.HeroFormComponent
+      ],
+      bootstrap: [ app.AppComponent ]
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="js" name="app.component.js" format="linenums">(function(app) {
+  app.AppComponent = ng.core
+    .Component({
+      selector: 'my-app',
+      template: '&lt;hero-form&gt;&lt;/hero-form&gt;'
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="js" name="main.js" format="linenums">(function(app) {
+  document.addEventListener('DOMContentLoaded', function() {
+    ng.platformBrowserDynamic
+      .platformBrowserDynamic()
+      .bootstrapModule(app.AppModule);
+  });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="html" name="index.html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Hero Form&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+    &lt;link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;link rel="stylesheet" href="forms.css"&gt;
+
+   &lt;!-- IE required polyfill --&gt;
+   &lt;script src="node_modules/core-js/client/shim.min.js"&gt;&lt;/script&gt;
+
+   &lt;script src="node_modules/zone.js/dist/zone.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/reflect-metadata/Reflect.js"&gt;&lt;/script&gt;
+
+   &lt;script src="node_modules/rxjs/bundles/Rx.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/core/bundles/core.umd.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/common/bundles/common.umd.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/compiler/bundles/compiler.umd.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/forms/bundles/forms.umd.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/platform-browser/bundles/platform-browser.umd.js"&gt;&lt;/script&gt;
+   &lt;script src="node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js"&gt;&lt;/script&gt;
+
+    &lt;script src='app/hero.js'&gt;&lt;/script&gt;
+    &lt;script src='app/hero-form.component.js'&gt;&lt;/script&gt;
+    &lt;script src='app/app.component.js'&gt;&lt;/script&gt;
+    &lt;script src='app/app.module.js'&gt;&lt;/script&gt;
+    &lt;script src='app/main.js'&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;my-app&gt;Loading...&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-pane><code-pane language="css" name="forms.css" format="linenums">.ng-valid[required] {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442; /* red */
+}
+</code-pane></code-tabs><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><div class="l-sub-section"><h3>Next Step</h3><a href="dependency-injection.html">Dependency Injection</a></div><!--NEXT PAGE HAS NOW BEEN SET--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--></article><div data-swiftype-index="false" class="main-footer"><nav class="background-midnight grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="https://angular.io/about/">About</a></li><li><a href="https://angular.io/resources/#Education">Books &amp; Training</a></li><li><a href="https://angular.io/resources/">Tools &amp; Libraries</a></li><li><a href="https://angular.io/resources/">Community</a></li><li><a href="https://angular.io/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="https://angular.io/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="https://angular.io/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-midnight"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="https://angular.io/license">MIT-style License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="../styleguide.html" title="Style Guide" class="styleguide-trigger"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="../../../../resources/js/vendor/prettify.js"></script><script src="../../../../resources/js/vendor/lang-basic.js"></script><script src="../../../../resources/js/vendor/lang-dart.js"></script><script src="../../../../resources/js/vendor/lodash.js"></script><script src="../../../../resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-animate.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-aria.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="../../../../../cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="../../../../../cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="../../../../resources/js/site.js"></script><script src="../../../../resources/js/util.js"></script><script src="../../../../resources/js/controllers/app-controller.js"></script><script src="../../../../resources/js/controllers/resources-controller.js"></script><script src="../../../../resources/js/directives/cheatsheet.js"></script><script src="../../../../resources/js/directives/api-list.js"></script><script src="../../../../resources/js/directives/bio.js"></script><script src="../../../../resources/js/directives/bold.js"></script><script src="../../../../resources/js/directives/announcement-bar.js"></script><script src="../../../../resources/js/directives/code.js"></script><script src="../../../../resources/js/directives/copy.js"></script><script src="../../../../resources/js/directives/code-tabs.js"></script><script src="../../../../resources/js/directives/code-pane.js"></script><script src="../../../../resources/js/directives/code-example.js"></script><script src="../../../../resources/js/directives/if-docs.js"></script><script src="../../../../resources/js/directives/live-example.js"></script><script src="../../../../resources/js/directives/ngio-ex-path.js"></script><script src="../../../../resources/js/directives/scroll-y-offset-element.js"></script><script>window.onload = function() { setTimeout(function() {document.body.className = document.body.className+" dash-loaded"; if(location.hash) { setTimeout(function() {document.getElementsByName(location.hash.substring(1))[0].scrollIntoView()}, 1); }}, 10);  }</script>
+<!-- Mirrored from angular.io/docs/js/latest/guide/forms.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:17 GMT -->
+</body></html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:42:15 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:21:06 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,10 +69,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline">
   <meta name="twitter:title" content="Performance Timeline">
   
-  <meta property="og:description" content="The Performance Timeline standard defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
-  <meta name="description" content="The Performance Timeline standard defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
-  <meta name="twitter:description" content="The Performance Timeline standard defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
+  <meta property="og:description" content="The Performance Timeline API defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
+  <meta name="description" content="The Performance Timeline API defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
+  <meta name="twitter:description" content="The Performance Timeline API defines extensions to the Performance interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve performance entry metrics based on specific filter criteria. The standard also includes interfaces that allow an application to define performance observer callbacks that are notified when specific performance events are added to the browser's performance timeline.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPerformance_Timeline" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Performance_Timeline" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Performance_Timeline" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPerformance_Timeline" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPerformance_Timeline" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -372,6 +362,11 @@
         
         <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
@@ -427,12 +422,6 @@
 
               
                 
-                  <div class="warning warning-review">
-                    <p>
-                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
-                    </p>
-                  </div>
-                
                 
                 
               
@@ -444,13 +433,13 @@
                   
                     <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
-<p>The <strong><a href="https://w3c.github.io/performance-timeline/" class="external">Performance Timeline</a></strong> standard defines extensions to the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>performance entry metrics</code></a> based on specific filter criteria. The standard also includes interfaces that allow an application to define <em><a href="#Performance_Observers">performance observer</a></em> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
+<p>The <strong>Performance Timeline</strong> API defines extensions to the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image).">performance entry metrics</a> based on specific filter criteria. The standard also includes interfaces that allow an application to define <em><a href="#Performance_Observers">performance observer</a></em> callbacks that are notified when specific performance events are added to the browser's <em>performance timeline</em>.</p>
 
 <p>This document provides an overview of the standard's interfaces and for more details about the interfaces, see the reference pages and <a href="https://developer.mozilla.org/Web/API/Performance_Timeline/Using_Performance_Time">Using Performance Timeline</a>.</p>
 
 <h2 id="Performance_extensions">Performance extensions</h2>
 
-<p><code>Performance Timeline</code> extends the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface with three methods that provide different mechanisms to get a set of <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>performance records (metrics)</code></a>, depending on the specified filter criteria. The methods are:</p>
+<p>The Performance Timeline API extends the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface with three methods that provide different mechanisms to get a set of <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>performance records (metrics)</code></a>, depending on the specified filter criteria. The methods are:</p>
 
 <dl>
  <dt><a href="Performance/getEntries.html" title="The getEntries() method returns a list of PerformanceEntry objects for a given filter. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time."><code>getEntries()</code></a></dt>
@@ -463,7 +452,7 @@
 
 <h2 id="PerformanceEntry_interface">PerformanceEntry interface</h2>
 
-<p>The <code><a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>PerformanceEntry</code></a></code> interface encapsulates a single <em>performance entry</em> i.e. a single data point or metric in the <em>performance timeline</em>. This interface has the following four properties and these properties are extended (with additional constraints) by other interfaces (such as <a href="PerformanceMark.html" title="PerformanceMark is an abstract interface for performance entries with an entry type of &quot;mark&quot;. Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline."><code>PerformanceMark</code></a>):</p>
+<p>The <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>PerformanceEntry</code></a> interface encapsulates a single <em>performance entry</em> i.e. a single data point or metric in the <em>performance timeline</em>. This interface has the following four properties and these properties are extended (with additional constraints) by other interfaces (such as <a href="PerformanceMark.html" title="PerformanceMark is an abstract interface for performance entries with an entry type of &quot;mark&quot;. Entries of this type are created by calling performance.mark() to add a named DOMHighResTimeStamp (the mark) to the browser's performance timeline."><code>PerformanceMark</code></a>):</p>
 
 <dl>
  <dt><a href="PerformanceEntry/name.html" title="The name property returns the name given to a performance entry when the entry was created (for example by calling performance.mark())."><code>name</code></a></dt>
@@ -471,9 +460,9 @@
  <dt><a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:"><code>entryType</code></a></dt>
  <dd>The type of performance metric (for example "<code>mark</code>").</dd>
  <dt><a href="PerformanceEntry/startTime.html" title="The startTime property returns the first recorded timestamp of the performance entry."><code>startTime</code></a></dt>
- <dd>A <a href="DOMHighResTimeStamp.html" title="The DOMHighResTimeStamp type is a double and is used to store a time value. The value could be a discrete point in time or the difference in time between two discrete points in time. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond."><code>high resolution timestamp</code></a> representing the starting time for the performance entry.</dd>
+ <dd>A <a href="DOMHighResTimeStamp.html" title="The DOMHighResTimeStamp type is a double and is used to store a time value. The value could be a discrete point in time or the difference in time between two discrete points in time. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (due, for example, to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond."><code>high resolution timestamp</code></a> representing the starting time for the performance entry.</dd>
  <dt><a href="PerformanceEntry/duration.html" title="The duration property returns a timestamp that is the duration of the performance entry."><code>duration</code></a></dt>
- <dd>A <a href="DOMHighResTimeStamp.html" title="The DOMHighResTimeStamp type is a double and is used to store a time value. The value could be a discrete point in time or the difference in time between two discrete points in time. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (because, for example, due to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond."><code>high resolution timestamp</code></a> representing the time value of the duration of the performance event. (Some performance <a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:"><code>entry types</code></a> have no concept of <em>duration</em> and this value is set to "<code>0</code>" for such types.)</dd>
+ <dd>A <a href="DOMHighResTimeStamp.html" title="The DOMHighResTimeStamp type is a double and is used to store a time value. The value could be a discrete point in time or the difference in time between two discrete points in time. The unit is milliseconds and should be accurate to 5 µs (microseconds). However, if the browser is unable to provide a time value accurate to 5 microseconds (due, for example, to hardware or software constraints), the browser can represent the value as a time in milliseconds accurate to a millisecond.">high resolution timestamp</a> representing the time value of the duration of the performance event. (Some performance <a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:">entry types</a> have no concept of <em>duration</em> and this value is set to <code>'0'</code> for such types.)</dd>
 </dl>
 
 <p>This interface includes a <a href="PerformanceEntry/toJSON.html" title="The toJSON() method is a serializer; it returns a JSON representation of the performance entry object."><code>toJSON()</code></a> method which returns the serialization of the <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>PerformanceEntry</code></a> object. The serialization is specific to the performance entry's <a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:"><code>type</code></a>.</p>
@@ -486,9 +475,9 @@
 
 <p>The <em>performance observer</em> interfaces allow an application to register an <em>observer</em> for specific performance event types, and when one of those event types is recorded, the application is <em>notified</em> of the event via the observer's callback function that was specified when the observer was created.</p>
 
-<p>When the observer (callback) is invoked, the callback's parameters include a <em><a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a></em> that only contains <em>observed</em> <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>performance entries</code></a>. That is, the list only contains entries for the event types that were specified when the observer's <a href="PerformanceObserver/observe.html" title="The observe() method is used to specify the set of performance interface types to observe. The performance observer's callback function will be invoked when a performance entry is recorded for one of the specified types."><code>observe()</code></a> method was invoked. The <a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a> interface has the same three <code>getEntries*()</code> methods as the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface. However, note there is one key difference with these methods the <a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a> versions are used to retrieve <em>observed</em> performance entries within the observer callback.</p>
+<p>When the observer (callback) is invoked, the callback's parameters include a <em><a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a></em> that only contains <em>observed</em> <a href="PerformanceEntry.html" title="The PerformanceEntry object encapsulates a single performance metric that is part of the performance timeline. A performance entry can be directly created by making a performance mark or measure (for example by calling the mark() method) at an explicit point in an application. Performance entries are also created in indirect ways such as loading a resource (such as an image)."><code>performance entries</code></a>. That is, the list only contains entries for the event types that were specified when the observer's <a href="PerformanceObserver/observe.html" title="The observe() method of the PerformanceObserver interface is used to specify the set of performance interface types to observe. The performance observer's callback function will be invoked when a performance entry is recorded for one of the specified types."><code>observe()</code></a> method was invoked. The <a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a> interface has the same three <code>getEntries*()</code> methods as the <a href="Performance.html" title="The Performance interface represents timing-related performance information for the given page."><code>Performance</code></a> interface. However, note there is one key difference with these methods the <a href="PerformanceObserverEntryList.html" title="The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."><code>performance observer entry list</code></a> versions are used to retrieve <em>observed</em> performance entries within the observer callback.</p>
 
-<p>Besides the <a href="PerformanceObserver.html" title="The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline."><code>PerformanceObserver's</code></a> interface's <a href="PerformanceObserver/observe.html" title="The observe() method is used to specify the set of performance interface types to observe. The performance observer's callback function will be invoked when a performance entry is recorded for one of the specified types."><code>observe()</code></a> method (which is used to register the <a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:"><code>entry types</code></a> to <em>observe</em>), the <a href="PerformanceObserver.html" title="The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline."><code>PerformanceObserver</code></a> interface also has a <a href="PerformanceObserver/disconnect.html" title="The disconnect() method is used to stop the performance observer from receiving any performance entry events."><code>disconnect()</code></a> method which stops an observer from receiving further events.</p>
+<p>Besides the <a href="PerformanceObserver.html" title="The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline."><code>PerformanceObserver's</code></a> interface's <a href="PerformanceObserver/observe.html" title="The observe() method of the PerformanceObserver interface is used to specify the set of performance interface types to observe. The performance observer's callback function will be invoked when a performance entry is recorded for one of the specified types."><code>observe()</code></a> method (which is used to register the <a href="PerformanceEntry/entryType.html" title="The entryType property returns the performance entry's type. The valid entryType values are:"><code>entry types</code></a> to <em>observe</em>), the <a href="PerformanceObserver.html" title="The PerformanceObserver interface is used to observe performance measurement events and be notified of new performance entries as they are recorded in the browser's performance timeline."><code>PerformanceObserver</code></a> interface also has a <a href="PerformanceObserver/disconnect.html" title="The disconnect() method of the PerformanceObserver interface is used to stop the performance observer from receiving any performance entry events."><code>disconnect()</code></a> method which stops an observer from receiving further events.</p>
 
 <p class="note">Performance observers were added to the <code>Level 2</code> version of the standard and were not widely implemented.</p>
 
@@ -515,25 +504,6 @@
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPerformance_Timeline%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Performance+Timeline+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Performance Timeline on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Performance Timeline on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPerformance_Timeline%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Performance Timeline on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -556,6 +526,8 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/AFBarstow">AFBarstow</a>
@@ -566,11 +538,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-02-29T18:13:53-08:00">Feb 29, 2016, 6:13:53 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>,
+                      <time datetime="2016-06-13T06:58:57-07:00">Jun 13, 2016, 6:58:57 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -587,7 +596,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="Performance_Timeline.html">Performance Timeline</a></strong></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="Performance_Timeline/Using_Performance_Timeline.html" title="The Performance Timeline standard defines extensions to the Performance interface to support client-side latency measurements within applications. The standard also includes interfaces that allow an application to be notified when specific performance events occur. Together, these interfaces can be used to help identify an application's performance bottlenecks.">Using Performance Timeline</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="Performance.html"><code>Performance</code></a></li><li><a href="PerformanceEntry.html"><code>PerformanceEntry</code></a></li><li><a href="PerformanceObserver.html"><code>PerformanceObserver</code></a></li><li><a href="PerformanceObserverEntryList.html"><code>PerformanceObserverEntryList</code></a></li><li><a href="PerformanceResourceTiming.html"><code>PerformanceResourceTiming</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Window/performance.html"><code>Window.performance</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="Performance_Timeline.html">Performance Timeline</a></strong></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a href="Performance_Timeline/Using_Performance_Timeline.html" title="Editorial review completed.">Using Performance Timeline</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="Performance.html"><code>Performance</code></a></li><li><a href="PerformanceEntry.html"><code>PerformanceEntry</code></a></li><li><a href="PerformanceObserver.html"><code>PerformanceObserver</code></a></li><li><a href="PerformanceObserverEntryList.html"><code>PerformanceObserverEntryList</code></a></li><li><a href="PerformanceResourceTiming.html"><code>PerformanceResourceTiming</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Window/performance.html"><code>Window.performance</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -611,12 +620,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -624,9 +633,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -643,63 +651,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/Performance_Timeline$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:42:15 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Performance_Timeline by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:21:06 GMT -->
 </body></html>

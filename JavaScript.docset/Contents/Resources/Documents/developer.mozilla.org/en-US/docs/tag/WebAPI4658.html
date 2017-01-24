@@ -1,0 +1,1337 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/WebAPI?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:46:58 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Articles tagged: WebAPI</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  
+      <link rel="alternate" type="application/atom+xml" title="Articles tagged: WebAPI" href="../feeds/atom/tag/WebAPI">
+  
+
+  
+    
+
+
+
+  
+</head>
+<body class="">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#content" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FWebAPI%3Fpage%3D2" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/WebAPI%3Fpage%3D2">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+    <div id="document-list" class="boxed">
+      <h1>Articles tagged: WebAPI</h1>
+      
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="WebAPI2679.html?page=1">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="WebAPI2679.html?page=1">1</a>
+    </li>
+  
+    <li class="selected">
+      <a href="WebAPI4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="WebAPI9ba9.html?page=3">3</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="WebAPI9ba9.html?page=3">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+        <p>Found 231 documents</p>
+        <ul class="document-list">
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/autoFocus.html">Mozilla/B2G_OS/API/CameraControl/autoFocus</a>
+                
+                  <small>This method attempts to focus the camera. If the camera is able to attempt to focus, a success ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/capabilities.html">Mozilla/B2G_OS/API/CameraControl/capabilities</a>
+                
+                  <small>The capabilities property return a CameraCapabilities object, which describes the capabilities ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/effect.html">Mozilla/B2G_OS/API/CameraControl/effect</a>
+                
+                  <small>The effect property is a string defining the effect to be used by the camera. When set, its ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/exposureCompensation.html">Mozilla/B2G_OS/API/CameraControl/exposureCompensation</a>
+                
+                  <small>The exposureCompensation property value is a number used to compensate the camera exposure.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/flashMode.html">Mozilla/B2G_OS/API/CameraControl/flashMode</a>
+                
+                  <small>The flashMode property value is a string that defines how the flash, if any, is to be used. When ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focalLength.html">Mozilla/B2G_OS/API/CameraControl/focalLength</a>
+                
+                  <small>The focalLength property value is a read-only property that returns a number that expresses the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusAreas.html">Mozilla/B2G_OS/API/CameraControl/focusAreas</a>
+                
+                  <small>The focusAreas property is an Array of one or more Area objects that define where the camera ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusDistanceFar.html">Mozilla/B2G_OS/API/CameraControl/focusDistanceFar</a>
+                
+                  <small>The focusDistanceFar property value is a distance in meters used with ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusDistanceNear.html">Mozilla/B2G_OS/API/CameraControl/focusDistanceNear</a>
+                
+                  <small>The focusDistanceNear property value is a distance in meters used with ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusDistanceOptimum.html">Mozilla/B2G_OS/API/CameraControl/focusDistanceOptimum</a>
+                
+                  <small>The focusDistanceOptimum property value is the distance in meters where the subject appears ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusMode.html">Mozilla/B2G_OS/API/CameraControl/focusMode</a>
+                
+                  <small>The focusMode property value is a string that defines which kind of focus mode the camera should ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStream.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStream</a>
+                
+                  <small>This method is used to configure and access a MediaStream from the camera. The resulting stream ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode</a>
+                
+                  <small>This method is used to configure and access a MediaStream from the camera. You use the resulting ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/meteringAreas.html">Mozilla/B2G_OS/API/CameraControl/meteringAreas</a>
+                
+                  <small>The meteringAreas property is an Array of one or more Area objects that define where the camera ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/onClosed.html">Mozilla/B2G_OS/API/CameraControl/onClosed</a>
+                
+                  <small>The onClosed property is used to set an event handler that will track when a new CameraControl ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/onRecorderStateChange.html">Mozilla/B2G_OS/API/CameraControl/onRecorderStateChange</a>
+                
+                  <small>The onRecorderStateChange property is used to set an event handler to listen to the recorder ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/onShutter.html">Mozilla/B2G_OS/API/CameraControl/onShutter</a>
+                
+                  <small>The onShutter property is used to set an event handler for the camera's "shutter" event, to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/release.html">Mozilla/B2G_OS/API/CameraControl/release</a>
+                
+                  <small>Releases the camera so that other applications can use it. You should call this whenever the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/resumePreview.html">Mozilla/B2G_OS/API/CameraControl/resumePreview</a>
+                
+                  <small>This method is used to resume the preview stream.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/sceneMode.html">Mozilla/B2G_OS/API/CameraControl/sceneMode</a>
+                
+                  <small>The sceneMode property value is a string that defines the quality of exposure to use while ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/setExposureCompensation.html">Mozilla/B2G_OS/API/CameraControl/setExposureCompensation</a>
+                
+                  <small>This method is used to change the exposure compensation value.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/startRecording.html">Mozilla/B2G_OS/API/CameraControl/startRecording</a>
+                
+                  <small>This method is used to start recording a video file on the device; the video is stored as a 3gp ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/stopRecording.html">Mozilla/B2G_OS/API/CameraControl/stopRecording</a>
+                
+                  <small>Stops recording video on the device; you should call this at some point after calling ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/takePicture.html">Mozilla/B2G_OS/API/CameraControl/takePicture</a>
+                
+                  <small>Captures a still image from the camera and passes it as a Blob to a success callback handler, ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/whiteBalanceMode.html">Mozilla/B2G_OS/API/CameraControl/whiteBalanceMode</a>
+                
+                  <small>The whiteBalanceMode property value is a string that defines the white balance mode to use. When ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/zoom.html">Mozilla/B2G_OS/API/CameraControl/zoom</a>
+                
+                  <small>The zoom property value is a number that defines the zoom factor that is to be used when taking ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraManager.html">Mozilla/B2G_OS/API/CameraManager</a>
+                
+                  <small>The CameraManager interface provides access to any cameras available on the device being used.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraManager/getCamera.html">Mozilla/B2G_OS/API/CameraManager/getCamera</a>
+                
+                  <small>This method is used to access to one of the cameras available on the device based on its ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraManager/getListOfCameras.html">Mozilla/B2G_OS/API/CameraManager/getListOfCameras</a>
+                
+                  <small>This method is used to get an Array of identifiers of all the cameras available on the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Camera_API.html">Mozilla/B2G_OS/API/Camera_API</a>
+                
+                  <small>The Camera API allows applications to manage the camera of the device. It allows them to take ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager.html">Mozilla/B2G_OS/API/ContactManager</a>
+                
+                  <small>The ContactManager interface is used to access and manage the contact available on the device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/clear.html">Mozilla/B2G_OS/API/ContactManager/clear</a>
+                
+                  <small>The clear method is used to remove ALL the contacts from the device's contact database.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/find.html">Mozilla/B2G_OS/API/ContactManager/find</a>
+                
+                  <small>The find method is used to retrieve a limited list of contacts from the device's contact ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/getAll.html">Mozilla/B2G_OS/API/ContactManager/getAll</a>
+                
+                  <small>The getAll method is used to access a sorted list of contact from the device's contact database. ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/getCount.html">Mozilla/B2G_OS/API/ContactManager/getCount</a>
+                
+                  <small>The getCount method is used to retrieve the total number of contacts available inside the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/getRevision.html">Mozilla/B2G_OS/API/ContactManager/getRevision</a>
+                
+                  <small>The getRevision method is used to retrieve the revision number of the device's contact database.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/oncontactchange.html">Mozilla/B2G_OS/API/ContactManager/oncontactchange</a>
+                
+                  <small>Specifies an event listener to receive contactchange events. These events occur when a contact ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/remove.html">Mozilla/B2G_OS/API/ContactManager/remove</a>
+                
+                  <small>The remove method is used to delete a contact from the device's contact database.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/ContactManager/save.html">Mozilla/B2G_OS/API/ContactManager/save</a>
+                
+                  <small>The save method is used to store a contact inside the device's contact database. If the contact ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Contacts_API.html">Mozilla/B2G_OS/API/Contacts_API</a>
+                
+                  <small>The Contacts API provides a simple interface to manage a user's contacts stored in the system's ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage.html">Mozilla/B2G_OS/API/DeviceStorage</a>
+                
+                  <small>The DeviceStorage interface is used to access files on a specific storage area available on the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/add.html">Mozilla/B2G_OS/API/DeviceStorage/add</a>
+                
+                  <small>The add method is used to add a file inside a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/addNamed.html">Mozilla/B2G_OS/API/DeviceStorage/addNamed</a>
+                
+                  <small>The addNamed method is used to add a file inside a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/available.html">Mozilla/B2G_OS/API/DeviceStorage/available</a>
+                
+                  <small>The available() method is used to check whether the storage area is available; this is an ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/default.html">Mozilla/B2G_OS/API/DeviceStorage/default</a>
+                
+                  <small>The default property indicates if the storage area is the one which will be used by default for ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/delete.html">Mozilla/B2G_OS/API/DeviceStorage/delete</a>
+                
+                  <small>The delete method is used to remove a file from a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/enumerate.html">Mozilla/B2G_OS/API/DeviceStorage/enumerate</a>
+                
+                  <small>The enumerate method is used to iterate through the files of a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/enumerateEditable.html">Mozilla/B2G_OS/API/DeviceStorage/enumerateEditable</a>
+                
+                  <small>The enumerateEditable method is used to iterate through the files of a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/freeSpace.html">Mozilla/B2G_OS/API/DeviceStorage/freeSpace</a>
+                
+                  <small>The freeSpace method is used to get the amount of free space usable by the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/get.html">Mozilla/B2G_OS/API/DeviceStorage/get</a>
+                
+                  <small>The get method is used to retrieve a read-only file from a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/getEditable.html">Mozilla/B2G_OS/API/DeviceStorage/getEditable</a>
+                
+                  <small>The getEditable method is used to retrieve a file, which is editable, from a given storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/lowDiskSpace.html">Mozilla/B2G_OS/API/DeviceStorage/lowDiskSpace</a>
+                
+                  <small>The lowDiskSpace read-only property of the DeviceStorage interface returns a Boolean value that ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/onchange.html">Mozilla/B2G_OS/API/DeviceStorage/onchange</a>
+                
+                  <small>The onchange property is used to specify an event handler to receive change events. Those events ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/storageName.html">Mozilla/B2G_OS/API/DeviceStorage/storageName</a>
+                
+                  <small>The storageName property indicates the name of the storage area.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage/usedSpace.html">Mozilla/B2G_OS/API/DeviceStorage/usedSpace</a>
+                
+                  <small>The usedSpace method is used to get the total of space used by the storage (the amount of space ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorageChangeEvent.html">Mozilla/B2G_OS/API/DeviceStorageChangeEvent</a>
+                
+                  <small>The DeviceStorageChangeEvent provides information about any change made to a file inside a given ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorageChangeEvent/path.html">Mozilla/B2G_OS/API/DeviceStorageChangeEvent/path</a>
+                
+                  <small>The path property provides the full path to the file affected by the change.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorageChangeEvent/reason.html">Mozilla/B2G_OS/API/DeviceStorageChangeEvent/reason</a>
+                
+                  <small>The reason property gives the nature of the change that occurred.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Device_Storage_API.html">Mozilla/B2G_OS/API/Device_Storage_API</a>
+                
+                  <small>The Device Storage API is used to access the file system within a Web app. Accessing the file ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/FMRadio.html">Mozilla/B2G_OS/API/FMRadio</a>
+                
+                  <small>The WebFM API provides access to the device FM radio. This interface lets you turn the FM radio ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MMICall.html">Mozilla/B2G_OS/API/MMICall</a>
+                
+                  <small>The MMICall interface of the Web Telephony API represents an MMI call, allowing us to receive ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MMICall/result.html">Mozilla/B2G_OS/API/MMICall/result</a>
+                
+                  <small>The result read-only property of the MMICall interface returns a promise that resolves to a ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Mobile_Connection_API.html">Mozilla/B2G_OS/API/Mobile_Connection_API</a>
+                
+                  <small>This API has 2 purposes:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/additionalName.html">Mozilla/B2G_OS/API/MozContact/additionalName</a>
+                
+                  <small>The additionalName property is a list of any additional names (other than given names or family ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/adr.html">Mozilla/B2G_OS/API/MozContact/adr</a>
+                
+                  <small>The adr property is a list of all the possible addresses for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/anniversary.html">Mozilla/B2G_OS/API/MozContact/anniversary</a>
+                
+                  <small>The anniversary property represents the anniversary date of the contact (which can be different ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/bday.html">Mozilla/B2G_OS/API/MozContact/bday</a>
+                
+                  <small>The bday property represents the birthday date of the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/category.html">Mozilla/B2G_OS/API/MozContact/category</a>
+                
+                  <small>The category property is a list of all the different categories the contact is associated with.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/email.html">Mozilla/B2G_OS/API/MozContact/email</a>
+                
+                  <small>The email property is a list of all the possible e-mails for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/familyName.html">Mozilla/B2G_OS/API/MozContact/familyName</a>
+                
+                  <small>The familyName property is a list of all the possible family names usable for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/genderIdentity.html">Mozilla/B2G_OS/API/MozContact/genderIdentity</a>
+                
+                  <small>The genderIdentity property represents the actual gender identity of the contact (which can be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/givenName.html">Mozilla/B2G_OS/API/MozContact/givenName</a>
+                
+                  <small>The givenName property is a list of all the possible given names usable for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificPrefix.html">Mozilla/B2G_OS/API/MozContact/honorificPrefix</a>
+                
+                  <small>The honorificPrefix property is a list of all the possible honorific prefix usable for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificSuffix.html">Mozilla/B2G_OS/API/MozContact/honorificSuffix</a>
+                
+                  <small>The honorificSuffix property is a list of all the possible honorific suffixes usable for the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/id.html">Mozilla/B2G_OS/API/MozContact/id</a>
+                
+                  <small>The id property is a unique string representing the contact within the device's contact database.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/impp.html">Mozilla/B2G_OS/API/MozContact/impp</a>
+                
+                  <small>The impp property is a list of all the possible Instant Messaging addresses for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/init.html">Mozilla/B2G_OS/API/MozContact/init</a>
+                
+                  <small>The init method is used to initialize the mozContact object using a configuration object.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/jobTitle.html">Mozilla/B2G_OS/API/MozContact/jobTitle</a>
+                
+                  <small>The jobTitle property is a list of all the possible job titles of the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/key.html">Mozilla/B2G_OS/API/MozContact/key</a>
+                
+                  <small>The key property is a list of all the possible encryption keys usable with the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/name.html">Mozilla/B2G_OS/API/MozContact/name</a>
+                
+                  <small>The name property is a list of all the possible names use to identify the contact. It's ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/nickname.html">Mozilla/B2G_OS/API/MozContact/nickname</a>
+                
+                  <small>The nickname property is a list of all the possible nicknames for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/note.html">Mozilla/B2G_OS/API/MozContact/note</a>
+                
+                  <small>The note property is a list of arbitrary notes related to the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/org.html">Mozilla/B2G_OS/API/MozContact/org</a>
+                
+                  <small>The org property is a list of all the possible organizations the contact is affiliated with.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/photo.html">Mozilla/B2G_OS/API/MozContact/photo</a>
+                
+                  <small>The photo property is a list of images for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/published.html">Mozilla/B2G_OS/API/MozContact/published</a>
+                
+                  <small>The published property provides the date of when the contact was stored for the first time on ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/sex.html">Mozilla/B2G_OS/API/MozContact/sex</a>
+                
+                  <small>The sex property represents the actual sex of the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/tel.html">Mozilla/B2G_OS/API/MozContact/tel</a>
+                
+                  <small>The tel property is a list of all the possible phone numbers for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/updated.html">Mozilla/B2G_OS/API/MozContact/updated</a>
+                
+                  <small>The updated property provides the date of when the contact was updated for the last time on the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/url.html">Mozilla/B2G_OS/API/MozContact/url</a>
+                
+                  <small>The url property is a list of all the possible URLs for the contact.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Navigator/mozCamera.html">Mozilla/B2G_OS/API/Navigator/mozCamera</a>
+                
+                  <small>This API has not been implemented as of Firefox OS 2.2. You probably actually want ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Navigator/mozCameras.html">Mozilla/B2G_OS/API/Navigator/mozCameras</a>
+                
+                  <small>Returns a CameraManager object you can use to access the cameras available on the user's device.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony.html">Mozilla/B2G_OS/API/Telephony</a>
+                
+                  <small>The Telephony interface of the Web Telephony API provides support for dialing, answering, and ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/active.html">Mozilla/B2G_OS/API/Telephony/active</a>
+                
+                  <small>The active read-only property of the Telephony interface returns a TelephonyCall object ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/calls.html">Mozilla/B2G_OS/API/Telephony/calls</a>
+                
+                  <small>The calls read-only property of the Telephony interface returns a list of TelephonyCall objects ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/dial.html">Mozilla/B2G_OS/API/Telephony/dial</a>
+                
+                  <small>The dial() method of the Telephony interface dials a phone number and returns a new ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/muted.html">Mozilla/B2G_OS/API/Telephony/muted</a>
+                
+                  <small>The muted property of the Telephony interface indicates whether or not the microphone is muted ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/oncallschanged.html">Mozilla/B2G_OS/API/Telephony/oncallschanged</a>
+                
+                  <small>The oncallschanged property of the Telephony interface specifies an event listener to receive ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/onincoming.html">Mozilla/B2G_OS/API/Telephony/onincoming</a>
+                
+                  <small>The onincoming property of the Telephony interface specifies an event listener to receive ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/speakerEnabled.html">Mozilla/B2G_OS/API/Telephony/speakerEnabled</a>
+                
+                  <small>The speakerEnabled property of the Telephony interface indicates whether or not the speakerphone ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/startTone.html">Mozilla/B2G_OS/API/Telephony/startTone</a>
+                
+                  <small>The startTone() method of the Telephony Interface begins generating the tone for the specified ...</small>
+                
+            </li>
+          
+        </ul>
+        
+  <ol class="pagination">
+  
+    <li class="prev">
+      <a href="WebAPI2679.html?page=1">
+        Previous
+      </a>
+    </li>
+  
+  
+  
+    <li>
+      <a href="WebAPI2679.html?page=1">1</a>
+    </li>
+  
+    <li class="selected">
+      <a href="WebAPI4658.html?page=2">2</a>
+    </li>
+  
+    <li>
+      <a href="WebAPI9ba9.html?page=3">3</a>
+    </li>
+  
+  
+  
+    <li class="next">
+      <a href="WebAPI9ba9.html?page=3">
+        Next
+      </a>
+    </li>
+  
+  </ol>
+
+      
+    </div>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+              
+
+<form class="languages go" method="get" action="#">
+  <label for="language">Other languages:</label>
+  
+    
+    <input type="hidden" name="page" value="2">
+    
+  
+  <select id="language" class="autosubmit" name="lang">
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
+  </select>
+  <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+</form>
+          
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/WebAPI?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:46:58 GMT -->
+</body></html>

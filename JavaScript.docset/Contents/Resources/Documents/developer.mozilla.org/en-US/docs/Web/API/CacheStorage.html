@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CacheStorage by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:15:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CacheStorage by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:54:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -66,6 +65,10 @@
     
       <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/CacheStorage" title="CacheStorage">
     
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/CacheStorage" title="CacheStorage">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage" title="CacheStorage 缓存存储">
+    
   
 
   <!-- document-specific social tags -->
@@ -74,10 +77,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">
   <meta name="twitter:title" content="CacheStorage">
   
-  <meta property="og:description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
-  <meta name="description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
-  <meta name="twitter:description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
+  <meta property="og:description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
+  <meta name="description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
+  <meta name="twitter:description" content="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -95,10 +105,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +158,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +175,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +192,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCacheStorage" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/CacheStorage" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/CacheStorage" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCacheStorage" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCacheStorage" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +215,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +239,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +253,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/CacheStorage">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +293,20 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/CacheStorage" title="CacheStorage">Français</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/CacheStorage" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/CacheStorage" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CacheStorage" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -319,7 +318,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +331,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -376,8 +376,18 @@
           </span>
 
         
-        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/yujianrong@gmail.com" title="View profile: yujianrong@gmail.com">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="yujianrong@gmail.com" data-src="../../../../../secure.gravatar.com/avatar/b1c016705bb88882848fde352825597a6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">yujianrong@gmail.com</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Mcs" title="View profile: Mcs">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Mcs" data-src="../../../../../secure.gravatar.com/avatar/4febbd86c096511a281d5921a0fd38246c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Mcs</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
@@ -399,12 +409,12 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/brittanystoroz" title="View profile: brittanystoroz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="brittanystoroz" data-src="../../../../../secure.gravatar.com/avatar/e7ce215b35d388b76aab1d06aaec70f56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">brittanystoroz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Meggin" title="View profile: Meggin">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Meggin" data-src="../../../../../secure.gravatar.com/avatar/63887f92117d1d6312f2d1d91e8c51b66c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Meggin</noscript></a>
                 </li>
@@ -462,81 +472,80 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="notice experimental"> 
+                    <p></p><section class="Quick_links" id="Quick_Links"><!-- --></section><div class="notice experimental"> 
     <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
 </div><p></p>
 
-<p>The <strong><code>CacheStorage</code></strong> interface represents the storage for <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects. It provides a master directory of all the named caches that a <a href="ServiceWorker.html" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object."><code>ServiceWorker</code></a>, other type of worker or <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>window</code></a> scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects.</p>
+<p>The <strong><code>CacheStorage</code></strong> interface represents the storage for <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects. It provides a master directory of all the named caches that a <a title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object." href="ServiceWorker.html"><code>ServiceWorker</code></a>, other type of worker or <a title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window." href="Window.html"><code>window</code></a> scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects.</p>
 
-<p><code>CacheStorage</code> also exposes <a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>CacheStorage.open()</code></a>&nbsp;and <a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>CacheStorage.match()</code></a>. Use <a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>CacheStorage.open()</code></a>&nbsp;to obtain a <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a>&nbsp;instance. Use <a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>CacheStorage.match()</code></a>&nbsp;to check if a given <a href="Request.html" title="The Request interface of the Fetch API represents a resource request."><code>Request</code></a> is a key in any of the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects that the <code>CacheStorage</code> object tracks.</p>
+<p><code>CacheStorage</code> also exposes <a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>CacheStorage.open()</code></a>&nbsp;and <a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>CacheStorage.match()</code></a>. Use <a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>CacheStorage.open()</code></a>&nbsp;to obtain a <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a>&nbsp;instance. Use <a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>CacheStorage.match()</code></a>&nbsp;to check if a given <a title="The Request interface of the Fetch API represents a resource request." href="Request.html"><code>Request</code></a> is a key in any of the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects that the <code>CacheStorage</code> object tracks.</p>
 
-<p>You can access <code>CacheStorage</code> through the global <a href="WorkerGlobalScope/caches.html" title="Technical review completed."><code>caches</code></a> property.</p>
+<p>You can access <code>CacheStorage</code> through the global <a title="Technical review completed." href="WorkerGlobalScope/caches.html"><code>caches</code></a> property.</p>
 
 <div class="note"><strong>Note</strong>: CacheStorage always rejects with a <code>SecurityError</code> on untrusted origins (i.e. those that aren't using HTTPS, although this definition will likely become more complex in the future.) When testing you can get around this by checking the "Enable Service Workers over HTTP (when toolbox is open)" option in the Firefox Devtools options/gear menu.</div>
 
-<div class="note"><strong>Note</strong>: <a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>CacheStorage.match()</code></a> is a convenience method. Equivalent functionality to match a cache entry can be implemented by opening your cache with <a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>CacheStorage.open()</code></a>, returning the entries it contains with <a href="CacheStorage/keys.html" title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object. Use this method to iterate over a list of all Cache objects."><code>CacheStorage.keys()</code></a>, and matching the one you want with <a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>CacheStorage.match()</code></a>.</div>
+<div class="note"><strong>Note</strong>: <a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>CacheStorage.match()</code></a> is a convenience method. Equivalent functionality to match a cache entry can be implemented by opening your cache with <a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>CacheStorage.open()</code></a>, returning the entries it contains with <a title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object&nbsp;in the order they were created. Use this method to iterate over a list of all Cache objects." href="CacheStorage/keys.html"><code>CacheStorage.keys()</code></a>, and matching the one you want with <a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>CacheStorage.match()</code></a>.</div>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
- <dt><a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>CacheStorage.match()</code></a></dt>
- <dd>Checks if a given <a href="Request.html" title="The Request interface of the Fetch API represents a resource request."><code>Request</code></a> is a key in any of the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects that the <a href="CacheStorage.html" title="The CacheStorage interface of the ServiceWorker API represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a> object tracks and returns a <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that resolves to that match.</dd>
- <dt><a href="CacheStorage/has.html" title="The has() method of the CacheStorage interface returns a Promise that resolves to true if a Cache object matches the cacheName."><code>CacheStorage.has()</code></a></dt>
- <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that resolves to <code>true</code> if a <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> object matching the <code>cacheName</code> exists.</dd>
- <dt><a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>CacheStorage.open()</code></a></dt>
- <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that resolves to the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> object matching the <code>cacheName</code> (a new cache is created if it doesn't exist.)</dd>
- <dt><a href="CacheStorage/delete.html" title="The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it returns false."><code>CacheStorage.delete()</code></a></dt>
- <dd>Finds the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> object matching the <code>cacheName</code>, and if found, deletes the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> object and returns a <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that resolves to <code>true</code>. If no <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> object is found, it returns <code>false</code>.</dd>
- <dt><a href="CacheStorage/keys.html" title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object. Use this method to iterate over a list of all Cache objects."><code>CacheStorage.keys()</code></a></dt>
- <dd>Returns a <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that will resolve with an array containing strings corresponding to all of the named <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects tracked by the <a href="CacheStorage.html" title="The CacheStorage interface of the ServiceWorker API represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a>. Use this method to iterate over a list of all the <a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a> objects.</dd>
+ <dt><a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>CacheStorage.match()</code></a></dt>
+ <dd>Checks if a given <a title="The Request interface of the Fetch API represents a resource request." href="Request.html"><code>Request</code></a> is a key in any of the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects that the <a title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects." href="CacheStorage.html"><code>CacheStorage</code></a> object tracks and returns a <a title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never." href="../JavaScript/Reference/Global_Objects/Promise.html"><code>Promise</code></a> that resolves to that match.</dd>
+ <dt><a title="The has() method of the CacheStorage interface returns a Promise that resolves to true if a Cache object matches the cacheName." href="CacheStorage/has.html"><code>CacheStorage.has()</code></a></dt>
+ <dd>Returns a <a title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never." href="../JavaScript/Reference/Global_Objects/Promise.html"><code>Promise</code></a> that resolves to <code>true</code> if a <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> object matching the <code>cacheName</code> exists.</dd>
+ <dt><a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>CacheStorage.open()</code></a></dt>
+ <dd>Returns a <a title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never." href="../JavaScript/Reference/Global_Objects/Promise.html"><code>Promise</code></a> that resolves to the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> object matching the <code>cacheName</code> (a new cache is created if it doesn't exist.)</dd>
+ <dt><a title="The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it returns false." href="CacheStorage/delete.html"><code>CacheStorage.delete()</code></a></dt>
+ <dd>Finds the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> object matching the <code>cacheName</code>, and if found, deletes the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> object and returns a <a title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never." href="../JavaScript/Reference/Global_Objects/Promise.html"><code>Promise</code></a> that resolves to <code>true</code>. If no <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> object is found, it returns <code>false</code>.</dd>
+ <dt><a title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object&nbsp;in the order they were created. Use this method to iterate over a list of all Cache objects." href="CacheStorage/keys.html"><code>CacheStorage.keys()</code></a></dt>
+ <dd>Returns a <a title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never." href="../JavaScript/Reference/Global_Objects/Promise.html"><code>Promise</code></a> that will resolve with an array containing strings corresponding to all of the named <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects tracked by the <a title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects." href="CacheStorage.html"><code>CacheStorage</code></a>. Use this method to iterate over a list of all the <a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a> objects.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>
 
-<p>This code snippet is from the MDN <a href="https://github.com/mdn/sw-test/" class="external">sw-test example</a> (see <a href="https://mdn.github.io/sw-test/" class="external">sw-test running live</a>.) This service worker script waits for an <a href="InstallEvent.html" title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation."><code>InstallEvent</code></a> to fire, then runs <a href="ExtendableEvent/waitUntil.html" title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. When called in an EventHandler associated to the install event, it delays treating the installing&nbsp;worker as installed until the passed Promise resolves successfully. This is primarily used to ensure that a service worker is not considered installed until all of the core caches it depends on are populated."><code>waitUntil</code></a> to handle the install process for the app. This consists of calling <a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>CacheStorage.open</code></a> to create a new cache, then using <a href="Cache/addAll.html" title="The addAll() method of the Cache interface takes an array of URLS, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations."><code>Cache.addAll</code></a> to add a series of assets to it.</p>
+<p>This code snippet is from the MDN <a href="https://github.com/mdn/sw-test/" class="external">sw-test example</a> (see <a href="https://mdn.github.io/sw-test/" class="external">sw-test running live</a>.) This service worker script waits for an <a title="The parameter passed into the oninstall handler, the InstallEvent interface represents an install action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. As a child of ExtendableEvent,&nbsp;it ensures that functional events such as FetchEvent&nbsp;are not dispatched during installation." href="InstallEvent.html"><code>InstallEvent</code></a> to fire, then runs <a title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. In service workers, extending the life of an event prevents the browser from terminating the service worker before asynchronous operations within the event have completed." href="ExtendableEvent/waitUntil.html"><code>waitUntil</code></a> to handle the install process for the app. This consists of calling <a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>CacheStorage.open</code></a> to create a new cache, then using <a title="The addAll() method of the Cache interface takes an array of URLS, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations." href="Cache/addAll.html"><code>Cache.addAll</code></a> to add a series of assets to it.</p>
 
-<p>In the second code block, we wait for a <a href="FetchEvent.html" title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page."><code>FetchEvent</code></a> to fire. We construct a custom response like so:</p>
+<p>In the second code block, we wait for a <a title="The parameter passed into the ServiceWorkerGlobalScope.onfetch handler, FetchEvent represents a fetch action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker. It contains information about the request and resulting response, and provides the FetchEvent.respondWith() method, which allows us to provide an arbitrary response back to the controlled page." href="FetchEvent.html"><code>FetchEvent</code></a> to fire. We construct a custom response like so:</p>
 
 <ol>
  <li>Check whether a match for the request is found in the CacheStorage. If so, serve that.</li>
- <li>If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using <a href="Cache/put.html" title="The put() method of the Cache interface allows key/value pairs to be added to the current Cache object."><code>Cache.put</code></a> (<code>cache.put(event.request, response.clone())</code>.)</li>
+ <li>If not, fetch the request from the network, then also open the cache created in the first block and add a clone of the request to it using <a title="The put() method of the Cache interface allows key/value pairs to be added to the current Cache object." href="Cache/put.html"><code>Cache.put</code></a> (<code>cache.put(event.request, response.clone())</code>.)</li>
  <li>If this fails (e.g. because the network is down), return a fallback response.</li>
 </ol>
 
-<p>Finally, return whatever the custom response ended up being equal to, using <a href="FetchEvent/respondWith.html" title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch."><code>FetchEvent.respondWith</code></a>.</p>
+<p>Finally, return whatever the custom response ended up being equal to, using <a title="The respondWith() method of the FetchEvent interface is intended for containing code that generates custom responses to the requests coming from the controlled page. This code will resolve by returning a Response or network error to Fetch." href="FetchEvent/respondWith.html"><code>FetchEvent.respondWith</code></a>.</p>
 
 <pre class="brush: js">this.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
-  );
+&nbsp; event.waitUntil(
+&nbsp; &nbsp; caches.open('v1').then(function(cache) {
+&nbsp; &nbsp; &nbsp; return cache.addAll([
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/index.html',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/style.css',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/app.js',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/image-list.js',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/star-wars-logo.jpg',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/gallery/bountyHunters.jpg',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/gallery/myLittleVader.jpg',
+&nbsp; &nbsp; &nbsp; &nbsp; '/sw-test/gallery/snowTroopers.jpg'
+&nbsp; &nbsp; &nbsp; ]);
+&nbsp; &nbsp; })
+&nbsp; );
 });
 
 this.addEventListener('fetch', function(event) {
-  var cachedResponse = caches.match(event.request).catch(function() {
-    return fetch(event.request).then(function(response) {
-      return caches.open('v1').then(function(cache) {
-        cache.put(event.request, response.clone());
-        return response;
-      });  
-    });
-  }).catch(function() {
-    return caches.match('/sw-test/gallery/myLittleVader.jpg');
-  });
-    
-  event.respondWith(cachedResponse);
+&nbsp; var response;
+&nbsp; event.respondWith(caches.match(event.request).catch(function() {
+&nbsp; &nbsp; return fetch(event.request);
+&nbsp; }).then(function(r) {
+&nbsp; &nbsp; response = r;
+&nbsp; &nbsp; caches.open('v1').then(function(cache) {
+&nbsp; &nbsp; &nbsp; cache.put(event.request, response);
+&nbsp; &nbsp; });
+&nbsp; &nbsp; return response.clone();
+&nbsp; }).catch(function() {
+&nbsp; &nbsp; return caches.match('/sw-test/gallery/myLittleVader.jpg');
+&nbsp; }));
 });</pre>
 
 <h2 id="Specifications">Specifications</h2>
@@ -549,7 +558,7 @@ this.addEventListener('fetch', function(event) {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://www.w3.org/TR/service-workers/#cache-storage" class="external" lang="en" hreflang="en">Service Workers<br><small lang="en-US">The definition of 'CacheStorage' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://www.w3.org/TR/service-workers/#cache-storage" class="external">Service Workers<br><small lang="en-US">The definition of 'CacheStorage' in that specification.</small></a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>Initial definition.</td>
   </tr>
@@ -580,23 +589,23 @@ this.addEventListener('fetch', function(event) {
   <tr>
    <td>Basic support</td>
    <td>40.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44</a> (44)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44</a> (44)<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
   </tr>
   <tr>
-   <td>Accessible from <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a></td>
+   <td>Accessible from <a title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window." href="Window.html"><code>Window</code></a></td>
    <td>43.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44</a> (44)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44</a> (44)<sup>[1]</sup></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
   </tr>
   <tr>
-   <td>Accessible from <a href="WorkerGlobalScope.html" title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."><code>WorkerGlobalScope</code></a></td>
+   <td>Accessible from <a title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop." href="WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></td>
    <td>43.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44</a> (44)<sup>[1]</sup></td>
+   <td><a title="Released on 2016-01-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/44">44</a> (44)<sup>[1]</sup></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -629,7 +638,7 @@ this.addEventListener('fetch', function(event) {
    <td>40.0</td>
   </tr>
   <tr>
-   <td>Accessible from <a href="Window.html" title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window."><code>Window</code></a></td>
+   <td>Accessible from <a title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window." href="Window.html"><code>Window</code></a></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>44.0 (44)</td>
@@ -639,7 +648,7 @@ this.addEventListener('fetch', function(event) {
    <td>43.0</td>
   </tr>
   <tr>
-   <td>Accessible from <a href="WorkerGlobalScope.html" title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."><code>WorkerGlobalScope</code></a></td>
+   <td>Accessible from <a title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop." href="WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>44.0 (44)</td>
@@ -658,31 +667,12 @@ this.addEventListener('fetch', function(event) {
 
 <ul>
  <li><a href="Service_Worker_API/Using_Service_Workers.html">Using Service Workers</a></li>
- <li><a href="Cache.html" title="The Cache interface of the ServiceWorker API provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even thought it is defined in the service worker spec."><code>Cache</code></a></li>
- <li><a href="WorkerGlobalScope/caches.html" title="Technical review completed."><code>WorkerGlobalScope.caches</code></a></li>
+ <li><a title="The Cache interface provides a storage mechanism for Request / Response object pairs that are cached, for example as part of the ServiceWorker life cycle. Note that the Cache interface is exposed to windowed scopes as well as workers. You don't have to use it in conjunction with service workers, even though it is defined in the service worker spec." href="Cache.html"><code>Cache</code></a></li>
+ <li><a title="Technical review completed." href="WorkerGlobalScope/caches.html"><code>WorkerGlobalScope.caches</code></a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCacheStorage%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+CacheStorage+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about CacheStorage on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about CacheStorage on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCacheStorage%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about CacheStorage on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -720,6 +710,10 @@ this.addEventListener('fetch', function(event) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/yujianrong@gmail.com">yujianrong@gmail.com</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Mcs">Mcs</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
@@ -738,11 +732,48 @@ this.addEventListener('fetch', function(event) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>,
-                      <time datetime="2016-03-30T00:15:38-07:00">Mar 30, 2016, 12:15:38 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/yujianrong@gmail.com">yujianrong@gmail.com</a>,
+                      <time datetime="2016-08-12T08:04:14-07:00">Aug 12, 2016, 8:04:14 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -759,7 +790,7 @@ this.addEventListener('fetch', function(event) {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="Service_Worker_API.html">Service Worker API</a></strong></li><li><strong><a href="CacheStorage.html"><code>CacheStorage</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="CacheStorage/delete.html" title="The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it returns false."><code>delete()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="CacheStorage/has.html" title="The has() method of the CacheStorage interface returns a Promise that resolves to true if a Cache object matches the cacheName."><code>has()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="CacheStorage/keys.html" title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object. Use this method to iterate over a list of all Cache objects."><code>keys()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="CacheStorage/match.html" title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response."><code>match()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="CacheStorage/open.html" title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."><code>open()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/statechange.html"><code>statechange</code></a></li><li><a href="../Events/updatefound.html"><code>updatefound</code></a></li><li><a href="../Events/controllerchange.html"><code>controllerchange</code></a></li><li><a href="../Events/error.html"><code>error</code></a></li><li><a href="../Events/message.html"><code>message</code></a></li><li><a href="../Events/install.html"><code>install</code></a></li><li><a href="../Events/activate.html"><code>activate</code></a></li><li><a href="../Events/fetch.html"><code>fetch</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Service Workers API</strong></a><ol><li><a href="Cache.html"><code>Cache</code></a></li><li><a href="Client.html"><code>Client</code></a></li><li><a href="Clients.html"><code>Clients</code></a></li><li><a href="ExtendableEvent.html"><code>ExtendableEvent</code></a></li><li><a href="FetchEvent.html"><code>FetchEvent</code></a></li><li><a href="InstallEvent.html"><code>InstallEvent</code></a></li><li><a href="Navigator/serviceWorker.html"><code>Navigator.serviceWorker</code></a></li><li><a href="NotificationEvent.html"><code>NotificationEvent</code></a></li><li><a href="PeriodicSyncEvent.html"><code>PeriodicSyncEvent</code></a></li><li><a href="PeriodicSyncManager.html"><code>PeriodicSyncManager</code></a></li><li><a href="PeriodicSyncRegistration.html"><code>PeriodicSyncRegistration</code></a></li><li><a href="ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a></li><li><a href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a></li><li><a href="ServiceWorkerRegistration.html"><code>ServiceWorkerRegistration</code></a></li><li><a href="SyncEvent.html"><code>SyncEvent</code></a></li><li><a href="SyncManager.html"><code>SyncManager</code></a></li><li><a href="SyncRegistration.html"><code>SyncRegistration</code></a></li><li><a href="WindowClient.html"><code>WindowClient</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="Service_Worker_API.html">Service Worker API</a></strong></li><li><strong><a href="CacheStorage.html"><code>CacheStorage</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it returns false." href="CacheStorage/delete.html"><code>delete()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The has() method of the CacheStorage interface returns a Promise that resolves to true if a Cache object matches the cacheName." href="CacheStorage/has.html"><code>has()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object&nbsp;in the order they were created. Use this method to iterate over a list of all Cache objects." href="CacheStorage/keys.html"><code>keys()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The match() method of the CacheStorage interface checks if a given Request is a key in any of the Cache objects that the CacheStorage object tracks and returns a Promise that resolves to the matching Response." href="CacheStorage/match.html"><code>match()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName." href="CacheStorage/open.html"><code>open()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/statechange.html"><code>statechange</code></a></li><li><a href="../Events/updatefound.html"><code>updatefound</code></a></li><li><a href="../Events/controllerchange.html"><code>controllerchange</code></a></li><li><a href="../Events/error.html"><code>error</code></a></li><li><a href="../Events/message.html"><code>message</code></a></li><li><a href="../Events/install.html"><code>install</code></a></li><li><a href="../Events/activate.html"><code>activate</code></a></li><li><a href="../Events/fetch.html"><code>fetch</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Service Workers API</strong></a><ol><li><a href="Cache.html"><code>Cache</code></a></li><li><a href="Client.html"><code>Client</code></a></li><li><a href="Clients.html"><code>Clients</code></a></li><li><a href="ExtendableEvent.html"><code>ExtendableEvent</code></a></li><li><a href="FetchEvent.html"><code>FetchEvent</code></a></li><li><a href="InstallEvent.html"><code>InstallEvent</code></a></li><li><a href="Navigator/serviceWorker.html"><code>Navigator.serviceWorker</code></a></li><li><a href="NotificationEvent.html"><code>NotificationEvent</code></a></li><li><a href="PeriodicSyncEvent.html"><code>PeriodicSyncEvent</code></a></li><li><a href="PeriodicSyncManager.html"><code>PeriodicSyncManager</code></a></li><li><a href="PeriodicSyncRegistration.html"><code>PeriodicSyncRegistration</code></a></li><li><a href="ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="ServiceWorkerContainer.html"><code>ServiceWorkerContainer</code></a></li><li><a href="ServiceWorkerGlobalScope.html"><code>ServiceWorkerGlobalScope</code></a></li><li><a href="ServiceWorkerRegistration.html"><code>ServiceWorkerRegistration</code></a></li><li><a href="SyncEvent.html"><code>SyncEvent</code></a></li><li><a href="SyncManager.html"><code>SyncManager</code></a></li><li><a href="SyncRegistration.html"><code>SyncRegistration</code></a></li><li><a href="WindowClient.html"><code>WindowClient</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -783,12 +814,12 @@ this.addEventListener('fetch', function(event) {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -796,9 +827,8 @@ this.addEventListener('fetch', function(event) {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -807,12 +837,18 @@ this.addEventListener('fetch', function(event) {
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/CacheStorage" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/CacheStorage" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/fr/docs/Web/API/CacheStorage">
-            Français
+          <option title="French" value="/fr/docs/Web/API/CacheStorage">
+            Français (fr)
+          </option>
+          <option title="Russian" value="/ru/docs/Web/API/CacheStorage">
+            Русский (ru)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/CacheStorage">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -829,63 +865,38 @@ this.addEventListener('fetch', function(event) {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/CacheStorage$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CacheStorage by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:15:23 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CacheStorage by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:54:23 GMT -->
 </body></html>

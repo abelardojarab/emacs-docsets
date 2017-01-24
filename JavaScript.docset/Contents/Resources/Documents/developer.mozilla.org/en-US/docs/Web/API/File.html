@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:17:37 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:57:12 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -78,6 +77,8 @@
     
       <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" title="File">
     
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/File" title="File">
+    
   
 
   <!-- document-specific social tags -->
@@ -90,6 +91,13 @@
   <meta name="description" content="The File interface provides information about files and allows JavaScript in a web page to access their content.">
   <meta name="twitter:description" content="The File interface provides information about files and allows JavaScript in a web page to access their content.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -107,10 +115,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -160,8 +168,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -177,9 +185,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -196,34 +202,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/File" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/File" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -233,18 +225,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -255,10 +249,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -272,8 +263,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/File">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,26 +303,30 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/File" title="File">Deutsch</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/File" title="File">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/File" title="File">Français</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/File" title="German">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/File" title="File">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/File" title="Spanish">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/File" title="File">Português (do&nbsp;Brasil)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/File" title="French">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/File" title="File">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/File" title="Japanese">日本語 (ja)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" title="File">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/File" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/File" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/File" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/File" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
                 
               
 
@@ -343,7 +338,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/File$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -354,7 +351,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -404,18 +400,28 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Nickolay" title="View profile: Nickolay">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Nickolay" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Nickolay</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/laenion" title="View profile: laenion">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="laenion" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">laenion</noscript></a>
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/isonic" title="View profile: isonic">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="isonic" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">isonic</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/prozacchiwawa" title="View profile: prozacchiwawa">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="prozacchiwawa" data-src="../../../../../secure.gravatar.com/avatar/f2ee17b19924a4e62661b710523ba0606c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">prozacchiwawa</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/bhofmann" title="View profile: bhofmann">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="bhofmann" data-src="../../../../../secure.gravatar.com/avatar/522bfb2b2abb791df510f18dee8f9a9d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">bhofmann</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -423,12 +429,32 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/raycohen" title="View profile: raycohen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="raycohen" data-src="../../../../../secure.gravatar.com/avatar/a9ab55d6eaf07a5238f28fdd8959393f6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">raycohen</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/Nickolay" title="View profile: Nickolay">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Nickolay" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Nickolay</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/bohwaz" title="View profile: bohwaz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="bohwaz" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">bohwaz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Noitidart" title="View profile: Noitidart">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Noitidart" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Noitidart</noscript></a>
                 </li>
@@ -536,7 +562,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Implementation_notes" rel="internal">Implementation notes</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a><ol><li><a href="#Implementation_notes" rel="internal">Implementation notes</a></li></ol></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -557,6 +583,18 @@
 
               
                 
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
+                    </p>
+                  </div>
+                
+                
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs an editorial review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review">How you can help.</a>
+                    </p>
+                  </div>
                 
                 
               
@@ -566,44 +604,34 @@
               <article id="wikiArticle">
                 
                   
-                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
 
 <p>The <strong><code>File</code></strong> interface provides information about files and allows JavaScript in a web page to access their content.</p>
 
-<p><code>File</code> objects are generally retrieved from a <a href="FileList.html" title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage."><code>FileList</code></a> object returned as a result of a user selecting files using the&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="The HTML element&nbsp;&lt;input&gt;&nbsp;is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute."><code>&lt;input&gt;</code></a>&nbsp;element, from a drag and drop operation's <a href="DataTransfer.html" title="The DataTransfer object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see Drag and Drop."><code>DataTransfer</code></a> object, or from the&nbsp;<code>mozGetAsFile()</code>&nbsp;API on an&nbsp;<a href="HTMLCanvasElement.html" title="The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface."><code>HTMLCanvasElement</code></a>. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see <a href="#Gecko_notes">Gecko notes</a> for more information.)</p>
+<p><code>File</code> objects are generally retrieved from a <a title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage." href="/en-US/docs/Web/API/FileList"><code>FileList</code></a> object returned as a result of a user selecting files using the&nbsp;<a title="The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute." href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a>&nbsp;element, from a drag and drop operation's <a title="The DataTransfer object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API." href="DataTransfer.html"><code>DataTransfer</code></a> object, or from the&nbsp;<code>mozGetAsFile()</code>&nbsp;API on an&nbsp;<a title="The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface." href="HTMLCanvasElement.html"><code>HTMLCanvasElement</code></a>. In Gecko, privileged code can create <code>File</code> objects representing any local file without user interaction (see <a href="#Implementation_notes">Implementation notes</a> for more information.)</p>
 
-<p>A <code>File</code> object is specific kind of a <a href="Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a>, and can be used in any context that a Blob can. In particular, <a href="FileReader.html" title="The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read."><code>FileReader</code></a>, <a href="URL/createObjectURL.html" title="The URL.createObjectURL() static method creates a DOMString containing an URL representing the object given in parameter. The URL lifetime is tied to the document in the window on which it was created. The new object URL represents the specified File object or Blob object."><code>URL.createObjectURL()</code></a>, <a href="ImageBitmapFactories/createImageBitmap.html" title="The createImageBitmap method accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap. Optionally the source is cropped to the rectangle of pixels originating at (sx, sy) with width sw, and height sh."><code>createImageBitmap()</code></a>, and <a href="XMLHttpRequest.html#send()" title=""><code>XMLHttpRequest.send()</code></a> accept both <code>Blob</code>s and <code>File</code>s.</p>
+<p>A <code>File</code> object is a specific kind of a <a title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system." href="Blob.html"><code>Blob</code></a>, and can be used in any context that a Blob can. In particular, <a title="[1] Prior to Gecko 2.0 beta 7 (Firefox 4.0 beta 7), all Blob parameters below were File parameters; this has since been updated to match the specification correctly.&nbsp;Prior to Gecko 13.0 (Firefox 13.0 / Thunderbird 13.0 / SeaMonkey 2.10) the FileReader.error property returned a FileError object. This interface has been removed and FileReader.error is now returning the DOMError object as defined in the latest FileAPI draft." href="FileReader.html"><code>FileReader</code></a>, <a title="The URL.createObjectURL() static method creates a DOMString containing an URL representing the object given in parameter. The URL lifetime is tied to the document in the window on which it was created. The new object URL represents the specified File object or Blob object." href="URL/createObjectURL.html"><code>URL.createObjectURL()</code></a>, <a title="The createImageBitmap method accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap. Optionally the source is cropped to the rectangle of pixels originating at (sx, sy) with width sw, and height sh." href="ImageBitmapFactories/createImageBitmap.html"><code>createImageBitmap()</code></a>, and <a title="" href="XMLHttpRequest.html#send()"><code>XMLHttpRequest.send()</code></a> accept both <code>Blob</code>s and <code>File</code>s.</p>
 
 <p>See <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Using files from web applications</a> for more information and examples.</p>
 
 <h2 id="Properties">Properties</h2>
 
+<p><em>The <code>File</code> interface also inherits properties from the <a title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system." href="Blob.html"><code>Blob</code></a> interface:</em></p>
+
 <dl>
- <dt><a href="File/lastModifiedDate.html" title="Returns the last modified date of the file. Files without a known last modified date use the current date instead."><code>File.lastModifiedDate</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span> </dt>
- <dd>The last modified <code><a href="../JavaScript/Reference/Global_Objects/Date.html">Date</a></code> of the file referenced by the <code>File</code> object.</dd>
- <dt><a href="File/name.html" title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property."><code>File.name</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span> </dt>
- <dd>The name of the file referenced by the <code>File</code> object.</dd>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="File/lastModified.html" class="new"><code>File.lastModified</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Returns the last modified time of the file, in millisecond since the UNIX epoch (January 1st, 1970 at Midnight).</dd>
+ <dt><a title="The File.lastModifiedDate read-only property returns the last modified date of the file. Files without a known last modified date returns the current date ." href="File/lastModifiedDate.html"><code>File.lastModifiedDate</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span> </dt>
+ <dd>Returns the last modified <code><a href="../JavaScript/Reference/Global_Objects/Date.html">Date</a></code> of the file referenced by the <code>File</code> object.</dd>
+ <dt><a title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property." href="File/name.html"><code>File.name</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Returns the name of the file referenced by the <code>File</code> object.</dd>
+ <dt><a title="The File.webkitRelativePath is a read-only property that contains a DOMString which specifies the file's path relative to the directory selected by the user in an &lt;input&gt; element with its webkitdirectory attribute set." href="/en-US/docs/Web/API/File/webkitRelativePath"><code>File.webkitRelativePath</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
+ <dd>Returns the path the URL of the <a title="The File interface provides information about files and allows JavaScript in a web page to access their content." href="File.html"><code>File</code></a> is relative to.</dd>
 </dl>
-
-<p><em>The <code>File</code> interface also inherits properties from the <a href="Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a> interface:</em></p>
-
-<p></p><dl><dt><a href="Blob/isClosed.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Blob.isClosed</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
- <dd>A boolean value, indicating whether the <a href="Blob/close.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Blob.close()</code></a> method has been called on the blob. Closed blobs can not be read.</dd>
- <dt><a href="Blob/size.html" title="The Blob.size property returns the size in bytes of the Blob or a File."><code>Blob.size</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>The size, in bytes, of the data contained in the <code>Blob</code> object.</dd>
- <dt><a href="Blob/type.html" title="The type property of a Blob object provides the MIME type of the file. It returns an empty string&nbsp;if the type couldn't determined."><code>Blob.type</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>A string indicating the MIME&nbsp;type of the data contained in the <code>Blob</code>. If the type is unknown, this string is empty.</dd>
-</dl><p></p>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>File</code> interface doesn't define any methods, but inherits methods from the <a href="Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a> interface:</em></p>
-
-<p></p><dl><dt><a href="Blob/close.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Blob.close()</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
- <dd>Closes the blob object, possibly freeing underlying resources.</dd>
- <dt><a href="Blob/slice.html" title="The slice is used to create a new Blob object containing the data in the specified range of bytes of the source Blob."><code>Blob.slice([start[, end[, contentType]]])</code></a></dt>
- <dd>Returns a new <code>Blob</code> object containing the data in the specified range of bytes of the source <code>Blob</code>.</dd>
-</dl><p></p>
+<p><em>The <code>File</code> interface doesn't define any methods, but inherits methods from the <a title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system." href="Blob.html"><code>Blob</code></a> interface:</em></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -615,7 +643,7 @@
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://w3c.github.io/FileAPI/" class="external" lang="en" title="The 'File API' specification" hreflang="en">File API</a></td>
+   <td><a lang="en" title="The 'File API' specification" class="external" href="https://w3c.github.io/FileAPI/" hreflang="en">File API</a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>Initial definition</td>
   </tr>
@@ -638,6 +666,7 @@
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -646,11 +675,39 @@
   <tr>
    <td>Basic support</td>
    <td>13</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3" title="Released on 2008-06-17.">3.0</a> (1.9)<sup>[1]</sup><br>
-    <a href="https://developer.mozilla.org/en-US/Firefox/Releases/7" title="Released on 2011-09-26.">7</a> (7)</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a title="Released on 2008-06-17." href="https://developer.mozilla.org/en-US/Firefox/Releases/3">3.0</a> (1.9)<sup>[1]</sup><br>
+    <a title="Released on 2011-09-26." href="https://developer.mozilla.org/en-US/Firefox/Releases/7">7</a> (7)</td>
    <td>10.0</td>
    <td>11.5</td>
    <td>6.0</td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a title="Released on 2010-01-21." href="https://developer.mozilla.org/en-US/Firefox/Releases/3.6">3.6</a> (1.9.2)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+  <tr>
+   <td><code>lastModifiedDate</code>&nbsp;<span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a title="Released on 2012-08-28." href="https://developer.mozilla.org/en-US/Firefox/Releases/15">15</a> (15)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+  <tr>
+   <td><code>webkitRelativePath</code> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a title="Released on 2016-09-13." href="https://developer.mozilla.org/en-US/Firefox/Releases/49">49</a> (49)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
   </tr>
  </tbody>
 </table>
@@ -662,18 +719,48 @@
   <tr>
    <th>Feature</th>
    <th>Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Phone</th>
    <th>Opera Mobile</th>
    <th>Safari Mobile</th>
   </tr>
   <tr>
-   <td>basic support</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td>25</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>1.0 (1.9)[1]<br>
+    7.0 (7)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>11.1</td>
    <td>6.0</td>
+  </tr>
+  <tr>
+   <td><code>name</code></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>1.0 (1.9.2)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+  <tr>
+   <td><code>lastModifiedData</code> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>15.0 (15)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+  <tr>
+   <td><code>webkitRelativePath</code> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>49.0 (49)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
   </tr>
  </tbody>
 </table>
@@ -681,50 +768,31 @@
 
 <p>[1] Non-standard implementation.</p>
 
-<h2 id="Implementation_notes">Implementation notes</h2>
+<h3 id="Implementation_notes">Implementation notes</h3>
 
 <ul>
  <li>In Gecko, you can use this API from within chrome code. See <a href="../../Extensions/Using_the_DOM_File_API_in_chrome_code.html">Using the DOM File API in chrome code</a> for details. To use it from chrome code, JSM and Bootstrap scope, you have to import it using <code><a href="https://developer.mozilla.org/en-US/docs/Components.utils.importGlobalProperties">Cu.importGlobalProperties</a>(['File']);</code></li>
- <li>Starting from Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), privileged code (such as extensions) can pass an <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
- <li>Starting from Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5), you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code><a href="../../Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile.html" title="">nsIDOMFile</a></code> object directly. The constructor takes, in contrast to <a href="Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a>, as second argument the filename. The filename can be any String.
-  <pre class="syntaxbox">File File(
+ <li>Starting from Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), privileged code (such as extensions) can pass an <code><a title="" href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile">nsIFile</a></code> object to the DOM <code>File</code> constructor to specify the file to reference.</li>
+ <li>Starting from Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5), you can use <code>new File</code> to create <code>File</code> objects from XPCOM component code instead of having to instantiate the <code><a title="" href="../../Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMFile.html">nsIDOMFile</a></code> object directly. The constructor takes, in contrast to <a title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system." href="Blob.html"><code>Blob</code></a>, as second argument the filename. The filename can be any String.
+  <pre class="syntaxbox">new File(
 &nbsp; Array parts,
 &nbsp; String filename, 
   BlobPropertyBag properties
 );</pre>
  </li>
- <li>The following non-standard properties and methods were removed in Gecko 7 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4): <a href="File/fileName.html" title="Returns the name of the file. For security reasons the path is excluded from this property."><code>File.fileName</code></a>, <a href="File/fileSize.html" title="Returns the size of a file in bytes."><code>File.fileSize</code></a>, <a href="File/getAsBinary.html" title="The getAsBinary method allows to access the file's data in raw binary format."><code>File.getAsBinary()</code></a>, <a href="File/getAsDataURL.html" title="The getAsDataURL provides a data: URL that encodes the entire contents of the referenced file."><code>File.getAsDataURL()</code></a>, <a href="File/getAsText.html" title="The getAsText method provides the file's data interpreted as text using a given encoding."><code>File.getAsText(string encoding)</code></a> (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=661876" class="external" title="FIXED: Kill obsolete nsIDOMFile properties/methods">bug&nbsp;661876</a>). Standard properties <a href="File/name.html" title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property."><code>File.name</code></a>, <a href="Blob/size.html" title="The Blob.size property returns the size in bytes of the Blob or a File."><code>Blob.size</code></a>, and methods on <a href="FileReader.html" title="The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read."><code>FileReader</code></a> should be used instead.</li>
+ <li>The following non-standard properties and methods were removed in Gecko 7 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4): <a title="Returns the name of the file. For security reasons the path is excluded from this property." href="File/fileName.html"><code>File.fileName</code></a>, <a title="Returns the size of a file in bytes." href="File/fileSize.html"><code>File.fileSize</code></a>, <a title="The getAsBinary method allows to access the file's data in raw binary format." href="File/getAsBinary.html"><code>File.getAsBinary()</code></a>, <a title="The getAsDataURL provides a data: URL that encodes the entire contents of the referenced file." href="File/getAsDataURL.html"><code>File.getAsDataURL()</code></a>, <a title="The getAsText method provides the file's data interpreted as text using a given encoding." href="File/getAsText.html"><code>File.getAsText(string encoding)</code></a> (<a title="FIXED: Kill obsolete nsIDOMFile properties/methods" href="https://bugzilla.mozilla.org/show_bug.cgi?id=661876" class="external">bug&nbsp;661876</a>). Standard properties <a title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property." href="File/name.html"><code>File.name</code></a>, <a title="The Blob.size property returns the size in bytes of the Blob or a File." href="Blob/size.html"><code>Blob.size</code></a>, and methods on <a title="[1] Prior to Gecko 2.0 beta 7 (Firefox 4.0 beta 7), all Blob parameters below were File parameters; this has since been updated to match the specification correctly.&nbsp;Prior to Gecko 13.0 (Firefox 13.0 / Thunderbird 13.0 / SeaMonkey 2.10) the FileReader.error property returned a FileError object. This interface has been removed and FileReader.error is now returning the DOMError object as defined in the latest FileAPI draft." href="FileReader.html"><code>FileReader</code></a> should be used instead.</li>
 </ul>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Using files from web applications</a></li>
- <li><a href="FileReader.html" title="The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read."><code>FileReader</code></a></li>
+ <li><a title="[1] Prior to Gecko 2.0 beta 7 (Firefox 4.0 beta 7), all Blob parameters below were File parameters; this has since been updated to match the specification correctly.&nbsp;Prior to Gecko 13.0 (Firefox 13.0 / Thunderbird 13.0 / SeaMonkey 2.10) the FileReader.error property returned a FileError object. This interface has been removed and FileReader.error is now returning the DOMError object as defined in the latest FileAPI draft." href="FileReader.html"><code>FileReader</code></a></li>
  <li><a href="../../Extensions/Using_the_DOM_File_API_in_chrome_code.html">Using the DOM File API in chrome code</a> (for privileged code running in Gecko, such as Firefox add-ons)</li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+File+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/File?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about File on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/File?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/File?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about File on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/File?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about File on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -740,11 +808,13 @@
       
         <li><a href="../../tag/API.html">API</a></li>
       
-        <li><a href="../../tag/DOM.html">DOM</a></li>
+        <li><a href="../../tag/File%20API.html">File API</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Files">Files</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Interface">Interface</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web">Web</a></li>
       
     </ul>
   </div>
@@ -752,13 +822,25 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/laenion">laenion</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/isonic">isonic</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/prozacchiwawa">prozacchiwawa</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bhofmann">bhofmann</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/raycohen">raycohen</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/bohwaz">bohwaz</a>, 
     
@@ -802,11 +884,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>,
-                      <time datetime="2015-12-10T02:20:56-08:00">Dec 10, 2015, 2:20:56 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-12-20T13:17:39.416602-08:00">Dec 20, 2016, 1:17:39 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -823,7 +942,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="File.html"><code>File</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/fileName.html" title="Returns the name of the file. For security reasons the path is excluded from this property."><code>File.fileName</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/fileSize.html" title="Returns the size of a file in bytes."><code>File.fileSize</code></a></li><li><a href="File/lastModifiedDate.html" title="Returns the last modified date of the file. Files without a known last modified date use the current date instead."><code>File.lastModifiedDate</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/mozFullPath.html" title=""><code>File.mozFullPath</code></a></li><li><a href="File/name.html" title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property."><code>File.name</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/getAsBinary.html" title="The getAsBinary method allows to access the file's data in raw binary format."><code>File.getAsBinary()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/getAsDataURL.html" title="The getAsDataURL provides a data: URL that encodes the entire contents of the referenced file."><code>File.getAsDataURL()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="File/getAsText.html" title="The getAsText method provides the file's data interpreted as text using a given encoding."><code>File.getAsText()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="Blob.html"><code>Blob</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="File.html"><code>File</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="Returns the name of the file. For security reasons the path is excluded from this property." href="File/fileName.html"><code>fileName</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="Returns the size of a file in bytes." href="File/fileSize.html"><code>fileSize</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The File.lastModifiedDate read-only property returns the last modified date of the file. Files without a known last modified date returns the current date ." href="File/lastModifiedDate.html"><code>lastModifiedDate</code></a></li><li><a title="" href="File/mozFullPath.html"><code>mozFullPath</code></a></li><li><a title="Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property." href="File/name.html"><code>name</code></a></li><li><a title="The File.webkitRelativePath is a read-only property that contains a DOMString which specifies the file's path relative to the directory selected by the user in an &lt;input&gt; element with its webkitdirectory attribute set." href="/en-US/docs/Web/API/File/webkitRelativePath"><code>webkitRelativePath</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The getAsBinary method allows to access the file's data in raw binary format." href="File/getAsBinary.html"><code>getAsBinary()</code></a></li><li><a title="The getAsDataURL provides a data: URL that encodes the entire contents of the referenced file." href="File/getAsDataURL.html"><code>getAsDataURL()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The getAsText method provides the file's data interpreted as text using a given encoding." href="File/getAsText.html"><code>getAsText()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="Blob.html"><code>Blob</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -847,12 +966,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -860,9 +979,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -871,30 +989,33 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/File" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/File" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/de/docs/Web/API/File">
-            Deutsch
+          <option title="German" value="/de/docs/Web/API/File">
+            Deutsch (de)
           </option>
-          <option value="/es/docs/Web/API/File">
-            Español
+          <option title="Spanish" value="/es/docs/Web/API/File">
+            Español (es)
           </option>
-          <option value="/fr/docs/Web/API/File">
-            Français
+          <option title="French" value="/fr/docs/Web/API/File">
+            Français (fr)
           </option>
-          <option value="/ja/docs/Web/API/File">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/File">
+            日本語 (ja)
           </option>
-          <option value="/pt-BR/docs/Web/API/File">
-            Português (do&nbsp;Brasil)
+          <option title="Portuguese (Brazilian)" value="/pt-BR/docs/Web/API/File">
+            Português (do&nbsp;Brasil) (pt-BR)
           </option>
-          <option value="/ru/docs/Web/API/File">
-            Русский
+          <option title="Russian" value="/ru/docs/Web/API/File">
+            Русский (ru)
           </option>
-          <option value="/zh-CN/docs/Web/API/File">
-            中文 (简体)
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/File">
+            中文 (简体) (zh-CN)
+          </option>
+          <option title="Chinese (Traditional)" value="/zh-TW/docs/Web/API/File">
+            正體中文 (繁體) (zh-TW)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -911,33 +1032,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:17:41 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:57:17 GMT -->
 </body></html>

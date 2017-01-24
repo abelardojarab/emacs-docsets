@@ -1,0 +1,650 @@
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout-->
+<!-- Mirrored from angular.io/docs/js/latest/styleguide.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Docs Style Guide</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular"/><meta property="og:image" content="../../../resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="name" content="Angular"/><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="image" content="../../../resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="../../../resources/images/icons/favicon.ico"/><link rel="stylesheet" href="../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="../../../../fonts.googleapis.com/css4765.css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="../../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="../../../resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="../../../resources/css/vendor/animate.css"/><link rel="stylesheet" href="../../../resources/css/main.css"/><!-- MOBILE ICONS -->
+<link rel="apple-touch-icon" sizes="57x57" href="../../../resources/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../../resources/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../resources/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../../resources/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../resources/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../../resources/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../../resources/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../../resources/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../resources/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://angular.io/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><nav data-swiftype-index="false" scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5"><h1><a href="https://angular.io/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="https://angular.io/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav><!-- Include this file ONLY when current.path[2] is defined--><nav data-swiftype-index="false" ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="sidenav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="sidenav-search st-input-wrapper"><div class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="text" placeholder="SEARCH DOCS..." class="st-default-search-input"/></div><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><ul class="sidenav-links"><li class="sidenav-section no-border"><a href="index.html" class="nav-title">Docs Home</a></li><!-- CORE DOCUMENTATION--><li class="sidenav-section-divider"><h3>Core Documentation</h3></li><li class="sidenav-section"><a href="quickstart.html" title="Get up and running with Angular" class="nav-title ">Quickstart</a></li><li class="sidenav-section"><a href="guide/index.html" title="How to read and use this documentation" class="nav-title is-parent ">Guide<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="guide/index.html" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="guide/architecture.html" title="The basic building blocks of Angular applications">2. Architecture</a></li><li class="nav-list-item "><a href="guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="guide/cheatsheet.html" title="Cheat Sheet">8. Cheat Sheet</a></li><li class="nav-list-item "><a href="guide/style-guide.html" title="Write Angular with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="guide/glossary.html" title="Brief definitions of the most important words in the Angular vocabulary">10. Glossary</a></li></ul></div></li><li class="sidenav-section no-border"><a href="api/index.html" title="API Reference" class="nav-title ">API Reference</a></li><!-- ADVANCED DOCUMENATION--><li class="sidenav-section-divider"><h3>Additional Documentation</h3></li><li class="sidenav-section"><a href="tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-parent ">Tutorial<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="tutorial/toh-pt6.html" title="We convert our service and components to use Angular's HTTP service">7. HTTP</a></li></ul></div></li><li class="sidenav-section"><a href="guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title is-parent ">Advanced<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="guide/browser-support.html" title="Browser support and polyfills guide.">Browser support</a></li><li class="nav-list-item "><a href="guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="guide/npm-packages.html" title="Recommended npm packages, and how to specify package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="guide/router.html" title="Discover the basics of screen navigation with the Angular router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li></ul></div></li><li class="sidenav-section"><a href="cookbook/index.html" title="A collection of recipes for common Angular application scenarios" class="nav-title is-parent ">Cookbook<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="cookbook/index.html" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="cookbook/dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Forms</a></li><li class="nav-list-item "><a href="cookbook/form-validation.html" title="Validate user's form entries">Form Validation</a></li><li class="nav-list-item "><a href="cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="cookbook/ts-to-js.html" title="Convert Angular TypeScript examples into ES6 and ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="cookbook/visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></li></ul><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular for JavaScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><ul ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><li><a href="https://angular.io/docs/ts/latest/styleguide.html" md-button>Angular for TypeScript </a></li><li><a href="styleguide.html" md-button>Angular for JavaScript </a></li><li><a href="https://angular.io/docs/dart/latest/styleguide.html" md-button>Angular for Dart </a></li></ul></nav></nav><script>// Could put in appCtrl but only needed here and clear here
+(function scrollToSelectedLink() {
+  var sideNav = document.getElementsByClassName('sidenav')[0];
+  var link = sideNav.getElementsByClassName('is-selected')[0];
+  if(link && link.offsetTop > window.innerHeight){
+    sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
+    //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
+  }
+})()</script><header class="hero background-sky"><h1 class="hero-title ">Docs Style Guide </h1><div class="clear"></div><h2 class="hero-subtitle">JavaScript</h2></header><div class="banner"><p class="text-body">Design & Layout Patterns For Documentation</p></div><article class="l-content-small grid-fluid docs-content"><div class="grid-fluid"><div class="c10"><div id="sg-layouts" class="showcase shadow-1"><header class="showcase-header"><h2>Basic Layouts</h2><p>You will use the following layouts throughout your documentation
+to specify sections and sub-sections of content.
+</p></header><div class="showcase-content"><div class="l-main-section"><h2>Main Section Title</h2><p>Main section content...</p><code-example language="html" format="linenums">.l-main-section
+  h2 Section Title
+  p section content...</code-example><div class="l-sub-section"><h3>Sub Section Title</h3><p>sub section content... This content is related to the main section
+content and <strong>falls within</strong> the main section.
+</p><code-example language="html" format="linenums">.l-sub-section
+  h3 Sub Section Title
+  p sub section content...</code-example></div></div></div></div><script>function why(id, backTo) {
+  var id = "#"+id;
+  var el = document.querySelector(id);
+  el.hidden=el.hidden=!el.hidden;
+
+  if (el.hidden && backTo){
+    // the next line is required to work around a bug in WebKit (Chrome / Safari)
+    location.href = "#";
+    location.href =  "#" + backTo;
+  }
+}</script><script>function verbose(isVerbose) {
+  isVerbose = !! isVerbose;
+  var el = document.querySelector('button.verbose.off');
+  el.style.display = isVerbose ? 'block' : 'none';
+  var el = document.querySelector('button.verbose.on');
+  el.style.display = isVerbose ? 'none' : 'block';
+
+  CCSStylesheetRuleStyle('main','.l-verbose-section', 'display',
+    isVerbose ? 'block' : 'none');
+}
+</script><script>function CCSStylesheetRuleStyle(stylesheet, selectorText, style, value){
+  /* returns the value of the element style of the rule in the stylesheet
+  *  If no value is given, reads the value
+  *  If value is given, the value is changed and returned
+  *  If '' (empty string) is given, erases the value.
+  *  The browser will apply the default one
+  *
+  * string stylesheet: part of the .css name to be recognized, e.g. 'default'
+  * string selectorText: css selector, e.g. '#myId', '.myClass', 'thead td'
+  * string style: camelCase element style, e.g. 'fontSize'
+  * string value optional : the new value
+  */
+  var CCSstyle = undefined, rules, sheet;
+  for(var m in document.styleSheets){
+    sheet = document.styleSheets[m];
+    if(sheet.href && sheet.href.indexOf(stylesheet) != -1){
+    rules = sheet[document.all ? 'rules' : 'cssRules'];
+    for(var n in rules){
+      console.log(rules[n].selectorText);
+      if(rules[n].selectorText == selectorText){
+        CCSstyle = rules[n].style;
+        break;
+      }
+    }
+    break;
+    }
+  }
+  if(value == undefined)
+    return CCSstyle[style]
+  else
+    return CCSstyle[style] = value
+}
+</script><div id="sg-code" class="showcase shadow-1"><header class="showcase-header"><h2>Code Examples</h2><p>Below are some examples of how you can add/customize code examples in a page.</p></header><div class="showcase-content"><h3 id="including-a-code-example-from-the-_examples-folder">Including a code example from the <code>_examples</code> folder</h3>
+<p>One of the design goals for this documentation was that any code samples that appear within the documentation be &#39;testable&#39;.
+In practice this means that a set of standalone testable examples exist somewhere in the same repository as the rest
+of the documentation. These examples will each typically consist of a collection of html, javascript and css files.</p>
+<p>Clearly there also needs to be some mechanism for including fragments of these files into the jade/harp generated
+html. By convention all of the &#39;testable&#39; examples within this repository should be created within the <code>docs/_examples</code> folder.</p>
+<p>To include an example from somewhere in the <code>doc/_examples</code> folder you can use the <code>makeExample</code> mixin.
+This mixin along with the <code>makeTabs</code> mixin both require that the &#39;included&#39; file be marked
+up with special comment markers. This markup will be described a bit later.</p>
+<p>In addition there are several custom gulp tasks that must be run before any of the edits described below will actually appear
+in the generated documentation.  These gulp tasks are documented elsewhere.</p>
+<p>In order to use the <code>makeExample</code> or <code>makeTabs</code> mixins each page that references the mixins must include the &#39;_utilFns.jade&#39;
+file on the current page.  This is usually accomplished simply by adding a path to this file at the top of any
+page that needs either of these mixins.</p>
+<code-example language="js">include ../_util-fns
+</code-example><p>The syntax for the <code>makeExample</code> mixin is:</p>
+<h4 id="-makeexample-filepath-region-title-stylepattern-">+makeExample(filePath, region, title, stylePattern)</h4>
+<ul>
+<li><em>filePath:</em> path to the example file under the &#39;_examples&#39; folder</li>
+<li><em>region:</em> (optional or null) region from the example file to display</li>
+<li><em>title:</em> (optional or null) title displayed above the included text.</li>
+<li><em>stylePattern:</em> (optional or null) allows additional styling via regular expression ( described later).</li>
+</ul>
+<h4 id="example-">Example:</h4>
+<code-example format="linenums" language="js">+makeExample('styleguide/js/index.html', null, 'index.html')
+</code-example><p>This will read the <em>_examples/styleguide/js/index.html</em> file and include it
+with the heading &#39;index.html&#39;. Note that the file will be properly escaped and
+color coded according to the extension on the file ( html in this case).</p>
+<div class="code-example"><header><h4>index.html</h4></header><code-example language="html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Documentation Style&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;script src=&quot;node_modules/core-js/client/shim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/zone.js/dist/zone.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/reflect-metadata/Reflect.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/rxjs/bundles/Rx.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&#39;app.js&#39;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;my-app&gt;foo2&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-example></div><p>The second parameter with a value of &#39;null&#39; will be described later in this document.</p>
+<p>There is a similar <code>makeTabs</code> mixin that provides the same service but for multiple examples
+within a tabbed interface.</p>
+<h4 id="-maketabs-filepaths-regions-titles-stylepatterns-">+makeTabs(filePaths, regions, titles, stylePatterns)</h4>
+<ul>
+<li><em>filePaths:</em> a comma delimited string of filePaths to example files under the &#39;_examples&#39; folder</li>
+<li><em>regions:</em> (optional or null) region from the example file to display</li>
+<li><em>titles:</em> (optional or null) a comma delimited string of titles corresponding to each of the filePaths above.</li>
+<li><em>stylePatterns:</em> (optional or null) allows additional styling via regular expression( described later).</li>
+</ul>
+<h4 id="example-">Example:</h4>
+<code-example format="linenums" language="js">+makeTabs('styleguide/js/index.html, styleguide/js/spec.js', null, 'index.html,unit test')
+</code-example><p>This will create two tabs, each with its own title and appropriately color coded.</p>
+<code-tabs><code-pane language="html" name="index.html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Documentation Style&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;script src=&quot;node_modules/core-js/client/shim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/zone.js/dist/zone.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/reflect-metadata/Reflect.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/rxjs/bundles/Rx.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&#39;app.js&#39;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;my-app&gt;foo2&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-pane><code-pane language="js" name="unit test" format="linenums">describe(&quot;Jasmine sample test&quot;, function() {
+
+    it(&quot;1+1 should be 2&quot;, function() {
+        var result = 1 + 1;
+        expect(result).toBe(2);
+    });
+});
+</code-pane></code-tabs><h3 id="marking-up-an-example-file-for-use-by-the-makeexample-and-maketabs-mixins">Marking up an example file for use by the <code>makeExample</code> and <code>makeTabs</code> mixins</h3>
+<p>At a minimum, marking up an example file simply consists of adding a single comment line to the top of the file
+containing the string <code>#docregion</code>.  Following this a second string that is the &#39;name&#39; of the region is also allowed
+but not required.  A file may have any number of <code>#docregion</code> comments with the only requirement being that the names
+of each region within a single file be unique.  This also means that there can only be one <em>blank</em> docregion.</p>
+<h4 id="example-of-a-simple-docregion">Example of a simple #docregion</h4>
+<code-example format="linenums" language="js">// #docregion
+describe("Jasmine sample test", function() {
+          it("1+1 should be 2", function() {
+    var result = 1 + 1;
+    expect(result).toBe(2);
+  });
+});
+</code-example><p>If a file only has a single <code>#docregion</code> then the entire file AFTER the <code>#docregion</code> comment is available for inclusion
+via mixin.  Portions of the file can be indicated by surrounding an area of the file with
+<code>#docregion</code> and an <code>#enddocregion</code> tags. These regions, each with its own name, may be nested to any level and any regions that are not &#39;ended&#39; explicitly
+are assumed to be ended automatically at the bottom of the file. Regions may either be ended/closed by name or if the name is left blank then the most recent
+unclosed docregion defined earlier will be closed. Any individual region within the file is accessible
+to the <code>makeExample</code> and <code>makeTabs</code> mixins.</p>
+<h4 id="example-of-a-nested-docregion">Example of a nested #docregion</h4>
+<code-example format="linenums" language="js" escape="html">(function() {
+// #docregion
+// #docregion class-w-annotations
+var AppComponent = ng
+    // #docregion component
+    .Component({
+      selector: 'my-app',
+    // #enddocregion component
+    // #docregion view
+      template: '<h1 id="output">My First Angular App</h1>'
+    })
+    // #enddocregion view
+    // #docregion class
+    .Class({
+      constructor: function () { }
+    });
+    // #enddocregion
+// #enddocregion
+</code-example><p>Multiple <code>#docregion</code> tags may be defined on a single line as shown below.  In addition, anytime a file contains multiple
+<code>#docregion</code> tags with the same name they will automatically be combined. Each of the individually tagged sections of the combined document
+will be separated from one another by a comment consisting of &#39;. . .&#39;.  This default separator, known
+as &#39;plaster&#39; can be overridden anywhere within the affected file via a <code>#docplaster</code> comment as shown below.  This example creates
+a separator that consists of <code>/* more code here */</code> in the output file.</p>
+<code-example format="linenums" language="js" escape="html">// #docplaster more code here
+
+// #docregion import,twoparts
+import { Component } from '@angular/core';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+
+// #enddocregion twoparts,  import
+@Component({
+  selector: 'my-app',
+  template: '<h1 id="output">My first Angular App</h1>'
+})
+class AppComponent {
+}
+
+// #docregion bootstrap, twoparts
+bootstrap(AppComponent);
+// #enddocregion twoparts
+doSomethingInteresting();
+// #enddocregion
+</code-example><p>HTML files can also contain #docregion comments:</p>
+<code-example format="linenums" language="html">&lt;!-- #docregion -->
+...
+&lt;script src="app.js">&lt;/script>
+...
+</code-example><p>as can CSS files:</p>
+<code-example format="linenums" language="css">/* #docregion center-global */
+.center-global {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+</code-example><h3 id="including-a-named-docregion-via-the-makeexample-or-maketabs-mixins-">Including a named #docregion via the makeExample or makeTabs mixins.</h3>
+<p>In order to include just a portion of an example file that has been marked up with a &#39;named&#39; <code>#docregion</code>
+you will pass the name of the desired region as the 2nd parameter to the makeExample call.</p>
+<h4 id="example">Example</h4>
+<code-example format="linenums" language="js">+makeExample('styleguide/js/app.js', 'class-w-annotations', "Extracted region")
+</code-example><p>is a request to include just the <code>class-w-annotations</code> region from the <code>app.js</code> file in the <code>_examples/styleguide</code>
+folder and results in the following:</p>
+<div class="code-example"><header><h4>Extracted region</h4></header><code-example language="js" format="linenums">app.AppComponent =
+    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1 id=&quot;output&quot;&gt;My First Angular App&lt;/h1&gt;&#39;
+    })
+    .Class({
+      constructor: function () { }
+    });
+</code-example></div><h3 id="additional-styling">Additional styling</h3>
+<p>In some cases you may want to add additional styling to an external file after it had been included in the documentation.
+This styling is accomplished via the <code>stylePattern</code> and <code>stylePatterns</code> parameters in the <code>makeExample</code> and <code>makeTabs</code>
+mixins. A <code>stylePattern</code> is actually just a javascript object where the keys are the names of styles to be applied to
+some portion of the included text as defined by a regular expression ( or expressions).  These regular expressions are the
+value of each key. Each regular expression MUST specify at least a single capture group; the contents of the capture
+group being what the style will actually apply to, not the entire regular expression.  The idea here is that you may
+need to include a contextual match in a regular expression but only want your styling to be applied to a subset
+of the entire regular expression.</p>
+<p>Current there are only three types of highlight styles available: Outlined (otl), Pink (pnk), and Black (blk), however the
+mechanism described above will work with any style defined on the page.</p>
+<h4 id="example">Example</h4>
+<code-example format="linenums" language="js" escape="none">+makeExample('styleguide/js/index.html', null, 'index.html', {pnk: /script (src=.*&ampquot;)/g})
+</code-example><p>Which will mark all of the quoted contents of each <code>script</code> tag within the index.html file in pink.</p>
+<div class="alert is-important">Note that expression replacement occurs AFTER the fragment has been included and html escaped.
+This means that your regular expression must use escaped html text; i.e. the '&ampquot' in the regex above.
+</div><div class="code-example"><header><h4>index.html</h4></header><code-example language="html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Documentation Style&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/core-js/client/shim.min.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/zone.js/dist/zone.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/reflect-metadata/Reflect.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/rxjs/bundles/Rx.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script src=&#39;app.js&#39;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;my-app&gt;foo2&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-example></div><p>A more complicated example might be:</p>
+<code-example format="linenums" language="js">- var stylePattern = { pnk: /script (src=.*&ampquot;)/g, otl: /(\S*my-app.*$)/m };
++makeExample('styleguide/js/index.html', null, 'index.html', stylePattern )
+</code-example><p>Which applies multiple styles and uses an intermediate javascript object as opposed to a literal.</p>
+<div class="code-example"><header><h4>index.html</h4></header><code-example language="html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Documentation Style&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/core-js/client/shim.min.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/zone.js/dist/zone.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/reflect-metadata/Reflect.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/rxjs/bundles/Rx.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script src=&#39;app.js&#39;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    <span class="otl">&lt;my-app&gt;foo2&lt;/my-app&gt;</span>
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-example></div><p><code>makeTabs</code> support for <code>stylePatterns</code> is slightly different from the <code>makeExample</code> mixin in that you can also
+pass in an array of stylePattern objects where each is paired with its corresponding &#39;tab&#39;. If only a single stylePattern
+object is passed in then it is assumed to apply to all of the tabs.</p>
+<code-example format="linenums" language="js">-var stylePatterns = [{ pnk: /script (src=.*&ampquot;)/g }, {pnk: /(result)/ }];
++makeTabs('styleguide/js/index.html, styleguide/js/spec.js', null, 'index.html,unit test', stylePatterns)
+</code-example><code-tabs><code-pane language="html" name="index.html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Documentation Style&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/core-js/client/shim.min.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/zone.js/dist/zone.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/reflect-metadata/Reflect.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script <span class="pnk">src=&quot;node_modules/rxjs/bundles/Rx.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script <span class="pnk">src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;</span>&gt;&lt;/script&gt;
+
+    &lt;script src=&#39;app.js&#39;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;my-app&gt;foo2&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-pane><code-pane language="js" name="unit test" format="linenums">describe(&quot;Jasmine sample test&quot;, function() {
+
+    it(&quot;1+1 should be 2&quot;, function() {
+        var <span class="pnk">result</span> = 1 + 1;
+        expect(result).toBe(2);
+    });
+});
+</code-pane></code-tabs><h3 id="including-a-json-file-or-just-parts-of-one">Including a JSON file or just parts of one</h3>
+<p>To include an &#39;.json&#39; file from somewhere in the <code>doc\_examples</code> folder you can use the <code>makeJson</code> mixin. The <code>makeExample</code>
+and <code>makeTabs</code> mixins cannot be used for this purpose because there is no standard &#39;comment&#39; marker in a json file.</p>
+<p>The <code>makeJson</code> mixin does however provide a similar capability to selectively pick which portions of the &#39;.json&#39; file
+to display.</p>
+<p>The syntax for the <code>makeJson</code> mixin is:</p>
+<h4 id="-makejson-filepath-jsonconfig-title-stylepattern-">+makeJson(filePath, jsonConfig, title, stylePattern)</h4>
+<ul>
+<li><em>filePath:</em> path to the example file under the &#39;_examples&#39; folder</li>
+<li><em>jsonConfig:</em> (optional) an object that defines which portions of the .json file to select for display.<ul>
+<li><em>rootPath:</em> (optional default=null) a json property path at which the &#39;paths&#39; parameter below should start.</li>
+<li><em>paths:</em> a comma delimited list of property paths for those elements to be selected.</li>
+<li><em>space:</em> (optional default=&quot;  &quot; [2 spaces]) a String or Number object that&#39;s used to insert white space into the output JSON</li>
+</ul>
+</li>
+<li><em>title:</em> (optional) title displayed above the included text.</li>
+<li><em>stylePattern:</em> (optional) allows additional styling via regular expression ( described above).</li>
+</ul>
+<h4 id="example-">Example:</h4>
+<code-example format="" language="js">+makeJson('styleguide/package.1.json', null, "Entire package.json file")
+</code-example><div class="code-example"><header><h4>Entire package.json file</h4></header><code-example language="json" format="linenums">{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "systemjs": "0.19.6",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0",
+    "lite-server": "^1.3.1",
+    "typescript": "^1.7.3"
+  }
+}
+</code-example></div><p>A subset of the &#39;.json&#39; file can also be selected.</p>
+<code-example format="" language="js">+makeJson('styleguide/package.1.json', { paths: 'version, scripts.tsc, scripts.start '}, "Selected parts of the package.json file"  )
+</code-example><div class="code-example"><header><h4>Selected parts of the package.json file</h4></header><code-example language="json" format="linenums">{
+  "version": "1.0.0",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+  }
+}</code-example></div><p>Styling selected portions of the json is also supported.</p>
+<code-example format="" language="js">+makeJson('styleguide/package.1.json', {paths: 'dependencies'}, "package.json dependencies", { pnk: [/(\S*zone.*)/, /(\Score-js.*)/, /(\Ssystem.*)/ ]})
+</code-example><div class="code-example"><header><h4>package.json dependencies</h4></header><code-example language="json" format="linenums">{
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    <span class="pnk">"systemjs": "0.19.6",</span>
+    <span class="pnk">"core-js": "^2.4.0",</span>
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    <span class="pnk">"zone.js": "0.5.10"</span>
+  }
+}</code-example></div><p>As well as styling across multiple lines.</p>
+<code-example format="" language="js">-  var styles = { pnk: /(^.*dependencies[\s\S]*  \})/gm };
++makeJson('styleguide/package.1.json', {paths: 'name, version, dependencies '}, "Foo", styles )
+</code-example><div class="code-example"><header><h4>Foo</h4></header><code-example language="json" format="linenums">{
+  "name": "angular2-quickstart",
+  "version": "1.0.0",
+<span class="pnk">  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "systemjs": "0.19.6",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.10"
+  }</span>
+}</code-example></div><h3 id="inline-code-and-code-examples-provided-directly-i-e-not-from-an-example-file-">Inline code and code examples provided directly i.e. not from an example file.</h3>
+<p>The <code>makeExample</code> and <code>makeTabs</code> mixins are both both built on top of a custom jade &#39;style&#39;; <code>code-example</code>.
+In those cases where you want to include code directly inline i.e. not from some external file; you can use
+this style.
+This style has several named attributes</p>
+<h4 id="code-example-attributes">code-example attributes</h4>
+<ul>
+<li><em>name:</em> Name displayed in Tab (required for tabs)</li>
+<li><em>language:</em> javascript, html, etc.</li>
+<li><em>escape:</em> html (escapes html, woot!)</li>
+<li><em>format:</em> linenums (or linenums:4 specify starting line)</li>
+</ul>
+<h4 id="example">Example</h4>
+<code-example format="linenums" language="html">code-example(format="linenums" language="javascript").
+  //SOME CODE
+
+</code-example><h3>Specify starting line number</h3><code-example language="javascript" format="linenums:4">code-example(language="html" format="linenums:4").
+  var title = "This starts on line four";
+
+</code-example><h3>Specify a language</h3><p>Prettify makes a best effort to guess the language but
+works best with C-like and HTML-like languages. For
+others, there are special language handlers that are
+chosen based on language hints. Add a class that matches
+your desired language (example below uses <strong>.lang-html</strong>)
+</p><code-example language="html" format="linenums">&lt;h1&gt;Title&lt;/h1&gt;
+&lt;p&gt;This is some copy...&lt;/p&gt;
+
+</code-example><h3>Code Highlighting</h3><p>There are three types of highlights available
+<strong>Outlined</strong>, <strong>Pink</strong>, and
+<strong>Black</strong>. You can see examples below and
+the class names needed for each type.
+</p><code-example format="linenums">// Pink Background Version
+// class="pnk"
+var elephants = "The <span class="pnk">pink</span> elephants were marching...";
+
+// Black Background Version
+// class="blk"
+var night = "The night was pitch <span class="blk">black</span>.";
+
+// Outlined Version
+// class="otl"
+var match = "The <span class="otl">bird</span> ate <span class="otl">bird</span> seed near the <span class="otl">bird</span> bath ";
+</code-example><h3>Code Tabs</h3><p>Code Tabs are a great way to show different languages and versions
+of a particular piece of code. When using these tabs make sure the
+<strong>content is always related</strong>.
+</p><code-tabs><code-pane language="javascript" format="linenums" name="ES5">// ES5
+var hello = 'blah';
+</code-pane><code-pane language="javascript" format="linenums" name="TypeScript">// TypeScript
+var hello = 'blah';
+</code-pane></code-tabs><p>To create code tabs simply use the directives below</p><code-example format="linenums">code-tabs
+  code-pane(format="linenums" name="Tab 1").
+    // TAB 1 CONTENT
+  code-pane(format="linenums" name="Tab 2").
+    // TAB 2 CONTENT
+</code-example><h3 id="combining-makeexample-maketabs-mixins-with-code-example-style-attributes">Combining makeExample, makeTabs mixins with code-example style attributes</h3>
+<p>As mentioned above the <code>makeExample</code> and <code>makeTabs</code> mixins are built on top of the <code>code-example</code> style. By default
+the mixins automatically determine a language based on the example file&#39;s extensions and always include line numbers.</p>
+<p>You can override this behavior by including code-example attributes within parentheses after the mixin parameters.</p>
+<h4 id="example">Example</h4>
+<code-example>+makeExample('styleguide/js/app.js', "class-w-annotations")(format="linenums:15")
+</code-example><p>Starts the numbering of the example at line 15.</p>
+<div class="code-example"><code-example language="js" format="linenums:15">app.AppComponent =
+    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1 id=&quot;output&quot;&gt;My First Angular App&lt;/h1&gt;&#39;
+    })
+    .Class({
+      constructor: function () { }
+    });
+</code-example></div><p>Or to suppress line numbering completely you can use</p>
+<code-example>+makeExample('styleguide/js/app.js', 'class-w-annotations')(format=".")
+</code-example><div class="code-example"><code-example language="js" format="">app.AppComponent =
+    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1 id=&quot;output&quot;&gt;My First Angular App&lt;/h1&gt;&#39;
+    })
+    .Class({
+      constructor: function () { }
+    });
+</code-example></div><h3 id="code-examples-in-angular-angular-source-code">Code examples in angular/angular source code</h3>
+<p>References to embedded example code in the angular/angular source make use of the same mixins as defined above, but with a slightly different
+syntax. Inline tags in source code comments like {@example ...} and {@exampleTabs ...} actually generate &#39;makeExample&#39; and &#39;makeTabs&#39; mixins
+calls in the documentation. The order of &#39;arguments&#39; in the inline tags is also the same as that of the mixins defined above.  However, optional
+parameters can also be specified via name (optionally prefixed with a &#39;-&#39;), as will be shown by example below. Parameters that include spaces should
+be enclosed in either single or double quotes. This syntax is intended to mirror standard command line argument patterns.</p>
+<div class="alert is-important">The '@example' and '@exampleTabs' inline tags MUST always appear at the beginning of a line.
+
+Example files referenced by inline tags are all assumed to be in the 'modules/@angular' folder in the angular/angular repo.
+</div><h4 id="-example-inline-tag-parameters">@example inline tag parameters</h4>
+<ul>
+<li><em>filePath:</em> path to the example file under the &#39;_examples&#39; folder</li>
+<li><em>region:</em> (optional or null) region from the example file to display</li>
+<li><em>title:</em> (optional or null) title displayed above the included text.</li>
+<li><em>stylePattern:</em> (optional or null) allows additional styling via regular expression ( described later).</li>
+</ul>
+<h4 id="examples">Examples</h4>
+<code-example format="linenums" language="js">/**
+ * An example with no region
+ * {@example core/directives/ng_if_spec.ts -title='Whole other component' }
+ *
+ * An example with a region and a title both specified by name
+ * {@example core/directives/ng_if_spec.ts region='ng-if' title='Partial' }
+ *
+ * Another example with a region and a title with only the title specified explicitly.
+ * {@example core/directives/ng_if_spec.ts foo title='Foo' }
+**/
+</code-example><h4 id="-exampletabs-inline-tag-parameters">@exampleTabs inline tag parameters</h4>
+<ul>
+<li><em>filePaths:</em> a comma delimited string of filePaths to example files under the &#39;_examples&#39; folder</li>
+<li><em>regions:</em> (optional or null) region from the example file to display</li>
+<li><em>titles:</em> (optional or null) a comma delimited string of titles corresponding to each of the filePaths above.</li>
+<li><em>stylePatterns:</em> (optional or null) allows additional styling via regular expression( described later).</li>
+</ul>
+<h4 id="examples">Examples</h4>
+<code-example format="linenums" language="js">/**
+ * An example with multiple tabs each with its own region and title.
+ * {@exampleTabs core/directives/test1_spec.ts,core/directives/test2_spec.ts regions='aaa,bbb,' -titles='Test 1,Test 2' }
+ *
+**/
+
+</code-example><h3 id="cross-references-to-developer-guide-pages-in-angular-angular-source-comments-">Cross references to Developer guide pages in angular/angular source comments.</h3>
+<p>The &#39;{@linkDevGuide ... }&#39; inline tag is intended to be used to create links from api documentation to dev guide
+documentation.</p>
+<h4 id="-linkdevguide-inline-tag-parameters">@linkDevGuide inline tag parameters</h4>
+<ul>
+<li><em>filePath:</em> a filePath that points to a jade page in the DevGuide without the .jade extension ( under public/docs ).</li>
+<li><em>title:</em> The title of link. If the title is omitted an attempt will be made to determine the title of the jade page
+being pointed to. If not found the then title will simply be the link.<h4 id="examples">Examples</h4>
+</li>
+</ul>
+<code-example format="linenums" language="js">/**
+ * An link to the Developer guide example with a link title
+ * This can appear anywhere in a comment line: {@linkDevGuide /js/latest/guide/gettingStarted 'Getting Started' }
+ * and the same link can also be expressed with an explicit 'title' param
+ * {@linkDevGuide /js/latest/guide/gettingStarted title='Getting Started' }
+ * Or... an attempt will be made to infer the title if it is omitted.
+ * {@linkDevGuide /js/latest/guide/gettingStarted }
+**/</code-example></div></div><div id="sg-alerts" class="showcase shadow-1"><header class="showcase-header"><h2>Alerts</h2><p>Please use alerts sparingly throughout the docs.
+They are meant to draw attention on important occasions.
+Alerts should not be used for multi-line content (user callouts insteads) or stacked
+on top of each other.
+</p></header><div class="showcase-content"><div class="l-sub-section"><h3>Adding an alert</h3><div class="alert is-critical">A very <strong>critical</strong> alert</div><div class="alert is-important">A very <strong>important</strong> alert</div><div class="alert is-helpful">A very <strong>helpful</strong> alert</div><pre class="prettyprint linenums"><code>.alert.is-critical A very <strong>critical</strong> alert
+.alert.is-important A very <strong>important</strong> alert
+.alert.is-helpful A very <strong>helpful</strong> alert</code></pre></div></div></div><div id="sg-callouts" class="showcase shadow-1"><header class="showcase-header"><h2>Callouts</h2><p>Please use callouts sparingly throughout the docs.
+Callouts (like alerts) are meant to draw attention on important occasions.
+Unlike alerts, callouts are designed to display multi-line content.
+</p></header><div class="showcase-content"><div class="l-sub-section"><h3>Adding a Callout</h3><div class="callout is-critical"><header>A Critical Title</header><p>Pitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix</p></div><div class="callout is-important"><header>A Very Important Title</header><p>A vePitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix</p></div><div class="callout is-helpful"><header>A Very Helpful Title</header><p>Pitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix
+</p></div><pre class="prettyprint linenums lang-html"><code>.callout.is-critical
+  header A Critical Title
+  p Pitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix
+
+.callout.is-important
+  header A Very Important Title
+  p A vePitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix
+
+.callout.is-helpful
+  header A Very Helpful Title
+  p Pitchfork hoodie semiotics, roof party pop-up paleo messenger bag cred Carles tousled Truffaut yr. Semiotics viral freegan VHS, Shoreditch disrupt McSweeney's. Intelligentsia kale chips Vice four dollar toast, Schlitz crucifix</code></pre></div></div></div><div id="sg-tables" class="showcase shadow-1"><header class="showcase-header"><h2>Tables</h2><p>Tables can be used to present tabular data as it relates
+to each other.
+</p></header><div class="showcase-content"><div class="l-sub-section"><h3>Adding an table</h3><table><tr><th>Framework</th><th>Task</th><th>Speed</th></tr><tr><td>Angular 1.3</td><td>Routing</td><td>fast</td></tr><tr><td>Angular 1.4</td><td>Routing</td><td>faster</td></tr><tr><td>Angular 2</td><td>Routing</td><td>fastest :)</td></tr></table><pre class="prettyprint linenums lang-html"><code>table
+  tr
+    th Framework
+    th Task
+    th Speed
+  tr
+    td Angular 1.3
+    td Routing
+    td fast</code></pre></div></div></div><div id="sg-aside" class="showcase shadow-1"><header class="showcase-header"><h2>Asides</h2><p>You this for content that is related in a tangential way but
+not critical to learning, it can be ignored. The paragraph
+that includes this element should always surround it with text.
+</p></header><div class="showcase-content"><div class="l-sub-section"><h3>Adding an aside</h3><aside class="is-right">Did you know that hipsum is a replacement for Lorem Ipsum? To find out more visit <a href="http://hipsum.co/">hipsum.co</a></aside><p>Etsy artisan Thundercats, authentic sustainable bitters wolf roof party meditation 90's asymmetrical XOXO hoodie. Twee umami cray iPhone. Chillwave shabby chic tilde occupy sriracha squid Brooklyn street art. Selvage heirloom kogi American Apparel bicycle rights. Carles Etsy Truffaut mlkshk trust fund. Jean shorts fashion axe Williamsburg wolf cardigan beard, twee blog locavore organic. Cred skateboard dreamcatcher, taxidermy Bushwick actually aesthetic normcore fanny pack.
+
+
+</p><pre class="prettyprint linenums lang-html"><code>aside.is-right Did you know that hipsum is a replacement for Lorem Ipsum? To find out more visit <a href="http://hipsum.co/">hipsum.co</a>
+
+p.
+  Etsy artisan Thundercats, authentic sustainable bitters
+  wolf roof party meditation 90's asymmetrical XOXO hoodie.
+  Twee umami cray iPhone. Chillwave shabby chic tilde
+  occupy sriracha squid Brooklyn street art.</code></pre></div></div></div><div id="sg-images" class="showcase shadow-1"><header class="showcase-header"><h2>Images</h2><p>To maintain visual consistency across documentation chapters, please follow the best
+practices for authors outlined in the <a href="https://angular.io/docs/ImageGuide.pdf" target="_blank">Image
+Guide</a>.</p><p>The browser background template used for outlining screenshots is <a href="../../../resources/images/backgrounds/browser-background-template.png" target="_blank">here</a>.</p></header></div></div></div><!--include _jump-nav--></article><div data-swiftype-index="false" class="main-footer"><nav class="background-midnight grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="https://angular.io/about/">About</a></li><li><a href="https://angular.io/resources/#Education">Books & Training</a></li><li><a href="https://angular.io/resources/">Tools & Libraries</a></li><li><a href="https://angular.io/resources/">Community</a></li><li><a href="https://angular.io/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="https://angular.io/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="https://angular.io/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-midnight"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="https://angular.io/license">MIT-style License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="styleguide.html" title="Style Guide" class="styleguide-trigger"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="../../../resources/js/vendor/prettify.js"></script><script src="../../../resources/js/vendor/lang-basic.js"></script><script src="../../../resources/js/vendor/lang-dart.js"></script><script src="../../../resources/js/vendor/lodash.js"></script><script src="../../../resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-animate.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-aria.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="../../../../cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="../../../../cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="../../../resources/js/site.js"></script><script src="../../../resources/js/util.js"></script><script src="../../../resources/js/controllers/app-controller.js"></script><script src="../../../resources/js/controllers/resources-controller.js"></script><script src="../../../resources/js/directives/cheatsheet.js"></script><script src="../../../resources/js/directives/api-list.js"></script><script src="../../../resources/js/directives/bio.js"></script><script src="../../../resources/js/directives/bold.js"></script><script src="../../../resources/js/directives/announcement-bar.js"></script><script src="../../../resources/js/directives/code.js"></script><script src="../../../resources/js/directives/copy.js"></script><script src="../../../resources/js/directives/code-tabs.js"></script><script src="../../../resources/js/directives/code-pane.js"></script><script src="../../../resources/js/directives/code-example.js"></script><script src="../../../resources/js/directives/if-docs.js"></script><script src="../../../resources/js/directives/live-example.js"></script><script src="../../../resources/js/directives/ngio-ex-path.js"></script><script src="../../../resources/js/directives/scroll-y-offset-element.js"></script><script>window.onload = function() { setTimeout(function() {document.body.className = document.body.className+" dash-loaded"; if(location.hash) { setTimeout(function() {document.getElementsByName(location.hash.substring(1))[0].scrollIntoView()}, 1); }}, 10);  }</script></body>
+<!-- Mirrored from angular.io/docs/js/latest/styleguide.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:20 GMT -->
+</html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CssRule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:26:59 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CssRule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:08:40 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -72,6 +71,8 @@
     
       <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/CSSRule" title="cssRule">
     
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/CSSRule" title="CSSRule">
+    
       <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSRule" title="CSSRule">
     
   
@@ -82,10 +83,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule">
   <meta name="twitter:title" content="CSSRule">
   
-  <meta property="og:description" content="An object implementing the CSSRule DOM interface represents a single CSS at-rule. References to a CSSRule -implementing object may be obtained by looking at a CSS style sheet's cssRules list.">
-  <meta name="description" content="An object implementing the CSSRule DOM interface represents a single CSS at-rule. References to a CSSRule -implementing object may be obtained by looking at a CSS style sheet's cssRules list.">
-  <meta name="twitter:description" content="An object implementing the CSSRule DOM interface represents a single CSS at-rule. References to a CSSRule -implementing object may be obtained by looking at a CSS style sheet's cssRules list.">
+  <meta property="og:description" content="The CSSRule interface represents a single CSS rule. There are several types of rules, listed in the Type constants section below.">
+  <meta name="description" content="The CSSRule interface represents a single CSS rule. There are several types of rules, listed in the Type constants section below.">
+  <meta name="twitter:description" content="The CSSRule interface represents a single CSS rule. There are several types of rules, listed in the Type constants section below.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -103,10 +111,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -156,8 +164,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -173,9 +181,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -192,34 +198,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCssRule" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/CssRule" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/CssRule" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCssRule" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCssRule" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -229,18 +221,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -251,10 +245,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -268,8 +259,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/CssRule">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -308,22 +299,26 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/CSSRule" title="CSSRule">Deutsch</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/CSSRule" title="CssRule">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/CSSRule" title="CSSRule">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/CSSRule" title="German">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/CSSRule" title="cssRule">Polski</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/CSSRule" title="Spanish">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSRule" title="CSSRule">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/CSSRule" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/CSSRule" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/CSSRule" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSRule" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -335,7 +330,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -346,7 +343,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -396,6 +392,16 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Nickolay" title="View profile: Nickolay">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Nickolay" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Nickolay</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
@@ -411,16 +417,16 @@
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/AxelGrude" title="View profile: AxelGrude">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="AxelGrude" data-src="../../../../../secure.gravatar.com/avatar/6ac22f34ee45a4dfbc5ce12032cb76136c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">AxelGrude</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000" title="View profile: RealRaven2000">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="RealRaven2000" data-src="../../../../../secure.gravatar.com/avatar/6ac22f34ee45a4dfbc5ce12032cb76136c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">RealRaven2000</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Jnkie" title="View profile: Jnkie">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jnkie" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jnkie</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Mark_Willis" title="View profile: Mark_Willis">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Mark_Willis" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Mark_Willis</noscript></a>
                 </li>
@@ -466,11 +472,6 @@
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/Nickolay" title="View profile: Nickolay">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Nickolay" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Nickolay</noscript></a>
-                </li>
-            
-                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Dria" title="View profile: Dria">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Dria" data-src="../../../../../secure.gravatar.com/avatar/c6c044311a2c98b383718e00964cda726c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Dria</noscript></a>
                 </li>
@@ -498,7 +499,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Properties" rel="internal">Syntax</a></li><li><a href="#Properties_common_to_all_CSSRule_instances" rel="internal">Properties common to all CSSRule instances</a></li><li><a href="#CSSRule" rel="internal">Constants</a><ol><li><a href="#Type_constants" rel="internal">Type constants</a></li></ol></li><li><a href="#Specification" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Properties_common_to_all_CSSRule_instances" rel="internal">Properties common to all CSSRule instances</a></li><li><a href="#CSSRule" rel="internal">Constants</a><ol><li><a href="#Type_constants" rel="internal">Type constants</a></li></ol></li><li><a href="#Specification" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -530,45 +531,21 @@
                   
                     <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
-<p>An object implementing the <strong><code>CSSRule</code></strong> DOM interface represents a single CSS at-rule. References to a <code>CSSRule</code>-implementing object may be obtained by looking at a <a href="CSSStyleSheet.html">CSS style sheet's</a> <a href="CSSStyleSheet.html" title="An object implementing the CSSStyleSheet interface represents a single CSS style sheet."><code>cssRules</code></a> list.</p>
+<p>The <strong><code>CSSRule</code></strong> interface represents a single CSS rule. There are several types of rules, listed in the <a href="#Type_constants">Type constants</a> section below.</p>
 
-<p>There are several kinds of rules. The <code>CSSRule</code> interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.</p>
+<p>The <code>CSSRule</code> interface specifies the properties common to all rules, while properties unique to specific rule types are specified in the more specialized interfaces for those rules' respective types.</p>
 
-<h2 name="Properties" id="Properties">Syntax</h2>
-
-<p>The syntax is described using the <a href="http://dev.w3.org/2006/webapi/WebIDL/" class="external">WebIDL</a> format.</p>
-
-<pre>interface CSSRule {
-    const unsigned short STYLE_RULE = 1;
-    const unsigned short CHARSET_RULE = 2; // Obsolete
-    const unsigned short IMPORT_RULE = 3;
-    const unsigned short MEDIA_RULE = 4;
-    const unsigned short FONT_FACE_RULE = 5;
-    const unsigned short PAGE_RULE = 6;
-    const unsigned short KEYFRAMES_RULE = 7;
-    const unsigned short KEYFRAME_RULE = 8;
-    const unsigned short NAMESPACE_RULE = 10;
-    const unsigned short COUNTER_STYLE_RULE = 11;
-    const unsigned short SUPPORTS_RULE = 12;
-    const unsigned short DOCUMENT_RULE = 13;
-    const unsigned short FONT_FEATURE_VALUES_RULE = 14;
-    const unsigned short VIEWPORT_RULE = 15;
-    const unsigned short REGION_STYLE_RULE = 16;
-    readonly attribute unsigned short type;
-    attribute DOMString cssText;
-    readonly attribute CSSRule? parentRule;
-    readonly attribute CSSStyleSheet? parentStyleSheet;
-};</pre>
+<p>References to a <code>CSSRule</code> may be obtained by looking at a <a href="CSSStyleSheet.html" title="The CSSStyleSheet interface represents a single CSS style sheet. It inherits properties and methods from its parent, StyleSheet."><code>CSSStyleSheet</code></a>'s <code>cssRules</code> list.</p>
 
 <h2 id="Properties_common_to_all_CSSRule_instances">Properties common to all CSSRule instances</h2>
 
 <dl>
- <dt id="cssText"><a href="CSSRule/cssText.html" title="cssText returns the actual text of the style rule. To be able to set a stylesheet rule dynamically, see Using dynamic styling information."><code>CSSRule.cssText</code></a></dt>
- <dd>Represents the textual representation of the rule, e.g. <code>"h1,h2 { font-size: 16pt }"</code></dd>
+ <dt id="cssText"><a href="CSSRule/cssText.html" title="cssText returns the actual text of a CSSStyleSheet style-rule."><code>CSSRule.cssText</code></a></dt>
+ <dd>Represents the textual representation of the rule, e.g. "<code>h1,h2 { font-size: 16pt }</code>" or "<code>@import 'url'</code>". To access or modify parts of the rule (e.g. the value of "font-size" in the example) use the properties on the&nbsp;<a href="#Type_constants">specialized interface for the rule's type</a>.</dd>
  <dt id="parentRule"><a href="CSSRule/parentRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSRule.parentRule</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns the containing rule, otherwise <code>null</code>. E.g. if this rule is a style rule inside an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media" title="The @media CSS at-rule associates a set of nested statements, in a CSS block that is delimited by curly braces, with a condition defined by a media query. The @media at-rule may be used not only at the top level of a CSS, but also inside any CSS conditional-group at-rule."><code>@media</code></a> block, the parent rule would be that <a href="CSSMediaRule.html" title="The CSSMediaRule is an interface representing a single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE)."><code>CSSMediaRule</code></a>.</dd>
  <dt id="parentStyleSheet"><a href="CSSRule/parentStyleSheet.html" title="parentStyleSheet returns the stylesheet object in which the current rule is defined."><code>CSSRule.parentStyleSheet</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns the <a href="CSSStyleSheet.html" title="An object implementing the CSSStyleSheet interface represents a single CSS style sheet."><code>CSSStyleSheet</code></a> object for the style sheet that contains this rule</dd>
+ <dd>Returns the <a href="CSSStyleSheet.html" title="The CSSStyleSheet interface represents a single CSS style sheet. It inherits properties and methods from its parent, StyleSheet."><code>CSSStyleSheet</code></a> object for the style sheet that contains this rule</dd>
  <dt id="type"><a href="CSSRule/type.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSRule.type</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>One of the <a href="#Type_constants">Type constants</a> indicating the type of CSS rule.</dd>
 </dl>
@@ -585,98 +562,115 @@
    <th>Type</th>
    <th>Value</th>
    <th>Rule-specific interface</th>
+   <th>Comments and examples</th>
   </tr>
   <tr>
    <td><code>CSSRule.STYLE_RULE</code></td>
    <td style="text-align: center;"><code>1</code></td>
    <td><a href="CSSStyleRule.html" title="CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE)."><code>CSSStyleRule</code></a></td>
+   <td>The most common kind of rule:<br>
+    <code>selector { prop1: val1; prop2: val2; }</code></td>
+  </tr>
+  <tr>
+   <td><code>CSSRule.IMPORT_RULE</code></td>
+   <td style="text-align: center;"><code>3</code></td>
+   <td><a href="CSSImportRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSImportRule</code></a></td>
+   <td>An <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@import" title="The @import CSS at-rule is used to import style rules from other style sheets. These rules must precede all other types of rules, except @charset rules; as it is not a nested statement, @import cannot be used inside conditional group at-rules."><code>@import</code></a> rule. (Until the documentation is completed, see the interface definition in the Mozilla source code: <a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9" class="external">nsIDOMCSSImportRule</a>.)</td>
   </tr>
   <tr>
    <td><code>CSSRule.MEDIA_RULE</code></td>
    <td style="text-align: center;"><code>4</code></td>
    <td><a href="CSSMediaRule.html" title="The CSSMediaRule is an interface representing a single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE)."><code>CSSMediaRule</code></a></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.FONT_FACE_RULE</code></td>
    <td style="text-align: center;"><code>5</code></td>
    <td><a href="CSSFontFaceRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSFontFaceRule</code></a></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.PAGE_RULE</code></td>
    <td style="text-align: center;"><code>6</code></td>
    <td><a href="CSSPageRule.html" title="CSSPageRule is an interface representing a single CSS @page rule. It implements the CSSRule interface with a type value of 6 (CSSRule.PAGE_RULE)."><code>CSSPageRule</code></a></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.IMPORT_RULE</code></td>
-   <td style="text-align: center;"><code>3</code></td>
-   <td><a href="CSSImportRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSImportRule</code></a>&nbsp;:&nbsp;<a href="http://mxr.mozilla.org/mozilla-central/source/dom/interfaces/css/nsIDOMCSSImportRule.idl#9" class="external">IDL: nsIDOMCSSImportRule</a></td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.CHARSET_RULE</code></td>
-   <td style="text-align: center;"><code>2</code></td>
-   <td><code>CSSCharsetRule</code> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> [Removed in most browsers]</td>
-  </tr>
-  <tr>
-   <td><code>CSSRule.UNKNOWN_RULE</code></td>
-   <td style="text-align: center;"><code>0</code></td>
-   <td><a href="CSSUnknownRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSUnknownRule</code></a><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.KEYFRAMES_RULE</code></td>
    <td style="text-align: center;"><code>7</code></td>
-   <td><a href="CSSKeyframesRule.html" title="The CSSKeyframesRule interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contains of a whole @keyframes at-rule. It implements the CSSRule interface with a type value of 7 (CSSRule.KEYFRAMES_RULE)."><code>CSSKeyframesRule</code></a> [1] <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td><a href="CSSKeyframesRule.html" title="The CSSKeyframesRule interface describes an object representing a complete set of keyframes for a CSS animation. It corresponds to the contains of a whole @keyframes at-rule. It implements the CSSRule interface with a type value of 7 (CSSRule.KEYFRAMES_RULE)."><code>CSSKeyframesRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.KEYFRAME_RULE</code></td>
    <td style="text-align: center;"><code>8</code></td>
-   <td><a href="CSSKeyframeRule.html" title="The CSSKeyframeRule interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE)."><code>CSSKeyframeRule</code></a> [1] <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td><a href="CSSKeyframeRule.html" title="The CSSKeyframeRule interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE)."><code>CSSKeyframeRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><em>Reserved for future use</em></td>
    <td style="text-align: center;"><code>9</code></td>
+   <td>&nbsp;</td>
    <td>Should be used to define color profiles in the future</td>
   </tr>
   <tr>
    <td><code>CSSRule.NAMESPACE_RULE</code></td>
    <td style="text-align: center;"><code>10</code></td>
    <td><a href="CSSNamespaceRule.html" title="The CSSNamespaceRule interface describes an object representing a single CSS @namespace at-rule. It implements the CSSRule interface, with a type value of 10 (CSSRule.NAMESPACE_RULE)."><code>CSSNamespaceRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.COUNTER_STYLE_RULE</code></td>
    <td style="text-align: center;"><code>11</code></td>
-   <td><a href="CSSCounterStyleRule.html" title="The CSSCounterStyleRule interface represents …"><code>CSSCounterStyleRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td><a href="CSSCounterStyleRule.html" title="The CSSCounterStyleRule interface represents an @counter-style at-rule."><code>CSSCounterStyleRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.SUPPORTS_RULE</code></td>
    <td style="text-align: center;"><code>12</code></td>
    <td><a href="CSSSupportsRule.html" title="The CSSSupportsRule interface describes an object representing a single CSS @supports at-rule. It implements the CSSConditionRule interface, and therefore the CSSRule and CSSGroupingRule interfaces with a type value of 12 (CSSRule.SUPPORTS_RULE)."><code>CSSSupportsRule</code></a></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.DOCUMENT_RULE</code></td>
    <td style="text-align: center;"><code>13</code></td>
    <td><a href="CSSDocumentRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSDocumentRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.FONT_FEATURE_VALUES_RULE</code></td>
    <td style="text-align: center;"><code>14</code></td>
    <td><a href="CSSFontFeatureValuesRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSFontFeatureValuesRule</code></a></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.VIEWPORT_RULE</code></td>
    <td style="text-align: center;"><code>15</code></td>
    <td><a href="CSSViewportRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSViewportRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
   </tr>
   <tr>
    <td><code>CSSRule.REGION_STYLE_RULE</code></td>
    <td style="text-align: center;"><code>16</code></td>
    <td><a href="CSSRegionStyleRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSRegionStyleRule</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>CSSRule.UNKNOWN_RULE</code></td>
+   <td style="text-align: center;"><code>0</code></td>
+   <td><a href="CSSUnknownRule.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>CSSUnknownRule</code></a> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+   <td><code>CSSRule.CHARSET_RULE</code></td>
+   <td style="text-align: center;"><code>2</code></td>
+   <td><code>CSSCharsetRule</code> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></td>
+   <td>(Removed in most browsers.)</td>
   </tr>
  </tbody>
 </table>
 
 <p>An up-to-date informal list of constants can be found on the <a href="http://wiki.csswg.org/spec/cssom-constants" class="external">CSSWG Wiki</a>.</p>
-
-<p>[1] On Gecko, before Firefox 19, the keyframe-related constants existed only in their prefixed version: <code>CSSRule.MOZ_KEYFRAMES_RULE</code> and <code>CSSRule.MOZ_KEYFRAME_RULE.</code> From Firefox 20 onwards, both versions are available. The prefixed version will be removed in the future.</p>
 
 <h2 name="Specification" id="Specification">Specifications</h2>
 
@@ -715,7 +709,7 @@
    <td>Added value <code>SUPPORTS_RULE</code>. (<code>DOCUMENT_RULE</code> has been pushed to CSS Conditional Rules Level 4)</td>
   </tr>
   <tr>
-   <td><a href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule" class="external" lang="en" hreflang="en">Document Object Model (DOM) Level 2 Style Specification<br><small lang="en-US">The definition of 'CSSRule' in that specification.</small></a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRule" class="external" lang="en" hreflang="en">Document Object Model (DOM) Level 2 Style Specification<br><small lang="en-US">The definition of 'CSSRule' in that specification.</small></a></td>
    <td><span class="spec-REC">Recommendation</span></td>
    <td>Initial definition.</td>
   </tr>
@@ -738,6 +732,7 @@
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -747,21 +742,33 @@
    <td>Basic support</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>9</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
   </tr>
   <tr>
-   <td><code>CSSCharsetRule</code></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [1]</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [3]</td>
+   <td><code>CSSKeyframesRule</code></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>20.0 [4]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+  <tr>
+   <td><code>CSSCharsetRule</code></td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [1]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [3]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
   </tr>
   <tr>
    <td><code>CSSUnknownRule</code></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [2]</td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [2]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -778,6 +785,7 @@
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Phone</th>
    <th>Opera Mobile</th>
@@ -793,36 +801,52 @@
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+  </tr>
+  <tr>
+   <td><code>CSSKeyframesRule</code></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>20.0 [4]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
   </tr>
   <tr>
    <td><code>CSSCharsetRule</code></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [1]</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [3]</td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [1]</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [3]</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [1]</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [1]</td>
   </tr>
   <tr>
    <td><code>CSSUnknownRule</code></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [2]</td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [2]</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span> [2]</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span> [2]</td>
   </tr>
  </tbody>
 </table>
 </div>
 
-<p>[1] Removed in Chrome version 41.0.</p>
+<p>[1] <code>CSSCharsetRule</code> was removed in Chrome version 41.0.</p>
 
-<p>[2] Removed in Chrome version 45.0.</p>
+<p>[2]&nbsp;<code>CSSUnknownRule</code> was removed in Chrome version 45.0.</p>
 
-<p>[3] Removed in Gecko version 40.</p>
+<p>[3]&nbsp;<code>CSSCharsetRule</code> was removed in Gecko version 40.</p>
+
+<p>[4] On Gecko, before Firefox 19, the keyframe-related constants existed only in their prefixed version: <code>CSSRule.MOZ_KEYFRAMES_RULE</code> and <code>CSSRule.MOZ_KEYFRAME_RULE.</code> From Firefox 20 onwards, both versions are available. The prefixed version will be removed in the future.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -832,25 +856,6 @@
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCSSRule%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+CSSRule+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about CSSRule on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/CSSRule?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about CSSRule on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCSSRule%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CSSRule?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about CSSRule on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -878,13 +883,17 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/AxelGrude">AxelGrude</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/RealRaven2000">RealRaven2000</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Jnkie">Jnkie</a>, 
     
@@ -906,8 +915,6 @@
     
         <a href="https://developer.mozilla.org/en-US/profiles/Ptak82">Ptak82</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
-    
         <a href="https://developer.mozilla.org/en-US/profiles/Dria">Dria</a>
     
                     </div>
@@ -916,11 +923,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
-                      <time datetime="2015-11-13T07:15:46-08:00">Nov 13, 2015, 7:15:46 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-11-28T14:30:38-08:00">Nov 28, 2016, 2:30:38 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -937,7 +981,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="CSS_Object_Model.html">CSS Object Model</a></strong></li><li><strong><a href="CSSRule.html"><code>CSSRule</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="CSSRule/cssText.html" title="cssText returns the actual text of the style rule. To be able to set a stylesheet rule dynamically, see Using dynamic styling information."><code>CSSRule.cssText</code></a></li><li><a href="CSSRule/parentStyleSheet.html" title="parentStyleSheet returns the stylesheet object in which the current rule is defined."><code>CSSRule.parentStyleSheet</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/animationstart.html"><code>animationstart</code></a></li><li><a href="../Events/animationend.html"><code>animationend</code></a></li><li><a href="../Events/animationiteration.html"><code>animationiteration</code></a></li><li><a href="../Events/transitionend.html"><code>transitionend</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for CSSOM</strong></a><ol><li><a href="AnimationEvent.html"><code>AnimationEvent</code></a></li><li><a href="CSS.html"><code>CSS</code></a></li><li><a href="CSSConditionRule.html"><code>CSSConditionRule</code></a></li><li><a href="CSSGroupingRule.html"><code>CSSGroupingRule</code></a></li><li><a href="CSSKeyframeRule.html"><code>CSSKeyframeRule</code></a></li><li><a href="CSSKeyframesRule.html"><code>CSSKeyframesRule</code></a></li><li><a href="CSSMediaRule.html"><code>CSSMediaRule</code></a></li><li><a href="CSSNamespaceRule.html"><code>CSSNamespaceRule</code></a></li><li><a href="CSSPageRule.html"><code>CSSPageRule</code></a></li><li><a href="CSSRuleList.html"><code>CSSRuleList</code></a></li><li><a href="CSSStyleDeclaration.html"><code>CSSStyleDeclaration</code></a></li><li><a href="CSSStyleRule.html"><code>CSSStyleRule</code></a></li><li><a href="CSSStyleSheet.html"><code>CSSStyleSheet</code></a></li><li><a href="CSSSupportsRule.html"><code>CSSSupportsRule</code></a></li><li><a href="CaretPosition.html"><code>CaretPosition</code></a></li><li><a href="LinkStyle.html"><code>LinkStyle</code></a></li><li><a href="StyleSheet.html"><code>StyleSheet</code></a></li><li><a href="StyleSheetList.html"><code>StyleSheetList</code></a></li><li><a href="TransitionEvent.html"><code>TransitionEvent</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="CSS_Object_Model.html">CSS Object Model</a></strong></li><li><strong><a href="CSSRule.html"><code>CSSRule</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="CSSRule/cssText.html" title="cssText returns the actual text of a CSSStyleSheet style-rule."><code>cssText</code></a></li><li><a href="CSSRule/parentStyleSheet.html" title="parentStyleSheet returns the stylesheet object in which the current rule is defined."><code>parentStyleSheet</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/animationstart.html"><code>animationstart</code></a></li><li><a href="../Events/animationend.html"><code>animationend</code></a></li><li><a href="../Events/animationiteration.html"><code>animationiteration</code></a></li><li><a href="../Events/transitionend.html"><code>transitionend</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for CSSOM</strong></a><ol><li><a href="AnimationEvent.html"><code>AnimationEvent</code></a></li><li><a href="CSS.html"><code>CSS</code></a></li><li><a href="CSSConditionRule.html"><code>CSSConditionRule</code></a></li><li><a href="CSSGroupingRule.html"><code>CSSGroupingRule</code></a></li><li><a href="CSSKeyframeRule.html"><code>CSSKeyframeRule</code></a></li><li><a href="CSSKeyframesRule.html"><code>CSSKeyframesRule</code></a></li><li><a href="CSSMediaRule.html"><code>CSSMediaRule</code></a></li><li><a href="CSSNamespaceRule.html"><code>CSSNamespaceRule</code></a></li><li><a href="CSSPageRule.html"><code>CSSPageRule</code></a></li><li><a href="CSSRuleList.html"><code>CSSRuleList</code></a></li><li><a href="CSSStyleDeclaration.html"><code>CSSStyleDeclaration</code></a></li><li><a href="CSSStyleRule.html"><code>CSSStyleRule</code></a></li><li><a href="CSSStyleSheet.html"><code>CSSStyleSheet</code></a></li><li><a href="CSSSupportsRule.html"><code>CSSSupportsRule</code></a></li><li><a href="CaretPosition.html"><code>CaretPosition</code></a></li><li><a href="LinkStyle.html"><code>LinkStyle</code></a></li><li><a href="StyleSheet.html"><code>StyleSheet</code></a></li><li><a href="StyleSheetList.html"><code>StyleSheetList</code></a></li><li><a href="TransitionEvent.html"><code>TransitionEvent</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -961,12 +1005,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -974,9 +1018,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -985,24 +1028,27 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/CSSRule" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/CSSRule" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/de/docs/Web/API/CSSRule">
-            Deutsch
+          <option title="German" value="/de/docs/Web/API/CSSRule">
+            Deutsch (de)
           </option>
-          <option value="/es/docs/Web/API/CSSRule">
-            Español
+          <option title="Spanish" value="/es/docs/Web/API/CSSRule">
+            Español (es)
           </option>
-          <option value="/ja/docs/Web/API/CSSRule">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/CSSRule">
+            日本語 (ja)
           </option>
-          <option value="/pl/docs/Web/API/CSSRule">
-            Polski
+          <option title="Polish" value="/pl/docs/Web/API/CSSRule">
+            Polski (pl)
           </option>
-          <option value="/zh-CN/docs/Web/API/CSSRule">
-            中文 (简体)
+          <option title="Russian" value="/ru/docs/Web/API/CSSRule">
+            Русский (ru)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/CSSRule">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1019,33 +1065,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CssRule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:27:00 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CssRule by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:08:41 GMT -->
 </body></html>

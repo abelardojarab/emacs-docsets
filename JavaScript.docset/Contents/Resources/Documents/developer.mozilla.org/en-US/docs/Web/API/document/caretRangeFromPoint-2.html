@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/document/caretRangeFromPoint by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:34:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/document/caretRangeFromPoint by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:05:22 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,6 +75,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2Fdocument%2FcaretRangeFromPoint" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/document/caretRangeFromPoint" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/document/caretRangeFromPoint" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2Fdocument%2FcaretRangeFromPoint" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2Fdocument%2FcaretRangeFromPoint" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/document/caretRangeFromPoint">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -372,8 +362,23 @@
           </span>
 
         
-        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/eiselzby" title="View profile: eiselzby">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="eiselzby" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">eiselzby</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Yaffle" title="View profile: Yaffle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Yaffle" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Yaffle</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
@@ -390,12 +395,12 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
                 </li>
@@ -459,12 +464,12 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="overheadIndicator nonStandard nonStandardHeader"> 
+                    <p></p><section class="Quick_links" id="Quick_Links"><!-- --></section><div class="overheadIndicator nonStandard nonStandardHeader"> 
       <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> Non-standard</strong><br> 
       This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> 
       </div>&nbsp;<p></p>
 
-<p>The <code><strong>caretRangeFromPoint()</strong></code>&nbsp;method of the <a href="../Document.html" title="The Document interface represent any web page loaded in the browser and&nbsp; serves as an entry point into the web page's content, the DOM tree (including elements such as &lt;body&gt; or &lt;table&gt;). It provides functionality which is global to the document, such as obtaining the page's URL and creating new elements in the document."><code>Document</code></a> interface returns&nbsp;a&nbsp;Range&nbsp;object for the document fragment under the specified coordinates.</p>
+<p>The <code><strong>caretRangeFromPoint()</strong></code>&nbsp;method of the <a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document." href="/en-US/docs/Web/API/Document"><code>Document</code></a> interface returns&nbsp;a&nbsp;Range&nbsp;object for the document fragment under the specified coordinates.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -476,17 +481,17 @@
 <p>One of the following:</p>
 
 <ul>
- <li>A <a href="../Range.html" title="The Range interface represents a fragment of a document that can contain nodes and parts of text nodes."><code>Range</code></a>.</li>
- <li><code>Null</code>, if <strong>x</strong> or <strong>y</strong> are negative, outside viewport, or there is no text entry node.</li>
+	<li>A <a title="The Range interface represents a fragment of a document that can contain nodes and parts of text nodes." href="../Range.html"><code>Range</code></a>.</li>
+	<li><code>Null</code>, if <strong>x</strong> or <strong>y</strong> are negative, outside viewport, or there is no text entry node.</li>
 </ul>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt>x</dt>
- <dd>A horizontal position within the current viewport.</dd>
- <dt>y</dt>
- <dd>A vertical position within the current viewport.</dd>
+	<dt>x</dt>
+	<dd>A horizontal position within the current viewport.</dd>
+	<dt>y</dt>
+	<dd>A vertical position within the current viewport.</dd>
 </dl>
 
 <h2 name="Example" id="Example">Example</h2>
@@ -542,53 +547,57 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
     </ul> 
 </div></div>
 
-<div id="compat-desktop">
+<div id="compat-desktop">&nbsp;&nbsp;
 <table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>43.0</td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th>Feature</th>
+			<th>Chrome</th>
+			<th>Firefox (Gecko)</th>
+			<th>Internet Explorer</th>
+			<th>Edge</th>
+			<th>Opera</th>
+			<th>Safari (WebKit)</th>
+		</tr>
+		<tr>
+			<td>Basic support</td>
+			<td>43.0</td>
+			<td>20+</td>
+			<td><span style="color: #f00;">No&nbsp;support</span></td>
+			<td>12</td>
+			<td>15+</td>
+			<td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+		</tr>
+	</tbody>
 </table>
 </div>
 
-<div id="compat-mobile">
+<div id="compat-mobile">&nbsp;&nbsp; &nbsp;&nbsp;
 <table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td>43.0</td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-  </tr>
- </tbody>
+	<tbody>
+		<tr>
+			<th>Feature</th>
+			<th>Android</th>
+			<th>Chrome for Android</th>
+			<th>Edge</th>
+			<th>Firefox Mobile (Gecko)</th>
+			<th>Firefox OS</th>
+			<th>IE Mobile</th>
+			<th>Opera Mobile</th>
+			<th>Safari Mobile</th>
+		</tr>
+		<tr>
+			<td>Basic support</td>
+			<td><span style="color: #f00;">No&nbsp;support</span></td>
+			<td>43.0</td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+			<td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+		</tr>
+	</tbody>
 </table>
 </div>
 
@@ -596,25 +605,6 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument%2FcaretRangeFromPoint%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Document.caretRangeFromPoint%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Document.caretRangeFromPoint() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Document.caretRangeFromPoint() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDocument%2FcaretRangeFromPoint%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Document/caretRangeFromPoint?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Document.caretRangeFromPoint() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -652,6 +642,12 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/eiselzby">eiselzby</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Yaffle">Yaffle</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/bmathews">bmathews</a>, 
@@ -668,11 +664,48 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-02-20T15:45:44-08:00">Feb 20, 2016, 3:45:44 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/eiselzby">eiselzby</a>,
+                      <time datetime="2016-12-07T02:08:11.026195-08:00">Dec 7, 2016, 2:08:11 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -689,7 +722,7 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../Document_Object_Model.html">Document Object Model</a></strong></li><li><strong><a href="../Document.html"><code>Document</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="activeElement.html" title="Returns the currently focused element, that is, the element that will get keystroke events if the user types any. This attribute is read only."><code>Document.activeElement</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="alinkColor.html" title="Returns or sets the color of an active link in the document body. A link is active during the time between mousedown and mouseup events."><code>Document.alinkColor</code></a></li><li><a href="anchors.html" title="anchors returns a list of all of the anchors in the document."><code>Document.anchors</code></a></li><li><a href="applets.html" title="applets returns an ordered list of the applets within a document."><code>Document.applets</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="async.html" title="document.async can be set to indicate whether a document.load call should be an asynchronous or synchronous request. true is the default value, indicating that documents should be loaded asynchronously."><code>Document.async</code></a></li><li><a href="bgColor.html" title="The deprecated &nbsp;bgColor property gets or sets the background color of the current document."><code>Document.bgColor</code></a></li><li><a href="body.html" title="Returns the &lt;body&gt; or &lt;frameset&gt; node of the current document, or null if no such element exists."><code>Document.body</code></a></li><li><a href="characterSet.html" title="The Document.characterSet read-only property returns the character encoding of the current document.&nbsp;The character encoding is the character set used for rendering the document, which may be different from the encoding specified by the page. (The user can override the encoding.)."><code>Document.characterSet</code></a></li><li><a href="../ParentNode/childElementCount.html" title="The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element."><code>ParentNode.childElementCount</code></a></li><li><a href="../ParentNode/children.html" title="Node.children&nbsp;is a read-only property that returns a live HTMLCollection of the&nbsp;child elements of Node."><code>ParentNode.children</code></a></li><li><a href="compatMode.html" title="Indicates whether the document is rendered in Quirks mode or Standards mode."><code>Document.compatMode</code></a></li><li><a href="contentType.html" title="Returns the MIME type that the document is being rendered as.&nbsp; This may come from HTTP headers or other sources of MIME information, and might be affected by automatic type conversions performed by either the browser or extensions."><code>Document.contentType</code></a></li><li><a href="currentScript.html" title="Returns the &lt;script&gt; element whose script is currently being processed."><code>Document.currentScript</code></a></li><li><a href="defaultView.html" title="In browsers returns the window object associated with the document or null if none available."><code>Document.defaultView</code></a></li><li><a href="designMode.html" title="document.designMode controls whether the entire document is editable. Valid values are &quot;on&quot; and &quot;off&quot;.&nbsp;According to the specification, this property is meant to default to &quot;off&quot;. Firefox follows this standard. The earlier versions of Chrome and IE default to &quot;inherit&quot;. In IE6-10, the value is capitalized."><code>Document.designMode</code></a></li><li><a href="dir.html" title="The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right."><code>Document.dir</code></a></li><li><a href="doctype.html" title="Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType."><code>Document.doctype</code></a></li><li><a href="documentElement.html" title="The Document.documentElement read-only property returns the Element that is the root element of the document (for example, the &lt;html&gt; element for HTML documents)."><code>Document.documentElement</code></a></li><li><a href="documentURI.html" title="The documentURI property of the Document interface returns the document location as a string."><code>Document.documentURI</code></a></li><li><a href="documentURIObject.html" title="The Document.documentURIObject read-only property returns an nsIURI object representing the URI of the document."><code>Document.documentURIObject</code></a></li><li><a href="domain.html" title="Gets/sets the domain portion of the origin of the current document, as used by the same origin policy."><code>Document.domain</code></a></li><li><a href="domConfig.html" title="This should return the DOMConfiguration for the document."><code>Document.domConfig</code></a></li><li><a href="embeds.html" title="embeds returns a list of the embedded OBJECTS within the current document."><code>Document.embeds</code></a></li><li><a href="fgColor.html" title="fgColor gets/sets the foreground color, or text color, of the current document."><code>Document.fgColor</code></a></li><li><a href="../ParentNode/firstElementChild.html" title="The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements."><code>ParentNode.firstElementChild</code></a></li><li><a href="forms.html" title="forms returns a collection (an HTMLCollection) of the &lt;form&gt; elements within the current document."><code>Document.forms</code></a></li><li><a href="head.html" title="Returns the &lt;head&gt; element of the current document. If there are more than one &lt;head&gt; elements, the first one is returned."><code>Document.head</code></a></li><li><a href="height.html" title="Returns the height of the document object. In most cases, this is equal to the &lt;body&gt; element of the current document."><code>Document.height</code></a></li><li><a href="images.html" title="document.images returns a collection of the images in the current HTML document."><code>Document.images</code></a></li><li><a href="implementation.html" title="Returns a DOMImplementation object associated with the current document."><code>Document.implementation</code></a></li><li><a href="../ParentNode/lastElementChild.html" title="The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements."><code>ParentNode.lastElementChild</code></a></li><li><a href="lastModified.html" title="Returns a string containing the date and time on which the current document was last modified."><code>Document.lastModified</code></a></li><li><a href="lastStyleSheetSet.html" title="Returns the last enabled style sheet set; this property's value changes whenever the document.selectedStyleSheetSet property is changed."><code>Document.lastStyleSheetSet</code></a></li><li><a href="linkColor.html" title="linkColor gets/sets the color of links within the document."><code>Document.linkColor</code></a></li><li><a href="links.html" title="The links property returns a collection of all &lt;area&gt; elements and &lt;a&gt; elements in a document with a value for the href attribute."><code>Document.links</code></a></li><li><a href="location.html" title="The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL."><code>Document.location</code></a></li><li><a href="mozFullScreen.html" title="Reports whether or not the document is currently displaying content in fullscreen mode."><code>Document.mozFullScreen</code></a></li><li><a href="mozFullScreenElement.html" title="Returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>Document.mozFullScreenElement</code></a></li><li><a href="mozFullScreenEnabled.html" title="Reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set."><code>Document.mozFullScreenEnabled</code></a></li><li><a href="mozSyntheticDocument.html" title="Indicates whether or not the document is a synthetic one; that is, a document representing a standalone image, video, audio, or the like."><code>Document.mozSyntheticDocument</code></a></li><li><a href="../GlobalEventHandlers/onabort.html" title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)"><code>GlobalEventHandlers.onabort</code></a></li><li><a href="onafterscriptexecute.html" title="Fired when a static &lt;script&gt;&nbsp;element &nbsp;finishes executing its script.&nbsp;Does not fire if the element is added dynamically, eg with appendChild()."><code>Document.onafterscriptexecute</code></a></li><li><a href="onbeforescriptexecute.html" title="Fired when the code in a &lt;script&gt;&nbsp;element declared in an HTML document&nbsp;is about to start executing. Does not fire if the element is added dynamically, eg with appendChild()."><code>Document.onbeforescriptexecute</code></a></li><li><a href="../GlobalEventHandlers/onblur.html" title="The onblur property returns the onBlur event handler code, if any, that exists on the current element."><code>GlobalEventHandlers.onblur</code></a></li><li><a href="../GlobalEventHandlers/onchange.html" title="The onchange property sets and returns the event handler for the change event."><code>GlobalEventHandlers.onchange</code></a></li><li><a href="../GlobalEventHandlers/onclick.html" title="The onclick property returns the click event handler code on the current element."><code>GlobalEventHandlers.onclick</code></a></li><li><a href="../GlobalEventHandlers/onclose.html" title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)"><code>GlobalEventHandlers.onclose</code></a></li><li><a href="../GlobalEventHandlers/oncontextmenu.html" title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute."><code>GlobalEventHandlers.oncontextmenu</code></a></li><li><a href="../GlobalEventHandlers/ondblclick.html" title="The ondblclick property returns the onDblClick event handler code on the current element."><code>GlobalEventHandlers.ondblclick</code></a></li><li><a href="../GlobalEventHandlers/onerror.html" title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:"><code>GlobalEventHandlers.onerror</code></a></li><li><a href="../GlobalEventHandlers/onfocus.html" title="The onfocus property returns the onFocus event handler code on the current element."><code>GlobalEventHandlers.onfocus</code></a></li><li><a href="../GlobalEventHandlers/oninput.html" title="An event handler for the input event on the window.&nbsp;The input event is raised when an &lt;input&gt; element value changes."><code>GlobalEventHandlers.oninput</code></a></li><li><a href="../GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>GlobalEventHandlers.onkeydown</code></a></li><li><a href="../GlobalEventHandlers/onkeypress.html" title="The onkeypress property sets and returns the onKeyPress event handler code for the current element."><code>GlobalEventHandlers.onkeypress</code></a></li><li><a href="../GlobalEventHandlers/onkeyup.html" title="The onkeyup property returns the onKeyUp event handler code for the current element."><code>GlobalEventHandlers.onkeyup</code></a></li><li><a href="../GlobalEventHandlers/onload.html" title="An event handler for the load event of a window."><code>GlobalEventHandlers.onload</code></a></li><li><a href="../GlobalEventHandlers/onmousedown.html" title="The onmousedown property returns the onmousedown event handler code on the current element."><code>GlobalEventHandlers.onmousedown</code></a></li><li><a href="../GlobalEventHandlers/onmousemove.html" title="The onmousemove property returns the mousemove event handler code on the current element."><code>GlobalEventHandlers.onmousemove</code></a></li><li><a href="../GlobalEventHandlers/onmouseout.html" title="The onmouseout property returns the onMouseOut event handler code on the current element."><code>GlobalEventHandlers.onmouseout</code></a></li><li><a href="../GlobalEventHandlers/onmouseover.html" title="The onmouseover property returns the onMouseOver event handler code on the current element."><code>GlobalEventHandlers.onmouseover</code></a></li><li><a href="../GlobalEventHandlers/onmouseup.html" title="The onmouseup property returns the onMouseUp event handler code on the current element."><code>GlobalEventHandlers.onmouseup</code></a></li><li><a href="onoffline.html" title="This event handler is called when an offline is fired on body and bubbles up, when navigator.onLine property changes and becomes false."><code>Document.onoffline</code></a></li><li><a href="ononline.html" title="&quot;online&quot; event is fired on the &lt;body&gt; of each page when the browser switches between online and offline mode. Additionally, the events bubble up from document.body, to document, ending at window. Both events are non-cancellable (you can't prevent the user from coming online, or going offline)."><code>Document.ononline</code></a></li><li><a href="../GlobalEventHandlers/onpointercancel.html" title="A global event handler for the pointercancel event."><code>GlobalEventHandlers.onpointercancel</code></a></li><li><a href="../GlobalEventHandlers/onpointerdown.html" title="A global event handler for the pointerdown event."><code>GlobalEventHandlers.onpointerdown</code></a></li><li><a href="../GlobalEventHandlers/onpointerenter.html" title="A global event handler for the pointerenter event."><code>GlobalEventHandlers.onpointerenter</code></a></li><li><a href="../GlobalEventHandlers/onpointerleave.html" title="A global event handler for the pointerleave event."><code>GlobalEventHandlers.onpointerleave</code></a></li><li><a href="../GlobalEventHandlers/onpointermove.html" title="A global event handler for the pointermove event."><code>GlobalEventHandlers.onpointermove</code></a></li><li><a href="../GlobalEventHandlers/onpointerout.html" title="A global event handler for the pointerout event."><code>GlobalEventHandlers.onpointerout</code></a></li><li><a href="../GlobalEventHandlers/onpointerover.html" title="A global event handler for the pointerover event."><code>GlobalEventHandlers.onpointerover</code></a></li><li><a href="../GlobalEventHandlers/onpointerup.html" title="A global event handler for the pointerup event."><code>GlobalEventHandlers.onpointerup</code></a></li><li><a href="../GlobalEventHandlers/onreset.html" title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received."><code>GlobalEventHandlers.onreset</code></a></li><li><a href="../GlobalEventHandlers/onresize.html" title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received."><code>GlobalEventHandlers.onresize</code></a></li><li><a href="../GlobalEventHandlers/onscroll.html" title="An event handler for scroll events on&nbsp;element."><code>GlobalEventHandlers.onscroll</code></a></li><li><a href="../GlobalEventHandlers/onselect.html" title="An event handler for the select event on the window."><code>GlobalEventHandlers.onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onselectionchange.html" title="The Document.onselectionchange property represents the even handler that is called when a selectionchange event reaches this object."><code>onselectionchange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/onselectstart.html" title="The GlobalEventHandlers.onselectstart property represents the even handler that is called when a selectstart event reaches this object."><code>GlobalEventHandlers.onselectstart</code></a></li><li><a href="../GlobalEventHandlers/onsubmit.html" title="An event handler for the submit event on the window."><code>GlobalEventHandlers.onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/ontouchcancel.html" title="A global event handler for the touchcancel event."><code>GlobalEventHandlers.ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/GlobalEventHanders.html" title="A global event handler for the touchmove event."><code>GlobalEventHandlers.ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../GlobalEventHandlers/ontouchstart.html" title="A global event handler for the touchstart event."><code>GlobalEventHandlers.ontouchstart</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="origin.html" title="The Document.origin read-only property returns the document's origin. In most cases, this property is equivalent to document.defaultView.location.origin."><code>Document.origin</code></a></li><li><a href="plugins.html" title="Returns an HTMLCollection object containing one or more HTMLEmbedElements or null which represent the &lt;embed&gt; elements in the current document."><code>Document.plugins</code></a></li><li><a href="pointerLockElement.html" title="The pointerLockElement property provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document."><code>Document.pointerLockElement</code></a></li><li><a href="popupNode.html" title="When a popup attached via the popup or context attributes is opened, the XUL document's popupNode property is set to the node that was clicked on. This will be the target of the mouse event that activated the popup. If the popup was opened via the keyboard, the popup node may be set to null. Typically, this property will be checked during a popupshowing event handler for a context menu to initialize the menu based on the context."><code>Document.popupNode</code></a></li><li><a href="preferredStyleSheetSet.html" title="Returns the preferred style sheet set as set by the page author."><code>Document.preferredStyleSheetSet</code></a></li><li><a href="readyState.html" title="The Document.readyState property of a document describes the loading state of the document."><code>Document.readyState</code></a></li><li><a href="referrer.html" title="Returns the URI of the page that linked to this page."><code>Document.referrer</code></a></li><li><a href="scripts.html" title="Returns a list of the &lt;script&gt; elements in the document. The returned object is an HTMLCollection."><code>Document.scripts</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="scrollingElement.html" title="The scrollingElement&nbsp;read-only property of the Document interface returns&nbsp;a reference to the Element that scrolls the document."><code>Document.scrollingElement</code></a></li><li><a href="selectedStyleSheetSet.html" title="Indicates the name of the style sheet set that's currently in use."><code>Document.selectedStyleSheetSet</code></a></li><li><a href="styleSheets.html" title="The Document.styleSheets read-only property returns a StyleSheetList of CSSStyleSheet objects for stylesheets explicitly linked into or embedded in a document."><code>Document.styleSheets</code></a></li><li><a href="styleSheetSets.html" title="Returns a live list of all of the currently-available style sheet sets."><code>Document.styleSheetSets</code></a></li><li><a href="title.html" title="Gets or sets the title of the document."><code>Document.title</code></a></li><li><a href="tooltipNode.html" title="Returns the node which is the target of the current tooltip."><code>Document.tooltipNode</code></a></li><li><a href="URL.html" title="The URL&nbsp;read-only property of the Document interface returns the document location as a string."><code>Document.URL</code></a></li><li><a href="vlinkColor.html" title="Gets/sets the color of links that the user has visited in the document."><code>Document.vlinkColor</code></a></li><li><a href="width.html" title="Returns the width of the &lt;body&gt; element of the current document in pixels."><code>Document.width</code></a></li><li><a href="xmlEncoding.html" title="Returns the encoding as determined by the XML declaration. Should be null if unspecified or unknown."><code>Document.xmlEncoding</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="xmlVersion.html" title="Returns the version number as specified in the XML declaration (e.g., &lt;?xml version=&quot;1.0&quot;?&gt;) or &quot;1.0&quot; if the declaration is absent."><code>Document.xmlVersion</code></a></s></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="adoptNode.html" title="Adopts a node from an external document. The node and its subtree is removed from the document it's in (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document."><code>Document.adoptNode()</code></a></li><li><a href="caretPositionFromPoint.html" title="This method is used to retrieve the caret position in a document based on two coordinates. A CaretPosition is returned, containing the found DOM node and the character offset in that node."><code>Document.caretPositionFromPoint()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>Document.caretRangeFromPoint()</code></em></li><li><a href="clear.html" title="This method used to clear the whole specified document in early (pre-1.0) versions of Mozilla."><code>Document.clear()</code></a></li><li><a href="close.html" title="The document.close() method finishes writing to a document, opened with document.open()."><code>Document.close()</code></a></li><li><a href="createAttribute.html" title="createAttribute creates a new attribute node, and returns it."><code>Document.createAttribute()</code></a></li><li><a href="createCDATASection.html" title="createCDATASection() creates a new CDATA section node, and returns it."><code>Document.createCDATASection()</code></a></li><li><a href="createComment.html" title="createComment() creates a new comment node, and returns it."><code>Document.createComment()</code></a></li><li><a href="createDocumentFragment.html" title="Creates a new empty DocumentFragment."><code>Document.createDocumentFragment()</code></a></li><li><a href="createElement.html" title="In an HTML document, the Document.createElement() method creates the specified HTML element or an HTMLUnknownElement if the given element name isn't a known one."><code>Document.createElement()</code></a></li><li><a href="createElementNS.html" title="Creates an element with the specified namespace URI and qualified name."><code>Document.createElementNS()</code></a></li><li><a href="createEntityReference.html" title="Prior to Gecko&nbsp;7.0 this method showed up as present, due to bug bug&nbsp;9850, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using Unicode escape sequences or fromCharCode() as necessary."><code>Document.createEntityReference()</code></a></li><li><a href="createEvent.html" title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent."><code>Document.createEvent()</code></a></li><li><a href="createExpression.html" title="This method compiles an XPathExpression which can then be used for (repeated) evaluations."><code>Document.createExpression()</code></a></li><li><a href="createNodeIterator.html" title="Returns a new NodeIterator object."><code>Document.createNodeIterator()</code></a></li><li><a href="createNSResolver.html" title="Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node."><code>Document.createNSResolver()</code></a></li><li><a href="createProcessingInstruction.html" title="createProcessingInstruction() creates a new processing instruction node, and returns it."><code>Document.createProcessingInstruction()</code></a></li><li><a href="createRange.html" title="Returns a new Range object."><code>Document.createRange()</code></a></li><li><a href="createTextNode.html" title="Creates a new Text node."><code>Document.createTextNode()</code></a></li><li><a href="createTouch.html" title="This method creates and returns a new Touch object."><code>Document.createTouch()</code></a></li><li><a href="createTouchList.html" title="This method creates and returns a new TouchList object."><code>Document.createTouchList()</code></a></li><li><a href="createTreeWalker.html" title="The Document.createTreeWalker() creator method returns a newly created TreeWalker object."><code>Document.createTreeWalker()</code></a></li><li><a href="elementFromPoint.html" title="The elementFromPoint() method of the Document interface returns the topmost element at the specified coordinates."><code>Document.elementFromPoint()</code></a></li><li><a href="enableStyleSheetsForSet.html" title="Enables the style sheets matching the specified name in the current style sheet set, and disables all other style sheets (except those without a title, which are always enabled)."><code>Document.enableStyleSheetsForSet()</code></a></li><li><a href="evaluate.html" title="Returns an XPathResult based on an XPath expression and other given parameters."><code>Document.evaluate()</code></a></li><li><a href="execCommand.html" title="When an HTML document has been switched to designMode, the document object exposes the execCommand method which allows one to run commands to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc.), while others insert new elements (adding a link) or affect an entire line (indenting). When using contentEditable, calling execCommand() will affect the currently active editable element."><code>Document.execCommand()</code></a></li><li><a href="exitPointerLock.html" title="The exitPointerLock asynchronously releases a pointer lock previously requested through Element.requestPointerLock."><code>Document.exitPointerLock()</code></a></li><li><a href="getBoxObjectFor.html" title="Returns a boxObject (x, y, width, height) for a specified element."><code>Document.getBoxObjectFor()</code></a></li><li><a href="getElementById.html" title="Returns a reference to the element by its ID."><code>Document.getElementById()</code></a></li><li><a href="getElementsByClassName.html" title="Returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names."><code>Document.getElementsByClassName()</code></a></li><li><a href="getElementsByName.html" title="Returns a nodelist collection with a given name in the (X)HTML document."><code>Document.getElementsByName()</code></a></li><li><a href="getElementsByTagName.html" title="Returns an HTMLCollection of elements with the given tag name."><code>Document.getElementsByTagName()</code></a></li><li><a href="getElementsByTagNameNS.html" title="Returns a list of elements with the given tag name belonging to the given namespace. The complete document is searched, including the root node."><code>Document.getElementsByTagNameNS()</code></a></li><li><a href="getSelection.html" title="This method functions identically to the Window.getSelection() method; it returns a Selection object representing the text currently selected in the document."><code>Document.getSelection()</code></a></li><li><a href="hasFocus.html" title="false if the active element in the document has no focus; true if the active element in the document has focus."><code>Document.hasFocus()</code></a></li><li><a href="importNode.html" title="Creates a copy of a node from an external document that can be inserted into the current document."><code>Document.importNode()</code></a></li><li><a href="loadOverlay.html" title="The loadOverlay() method loads a XUL overlay and merges it with the current document, notifying an observer when the merge is complete."><code>Document.loadOverlay()</code></a></li><li><a href="mozCancelFullScreen.html" title="Takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its element.mozRequestFullScreen() method."><code>Document.mozCancelFullScreen()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozSetImageElement.html" title="Changes the element being used as the CSS&nbsp;background for a background with a given background element ID."><code>Document.mozSetImageElement()</code></a></li><li><a href="open.html" title="The document.open() method opens a document for writing."><code>Document.open()</code></a></li><li><a href="queryCommandEnabled.html" title="The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser."><code>Document.queryCommandEnabled()</code></a></li><li><a href="queryCommandSupported.html" title="The Document.queryCommandSupported() method reports whether or not the specified editor command is supported by the browser."><code>Document.queryCommandSupported()</code></a></li><li><a href="querySelector.html" title="Editorial review completed."><code>Document.querySelector()</code></a></li><li><a href="querySelectorAll.html" title="Returns a list of the elements within the document (using depth-first pre-order traversal of the document's nodes) that match the specified group of selectors. The object returned is a NodeList."><code>Document.querySelectorAll()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="registerElement.html" title="The Document.registerElement() method registers a new custom element in the browser and returns a constructor for the new element."><code>Document.registerElement()</code></a></li><li><a href="releaseCapture.html" title="Releases mouse capture if it's currently enabled on an element within this document. Enabling mouse capture on an element is done by calling element.setCapture()."><code>Document.releaseCapture()</code></a></li><li><a href="write.html" title="Writes a string of text to a document stream opened by document.open()."><code>Document.write()</code></a></li><li><a href="writeln.html" title="Writes a string of text followed by a newline character to a document."><code>Document.writeln()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for DOM</strong></a><ol><li><a href="../Attr.html"><code>Attr</code></a></li><li><a href="../ByteString.html"><code>ByteString</code></a></li><li><a href="../CDATASection.html"><code>CDATASection</code></a></li><li><a href="../CharacterData.html"><code>CharacterData</code></a></li><li><a href="../ChildNode.html"><code>ChildNode</code></a></li><li><a href="../Comment.html"><code>Comment</code></a></li><li><a href="../CustomEvent.html"><code>CustomEvent</code></a></li><li><a href="../DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="../DOMError.html"><code>DOMError</code></a></li><li><a href="../DOMErrorHandler.html"><code>DOMErrorHandler</code></a></li><li><a href="../DOMException.html"><code>DOMException</code></a></li><li><a href="../DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="../DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="../DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="../DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="../DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="../DOMObject.html"><code>DOMObject</code></a></li><li><a href="../DOMParser.html"><code>DOMParser</code></a></li><li><a href="../DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="../DOMRect.html"><code>DOMRect</code></a></li><li><a href="../DOMString.html"><code>DOMString</code></a></li><li><a href="../DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="../DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="../DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="../DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="../DocumentType.html"><code>DocumentType</code></a></li><li><a href="../Element.html"><code>Element</code></a></li><li><a href="../ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="../Entity.html"><code>Entity</code></a></li><li><a href="../EntityReference.html"><code>EntityReference</code></a></li><li><a href="../Event.html"><code>Event</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li><li><a href="../HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="../MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="../NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="../NodeList.html"><code>NodeList</code></a></li><li><a href="../NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="../ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="../PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="../Range.html"><code>Range</code></a></li><li><a href="../Text.html"><code>Text</code></a></li><li><a href="../TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="../TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="../TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="../TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="../TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="../USVString.html"><code>USVString</code></a></li><li><a href="../UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="../XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../Document_Object_Model.html">Document Object Model</a></strong></li><li><strong><a href="../Document.html"><code>Document</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="Returns the currently focused element, that is, the element that will get keystroke events if the user types any. This attribute is read only." href="activeElement.html"><code>activeElement</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="Returns or sets the color of an active link in the document body. A link is active during the time between mousedown and mouseup events." href="alinkColor.html"><code>alinkColor</code></a></li><li><a title="anchors returns a list of all of the anchors in the document." href="anchors.html"><code>anchors</code></a></li><li><a title="applets returns an ordered list of the applets within a document." href="applets.html"><code>applets</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="document.async can be set to indicate whether a document.load call should be an asynchronous or synchronous request. true is the default value, indicating that documents should be loaded asynchronously." href="async.html"><code>async</code></a></li><li><a title="The deprecated &nbsp;bgColor property gets or sets the background color of the current document." href="bgColor.html"><code>bgColor</code></a></li><li><a title="Returns the &lt;body&gt; or &lt;frameset&gt; node of the current document, or null if no such element exists." href="/en-US/docs/Web/API/Document/body"><code>body</code></a></li><li><a title="The Document.characterSet read-only property returns the character encoding of the current document.&nbsp;The character encoding is the character set used for rendering the document, which may be different from the encoding specified by the page. (The user can override the encoding.)." href="characterSet.html"><code>characterSet</code></a></li><li><a title="The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element." href="../ParentNode/childElementCount.html"><code>childElementCount</code></a></li><li><a title="Node.children&nbsp;is a read-only property that returns a live HTMLCollection of the&nbsp;child elements of Node." href="../ParentNode/children.html"><code>children</code></a></li><li><a title="Indicates whether the document is rendered in Quirks mode or Standards mode." href="compatMode.html"><code>compatMode</code></a></li><li><a title="Returns the MIME type that the document is being rendered as.&nbsp; This may come from HTTP headers or other sources of MIME information, and might be affected by automatic type conversions performed by either the browser or extensions." href="contentType.html"><code>contentType</code></a></li><li><a title="Returns the &lt;script&gt; element whose script is currently being processed." href="/en-US/docs/Web/API/Document/currentScript"><code>currentScript</code></a></li><li><a title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available." href="defaultView.html"><code>defaultView</code></a></li><li><a title="document.designMode controls whether the entire document is editable. Valid values are &quot;on&quot; and &quot;off&quot;.&nbsp;According to the specification, this property is meant to default to &quot;off&quot;. Firefox follows this standard. The earlier versions of Chrome and IE default to &quot;inherit&quot;. Starting in Chrome 43, the default is &quot;off&quot; and &quot;inherit&quot; is no longer supported.&nbsp;In IE6-10, the value is capitalized." href="designMode.html"><code>designMode</code></a></li><li><a title="The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right." href="dir.html"><code>dir</code></a></li><li><a title="Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType." href="doctype.html"><code>doctype</code></a></li><li><a title="The Document.documentElement read-only property returns the Element that is the root element of the document (for example, the &lt;html&gt; element for HTML documents)." href="/en-US/docs/Web/API/Document/documentElement"><code>documentElement</code></a></li><li><a title="The documentURI property of the Document interface returns the document location as a string." href="documentURI.html"><code>documentURI</code></a></li><li><a title="The Document.documentURIObject read-only property returns an nsIURI object representing the URI of the document." href="documentURIObject.html"><code>documentURIObject</code></a></li><li><a title="Gets/sets the domain portion of the origin of the current document, as used by the same origin policy." href="domain.html"><code>domain</code></a></li><li><a title="This should return the DOMConfiguration for the document." href="domConfig.html"><code>domConfig</code></a></li><li><a title="embeds returns a list of the embedded OBJECTS within the current document." href="embeds.html"><code>embeds</code></a></li><li><a title="fgColor gets/sets the foreground color, or text color, of the current document." href="fgColor.html"><code>fgColor</code></a></li><li><a title="The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements." href="../ParentNode/firstElementChild.html"><code>firstElementChild</code></a></li><li><a title="forms returns a collection (an HTMLCollection) of the &lt;form&gt; elements within the current document." href="/en-US/docs/Web/API/Document/forms"><code>forms</code></a></li><li><a title="The Document.fullscreen read-only property reports whether or not the document is currently displaying content in fullscreen mode." href="fullscreen.html"><code>fullscreen</code></a></li><li><a title="The Document.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use." href="fullscreenElement.html"><code>fullscreenElement</code></a></li><li><a title="The Document.fullscreenEnabled read-only property returns a Boolean that reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set." href="/en-US/docs/Web/API/Document/fullscreenEnabled"><code>fullscreenEnabled</code></a></li><li><a title="Returns the &lt;head&gt; element of the current document. If there are more than one &lt;head&gt; elements, the first one is returned." href="/en-US/docs/Web/API/Document/head"><code>head</code></a></li><li><a title="Returns the height of the document object. In most cases, this is equal to the &lt;body&gt; element of the current document." href="/en-US/docs/Web/API/Document/height"><code>height</code></a></li><li><a title="The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not." href="hidden.html"><code>hidden</code></a></li><li><a title="document.images returns a collection of the images in the current HTML document." href="images.html"><code>images</code></a></li><li><a title="Returns a DOMImplementation object associated with the current document." href="implementation.html"><code>implementation</code></a></li><li><a title="The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements." href="../ParentNode/lastElementChild.html"><code>lastElementChild</code></a></li><li><a title="Returns a string containing the date and time on which the current document was last modified." href="lastModified.html"><code>lastModified</code></a></li><li><a title="Returns the last enabled style sheet set; this property's value changes whenever the document.selectedStyleSheetSet property is changed." href="lastStyleSheetSet.html"><code>lastStyleSheetSet</code></a></li><li><a title="linkColor gets/sets the color of links within the document." href="linkColor.html"><code>linkColor</code></a></li><li><a title="The links property returns a collection of all &lt;area&gt; elements and &lt;a&gt; elements in a document with a value for the href attribute." href="/en-US/docs/Web/API/Document/links"><code>links</code></a></li><li><a title="The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL." href="location.html"><code>location</code></a></li><li><a title="Indicates whether or not the document is a synthetic one; that is, a document representing a standalone image, video, audio, or the like." href="mozSyntheticDocument.html"><code>mozSyntheticDocument</code></a></li><li><a title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)" href="../GlobalEventHandlers/onabort.html"><code>onabort</code></a></li><li><a title="Fired when a static &lt;script&gt;&nbsp;element &nbsp;finishes executing its script.&nbsp;Does not fire if the element is added dynamically, eg with appendChild()." href="/en-US/docs/Web/API/Document/onafterscriptexecute"><code>onafterscriptexecute</code></a></li><li><a title="An event handler for the animationcancel event. This event is sent when a CSS Animation unexpectedly aborts (in other words, any time it stops running without sending an animationend event), such as when the animation-name is changed such that the animation is removed, or when the animating node is hidden—either directly or because any of its containing nodes are hidden)—using CSS." href="../GlobalEventHandlers/onanimationcancel.html"><code>onanimationcancel</code></a></li><li><a title="An event handler for the animationend event. This event is sent when a CSS Animation reaches the end of its active period (which is calculated as (animation-duration * animation-iteration-count) + animation-delay." href="../GlobalEventHandlers/onanimationend.html"><code>onanimationend</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step." href="../GlobalEventHandlers/onanimationiteration.html"><code>onanimationiteration</code></a></li><li><a title="Fired when the code in a &lt;script&gt;&nbsp;element declared in an HTML document&nbsp;is about to start executing. Does not fire if the element is added dynamically, eg with appendChild()." href="/en-US/docs/Web/API/Document/onbeforescriptexecute"><code>onbeforescriptexecute</code></a></li><li><a title="The onblur property returns the onBlur event handler code, if any, that exists on the current element." href="../GlobalEventHandlers/onblur.html"><code>onblur</code></a></li><li><a title="The onchange property sets and returns the event handler for the change event." href="../GlobalEventHandlers/onchange.html"><code>onchange</code></a></li><li><a title="The onclick property returns the click event handler code on the current element." href="../GlobalEventHandlers/onclick.html"><code>onclick</code></a></li><li><a title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)" href="../GlobalEventHandlers/onclose.html"><code>onclose</code></a></li><li><a title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute." href="../GlobalEventHandlers/oncontextmenu.html"><code>oncontextmenu</code></a></li><li><a title="The ondblclick property returns the onDblClick event handler code on the current element." href="../GlobalEventHandlers/ondblclick.html"><code>ondblclick</code></a></li><li><a title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:" href="../GlobalEventHandlers/onerror.html"><code>onerror</code></a></li><li><a title="The onfocus property returns the onFocus event handler code on the current element." href="../GlobalEventHandlers/onfocus.html"><code>onfocus</code></a></li><li><a title="The Document.onfullscreenchange property is an event handler for the fullscreenchange event that is fire when a document goes in or out of the fullscreen mode." href="onfullscreenchange.html"><code>onfullscreenchange</code></a></li><li><a title="The Document.onfullscreenerror property is an event handler for the fullscreenchange event that is fire when a document goes that cannot go in fullscreen mode, even it has been requested." href="onfullscreenerror.html"><code>onfullscreenerror</code></a></li><li><a title="An event handler for the input event on the window.&nbsp;The input event is raised when an &lt;input&gt; element value changes." href="/en-US/docs/Web/API/GlobalEventHandlers/oninput"><code>oninput</code></a></li><li><a title="The onkeydown property returns the onKeyDown event handler code on the current element." href="../GlobalEventHandlers/onkeydown.html"><code>onkeydown</code></a></li><li><a title="The onkeypress property sets and returns the onKeyPress event handler code for the current element." href="../GlobalEventHandlers/onkeypress.html"><code>onkeypress</code></a></li><li><a title="The onkeyup property returns the onKeyUp event handler code for the current element." href="../GlobalEventHandlers/onkeyup.html"><code>onkeyup</code></a></li><li><a title="An event handler for the load event of a window." href="../GlobalEventHandlers/onload.html"><code>onload</code></a></li><li><a title="The onmousedown property returns the onmousedown event handler code on the current element." href="../GlobalEventHandlers/onmousedown.html"><code>onmousedown</code></a></li><li><a title="The onmousemove property returns the mousemove event handler code on the current element." href="../GlobalEventHandlers/onmousemove.html"><code>onmousemove</code></a></li><li><a title="The onmouseout property returns the onMouseOut event handler code on the current element." href="../GlobalEventHandlers/onmouseout.html"><code>onmouseout</code></a></li><li><a title="The onmouseover property returns the onMouseOver event handler code on the current element." href="../GlobalEventHandlers/onmouseover.html"><code>onmouseover</code></a></li><li><a title="The onmouseup property returns the onMouseUp event handler code on the current element." href="../GlobalEventHandlers/onmouseup.html"><code>onmouseup</code></a></li><li><a title="This event handler is called when an offline is fired on body and bubbles up, when navigator.onLine property changes and becomes false." href="onoffline.html"><code>onoffline</code></a></li><li><a title="&quot;online&quot; event is fired on the &lt;body&gt; of each page when the browser switches between online and offline mode. Additionally, the events bubble up from document.body, to document, ending at window. Both events are non-cancellable (you can't prevent the user from coming online, or going offline)." href="/en-US/docs/Web/API/Document/ononline"><code>ononline</code></a></li><li><a title="A global event handler for the pointercancel event." href="../GlobalEventHandlers/onpointercancel.html"><code>onpointercancel</code></a></li><li><a title="A global event handler for the pointerdown event." href="../GlobalEventHandlers/onpointerdown.html"><code>onpointerdown</code></a></li><li><a title="A global event handler for the pointerenter event." href="../GlobalEventHandlers/onpointerenter.html"><code>onpointerenter</code></a></li><li><a title="A global event handler for the pointerleave event." href="../GlobalEventHandlers/onpointerleave.html"><code>onpointerleave</code></a></li><li><a title="A global event handler for the pointermove event." href="../GlobalEventHandlers/onpointermove.html"><code>onpointermove</code></a></li><li><a title="A global event handler for the pointerout event." href="../GlobalEventHandlers/onpointerout.html"><code>onpointerout</code></a></li><li><a title="A global event handler for the pointerover event." href="../GlobalEventHandlers/onpointerover.html"><code>onpointerover</code></a></li><li><a title="A global event handler for the pointerup event." href="../GlobalEventHandlers/onpointerup.html"><code>onpointerup</code></a></li><li><a title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received." href="../GlobalEventHandlers/onreset.html"><code>onreset</code></a></li><li><a title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received." href="../GlobalEventHandlers/onresize.html"><code>onresize</code></a></li><li><a title="An event handler for scroll events on&nbsp;element." href="../GlobalEventHandlers/onscroll.html"><code>onscroll</code></a></li><li><a title="An event handler for the select event on the window." href="../GlobalEventHandlers/onselect.html"><code>onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The Document.onselectionchange property represents the event handler that is called when a selectionchange event reaches this object." href="onselectionchange.html"><code>onselectionchange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The GlobalEventHandlers.onselectstart property represents the event handler that is called when a selectstart event reaches this object." href="../GlobalEventHandlers/onselectstart.html"><code>onselectstart</code></a></li><li><a title="An event handler for the submit event on the window." href="../GlobalEventHandlers/onsubmit.html"><code>onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="../GlobalEventHandlers/ontouchcancel.html"><code>ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="../GlobalEventHandlers/GlobalEventHanders.html"><code>ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="../GlobalEventHandlers/ontouchstart.html"><code>ontouchstart</code></a></li><li><a title="An event handler for the transitionend event. This event is sent when a CSS transition completes." href="../GlobalEventHandlers/ontransitionend.html"><code>ontransitionend</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The Document.origin read-only property returns the document's origin. In most cases, this property is equivalent to document.defaultView.location.origin." href="origin.html"><code>origin</code></a></li><li><a title="Returns an HTMLCollection object containing one or more HTMLEmbedElements or null which represent the &lt;embed&gt; elements in the current document." href="/en-US/docs/Web/API/Document/plugins"><code>plugins</code></a></li><li><a title="The pointerLockElement property provides the element set as the target for mouse events while the pointer is locked. It is null if lock is pending, pointer is unlocked, or the target is in another document." href="pointerLockElement.html"><code>pointerLockElement</code></a></li><li><a title="When a popup attached via the popup or context attributes is opened, the XUL document's popupNode property is set to the node that was clicked on. This will be the target of the mouse event that activated the popup. If the popup was opened via the keyboard, the popup node may be set to null. Typically, this property will be checked during a popupshowing event handler for a context menu to initialize the menu based on the context." href="popupNode.html"><code>popupNode</code></a></li><li><a title="Returns the preferred style sheet set as set by the page author." href="preferredStyleSheetSet.html"><code>preferredStyleSheetSet</code></a></li><li><a title="The Document.readyState property of a document describes the loading state of the document." href="readyState.html"><code>readyState</code></a></li><li><a title="Returns the URI of the page that linked to this page." href="referrer.html"><code>referrer</code></a></li><li><a title="Returns a list of the &lt;script&gt; elements in the document. The returned object is an HTMLCollection." href="/en-US/docs/Web/API/Document/scripts"><code>scripts</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document." href="scrollingElement.html"><code>scrollingElement</code></a></li><li><a title="Indicates the name of the style sheet set that's currently in use." href="selectedStyleSheetSet.html"><code>selectedStyleSheetSet</code></a></li><li><a title="The Document.styleSheets read-only property returns a StyleSheetList of CSSStyleSheet objects for stylesheets explicitly linked into or embedded in a document." href="styleSheets.html"><code>styleSheets</code></a></li><li><a title="Returns a live list of all of the currently-available style sheet sets." href="styleSheetSets.html"><code>styleSheetSets</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of&nbsp;DocumentTimeline that is automatically created on page load." href="timeline.html"><code>timeline</code></a></li><li><a title="Gets or sets the title of the document." href="title.html"><code>title</code></a></li><li><a title="Returns the node which is the target of the current tooltip." href="tooltipNode.html"><code>tooltipNode</code></a></li><li><a title="The URL&nbsp;read-only property of the Document interface returns the document location as a string." href="URL.html"><code>URL</code></a></li><li><a title="The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering. Possible values are:" href="visibilityState.html"><code>visibilityState</code></a></li><li><a title="Gets/sets the color of links that the user has visited in the document." href="vlinkColor.html"><code>vlinkColor</code></a></li><li><a title="Returns the width of the &lt;body&gt; element of the current document in pixels." href="/en-US/docs/Web/API/Document/width"><code>width</code></a></li><li><a title="Returns the encoding as determined by the XML declaration. Should be null if unspecified or unknown." href="xmlEncoding.html"><code>xmlEncoding</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="Returns the version number as specified in the XML declaration (e.g., &lt;?xml version=&quot;1.0&quot;?&gt;) or &quot;1.0&quot; if the declaration is absent." href="/en-US/docs/Web/API/Document/xmlVersion"><code>xmlVersion</code></a></s></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a title="Adopts a node from an external document. The node and its subtree is removed from the document it's in (if any), and its ownerDocument is changed to the current document. The node can then be inserted into the current document." href="adoptNode.html"><code>adoptNode()</code></a></li><li><a title="The ParentNode.append method inserts a set of Node objects or DOMString objects after the last child of the ParentNode. DOMString objects are inserted as equivalent Text nodes." href="../ParentNode/append.html"><code>append()</code></a></li><li><a title="This method is used to retrieve the caret position in a document based on two coordinates. A CaretPosition is returned, containing the found DOM node and the character offset in that node." href="caretPositionFromPoint.html"><code>caretPositionFromPoint()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>caretRangeFromPoint()</code></em></li><li><a title="This method used to clear the whole specified document in early (pre-1.0) versions of Mozilla." href="clear.html"><code>clear()</code></a></li><li><a title="The document.close() method finishes writing to a document, opened with document.open()." href="close.html"><code>close()</code></a></li><li><a title="The Document.createAttribute() method creates a new attribute node, and returns it. The object created a node implementing the Attr interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner." href="createAttribute.html"><code>createAttribute()</code></a></li><li><a title="createCDATASection() creates a new CDATA section node, and returns it." href="createCDATASection.html"><code>createCDATASection()</code></a></li><li><a title="createComment() creates a new comment node, and returns it." href="createComment.html"><code>createComment()</code></a></li><li><a title="Creates a new empty DocumentFragment." href="createDocumentFragment.html"><code>createDocumentFragment()</code></a></li><li><a title="In an HTML document, the Document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized. In a XUL document, it creates the specified XUL element. In other documents, it creates an element with a null namespace URI." href="createElement.html"><code>createElement()</code></a></li><li><a title="Creates an element with the specified namespace URI and qualified name." href="createElementNS.html"><code>createElementNS()</code></a></li><li><a title="Prior to Gecko&nbsp;7.0 this method showed up as present, due to bug bug&nbsp;9850, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using Unicode escape sequences or fromCharCode() as necessary." href="createEntityReference.html"><code>createEntityReference()</code></a></li><li><a title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent." href="createEvent.html"><code>createEvent()</code></a></li><li><a title="This method compiles an XPathExpression which can then be used for (repeated) evaluations." href="createExpression.html"><code>createExpression()</code></a></li><li><a title="Returns a new NodeIterator object." href="createNodeIterator.html"><code>createNodeIterator()</code></a></li><li><a title="Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node." href="createNSResolver.html"><code>createNSResolver()</code></a></li><li><a title="createProcessingInstruction() creates a new processing instruction node, and returns it." href="createProcessingInstruction.html"><code>createProcessingInstruction()</code></a></li><li><a title="Returns a new Range object." href="createRange.html"><code>createRange()</code></a></li><li><a title="Creates a new Text node." href="createTextNode.html"><code>createTextNode()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="This method creates and returns a new Touch object." href="createTouch.html"><code>createTouch()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="This method creates and returns a new TouchList object." href="createTouchList.html"><code>createTouchList()</code></a></li><li><a title="The Document.createTreeWalker() creator method returns a newly created TreeWalker object." href="createTreeWalker.html"><code>createTreeWalker()</code></a></li><li><a title="The elementFromPoint() method of the Document interface returns the topmost element at the specified coordinates." href="elementFromPoint.html"><code>elementFromPoint()</code></a></li><li><a title="Enables the style sheets matching the specified name in the current style sheet set, and disables all other style sheets (except those without a title, which are always enabled)." href="enableStyleSheetsForSet.html"><code>enableStyleSheetsForSet()</code></a></li><li><a title="Returns an XPathResult based on an XPath expression and other given parameters." href="evaluate.html"><code>evaluate()</code></a></li><li><a title="When an HTML document has been switched to designMode, the document object exposes the execCommand method which allows one to run commands to manipulate the contents of the editable region. Most commands affect the document's selection (bold, italics, etc.), while others insert new elements (adding a link) or affect an entire line (indenting). When using contentEditable, calling execCommand() will affect the currently active editable element." href="execCommand.html"><code>execCommand()</code></a></li><li><a title="The Document.exitFullscreen() is a method that takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its Element.requestFullscreen() method." href="exitFullscreen.html"><code>exitFullscreen()</code></a></li><li><a title="The exitPointerLock asynchronously releases a pointer lock previously requested through Element.requestPointerLock." href="exitPointerLock.html"><code>exitPointerLock()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The getAnimations()&nbsp;method of the Document interface returns an array&nbsp;of all Animation objects currently in effect whose target elements are descendants of the document. This array includes CSS Animations, CSS Transitions, and Web Animations." href="getAnimations.html"><code>getAnimations()</code></a></li><li><a title="Returns a boxObject (x, y, width, height) for a specified element." href="getBoxObjectFor.html"><code>getBoxObjectFor()</code></a></li><li><a title="Returns a reference to the element by its ID; the ID is a string which can be used to identify the element; it can be established using the id attribute in HTML, or from script." href="getElementById.html"><code>getElementById()</code></a></li><li><a title="Returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names." href="getElementsByClassName.html"><code>getElementsByClassName()</code></a></li><li><a title="Returns a nodelist collection with a given name in the (X)HTML document." href="getElementsByName.html"><code>getElementsByName()</code></a></li><li><a title="Returns an HTMLCollection of elements with the given tag name." href="getElementsByTagName.html"><code>getElementsByTagName()</code></a></li><li><a title="Returns a list of elements with the given tag name belonging to the given namespace. The complete document is searched, including the root node." href="getElementsByTagNameNS.html"><code>getElementsByTagNameNS()</code></a></li><li><a title="This method functions identically to the Window.getSelection() method; it returns a Selection object representing the text currently selected in the document." href="getSelection.html"><code>getSelection()</code></a></li><li><a title="false if the active element in the document has no focus; true if the active element in the document has focus." href="hasFocus.html"><code>hasFocus()</code></a></li><li><a title="Creates a copy of a node from an external document that can be inserted into the current document." href="importNode.html"><code>importNode()</code></a></li><li><a title="The loadOverlay() method loads a XUL overlay and merges it with the current document, notifying an observer when the merge is complete." href="loadOverlay.html"><code>loadOverlay()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="Changes the element being used as the CSS&nbsp;background for a background with a given background element ID." href="mozSetImageElement.html"><code>mozSetImageElement()</code></a></li><li><a title="The Document.open() method opens a document for writing." href="open.html"><code>open()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The ParentNode.prepend method inserts a set of Node objects or DOMString objects before the first child of the ParentNode. DOMString objects are inserted as equivalent Text nodes." href="../ParentNode/prepend.html"><code>prepend()</code></a></li><li><a title="The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser." href="queryCommandEnabled.html"><code>queryCommandEnabled()</code></a></li><li><a title="The Document.queryCommandSupported() method reports whether or not the specified editor command is supported by the browser." href="queryCommandSupported.html"><code>queryCommandSupported()</code></a></li><li><a title="Returns the first Element within the document (using depth-first pre-order traversal of the document's nodes|by first element in document markup and iterating through sequential nodes by order of amount of child nodes) that matches the specified group of selectors." href="querySelector.html"><code>querySelector()</code></a></li><li><a title="Returns a list of the elements within the document (using depth-first pre-order traversal of the document's nodes) that match the specified group of selectors. The object returned is a NodeList." href="querySelectorAll.html"><code>querySelectorAll()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The document.registerElement() method registers a new custom element in the browser and returns a constructor for the new element." href="registerElement.html"><code>registerElement()</code></a></li><li><a title="Releases mouse capture if it's currently enabled on an element within this document. Enabling mouse capture on an element is done by calling element.setCapture()." href="releaseCapture.html"><code>releaseCapture()</code></a></li><li><a title="Writes a string of text to a document stream opened by document.open()." href="write.html"><code>write()</code></a></li><li><a title="Writes a string of text followed by a newline character to a document." href="writeln.html"><code>writeln()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for DOM</strong></a><ol><li><a href="../Attr.html"><code>Attr</code></a></li><li><a href="../ByteString.html"><code>ByteString</code></a></li><li><a href="../CDATASection.html"><code>CDATASection</code></a></li><li><a href="../CSSPrimitiveValue.html"><code>CSSPrimitiveValue</code></a></li><li><a href="../CSSValue.html"><code>CSSValue</code></a></li><li><a href="../CSSValueList.html"><code>CSSValueList</code></a></li><li><a href="../CharacterData.html"><code>CharacterData</code></a></li><li><a href="../ChildNode.html"><code>ChildNode</code></a></li><li><a href="../Comment.html"><code>Comment</code></a></li><li><a href="../CustomEvent.html"><code>CustomEvent</code></a></li><li><a href="../DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="../DOMError.html"><code>DOMError</code></a></li><li><a href="../DOMErrorHandler.html"><code>DOMErrorHandler</code></a></li><li><a href="../DOMException.html"><code>DOMException</code></a></li><li><a href="../DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="../DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="../DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="../DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="../DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="../DOMObject.html"><code>DOMObject</code></a></li><li><a href="../DOMParser.html"><code>DOMParser</code></a></li><li><a href="../DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="../DOMRect.html"><code>DOMRect</code></a></li><li><a href="../DOMString.html"><code>DOMString</code></a></li><li><a href="../DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="../DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="../DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="../DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="../DocumentType.html"><code>DocumentType</code></a></li><li><a href="../Element.html"><code>Element</code></a></li><li><a href="../ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="../Entity.html"><code>Entity</code></a></li><li><a href="../EntityReference.html"><code>EntityReference</code></a></li><li><a href="../Event.html"><code>Event</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li><li><a href="../HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="../MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="../NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="../NodeList.html"><code>NodeList</code></a></li><li><a href="../NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="../ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="../PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="../Range.html"><code>Range</code></a></li><li><a href="../Text.html"><code>Text</code></a></li><li><a href="../TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="../TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="../TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="../TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="../TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="../USVString.html"><code>USVString</code></a></li><li><a href="../UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="../XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -713,12 +746,12 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -726,9 +759,8 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -745,63 +777,38 @@ for (i=0 ; i &lt; paragraphs.length; i++) {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/Document/caretRangeFromPoint$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/document/caretRangeFromPoint by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:34:21 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/document/caretRangeFromPoint by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:05:23 GMT -->
 </body></html>

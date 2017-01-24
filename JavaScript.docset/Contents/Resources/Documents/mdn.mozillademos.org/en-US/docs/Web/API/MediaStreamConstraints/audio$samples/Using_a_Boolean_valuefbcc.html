@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaStreamConstraints/audio$samples/Using_a_Boolean_value?revision=1131639 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:55:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            body {
+  font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+audio {
+  margin-top: 20px;
+  border: 1px solid black;
+  width: 160px;
+}
+
+.button {
+  cursor: pointer;
+  width: 160px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <p>Click the start button below to begin the demonstration.</p>
+<div id="startButton" class="button">
+  Start
+</div>
+<audio id="audio" autoplay controls></audio><br>
+<div id="log"></div>
+        
+        
+            <script type="text/javascript">
+                let audioElement = document.getElementById("audio");
+let logElement = document.getElementById("log");
+
+function log(msg) {
+ logElement.innerHTML += msg + "<br>";
+} document.getElementById("startButton").addEventListener("click", function() {
+  navigator.mediaDevices.getUserMedia({
+    audio: true
+  }).then(stream => audioElement.srcObject = stream)
+    .catch(err => log(err.name + ": " + err.message));
+}, false);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaStreamConstraints/audio$samples/Using_a_Boolean_value?revision=1131639 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:55:39 GMT -->
+</html>

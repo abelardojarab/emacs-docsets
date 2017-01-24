@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Math$samples/Playable_code?revision=1148816 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <canvas id="canvas" width="400" height="250" class="playable-canvas"></canvas>
+<p>The rectangle is 50px wide and 50px high.</p>
+<textarea id="code" class="playable-code" style="height: 150px;">
+var x = 50;
+var y = 50;
+
+// Edit the two lines below here ONLY
+x = 50;
+y = 50;
+
+ctx.fillStyle = "green";
+ctx.fillRect(10, 10, x, y);
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset" />
+</div>
+        
+        
+            <script type="text/javascript">
+                var canvas = document.getElementById("canvas");
+var para = document.querySelector("p");
+var ctx = canvas.getContext("2d");
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
+var code = textarea.value;
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  eval(textarea.value);
+  para.textContent = 'The rectangle is ' + x + 'px wide and ' + y + 'px high.';
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  drawCanvas();
+});
+
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Math$samples/Playable_code?revision=1148816 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+</html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:37:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:15:11 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,6 +69,8 @@
     
       <link rel="alternate" hreflang="fr" href="../../../../../fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events.html" title="Création et déclenchement d'événements">
     
+      <link rel="alternate" hreflang="ja" href="../../../../../ja/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="Creating and triggering events">
+    
       <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/Guide/Events/Создание_и_вызов_событий" title="Создание и вызов событий">
     
       <link rel="alternate" hreflang="zh-CN" href="../../../../../zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="创建和触发 events">
@@ -90,6 +91,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -105,10 +113,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -158,8 +166,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -175,9 +183,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -194,34 +200,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FGuide%2FEvents%2FCreating_and_triggering_events" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FGuide%2FEvents%2FCreating_and_triggering_events" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FGuide%2FEvents%2FCreating_and_triggering_events" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -231,18 +223,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -253,10 +247,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -270,8 +261,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -310,24 +301,28 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="../../../../../bn-BD/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="ইভেন্ট তৈরি এবং ট্রিগার করা">বাংলা (বাংলাদেশ)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/Guide/DOM/Events/Creacion_y_Activación_Eventos" title="Creación y activación de eventos (Event)">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events.html" title="Création et déclenchement d'événements">Français</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../bn-BD/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="Bengali (Bangladesh)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/Guide/Events/Создание_и_вызов_событий" title="Создание и вызов событий">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/Guide/DOM/Events/Creacion_y_Activación_Eventos" title="Spanish">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="创建和触发 events">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events.html" title="French">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="建立或觸發事件">正體中文 (繁體)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../ja/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/Guide/Events/Создание_и_вызов_событий" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events.html" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
                 
               
 
@@ -339,7 +334,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -350,7 +347,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -402,13 +398,23 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/pawlufelice" title="View profile: pawlufelice">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="pawlufelice" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">pawlufelice</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/deebloo" title="View profile: deebloo">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="deebloo" data-src="../../../../../../secure.gravatar.com/avatar/2e71e8cede9321436dacbec35d85dc456c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">deebloo</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Nickolay" title="View profile: Nickolay">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Nickolay" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Nickolay</noscript></a>
                 </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Peter_V" title="View profile: Peter_V">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Peter_V" data-src="../../../../../../secure.gravatar.com/avatar/0d5ab0b99a4219b8d9e3f0f3416eb3056c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Peter_V</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Peter_V" data-src="../../../../../../secure.gravatar.com/avatar/0d5ab0b99a4219b8d9e3f0f3416eb3056c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Peter_V</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -421,12 +427,12 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="matajm" data-src="../../../../../../secure.gravatar.com/avatar/86a5f43adbde2f2f09648c217ad6cc776c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">matajm</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/swrobel" title="View profile: swrobel">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="swrobel" data-src="../../../../../../secure.gravatar.com/avatar/04ed2b23acc1400315dd1fb5f364b0656c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">swrobel</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
@@ -608,7 +614,7 @@ elem.addEventListener('build', function (e) { ... }, false);
 // Dispatch the event.
 elem.dispatchEvent(event);</pre>
 
-<p>This constructor is supported in most modern browsers (with Internet Explorer being the exception). For a more verbose approach (which works with Internet Explorer), see <a href="#The_old-fashioned_way" title="#The_old-fashioned_way">the old-fashioned way</a> below.</p>
+<p>This constructor is supported in most modern browsers (with Internet Explorer being the exception). For a more verbose approach (which works with Internet Explorer), see <a title="#The_old-fashioned_way" href="#The_old-fashioned_way">the old-fashioned way</a> below.</p>
 
 <h3 id="Adding_custom_data_–_CustomEvent()">Adding custom data – CustomEvent()</h3>
 
@@ -655,17 +661,17 @@ elem.dispatchEvent(event);
     'cancelable': true
   });
   var cb = document.getElementById('checkbox'); 
-  var canceled =&nbsp;!cb.dispatchEvent(event);
-  if (canceled) {
+  var cancelled =&nbsp;!cb.dispatchEvent(event);
+  if (cancelled) {
     // A handler called preventDefault.
-    alert("canceled");
+    alert("cancelled");
   } else {
     // None of the handlers called preventDefault.
-    alert("not canceled");
+    alert("not cancelled");
   }
 }</pre>
 
-<h2 name="Browser_compatibility" id="Browser_compatibility" style="line-height: 30px; font-size: 2.14285714285714rem;">Browser compatibility</h2>
+<h2 style="line-height: 30px; font-size: 2.14285714285714rem;" name="Browser_compatibility" id="Browser_compatibility">Browser compatibility</h2>
 
 <p></p><div class="htab"> 
     <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
@@ -692,7 +698,7 @@ elem.dispatchEvent(event);
    <td>15</td>
    <td>11</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>11</td>
    <td>11.60</td>
    <td>6</td>
   </tr>
@@ -726,33 +732,14 @@ elem.dispatchEvent(event);
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="../../API/Document/createEvent.html" title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent."><code>document.createEvent()</code></a></li>
- <li><a href="../../API/Event/initEvent.html" title="The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent()."><code>Event.initEvent()</code></a></li>
- <li><a href="../../API/EventTarget/dispatchEvent.html" title="Dispatches an Event at the specified EventTarget, invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a></li>
- <li><a href="../../API/EventTarget/addEventListener.html" title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)."><code>EventTarget.addEventListener()</code></a></li>
+ <li><a title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent." href="../../API/Document/createEvent.html"><code>document.createEvent()</code></a></li>
+ <li><a title="The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent()." href="../../API/Event/initEvent.html"><code>Event.initEvent()</code></a></li>
+ <li><a title="Dispatches an Event at the specified EventTarget, invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()." href="../../API/EventTarget/dispatchEvent.html"><code>EventTarget.dispatchEvent()</code></a></li>
+ <li><a title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)." href="../../API/EventTarget/addEventListener.html"><code>EventTarget.addEventListener()</code></a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FGuide%2FEvents%2FCreating_and_triggering_events%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Creating+and+triggering+events+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Creating and triggering events on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Creating and triggering events on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FGuide%2FEvents%2FCreating_and_triggering_events%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Creating and triggering events on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -770,9 +757,9 @@ elem.dispatchEvent(event);
       
         <li><a href="../../../tag/DOM.html">DOM</a></li>
       
-        <li><a href="../../../tag/Events-2.html">Events</a></li>
+        <li><a href="../../../tag/Events.html">Events</a></li>
       
-        <li><a href="../../../tag/events.html">events</a></li>
+        <li><a href="../../../tag/events-2.html">events</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide">Guide</a></li>
       
@@ -786,6 +773,10 @@ elem.dispatchEvent(event);
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/pawlufelice">pawlufelice</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/deebloo">deebloo</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Peter_V">Peter_V</a>, 
@@ -848,11 +839,48 @@ elem.dispatchEvent(event);
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Nickolay">Nickolay</a>,
-                      <time datetime="2016-04-02T19:57:42-07:00">Apr 2, 2016, 7:57:42 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/pawlufelice">pawlufelice</a>,
+                      <time datetime="2016-09-22T02:44:51-07:00">Sep 22, 2016, 2:44:51 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -870,12 +898,12 @@ elem.dispatchEvent(event);
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -883,9 +911,8 @@ elem.dispatchEvent(event);
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -894,27 +921,30 @@ elem.dispatchEvent(event);
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/Guide/Events/Creating_and_triggering_events" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/bn-BD/docs/Web/Guide/Events/Creating_and_triggering_events">
-            বাংলা (বাংলাদেশ)
+          <option title="Bengali (Bangladesh)" value="/bn-BD/docs/Web/Guide/Events/Creating_and_triggering_events">
+            বাংলা (বাংলাদেশ) (bn-BD)
           </option>
-          <option value="/es/docs/Web/Guide/DOM/Events/Creacion_y_Activaci%C3%B3n_Eventos">
-            Español
+          <option title="Spanish" value="/es/docs/Web/Guide/DOM/Events/Creacion_y_Activaci%C3%B3n_Eventos">
+            Español (es)
           </option>
-          <option value="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">
-            Français
+          <option title="French" value="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">
+            Français (fr)
           </option>
-          <option value="/ru/docs/Web/Guide/Events/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">
-            Русский
+          <option title="Japanese" value="/ja/docs/Web/Guide/Events/Creating_and_triggering_events">
+            日本語 (ja)
           </option>
-          <option value="/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events">
-            中文 (简体)
+          <option title="Russian" value="/ru/docs/Web/Guide/Events/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%B2%D1%8B%D0%B7%D0%BE%D0%B2_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9">
+            Русский (ru)
           </option>
-          <option value="/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events">
-            正體中文 (繁體)
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events">
+            中文 (简体) (zh-CN)
+          </option>
+          <option title="Chinese (Traditional)" value="/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events">
+            正體中文 (繁體) (zh-TW)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -931,33 +961,38 @@ elem.dispatchEvent(event);
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:37:18 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:15:13 GMT -->
 </body></html>

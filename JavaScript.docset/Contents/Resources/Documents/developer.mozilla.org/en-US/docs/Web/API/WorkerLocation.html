@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerLocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:33:48 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerLocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:09:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -63,6 +62,10 @@
   <link rel="canonical" href="WorkerLocation.html">
 
   
+    
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/WorkerLocation" title="WorkerLocation">
+    
+  
 
   <!-- document-specific social tags -->
   <meta property="og:title" content="WorkerLocation">
@@ -74,6 +77,13 @@
   <meta name="description" content="The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling window.self.location.">
   <meta name="twitter:description" content="The WorkerLocation interface defines the absolute location of the script executed by the Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.location property obtained by calling window.self.location.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +101,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +154,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +171,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +188,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerLocation" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/WorkerLocation" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/WorkerLocation" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerLocation" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerLocation" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +211,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +235,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +249,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WorkerLocation">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,13 +289,17 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
-                <li class="smaller">No translations exist for this article.</li>
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/WorkerLocation" title="French">Français (fr)</a></bdi></li>
+                
               
 
               
@@ -313,7 +310,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +323,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -436,44 +434,44 @@
               <article id="wikiArticle">
                 
                   
-                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
 
-<p>The <strong><code>WorkerLocation</code></strong> interface defines the absolute location of the script executed by the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>. Such an object is initialized for each worker and is available via the <a href="WorkerGlobalScope/location.html" title="The location read-only property of the WorkerGlobalScope interface returns the WorkerLocation associated with the worker. It is a specific location object, mostly a subset of the Location for browsing scopes, but adapted to workers."><code>WorkerGlobalScope.location</code></a> property obtained by calling <code>window.self.location</code>.</p>
+<p>The <strong><code>WorkerLocation</code></strong> interface defines the absolute location of the script executed by the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>. Such an object is initialized for each worker and is available via the <a title="The location read-only property of the WorkerGlobalScope interface returns the WorkerLocation associated with the worker. It is a specific location object, mostly a subset of the Location for browsing scopes, but adapted to workers." href="WorkerGlobalScope/location.html"><code>WorkerGlobalScope.location</code></a> property obtained by calling <code>window.self.location</code>.</p>
 
 <p>This interface is only visible from inside a JavaScript script executed in the context of a Web worker.</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>The <code>WorkerLocation</code> interface doesn't inherit any property, but implements properties defined in the <a href="URLUtilsReadOnly.html" title="The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only non-modifying methods intended to be used on data that cannot be changed."><code>URLUtilsReadOnly</code></a> interface.</em></p>
+<p><em>The <code>WorkerLocation</code> interface doesn't inherit any property, but implements properties defined in the <a title="The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only non-modifying methods intended to be used on data that cannot be changed." href="URLUtilsReadOnly.html"><code>URLUtilsReadOnly</code></a> interface.</em></p>
 
 <dl>
- <dt><a href="URLUtilsReadOnly/href.html" title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL."><code>URLUtilsReadOnly.href</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the whole URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/protocol.html" title="The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'."><code>URLUtilsReadOnly.protocol</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the protocol scheme of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>, including the final <code>':'</code>.</dd>
- <dt><a href="URLUtilsReadOnly/host.html" title="The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the hostname, a ':', and the port of the URL."><code>URLUtilsReadOnly.host</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the host, that is the <em>hostname</em>, a <code>':'</code>, and the <em>port</em> of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/hostname.html" title="The URLUtilsReadOnly.hostname read-only property returns a DOMString containing the domain of the URL."><code>URLUtilsReadOnly.hostname</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the domain of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/origin.html" title="The URLUtilsReadOnly.origin read-only property is a DOMString containing the Unicode serialization of the origin of the represented URL, that is, for http and https, the scheme followed by '://', followed by the domain, followed by ':', followed by the port (the default port, 80 and 443 respectively, if explicitely specified). For URL using file: scheme, the value is browser dependant."><code>URLUtilsReadOnly.origin</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the canonical form of the origin of the specific location.</dd>
- <dt><a href="URLUtilsReadOnly/port.html" title="The URLUtilsReadOnly.port read-only property returns a DOMString containing the port number of the URL."><code>URLUtilsReadOnly.port</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the port number of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/pathname.html" title="The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL."><code>URLUtilsReadOnly.pathname</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing an initial <code>'/'</code> followed by the path of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/search.html" title="The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL."><code>URLUtilsReadOnly.search</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing a <code>'?'</code> followed by the parameters of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
- <dt><a href="URLUtilsReadOnly/hash.html" title="The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded."><code>URLUtilsReadOnly.hash</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Is a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing a <code>'#'</code> followed by the fragment identifier of the URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL." href="URLUtilsReadOnly/href.html"><code>URLUtilsReadOnly.href</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the whole URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'." href="URLUtilsReadOnly/protocol.html"><code>URLUtilsReadOnly.protocol</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the protocol scheme of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>, including the final <code>':'</code>.</dd>
+ <dt><a title="The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the hostname, a ':', and the port of the URL." href="URLUtilsReadOnly/host.html"><code>URLUtilsReadOnly.host</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the host, that is the <em>hostname</em>, a <code>':'</code>, and the <em>port</em> of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.hostname read-only property returns a DOMString containing the domain of the URL." href="URLUtilsReadOnly/hostname.html"><code>URLUtilsReadOnly.hostname</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the domain of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.origin read-only property is a DOMString containing the Unicode serialization of the origin of the represented URL, that is, for http and https, the scheme followed by '://', followed by the domain, followed by ':', followed by the port (the default port, 80 and 443 respectively, if explicitely specified). For URL using file: scheme, the value is browser dependant." href="URLUtilsReadOnly/origin.html"><code>URLUtilsReadOnly.origin</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Returns a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the canonical form of the origin of the specific location.</dd>
+ <dt><a title="The URLUtilsReadOnly.port read-only property returns a DOMString containing the port number of the URL." href="URLUtilsReadOnly/port.html"><code>URLUtilsReadOnly.port</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the port number of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL." href="URLUtilsReadOnly/pathname.html"><code>URLUtilsReadOnly.pathname</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing an initial <code>'/'</code> followed by the path of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL." href="URLUtilsReadOnly/search.html"><code>URLUtilsReadOnly.search</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing a <code>'?'</code> followed by the parameters of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded." href="URLUtilsReadOnly/hash.html"><code>URLUtilsReadOnly.hash</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing a <code>'#'</code> followed by the fragment identifier of the URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>WorkerLocation</code> interface doesn't inherit any method, but implements methods defined in the <a href="URLUtilsReadOnly.html" title="The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only non-modifying methods intended to be used on data that cannot be changed."><code>URLUtilsReadOnly</code></a> interface.</em></p>
+<p><em>The <code>WorkerLocation</code> interface doesn't inherit any method, but implements methods defined in the <a title="The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only non-modifying methods intended to be used on data that cannot be changed." href="URLUtilsReadOnly.html"><code>URLUtilsReadOnly</code></a> interface.</em></p>
 
 <dl>
- <dt><a href="URLUtilsReadOnly/toString.html" title="The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It is a synonym for URLUtilsReadOnly.href."><code>URLUtilsReadOnly.toString()</code></a></dt>
- <dd>Returns a <a href="DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the whole URL of the script executed in the <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>. It is a synonym for <a href="URLUtilsReadOnly/href.html" title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL."><code>URLUtilsReadOnly.href</code></a>.</dd>
+ <dt><a title="The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It is a synonym for URLUtilsReadOnly.href." href="URLUtilsReadOnly/toString.html"><code>URLUtilsReadOnly.toString()</code></a></dt>
+ <dd>Returns a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="DOMString.html"><code>DOMString</code></a> containing the whole URL of the script executed in the <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>. It is a synonym for <a title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL." href="URLUtilsReadOnly/href.html"><code>URLUtilsReadOnly.href</code></a>.</dd>
 </dl>
 
 <h2 id="Specifications">Specifications</h2>
@@ -488,7 +486,7 @@
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://w3c.github.io/workers/#workerlocation" class="external" lang="en" hreflang="en">Web Workers<br><small lang="en-US">The definition of 'WorkerLocation' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://w3c.github.io/workers/#workerlocation" class="external">Web Workers<br><small lang="en-US">The definition of 'WorkerLocation' in that specification.</small></a></td>
    <td><span class="spec-ED">Editor's Draft</span></td>
    <td>Initial definition</td>
   </tr>
@@ -519,7 +517,7 @@
   <tr>
    <td>Basic support</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/3.5" title="Released on 2009-06-30.">3.5</a> (1.9.1)</td>
+   <td><a title="Released on 2009-06-30." href="https://developer.mozilla.org/en-US/Firefox/Releases/3.5">3.5</a> (1.9.1)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -527,7 +525,7 @@
   <tr>
    <td><code>origin</code></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/29" title="Released on 2014-04-29.">29</a> (29)</td>
+   <td><a title="Released on 2014-04-29." href="https://developer.mozilla.org/en-US/Firefox/Releases/29">29</a> (29)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -573,31 +571,12 @@
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>Other Worker-related interfaces: <a href="Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>Worker</code></a>, <a href="WorkerNavigator.html" title="The WorkerNavigator interface represents a subset of the Navigator interface allowed to be accessed from a Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.navigator property obtained by calling window.self.navigator."><code>WorkerNavigator</code></a>, and <a href="WorkerGlobalScope.html" title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop."><code>WorkerGlobalScope</code></a>.</li>
+ <li>Other Worker-related interfaces: <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="Worker.html"><code>Worker</code></a>, <a title="The WorkerNavigator interface represents a subset of the Navigator interface allowed to be accessed from a Worker. Such an object is initialized for each worker and is available via the WorkerGlobalScope.navigator property obtained by calling window.self.navigator." href="WorkerNavigator.html"><code>WorkerNavigator</code></a>, and <a title="The WorkerGlobalScope interface of the Web Workers API is an interface representing the scope of any worker. Workers have no browsing context; this scope contains the information usually conveyed by Window objects — in this case event handlers, the console or the associated WorkerNavigator object. Each WorkerGlobalScope has its own event loop." href="WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a>.</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Using web workers</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerLocation%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+WorkerLocation+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about WorkerLocation on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about WorkerLocation on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerLocation%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about WorkerLocation on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -637,6 +616,43 @@
                   
                 </div>
               
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
             </div>
 
             
@@ -652,7 +668,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="Web_Workers_API.html">Web Workers API</a></strong></li><li><strong><a href="WorkerLocation.html"><code>WorkerLocation</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/hash.html" title="The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded."><code>URLUtilsReadOnly.hash</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/host.html" title="The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the hostname, a ':', and the port of the URL."><code>URLUtilsReadOnly.host</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/hostname.html" title="The URLUtilsReadOnly.hostname read-only property returns a DOMString containing the domain of the URL."><code>URLUtilsReadOnly.hostname</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/href.html" title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL."><code>URLUtilsReadOnly.href</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/origin.html" title="The URLUtilsReadOnly.origin read-only property is a DOMString containing the Unicode serialization of the origin of the represented URL, that is, for http and https, the scheme followed by '://', followed by the domain, followed by ':', followed by the port (the default port, 80 and 443 respectively, if explicitely specified). For URL using file: scheme, the value is browser dependant."><code>URLUtilsReadOnly.origin</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/pathname.html" title="The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL."><code>URLUtilsReadOnly.pathname</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/port.html" title="The URLUtilsReadOnly.port read-only property returns a DOMString containing the port number of the URL."><code>URLUtilsReadOnly.port</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/protocol.html" title="The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'."><code>URLUtilsReadOnly.protocol</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/search.html" title="The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL."><code>URLUtilsReadOnly.search</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="URLUtilsReadOnly/toString.html" title="The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It is a synonym for URLUtilsReadOnly.href."><code>URLUtilsReadOnly.toString()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Workers API</strong></a><ol><li><a href="AbstractWorker.html"><code>AbstractWorker</code></a></li><li><a href="ChromeWorker.html"><code>ChromeWorker</code></a></li><li><a href="DedicatedWorkerGlobalScope.html"><code>DedicatedWorkerGlobalScope</code></a></li><li><a href="ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="SharedWorker.html"><code>SharedWorker</code></a></li><li><a href="SharedWorkerGlobalScope.html"><code>SharedWorkerGlobalScope</code></a></li><li><a href="Worker.html"><code>Worker</code></a></li><li><a href="WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></li><li><a href="WorkerNavigator.html"><code>WorkerNavigator</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="Web_Workers_API.html">Web Workers API</a></strong></li><li><strong><a href="WorkerLocation.html"><code>WorkerLocation</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded." href="URLUtilsReadOnly/hash.html"><code>hash</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the hostname, a ':', and the port of the URL." href="URLUtilsReadOnly/host.html"><code>host</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.hostname read-only property returns a DOMString containing the domain of the URL." href="URLUtilsReadOnly/hostname.html"><code>hostname</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL." href="URLUtilsReadOnly/href.html"><code>href</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.origin read-only property is a DOMString containing the Unicode serialization of the origin of the represented URL, that is, for http and https, the scheme followed by '://', followed by the domain, followed by ':', followed by the port (the default port, 80 and 443 respectively, if explicitely specified). For URL using file: scheme, the value is browser dependant." href="URLUtilsReadOnly/origin.html"><code>origin</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL." href="URLUtilsReadOnly/pathname.html"><code>pathname</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.port read-only property returns a DOMString containing the port number of the URL." href="URLUtilsReadOnly/port.html"><code>port</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'." href="URLUtilsReadOnly/protocol.html"><code>protocol</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL." href="URLUtilsReadOnly/search.html"><code>search</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It is a synonym for URLUtilsReadOnly.href." href="URLUtilsReadOnly/toString.html"><code>toString()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Workers API</strong></a><ol><li><a href="AbstractWorker.html"><code>AbstractWorker</code></a></li><li><a href="ChromeWorker.html"><code>ChromeWorker</code></a></li><li><a href="DedicatedWorkerGlobalScope.html"><code>DedicatedWorkerGlobalScope</code></a></li><li><a href="ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="SharedWorker.html"><code>SharedWorker</code></a></li><li><a href="SharedWorkerGlobalScope.html"><code>SharedWorkerGlobalScope</code></a></li><li><a href="Worker.html"><code>Worker</code></a></li><li><a href="WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></li><li><a href="WorkerNavigator.html"><code>WorkerNavigator</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -676,12 +692,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -689,13 +705,26 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Web/API/WorkerLocation" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="French" value="/fr/docs/Web/API/WorkerLocation">
+            Français (fr)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
   
 
         
@@ -708,63 +737,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/WorkerLocation$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerLocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:33:48 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerLocation by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:09:35 GMT -->
 </body></html>

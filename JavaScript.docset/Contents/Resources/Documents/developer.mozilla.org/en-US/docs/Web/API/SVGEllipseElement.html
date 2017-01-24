@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:10:37 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:06:19 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,10 +69,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement">
   <meta name="twitter:title" content="SVGEllipseElement">
   
-  <meta property="og:description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements, as well as methods to manipulate them.">
-  <meta name="description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements, as well as methods to manipulate them.">
-  <meta name="twitter:description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements, as well as methods to manipulate them.">
+  <meta property="og:description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements.">
+  <meta name="description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements.">
+  <meta name="twitter:description" content="The SVGEllipseElement interface provides access to the properties of ellipse elements.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FSVGEllipseElement" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/SVGEllipseElement" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/SVGEllipseElement" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FSVGEllipseElement" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FSVGEllipseElement" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -370,12 +360,22 @@
           </span>
 
         
-        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/abbycar" title="View profile: abbycar">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="abbycar" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">abbycar</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/essymo" title="View profile: essymo">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="essymo" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">essymo</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="essymo" data-src="../../../../../secure.gravatar.com/avatar/2478214c6915c5d95a2de37706f62b446c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">essymo</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -393,7 +393,7 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
                 </li>
@@ -421,7 +421,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Example" rel="internal">Example</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Methods" rel="internal">Methods</a></li><li><a href="#Example" rel="internal">Example</a><ol><li><a href="#SVG_content" rel="internal">SVG content</a></li><li><a href="#JavaScript_content" rel="internal">JavaScript content</a></li><li><a href="#Result" rel="internal">Result</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -453,37 +453,89 @@
                   
                     <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
-<p>The <strong><code>SVGEllipseElement</code></strong> interface provides access to the properties of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> elements, as well as methods to manipulate them.</p>
+<p>The <strong><code>SVGEllipseElement</code></strong> interface provides access to the properties of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> elements.</p>
+
+<p></p><div id="inheritance_diagram" class="hidden"> 
+ 
+<pre class="brush: html"> 
+  &lt;div id="interfaceDiagram" style="display: inline-block; position: relative; width: 100%; padding-bottom: 23.333333333333332%; vertical-align: middle; overflow: hidden;"&gt;&lt;svg style="display: inline-block; position: absolute; top: 0; left: 0;" viewbox="-50 0 600 140" preserveAspectRatio="xMinYMin meet"&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_top"&gt;&lt;rect x="1" y="1" width="110" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="56" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;EventTarget&lt;/text&gt;&lt;/a&gt;&lt;polyline points="111,25  121,20  121,30  111,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="121" y1="25" x2="151" y2="25" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/Node" target="_top"&gt;&lt;rect x="151" y="1" width="75" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="188.5" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;Node&lt;/text&gt;&lt;/a&gt;&lt;polyline points="226,25  236,20  236,30  226,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="236" y1="25" x2="266" y2="25" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_top"&gt;&lt;rect x="266" y="1" width="75" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="303.5" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;Element&lt;/text&gt;&lt;/a&gt;&lt;polyline points="341,25  351,20  351,30  341,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="351" y1="25" x2="381" y2="25" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/SVGElement" target="_top"&gt;&lt;rect x="381" y="1" width="100" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="431" y="30" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;SVGElement&lt;/text&gt;&lt;/a&gt;&lt;polyline points="481,25  491,20  491,30  481,25" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="491" y1="25" x2="499" y2="25" stroke="#D4DDE4"/&gt;&lt;line x1="499" y1="25" x2="499" y2="90" stroke="#D4DDE4"/&gt;&lt;line x1="499" y1="90" x2="482" y2="90" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement" target="_top"&gt;&lt;rect x="301" y="65" width="180" height="50" fill="#fff" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="391" y="94" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;SVGGraphicsElement&lt;/text&gt;&lt;/a&gt;&lt;polyline points="301,89  291,84  291,94  301,89" stroke="#D4DDE4" fill="none"/&gt;&lt;line x1="291" y1="89" x2="261" y2="89" stroke="#D4DDE4"/&gt;&lt;a xlink:href="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement" target="_top"&gt;&lt;rect x="91" y="65" width="170" height="50" fill="#F4F7F8" stroke="#D4DDE4" stroke-width="2px" /&gt;&lt;text  x="176" y="94" font-size="12px" font-family="Consolas,Monaco,Andale Mono,monospace" fill="#4D4E53" text-anchor="middle" alignment-baseline="middle"&gt;SVGEllipseElement&lt;/text&gt;&lt;/a&gt;&lt;/svg&gt;&lt;/div&gt; 
+</pre> 
+ 
+<pre class="brush: css"> 
+  a:hover text { fill: #0095DD; pointer-events: all;} 
+</pre> 
+ 
+</div> 
+ 
+<iframe id="frame_inheritance_diagram" height="140" src="../../../../../mdn.mozillademos.org/en-US/docs/Web/API/SVGEllipseElement%24samples/inheritance_diagram88df.html?revision=1159028" frameborder="0" width="600" class="live-sample-frame inheritance-diagram-frame"></iframe><p></p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx">cx</a></code>&nbsp;&nbsp;&nbsp; <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></p>
-
-<p>Corresponds to attribute <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx">cx</a></code> on the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</p>
-
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cy">cy</a></code>&nbsp;&nbsp; <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></p>
-
-<p>Corresponds to attribute <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cy">cy</a></code> on the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a>&nbsp; element.</p>
-
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">rx</a></code>&nbsp;&nbsp; <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></p>
-
-<p>Corresponds to attribute <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">rx</a></code> on the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</p>
-
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ry">ry</a></code>&nbsp;&nbsp; <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></p>
-
-<p>Corresponds to attribute <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ry">ry</a></code> on the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element</p>
-
-<p><em>Normative&nbsp;document</em> <a href="http://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGEllipseElement" class="external" title="http://www.w3.org/TR/SVG11/shapes.html#InterfaceSVGEllipseElement">SVG 1.1 (2nd Edition)</a></p>
+<dl>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx">cx</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>This property returns a <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a> reflecting the <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx">cx</a></code> attribute of the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cy">cy</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>This property returns a <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a> reflecting the <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cy">cy</a></code> attribute of the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">rx</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>This property returns a <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a> reflecting the <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx">rx</a></code> attribute of the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</dd>
+ <dt><code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ry">ry</a></code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>This property returns a <a href="SVGAnimatedLength.html" title="The SVGAnimatedLength interface is used for attributes of basic type &lt;length&gt; which can be animated."><code>SVGAnimatedLength</code></a> reflecting the <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ry">ry</a></code> attribute of the given <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse" title="The ellipse element is an SVG basic shape, used to create ellipses based on a center coordinate, and both their x and y radius."><code>&lt;ellipse&gt;</code></a> element.</dd>
+</dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>The <code>SVGEllipseElement</code> interface do not provide any specific methods.</em></p>
+<p><em>The <code>SVGEllipseElement</code> interface does not provide any specific methods.</em></p>
 
 <h2 id="Example">Example</h2>
 
-<pre class="brush: js">&nbsp;</pre>
+<h3 id="SVG_content">SVG content</h3>
 
-<h2 name="Browser_compatibility" id="Browser_compatibility">Browser compatibility</h2>
+<pre class="brush: html">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;ellipse cx="100" cy="100" rx="100" ry="60" id="ellipse"
+      onclick="outputSize();"/&gt; 
+&lt;/svg&gt;</pre>
+
+<h3 id="JavaScript_content">JavaScript content</h3>
+
+<pre class="brush: js">function outputSize() {
+  var ellipse = document.getElementById("ellipse");
+
+  // Outputs "horizontal radius: 100 vertical radius: 60"
+  console.log(
+    'horizontal radius: ' + ellipse.rx.baseVal.valueAsString,
+    'vertical radius: ' + ellipse.ry.baseVal.valueAsString
+  )
+}</pre>
+
+<h3 id="Result">Result</h3>
+
+<p><iframe id="frame_Example" height="220" src="../../../../../mdn.mozillademos.org/en-US/docs/Web/API/SVGEllipseElement%24samples/Example88df.html?revision=1159028" frameborder="0" width="220" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://svgwg.org/svg2-draft/shapes.html#InterfaceSVGEllipseElement" class="external" lang="en" hreflang="en">Scalable Vector Graphics (SVG) 2<br><small lang="en-US">The definition of 'SVGEllipseElement' in that specification.</small></a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
+   <td>No change</td>
+  </tr>
+  <tr>
+   <td><a href="http://www.w3.org/TR/SVG11/#InterfaceSVGEllipseElement" class="external" lang="en" hreflang="en">Scalable Vector Graphics (SVG) 1.1 (Second Edition)<br><small lang="en-US">The definition of 'SVGEllipseElement' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <p></p><div class="htab"> 
     <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
@@ -499,6 +551,7 @@
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -506,6 +559,7 @@
   </tr>
   <tr>
    <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>9.0</td>
@@ -522,6 +576,7 @@
   <tr>
    <th>Feature</th>
    <th>Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Mobile</th>
    <th>Opera Mobile</th>
@@ -530,6 +585,7 @@
   <tr>
    <td>Basic support</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
@@ -550,25 +606,6 @@
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FSVGEllipseElement%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+SVGEllipseElement+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about SVGEllipseElement on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about SVGEllipseElement on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FSVGEllipseElement%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about SVGEllipseElement on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -583,11 +620,7 @@
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/NeedsBrowserCompatibility">NeedsBrowserCompatibility</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/NeedsExample">NeedsExample</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
-      
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Référence">Référence</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/SVG">SVG</a></li>
       
@@ -599,6 +632,10 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/essymo">essymo</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
@@ -615,11 +652,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/essymo">essymo</a>,
-                      <time datetime="2016-04-18T03:54:53-07:00">Apr 18, 2016, 3:54:53 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>,
+                      <time datetime="2016-12-21T14:56:20.620335-08:00">Dec 21, 2016, 2:56:20 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -660,12 +734,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -673,9 +747,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -692,33 +765,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:10:38 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:06:20 GMT -->
 </body></html>

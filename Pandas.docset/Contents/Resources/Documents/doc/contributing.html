@@ -1,0 +1,1083 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Contributing to pandas &#8212; pandas 0.19.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.19.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="pandas 0.19.2 documentation" href="index.html" />
+    <link rel="next" title="Frequently Asked Questions (FAQ)" href="faq.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQ)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<div class="content-wrapper">
+    <div class="content">
+        <div class="document">
+            <div class="sphinxsidebar">
+                <h3>Table Of Contents</h3>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What&#8217;s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing to pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#where-to-start">Where to start?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bug-reports-and-enhancement-requests">Bug reports and enhancement requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#working-with-the-code">Working with the code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#version-control-git-and-github">Version control, Git, and GitHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-with-git">Getting started with Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forking">Forking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-branch">Creating a branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-development-environment">Creating a development environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-windows-development-environment">Creating a Windows development environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-changes">Making changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-the-documentation">Contributing to the documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-pandas-documentation">About the <em>pandas</em> documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-build-the-pandas-documentation">How to build the <em>pandas</em> documentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-the-documentation">Building the documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#building-master-branch-documentation">Building master branch documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-the-code-base">Contributing to the code base</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#code-standards">Code standards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#test-driven-development-code-writing">Test-driven development/code writing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#writing-tests">Writing tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-test-suite">Running the test suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-performance-test-suite">Running the performance test suite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-google-bigquery-integration-tests">Running Google BigQuery Integration Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-vbench-performance-test-suite-phasing-out">Running the vbench performance test suite (phasing out)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#documenting-your-code">Documenting your code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-your-changes-to-pandas">Contributing your changes to <em>pandas</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#committing-your-code">Committing your code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combining-commits">Combining commits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pushing-your-changes">Pushing your changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#review-your-code">Review your code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finally-make-the-pull-request">Finally, make the pull request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-your-merged-branch-optional">Delete your merged branch (optional)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Package overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10min.html">10 Minutes to pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsintro.html">Intro to Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Essential Basic Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Working with Text Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing and Selecting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">MultiIndex / Advanced Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computation.html">Computational tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing_data.html">Working with missing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="groupby.html">Group By: split-apply-combine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merging.html">Merge, join, and concatenate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reshaping.html">Reshaping and Pivot Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeseries.html">Time Series / Date functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timedeltas.html">Time Deltas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">IO Tools (Text, CSV, HDF5, ...)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote_data.html">Remote Data Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancingperf.html">Enhancing Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse.html">Sparse data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gotchas.html">Caveats and Gotchas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="r_interface.html">rpy2 / R interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecosystem.html">pandas Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_r.html">Comparison with R / R libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sql.html">Comparison with SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sas.html">Comparison with SAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html">Release Notes</a></li>
+</ul>
+
+                <h3 style="margin-top: 1.5em;">Search</h3>
+
+                <form class="search" action="search.html" method="get">
+                    <input type="text" name="q" size="18"/>
+                    <input type="submit" value="Go"/>
+                    <input type="hidden" name="check_keywords" value="yes"/>
+                    <input type="hidden" name="area" value="default"/>
+                </form>
+                <p class="searchtip" style="font-size: 90%">
+                    Enter search terms or a module, class or function name.
+                </p>
+
+            </div>
+             
+            <div class="documentwrapper">
+                <div class="bodywrapper">
+                    <div class="body">
+                        
+  <div class="section" id="contributing-to-pandas">
+<span id="contributing"></span><h1>Contributing to pandas<a class="headerlink" href="#contributing-to-pandas" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of contents:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#where-to-start" id="id1">Where to start?</a></li>
+<li><a class="reference internal" href="#bug-reports-and-enhancement-requests" id="id2">Bug reports and enhancement requests</a></li>
+<li><a class="reference internal" href="#working-with-the-code" id="id3">Working with the code</a><ul>
+<li><a class="reference internal" href="#version-control-git-and-github" id="id4">Version control, Git, and GitHub</a></li>
+<li><a class="reference internal" href="#getting-started-with-git" id="id5">Getting started with Git</a></li>
+<li><a class="reference internal" href="#forking" id="id6">Forking</a></li>
+<li><a class="reference internal" href="#creating-a-branch" id="id7">Creating a branch</a></li>
+<li><a class="reference internal" href="#creating-a-development-environment" id="id8">Creating a development environment</a></li>
+<li><a class="reference internal" href="#creating-a-windows-development-environment" id="id9">Creating a Windows development environment</a></li>
+<li><a class="reference internal" href="#making-changes" id="id10">Making changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributing-to-the-documentation" id="id11">Contributing to the documentation</a><ul>
+<li><a class="reference internal" href="#about-the-pandas-documentation" id="id12">About the <em>pandas</em> documentation</a></li>
+<li><a class="reference internal" href="#how-to-build-the-pandas-documentation" id="id13">How to build the <em>pandas</em> documentation</a><ul>
+<li><a class="reference internal" href="#requirements" id="id14">Requirements</a></li>
+<li><a class="reference internal" href="#building-the-documentation" id="id15">Building the documentation</a></li>
+<li><a class="reference internal" href="#building-master-branch-documentation" id="id16">Building master branch documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributing-to-the-code-base" id="id17">Contributing to the code base</a><ul>
+<li><a class="reference internal" href="#code-standards" id="id18">Code standards</a></li>
+<li><a class="reference internal" href="#test-driven-development-code-writing" id="id19">Test-driven development/code writing</a><ul>
+<li><a class="reference internal" href="#writing-tests" id="id20">Writing tests</a></li>
+<li><a class="reference internal" href="#running-the-test-suite" id="id21">Running the test suite</a></li>
+<li><a class="reference internal" href="#running-the-performance-test-suite" id="id22">Running the performance test suite</a></li>
+<li><a class="reference internal" href="#running-google-bigquery-integration-tests" id="id23">Running Google BigQuery Integration Tests</a></li>
+<li><a class="reference internal" href="#running-the-vbench-performance-test-suite-phasing-out" id="id24">Running the vbench performance test suite (phasing out)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documenting-your-code" id="id25">Documenting your code</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#contributing-your-changes-to-pandas" id="id26">Contributing your changes to <em>pandas</em></a><ul>
+<li><a class="reference internal" href="#committing-your-code" id="id27">Committing your code</a></li>
+<li><a class="reference internal" href="#combining-commits" id="id28">Combining commits</a></li>
+<li><a class="reference internal" href="#pushing-your-changes" id="id29">Pushing your changes</a></li>
+<li><a class="reference internal" href="#review-your-code" id="id30">Review your code</a></li>
+<li><a class="reference internal" href="#finally-make-the-pull-request" id="id31">Finally, make the pull request</a></li>
+<li><a class="reference internal" href="#delete-your-merged-branch-optional" id="id32">Delete your merged branch (optional)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="where-to-start">
+<h2><a class="toc-backref" href="#id1">Where to start?</a><a class="headerlink" href="#where-to-start" title="Permalink to this headline">¶</a></h2>
+<p>All contributions, bug reports, bug fixes, documentation improvements,
+enhancements and ideas are welcome.</p>
+<p>If you are simply looking to start working with the <em>pandas</em> codebase, navigate to the
+<a class="reference external" href="https://github.com/pandas-dev/pandas/issues">GitHub &#8220;issues&#8221; tab</a> and start looking through
+interesting issues.  There are a number of issues listed under <a class="reference external" href="https://github.com/pandas-dev/pandas/issues?labels=Docs&amp;sort=updated&amp;state=open">Docs</a>
+and <a class="reference external" href="https://github.com/pandas-dev/pandas/issues?q=is%3Aopen+is%3Aissue+label%3A%22Difficulty+Novice%22">Difficulty Novice</a>
+where you could start out.</p>
+<p>Or maybe through using <em>pandas</em> you have an idea of your own or are looking for something
+in the documentation and thinking &#8216;this can be improved&#8217;...you can do something
+about it!</p>
+<p>Feel free to ask questions on the <a class="reference external" href="https://groups.google.com/forum/?fromgroups#!forum/pydata">mailing list</a> or on <a class="reference external" href="https://gitter.im/pandas-dev/pandas">Gitter</a>.</p>
+</div>
+<div class="section" id="bug-reports-and-enhancement-requests">
+<h2><a class="toc-backref" href="#id2">Bug reports and enhancement requests</a><a class="headerlink" href="#bug-reports-and-enhancement-requests" title="Permalink to this headline">¶</a></h2>
+<p>Bug reports are an important part of making <em>pandas</em> more stable.  Having a complete bug report
+will allow others to reproduce the bug and provide insight into fixing.  Because many versions of
+<em>pandas</em> are supported, knowing version information will also identify improvements made since
+previous versions. Trying the bug-producing code out on the <em>master</em> branch is often a worthwhile exercise
+to confirm the bug still exists.  It is also worth searching existing bug reports and pull requests
+to see if the issue has already been reported and/or fixed.</p>
+<p>Bug reports must:</p>
+<ol class="arabic">
+<li><p class="first">Include a short, self-contained Python snippet reproducing the problem.
+You can format the code nicely by using <a class="reference external" href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown</a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>```python
+&gt;&gt;&gt; from pandas import DataFrame
+&gt;&gt;&gt; df = DataFrame(...)
+...
+```
+</pre></div>
+</div>
+</li>
+<li><p class="first">Include the full version string of <em>pandas</em> and its dependencies. In versions
+of <em>pandas</em> after 0.12 you can use a built in function:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pandas.util.print_versions</span> <span class="k">import</span> <span class="n">show_versions</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">show_versions</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>and in <em>pandas</em> 0.13.1 onwards:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pd</span><span class="o">.</span><span class="n">show_versions</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Explain why the current behavior is wrong/not desired and what you expect instead.</p>
+</li>
+</ol>
+<p>The issue will then show up to the <em>pandas</em> community and be open to comments/ideas from others.</p>
+</div>
+<div class="section" id="working-with-the-code">
+<h2><a class="toc-backref" href="#id3">Working with the code</a><a class="headerlink" href="#working-with-the-code" title="Permalink to this headline">¶</a></h2>
+<p>Now that you have an issue you want to fix, enhancement to add, or documentation to improve,
+you need to learn how to work with GitHub and the <em>pandas</em> code base.</p>
+<div class="section" id="version-control-git-and-github">
+<h3><a class="toc-backref" href="#id4">Version control, Git, and GitHub</a><a class="headerlink" href="#version-control-git-and-github" title="Permalink to this headline">¶</a></h3>
+<p>To the new user, working with Git is one of the more daunting aspects of contributing to <em>pandas</em>.
+It can very quickly become overwhelming, but sticking to the guidelines below will help keep the process
+straightforward and mostly trouble free.  As always, if you are having difficulties please
+feel free to ask for help.</p>
+<p>The code is hosted on <a class="reference external" href="https://www.github.com/pandas-dev/pandas">GitHub</a>. To
+contribute you will need to sign up for a <a class="reference external" href="https://github.com/signup/free">free GitHub account</a>. We use <a class="reference external" href="http://git-scm.com/">Git</a> for
+version control to allow many people to work together on the project.</p>
+<p>Some great resources for learning Git:</p>
+<ul class="simple">
+<li>the <a class="reference external" href="http://help.github.com/">GitHub help pages</a>.</li>
+<li>the <a class="reference external" href="http://docs.scipy.org/doc/numpy/dev/index.html">NumPy&#8217;s documentation</a>.</li>
+<li>Matthew Brett&#8217;s <a class="reference external" href="http://matthew-brett.github.com/pydagogue/">Pydagogue</a>.</li>
+</ul>
+</div>
+<div class="section" id="getting-started-with-git">
+<h3><a class="toc-backref" href="#id5">Getting started with Git</a><a class="headerlink" href="#getting-started-with-git" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://help.github.com/set-up-git-redirect">GitHub has instructions</a> for installing git,
+setting up your SSH key, and configuring git.  All these steps need to be completed before
+you can work seamlessly between your local repository and GitHub.</p>
+</div>
+<div class="section" id="forking">
+<span id="contributing-forking"></span><h3><a class="toc-backref" href="#id6">Forking</a><a class="headerlink" href="#forking" title="Permalink to this headline">¶</a></h3>
+<p>You will need your own fork to work on the code. Go to the <a class="reference external" href="https://github.com/pandas-dev/pandas">pandas project
+page</a> and hit the <code class="docutils literal"><span class="pre">Fork</span></code> button. You will
+want to clone your fork to your machine:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">your</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">name</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span> <span class="n">pandas</span><span class="o">-</span><span class="n">yourname</span>
+<span class="n">cd</span> <span class="n">pandas</span><span class="o">-</span><span class="n">yourname</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pandas</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>This creates the directory <cite>pandas-yourname</cite> and connects your repository to
+the upstream (main project) <em>pandas</em> repository.</p>
+<p>The testing suite will run automatically on Travis-CI once your pull request is
+submitted.  However, if you wish to run the test suite on a branch prior to
+submitting the pull request, then Travis-CI needs to be hooked up to your
+GitHub repository.  Instructions for doing so are <a class="reference external" href="http://about.travis-ci.org/docs/user/getting-started/">here</a>.</p>
+</div>
+<div class="section" id="creating-a-branch">
+<h3><a class="toc-backref" href="#id7">Creating a branch</a><a class="headerlink" href="#creating-a-branch" title="Permalink to this headline">¶</a></h3>
+<p>You want your master branch to reflect only production-ready code, so create a
+feature branch for making your changes. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>The above can be simplified to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>This changes your working directory to the shiny-new-feature branch.  Keep any
+changes in this branch specific to one bug or feature so it is clear
+what the branch brings to <em>pandas</em>. You can have many shiny-new-features
+and switch in between them using the git checkout command.</p>
+<p>To update this branch, you need to retrieve the changes from the master branch:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>This will replay your commits on top of the lastest pandas git master.  If this
+leads to merge conflicts, you must resolve these before submitting your pull
+request.  If you have uncommitted changes, you will need to <code class="docutils literal"><span class="pre">stash</span></code> them prior
+to updating.  This will effectively store your changes and they can be reapplied
+after updating.</p>
+</div>
+<div class="section" id="creating-a-development-environment">
+<span id="contributing-dev-env"></span><h3><a class="toc-backref" href="#id8">Creating a development environment</a><a class="headerlink" href="#creating-a-development-environment" title="Permalink to this headline">¶</a></h3>
+<p>An easy way to create a <em>pandas</em> development environment is as follows.</p>
+<ul class="simple">
+<li>Install either <a class="reference internal" href="install.html#install-anaconda"><span class="std std-ref">Anaconda</span></a> or <a class="reference internal" href="install.html#install-miniconda"><span class="std std-ref">miniconda</span></a></li>
+<li>Make sure that you have <a class="reference internal" href="#contributing-forking"><span class="std std-ref">cloned the repository</span></a></li>
+<li><code class="docutils literal"><span class="pre">cd</span></code> to the <em>pandas</em> source directory</li>
+</ul>
+<p>Tell conda to create a new environment, named <code class="docutils literal"><span class="pre">pandas_dev</span></code>, or any other name you would like
+for this environment, by running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="o">--</span><span class="n">file</span> <span class="n">ci</span><span class="o">/</span><span class="n">requirements_dev</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>For a python 3 environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="n">python</span><span class="o">=</span><span class="mi">3</span> <span class="o">--</span><span class="n">file</span> <span class="n">ci</span><span class="o">/</span><span class="n">requirements_dev</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If you are on Windows, see <a class="reference internal" href="#contributing-windows"><span class="std std-ref">here for a fully compliant Windows environment</span></a>.</p>
+</div>
+<p>This will create the new environment, and not touch any of your existing environments,
+nor any existing python installation. It will install all of the basic dependencies of
+<em>pandas</em>, as well as the development and testing tools. If you would like to install
+other dependencies, you can install them as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="o">-</span><span class="n">c</span> <span class="n">pandas</span> <span class="n">pytables</span> <span class="n">scipy</span>
+</pre></div>
+</div>
+<p>To install <em>all</em> pandas dependencies you can do the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="o">-</span><span class="n">c</span> <span class="n">pandas</span> <span class="o">--</span><span class="n">file</span> <span class="n">ci</span><span class="o">/</span><span class="n">requirements_all</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>To work in this environment, Windows users should <code class="docutils literal"><span class="pre">activate</span></code> it as follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">activate</span> <span class="n">pandas_dev</span>
+</pre></div>
+</div>
+<p>Mac OSX / Linux users should use:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">pandas_dev</span>
+</pre></div>
+</div>
+<p>You will then see a confirmation message to indicate you are in the new development environment.</p>
+<p>To view your environments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">info</span> <span class="o">-</span><span class="n">e</span>
+</pre></div>
+</div>
+<p>To return to your home root environment in Windows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>To return to your home root environment in OSX / Linux:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>See the full conda docs <a class="reference external" href="http://conda.pydata.org/docs">here</a>.</p>
+<p>At this point you can easily do an <em>in-place</em> install, as detailed in the next section.</p>
+</div>
+<div class="section" id="creating-a-windows-development-environment">
+<span id="contributing-windows"></span><h3><a class="toc-backref" href="#id9">Creating a Windows development environment</a><a class="headerlink" href="#creating-a-windows-development-environment" title="Permalink to this headline">¶</a></h3>
+<p>To build on Windows, you need to have compilers installed to build the extensions. You will need to install the appropriate Visual Studio compilers, VS 2008 for Python 2.7, VS 2010 for 3.4, and VS 2015 for Python 3.5.</p>
+<p>For Python 2.7, you can install the <code class="docutils literal"><span class="pre">mingw</span></code> compiler which will work equivalently to VS 2008:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="n">libpython</span>
+</pre></div>
+</div>
+<p>or use the <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=44266">Microsoft Visual Studio VC++ compiler for Python</a>. Note that you have to check the <code class="docutils literal"><span class="pre">x64</span></code> box to install the <code class="docutils literal"><span class="pre">x64</span></code> extension building capability as this is not installed by default.</p>
+<p>For Python 3.4, you can download and install the <a class="reference external" href="https://www.microsoft.com/en-us/download/details.aspx?id=8279">Windows 7.1 SDK</a>. Read the references below as there may be various gotchas during the installation.</p>
+<p>For Python 3.5, you can download and install the <a class="reference external" href="https://www.visualstudio.com/en-us/downloads/visual-studio-2015-downloads-vs.aspx">Visual Studio 2015 Community Edition</a>.</p>
+<p>Here are some references and blogs:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/">https://blogs.msdn.microsoft.com/pythonengineering/2016/04/11/unable-to-find-vcvarsall-bat/</a></li>
+<li><a class="reference external" href="https://github.com/conda/conda-recipes/wiki/Building-from-Source-on-Windows-32-bit-and-64-bit">https://github.com/conda/conda-recipes/wiki/Building-from-Source-on-Windows-32-bit-and-64-bit</a></li>
+<li><a class="reference external" href="https://cowboyprogrammer.org/building-python-wheels-for-windows/">https://cowboyprogrammer.org/building-python-wheels-for-windows/</a></li>
+<li><a class="reference external" href="https://blog.ionelmc.ro/2014/12/21/compiling-python-extensions-on-windows/">https://blog.ionelmc.ro/2014/12/21/compiling-python-extensions-on-windows/</a></li>
+<li><a class="reference external" href="https://support.enthought.com/hc/en-us/articles/204469260-Building-Python-extensions-with-Canopy">https://support.enthought.com/hc/en-us/articles/204469260-Building-Python-extensions-with-Canopy</a></li>
+</ul>
+</div>
+<div class="section" id="making-changes">
+<span id="contributing-getting-source"></span><h3><a class="toc-backref" href="#id10">Making changes</a><a class="headerlink" href="#making-changes" title="Permalink to this headline">¶</a></h3>
+<p>Before making your code changes, it is often necessary to build the code that was
+just checked out.  There are two primary methods of doing this.</p>
+<ol class="arabic">
+<li><p class="first">The best way to develop <em>pandas</em> is to build the C extensions in-place by
+running:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="o">--</span><span class="n">inplace</span>
+</pre></div>
+</div>
+<p>If you startup the Python interpreter in the <em>pandas</em> source directory you
+will call the built C extensions</p>
+</li>
+<li><p class="first">Another very common option is to do a <code class="docutils literal"><span class="pre">develop</span></code> install of <em>pandas</em>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span>
+</pre></div>
+</div>
+<p>This makes a symbolic link that tells the Python interpreter to import <em>pandas</em>
+from your development directory. Thus, you can always be using the development
+version on your system without being inside the clone directory.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="contributing-to-the-documentation">
+<span id="contributing-documentation"></span><h2><a class="toc-backref" href="#id11">Contributing to the documentation</a><a class="headerlink" href="#contributing-to-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>If you&#8217;re not the developer type, contributing to the documentation is still
+of huge value. You don&#8217;t even have to be an expert on
+<em>pandas</em> to do so! Something as simple as rewriting small passages for clarity
+as you reference the docs is a simple but effective way to contribute. The
+next person to read that passage will be in your debt!</p>
+<p>In fact, there are sections of the docs that are worse off after being written
+by experts. If something in the docs doesn&#8217;t make sense to you, updating the
+relevant section after you figure it out is a simple way to ensure it will
+help the next person.</p>
+<div class="contents local topic" id="documentation">
+<p class="topic-title first">Documentation:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#about-the-pandas-documentation" id="id33">About the <em>pandas</em> documentation</a></li>
+<li><a class="reference internal" href="#how-to-build-the-pandas-documentation" id="id34">How to build the <em>pandas</em> documentation</a><ul>
+<li><a class="reference internal" href="#requirements" id="id35">Requirements</a></li>
+<li><a class="reference internal" href="#building-the-documentation" id="id36">Building the documentation</a></li>
+<li><a class="reference internal" href="#building-master-branch-documentation" id="id37">Building master branch documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="about-the-pandas-documentation">
+<h3><a class="toc-backref" href="#id33">About the <em>pandas</em> documentation</a><a class="headerlink" href="#about-the-pandas-documentation" title="Permalink to this headline">¶</a></h3>
+<p>The documentation is written in <strong>reStructuredText</strong>, which is almost like writing
+in plain English, and built using <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a>. The
+Sphinx Documentation has an excellent <a class="reference external" href="http://sphinx.pocoo.org/rest.html">introduction to reST</a>. Review the Sphinx docs to perform more
+complex changes to the documentation as well.</p>
+<p>Some other important things to know about the docs:</p>
+<ul>
+<li><p class="first">The <em>pandas</em> documentation consists of two parts: the docstrings in the code
+itself and the docs in this folder <code class="docutils literal"><span class="pre">pandas/doc/</span></code>.</p>
+<p>The docstrings provide a clear explanation of the usage of the individual
+functions, while the documentation in this folder consists of tutorial-like
+overviews per topic together with some other information (what&#8217;s new,
+installation, etc).</p>
+</li>
+<li><p class="first">The docstrings follow the <strong>Numpy Docstring Standard</strong>, which is used widely
+in the Scientific Python community. This standard specifies the format of
+the different sections of the docstring. See <a class="reference external" href="https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt">this document</a>
+for a detailed explanation, or look at some of the existing functions to
+extend it in a similar manner.</p>
+</li>
+<li><p class="first">The tutorials make heavy use of the <a class="reference external" href="http://matplotlib.org/sampledoc/ipython_directive.html">ipython directive</a> sphinx extension.
+This directive lets you put code in the documentation which will be run
+during the doc build. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">ipython</span><span class="p">::</span> <span class="n">python</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+</pre></div>
+</div>
+<p>will be rendered as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="mi">8</span>
+</pre></div>
+</div>
+<p>Almost all code examples in the docs are run (and the output saved) during the
+doc build. This approach means that code examples will always be up to date,
+but it does make the doc building a bit more complex.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The <code class="docutils literal"><span class="pre">.rst</span></code> files are used to automatically generate Markdown and HTML versions
+of the docs. For this reason, please do not edit <code class="docutils literal"><span class="pre">CONTRIBUTING.md</span></code> directly,
+but instead make any changes to <code class="docutils literal"><span class="pre">doc/source/contributing.rst</span></code>. Then, to
+generate <code class="docutils literal"><span class="pre">CONTRIBUTING.md</span></code>, use <a class="reference external" href="http://johnmacfarlane.net/pandoc/">pandoc</a>
+with the following command:</p>
+<div class="last highlight-default"><div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="n">doc</span><span class="o">/</span><span class="n">source</span><span class="o">/</span><span class="n">contributing</span><span class="o">.</span><span class="n">rst</span> <span class="o">-</span><span class="n">t</span> <span class="n">markdown_github</span> <span class="o">&gt;</span> <span class="n">CONTRIBUTING</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+</div>
+<p>The utility script <code class="docutils literal"><span class="pre">scripts/api_rst_coverage.py</span></code> can be used to compare
+the list of methods documented in <code class="docutils literal"><span class="pre">doc/source/api.rst</span></code> (which is used to generate
+the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/api.html">API Reference</a> page)
+and the actual public methods.
+This will identify methods documented in in <code class="docutils literal"><span class="pre">doc/source/api.rst</span></code> that are not actually
+class methods, and existing methods that are not documented in <code class="docutils literal"><span class="pre">doc/source/api.rst</span></code>.</p>
+</div>
+<div class="section" id="how-to-build-the-pandas-documentation">
+<h3><a class="toc-backref" href="#id34">How to build the <em>pandas</em> documentation</a><a class="headerlink" href="#how-to-build-the-pandas-documentation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="requirements">
+<h4><a class="toc-backref" href="#id35">Requirements</a><a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h4>
+<p>First, you need to have a development environment to be able to build pandas
+(see the docs on <a class="reference internal" href="#contributing-dev-env"><span class="std std-ref">creating a development environment above</span></a>).
+Further, to build the docs, there are some extra requirements: you will need to
+have <code class="docutils literal"><span class="pre">sphinx</span></code> and <code class="docutils literal"><span class="pre">ipython</span></code> installed. <a class="reference external" href="https://github.com/numpy/numpydoc">numpydoc</a> is used to parse the docstrings that
+follow the Numpy Docstring Standard (see above), but you don&#8217;t need to install
+this because a local copy of numpydoc is included in the <em>pandas</em> source
+code.
+<a class="reference external" href="https://nbconvert.readthedocs.io/en/latest/">nbconvert</a> and
+<a class="reference external" href="https://nbformat.readthedocs.io/en/latest/">nbformat</a> are required to build
+the Jupyter notebooks included in the documentation.</p>
+<p>If you have a conda environment named <code class="docutils literal"><span class="pre">pandas_dev</span></code>, you can install the extra
+requirements with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">pandas_dev</span> <span class="n">sphinx</span> <span class="n">ipython</span> <span class="n">nbconvert</span> <span class="n">nbformat</span>
+</pre></div>
+</div>
+<p>Furthermore, it is recommended to have all <a class="reference internal" href="install.html#install-optional-dependencies"><span class="std std-ref">optional dependencies</span></a>.
+installed. This is not strictly necessary, but be aware that you will see some error
+messages when building the docs. This happens because all the code in the documentation
+is executed during the doc build, and so code examples using optional dependencies
+will generate errors. Run <code class="docutils literal"><span class="pre">pd.show_versions()</span></code> to get an overview of the installed
+version of all dependencies.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You need to have <code class="docutils literal"><span class="pre">sphinx</span></code> version &gt;= 1.3.2.</p>
+</div>
+</div>
+<div class="section" id="building-the-documentation">
+<h4><a class="toc-backref" href="#id36">Building the documentation</a><a class="headerlink" href="#building-the-documentation" title="Permalink to this headline">¶</a></h4>
+<p>So how do you build the docs? Navigate to your local
+<code class="docutils literal"><span class="pre">pandas/doc/</span></code> directory in the console and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>Then you can find the HTML output in the folder <code class="docutils literal"><span class="pre">pandas/doc/build/html/</span></code>.</p>
+<p>The first time you build the docs, it will take quite a while because it has to run
+all the code examples and build all the generated docstring pages. In subsequent
+evocations, sphinx will try to only build the pages that have been modified.</p>
+<p>If you want to do a full clean build, do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="n">clean</span>
+<span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>Starting with <em>pandas</em> 0.13.1 you can tell <code class="docutils literal"><span class="pre">make.py</span></code> to compile only a single section
+of the docs, greatly reducing the turn-around time for checking your changes.
+You will be prompted to delete <code class="docutils literal"><span class="pre">.rst</span></code> files that aren&#8217;t required. This is okay because
+the prior versions of these files can be checked out from git. However, you must make sure
+not to commit the file deletions to your Git repository!</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#omit autosummary and API section</span>
+<span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="n">clean</span>
+<span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">api</span>
+
+<span class="c1"># compile the docs with only a single</span>
+<span class="c1"># section, that which is in indexing.rst</span>
+<span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="n">clean</span>
+<span class="n">python</span> <span class="n">make</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">single</span> <span class="n">indexing</span>
+</pre></div>
+</div>
+<p>For comparison, a full documentation build may take 10 minutes, a <code class="docutils literal"><span class="pre">-no-api</span></code> build
+may take 3 minutes and a single section may take 15 seconds.  Subsequent builds, which
+only process portions you have changed, will be faster. Open the following file in a web
+browser to see the full documentation you just built:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pandas</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>And you&#8217;ll have the satisfaction of seeing your new and improved documentation!</p>
+</div>
+<div class="section" id="building-master-branch-documentation">
+<span id="contributing-dev-docs"></span><h4><a class="toc-backref" href="#id37">Building master branch documentation</a><a class="headerlink" href="#building-master-branch-documentation" title="Permalink to this headline">¶</a></h4>
+<p>When pull requests are merged into the <em>pandas</em> <code class="docutils literal"><span class="pre">master</span></code> branch, the main parts of
+the documentation are also built by Travis-CI. These docs are then hosted <a class="reference external" href="http://pandas-docs.github.io/pandas-docs-travis">here</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="contributing-to-the-code-base">
+<h2><a class="toc-backref" href="#id17">Contributing to the code base</a><a class="headerlink" href="#contributing-to-the-code-base" title="Permalink to this headline">¶</a></h2>
+<div class="contents local topic" id="code-base">
+<p class="topic-title first">Code Base:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#code-standards" id="id38">Code standards</a></li>
+<li><a class="reference internal" href="#test-driven-development-code-writing" id="id39">Test-driven development/code writing</a><ul>
+<li><a class="reference internal" href="#writing-tests" id="id40">Writing tests</a></li>
+<li><a class="reference internal" href="#running-the-test-suite" id="id41">Running the test suite</a></li>
+<li><a class="reference internal" href="#running-the-performance-test-suite" id="id42">Running the performance test suite</a></li>
+<li><a class="reference internal" href="#running-google-bigquery-integration-tests" id="id43">Running Google BigQuery Integration Tests</a></li>
+<li><a class="reference internal" href="#running-the-vbench-performance-test-suite-phasing-out" id="id44">Running the vbench performance test suite (phasing out)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#documenting-your-code" id="id45">Documenting your code</a></li>
+</ul>
+</div>
+<div class="section" id="code-standards">
+<h3><a class="toc-backref" href="#id38">Code standards</a><a class="headerlink" href="#code-standards" title="Permalink to this headline">¶</a></h3>
+<p><em>pandas</em> uses the <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP8</a> standard.
+There are several tools to ensure you abide by this standard. Here are <em>some</em> of
+the more common <code class="docutils literal"><span class="pre">PEP8</span></code> issues:</p>
+<blockquote>
+<div><ul class="simple">
+<li>we restrict line-length to 80 characters to promote readability</li>
+<li>passing arguments should have spaces after commas, e.g. <code class="docutils literal"><span class="pre">foo(arg1,</span> <span class="pre">arg2,</span> <span class="pre">kw1='bar')</span></code></li>
+</ul>
+</div></blockquote>
+<p>The Travis-CI will run <a class="reference external" href="http://pypi.python.org/pypi/flake8">flake8</a> tool and report
+any stylistic errors in your code. Generating any warnings will cause the build to fail;
+thus these are part of the requirements for submitting code to <em>pandas</em>.</p>
+<p>It is helpful before submitting code to run this yourself on the diff:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="n">master</span> <span class="o">|</span> <span class="n">flake8</span> <span class="o">--</span><span class="n">diff</span>
+</pre></div>
+</div>
+<p>Furthermore, we&#8217;ve written a tool to check that your commits are PEP8 great, <a class="reference external" href="https://github.com/hayd/pep8radius">pip install pep8radius</a>. Look at PEP8 fixes in your branch vs master with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pep8radius</span> <span class="n">master</span> <span class="o">--</span><span class="n">diff</span>
+</pre></div>
+</div>
+<p>and make these changes with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pep8radius</span> <span class="n">master</span> <span class="o">--</span><span class="n">diff</span> <span class="o">--</span><span class="ow">in</span><span class="o">-</span><span class="n">place</span>
+</pre></div>
+</div>
+<p>Additional standards are outlined on the <a class="reference external" href="https://github.com/pandas-dev/pandas/wiki/Code-Style-and-Conventions">code style wiki
+page</a>.</p>
+<p>Please try to maintain backward compatibility. <em>pandas</em> has lots of users with lots of
+existing code, so don&#8217;t break it if at all possible.  If you think breakage is required,
+clearly state why as part of the pull request.  Also, be careful when changing method
+signatures and add deprecation warnings where needed.</p>
+</div>
+<div class="section" id="test-driven-development-code-writing">
+<h3><a class="toc-backref" href="#id39">Test-driven development/code writing</a><a class="headerlink" href="#test-driven-development-code-writing" title="Permalink to this headline">¶</a></h3>
+<p><em>pandas</em> is serious about testing and strongly encourages contributors to embrace
+<a class="reference external" href="http://en.wikipedia.org/wiki/Test-driven_development">test-driven development (TDD)</a>.
+This development process &#8220;relies on the repetition of a very short development cycle:
+first the developer writes an (initially failing) automated test case that defines a desired
+improvement or new function, then produces the minimum amount of code to pass that test.&#8221;
+So, before actually writing any code, you should write your tests.  Often the test can be
+taken from the original GitHub issue.  However, it is always worth considering additional
+use cases and writing corresponding tests.</p>
+<p>Adding tests is one of the most common requests after code is pushed to <em>pandas</em>.  Therefore,
+it is worth getting in the habit of writing tests ahead of time so this is never an issue.</p>
+<p>Like many packages, <em>pandas</em> uses the <a class="reference external" href="https://nose.readthedocs.io/en/latest/index.html">Nose testing system</a> and the convenient
+extensions in <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/routines.testing.html">numpy.testing</a>.</p>
+<div class="section" id="writing-tests">
+<h4><a class="toc-backref" href="#id40">Writing tests</a><a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h4>
+<p>All tests should go into the <code class="docutils literal"><span class="pre">tests</span></code> subdirectory of the specific package.
+This folder contains many current examples of tests, and we suggest looking to these for
+inspiration.  If your test requires working with files or
+network connectivity, there is more information on the <a class="reference external" href="https://github.com/pandas-dev/pandas/wiki/Testing">testing page</a> of the wiki.</p>
+<p>The <code class="docutils literal"><span class="pre">pandas.util.testing</span></code> module has many special <code class="docutils literal"><span class="pre">assert</span></code> functions that
+make it easier to make statements about whether Series or DataFrame objects are
+equivalent. The easiest way to verify that your code is correct is to
+explicitly construct the result you expect, then compare the actual result to
+the expected correct result:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_pivot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;index&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;columns&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;One&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">,</span> <span class="s1">&#39;Two&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;values&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">pivoted</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;columns&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;values&#39;</span><span class="p">)</span>
+
+    <span class="n">expected</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;One&#39;</span> <span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="mf">2.</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="mf">3.</span><span class="p">},</span>
+        <span class="s1">&#39;Two&#39;</span> <span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span> <span class="p">:</span> <span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span> <span class="p">:</span> <span class="mf">2.</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span> <span class="p">:</span> <span class="mf">3.</span><span class="p">}</span>
+    <span class="p">})</span>
+
+    <span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">pivoted</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-the-test-suite">
+<h4><a class="toc-backref" href="#id41">Running the test suite</a><a class="headerlink" href="#running-the-test-suite" title="Permalink to this headline">¶</a></h4>
+<p>The tests can then be run directly inside your Git clone (without having to
+install <em>pandas</em>) by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">nosetests</span> <span class="n">pandas</span>
+</pre></div>
+</div>
+<p>The tests suite is exhaustive and takes around 20 minutes to run.  Often it is
+worth running only a subset of tests first around your changes before running the
+entire suite.  This is done using one of the following constructs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>  <span class="n">nosetests</span> <span class="n">pandas</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="p">[</span><span class="n">test</span><span class="o">-</span><span class="n">module</span><span class="p">]</span><span class="o">.</span><span class="n">py</span>
+  <span class="n">nosetests</span> <span class="n">pandas</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="p">[</span><span class="n">test</span><span class="o">-</span><span class="n">module</span><span class="p">]</span><span class="o">.</span><span class="n">py</span><span class="p">:[</span><span class="n">TestClass</span><span class="p">]</span>
+  <span class="n">nosetests</span> <span class="n">pandas</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="p">[</span><span class="n">test</span><span class="o">-</span><span class="n">module</span><span class="p">]</span><span class="o">.</span><span class="n">py</span><span class="p">:[</span><span class="n">TestClass</span><span class="p">]</span><span class="o">.</span><span class="p">[</span><span class="n">test_method</span><span class="p">]</span>
+
+<span class="o">..</span> <span class="n">versionadded</span><span class="p">::</span> <span class="mf">0.18</span><span class="o">.</span><span class="mi">0</span>
+</pre></div>
+</div>
+<p>Furthermore one can run</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>with an imported pandas to run tests similarly.</p>
+</div>
+<div class="section" id="running-the-performance-test-suite">
+<h4><a class="toc-backref" href="#id42">Running the performance test suite</a><a class="headerlink" href="#running-the-performance-test-suite" title="Permalink to this headline">¶</a></h4>
+<p>Performance matters and it is worth considering whether your code has introduced
+performance regressions.  <em>pandas</em> is in the process of migrating to
+<a class="reference external" href="https://github.com/spacetelescope/asv">asv benchmarks</a>
+to enable easy monitoring of the performance of critical <em>pandas</em> operations.
+These benchmarks are all found in the <code class="docutils literal"><span class="pre">pandas/asv_bench</span></code> directory.  asv
+supports both python2 and python3.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The asv benchmark suite was translated from the previous framework, vbench,
+so many stylistic issues are likely a result of automated transformation of the
+code.</p>
+</div>
+<p>To use all features of asv, you will need either <code class="docutils literal"><span class="pre">conda</span></code> or
+<code class="docutils literal"><span class="pre">virtualenv</span></code>. For more details please check the <a class="reference external" href="https://asv.readthedocs.io/en/latest/installing.html">asv installation
+webpage</a>.</p>
+<p>To install asv:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">spacetelescope</span><span class="o">/</span><span class="n">asv</span>
+</pre></div>
+</div>
+<p>If you need to run a benchmark, change your directory to <code class="docutils literal"><span class="pre">asv_bench/</span></code> and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">continuous</span> <span class="o">-</span><span class="n">f</span> <span class="mf">1.1</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+<p>You can replace <code class="docutils literal"><span class="pre">HEAD</span></code> with the name of the branch you are working on,
+and report benchmarks that changed by more than 10%.
+The command uses <code class="docutils literal"><span class="pre">conda</span></code> by default for creating the benchmark
+environments. If you want to use virtualenv instead, write:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">continuous</span> <span class="o">-</span><span class="n">f</span> <span class="mf">1.1</span> <span class="o">-</span><span class="n">E</span> <span class="n">virtualenv</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">-E</span> <span class="pre">virtualenv</span></code> option should be added to all <code class="docutils literal"><span class="pre">asv</span></code> commands
+that run benchmarks. The default value is defined in <code class="docutils literal"><span class="pre">asv.conf.json</span></code>.</p>
+<p>Running the full test suite can take up to one hour and use up to 3GB of RAM.
+Usually it is sufficient to paste only a subset of the results into the pull
+request to show that the committed changes do not cause unexpected performance
+regressions.  You can run specific benchmarks using the <code class="docutils literal"><span class="pre">-b</span></code> flag, which
+takes a regular expression.  For example, this will only run tests from a
+<code class="docutils literal"><span class="pre">pandas/asv_bench/benchmarks/groupby.py</span></code> file:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">continuous</span> <span class="o">-</span><span class="n">f</span> <span class="mf">1.1</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="n">HEAD</span> <span class="o">-</span><span class="n">b</span> <span class="o">^</span><span class="n">groupby</span>
+</pre></div>
+</div>
+<p>If you want to only run a specific group of tests from a file, you can do it
+using <code class="docutils literal"><span class="pre">.</span></code> as a separator. For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">continuous</span> <span class="o">-</span><span class="n">f</span> <span class="mf">1.1</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="n">HEAD</span> <span class="o">-</span><span class="n">b</span> <span class="n">groupby</span><span class="o">.</span><span class="n">groupby_agg_builtins</span>
+</pre></div>
+</div>
+<p>will only run the <code class="docutils literal"><span class="pre">groupby_agg_builtins</span></code> benchmark defined in <code class="docutils literal"><span class="pre">groupby.py</span></code>.</p>
+<p>You can also run the benchmark suite using the version of <code class="docutils literal"><span class="pre">pandas</span></code>
+already installed in your current Python environment. This can be
+useful if you do not have virtualenv or conda, or are using the
+<code class="docutils literal"><span class="pre">setup.py</span> <span class="pre">develop</span></code> approach discussed above; for the in-place build
+you need to set <code class="docutils literal"><span class="pre">PYTHONPATH</span></code>, e.g.
+<code class="docutils literal"><span class="pre">PYTHONPATH=&quot;$PWD/..&quot;</span> <span class="pre">asv</span> <span class="pre">[remaining</span> <span class="pre">arguments]</span></code>.
+You can run benchmarks using an existing Python
+environment by:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">run</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">E</span> <span class="n">existing</span>
+</pre></div>
+</div>
+<p>or, to use a specific Python interpreter,:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">asv</span> <span class="n">run</span> <span class="o">-</span><span class="n">e</span> <span class="o">-</span><span class="n">E</span> <span class="n">existing</span><span class="p">:</span><span class="n">python3</span><span class="o">.</span><span class="mi">5</span>
+</pre></div>
+</div>
+<p>This will display stderr from the benchmarks, and use your local
+<code class="docutils literal"><span class="pre">python</span></code> that comes from your <code class="docutils literal"><span class="pre">$PATH</span></code>.</p>
+<p>Information on how to write a benchmark and how to use asv can be found in the
+<a class="reference external" href="https://asv.readthedocs.io/en/latest/writing_benchmarks.html">asv documentation</a>.</p>
+</div>
+<div class="section" id="running-google-bigquery-integration-tests">
+<span id="contributing-gbq-integration-tests"></span><h4><a class="toc-backref" href="#id43">Running Google BigQuery Integration Tests</a><a class="headerlink" href="#running-google-bigquery-integration-tests" title="Permalink to this headline">¶</a></h4>
+<p>You will need to create a Google BigQuery private key in JSON format in
+order to run Google BigQuery integration tests on your local machine and
+on Travis-CI. The first step is to create a <a class="reference external" href="https://console.developers.google.com/iam-admin/serviceaccounts/">service account</a>.</p>
+<p>Integration tests for <code class="docutils literal"><span class="pre">pandas.io.gbq</span></code> are skipped in pull requests because
+the credentials that are required for running Google BigQuery integration
+tests are <a class="reference external" href="https://docs.travis-ci.com/user/encrypting-files/">encrypted</a>
+on Travis-CI and are only accessible from the pandas-dev/pandas repository. The
+credentials won&#8217;t be available on forks of pandas. Here are the steps to run
+gbq integration tests on a forked repository:</p>
+<ol class="arabic">
+<li><p class="first">Go to <a class="reference external" href="https://travis-ci.org/">Travis CI</a> and sign in with your GitHub
+account.</p>
+</li>
+<li><p class="first">Click on the <code class="docutils literal"><span class="pre">+</span></code> icon next to the <code class="docutils literal"><span class="pre">My</span> <span class="pre">Repositories</span></code> list and enable
+Travis builds for your fork.</p>
+</li>
+<li><p class="first">Click on the gear icon to edit your travis build, and add two environment
+variables:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">GBQ_PROJECT_ID</span></code> with the value being the ID of your BigQuery project.</li>
+<li><code class="docutils literal"><span class="pre">SERVICE_ACCOUNT_KEY</span></code> with the value being the contents of the JSON key
+that you downloaded for your service account. Use single quotes around
+your JSON key to ensure that it is treated as a string.</li>
+</ul>
+<p>For both environment variables, keep the &#8220;Display value in build log&#8221; option
+DISABLED. These variables contain sensitive data and you do not want their
+contents being exposed in build logs.</p>
+</li>
+<li><p class="first">Your branch should be tested automatically once it is pushed. You can check
+the status by visiting your Travis branches page which exists at the
+following location: <a class="reference external" href="https://travis-ci.org/your-user-name/pandas/branches">https://travis-ci.org/your-user-name/pandas/branches</a> .
+Click on a build job for your branch. Expand the following line in the
+build log: <code class="docutils literal"><span class="pre">ci/print_skipped.py</span> <span class="pre">/tmp/nosetests.xml</span></code> . Search for the
+term <code class="docutils literal"><span class="pre">test_gbq</span></code> and confirm that gbq integration tests are not skipped.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="running-the-vbench-performance-test-suite-phasing-out">
+<h4><a class="toc-backref" href="#id44">Running the vbench performance test suite (phasing out)</a><a class="headerlink" href="#running-the-vbench-performance-test-suite-phasing-out" title="Permalink to this headline">¶</a></h4>
+<p>Historically, <em>pandas</em> used <a class="reference external" href="https://github.com/pydata/vbench">vbench library</a>
+to enable easy monitoring of the performance of critical <em>pandas</em> operations.
+These benchmarks are all found in the <code class="docutils literal"><span class="pre">pandas/vb_suite</span></code> directory.  vbench
+currently only works on python2.</p>
+<p>To install vbench:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pydata</span><span class="o">/</span><span class="n">vbench</span>
+</pre></div>
+</div>
+<p>Vbench also requires <code class="docutils literal"><span class="pre">sqlalchemy</span></code>, <code class="docutils literal"><span class="pre">gitpython</span></code>, and <code class="docutils literal"><span class="pre">psutil</span></code>, which can all be installed
+using pip.  If you need to run a benchmark, change your directory to the <em>pandas</em> root and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">test_perf</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="n">master</span> <span class="o">-</span><span class="n">t</span> <span class="n">HEAD</span>
+</pre></div>
+</div>
+<p>This will check out the master revision and run the suite on both master and
+your commit.  Running the full test suite can take up to one hour and use up
+to 3GB of RAM.  Usually it is sufficient to paste a subset of the results into the Pull Request to show that the committed changes do not cause unexpected
+performance regressions.</p>
+<p>You can run specific benchmarks using the <code class="docutils literal"><span class="pre">-r</span></code> flag, which takes a regular expression.</p>
+<p>See the <a class="reference external" href="https://github.com/pandas-dev/pandas/wiki/Performance-Testing">performance testing wiki</a> for information
+on how to write a benchmark.</p>
+</div>
+</div>
+<div class="section" id="documenting-your-code">
+<h3><a class="toc-backref" href="#id45">Documenting your code</a><a class="headerlink" href="#documenting-your-code" title="Permalink to this headline">¶</a></h3>
+<p>Changes should be reflected in the release notes located in <code class="docutils literal"><span class="pre">doc/source/whatsnew/vx.y.z.txt</span></code>.
+This file contains an ongoing change log for each release.  Add an entry to this file to
+document your fix, enhancement or (unavoidable) breaking change.  Make sure to include the
+GitHub issue number when adding your entry (using `` <a class="reference external" href="https://github.com/pandas-dev/pandas/issues/1234">GH1234</a> `` where <cite>1234</cite> is the
+issue/pull request number).</p>
+<p>If your code is an enhancement, it is most likely necessary to add usage
+examples to the existing documentation.  This can be done following the section
+regarding documentation <a class="reference internal" href="#contributing-documentation"><span class="std std-ref">above</span></a>.
+Further, to let users know when this feature was added, the <code class="docutils literal"><span class="pre">versionadded</span></code>
+directive is used. The sphinx syntax for that is:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 0.17.0
+</pre></div>
+</div>
+<p>This will put the text <em>New in version 0.17.0</em> wherever you put the sphinx
+directive. This should also be put in the docstring when adding a new function
+or method (<a class="reference external" href="https://github.com/pandas-dev/pandas/blob/v0.16.2/pandas/core/generic.py#L1959">example</a>)
+or a new keyword argument (<a class="reference external" href="https://github.com/pandas-dev/pandas/blob/v0.16.2/pandas/core/frame.py#L1171">example</a>).</p>
+</div>
+</div>
+<div class="section" id="contributing-your-changes-to-pandas">
+<h2><a class="toc-backref" href="#id26">Contributing your changes to <em>pandas</em></a><a class="headerlink" href="#contributing-your-changes-to-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="committing-your-code">
+<h3><a class="toc-backref" href="#id27">Committing your code</a><a class="headerlink" href="#committing-your-code" title="Permalink to this headline">¶</a></h3>
+<p>Keep style fixes to a separate commit to make your pull request more readable.</p>
+<p>Once you&#8217;ve made changes, you can see them by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+</pre></div>
+</div>
+<p>If you have created a new file, it is not being tracked by git. Add it by typing:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">be</span><span class="o">-</span><span class="n">added</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Doing &#8216;git status&#8217; again should give something like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># On branch shiny-new-feature</span>
+<span class="c1">#</span>
+<span class="c1">#       modified:   /relative/path/to/file-you-added.py</span>
+<span class="c1">#</span>
+</pre></div>
+</div>
+<p>Finally, commit your changes to your local repository with an explanatory message.  <em>Pandas</em>
+uses a convention for commit message prefixes and layout.  Here are
+some common prefixes along with general guidelines for when to use them:</p>
+<blockquote>
+<div><ul class="simple">
+<li>ENH: Enhancement, new functionality</li>
+<li>BUG: Bug fix</li>
+<li>DOC: Additions/updates to documentation</li>
+<li>TST: Additions/updates to tests</li>
+<li>BLD: Updates to the build process/scripts</li>
+<li>PERF: Performance improvement</li>
+<li>CLN: Code cleanup</li>
+</ul>
+</div></blockquote>
+<p>The following defines how a commit message should be structured.  Please reference the
+relevant GitHub issues in your commit message using GH1234 or #1234.  Either style
+is fine, but the former is generally preferred:</p>
+<blockquote>
+<div><ul class="simple">
+<li>a subject line with <cite>&lt; 80</cite> chars.</li>
+<li>One blank line.</li>
+<li>Optionally, a commit message body.</li>
+</ul>
+</div></blockquote>
+<p>Now you can commit your changes in your local repository:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="combining-commits">
+<h3><a class="toc-backref" href="#id28">Combining commits</a><a class="headerlink" href="#combining-commits" title="Permalink to this headline">¶</a></h3>
+<p>If you have multiple commits, you may want to combine them into one commit, often
+referred to as &#8220;squashing&#8221; or &#8220;rebasing&#8221;.  This is a common request by package maintainers
+when submitting a pull request as it maintains a more compact commit history.  To rebase
+your commits:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rebase</span> <span class="o">-</span><span class="n">i</span> <span class="n">HEAD</span><span class="o">~</span><span class="c1">#</span>
+</pre></div>
+</div>
+<p>Where # is the number of commits you want to combine.  Then you can pick the relevant
+commit message and discard others.</p>
+<p>To squash to the master branch do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rebase</span> <span class="o">-</span><span class="n">i</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>Use the <code class="docutils literal"><span class="pre">s</span></code> option on a commit to <code class="docutils literal"><span class="pre">squash</span></code>, meaning to keep the commit messages,
+or <code class="docutils literal"><span class="pre">f</span></code> to <code class="docutils literal"><span class="pre">fixup</span></code>, meaning to merge the commit messages.</p>
+<p>Then you will need to push the branch (see below) forcefully to replace the current
+commits with the new ones:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span> <span class="o">-</span><span class="n">f</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pushing-your-changes">
+<h3><a class="toc-backref" href="#id29">Pushing your changes</a><a class="headerlink" href="#pushing-your-changes" title="Permalink to this headline">¶</a></h3>
+<p>When you want your changes to appear publicly on your GitHub page, push your
+forked feature branch&#8217;s commits:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal"><span class="pre">origin</span></code> is the default name given to your remote repository on GitHub.
+You can see the remote repositories:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>If you added the upstream repository as described above you will see something
+like:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">yourname</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">origin</span>  <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">yourname</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+<span class="n">upstream</span>        <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pandas</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">fetch</span><span class="p">)</span>
+<span class="n">upstream</span>        <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pandas</span><span class="o">-</span><span class="n">dev</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">git</span> <span class="p">(</span><span class="n">push</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now your code is on GitHub, but it is not yet a part of the <em>pandas</em> project.  For that to
+happen, a pull request needs to be submitted on GitHub.</p>
+</div>
+<div class="section" id="review-your-code">
+<h3><a class="toc-backref" href="#id30">Review your code</a><a class="headerlink" href="#review-your-code" title="Permalink to this headline">¶</a></h3>
+<p>When you&#8217;re ready to ask for a code review, file a pull request. Before you do, once
+again make sure that you have followed all the guidelines outlined in this document
+regarding code style, tests, performance tests, and documentation. You should also
+double check your branch changes against the branch it was based on:</p>
+<ol class="arabic simple">
+<li>Navigate to your repository on GitHub &#8211; <a class="reference external" href="https://github.com/your-user-name/pandas">https://github.com/your-user-name/pandas</a></li>
+<li>Click on <code class="docutils literal"><span class="pre">Branches</span></code></li>
+<li>Click on the <code class="docutils literal"><span class="pre">Compare</span></code> button for your feature branch</li>
+<li>Select the <code class="docutils literal"><span class="pre">base</span></code> and <code class="docutils literal"><span class="pre">compare</span></code> branches, if necessary. This will be <code class="docutils literal"><span class="pre">master</span></code> and
+<code class="docutils literal"><span class="pre">shiny-new-feature</span></code>, respectively.</li>
+</ol>
+</div>
+<div class="section" id="finally-make-the-pull-request">
+<h3><a class="toc-backref" href="#id31">Finally, make the pull request</a><a class="headerlink" href="#finally-make-the-pull-request" title="Permalink to this headline">¶</a></h3>
+<p>If everything looks good, you are ready to make a pull request.  A pull request is how
+code from a local repository becomes available to the GitHub community and can be looked
+at and eventually merged into the master version.  This pull request and its associated
+changes will eventually be committed to the master branch and available in the next
+release.  To submit a pull request:</p>
+<ol class="arabic simple">
+<li>Navigate to your repository on GitHub</li>
+<li>Click on the <code class="docutils literal"><span class="pre">Pull</span> <span class="pre">Request</span></code> button</li>
+<li>You can then click on <code class="docutils literal"><span class="pre">Commits</span></code> and <code class="docutils literal"><span class="pre">Files</span> <span class="pre">Changed</span></code> to make sure everything looks
+okay one last time</li>
+<li>Write a description of your changes in the <code class="docutils literal"><span class="pre">Preview</span> <span class="pre">Discussion</span></code> tab</li>
+<li>Click <code class="docutils literal"><span class="pre">Send</span> <span class="pre">Pull</span> <span class="pre">Request</span></code>.</li>
+</ol>
+<p>This request then goes to the repository maintainers, and they will review
+the code. If you need to make more changes, you can make them in
+your branch, push them to GitHub, and the pull request will be automatically
+updated.  Pushing them to GitHub again is done by:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span> <span class="n">origin</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>This will automatically update your pull request with the latest code and restart the
+Travis-CI tests.</p>
+<p>If your pull request is related to the <code class="docutils literal"><span class="pre">pandas.io.gbq</span></code> module, please see
+the section on <a class="reference internal" href="#contributing-gbq-integration-tests"><span class="std std-ref">Running Google BigQuery Integration Tests</span></a> to configure a Google BigQuery service
+account for your pull request on Travis-CI.</p>
+</div>
+<div class="section" id="delete-your-merged-branch-optional">
+<h3><a class="toc-backref" href="#id32">Delete your merged branch (optional)</a><a class="headerlink" href="#delete-your-merged-branch-optional" title="Permalink to this headline">¶</a></h3>
+<p>Once your feature branch is accepted into upstream, you&#8217;ll probably want to get rid of
+the branch. First, merge upstream master into your branch so git knows it is safe to
+delete your branch:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>Then you can just do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+<p>Make sure you use a lower-case <code class="docutils literal"><span class="pre">-d</span></code>, or else git won&#8217;t warn you if your feature
+branch has not actually been merged.</p>
+<p>The branch will still exist on GitHub, so to delete it there do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">shiny</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">feature</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="clearer"></div>
+        </div>
+    </div>
+</div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQ)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<style type="text/css">
+    .scrollToTop {
+        text-align: center;
+        font-weight: bold;
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        display: none;
+    }
+</style>
+<a href="#" class="scrollToTop">Scroll To Top</a>
+<script type="text/javascript">
+$(document).ready(function() {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+
+  </body>
+</html>

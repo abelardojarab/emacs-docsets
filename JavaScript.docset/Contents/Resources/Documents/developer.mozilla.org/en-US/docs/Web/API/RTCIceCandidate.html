@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:31:26 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:05:42 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,6 +75,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCIceCandidate" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/RTCIceCandidate" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/RTCIceCandidate" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCIceCandidate" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCIceCandidate" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -372,6 +362,11 @@
         
         <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/abbycar" title="View profile: abbycar">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="abbycar" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">abbycar</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
@@ -442,45 +437,45 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="notice experimental"> 
-    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for the proper prefixes to use in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the spec changes.</p> 
+                    <p></p><section class="Quick_links" id="Quick_Links"><!-- --></section><div class="notice experimental"> 
+    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
 </div><p></p>
 
-<p>The <strong><code>RTCIceCandidate</code></strong> interface of the the <a href="WebRTC_API.html">WebRTC API</a> represents a candidate internet connectivity establishment (ICE) server for establishing an <a href="RTCPeerConnection.html" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It is used to handle efficient streaming of data between the two peers."><code>RTCPeerConnection</code></a>.</p>
+<p>The <strong><code>RTCIceCandidate</code></strong> interface of the the <a href="WebRTC_API.html">WebRTC API</a> represents a candidate internet connectivity establishment (ICE) server for establishing an <a title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed." href="RTCPeerConnection.html"><code>RTCPeerConnection</code></a>.</p>
 
 <h2 id="Constructors">Constructors</h2>
 
 <dl>
- <dt><a href="RTCIceCandidate/RTCIceCandidate.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate()</code></a></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/RTCIceCandidate.html" class="new"><code>RTCIceCandidate()</code></a></dt>
  <dd>Creates an <code>RTCIceCandidate</code> object.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt><a href="RTCIceCandidate/candidate.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.candidate</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/candidate.html" class="new"><code>RTCIceCandidate.candidate</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>Returns a transport address for the&nbsp;candidate that can be used for connectivity checks. The format of this address is a <code>candidate-attribute</code> as defined in <a href="https://tools.ietf.org/html/rfc5245" class="external">RTC 5245</a>.</dd>
- <dt><a href="RTCIceCandidate/foundation.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.foundation</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns a unique identifier that allows ICE to correlate candidates that appear on multiple <a href="RTCIceTransport.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceTransport</code></a> objects.</dd>
- <dt><a href="RTCIceCandidate/ip.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.ip</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/foundation.html" class="new"><code>RTCIceCandidate.foundation</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
+ <dd>Returns a unique identifier that allows ICE to correlate candidates that appear on multiple <a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceTransport.html" class="new"><code>RTCIceTransport</code></a> objects.</dd>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/ip.html" class="new"><code>RTCIceCandidate.ip</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>Returns the IP address of the candidate.</dd>
- <dt><a href="RTCIceCandidate/port.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.port</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/port.html" class="new"><code>RTCIceCandidate.port</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>Returns the port of the candidate.</dd>
- <dt><a href="RTCIceCandidate/priority.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.priority</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/priority.html" class="new"><code>RTCIceCandidate.priority</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>Returns the assigned priority of the candidate.</dd>
- <dt><a href="RTCIceCandidate/protocol.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.protocol</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/protocol.html" class="new"><code>RTCIceCandidate.protocol</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>Returns the protocol used by the candidate, either udp or tcp.</dd>
- <dt><a href="RTCIceCandidate/relatedAddress.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.relatedAddress</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/relatedAddress.html" class="new"><code>RTCIceCandidate.relatedAddress</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>For a candidate that is derived from another, such as a relay or reflexive candidate, the&nbsp;<dfn><code>relatedAddress</code>&nbsp;</dfn>is the IP address of the candidate that it is derived from. For host candidates, the&nbsp;<code>relatedAddress</code>&nbsp;is&nbsp;<code>null</code>.</dd>
- <dt><a href="RTCIceCandidate/relatedPort.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.relatedPort</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/relatedPort.html" class="new"><code>RTCIceCandidate.relatedPort</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>For a candidate that is derived from another, such as a relay or reflexive candidate, the&nbsp;<code><dfn>relatedPort</dfn></code>&nbsp;is the port of the candidate that it is derived from. For host candidates, the&nbsp;<code>relatedPort</code>&nbsp;is&nbsp;<code>null</code>.</dd>
- <dt><a href="RTCIceCandidate/sdpMid.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.sdpMid</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/sdpMid.html" class="new"><code>RTCIceCandidate.sdpMid</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>If not&nbsp;<code>null</code>, this contains the identifier of the "media stream identification" (as defined in <cite><a href="https://tools.ietf.org/html/rfc5888" class="external">RFC 5888</a>)</cite>&nbsp;for the media component this candidate is associated with.</dd>
- <dt><a href="RTCIceCandidate/sdpMLineIndex.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.sdpMLineIndex</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/sdpMLineIndex.html" class="new"><code>RTCIceCandidate.sdpMLineIndex</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>If not&nbsp;<code>null</code>, this indicates the index (starting at zero) of the&nbsp;media description&nbsp;(as defined in <a href="https://tools.ietf.org/html/rfc4566" class="external">RFC 4566</a>) in the SDP this candidate is associated with.</dd>
- <dt><a href="RTCIceCandidate/tcpType.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.tcpType</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/tcpType.html" class="new"><code>RTCIceCandidate.tcpType</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>If&nbsp;<code>protocol</code>&nbsp;is&nbsp;<code>tcp</code>,&nbsp;<code>tcpType</code>&nbsp;represents the type of TCP candidate. Otherwise,&nbsp;<code>tcpType</code>&nbsp;is&nbsp;<code>null</code>.</dd>
- <dt><a href="RTCIceCandidate/type.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCIceCandidate.type</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="The documentation about this has not yet been written; please consider contributing!" href="RTCIceCandidate/type.html" class="new"><code>RTCIceCandidate.type</code></a>&nbsp;<span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>One of <code>host</code>, <code>srflx</code>, <code>prflx</code>, or <code>relay</code>.</dd>
 </dl>
 
@@ -494,7 +489,7 @@
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://w3c.github.io/webrtc-pc/" class="external" lang="en" title="The 'WebRTC 1.0: Real-time Communication Between Browser' specification" hreflang="en">WebRTC 1.0: Real-time Communication Between Browser</a></td>
+   <td><a lang="en" title="The 'WebRTC 1.0: Real-time Communication Between Browser' specification" class="external" href="https://w3c.github.io/webrtc-pc/" hreflang="en">WebRTC 1.0: Real-time Communication Between Browser</a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>Initial definition.</td>
   </tr>
@@ -517,6 +512,7 @@
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -524,6 +520,7 @@
   </tr>
   <tr>
    <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
@@ -541,6 +538,7 @@
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>Firefox OS</th>
    <th>IE Mobile</th>
@@ -551,6 +549,7 @@
   <tr>
    <td>Basic support</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>&nbsp;</td>
    <td>&nbsp;</td>
@@ -565,25 +564,6 @@
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCIceCandidate%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+RTCIceCandidate+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about RTCIceCandidate on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about RTCIceCandidate on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCIceCandidate%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about RTCIceCandidate on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -619,6 +599,8 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>
@@ -629,11 +611,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-03-02T19:29:56-08:00">Mar 2, 2016, 7:29:56 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>,
+                      <time datetime="2016-12-22T14:28:22.223906-08:00">Dec 22, 2016, 2:28:22 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -650,7 +669,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="RTCIceCandidate.html"><code>RTCIceCandidate</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/addstream.html"><code>addstream</code></a></li><li><a href="../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../Events/removestream.html"><code>removestream</code></a></li><li><a href="../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../Events/close.html"><code>close</code></a></li><li><a href="../Events/error.html"><code>error</code></a></li><li><a href="../Events/message.html"><code>message</code></a></li><li><a href="../Events/open.html"><code>open</code></a></li><li><a href="../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../Events/identiyresult.html"><code>identiyresult</code></a></li><li><a href="../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="MediaDevices.html"><code>MediaDevices</code></a></li><li><a href="MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="RTCPeerConnection.html"><code>RTCPeerConnection</code></a></li><li><a href="RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="RTCIceCandidate.html"><code>RTCIceCandidate</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/addstream.html"><code>addstream</code></a></li><li><a href="../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../Events/removestream.html"><code>removestream</code></a></li><li><a href="../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../Events/close.html"><code>close</code></a></li><li><a href="../Events/error.html"><code>error</code></a></li><li><a href="../Events/message.html"><code>message</code></a></li><li><a href="../Events/open.html"><code>open</code></a></li><li><a href="../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../Events/identityresult.html"><code>identityresult</code></a></li><li><a href="../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="RTCPeerConnection.html"><code>RTCPeerConnection</code></a></li><li><a href="RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -674,12 +693,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -687,9 +706,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -706,33 +724,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:31:29 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:05:45 GMT -->
 </body></html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:16:32 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:56:03 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -66,6 +65,8 @@
     
       <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/DeviceOrientationEvent" title="DeviceOrientationEvent">
     
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/DeviceOrientationEvent" title="DeviceOrientationEvent">
+    
   
 
   <!-- document-specific social tags -->
@@ -78,6 +79,13 @@
   <meta name="description" content="The DeviceOrientationEvent provides web developers with information from the physical orientation of the device running the web page.">
   <meta name="twitter:description" content="The DeviceOrientationEvent provides web developers with information from the physical orientation of the device running the web page.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -95,10 +103,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +156,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +173,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +190,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDeviceOrientationEvent" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/DeviceOrientationEvent" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/DeviceOrientationEvent" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDeviceOrientationEvent" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDeviceOrientationEvent" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +213,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +237,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +251,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +291,18 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/DeviceOrientationEvent" title="DeviceOrientationEvent">Français</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/DeviceOrientationEvent" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/DeviceOrientationEvent" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -319,7 +314,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +327,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -380,6 +376,16 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/zeke" title="View profile: zeke">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="zeke" data-src="../../../../../secure.gravatar.com/avatar/8f344b1c4bdcfc28bd848e97e94c35236c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">zeke</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
                 </li>
@@ -399,12 +405,12 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Maroosko" title="View profile: Maroosko">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Maroosko" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Maroosko</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/kscarfone" title="View profile: kscarfone">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kscarfone" data-src="../../../../../secure.gravatar.com/avatar/89c1e54a9703125168e40d22316d2b496c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kscarfone</noscript></a>
                 </li>
@@ -472,26 +478,26 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="notice experimental"> 
+                    <p></p><section class="Quick_links" id="Quick_Links"><!-- --></section><div class="notice experimental"> 
     <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
 </div><p></p>
 
 <p>The <code>DeviceOrientationEvent</code> provides web developers with information from the physical orientation of the device running the web page.</p>
 
 <div class="warning">
-<p><strong>Warning:</strong> Currently, Firefox and Chrome does not handle the coordinates the same way. Take care about this while using them.</p>
+<p><strong>Warning:</strong> Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.</p>
 </div>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt><a href="DeviceOrientationEvent/absolute.html" title="Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details."><code>DeviceOrientationEvent.absolute</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details." href="DeviceOrientationEvent/absolute.html"><code>DeviceOrientationEvent.absolute</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>A boolean that indicates whether or not the device is providing orientation data absolutely.</dd>
- <dt><a href="DeviceOrientationEvent/alpha.html" title="Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details."><code>DeviceOrientationEvent.alpha</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details." href="DeviceOrientationEvent/alpha.html"><code>DeviceOrientationEvent.alpha</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>A number representing the motion of the device around the z axis, express in degrees with values ranging from 0 to 360</dd>
- <dt><a href="DeviceOrientationEvent/beta.html" title="Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,&nbsp; by which the device is tipped forward or backward. See Orientation and motion data explained for details."><code>DeviceOrientationEvent.beta</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,&nbsp; by which the device is tipped forward or backward. See Orientation and motion data explained for details." href="DeviceOrientationEvent/beta.html"><code>DeviceOrientationEvent.beta</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>A number representing the motion of the device around the x axis, express in degrees with values ranging from -180 to 180. This represents a front to back motion of the device.</dd>
- <dt><a href="DeviceOrientationEvent/gamma.html" title="Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is turned left or right. See Orientation and motion data explained for details."><code>DeviceOrientationEvent.gamma</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a title="Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is turned left or right. See Orientation and motion data explained for details." href="DeviceOrientationEvent/gamma.html"><code>DeviceOrientationEvent.gamma</code></a> <span title="This value may not be changed." class="inlineIndicator readOnly readOnlyInline">Read only </span></dt>
  <dd>A number representing the motion of the device around the y axis, express in degrees with values ranging from -90 to 90. This represents a left to right motion of the device.</dd>
 </dl>
 
@@ -513,7 +519,7 @@
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://w3c.github.io/deviceorientation/spec-source-orientation.html" class="external" lang="en" title="The 'Device Orientation Events' specification" hreflang="en">Device Orientation Events</a></td>
+   <td><a lang="en" title="The 'Device Orientation Events' specification" class="external" href="https://w3c.github.io/deviceorientation/spec-source-orientation.html" hreflang="en">Device Orientation Events</a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>Initial specification.</td>
   </tr>
@@ -531,11 +537,13 @@
 </div><p></p>
 
 <div id="compat-desktop">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -543,7 +551,7 @@
   </tr>
   <tr>
    <td>Basic support</td>
-   <td>7.0 [1]</td>
+   <td>7.0 [1]</td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>6 [2]</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -554,12 +562,14 @@
 </div>
 
 <div id="compat-mobile">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Mobile</th>
    <th>Opera Mobile</th>
@@ -569,7 +579,7 @@
   <tr>
    <td>Basic support</td>
    <td>3.0</td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span> [1]</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span> [1]</td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>6 [2]</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -580,41 +590,22 @@
 </table>
 </div>
 
-<p>[1] Before version 50, Chrome provided absolute values instead of relative values for this event. Developers still needing absolute values may use the <a href="Ondeviceorientationabsolute.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>ondeviceorientationabsolute</code></a> event.</p>
+<p>[1] Before version 50, Chrome provided absolute values instead of relative values for this event. Developers still needing absolute values may use the <a title="The documentation about this has not yet been written; please consider contributing!" href="Ondeviceorientationabsolute.html" class="new"><code>ondeviceorientationabsolute</code></a> event.</p>
 
 <p>[2] Firefox 3.6, 4, and 5 supported <a href="../Events/MozOrientation.html">mozOrientation </a>instead of the standard <code>DeviceOrientationEvent</code> interface</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><code><a href="../Events/deviceorientation.html" title="/en-US/docs/Web/Events/deviceorientation">deviceorientation</a></code></li>
- <li><a href="DeviceMotionEvent.html" title="The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation."><code>DeviceMotionEvent</code></a></li>
- <li><code><a href="../Events/devicemotion.html" title="/en-US/docs/Web/Events/devicemotion">devicemotion</a></code></li>
- <li><a href="Detecting_device_orientation.html" title="/en-US/docs/WebAPI/Detecting_device_orientation">Detecting device orientation</a></li>
- <li><a href="../Guide/Events/Orientation_and_motion_data_explained.html" title="Orientation and motion data explained">Orientation and motion data explained</a></li>
+ <li><code><a title="/en-US/docs/Web/Events/deviceorientation" href="../Events/deviceorientation.html">deviceorientation</a></code></li>
+ <li><a title="The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation." href="DeviceMotionEvent.html"><code>DeviceMotionEvent</code></a></li>
+ <li><code><a title="/en-US/docs/Web/Events/devicemotion" href="../Events/devicemotion.html">devicemotion</a></code></li>
+ <li><a title="/en-US/docs/WebAPI/Detecting_device_orientation" href="Detecting_device_orientation.html">Detecting device orientation</a></li>
+ <li><a title="Orientation and motion data explained" href="../Guide/Events/Orientation_and_motion_data_explained.html">Orientation and motion data explained</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDeviceOrientationEvent%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+DeviceOrientationEvent+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about DeviceOrientationEvent on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about DeviceOrientationEvent on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDeviceOrientationEvent%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about DeviceOrientationEvent on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -644,6 +635,10 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/zeke">zeke</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
@@ -666,11 +661,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>,
-                      <time datetime="2016-04-25T14:59:17-07:00">Apr 25, 2016, 2:59:17 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-12-02T14:55:26.435980-08:00">Dec 2, 2016, 2:55:26 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -687,7 +719,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="DeviceOrientationEvent.html"><code>DeviceOrientationEvent</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="DeviceOrientationEvent/absolute.html" title="Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details."><code>absolute</code></a></li><li><a href="DeviceOrientationEvent/alpha.html" title="Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details."><code>alpha</code></a></li><li><a href="DeviceOrientationEvent/beta.html" title="Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,&nbsp; by which the device is tipped forward or backward. See Orientation and motion data explained for details."><code>beta</code></a></li><li><a href="DeviceOrientationEvent/gamma.html" title="Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is turned left or right. See Orientation and motion data explained for details."><code>gamma</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="Event.html"><code>Event</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/deviceorientation.html"><code>deviceorientation</code></a></li><li><a href="../Events/compassneedscalibration.html"><code>compassneedscalibration</code></a></li><li><a href="../Events/devicemotion.html"><code>devicemotion</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Device Orientation Events</strong></a><ol><li><a href="DeviceAcceleration.html"><code>DeviceAcceleration</code></a></li><li><a href="DeviceMotionEvent.html"><code>DeviceMotionEvent</code></a></li><li><a href="DeviceRotationRate.html"><code>DeviceRotationRate</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="DeviceOrientationEvent.html"><code>DeviceOrientationEvent</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details." href="DeviceOrientationEvent/absolute.html"><code>absolute</code></a></li><li><a title="Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details." href="DeviceOrientationEvent/alpha.html"><code>alpha</code></a></li><li><a title="Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,&nbsp; by which the device is tipped forward or backward. See Orientation and motion data explained for details." href="DeviceOrientationEvent/beta.html"><code>beta</code></a></li><li><a title="Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is turned left or right. See Orientation and motion data explained for details." href="DeviceOrientationEvent/gamma.html"><code>gamma</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="Event.html"><code>Event</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/deviceorientation.html"><code>deviceorientation</code></a></li><li><a href="../Events/compassneedscalibration.html"><code>compassneedscalibration</code></a></li><li><a href="../Events/devicemotion.html"><code>devicemotion</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Device Orientation Events</strong></a><ol><li><a href="DeviceAcceleration.html"><code>DeviceAcceleration</code></a></li><li><a href="DeviceMotionEvent.html"><code>DeviceMotionEvent</code></a></li><li><a href="DeviceRotationRate.html"><code>DeviceRotationRate</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -711,12 +743,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -724,9 +756,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -735,12 +766,15 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/DeviceOrientationEvent" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/DeviceOrientationEvent" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/fr/docs/Web/API/DeviceOrientationEvent">
-            Français
+          <option title="French" value="/fr/docs/Web/API/DeviceOrientationEvent">
+            Français (fr)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/DeviceOrientationEvent">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -757,33 +791,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:16:35 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:56:06 GMT -->
 </body></html>

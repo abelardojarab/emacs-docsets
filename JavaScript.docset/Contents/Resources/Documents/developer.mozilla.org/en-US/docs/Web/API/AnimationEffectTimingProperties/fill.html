@@ -1,0 +1,902 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:06:15 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>AnimationEffectTimingProperties.fill</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$json">
+  <link rel="canonical" href="fill.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="AnimationEffectTimingProperties.fill">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill">
+  <meta name="twitter:title" content="AnimationEffectTimingProperties.fill">
+  
+  <meta property="og:description" content="The Web Animations API 's AnimationEffectTimingProperties dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time.">
+  <meta name="description" content="The Web Animations API 's AnimationEffectTimingProperties dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time.">
+  <meta name="twitter:description" content="The Web Animations API 's AnimationEffectTimingProperties dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/AnimationEffectTimingProperties/fill" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAnimationEffectTimingProperties%2Ffill" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../AnimationEffectTimingProperties.html" rel="v:url" property="v:title">AnimationEffectTimingProperties</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">AnimationEffectTimingProperties.fill</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/rachelnabors" title="View profile: rachelnabors">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rachelnabors" data-src="../../../../../../secure.gravatar.com/avatar/8c997e343925d39d4858cf401b9381aa6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rachelnabors</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>AnimationEffectTimingProperties.fill</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Value" rel="internal">Value</a></li></ol></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Fill_mode_none" rel="internal">Fill mode: none</a><ol><li><a href="#HTML_content" rel="internal">HTML content</a></li><li><a href="#CSS_content" rel="internal">CSS content</a></li><li><a href="#JavaScript_content" rel="internal">JavaScript content</a></li></ol></li><li><a href="#Result" rel="internal">Result</a></li><li><a href="#Follow_the_White_Rabbit_example" rel="internal">Follow the White Rabbit example</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><div class="notice experimental"> 
+    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
+</div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+
+<p>The <a href="../Web_Animations_API.html">Web Animations API</a>'s <a href="../AnimationEffectTimingProperties.html" title="The AnimationEffectTimingProperties dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play."><code>AnimationEffectTimingProperties</code></a> dictionary's <strong><code>fill</code></strong>&nbsp;property specifies a <strong>fill mode</strong>, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by <a href="iterationStart.html" title="Web Animations API's AnimationEffectTimingProperties dictionary's&nbsp; iterationStart&nbsp;property specifies the repetition number which repetition the animation begins at and its progress through it."><code>iterationStart</code></a> or after animation's end time.</p>
+
+<p>For example, setting fill to <code>"none"</code> means none of the animation's effects are applied to the element if the current time is outside the range of times during which the animation is running, while <code>"forwards"</code> ensures that once the animation's end time has been passed, the element will continue to be drawn in the state it was in at its last rendered frame.</p>
+
+<div class="note">
+<p><a href="../Element/animate.html" title="The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."><code>Element.animate()</code></a>, <a href="../KeyframeEffectReadOnly/KeyframeEffectReadOnly.html" title="The KeyframeEffectReadOnly() constructor of the Web Animations API&nbsp;returns a new KeyframeEffectReadOnly&nbsp;object instance."><code>KeyframeEffectReadOnly()</code></a>, and <a href="../KeyframeEffect/KeyframeEffect.html" title="The KeyframeEffect() constructor of the Web Animations API&nbsp;returns a new KeyframeEffect&nbsp;object instance."><code>KeyframeEffect()</code></a> all accept an object of timing properties including <code>fill.</code>&nbsp;The value of <code>fill</code>&nbsp;corresponds directly to&nbsp;<a href="../AnimationEffectTimingReadOnly/fill.html" title="The fill&nbsp;property of AnimationEffectTimingReadOnly dictates how and when the animation's effects should be reflected by the element(s) visual state."><code>AnimationEffectTimingReadOnly.fill</code></a> in <a href="../AnimationEffectReadOnly/timing.html" title="The AnimationEffectReadOnly.timing read-only attribute of the AnimationEffectReadOnly interface returns an AnimationEffectTimingReadOnly object containing the timing properties for the Animation Effect."><code>timing</code></a> objects returned by <a href="../AnimationEffectReadOnly.html" title="The AnimationEffectReadOnly interface of the Web Animations API defines current and future &quot;Animation Effects&quot; like KeyframeEffect, which can be passed to Animation objects for playing,&nbsp;and&nbsp;KeyframeEffectReadOnly&nbsp;(which is used&nbsp;by CSS Animations and Transitions)."><code>AnimationEffectReadOnly</code></a>, <a href="../KeyframeEffectReadOnly.html" title="The KeyframeEffectReadOnly&nbsp;interface of the Web Animations API describes sets of animatable properties and values that can be played using&nbsp;the&nbsp;Animation.Animation() constructor, and which are inherited by KeyframeEffect."><code>KeyframeEffectReadOnly</code></a>, and <a href="../KeyframeEffect.html" title="The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the&nbsp;Animation() constructor."><code>KeyframeEffect</code></a>.</p>
+</div>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>timingProperties</em> = {
+  fill: "none" | "forwards" | "backwards" | "both" | "auto"
+}
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> indicating the fill type to use in order to properly render an affected element when outside the animation's <strong>active interval</strong> (that is, when it's not actively animating). The default is <code>"auto"</code>.</p>
+
+<dl>
+ <dt><code>"none"</code></dt>
+ <dd>The animation's effects are only visible while the animation is iterating or its playhead is positioned over an iteration. The animation's effects are not visible when its <a href="../Animation/playState.html" title="The Animation.playState&nbsp;property of the&nbsp;Web Animations API&nbsp;returns and sets an enumerated value describing the playback state of an animation."><code>playState</code></a> is <code>pending</code>&nbsp;with a&nbsp;<a href="../AnimationEffectTimingReadOnly/delay.html" title="The delay&nbsp;property of the AnimationEffectTimingReadOnly object represents the number of milliseconds to delay the start of the animation."><code>delay</code></a>, when its <code>playState</code> is <code>finished</code>,&nbsp;or during its <a href="../AnimationEffectTimingReadOnly/endDelay.html" title="The endDelay property of AnimationEffectTimingReadOnly represents the number of milliseconds to delay after the end time of an animation. The end time of an animation effect is simply the sum of its delay, duration, and endDelay."><code>endDelay</code></a> or &nbsp;<a href="../AnimationEffectTimingReadOnly/delay.html" title="The delay&nbsp;property of the AnimationEffectTimingReadOnly object represents the number of milliseconds to delay the start of the animation."><code>delay</code></a>. In other words, if the animation isn't in its active interval, the affected element is not visible.</dd>
+ <dt><code>"forwards"</code></dt>
+ <dd>The affected element will continue to be rendered in the state of the final animation framecontinue to be applied to the&nbsp; after the animation has completed playing, in spite of and during&nbsp;any <a href="../AnimationEffectTimingReadOnly/endDelay.html" title="The endDelay property of AnimationEffectTimingReadOnly represents the number of milliseconds to delay after the end time of an animation. The end time of an animation effect is simply the sum of its delay, duration, and endDelay."><code>endDelay</code></a> or when its <code>playState</code> is&nbsp;<code>finished</code>.</dd>
+ <dt><code>"backwards"</code></dt>
+ <dd>The animation's effects should be reflected by the element(s) state prior to playing, in spite of and during any <a href="../AnimationEffectTimingReadOnly/delay.html" title="The delay&nbsp;property of the AnimationEffectTimingReadOnly object represents the number of milliseconds to delay the start of the animation."><code>delay</code></a> and&nbsp;<code>pending</code>&nbsp;<a href="../Animation/playState.html" title="The Animation.playState&nbsp;property of the&nbsp;Web Animations API&nbsp;returns and sets an enumerated value describing the playback state of an animation."><code>playState</code></a>.</dd>
+ <dt><code>"both"</code></dt>
+ <dd>Combining the effects of <strong>both&nbsp;</strong><code>forwards</code> and <code>backwards</code>:&nbsp;The animation's effects should be reflected by the element(s) state prior to playing and&nbsp;retained after the animation has completed playing, in spite of and during any <a href="../AnimationEffectTimingReadOnly/endDelay.html" title="The endDelay property of AnimationEffectTimingReadOnly represents the number of milliseconds to delay after the end time of an animation. The end time of an animation effect is simply the sum of its delay, duration, and endDelay."><code>endDelay</code></a>, <a href="../AnimationEffectTimingReadOnly/delay.html" title="The delay&nbsp;property of the AnimationEffectTimingReadOnly object represents the number of milliseconds to delay the start of the animation."><code>delay</code></a> and/or <code>pending</code> or&nbsp;<code>finished</code>&nbsp;<a href="../Animation/playState.html" title="The Animation.playState&nbsp;property of the&nbsp;Web Animations API&nbsp;returns and sets an enumerated value describing the playback state of an animation."><code>playState</code></a>.</dd>
+ <dt><code>"auto"</code></dt>
+ <dd>If the animation effect the fill mode is being applied to is a keyframe effect (<a href="../KeyframeEffect.html" title="The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the&nbsp;Animation() constructor."><code>KeyframeEffect</code></a> or <a href="../KeyframeEffectReadOnly.html" title="The KeyframeEffectReadOnly&nbsp;interface of the Web Animations API describes sets of animatable properties and values that can be played using&nbsp;the&nbsp;Animation.Animation() constructor, and which are inherited by KeyframeEffect."><code>KeyframeEffectReadOnly</code></a>), <code>"auto"</code> is equivalent to <code>"none"</code>. Otherwise, the result is <code>"both"</code>.</dd>
+</dl>
+
+<h2 id="Examples">Examples</h2>
+
+<p>Here are a few examples.</p>
+
+<h3 name="Fill_mode_none" id="Fill_mode_none">Fill mode: none</h3>
+
+<h4 id="HTML_content">HTML content</h4>
+
+<p>The HTML is pretty simple. We have a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" title="The HTML &lt;div&gt; element (or HTML Document Division Element) is the generic container for flow content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. It should be used only when no other semantic element (such as &lt;article&gt; or &lt;nav&gt;) is appropriate."><code>&lt;div&gt;</code></a> named <code>"main"</code> which is a container for the element we'll be animating, which is a <code>&lt;div&gt;</code> with the ID <code>"box"</code>. Below that, another <code>&lt;div&gt;</code> serves as a button that will trigger the animation to begin.</p>
+
+<pre class="brush: html">&lt;div class="main"&gt;
+&nbsp; &lt;div id="box"&gt;
+&nbsp;&nbsp;&nbsp; &lt;div id="text"&gt;Look! A box!&lt;/div&gt;
+&nbsp; &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="button" id="animateButton"&gt;
+&nbsp; Animate!
+&lt;/div&gt;
+</pre>
+
+<div class="hidden">
+<h4 id="CSS_content">CSS content</h4>
+
+<pre class="brush: css">.main {
+  width: 300px;
+  height:300px;
+  border: 1px solid black;
+}
+
+.button {
+&nbsp; cursor: pointer;
+&nbsp; width: 300px;
+&nbsp; border: 1px solid black;
+&nbsp; font-size: 16px;
+&nbsp; text-align: center;
+&nbsp; margin-top: 0px;
+&nbsp; padding-top: 2px;
+&nbsp; padding-bottom: 4px;
+&nbsp; color: white;
+&nbsp; background-color: darkgreen;
+&nbsp; font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+#text {
+  width: 160px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font: bold 2em "Lucida Grande", "Open Sans", sans-serif;
+}</pre>
+</div>
+
+<p>While there's other CSS involved in this example, tparh that really matters for our purposes is the CSS that styles the <code>"box"</code> element that we'll be animating. That CSS looks like this:</p>
+
+<pre class="brush: css">#box {
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  top: 50px;
+  border: 1px solid #7788FF;
+  margin: 0;
+  position: relative;
+  background-color: #2233FF;
+  display: flex;
+  justify-content: center;
+}</pre>
+
+<p>All this does is specify the size, border, and color information, as well as indicate that the box should be centered both vertically and horizontally inside its container. Note that there's no rotation applied.</p>
+
+<h4 id="JavaScript_content">JavaScript content</h4>
+
+<p>Now let's check out the JavaScript. First we'll define the two objects that describe the keyframes and the timing configuration to use, then we'll actually see the code that triggers and runs the animation when the <code>"animateButton"</code> button is clicked.</p>
+
+<pre>var boxRotationKeyframes = [
+  { transform: "rotate(-90deg)" },
+  { transform: "rotate(90deg)" }
+];
+</pre>
+
+<p>The <code>boxRotationKeyframes</code> object is an array of keyframes, each describing the state of the affected element at a point in the animation process. In this case, we have just two keyframes; the first defines what affect is applied to the element <em>immediately after the animation first begins to play</em>, and the second defines the effect applied to the element in the <em>last moment before it ends</em>. Those phrases are crucial. Let's look at why.</p>
+
+<p>The first keyframe says that when the animation begins, the element should be rotated 90° to the left. That means that unless we specify otherwise using the <code>fill</code> property, the instant the animation is started the element will be rotated to the left 90°, and then it will animate smoothly from there. Since by default the box isn't rotated,</p>
+
+<p>The last keyframe says that the animation's final frame should draw the animation rotated 90° to the right from its original orientation.</p>
+
+<pre class="brush: js">var boxRotationTiming = {
+  duration: 2000,
+  iterations: 1,
+  fill: "none"
+};</pre>
+
+<p>The <code>boxRotationTiming</code> object describes how long the animation should take to run, how many times it should run, what state the element should be in before the animation begins and after it ends, and so forth.</p>
+
+<p>Here we specify that the animation should take 2000 milliseconds (2 seconds) to complete, should only run once, and that the fill mode should be <code>"none"</code>. As defined above, the <code>"none"</code> fill mode means that the element will be rendered in its natural, unaltered condition anytime the animation isn't actively running.</p>
+
+<pre class="brush: js">document.getElementById("animateButton").addEventListener("click", event =&gt; {
+&nbsp; document.getElementById("box").animate(
+&nbsp;&nbsp;&nbsp; boxRotationKeyframes,
+&nbsp;&nbsp;&nbsp; boxRotationTiming
+&nbsp; );
+}, false);</pre>
+
+<p>The rest of the code is pretty simple: it adds an event listener to the "Animate" button so that when it's clicked by the user, the box is animated by calling <a href="../Element/animate.html" title="The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."><code>Element.animate()</code></a> on it, providing the <code>boxRotationKeyframes</code> and <code>boxRotationTiming</code> objects to describe the animation that should occur.</p>
+
+<h3 id="Result">Result</h3>
+
+<p>Below we see what the result looks like. Notice how before the animation starts running, the box is upright, then upon clicking the "Animate!" button, the box is instantly rotated 90° to the left (to correspond to the first keyframe in the animation sequence). Then, when the animation finishes running, the box instantaneously leaps back to its original state and is upright once again.</p>
+
+<p>Give it a try below!</p>
+
+<p><iframe id="frame_Fill_mode_none" height="320" src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill%24samples/Fill_mode_none4c46.html?revision=1138125" frameborder="0" width="320" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h3 id="Follow_the_White_Rabbit_example">Follow the White Rabbit example</h3>
+
+<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm?editors=0010" class="external">Follow the White Rabbit</a>&nbsp;example, the White Rabbit's animation is formed by coupling a <code>KeyframeEffect</code> with an <code>Animation</code>&nbsp;object. The <code>keyframeEffect</code> takes an object of <a href="../AnimationEffectTimingProperties.html">timing properties</a>, which is where we pass in <code>fill</code>. <code>Forwards</code> makes the rabbit retain its last keyframe rather than reverting to its unanimated state:</p>
+
+<pre class="brush: js">// Create a set of keyframes to slide the rabbit down the hole--and keep him down with 'fill'!
+var rabbitDownKeyframes = new KeyframeEffect(
+  whiteRabbit,
+  [
+    { transform: 'translateY(0%)' },&nbsp;
+    { transform: 'translateY(100%)' }
+  ], {
+    duration: 3000,&nbsp;
+    fill: 'forwards'&nbsp;
+  }
+);
+
+// Set up the rabbit's animation to play on command by calling rabbitDownAnimation.play() later
+var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a href="https://w3c.github.io/web-animations/#enumdef-fillmode" class="external" lang="en" hreflang="en">Web Animations<br><small lang="en-US">The definition of 'fill' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>Editor's draft.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p></p><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/48" title="Released on 2016-08-02.">48</a> (48)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../Web_Animations_API.html">Web Animations API</a></li>
+ <li><a href="../Element/animate.html" title="The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."><code>Element.animate()</code></a>, <a href="../KeyframeEffectReadOnly/KeyframeEffectReadOnly.html" title="The KeyframeEffectReadOnly() constructor of the Web Animations API&nbsp;returns a new KeyframeEffectReadOnly&nbsp;object instance."><code>KeyframeEffectReadOnly.KeyframeEffectReadOnly()</code></a>, and <a href="../KeyframeEffect/KeyframeEffect.html" title="The KeyframeEffect() constructor of the Web Animations API&nbsp;returns a new KeyframeEffect&nbsp;object instance."><code>KeyframeEffect.KeyframeEffect()</code></a> all accept an object of timing properties including this one.</li>
+ <li>The value of this property&nbsp;corresponds to the one&nbsp;in <a href="../AnimationEffectTimingReadOnly.html" title="The AnimationEffectTimingReadOnly&nbsp;interface&nbsp;of the&nbsp;Web Animations API&nbsp;is comprised of timing properties."><code>AnimationEffectTimingReadOnly</code></a> (which is the <a href="../AnimationEffectReadOnly/timing.html" title="The AnimationEffectReadOnly.timing read-only attribute of the AnimationEffectReadOnly interface returns an AnimationEffectTimingReadOnly object containing the timing properties for the Animation Effect."><code>timing</code></a> object&nbsp;for <a href="../AnimationEffectReadOnly.html" title="The AnimationEffectReadOnly interface of the Web Animations API defines current and future &quot;Animation Effects&quot; like KeyframeEffect, which can be passed to Animation objects for playing,&nbsp;and&nbsp;KeyframeEffectReadOnly&nbsp;(which is used&nbsp;by CSS Animations and Transitions)."><code>AnimationEffectReadOnly</code></a>, <a href="../KeyframeEffectReadOnly.html" title="The KeyframeEffectReadOnly&nbsp;interface of the Web Animations API describes sets of animatable properties and values that can be played using&nbsp;the&nbsp;Animation.Animation() constructor, and which are inherited by KeyframeEffect."><code>KeyframeEffectReadOnly</code></a>, and&nbsp;<a href="../KeyframeEffect.html" title="The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the&nbsp;Animation() constructor."><code>KeyframeEffect</code></a>).</li>
+ <li>CSS's&nbsp;<code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode">animation-fill-mode</a></code></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Animate">Animate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/animate">animate</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Animation">Animation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/AnimationEffectTimingProperties">AnimationEffectTimingProperties</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/AnimationEffectTimingReadOnly">AnimationEffectTimingReadOnly</a></li>
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Experimental">Experimental</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/fill">fill</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/KeyframeEffect">KeyframeEffect</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/KeyframeEffectReadOnly">KeyframeEffectReadOnly</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Property">Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web Animations">Web Animations</a></li>
+      
+        <li><a href="../../../tag/web%20animations%20api.html">web animations api</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rachelnabors">rachelnabors</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-11-04T12:12:00-07:00">Nov 4, 2016, 12:12:00 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../Web_Animations_API.html">Web Animations API</a></strong></li><li><strong><a href="../AnimationEffectTimingProperties.html"><code>AnimationEffectTimingProperties</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="delay.html" title="The AnimationEffectTimingProperties dictionary's delay&nbsp;property in the Web Animations API represents the number of milliseconds to delay the start of the animation."><code>delay</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="direction.html" title="The direction&nbsp;property of the Web Animations API dictionary AnimationEffectTimingProperties indicates an animation's playback direction along its timeline, as well as its behavior when it reaches the end of an interation"><code>direction</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="duration.html" title="The duration&nbsp;property of the dictionary AnimationEffectTimingProperties in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete."><code>duration</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="easing.html" title="The {domxref(&quot;AnimationEffectTimingProperties&quot;)}} dictionary's easing&nbsp;property in the Web Animations API specifies the timing function used to scale the time to produce easing effects, where easing is the rate of the animation's change over time."><code>easing</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="endDelay.html" title="The endDelay property of the AnimationEffectTimingProperties dictionary (part of the Web Animations API) indicates the number of milliseconds to delay after the active period of an animation sequence. The animation's end time—the time at which an iteration is considered to have finished—is the time at which the animation finishes an iteration (its initial delay, AnimationEffectTimingReadOnly.delay, plus its duration,duration, plus its end delay."><code>endDelay</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>fill</code></em></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iterations.html" title="The&nbsp;Web Animations API dictionary AnimationEffectTimingProperties's iterations&nbsp;property specifies the number of times the animation should repeat. The default value is 1, indicating that it should only play once, but you can set it to any floating-point value (including positive Infinity defaults to 1, and can also take a value of Infinity&nbsp;to make it loop infinitely."><code>iterations</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iterationStart.html" title="Web Animations API's AnimationEffectTimingProperties dictionary's&nbsp; iterationStart&nbsp;property specifies the repetition number which repetition the animation begins at and its progress through it."><code>iterationStart</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Animations</strong></a><ol><li><a href="../Animation.html"><code>Animation</code></a></li><li><a href="../AnimationEffectReadOnly.html"><code>AnimationEffectReadOnly</code></a></li><li><a href="../AnimationEffectTiming.html"><code>AnimationEffectTiming</code></a></li><li><a href="../AnimationEffectTimingReadOnly.html"><code>AnimationEffectTimingReadOnly</code></a></li><li><a href="../AnimationEvent.html"><code>AnimationEvent</code></a></li><li><a href="../AnimationPlaybackEvent.html"><code>AnimationPlaybackEvent</code></a></li><li><a href="../AnimationTimeline.html"><code>AnimationTimeline</code></a></li><li><a href="../Document/getAnimations.html"><code>Document.getAnimations()</code></a></li><li><a href="../Document/timeline.html"><code>Document.timeline</code></a></li><li><a href="../DocumentTimeline.html"><code>DocumentTimeline</code></a></li><li><a href="../Element/animate.html"><code>Element.animate()</code></a></li><li><a href="../KeyframeEffect.html"><code>KeyframeEffect</code></a></li><li><a href="../KeyframeEffectReadOnly.html"><code>KeyframeEffectReadOnly</code></a></li><li><a href="../SharedKeyframeList.html"><code>SharedKeyframeList</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:06:16 GMT -->
+</body></html>

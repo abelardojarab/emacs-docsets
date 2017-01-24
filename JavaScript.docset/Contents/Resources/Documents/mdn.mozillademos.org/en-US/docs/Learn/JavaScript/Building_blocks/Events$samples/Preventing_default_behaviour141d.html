@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/Preventing_default_behaviour?revision=1149102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            div {
+  margin-bottom: 10px;
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <form>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" type="text">
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" type="text">
+  </div>
+  <div>
+     <input id="submit" type="submit">
+  </div>
+</form>
+<p></p>
+        
+        
+            <script type="text/javascript">
+                var form = document.querySelector('form');
+var fname = document.getElementById('fname');
+var lname = document.getElementById('lname');
+var submit = document.getElementById('submit');
+var para = document.querySelector('p');
+
+form.onsubmit = function(e) {
+  if(fname.value === '' || lname.value === '') {
+    e.preventDefault();
+    para.textContent = 'You need to fill in both names!'
+  }
+}
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Events$samples/Preventing_default_behaviour?revision=1149102 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:42 GMT -->
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaStreamConstraints/video$samples/Using_a_Boolean_value?revision=1131637 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:55:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            body {
+  font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+video {
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.button {
+  cursor: pointer;
+  width: 160px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <p>Click the start button below to begin the demonstration.</p>
+<div id="startButton" class="button">
+  Start
+</div>
+<video id="video" width="160" height="120" autoplay></video><br>
+<div id="log"></div>
+        
+        
+            <script type="text/javascript">
+                let videoElement = document.getElementById("video");
+let logElement = document.getElementById("log");
+
+function log(msg) {
+ logElement.innerHTML += msg + "<br>";
+} document.getElementById("startButton").addEventListener("click", function() {
+  navigator.mediaDevices.getUserMedia({
+      video: true
+  }).then(stream => videoElement.srcObject = stream)
+    .catch(err => log(err.name + ": " + err.message));
+}, false);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/MediaStreamConstraints/video$samples/Using_a_Boolean_value?revision=1131637 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:55:37 GMT -->
+</html>

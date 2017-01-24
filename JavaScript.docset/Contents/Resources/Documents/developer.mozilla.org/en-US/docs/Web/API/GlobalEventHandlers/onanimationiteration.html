@@ -1,0 +1,867 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:32:22 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>GlobalEventHandlers.onanimationiteration</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$json">
+  <link rel="canonical" href="onanimationiteration.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="GlobalEventHandlers.onanimationiteration">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">
+  <meta name="twitter:title" content="GlobalEventHandlers.onanimationiteration">
+  
+  <meta property="og:description" content="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.">
+  <meta name="description" content="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.">
+  <meta name="twitter:description" content="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/GlobalEventHandlers/onanimationiteration" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FGlobalEventHandlers%2Fonanimationiteration" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../GlobalEventHandlers.html" rel="v:url" property="v:title">GlobalEventHandlers</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">GlobalEventHandlers.onanimationiteration</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>GlobalEventHandlers.onanimationiteration</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a rel="internal" href="#Syntax">Syntax</a><ol><li><a rel="internal" href="#Value">Value</a></li></ol></li><li><a rel="internal" href="#Example">Example</a><ol><li><a rel="internal" href="#HTML_content">HTML content</a></li><li><a rel="internal" href="#CSS_content">CSS content</a></li><li><a rel="internal" href="#JavaScript_content">JavaScript content</a></li><li><a rel="internal" href="#Result">Result</a></li></ol></li><li><a rel="internal" href="#Specification">Specification</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#See_also">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="overheadIndicator draft"> 
+    <p><strong>Draft</strong><br> 
+    This page is not complete.</p> 
+     
+</div></div>
+
+<p>An event handler for the <code><a title="/en-US/docs/Web/Events/animationiteration" href="../../Events/animationiteration.html">animationiteration</a></code> event. This event is sent when a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations">CSS Animation</a> reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>animIterationHandler</em> = <em>target</em>.onanimationiteration;
+
+<em>target</em>.onanimationiteration = <em><a title="The Function constructor creates a new Function object. In JavaScript every function is actually a Function object." href="../../JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a></em>
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A <a title="The Function constructor creates a new Function object. In JavaScript every function is actually a Function object." href="../../JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a> to be called when an <code><a title="/en-US/docs/Web/Events/animationiteration" href="../../Events/animationiteration.html">animationiteration</a></code> event occurs indicating that a CSS animation has reached the end of an iteration while running on the <em><code>target</code></em>, where the target object is an HTML element (<a title="The HTMLElement interface represents any HTML element. Some elements directly implement this interface, others implement it via an interface that inherits it." href="../HTMLElement.html"><code>HTMLElement</code></a>), document (<a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document." href="/en-US/docs/Web/API/Document"><code>Document</code></a>), or window (<a title="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window." href="../Window.html"><code>Window</code></a>). The function receives as input a single parameter: an <a title="The AnimationEvent interface represents events providing information related to animations." href="../AnimationEvent.html"><code>AnimationEvent</code></a> object describing the event which occurred.</p>
+
+<h2 name="Example" id="Example">Example</h2>
+
+<p>Let's create an animation which automatically pauses at the end of each iteration, allowing the user to choose whether or not to start the next iteration. Much of this code is the same as in other examples of animation events, so it may look familiar.</p>
+
+<div class="hidden">
+<h3 id="HTML_content">HTML content</h3>
+
+<pre class="brush: html">&lt;div class="main"&gt;
+  &lt;div id="box"&gt;
+    &lt;div id="text"&gt;Box&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="button" id="play"&gt;
+&nbsp; Begin Demonstration
+&lt;/div&gt;</pre>
+</div>
+
+<h3 id="CSS_content">CSS content</h3>
+
+<div class="hidden">
+<pre class="brush: css">:root {
+  --boxwidth:50px;
+}
+
+.main {
+  width: 300px;
+  height:300px;
+  border: 1px solid black;
+}
+
+.button {
+  cursor: pointer;
+  width: 300px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+  font: 14px "Open Sans", "Arial", sans-serif;
+} 
+
+#text {
+  width: 46px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
+} 
+
+&nbsp;</pre>
+</div>
+
+<p>Leaving out some bits of the CSS that don't matter for the discussion here, let's take a look at the styles for the box that we're animating. First is the box itself. We set its size, position, color, and layout. Note that there's nothing there about animation. That's because we don't want the box to start animating right away. We'll add the <a title="The animation CSS property is a shorthand property for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode and animation-play-state." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation"><code>animation</code></a> style later to start animating the box.</p>
+
+<pre class="brush: css">#box {
+  width: var(--boxwidth);
+  height: var(--boxwidth);
+  left: 0;
+  top: 0;
+  border: 1px solid #7788FF;
+  margin: 0;
+  position: relative;
+  background-color: #2233FF;
+  display: flex;
+  justify-content: center;
+  animation: 2s ease-in-out 0s infinite alternate both paused slideBox;
+} 
+&nbsp;
+</pre>
+
+<p>The animation's keyframes are defined next; they describe an animation which causes the box to migrate from the top-left corner of the container to the bottom-right corner.</p>
+
+<pre class="brush: css">@keyframes slideBox {
+  from {
+    left:0;
+    top:0;
+  }
+  to {
+    left:calc(100% - var(--boxwidth));
+    top:calc(100% - var(--boxwidth))
+  }
+}
+</pre>
+
+<h3 id="JavaScript_content">JavaScript content</h3>
+
+<p>Some JavaScript code will need to be written to handle the click on the button to start the next iteration. Let's have a look.</p>
+
+<pre class="brush: js">let box = document.getElementById("box");
+let iterationCounter = 0;
+
+box.onanimationiteration = function(event) {
+  box.style.animationPlayState = "paused";
+  document.getElementById("play").innerHTML = "Start Iteration #" + (iterationCounter+1);
+};
+</pre>
+
+<p>This sets up two global variables: <code>box</code>, which references the <code>"box"</code> element that we're animating, and <code>iterationCounter</code>, which is initially zero, which indicates how many iterations of the animation have occurred.</p>
+
+<p>The onanimationiteration event handler is then set up. It simply sets the box's <a title="The animation-play-state CSS property determines whether an animation is running or paused. This can be queried to determine whether or not the animation is currently running. In addition, its value can be set to pause and resume playback of an animation." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> to "paused", then updates the text displayed in the button to indicate that clicking the button will start playing the next iteration of theanimation.</p>
+
+<p>Finally, we set up a handler for a click on the button that runs the animation:</p>
+
+<pre class="brush: js">document.getElementById("play").addEventListener("click", function(event) {
+&nbsp; box.style.animationPlayState = "running";
+&nbsp; iterationCounter++;
+}, false);</pre>
+
+<p>This sets the box element's <a title="The animation-play-state CSS property determines whether an animation is running or paused. This can be queried to determine whether or not the animation is currently running. In addition, its value can be set to pause and resume playback of an animation." href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state"><code>animation-play-state</code></a> to "running" and increments the iteration counter. That's all there is to it!</p>
+
+<h3 id="Result">Result</h3>
+
+<p>Assembled together, you get this:</p>
+
+<p><iframe width="500" class="live-sample-frame sample-code-frame" frameborder="0" src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration%24samples/Example1092.html?revision=1142525" height="400" id="frame_Example"></iframe></p>
+
+<p>Each time the box reaches the opposing corner, it stops, with the button reflecting which iteration number is up next, until you click the button to run the next iteration.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<table class="spectable standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a hreflang="en" class="external" lang="en" href="https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration">CSS Animations<br><small lang="en-US">The definition of 'onanimationiteration' in that specification.</small></a></td>
+   <td><span class="spec-WD">Working Draft</span></td>
+   <td>&nbsp;</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p></p><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Microsoft Edge</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1]</sup></td>
+   <td><a title="Released on 2017-01-24." href="https://developer.mozilla.org/en-US/Firefox/Releases/51">51</a> (51)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>51.0 (51)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Chrome calls this event handler <code>onwebkitanimationiteration</code> and the event is prefixed as <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="../Animationiteration.html"><code>webkitanimationiteration</code></a>.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The <code><a title="/en-US/docs/Web/Events/animationiteration" href="../../Events/animationiteration.html">animationiteration</a></code> event this event handler is triggered by.</li>
+ <li><a title="The AnimationEvent interface represents events providing information related to animations." href="../AnimationEvent.html"><code>AnimationEvent</code></a></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Animation">Animation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/animationiteration">animationiteration</a></li>
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/CSS">CSS</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/CSS Animations">CSS Animations</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/CSS Transitions">CSS Transitions</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Event Handler">Event Handler</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Experimental">Experimental</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/GlobalEventHandlers">GlobalEventHandlers</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/onanimationiteration">onanimationiteration</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Property">Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/transitions">transitions</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Transitions">Transitions</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web Animations">Web Animations</a></li>
+      
+        <li><a href="../../../tag/web%20animations%20api.html">web animations api</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-11-14T08:23:45-08:00">Nov 14, 2016, 8:23:45 AM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../GlobalEventHandlers.html"><code>GlobalEventHandlers</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)" href="onabort.html"><code>onabort</code></a></li><li><a title="An event handler for the animationcancel event. This event is sent when a CSS Animation unexpectedly aborts (in other words, any time it stops running without sending an animationend event), such as when the animation-name is changed such that the animation is removed, or when the animating node is hidden—either directly or because any of its containing nodes are hidden)—using CSS." href="onanimationcancel.html"><code>onanimationcancel</code></a></li><li><a title="An event handler for the animationend event. This event is sent when a CSS Animation reaches the end of its active period (which is calculated as (animation-duration * animation-iteration-count) + animation-delay." href="onanimationend.html"><code>onanimationend</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>onanimationiteration</code></em></li><li><a title="The onblur property returns the onBlur event handler code, if any, that exists on the current element." href="onblur.html"><code>onblur</code></a></li><li><a title="The onchange property sets and returns the event handler for the change event." href="onchange.html"><code>onchange</code></a></li><li><a title="The onclick property returns the click event handler code on the current element." href="onclick.html"><code>onclick</code></a></li><li><a title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)" href="onclose.html"><code>onclose</code></a></li><li><a title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute." href="oncontextmenu.html"><code>oncontextmenu</code></a></li><li><a title="The ondblclick property returns the onDblClick event handler code on the current element." href="ondblclick.html"><code>ondblclick</code></a></li><li><a title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:" href="onerror.html"><code>onerror</code></a></li><li><a title="The onfocus property returns the onFocus event handler code on the current element." href="onfocus.html"><code>onfocus</code></a></li><li><a title="An event handler for the input event on the window.&nbsp;The input event is raised when an &lt;input&gt; element value changes." href="/en-US/docs/Web/API/GlobalEventHandlers/oninput"><code>oninput</code></a></li><li><a title="The onkeydown property returns the onKeyDown event handler code on the current element." href="onkeydown.html"><code>onkeydown</code></a></li><li><a title="The onkeypress property sets and returns the onKeyPress event handler code for the current element." href="onkeypress.html"><code>onkeypress</code></a></li><li><a title="The onkeyup property returns the onKeyUp event handler code for the current element." href="onkeyup.html"><code>onkeyup</code></a></li><li><a title="An event handler for the load event of a window." href="onload.html"><code>onload</code></a></li><li><a title="The onmousedown property returns the onmousedown event handler code on the current element." href="onmousedown.html"><code>onmousedown</code></a></li><li><a title="The onmousemove property returns the mousemove event handler code on the current element." href="onmousemove.html"><code>onmousemove</code></a></li><li><a title="The onmouseout property returns the onMouseOut event handler code on the current element." href="onmouseout.html"><code>onmouseout</code></a></li><li><a title="The onmouseover property returns the onMouseOver event handler code on the current element." href="onmouseover.html"><code>onmouseover</code></a></li><li><a title="The onmouseup property returns the onMouseUp event handler code on the current element." href="onmouseup.html"><code>onmouseup</code></a></li><li><a title="A global event handler for the pointercancel event." href="onpointercancel.html"><code>onpointercancel</code></a></li><li><a title="A global event handler for the pointerdown event." href="onpointerdown.html"><code>onpointerdown</code></a></li><li><a title="A global event handler for the pointerenter event." href="onpointerenter.html"><code>onpointerenter</code></a></li><li><a title="A global event handler for the pointerleave event." href="onpointerleave.html"><code>onpointerleave</code></a></li><li><a title="A global event handler for the pointermove event." href="onpointermove.html"><code>onpointermove</code></a></li><li><a title="A global event handler for the pointerout event." href="onpointerout.html"><code>onpointerout</code></a></li><li><a title="A global event handler for the pointerover event." href="onpointerover.html"><code>onpointerover</code></a></li><li><a title="A global event handler for the pointerup event." href="onpointerup.html"><code>onpointerup</code></a></li><li><a title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received." href="onreset.html"><code>onreset</code></a></li><li><a title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received." href="onresize.html"><code>onresize</code></a></li><li><a title="An event handler for scroll events on&nbsp;element." href="onscroll.html"><code>onscroll</code></a></li><li><a title="An event handler for the select event on the window." href="onselect.html"><code>onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The GlobalEventHandlers.onselectstart property represents the event handler that is called when a selectstart event reaches this object." href="onselectstart.html"><code>onselectstart</code></a></li><li><a title="An event handler for the submit event on the window." href="onsubmit.html"><code>onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="ontouchcancel.html"><code>ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="GlobalEventHanders.html"><code>ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="Editorial review completed." href="ontouchstart.html"><code>ontouchstart</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Implemented by:</strong></a><ol><li><a href="../Document.html"><code>Document</code></a></li><li><a href="../HTMLElement.html"><code>HTMLElement</code></a></li><li><a href="../SVGElement.html"><code>SVGElement</code></a></li><li><a href="../Window.html"><code>Window</code></a></li><li><a href="../XULElement.html"><code>XULElement</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:32:23 GMT -->
+</body></html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:05:03 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:43:21 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -78,13 +77,19 @@
     
       <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/Window" title="Window">
     
+      <link rel="alternate" hreflang="nl" href="https://developer.mozilla.org/nl/docs/Web/API/Window" title="Window">
+    
       <link rel="alternate" hreflang="pl" href="https://developer.mozilla.org/pl/docs/Web/API/Window" title="window">
     
       <link rel="alternate" hreflang="pt-BR" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window" title="Window">
     
+      <link rel="alternate" hreflang="ro" href="https://developer.mozilla.org/ro/docs/Web/API/Window" title="Window">
+    
       <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Window" title="Window">
     
       <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window" title="Window">
+    
+      <link rel="alternate" hreflang="zh-TW" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Window" title="Window">
     
   
 
@@ -98,6 +103,13 @@
   <meta name="description" content="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window.">
   <meta name="twitter:description" content="The window object represents a window containing a DOM document; the document property points to the DOM document loaded in that window.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -115,10 +127,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -168,8 +180,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -185,9 +197,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -204,34 +214,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Window" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Window" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -241,18 +237,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -263,10 +261,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -280,8 +275,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Window">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -320,34 +315,42 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/cs/docs/Web/API/Window" title="Window">Čeština</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Window" title="Window">Deutsch</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/Window" title="window">Español</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/cs/docs/Web/API/Window" title="Czech">Čeština (cs)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Window" title="window">Français</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/de/docs/Web/API/Window" title="German">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/API/Window" title="Window">Italiano</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/Window" title="Spanish">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Window" title="window">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/Window" title="French">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/Window" title="Window">한국어</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/API/Window" title="Italian">Italiano (it)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/Window" title="window">Polski</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Window" title="Japanese">日本語 (ja)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window" title="Window">Português (do&nbsp;Brasil)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/Window" title="Korean">한국어 (ko)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Window" title="Window">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/nl/docs/Web/API/Window" title="Dutch">Nederlands (nl)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window" title="Window">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pl/docs/Web/API/Window" title="Polish">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ro/docs/Web/API/Window" title="Romanian">Română (ro)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Window" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/API/Window" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
                 
               
 
@@ -359,7 +362,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -370,7 +375,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -420,18 +424,13 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/shtarbanov" title="View profile: shtarbanov">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="shtarbanov" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">shtarbanov</noscript></a>
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Potch" title="View profile: Potch">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Potch" data-src="../../../../../secure.gravatar.com/avatar/0db077abb2bbaf54ca6de43f45976d116c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Potch</noscript></a>
-                </li>
-            
-                <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/cvrebert" title="View profile: cvrebert">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="cvrebert" data-src="../../../../../secure.gravatar.com/avatar/1432b541cac41e85e190050a5361b3966c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">cvrebert</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -440,11 +439,31 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/gansai" title="View profile: gansai">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gansai" data-src="../../../../../secure.gravatar.com/avatar/8f9ee1a2b6ae5d995f5100ecc17e9ece6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gansai</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/Potch" title="View profile: Potch">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Potch" data-src="../../../../../secure.gravatar.com/avatar/0db077abb2bbaf54ca6de43f45976d116c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Potch</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/cvrebert" title="View profile: cvrebert">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="cvrebert" data-src="../../../../../secure.gravatar.com/avatar/1432b541cac41e85e190050a5361b3966c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">cvrebert</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/phistuck" title="View profile: phistuck">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="phistuck" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">phistuck</noscript></a>
                 </li>
@@ -462,11 +481,6 @@
                 <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/tuggyne" title="View profile: tuggyne">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="tuggyne" data-src="../../../../../secure.gravatar.com/avatar/cfc50a32e3a3dffad460e83c0e02f6ba6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">tuggyne</noscript></a>
-                </li>
-            
-                <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -550,13 +564,13 @@
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/wbamberg" title="View profile: wbamberg">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wbamberg" data-src="../../../../../secure.gravatar.com/avatar/576b94c81f8ad97e58d63f12e5fdb00c6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wbamberg</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/myakura" title="View profile: myakura">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="myakura" data-src="../../../../../secure.gravatar.com/avatar/5053cd2607234c47d43959cc9430f1a56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">myakura</noscript></a>
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/myakura" title="View profile: myakura">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="myakura" data-src="../../../../../secure.gravatar.com/avatar/5053cd2607234c47d43959cc9430f1a56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">myakura</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/wbamberg" title="View profile: wbamberg">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wbamberg" data-src="../../../../../secure.gravatar.com/avatar/576b94c81f8ad97e58d63f12e5fdb00c6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wbamberg</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -774,15 +788,15 @@
                   
                     <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><p></p>
 
-<p><span class="seoSummary">The <code>window</code> object represents a window containing a DOM document; the <code>document</code> property points to the <a href="document-2.html">DOM document</a> loaded in that window.</span> A window for a given document can be obtained using the <a href="Document/defaultView.html" title="In browsers, document.defaultView returns the window object associated with a document, or null if none available."><code>document.defaultView</code></a> property.</p>
+<p><span class="seoSummary">The <code>window</code> object represents a window containing a DOM document; the <code>document</code> property points to the <a href="document-2.html">DOM document</a> loaded in that window.</span> A window for a given document can be obtained using the <a href="Document/defaultView.html" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> property.</p>
 
-<p>This section provides a brief reference for all of the methods, properties, and events available through the DOM <code>window</code> object. The <code>window</code> object implements the <code>Window</code> interface, which in turn inherits from the <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView" class="external">AbstractView</a></code> interface. Some additional global functions, namespaces, objects, interfaces, and constructors, not typically associated with the window, but available on it, are listed in the <a href="../JavaScript/Reference.html">JavaScript Reference</a> and <a href="../../DOM/DOM_Reference.png" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
+<p>This section provides a brief reference for all of the methods, properties, and events available through the DOM <code>window</code> object. The <code>window</code> object implements the <code>Window</code> interface, which in turn inherits from the <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView" class="external">AbstractView</a></code> interface. Some additional global functions, namespaces, objects, interfaces, and constructors, not typically associated with the window, but available on it, are listed in the <a href="../../JavaScript/Reference.png">JavaScript Reference</a> and <a href="../../DOM/DOM_Reference.png" title="/en-US/docs/DOM/DOM_Reference">DOM Reference</a>.</p>
 
 <p>In a tabbed browser, such as Firefox, each tab contains its own <code>window</code> object (and if you're writing an extension, the browser window itself is a separate window too - see <a href="https://developer.mozilla.org/en-US/docs/Working_with_windows_in_chrome_code#Content_windows">Working with windows in chrome code</a> for more information). That is, the <code>window</code> object is not shared between tabs in the same window. Some methods, namely <a href="Window/resizeTo.html" title="Dynamically resizes window."><code>window.resizeTo</code></a> and <a href="Window/resizeBy.html" title="Resizes the current window by a certain amount."><code>window.resizeBy</code></a> apply to the whole window and not to the specific tab the <code>window</code> object belongs to. Generally, anything that can't reasonably pertain to a tab pertains to the window instead.</p>
 
 <h2 id="Properties">Properties</h2>
 
-<p><em>This interface inherits properties from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements properties from <a href="WindowTimers.html" title="WindowTimers contains utility methods to set and clear timers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, and <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>.</em></p>
+<p><em>This interface inherits properties from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements properties from <a href="WindowTimers.html" title="WindowTimers is a mixin used to provide utility methods which set and clear timers. No objects of this type exist; instead, its methods are available on Window for the standard browsing scope, or on WorkerGlobalScope for workers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, and <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>.</em></p>
 
 <p>Note that properties which are objects (e.g.,. for overriding the prototype of built-in elements) are listed in a separate section below.</p>
 
@@ -790,13 +804,13 @@
  <dt><a href="Window/applicationCache.html" title="Returns a reference to the application cache object for the window."><code>Window.applicationCache</code></a>&nbsp; <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span> </dt>
  <dd>An <a href="OfflineResourceList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>OfflineResourceList</code></a> object providing access to the offline resources for the window.</dd>
  <dt><a href="Window/caches.html" title="The Window.caches&nbsp;read-only property returns the CacheStorage object associated with the current origin. This object enables service worker functionality such as storing assets for offline use, and generating custom responses to requests."><code>Window.caches</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns the <a href="CacheStorage.html" title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even thought that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a> object associated with the current origin. This object enables <a href="Service_Worker_API.html">service worker</a> functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
+ <dd>Returns the <a href="CacheStorage.html" title="The CacheStorage interface represents the storage for Cache objects. It provides a master directory of all the named caches that a ServiceWorker, other type of worker or window scope can access (you don't have to use it with service workers, even though that is the spec that defines it) and maintains a mapping of string names to corresponding Cache objects."><code>CacheStorage</code></a> object associated with the current origin. This object enables <a href="Service_Worker_API.html">service worker</a> functionality such as storing assets for offline use, and generating custom responses to requests.</dd>
  <dt><a href="Window/closed.html" title="This read-only property indicates whether the referenced window is closed or not."><code>Window.closed</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>This property indicates whether the current window is closed or not.</dd>
  <dt><code><a href="https://developer.mozilla.org/en-US/docs/Components_object">Window.Components</a></code> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></dt>
  <dd>The entry point to many <a href="https://developer.mozilla.org/en-US/docs/XPCOM">XPCOM</a> features. Some properties, e.g. <a href="https://developer.mozilla.org/en-US/docs/Components.classes">classes</a>, are only available to sufficiently privileged code. <strong>Web code should not use this property.</strong></dd>
- <dt><a href="Console.html" title="The Console object provides access to the browser's debugging console (e.g., the Web Console in Firefox). The specifics of how it works vary from browser to browser, but there is a de facto set of features that are typically provided."><code>Window.console</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns a reference to the console object providing access to the browser's debugging console.</dd>
+ <dt><a href="Window/console.html" title="The Window.console read-only property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users."><code>Window.console</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>Returns a reference to the console object which provides access to the browser's debugging console.</dd>
  <dt><a href="Window/content.html" title="Returns a Window object for the primary content window. This is useful in XUL windows that have a &lt;browser&gt; (or tabbrowser or &lt;iframe&gt;) with type=&quot;content-primary&quot; attribute on it - the most famous example is Firefox main window, browser.xul. In such cases, content returns a reference to the Window object for the document currently displayed in the browser. It is a shortcut for browserRef.contentWindow."><code>Window.content</code></a> and Window._content <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> <span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.</dd>
  <dt><a href="Window/controllers.html" title="Returns the XUL controllers of the chrome window."><code>Window.controllers</code></a><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
@@ -813,9 +827,9 @@
  <dd>Synonym of <a href="Window/personalbar.html" title="Returns the personalbar object, whose visibility can be toggled in the window."><code>window.personalbar</code></a></dd>
  <dt><a href="Window/document.html" title="Returns a reference to the document contained in the window."><code>Window.document</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the document that the window contains.</dd>
- <dt><a href="Window/frameElement.html" title="Returns the element (such as &lt;iframe&gt; or &lt;object&gt;) in which the window is embedded, or null if the window is top-level."><code>Window.frameElement</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a href="Window/frameElement.html" title="Returns the element (such as &lt;iframe&gt; or &lt;object&gt;) in which the window is embedded, or null if the element is either top-level or is embedded into a document with a different script origin; that is, in cross-origin situations."><code>Window.frameElement</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns the element in which the window is embedded, or null if the window is not embedded.</dd>
- <dt><a href="Window/frames.html" title="Editorial review completed."><code>Window.frames</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a href="Window/frames.html" title="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."><code>Window.frames</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns an array of the subframes in the current window.</dd>
  <dt><a href="Window/fullScreen.html" title="This property indicates whether the window is displayed in full screen mode or not. It is only reliable in Gecko 1.9 (Firefox 3) and later, see the Notes below."><code>Window.fullScreen</code></a> </dt>
  <dd>This property indicates whether the window is displayed in full screen or not.</dd>
@@ -828,10 +842,10 @@
  <dd>Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.</dd>
  <dt><a href="Window/innerWidth.html" title="Technical review completed."><code>Window.innerWidth</code></a></dt>
  <dd>Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.</dd>
- <dt><a href="Window/isSecureContext.html" title="The Window.isSecureContext&nbsp;read-only property indicates whether a context is capable of using features that require secure contexts."><code>Window.isSecureContext</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a href="Window/isSecureContext.html" title="The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts."><code>Window.isSecureContext</code></a>&nbsp;<span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Indicates whether a context is capable of using features that require secure contexts.</dd>
  <dt><a href="Window/length.html" title="Returns the number of frames (either &lt;frame&gt; or &lt;iframe&gt; elements) in the window."><code>Window.length</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns the number of frames in the window. See also <a href="Window/frames.html" title="Editorial review completed."><code>window.frames</code></a>.</dd>
+ <dd>Returns the number of frames in the window. See also <a href="Window/frames.html" title="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."><code>window.frames</code></a>.</dd>
  <dt><a href="Window/location.html" title="The Window.location read-only property returns a Location object with information about the current location of the document."><code>Window.location</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Gets/sets the location, or current URL, of the window object.</dd>
  <dt><a href="Window/locationbar.html" title="Returns the locationbar object, whose visibility can be checked."><code>Window.locationbar</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
@@ -862,11 +876,11 @@
  <dd>Gets the height of the outside of the browser window.</dd>
  <dt><a href="Window/outerWidth.html" title="Window.outerWidth gets the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."><code>Window.outerWidth</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Gets the width of the outside of the browser window.</dd>
- <dt><a href="Window/scrollX.html" title="Technical review completed."><code>Window.pageXOffset</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>An alias for <a href="Window/scrollX.html" title="Technical review completed."><code>window.scrollX</code></a>.</dd>
+ <dt><a href="Window/scrollX.html" title="Returns the number of pixels that the document has already been scrolled horizontally."><code>Window.pageXOffset</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>An alias for <a href="Window/scrollX.html" title="Returns the number of pixels that the document has already been scrolled horizontally."><code>window.scrollX</code></a>.</dd>
  <dt><a href="Window/scrollY.html" title="Returns the number of pixels that the document has already been scrolled vertically."><code>Window.pageYOffset</code></a><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>An alias for <a href="Window/scrollY.html" title="Returns the number of pixels that the document has already been scrolled vertically."><code>window.scrollY</code></a></dd>
- <dt><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>Window.sessionStorage</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object for the current origin. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>Window.sessionStorage</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.</dd>
  <dt><a href="Window/parent.html" title="A reference to the parent of the current window or subframe."><code>Window.parent</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the parent of the current window or subframe.</dd>
@@ -891,13 +905,13 @@
  <dd>The maximum offset that the window can be scrolled to horizontally, that is the document width minus the viewport width.</dd>
  <dt><a href="Window/scrollMaxY.html" title="Returns the maximum number of pixels that the document can be scrolled vertically."><code>Window.scrollMaxY</code></a><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>The maximum offset that the window can be scrolled to vertically (i.e., the document height minus the viewport height).</dd>
- <dt><a href="Window/scrollX.html" title="Technical review completed."><code>Window.scrollX</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dt><a href="Window/scrollX.html" title="Returns the number of pixels that the document has already been scrolled horizontally."><code>Window.scrollX</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns the number of pixels that the document has already been scrolled horizontally.</dd>
  <dt><a href="Window/scrollY.html" title="Returns the number of pixels that the document has already been scrolled vertically."><code>Window.scrollY</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns the number of pixels that the document has already been scrolled vertically.</dd>
  <dt><a href="Window/self.html" title="The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self)."><code>Window.self</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns an object reference to the window object itself.</dd>
- <dt><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>Window.sessionStorage</code></a> </dt>
+ <dt><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object for the current origin. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>Window.sessionStorage</code></a> </dt>
  <dd>Returns a storage object for storing data within a single page session.</dd>
  <dt><a href="Window/sidebar.html" title="Returns a sidebar object, which contains several methods for registering add-ons with browser."><code>Window.sidebar</code></a> <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span><span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the window object of the sidebar.</dd>
@@ -914,12 +928,12 @@
  <dt><a href="Window/window.html" title="The window property of a window object points to the window object itself. Thus the following expressions all return the same window object:"><code>Window.window</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns a reference to the current window.</dd>
  <dt><code>window[0]</code>,<code> window[1]</code>, etc.</dt>
- <dd>Returns a reference to the <code>window</code> object in the frames. See <a href="Window/frames.html" title="Editorial review completed."><code>Window.frames</code></a> for more details.</dd>
+ <dd>Returns a reference to the <code>window</code> object in the frames. See <a href="Window/frames.html" title="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."><code>Window.frames</code></a> for more details.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
-<p><em>This interface inherits methods from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements methods from <a href="WindowTimers.html" title="WindowTimers contains utility methods to set and clear timers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>, and <a href="GlobalFetch.html" title="The GlobalFetch interface of the Fetch API contains the GlobalFetch.fetch() method used to start the process of fetching a resource."><code>GlobalFetch</code></a>.</em></p>
+<p><em>This interface inherits methods from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements methods from <a href="WindowTimers.html" title="WindowTimers is a mixin used to provide utility methods which set and clear timers. No objects of this type exist; instead, its methods are available on Window for the standard browsing scope, or on WorkerGlobalScope for workers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>, and <a href="GlobalFetch.html" title="The GlobalFetch mixin of the Fetch API contains the GlobalFetch.fetch() method used to start the process of fetching a resource."><code>GlobalFetch</code></a>.</em></p>
 
 <dl>
  <dt><a href="EventTarget/addEventListener.html" title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)."><code>EventTarget.addEventListener()</code></a></dt>
@@ -936,15 +950,15 @@
  <dt><a href="WindowBase64/btoa.html" title="The WindowBase64.btoa() method creates a base-64 encoded ASCII string from a String object in which each character in the string is treated as a byte of binary data."><code>WindowBase64.btoa()</code></a></dt>
  <dd>Creates a base-64 encoded ASCII string from a string of binary data.</dd>
  <dt><a href="Window/cancelIdleCallback.html" title="The&nbsp;Window.cancelIdleCallback()&nbsp;enables you to cancel a callback previously scheduled with Window.requestIdleCallback."><code>Window.cancelIdleCallback()</code></a>&nbsp;<span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
- <dd>Enables you to cancel a callback previously scheduled with <a href="Window/requestIdleCallback.html" title="The&nbsp;Window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-fist-out order unless the function's timeout is reached before the browser calls it."><code>Window.requestIdleCallback</code></a>.</dd>
+ <dd>Enables you to cancel a callback previously scheduled with <a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order unless the function's timeout is reached before the browser calls it."><code>Window.requestIdleCallback</code></a>.</dd>
  <dt><a href="Window/captureEvents.html" title="Registers the window to capture all events of the specified type."><code>Window.captureEvents()</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
  <dd>Registers the window to capture all events of the specified type.</dd>
  <dt><a href="Window/clearImmediate.html" title="This method clears the action specified by window.setImmediate."><code>Window.clearImmediate()</code></a></dt>
  <dd>Cancels the repeated execution set using <code>setImmediate</code>.</dd>
- <dt><a href="WindowTimers/clearInterval.html" title="Cancels repeated action which was set up using setInterval."><code>WindowTimers.clearInterval()</code></a></dt>
+ <dt><a href="WindowTimers/clearInterval.html" title="Cancels a timed, repeating action which was previously established by a call to setInterval()."><code>WindowTimers.clearInterval()</code></a></dt>
  <dd>Cancels the repeated execution set using <a href="WindowTimers/setInterval.html" title="Repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. Returns an intervalID."><code>WindowTimers.setInterval()</code></a>.</dd>
- <dt><a href="WindowTimers/clearTimeout.html" title="Clears the delay set by WindowTimers.setTimeout()."><code>WindowTimers.clearTimeout()</code></a></dt>
- <dd>Cancels the repeated execution set using <a href="WindowTimers/setTimeout.html" title="Calls a function or executes a code snippet after a specified delay."><code>WindowTimers.setTimeout()</code></a>.</dd>
+ <dt><a href="WindowTimers/clearTimeout.html" title="Cancels a timeout previously established by calling setTimeout()."><code>WindowTimers.clearTimeout()</code></a></dt>
+ <dd>Cancels the repeated execution set using <a href="WindowTimers/setTimeout.html" title="Sets a timer which executes a function or specified piece of code once after the timer expires."><code>WindowTimers.setTimeout()</code></a>.</dd>
  <dt><a href="Window/close.html" title="The Window.close() method closes the current window, or the window on which it was called."><code>Window.close()</code></a></dt>
  <dd>Closes the current window.</dd>
  <dt><a href="Window/confirm.html" title="The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK and Cancel."><code>Window.confirm()</code></a></dt>
@@ -957,7 +971,7 @@
  <dd>Writes a message to the console.</dd>
  <dt><a href="Window/enableExternalCapture.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.enableExternalCapture()</code></a> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 24 / Thunderbird 24 / SeaMonkey 2.21)">Obsolete since Gecko 24</span></dt>
  <dd><span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em>NeedsContents</em></span></dd>
- <dt><a href="GlobalFetch/fetch.html" title="The fetch() method of the GlobalFetch interface starts the process of fetching a resource. This returns a promise that resolves to the Response object representing the response to your request."><code>GlobalFetch.fetch()</code></a></dt>
+ <dt><a href="GlobalFetch/fetch.html" title="The fetch() method of the GlobalFetch mixin starts the process of fetching a resource. This returns a promise that resolves to the Response object representing the response to your request."><code>GlobalFetch.fetch()</code></a></dt>
  <dd>Starts the process of fetching a resource.</dd>
  <dt><a href="Window/find.html" title="Finds a string in a window."><code>Window.find()</code></a></dt>
  <dd>Searches for a given string in a window.</dd>
@@ -993,7 +1007,7 @@
  <dd>Opens a new window.</dd>
  <dt><a href="Window/openDialog.html" title="window.openDialog() is an extension to window.open(). It behaves the same, except that it can optionally take one or more parameters past windowFeatures, and windowFeatures itself is treated a little differently."><code>Window.openDialog()</code></a></dt>
  <dd>Opens a new dialog window.</dd>
- <dt><a href="Window/postMessage.html" title="The window.postMessage method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo document.domain being set by both pages to the same value). window.postMessage provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>Window.postMessage()</code></a> </dt>
+ <dt><a href="Window/postMessage.html" title="The Window.postMessage() method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo Document.domain being set by both pages to the same value). window.postMessage() provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>Window.postMessage()</code></a> </dt>
  <dd>Provides a secure means for one window to send a string of data to another window, which need not be within the same domain as the first.</dd>
  <dt><a href="Window/print.html" title="Opens the Print Dialog to print the current document."><code>Window.print()</code></a></dt>
  <dd>Opens the Print Dialog to print the current document.</dd>
@@ -1003,7 +1017,7 @@
  <dd>Releases the window from trapping events of a specific type.</dd>
  <dt><a href="Element/removeEventListener.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.removeEventListener()</code></a></dt>
  <dd>Removes an event listener from the window.</dd>
- <dt><a href="Window/requestIdleCallback.html" title="The&nbsp;Window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-fist-out order unless the function's timeout is reached before the browser calls it."><code>Window.requestIdleCallback()</code></a> &nbsp;<span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dt><a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order unless the function's timeout is reached before the browser calls it."><code>Window.requestIdleCallback()</code></a> &nbsp;<span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
  <dd>Enables the scheduling of tasks during a browser's idle periods.</dd>
  <dt><a href="Window/resizeBy.html" title="Resizes the current window by a certain amount."><code>Window.resizeBy()</code></a></dt>
  <dd>Resizes the current window by a certain amount.</dd>
@@ -1029,9 +1043,9 @@
  <dd>Executes a function after the browser has finished other heavy tasks</dd>
  <dt><a href="WindowTimers/setInterval.html" title="Repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. Returns an intervalID."><code>WindowTimers.setInterval()</code></a></dt>
  <dd>Schedules the execution of a function each X milliseconds.</dd>
- <dt><a href="Window/setResizable.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.setResizable</code></a></dt>
- <dd><span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em>NeedsContents</em></span></dd>
- <dt><a href="WindowTimers/setTimeout.html" title="Calls a function or executes a code snippet after a specified delay."><code>WindowTimers.setTimeout()</code></a></dt>
+ <dt><a href="Window/setResizable.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.setResizable()</code></a></dt>
+ <dd>Toggles a user's ability to resize a window.</dd>
+ <dt><a href="WindowTimers/setTimeout.html" title="Sets a timer which executes a function or specified piece of code once after the timer expires."><code>WindowTimers.setTimeout()</code></a></dt>
  <dd>Sets a delay for executing a function.</dd>
  <dt><a href="Window/showModalDialog.html" title="The Window.showModalDialog() creates and displays a modal dialog box containing a specified HTML document."><code>Window.showModalDialog()</code></a> </dt>
  <dd>Displays a modal dialog.</dd>
@@ -1047,7 +1061,7 @@
 
 <p>These are properties of the window object that can be set to establish event handlers for the various things that can happen in the window that might be of interest.</p>
 
-<p><em>This interface inherits event handlers from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements event handlers from <a href="WindowTimers.html" title="WindowTimers contains utility methods to set and clear timers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, and <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>.</em></p>
+<p><em>This interface inherits event handlers from the <a href="EventTarget.html" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a> interface and implements event handlers from <a href="WindowTimers.html" title="WindowTimers is a mixin used to provide utility methods which set and clear timers. No objects of this type exist; instead, its methods are available on Window for the standard browsing scope, or on WorkerGlobalScope for workers."><code>WindowTimers</code></a>, <a href="WindowBase64.html" title="The WindowBase64 helper contains utility methods to convert data to and from base64, a binary-to-text encoding scheme. For example it is used in data URIs."><code>WindowBase64</code></a>, and <a href="WindowEventHandlers.html" title="WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and&nbsp; HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers."><code>WindowEventHandlers</code></a>.</em></p>
 
 <div class="note">
 <p><strong>Note:</strong> Starting in <span title="(Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)">Gecko&nbsp;9.0</span>, you can now use the syntax <code>if ("onabort" in window)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a href="../Guide/Events/Event_handlers.html">DOM event handlers</a> for details.</p>
@@ -1055,99 +1069,113 @@
 
 <dl>
  <dt><a href="GlobalEventHandlers/onabort.html" title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)"><code>GlobalEventHandlers.onabort</code></a></dt>
- <dd>An event handler property for abort events on the window.</dd>
+ <dd>Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress</dd>
  <dt><a href="WindowEventHandlers/onafterprint.html" title="The WindowEventHandlers.onafterprint property sets and returns the onafterprint EventHandler for the current window."><code>WindowEventHandlers.onafterprint</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/afterprint.html" title="/en-US/docs/Web/Events/afterprint">afterprint</a></code> event is raised.</dd>
+ <dd>Called when the print dialog box is closed. See <code><a href="../Events/afterprint.html" title="/en-US/docs/Web/Events/afterprint">afterprint</a></code> event.</dd>
  <dt><a href="WindowEventHandlers/onbeforeprint.html" title="The property&nbsp;onbeforeprint sets and returns the onbeforeprint event handler code for the current window."><code>WindowEventHandlers.onbeforeprint</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/beforeprint.html" title="/en-US/docs/Web/Events/beforeprint">beforeprint</a></code> event is raised.</dd>
+ <dd>Called when the print dialog box is opened. See <code><a href="../Events/beforeprint.html" title="/en-US/docs/Web/Events/beforeprint">beforeprint</a></code> event.</dd>
  <dt><a href="Window/onbeforeinstallprompt.html" title="The Window.onbeforeinstallprompt property is an event handler for processing a beforeinstallprompt, which is&nbsp;dispatched on mobile when a web manifest exists, but before a&nbsp;user is prompted to save a web site to a home screen."><code>Window.onbeforeinstallprompt</code></a></dt>
  <dd>An event handler property dispatched before a&nbsp;user is prompted to save a web site to a home screen on mobile.</dd>
- <dt><a href="WindowEventHandlers/onbeforeunload.html" title="The WindowEventHandlers.onbeforeunload event handler property contains the code executed when the beforeunload is sent. This event fires when a window is about to unload its resources. The document is still visible and the event is still cancelable."><code>WindowEventHandlers.onbeforeunload</code></a></dt>
+ <dt><a href="WindowEventHandlers/onbeforeunload.html" title="The WindowEventHandlers.onbeforeunload event handler property, contains the code executed when the beforeunload is sent. This event fires when a window is about to unload its resources. The document is still visible and the event is still cancelable."><code>WindowEventHandlers.onbeforeunload</code></a></dt>
  <dd>An event handler property for before-unload events on the window.</dd>
  <dt><a href="GlobalEventHandlers/onblur.html" title="The onblur property returns the onBlur event handler code, if any, that exists on the current element."><code>GlobalEventHandlers.onblur</code></a></dt>
- <dd>An event handler property for blur events on the window.</dd>
+ <dd>Called after the window loses focus, such as due to a popup.</dd>
  <dt><a href="GlobalEventHandlers/onchange.html" title="The onchange property sets and returns the event handler for the change event."><code>GlobalEventHandlers.onchange</code></a></dt>
  <dd>An event handler property for change events on the window.</dd>
  <dt><a href="GlobalEventHandlers/onclick.html" title="The onclick property returns the click event handler code on the current element."><code>GlobalEventHandlers.onclick</code></a></dt>
- <dd>An event handler property for click events on the window.</dd>
+ <dd>Called after the ANY mouse button is pressed &amp; released</dd>
+ <dt><a href="GlobalEventHandlers/ondblclick.html" title="The ondblclick property returns the onDblClick event handler code on the current element."><code>GlobalEventHandlers.ondblclick</code></a></dt>
+ <dd>Called when a double click is made with ANY mouse button.</dd>
  <dt><a href="GlobalEventHandlers/onclose.html" title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)"><code>GlobalEventHandlers.onclose</code></a></dt>
- <dd>An event handler property for handling the window close event.</dd>
+ <dd>Called after the window is closed</dd>
  <dt><a href="GlobalEventHandlers/oncontextmenu.html" title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute."><code>GlobalEventHandlers.oncontextmenu</code></a></dt>
- <dd>An event handler property for right-click events on the window.</dd>
+ <dd>Called when the RIGHT mouse button is pressed</dd>
  <dt><a href="Window/ondevicelight.html" title="Specifies an event listener to receive devicelight events. These events occur when the device's light level sensor detects a change in the intensity of the ambient light level."><code>Window.ondevicelight</code></a></dt>
  <dd>An event handler property for any ambient light levels changes</dd>
  <dt><a href="Window/ondevicemotion.html" title="An event handler for the devicemotion events sent to the window."><code>Window.ondevicemotion</code></a> </dt>
- <dd><span class="inlineIndicator todo todoInline"><strong>FIXME:</strong> <em>NeedsContents</em></span></dd>
- <dt><a href="Window/ondeviceorientation.html" title="An event handler for the deviceorientation events sent to the window."><code>Window.ondeviceorientation</code></a> </dt>
- <dd>An event handler property for any relative device orientation changes.</dd>
- <dt><a href="Window/ondeviceorientationabsolute.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.ondeviceorientationabsolute</code></a>&nbsp;<span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> Chrome only</dt>
+ <dd>Called if accelerometer detects a change (For mobile devices)</dd>
+ <dt><a href="Window/ondeviceorientation.html" title="An event handler for the deviceorientation event, which contains information about a relative device orientation change."><code>Window.ondeviceorientation</code></a> </dt>
+ <dd>Called when the orientation is changed (For mobile devices)</dd>
+ <dt><a href="Window/ondeviceorientationabsolute.html" title="An event handler for the deviceorientationabsolute event containing&nbsp;information about an absolute device orientation change."><code>Window.ondeviceorientationabsolute</code></a>&nbsp;<span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> Chrome only</dt>
  <dd>An event handler property for any device orientation changes.</dd>
  <dt><a href="Window/ondeviceproximity.html" title="Specifies an event listener to receive deviceproximity events. These events occur when the device sensor detects that an object becomes closer to or farther from the device."><code>Window.ondeviceproximity</code></a></dt>
  <dd>An event handler property for device proximity event</dd>
  <dt><a href="GlobalEventHandlers/onerror.html" title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:"><code>GlobalEventHandlers.onerror</code></a></dt>
- <dd>An event handler property for <code><a href="../Events/error.html" title="/en-US/docs/Web/Events/error">error</a></code> events raised on the window.</dd>
+ <dd>Called when a resource fails to load OR when an error occurs at runtime. See <code><a href="../Events/error.html" title="/en-US/docs/Web/Events/error">error</a></code> event.</dd>
  <dt><a href="GlobalEventHandlers/onfocus.html" title="The onfocus property returns the onFocus event handler code on the current element."><code>GlobalEventHandlers.onfocus</code></a></dt>
- <dd>An event handler property for <code><a href="../Events/focus.html" title="/en-US/docs/Web/Events/focus">focus</a></code> events on the window.</dd>
+ <dd>Called after the window receives or regains focus. See <code><a href="../Events/focus.html" title="/en-US/docs/Web/Events/focus">focus</a></code> events.</dd>
  <dt><a href="WindowEventHandlers/onhashchange.html" title="The hashchange event fires when a window's hash changes (see location.hash)."><code>WindowEventHandlers.onhashchange</code></a> </dt>
- <dd>An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
+ <dd>An event handler property for <code><a href="../Events/hashchange.html" title="/en-US/docs/Web/Events/hashchange">hashchange</a></code> events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
+ <dt><a href="Window/oninstall.html" title="The onappinstalled attribute&nbsp;of the Window object&nbsp;serves as an&nbsp;event handler for the appinstalled event, which is dispatched once the web application&nbsp;is successfully installed as a progressive web app. The event that is fired is a &quot;simple event&quot; that implements the Event interface."><code>Window.oninstall</code></a></dt>
+ <dd>Called when the page is installed as a webapp. See <code><a href="../Events/install.html" title="/en-US/docs/Web/Events/install">install</a></code> event.</dd>
+ <dt><a href="GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>Window.oninput</code></a></dt>
+ <dd>Called when the value of an &lt;input&gt; element changes</dd>
  <dt><a href="GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>GlobalEventHandlers.onkeydown</code></a></dt>
- <dd>An event handler property for <code><a href="../Events/keydown.html" title="/en-US/docs/Web/Events/keydown">keydown</a></code> events on the window.</dd>
+ <dd>Called when you begin pressing ANY key. See <code><a href="../Events/keydown.html" title="/en-US/docs/Web/Events/keydown">keydown</a></code> event.</dd>
  <dt><a href="GlobalEventHandlers/onkeypress.html" title="The onkeypress property sets and returns the onKeyPress event handler code for the current element."><code>GlobalEventHandlers.onkeypress</code></a></dt>
- <dd>An event handler property for <code><a href="../Events/keypress.html" title="/en-US/docs/Web/Events/keypress">keypress</a></code> events on the window.</dd>
+ <dd>Called when a key (except Shift, Fn, and CapsLock) is in pressed position. See <code><a href="../Events/keypress.html" title="/en-US/docs/Web/Events/keypress">keypress</a></code> event.</dd>
  <dt><a href="GlobalEventHandlers/onkeyup.html" title="The onkeyup property returns the onKeyUp event handler code for the current element."><code>GlobalEventHandlers.onkeyup</code></a></dt>
- <dd>An event handler property for <code><a href="../Events/keyup.html" title="/en-US/docs/Web/Events/keyup">keyup</a></code> events on the window.</dd>
+ <dd>Called when you finish releasing ANY key. See <code><a href="../Events/keyup.html" title="/en-US/docs/Web/Events/keyup">keyup</a></code> event.</dd>
  <dt><a href="WindowEventHandlers/onlanguagechange.html" title="The WindowEventHandlers.onlanguagechange event handler is a property containing the code to execute when the languagechange event, of type Event, is received by the object implementing this interface, usually a Window, an HTMLBodyElement, or an HTMLIFrameElement. Such an event is sent by the browser to inform that the preferred languages list has been updated. The list is accessible via NavigatorLanguage.languages."><code>WindowEventHandlers.onlanguagechange</code></a></dt>
  <dd>An event handler property for <code><a href="../Events/languagechange.html" title="/en-US/docs/Web/Events/languagechange">languagechange</a></code> events on the window.</dd>
  <dt><a href="GlobalEventHandlers/onload.html" title="An event handler for the load event of a window."><code>GlobalEventHandlers.onload</code></a></dt>
- <dd>An event handler property for window loading.</dd>
+ <dd>Called after all resources and the DOM are fully loaded. WILL NOT get called when the page is loaded from cache, such as with back button.</dd>
  <dt><a href="WindowEventHandlers/onmessage.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowEventHandlers.onmessage</code></a></dt>
  <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/message.html" title="/en-US/docs/Web/Events/message">message</a></code> event is raised.</dd>
  <dt><a href="GlobalEventHandlers/onmousedown.html" title="The onmousedown property returns the onmousedown event handler code on the current element."><code>GlobalEventHandlers.onmousedown</code></a></dt>
- <dd>An event handler property for mousedown events on the window.</dd>
+ <dd>Called when ANY mouse button is pressed.</dd>
  <dt><a href="GlobalEventHandlers/onmousemove.html" title="The onmousemove property returns the mousemove event handler code on the current element."><code>GlobalEventHandlers.onmousemove</code></a></dt>
- <dd>An event handler property for mousemove events on the window.</dd>
+ <dd>Called continously when the mouse is moved inside the window.</dd>
  <dt><a href="GlobalEventHandlers/onmouseout.html" title="The onmouseout property returns the onMouseOut event handler code on the current element."><code>GlobalEventHandlers.onmouseout</code></a></dt>
- <dd>An event handler property for mouseout events on the window.</dd>
+ <dd>Called when the pointer leaves the window.</dd>
  <dt><a href="GlobalEventHandlers/onmouseover.html" title="The onmouseover property returns the onMouseOver event handler code on the current element."><code>GlobalEventHandlers.onmouseover</code></a></dt>
- <dd>An event handler property for mouseover events on the window.</dd>
+ <dd>Called when the pointer enters the window</dd>
  <dt><a href="GlobalEventHandlers/onmouseup.html" title="The onmouseup property returns the onMouseUp event handler code on the current element."><code>GlobalEventHandlers.onmouseup</code></a></dt>
- <dd>An event handler property for mouseup events on the window.</dd>
+ <dd>Called when ANY mouse button is released</dd>
  <dt><a href="Window/onmozbeforepaint.html" title="An event handler for the MozBeforePaint event. This is used in concert with the window.mozRequestAnimationFrame() method to perform smooth, synchronized animations from&nbsp;JavaScript code."><code>Window.onmozbeforepaint</code></a> </dt>
  <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the <a href="window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. The callback rate may be reduced to a lower rate when running in background tabs."><code>Window.mozRequestAnimationFrame()</code></a> method.</dd>
  <dt><a href="WindowEventHandlers/onoffline.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowEventHandlers.onoffline</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/offline.html" title="/en-US/docs/Web/Events/offline">offline</a></code> event is raised.</dd>
+ <dd>Called when network connection is lost. See <code><a href="../Events/offline.html" title="/en-US/docs/Web/Events/offline">offline</a></code> event.</dd>
  <dt><a href="WindowEventHandlers/ononline.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowEventHandlers.ononline</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/online.html" title="/en-US/docs/Web/Events/online">online</a></code> event is raised.</dd>
+ <dd>Called when network connection is established. See <code><a href="../Events/online.html" title="/en-US/docs/Web/Events/online">online</a></code> event.</dd>
  <dt><a href="WindowEventHandlers/onpagehide.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowEventHandlers.onpagehide</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/pagehide.html" title="/en-US/docs/Web/Events/pagehide">pagehide</a></code> event is raised.</dd>
+ <dd>Called when the user navigates away from the page, before the onunload event. See <code><a href="../Events/pagehide.html" title="/en-US/docs/Web/Events/pagehide">pagehide</a></code> event.</dd>
  <dt><a href="WindowEventHandlers/onpageshow.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowEventHandlers.onpageshow</code></a></dt>
- <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/pageshow.html" title="/en-US/docs/Web/Events/pageshow">pageshow</a></code> event is raised.</dd>
+ <dd>Called after all resources and the DOM are fully loaded. See <code><a href="../Events/pageshow.html" title="/en-US/docs/Web/Events/pageshow">pageshow</a></code> event.</dd>
  <dt><a href="Window/onpaint.html" title="An event handler for the paint event on the window. Not working in Gecko-based applications currently, see Notes section!"><code>Window.onpaint</code></a></dt>
  <dd>An event handler property for paint events on the window.</dd>
  <dt><a href="WindowEventHandlers/onpopstate.html" title="An event handler for the popstate event on the window."><code>WindowEventHandlers.onpopstate</code></a> </dt>
- <dd>An event handler property for popstate events, which are dispatched when navigating to a session history entry representing a state object.</dd>
+ <dd>Called when a back putton is pressed.</dd>
  <dt><a href="WindowEventHandlers/onrejectionhandled.html" title="The documentation about this has not yet been written; please consider contributing!"><code>Window.onrejectionhandled</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
- <dd>An event handler for handled <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
+ <dd>An event handler for handled <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never."><code>Promise</code></a> rejection events.</dd>
  <dt><a href="GlobalEventHandlers/onreset.html" title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received."><code>GlobalEventHandlers.onreset</code></a></dt>
- <dd>An event handler property for reset events on the window.</dd>
+ <dd>Called when a form is reset</dd>
  <dt><a href="GlobalEventHandlers/onresize.html" title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received."><code>GlobalEventHandlers.onresize</code></a></dt>
- <dd>An event handler property for window resizing.</dd>
+ <dd>Called continuously as you are resizing the window.</dd>
  <dt><a href="GlobalEventHandlers/onscroll.html" title="An event handler for scroll events on&nbsp;element."><code>GlobalEventHandlers.onscroll</code></a></dt>
- <dd>An event handler property for window scrolling.</dd>
+ <dd>Called when the scroll bar is moved via ANY means. If the resource fully fits in the window, then this event cannot be invoked</dd>
+ <dt><a href="GlobalEventHandlers/onwheel.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>GlobalEventHandlers.onwheel</code></a></dt>
+ <dd>Called when the mouse wheel is rotated around any axis</dd>
  <dt><a href="GlobalEventHandlers/onselect.html" title="An event handler for the select event on the window."><code>GlobalEventHandlers.onselect</code></a></dt>
- <dd>An event handler property for window selection.</dd>
+ <dd>Called after text in an input field is selected</dd>
  <dt><a href="GlobalEventHandlers/onselectionchange.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>GlobalEventHandlers.onselectionchange</code></a></dt>
  <dd>Is an <a href="../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> representing the code to be called when the <code><a href="../Events/selectionchange.html" title="/en-US/docs/Web/Events/selectionchange">selectionchange</a></code> event is raised.</dd>
  <dt><a href="WindowEventHandlers/onstorage.html" title="The WindowEventHandlers.onstorage property contains an event handler that runs when&nbsp;the storage event fires. This occurs when a storage area is changed (e.g. a new item is stored.)"><code>WindowEventHandlers.onstorage</code></a></dt>
- <dd>An event handler that runs when&nbsp;the <code><a href="../Events/storage.html" title="/en-US/docs/Web/Events/storage">storage</a></code> event fires. This occurs when a storage area is changed (e.g. a new item is stored.)</dd>
+ <dd>Called when there is a change in session storage or local storage. See <code><a href="../Events/storage.html" title="/en-US/docs/Web/Events/storage">storage</a></code> event</dd>
  <dt><a href="GlobalEventHandlers/onsubmit.html" title="An event handler for the submit event on the window."><code>GlobalEventHandlers.onsubmit</code></a></dt>
- <dd>An event handler property for submits on window forms.</dd>
+ <dd>Called when a form is submitted</dd>
  <dt><a href="WindowEventHandlers/onunhandledrejection.html" title="The Window.onunhandledrejection property is an event handler for processing unhandledrejection events, which are raised for unhandled Promise rejections."><code>WindowEventHandlers.onunhandledrejection</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
- <dd>An event handler for unhandled <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> rejection events.</dd>
+ <dd>An event handler for unhandled <a href="../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never."><code>Promise</code></a> rejection events.</dd>
  <dt><a href="WindowEventHandlers/onunload.html" title="The unload event is raised when the window is unloading its content and resources. The resources removal is processed after the unload event occurs."><code>WindowEventHandlers.onunload</code></a></dt>
- <dd>An event handler property for unload events on the window.</dd>
+ <dd>Called when the user navigates away from the page.</dd>
  <dt><a href="Window/onuserproximity.html" title="The Window.onuserproxymity property represents an EventHandler, that is a function to be called when the userproximity event occurs. These events are of type UserProximityEvent and occur when the the device sensor detects that an object becomes nearby."><code>Window.onuserproximity</code></a></dt>
- <dd>An event handler property for user proximity events</dd>
+ <dd>An event handler property for user proximity events.</dd>
+ <dt><a href="Window/onvrdisplayconnected.html" title="The onvrdisplayconnected property of the SpeechSynthesis interface represents an event handler that will run when a compatible VR device has been connected to the computer (when the vrdisplayconnected event fires)."><code>Window.onvrdisplayconnected</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Represents an event handler that will run when a compatible VR device has been connected to the computer (when the <code><a href="../Events/vrdisplayconnected.html" title="/en-US/docs/Web/Events/vrdisplayconnected">vrdisplayconnected</a></code> event fires).</dd>
+ <dt><a href="Window/onvrdisplaydisconnected.html" title="The onvrdisplaydisconnected&nbsp;event handler property of the Window interface is called when a compatible VR device has been disconnected from the computer (when the vrdisplaydisconnected event fires)."><code>Window.onvrdisplaydisconnected</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>Represents an event handler that will run when a compatible VR device has been disconnected from the computer (when the <code><a href="../Events/vrdisplaydisconnected.html" title="/en-US/docs/Web/Events/vrdisplaydisconnected">vrdisplaydisconnected</a></code> event fires).</dd>
+ <dt><a href="Window/onvrdisplaypresentchange.html" title="The onvrdisplaypresentchange property of the SpeechSynthesis interface represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the onvrdisplaypresentchange event fires)."><code>Window.onvrdisplaypresentchange</code></a> <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></dt>
+ <dd>represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the <code><a href="../Events/onvrdisplaypresentchange.html" class="new" title="/en-US/docs/Web/Events/onvrdisplaypresentchange">onvrdisplaypresentchange</a></code> event fires).</dd>
 </dl>
 
 <h2 id="Constructors">Constructors</h2>
@@ -1190,25 +1218,6 @@
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Window+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Window?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Window on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Window?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Window?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Window on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWindow%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Window?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Window on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -1237,15 +1246,21 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/shtarbanov">shtarbanov</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/gansai">gansai</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Potch">Potch</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/cvrebert">cvrebert</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/phistuck">phistuck</a>, 
     
@@ -1254,8 +1269,6 @@
         <a href="https://developer.mozilla.org/en-US/profiles/rutsky">rutsky</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/tuggyne">tuggyne</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Sole">Sole</a>, 
     
@@ -1289,9 +1302,9 @@
     
         <a href="https://developer.mozilla.org/en-US/profiles/Bzbarsky">Bzbarsky</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
-    
         <a href="https://developer.mozilla.org/en-US/profiles/myakura">myakura</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/mattflaschen">mattflaschen</a>, 
     
@@ -1363,11 +1376,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>,
-                      <time datetime="2016-04-25T14:53:52-07:00">Apr 25, 2016, 2:53:52 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/shtarbanov">shtarbanov</a>,
+                      <time datetime="2016-08-29T19:11:44-07:00">Aug 29, 2016, 7:11:44 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -1384,7 +1434,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="Window.html"><code>Window</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Window/applicationCache.html" title="Returns a reference to the application cache object for the window."><code>applicationCache</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/caches.html" title="The Window.caches&nbsp;read-only property returns the CacheStorage object associated with the current origin. This object enables service worker functionality such as storing assets for offline use, and generating custom responses to requests."><code>caches</code></a></li><li><a href="Window/closed.html" title="This read-only property indicates whether the referenced window is closed or not."><code>closed</code></a></li><li><a href="Window/controllers.html" title="Returns the XUL controllers of the chrome window."><code>controllers</code></a></li><li><a href="Window/crypto.html" title="The Window.crypto read-only property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services."><code>crypto</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/defaultStatus.html" title="Gets/sets the status bar text for the given window."><code>defaultStatus</code></a></s></li><li><a href="Window/devicePixelRatio.html" title="The Window.devicePixelRatio read-only property returns the ratio of the (vertical) size of one physical pixel on the current display device to the size of one device independent pixels(dips)."><code>devicePixelRatio</code></a></li><li><a href="Window/dialogArguments.html" title="The dialogArguments property returns the parameters that were passed into the window.showModalDialog() method. This lets you determine what parameters were specified when the modal dialog was created."><code>dialogArguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/directories.html" title="Returned the window personalbar toolbar object. Use the window.personalbar instead."><code>directories</code></a></s></li><li><a href="Window/document.html" title="Returns a reference to the document contained in the window."><code>document</code></a></li><li><a href="Window/frameElement.html" title="Returns the element (such as &lt;iframe&gt; or &lt;object&gt;) in which the window is embedded, or null if the window is top-level."><code>frameElement</code></a></li><li><a href="Window/frames.html" title="Editorial review completed."><code>frames</code></a></li><li><a href="Window/fullScreen.html" title="This property indicates whether the window is displayed in full screen mode or not. It is only reliable in Gecko 1.9 (Firefox 3) and later, see the Notes below."><code>fullScreen</code></a></li><li><a href="Window/history.html" title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)."><code>history</code></a></li><li><a href="IDBEnvironment/indexedDB.html" title="The indexedDB property of the IDBEnvironment interface provides a mechanism for applications to asynchronously access the capabilities of indexed databases."><code>indexedDB</code></a></li><li><a href="Window/innerHeight.html" title="Technical review completed."><code>innerHeight</code></a></li><li><a href="Window/innerWidth.html" title="Technical review completed."><code>innerWidth</code></a></li><li><a href="Window/isSecureContext.html" title="The Window.isSecureContext&nbsp;read-only property indicates whether a context is capable of using features that require secure contexts."><code>isSecureContext</code></a></li><li><a href="Window/length.html" title="Returns the number of frames (either &lt;frame&gt; or &lt;iframe&gt; elements) in the window."><code>length</code></a></li><li><a href="Window/localStorage.html" title="The localStorage property allows you to access a local Storage object. localStorage is similar to sessionStorage. The only difference is that, while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when the browsing session ends—that is, when the browser is closed."><code>localStorage</code></a></li><li><a href="Window/location.html" title="The Window.location read-only property returns a Location object with information about the current location of the document."><code>location</code></a></li><li><a href="Window/locationbar.html" title="Returns the locationbar object, whose visibility can be checked."><code>locationbar</code></a></li><li><a href="Window/menubar.html" title="Returns the menubar object, whose visibility can be checked."><code>menubar</code></a></li><li><a href="Window/messageManager.html" title="Returns the message manager object for this window. See The message manager for details."><code>messageManager</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/mozAnimationStartTime.html" title="Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, Date.now(), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another."><code>mozAnimationStartTime</code></a></li><li><a href="Window/mozInnerScreenX.html" title="Gets the X coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenX</code></a></li><li><a href="Window/mozInnerScreenY.html" title="Gets the Y coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenY</code></a></li><li><a href="Window/mozPaintCount.html" title="Returns the number of times the current document has been painted to the screen in this window."><code>mozPaintCount</code></a></li><li><a href="Window/name.html" title="Gets/sets the name of the window."><code>name</code></a></li><li><a href="Window/navigator.html" title="The Window.navigator read-only property returns a reference to the Navigator object, which can be queried for information about the application running the script."><code>navigator</code></a></li><li><a href="GlobalEventHandlers/onabort.html" title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)"><code>onabort</code></a></li><li><a href="WindowEventHandlers/onafterprint.html" title="The WindowEventHandlers.onafterprint property sets and returns the onafterprint EventHandler for the current window."><code>onafterprint</code></a></li><li><a href="WindowEventHandlers/onbeforeprint.html" title="The property&nbsp;onbeforeprint sets and returns the onbeforeprint event handler code for the current window."><code>onbeforeprint</code></a></li><li><a href="WindowEventHandlers/onbeforeunload.html" title="The WindowEventHandlers.onbeforeunload event handler property contains the code executed when the beforeunload is sent. This event fires when a window is about to unload its resources. The document is still visible and the event is still cancelable."><code>onbeforeunload</code></a></li><li><a href="GlobalEventHandlers/onblur.html" title="The onblur property returns the onBlur event handler code, if any, that exists on the current element."><code>onblur</code></a></li><li><a href="GlobalEventHandlers/onchange.html" title="The onchange property sets and returns the event handler for the change event."><code>onchange</code></a></li><li><a href="GlobalEventHandlers/onclick.html" title="The onclick property returns the click event handler code on the current element."><code>onclick</code></a></li><li><a href="GlobalEventHandlers/onclose.html" title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)"><code>onclose</code></a></li><li><a href="GlobalEventHandlers/oncontextmenu.html" title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute."><code>oncontextmenu</code></a></li><li><a href="GlobalEventHandlers/ondblclick.html" title="The ondblclick property returns the onDblClick event handler code on the current element."><code>ondblclick</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/ondevicelight.html" title="Specifies an event listener to receive devicelight events. These events occur when the device's light level sensor detects a change in the intensity of the ambient light level."><code>ondevicelight</code></a></li><li><a href="Window/ondevicemotion.html" title="An event handler for the devicemotion events sent to the window."><code>ondevicemotion</code></a></li><li><a href="Window/ondeviceorientation.html" title="An event handler for the deviceorientation events sent to the window."><code>ondeviceorientation</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/ondeviceproximity.html" title="Specifies an event listener to receive deviceproximity events. These events occur when the device sensor detects that an object becomes closer to or farther from the device."><code>ondeviceproximity</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/ondragdrop.html" title="An event handler for drag and drop events sent to the window."><code>ondragdrop</code></a></s></li><li><a href="GlobalEventHandlers/onerror.html" title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:"><code>onerror</code></a></li><li><a href="GlobalEventHandlers/onfocus.html" title="The onfocus property returns the onFocus event handler code on the current element."><code>onfocus</code></a></li><li><a href="WindowEventHandlers/onhashchange.html" title="The hashchange event fires when a window's hash changes (see location.hash)."><code>onhashchange</code></a></li><li><a href="GlobalEventHandlers/oninput.html" title="An event handler for the input event on the window.&nbsp;The input event is raised when an &lt;input&gt; element value changes."><code>oninput</code></a></li><li><a href="GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>onkeydown</code></a></li><li><a href="GlobalEventHandlers/onkeypress.html" title="The onkeypress property sets and returns the onKeyPress event handler code for the current element."><code>onkeypress</code></a></li><li><a href="GlobalEventHandlers/onkeyup.html" title="The onkeyup property returns the onKeyUp event handler code for the current element."><code>onkeyup</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="WindowEventHandlers/onlanguagechange.html" title="The WindowEventHandlers.onlanguagechange event handler is a property containing the code to execute when the languagechange event, of type Event, is received by the object implementing this interface, usually a Window, an HTMLBodyElement, or an HTMLIFrameElement. Such an event is sent by the browser to inform that the preferred languages list has been updated. The list is accessible via NavigatorLanguage.languages."><code>onlanguagechange</code></a></li><li><a href="GlobalEventHandlers/onload.html" title="An event handler for the load event of a window."><code>onload</code></a></li><li><a href="GlobalEventHandlers/onmousedown.html" title="The onmousedown property returns the onmousedown event handler code on the current element."><code>onmousedown</code></a></li><li><a href="GlobalEventHandlers/onmousemove.html" title="The onmousemove property returns the mousemove event handler code on the current element."><code>onmousemove</code></a></li><li><a href="GlobalEventHandlers/onmouseout.html" title="The onmouseout property returns the onMouseOut event handler code on the current element."><code>onmouseout</code></a></li><li><a href="GlobalEventHandlers/onmouseover.html" title="The onmouseover property returns the onMouseOver event handler code on the current element."><code>onmouseover</code></a></li><li><a href="GlobalEventHandlers/onmouseup.html" title="The onmouseup property returns the onMouseUp event handler code on the current element."><code>onmouseup</code></a></li><li><a href="Window/onmozbeforepaint.html" title="An event handler for the MozBeforePaint event. This is used in concert with the window.mozRequestAnimationFrame() method to perform smooth, synchronized animations from&nbsp;JavaScript code."><code>onmozbeforepaint</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/onpaint.html" title="An event handler for the paint event on the window. Not working in Gecko-based applications currently, see Notes section!"><code>onpaint</code></a></li><li><a href="GlobalEventHandlers/onpointercancel.html" title="Editorial review completed."><code>onpointercancel</code></a></li><li><a href="GlobalEventHandlers/onpointerdown.html" title="Editorial review completed."><code>onpointerdown</code></a></li><li><a href="GlobalEventHandlers/onpointerenter.html" title="Editorial review completed."><code>onpointerenter</code></a></li><li><a href="GlobalEventHandlers/onpointerleave.html" title="Editorial review completed."><code>onpointerleave</code></a></li><li><a href="GlobalEventHandlers/onpointermove.html" title="Editorial review completed."><code>onpointermove</code></a></li><li><a href="GlobalEventHandlers/onpointerout.html" title="Editorial review completed."><code>onpointerout</code></a></li><li><a href="GlobalEventHandlers/onpointerover.html" title="Editorial review completed."><code>onpointerover</code></a></li><li><a href="GlobalEventHandlers/onpointerup.html" title="Editorial review completed."><code>onpointerup</code></a></li><li><a href="WindowEventHandlers/onpopstate.html" title="An event handler for the popstate event on the window."><code>onpopstate</code></a></li><li><a href="WindowEventHandlers/onrejectionhandled.html" title="The Window.onrejectionhandled property is an event handler for processing rejectionhandled events, which are raised when Promises are rejected."><code>onrejectionhandled</code></a></li><li><a href="GlobalEventHandlers/onreset.html" title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received."><code>onreset</code></a></li><li><a href="GlobalEventHandlers/onresize.html" title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received."><code>onresize</code></a></li><li><a href="GlobalEventHandlers/onscroll.html" title="An event handler for scroll events on&nbsp;element."><code>onscroll</code></a></li><li><a href="GlobalEventHandlers/onselect.html" title="An event handler for the select event on the window."><code>onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/onselectstart.html" title="The GlobalEventHandlers.onselectstart property represents the event handler that is called when a selectstart event reaches this object."><code>onselectstart</code></a></li><li><a href="WindowEventHandlers/onstorage.html" title="The WindowEventHandlers.onstorage property contains an event handler that runs when&nbsp;the storage event fires. This occurs when a storage area is changed (e.g. a new item is stored.)"><code>onstorage</code></a></li><li><a href="GlobalEventHandlers/onsubmit.html" title="An event handler for the submit event on the window."><code>onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/ontouchcancel.html" title="Editorial review completed."><code>ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/GlobalEventHanders.html" title="Editorial review completed."><code>ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/ontouchstart.html" title="Editorial review completed."><code>ontouchstart</code></a></li><li><a href="WindowEventHandlers/onunhandledrejection.html" title="The Window.onunhandledrejection property is an event handler for processing unhandledrejection events, which are raised for unhandled Promise rejections."><code>onunhandledrejection</code></a></li><li><a href="WindowEventHandlers/onunload.html" title="The unload event is raised when the window is unloading its content and resources. The resources removal is processed after the unload event occurs."><code>onunload</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/onuserproximity.html" title="The Window.onuserproxymity property represents an EventHandler, that is a function to be called when the userproximity event occurs. These events are of type UserProximityEvent and occur when the the device sensor detects that an object becomes nearby."><code>onuserproximity</code></a></li><li><a href="Window/opener.html" title="Returns a reference to the window that opened this current window."><code>opener</code></a></li><li><a href="Window/outerHeight.html" title="Technical review completed."><code>outerHeight</code></a></li><li><a href="Window/outerWidth.html" title="Window.outerWidth gets the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."><code>outerWidth</code></a></li><li><a href="Window/parent.html" title="A reference to the parent of the current window or subframe."><code>parent</code></a></li><li><a href="Window/performance.html" title="The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the Navigation Timing API and high-resolution time data."><code>performance</code></a></li><li><a href="Window/personalbar.html" title="Returns the personalbar object, whose visibility can be toggled in the window."><code>personalbar</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/pkcs11.html" title="Returns the pkcs11 object, which is used to install drivers and other software associated with the pkcs11 protocol. If pkcs11 isn't supported, this property returns null."><code>pkcs11</code></a></s></li><li><a href="Window/screen.html" title="Technical review completed."><code>screen</code></a></li><li><a href="Window/screenX.html" title="The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser from the left side of the screen."><code>screenX</code></a></li><li><a href="Window/screenY.html" title="The Window.screenY read-only property returns the vertical distance, in CSS pixels of the top border of the user's browser from the top edge of the screen."><code>screenY</code></a></li><li><a href="Window/scrollbars.html" title="Returns the scrollbars object, whose visibility can be checked."><code>scrollbars</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollMaxX.html" title="Returns the maximum number of pixels that the document can be scrolled horizontally."><code>scrollMaxX</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollMaxY.html" title="Returns the maximum number of pixels that the document can be scrolled vertically."><code>scrollMaxY</code></a></li><li><a href="Window/scrollX.html" title="Technical review completed."><code>scrollX</code></a></li><li><a href="Window/scrollY.html" title="Returns the number of pixels that the document has already been scrolled vertically."><code>scrollY</code></a></li><li><a href="Window/self.html" title="The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self)."><code>self</code></a></li><li><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>sessionStorage</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/sidebar.html" title="Returns a sidebar object, which contains several methods for registering add-ons with browser."><code>sidebar</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/speechSynthesis.html" title="The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality."><code>speechSynthesis</code></a></li><li><a href="Window/status.html" title="Sets the text in the status bar at the bottom of the browser or returns the previously set text."><code>status</code></a></li><li><a href="Window/statusbar.html" title="Returns the statusbar object, whose visibility can be toggled in the window."><code>statusbar</code></a></li><li><a href="Window/toolbar.html" title="Returns the toolbar object, whose visibility can be toggled in the window."><code>toolbar</code></a></li><li><a href="Window/top.html" title="Returns a reference to the topmost window in the window hierarchy."><code>top</code></a></li><li><a href="Window/URL.html" title="The Window.URL property returns an object that provides static methods used for creating and managing object URLs. It can also be called as a constructor to construct URL objects."><code>URL</code></a></li><li><a href="Window/window.html" title="The window property of a window object points to the window object itself. Thus the following expressions all return the same window object:"><code>window</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="Window/alert.html" title="The Window.alert() method displays an alert dialog with the optional specified content and an OK button."><code>alert()</code></a></li><li><a href="WindowBase64/atob.html" title="The WindowBase64.atob()&nbsp;function decodes a string of data which has been encoded using base-64 encoding. You can use the window.btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the window.atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31."><code>atob()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/back.html" title="Returns the window to the previous item in the history. This was a Gecko-specific method. Use the standard history.back method instead."><code>back()</code></a></li><li><a href="Window/blur.html" title="Shifts focus away from the window."><code>blur()</code></a></li><li><a href="WindowBase64/btoa.html" title="The WindowBase64.btoa() method creates a base-64 encoded ASCII string from a String object in which each character in the string is treated as a byte of binary data."><code>btoa()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/cancelAnimationFrame.html" title="Cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame()."><code>cancelAnimationFrame()</code></a></li><li><a href="Window/cancelIdleCallback.html" title="The&nbsp;Window.cancelIdleCallback()&nbsp;enables you to cancel a callback previously scheduled with Window.requestIdleCallback."><code>cancelIdleCallback</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/captureEvents.html" title="Registers the window to capture all events of the specified type."><code>captureEvents()</code></a></li><li><a href="Window/clearImmediate.html" title="This method clears the action specified by window.setImmediate."><code>clearImmediate()</code></a></li><li><a href="WindowTimers/clearInterval.html" title="Cancels repeated action which was set up using setInterval."><code>clearInterval()</code></a></li><li><a href="WindowTimers/clearTimeout.html" title="Clears the delay set by WindowTimers.setTimeout()."><code>clearTimeout()</code></a></li><li><a href="Window/close.html" title="The Window.close() method closes the current window, or the window on which it was called."><code>close()</code></a></li><li><a href="Window/confirm.html" title="The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK and Cancel."><code>confirm()</code></a></li><li><a href="Window/convertPointFromNodeToPage.html" title="The Window.convertPointFromNodeToPage() method converts a Point object from coordinates based on the given CSS node to coordinates based on the page."><code>convertPointFromNodeToPage()</code></a></li><li><a href="ImageBitmapFactories/createImageBitmap.html" title="The createImageBitmap method accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap. Optionally the source is cropped to the rectangle of pixels originating at (sx, sy) with width sw, and height sh."><code>createImageBitmap()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/dump.html" title="Prints messages to the (native) console."><code>dump()</code></a></li><li><a href="Window/event.html" title="window.event is a proprietary Microsoft Internet Explorer property which is only available while a DOM event handler is being called. Its value is the Event object currently being handled."><code>event</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalFetch/fetch.html" title="The fetch() method of the GlobalFetch interface starts the process of fetching a resource. This returns a promise that resolves to the Response object representing the response to your request."><code>fetch()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/find.html" title="Finds a string in a window."><code>find()</code></a></li><li><a href="Window/focus.html" title="Makes a request to bring the window to the front. It may fail due to user settings and the window isn't guaranteed to be frontmost before this method returns."><code>focus()</code></a></li><li><a href="Window/forward.html" title="Moves the window one document forward in the history. This was a Gecko-specific method. Use the standard history.forward method instead."><code>forward()</code></a></li><li><a href="Window/getAttention.html" title="Attempts to get the user's attention. How this happens varies based on OS and window manager."><code>getAttention()</code></a></li><li><a href="Window/getComputedStyle.html" title="The Window.getComputedStyle() method gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain."><code>getComputedStyle()</code></a></li><li><a href="window/getDefaultComputedStyle-2.html" title="getDefaultComputedStyle() gives the default computed values of all the CSS properties of an element, ignoring author styling.&nbsp; That is, only user-agent and user styles are taken into account."><code>getDefaultComputedStyle()</code></a></li><li><a href="Window/getSelection.html" title="Returns a Selection object representing the range of text selected by the user or the current position of the caret."><code>getSelection()</code></a></li><li><a href="Window/home.html" title="Returns the window to the home page."><code>home()</code></a></li><li><a href="Window/matchMedia.html" title="Returns a new MediaQueryList object representing the parsed results of the specified media query string."><code>matchMedia()</code></a></li><li><a href="Window/minimize.html" title="Sets a window to minimized state (a way to undo it programatically is by calling window.moveTo())."><code>minimize()</code></a></li><li><a href="Window/moveBy.html" title="Moves the current window by a specified amount."><code>moveBy()</code></a></li><li><a href="Window/moveTo.html" title="Moves the window to the specified coordinates."><code>moveTo()</code></a></li><li><a href="Window/open.html" title="Loads a resource into either a new browsing context (such as a window) or one that already exists, depending on the specified parameters."><code>open()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/openDialog.html" title="window.openDialog() is an extension to window.open(). It behaves the same, except that it can optionally take one or more parameters past windowFeatures, and windowFeatures itself is treated a little differently."><code>openDialog()</code></a></li><li><a href="Window/postMessage.html" title="The window.postMessage method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo document.domain being set by both pages to the same value). window.postMessage provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>postMessage()</code></a></li><li><a href="Window/print.html" title="Opens the Print Dialog to print the current document."><code>print()</code></a></li><li><a href="Window/prompt.html" title="The Window.prompt() displays a dialog with an optional message prompting the user to input some text."><code>prompt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/releaseEvents.html" title="Releases the window from trapping events of a specific type."><code>releaseEvents()</code></a></li><li><a href="window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. The callback rate may be reduced to a lower rate when running in background tabs or in hidden &lt;iframe&gt;s in order to improve performance and battery life."><code>requestAnimationFrame()</code></a></li><li><a href="Window/requestIdleCallback.html" title="The&nbsp;Window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-fist-out order unless the function's timeout is reached before the browser calls it."><code>requestIdleCallback</code></a></li><li><a href="Window/resizeBy.html" title="Resizes the current window by a certain amount."><code>resizeBy()</code></a></li><li><a href="Window/resizeTo.html" title="Dynamically resizes window."><code>resizeTo()</code></a></li><li><a href="Window/restore.html" title="This method is currently not working, but you can use:"><code>restore()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/routeEvent.html" title=""><code>routeEvent()</code></a></s></li><li><a href="Window/scroll.html" title="Scrolls the window to a particular place in the document."><code>scroll()</code></a></li><li><a href="Window/scrollBy.html" title="Scrolls the document in the window by the given amount."><code>scrollBy()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollByLines.html" title="Scrolls the document by the given number of lines."><code>scrollByLines()</code></a></li><li><a href="Window/scrollByPages.html" title="Scrolls the current document by the specified number of pages."><code>scrollByPages()</code></a></li><li><a href="Window/scrollTo.html" title="Scrolls to a particular set of coordinates in the document."><code>scrollTo()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/setCursor.html" title="Changes the cursor for the current window."><code>setCursor()</code></a></li><li><a href="Window/setImmediate.html" title="This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates."><code>setImmediate()</code></a></li><li><a href="WindowTimers/setInterval.html" title="Repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. Returns an intervalID."><code>setInterval()</code></a></li><li><a href="WindowTimers/setTimeout.html" title="Calls a function or executes a code snippet after a specified delay."><code>setTimeout()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="Window/showModalDialog.html" title="The Window.showModalDialog() creates and displays a modal dialog box containing a specified HTML document."><code>showModalDialog()</code></a></li><li><a href="Window/sizeToContent.html" title="The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called, for example once the DOMContentLoaded event has been thrown."><code>sizeToContent()</code></a></li><li><a href="Window/stop.html" title="This method stops window loading."><code>stop()</code></a></li><li><a href="Window/updateCommands.html" title="Updates the state of commands of the current chrome window (UI)."><code>updateCommands()</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="Window.html"><code>Window</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Window/applicationCache.html" title="Returns a reference to the application cache object for the window."><code>applicationCache</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/caches.html" title="The Window.caches&nbsp;read-only property returns the CacheStorage object associated with the current origin. This object enables service worker functionality such as storing assets for offline use, and generating custom responses to requests."><code>caches</code></a></li><li><a href="Window/closed.html" title="This read-only property indicates whether the referenced window is closed or not."><code>closed</code></a></li><li><a href="Window/console.html" title="The Window.console read-only property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users."><code>console</code></a></li><li><a href="Window/controllers.html" title="Returns the XUL controllers of the chrome window."><code>controllers</code></a></li><li><a href="Window/crypto.html" title="The Window.crypto read-only property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services."><code>crypto</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/defaultStatus.html" title="Gets/sets the status bar text for the given window."><code>defaultStatus</code></a></s></li><li><a href="Window/devicePixelRatio.html" title="The Window.devicePixelRatio read-only property returns the ratio of the (vertical) size of one physical pixel on the current display device to the size of one device independent pixels(dips)."><code>devicePixelRatio</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="Window/dialogArguments.html" title="The dialogArguments property returns the parameters that were passed into the window.showModalDialog() method. This lets you determine what parameters were specified when the modal dialog was created."><code>dialogArguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/directories.html" title="Returned the window personalbar toolbar object. Use the window.personalbar instead."><code>directories</code></a></s></li><li><a href="Window/document.html" title="Returns a reference to the document contained in the window."><code>document</code></a></li><li><a href="Window/frameElement.html" title="Returns the element (such as &lt;iframe&gt; or &lt;object&gt;) in which the window is embedded, or null if the element is either top-level or is embedded into a document with a different script origin; that is, in cross-origin situations."><code>frameElement</code></a></li><li><a href="Window/frames.html" title="Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."><code>frames</code></a></li><li><a href="Window/fullScreen.html" title="This property indicates whether the window is displayed in full screen mode or not. It is only reliable in Gecko 1.9 (Firefox 3) and later, see the Notes below."><code>fullScreen</code></a></li><li><a href="Window/history.html" title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)."><code>history</code></a></li><li><a href="IDBEnvironment/indexedDB.html" title="The indexedDB property of the IDBEnvironment interface provides a mechanism for applications to asynchronously access the capabilities of indexed databases."><code>indexedDB</code></a></li><li><a href="Window/innerHeight.html" title="Technical review completed."><code>innerHeight</code></a></li><li><a href="Window/innerWidth.html" title="Technical review completed."><code>innerWidth</code></a></li><li><a href="Window/isSecureContext.html" title="The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts."><code>isSecureContext</code></a></li><li><a href="Window/length.html" title="Returns the number of frames (either &lt;frame&gt; or &lt;iframe&gt; elements) in the window."><code>length</code></a></li><li><a href="Window/localStorage.html" title="The localStorage property allows you to access a local Storage object. localStorage is similar to sessionStorage. The only difference is that, while data stored in localStorage has no expiration time, data stored in sessionStorage gets cleared when the browsing session ends—that is, when the browser is closed."><code>localStorage</code></a></li><li><a href="Window/location.html" title="The Window.location read-only property returns a Location object with information about the current location of the document."><code>location</code></a></li><li><a href="Window/locationbar.html" title="Returns the locationbar object, whose visibility can be checked."><code>locationbar</code></a></li><li><a href="Window/menubar.html" title="Returns the menubar object, whose visibility can be checked."><code>menubar</code></a></li><li><a href="Window/messageManager.html" title="Returns the message manager object for this window. See The message manager for details."><code>messageManager</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/mozAnimationStartTime.html" title="Returns the time, in milliseconds since the epoch, at which animations started now should be considered to have started. This value should be used instead of, for example, Date.now(), because this value will be the same for all animations started in this window during this refresh interval, allowing them to remain in sync with one another."><code>mozAnimationStartTime</code></a></li><li><a href="Window/mozInnerScreenX.html" title="Gets the X coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenX</code></a></li><li><a href="Window/mozInnerScreenY.html" title="Gets the Y coordinate of the top-left corner of the window's viewport, in screen coordinates."><code>mozInnerScreenY</code></a></li><li><a href="Window/mozPaintCount.html" title="Returns the number of times the current document has been painted to the screen in this window."><code>mozPaintCount</code></a></li><li><a href="Window/name.html" title="Gets/sets the name of the window."><code>name</code></a></li><li><a href="Window/navigator.html" title="The Window.navigator read-only property returns a reference to the Navigator object, which can be queried for information about the application running the script."><code>navigator</code></a></li><li><a href="GlobalEventHandlers/onabort.html" title="An event handler for abort events sent to the window. (Not available with Firefox 2 or Safari)"><code>onabort</code></a></li><li><a href="WindowEventHandlers/onafterprint.html" title="The WindowEventHandlers.onafterprint property sets and returns the onafterprint EventHandler for the current window."><code>onafterprint</code></a></li><li><a href="GlobalEventHandlers/onanimationcancel.html" title="An event handler for the animationcancel event. This event is sent when a CSS Animation unexpectedly aborts (in other words, any time it stops running without sending an animationend event), such as when the animation-name is changed such that the animation is removed, or when the animating node is hidden—either directly or because any of its containing nodes are hidden)—using CSS."><code>onanimationcancel</code></a></li><li><a href="GlobalEventHandlers/onanimationend.html" title="An event handler for the animationend event. This event is sent when a CSS Animation reaches the end of its active period (which is calculated as (animation-duration * animation-iteration-count) + animation-delay."><code>onanimationend</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/onanimationiteration.html" title="An event handler for the animationiteration event. This event is sent when a CSS Animation reaches the end of an iteration. An iteration ends when a single pass through the sequence of animation instructions is completed by executing the last animation step."><code>onanimationiteration</code></a></li><li><a href="Window/oninstall.html" title="The onappinstalled attribute&nbsp;of the Window object&nbsp;serves as an&nbsp;event handler for the appinstalled event, which is dispatched once the web application&nbsp;is successfully installed as a progressive web app. The event that is fired is a &quot;simple event&quot; that implements the Event interface."><code>onappinstalled</code></a></li><li><a href="WindowEventHandlers/onbeforeprint.html" title="The property&nbsp;onbeforeprint sets and returns the onbeforeprint event handler code for the current window."><code>onbeforeprint</code></a></li><li><a href="WindowEventHandlers/onbeforeunload.html" title="The WindowEventHandlers.onbeforeunload event handler property, contains the code executed when the beforeunload is sent. This event fires when a window is about to unload its resources. The document is still visible and the event is still cancelable."><code>onbeforeunload</code></a></li><li><a href="GlobalEventHandlers/onblur.html" title="The onblur property returns the onBlur event handler code, if any, that exists on the current element."><code>onblur</code></a></li><li><a href="GlobalEventHandlers/onchange.html" title="The onchange property sets and returns the event handler for the change event."><code>onchange</code></a></li><li><a href="GlobalEventHandlers/onclick.html" title="The onclick property returns the click event handler code on the current element."><code>onclick</code></a></li><li><a href="GlobalEventHandlers/onclose.html" title="An event handler for close events sent to the window. (Not available with Firefox 2 or Safari)"><code>onclose</code></a></li><li><a href="GlobalEventHandlers/oncontextmenu.html" title="An event handler property for right-click events on the window. Unless the default behavior is prevented (see examples below on how to do this), the browser context menu will activate (though IE8 has a bug with this and will not activate the context menu if a contextmenu event handler is defined). Note that this event will occur with any non-disabled right-click event and does not depend on an element possessing the &quot;contextmenu&quot; attribute."><code>oncontextmenu</code></a></li><li><a href="GlobalEventHandlers/ondblclick.html" title="The ondblclick property returns the onDblClick event handler code on the current element."><code>ondblclick</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/ondevicelight.html" title="Specifies an event listener to receive devicelight events. These events occur when the device's light level sensor detects a change in the intensity of the ambient light level."><code>ondevicelight</code></a></li><li><a href="Window/ondevicemotion.html" title="An event handler for the devicemotion events sent to the window."><code>ondevicemotion</code></a></li><li><a href="Window/ondeviceorientation.html" title="An event handler for the deviceorientation event, which contains information about a relative device orientation change."><code>ondeviceorientation</code></a></li><li><a href="Window/ondeviceorientationabsolute.html" title="An event handler for the deviceorientationabsolute event containing&nbsp;information about an absolute device orientation change."><code>ondeviceorientationabsolute</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/ondeviceproximity.html" title="Specifies an event listener to receive deviceproximity events. These events occur when the device sensor detects that an object becomes closer to or farther from the device."><code>ondeviceproximity</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/ondragdrop.html" title="An event handler for drag and drop events sent to the window."><code>ondragdrop</code></a></s></li><li><a href="GlobalEventHandlers/onerror.html" title="An event handler for the error event. Error events are fired at various targets for different kinds of errors:"><code>onerror</code></a></li><li><a href="GlobalEventHandlers/onfocus.html" title="The onfocus property returns the onFocus event handler code on the current element."><code>onfocus</code></a></li><li><a href="WindowEventHandlers/onhashchange.html" title="The hashchange event fires when a window's hash changes (see location.hash)."><code>onhashchange</code></a></li><li><a href="GlobalEventHandlers/oninput.html" title="An event handler for the input event on the window.&nbsp;The input event is raised when an &lt;input&gt; element value changes."><code>oninput</code></a></li><li><a href="GlobalEventHandlers/onkeydown.html" title="The onkeydown property returns the onKeyDown event handler code on the current element."><code>onkeydown</code></a></li><li><a href="GlobalEventHandlers/onkeypress.html" title="The onkeypress property sets and returns the onKeyPress event handler code for the current element."><code>onkeypress</code></a></li><li><a href="GlobalEventHandlers/onkeyup.html" title="The onkeyup property returns the onKeyUp event handler code for the current element."><code>onkeyup</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="WindowEventHandlers/onlanguagechange.html" title="The WindowEventHandlers.onlanguagechange event handler is a property containing the code to execute when the languagechange event, of type Event, is received by the object implementing this interface, usually a Window, an HTMLBodyElement, or an HTMLIFrameElement. Such an event is sent by the browser to inform that the preferred languages list has been updated. The list is accessible via NavigatorLanguage.languages."><code>onlanguagechange</code></a></li><li><a href="GlobalEventHandlers/onload.html" title="An event handler for the load event of a window."><code>onload</code></a></li><li><a href="GlobalEventHandlers/onmousedown.html" title="The onmousedown property returns the onmousedown event handler code on the current element."><code>onmousedown</code></a></li><li><a href="GlobalEventHandlers/onmousemove.html" title="The onmousemove property returns the mousemove event handler code on the current element."><code>onmousemove</code></a></li><li><a href="GlobalEventHandlers/onmouseout.html" title="The onmouseout property returns the onMouseOut event handler code on the current element."><code>onmouseout</code></a></li><li><a href="GlobalEventHandlers/onmouseover.html" title="The onmouseover property returns the onMouseOver event handler code on the current element."><code>onmouseover</code></a></li><li><a href="GlobalEventHandlers/onmouseup.html" title="The onmouseup property returns the onMouseUp event handler code on the current element."><code>onmouseup</code></a></li><li><a href="Window/onmozbeforepaint.html" title="An event handler for the MozBeforePaint event. This is used in concert with the window.mozRequestAnimationFrame() method to perform smooth, synchronized animations from&nbsp;JavaScript code."><code>onmozbeforepaint</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/onpaint.html" title="An event handler for the paint event on the window. Not working in Gecko-based applications currently, see Notes section!"><code>onpaint</code></a></li><li><a href="GlobalEventHandlers/onpointercancel.html" title="A global event handler for the pointercancel event."><code>onpointercancel</code></a></li><li><a href="GlobalEventHandlers/onpointerdown.html" title="A global event handler for the pointerdown event."><code>onpointerdown</code></a></li><li><a href="GlobalEventHandlers/onpointerenter.html" title="A global event handler for the pointerenter event."><code>onpointerenter</code></a></li><li><a href="GlobalEventHandlers/onpointerleave.html" title="A global event handler for the pointerleave event."><code>onpointerleave</code></a></li><li><a href="GlobalEventHandlers/onpointermove.html" title="A global event handler for the pointermove event."><code>onpointermove</code></a></li><li><a href="GlobalEventHandlers/onpointerout.html" title="A global event handler for the pointerout event."><code>onpointerout</code></a></li><li><a href="GlobalEventHandlers/onpointerover.html" title="A global event handler for the pointerover event."><code>onpointerover</code></a></li><li><a href="GlobalEventHandlers/onpointerup.html" title="A global event handler for the pointerup event."><code>onpointerup</code></a></li><li><a href="WindowEventHandlers/onpopstate.html" title="An event handler for the popstate event on the window."><code>onpopstate</code></a></li><li><a href="WindowEventHandlers/onrejectionhandled.html" title="The Window.onrejectionhandled property is an event handler for processing rejectionhandled events, which are raised when Promises are rejected."><code>onrejectionhandled</code></a></li><li><a href="GlobalEventHandlers/onreset.html" title="The GlobalEventHandlers.onreset property contains an EventHandler triggered when a reset event is received."><code>onreset</code></a></li><li><a href="GlobalEventHandlers/onresize.html" title="The GlobalEventHandlers.onresize property contains an EventHandler triggered when a resize event is received."><code>onresize</code></a></li><li><a href="GlobalEventHandlers/onscroll.html" title="An event handler for scroll events on&nbsp;element."><code>onscroll</code></a></li><li><a href="GlobalEventHandlers/onselect.html" title="An event handler for the select event on the window."><code>onselect</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/onselectstart.html" title="The GlobalEventHandlers.onselectstart property represents the event handler that is called when a selectstart event reaches this object."><code>onselectstart</code></a></li><li><a href="WindowEventHandlers/onstorage.html" title="The WindowEventHandlers.onstorage property contains an event handler that runs when&nbsp;the storage event fires. This occurs when a storage area is changed (e.g. a new item is stored.)"><code>onstorage</code></a></li><li><a href="GlobalEventHandlers/onsubmit.html" title="An event handler for the submit event on the window."><code>onsubmit</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/ontouchcancel.html" title="Editorial review completed."><code>ontouchcancel</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/GlobalEventHanders.html" title="Editorial review completed."><code>ontouchmove</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalEventHandlers/ontouchstart.html" title="Editorial review completed."><code>ontouchstart</code></a></li><li><a href="GlobalEventHandlers/ontransitionend.html" title="An event handler for the transitionend event. This event is sent when a CSS transition completes."><code>ontransitionend</code></a></li><li><a href="WindowEventHandlers/onunhandledrejection.html" title="The Window.onunhandledrejection property is an event handler for processing unhandledrejection events, which are raised for unhandled Promise rejections."><code>onunhandledrejection</code></a></li><li><a href="WindowEventHandlers/onunload.html" title="The unload event is raised when the window is unloading its content and resources. The resources removal is processed after the unload event occurs."><code>onunload</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/onuserproximity.html" title="The Window.onuserproxymity property represents an EventHandler, that is a function to be called when the userproximity event occurs. These events are of type UserProximityEvent and occur when the the device sensor detects that an object becomes nearby."><code>onuserproximity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/onvrdisplayconnected.html" title="The onvrdisplayconnected property of the SpeechSynthesis interface represents an event handler that will run when a compatible VR device has been connected to the computer (when the vrdisplayconnected event fires)."><code>onvrdisplayconnected</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/onvrdisplaydisconnected.html" title="The onvrdisplaydisconnected&nbsp;event handler property of the Window interface is called when a compatible VR device has been disconnected from the computer (when the vrdisplaydisconnected event fires)."><code>onvrdisplaydisconnected</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/onvrdisplaypresentchange.html" title="The onvrdisplaypresentchange property of the SpeechSynthesis interface represents an event handler that will run when the presenting state of a VR device changes — i.e. goes from presenting to not presenting, or vice versa (when the onvrdisplaypresentchange event fires)."><code>onvrdisplaypresentchange</code></a></li><li><a href="Window/opener.html" title="Returns a reference to the window that opened this current window."><code>opener</code></a></li><li><a href="Window/outerHeight.html" title="Technical review completed."><code>outerHeight</code></a></li><li><a href="Window/outerWidth.html" title="Window.outerWidth gets the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."><code>outerWidth</code></a></li><li><a href="Window/parent.html" title="A reference to the parent of the current window or subframe."><code>parent</code></a></li><li><a href="Window/performance.html" title="The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the Navigation Timing API and high-resolution time data."><code>performance</code></a></li><li><a href="Window/personalbar.html" title="Returns the personalbar object, whose visibility can be toggled in the window."><code>personalbar</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/pkcs11.html" title="Returns the pkcs11 object, which is used to install drivers and other software associated with the pkcs11 protocol. If pkcs11 isn't supported, this property returns null."><code>pkcs11</code></a></s></li><li><a href="Window/screen.html" title="Technical review completed."><code>screen</code></a></li><li><a href="Window/screenX.html" title="The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser from the left side of the screen."><code>screenX</code></a></li><li><a href="Window/screenY.html" title="The Window.screenY read-only property returns the vertical distance, in CSS pixels of the top border of the user's browser from the top edge of the screen."><code>screenY</code></a></li><li><a href="Window/scrollbars.html" title="Returns the scrollbars object, whose visibility can be checked."><code>scrollbars</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollMaxX.html" title="Returns the maximum number of pixels that the document can be scrolled horizontally."><code>scrollMaxX</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollMaxY.html" title="Returns the maximum number of pixels that the document can be scrolled vertically."><code>scrollMaxY</code></a></li><li><a href="Window/scrollX.html" title="Returns the number of pixels that the document has already been scrolled horizontally."><code>scrollX</code></a></li><li><a href="Window/scrollY.html" title="Returns the number of pixels that the document has already been scrolled vertically."><code>scrollY</code></a></li><li><a href="Window/self.html" title="The Window.self read-only property returns the window itself, as a WindowProxy. It can be used with dot notation on a window object (that is, window.self) or standalone (self). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in Web Workers. By using self, you can refer to the global scope in a way that will work not only in a window context (self will resolve to window.self) but also in a worker context (self will then resolve to WorkerGlobalScope.self)."><code>self</code></a></li><li><a href="Window/sessionStorage.html" title="The sessionStorage property allows you to access a session Storage object for the current origin. sessionStorage is similar to Window.localStorage, the only difference is while data stored in localStorage has no expiration set, data stored in sessionStorage gets cleared when the page session ends. A page session lasts for as long as the browser is open and survives over page reloads and restores. Opening a page in a new tab or window will cause a new session to be initiated, which differs from how session cookies work."><code>sessionStorage</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/sidebar.html" title="Returns a sidebar object, which contains several methods for registering add-ons with browser."><code>sidebar</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/speechSynthesis.html" title="The speechSynthesis read-only property of the Window object returns a SpeechSynthesis object, which is the entry point into using Web Speech API speech synthesis functionality."><code>speechSynthesis</code></a></li><li><a href="Window/status.html" title="Sets the text in the status bar at the bottom of the browser or returns the previously set text."><code>status</code></a></li><li><a href="Window/statusbar.html" title="Returns the statusbar object, whose visibility can be toggled in the window."><code>statusbar</code></a></li><li><a href="Window/toolbar.html" title="Returns the toolbar object, whose visibility can be toggled in the window."><code>toolbar</code></a></li><li><a href="Window/top.html" title="Returns a reference to the topmost window in the window hierarchy."><code>top</code></a></li><li><a href="Window/URL.html" title="The Window.URL property returns an object that provides static methods used for creating and managing object URLs. It can also be called as a constructor to construct URL objects."><code>URL</code></a></li><li><a href="Window/window.html" title="The window property of a window object points to the window object itself. Thus the following expressions all return the same window object:"><code>window</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="Window/alert.html" title="The Window.alert() method displays an alert dialog with the optional specified content and an OK button."><code>alert()</code></a></li><li><a href="WindowBase64/atob.html" title="The WindowBase64.atob()&nbsp;function decodes a string of data which has been encoded using base-64 encoding. You can use the window.btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the window.atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31."><code>atob()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/back.html" title="Returns the window to the previous item in the history. This was a Gecko-specific method. Use the standard history.back method instead."><code>back()</code></a></li><li><a href="Window/blur.html" title="Shifts focus away from the window."><code>blur()</code></a></li><li><a href="WindowBase64/btoa.html" title="The WindowBase64.btoa() method creates a base-64 encoded ASCII string from a String object in which each character in the string is treated as a byte of binary data."><code>btoa()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="Window/cancelAnimationFrame.html" title="Cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame()."><code>cancelAnimationFrame()</code></a></li><li><a href="Window/cancelIdleCallback.html" title="The&nbsp;Window.cancelIdleCallback()&nbsp;enables you to cancel a callback previously scheduled with Window.requestIdleCallback."><code>cancelIdleCallback</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/captureEvents.html" title="Registers the window to capture all events of the specified type."><code>captureEvents()</code></a></li><li><a href="Window/clearImmediate.html" title="This method clears the action specified by window.setImmediate."><code>clearImmediate()</code></a></li><li><a href="WindowTimers/clearInterval.html" title="Cancels a timed, repeating action which was previously established by a call to setInterval()."><code>clearInterval()</code></a></li><li><a href="WindowTimers/clearTimeout.html" title="Cancels a timeout previously established by calling setTimeout()."><code>clearTimeout()</code></a></li><li><a href="Window/close.html" title="The Window.close() method closes the current window, or the window on which it was called."><code>close()</code></a></li><li><a href="Window/confirm.html" title="The Window.confirm() method displays a modal dialog with an optional message and two buttons, OK and Cancel."><code>confirm()</code></a></li><li><a href="Window/convertPointFromNodeToPage.html" title="The Window.convertPointFromNodeToPage() method converts a Point object from coordinates based on the given CSS node to coordinates based on the page."><code>convertPointFromNodeToPage()</code></a></li><li><a href="ImageBitmapFactories/createImageBitmap.html" title="The createImageBitmap method accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap. Optionally the source is cropped to the rectangle of pixels originating at (sx, sy) with width sw, and height sh."><code>createImageBitmap()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/dump.html" title="Prints messages to the (native) console."><code>dump()</code></a></li><li><a href="Window/event.html" title="window.event is a proprietary Microsoft Internet Explorer property which is only available while a DOM event handler is being called. Its value is the Event object currently being handled."><code>event</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="GlobalFetch/fetch.html" title="The fetch() method of the GlobalFetch mixin starts the process of fetching a resource. This returns a promise that resolves to the Response object representing the response to your request."><code>fetch()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/find.html" title="Finds a string in a window."><code>find()</code></a></li><li><a href="Window/focus.html" title="Makes a request to bring the window to the front. It may fail due to user settings and the window isn't guaranteed to be frontmost before this method returns."><code>focus()</code></a></li><li><a href="Window/forward.html" title="Moves the window one document forward in the history. This was a Gecko-specific method. Use the standard history.forward method instead."><code>forward()</code></a></li><li><a href="Window/getAttention.html" title="Attempts to get the user's attention. How this happens varies based on OS and window manager."><code>getAttention()</code></a></li><li><a href="Window/getComputedStyle.html" title="The Window.getComputedStyle() method gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain."><code>getComputedStyle()</code></a></li><li><a href="window/getDefaultComputedStyle-2.html" title="getDefaultComputedStyle() gives the default computed values of all the CSS properties of an element, ignoring author styling.&nbsp; That is, only user-agent and user styles are taken into account."><code>getDefaultComputedStyle()</code></a></li><li><a href="Window/getSelection.html" title="Returns a Selection object representing the range of text selected by the user or the current position of the caret."><code>getSelection()</code></a></li><li><a href="Window/home.html" title="Returns the window to the home page."><code>home()</code></a></li><li><a href="Window/matchMedia.html" title="Returns a new MediaQueryList object representing the parsed results of the specified media query string."><code>matchMedia()</code></a></li><li><a href="Window/minimize.html" title="Sets a window to minimized state (a way to undo it programatically is by calling window.moveTo())."><code>minimize()</code></a></li><li><a href="Window/moveBy.html" title="Moves the current window by a specified amount."><code>moveBy()</code></a></li><li><a href="Window/moveTo.html" title="Moves the window to the specified coordinates."><code>moveTo()</code></a></li><li><a href="Window/open.html" title="Loads a resource into either a new browsing context (such as a window) or one that already exists, depending on the specified parameters."><code>open()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/openDialog.html" title="window.openDialog() is an extension to window.open(). It behaves the same, except that it can optionally take one or more parameters past windowFeatures, and windowFeatures itself is treated a little differently."><code>openDialog()</code></a></li><li><a href="Window/postMessage.html" title="The Window.postMessage() method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo Document.domain being set by both pages to the same value). window.postMessage() provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>postMessage()</code></a></li><li><a href="Window/print.html" title="Opens the Print Dialog to print the current document."><code>print()</code></a></li><li><a href="Window/prompt.html" title="The Window.prompt() displays a dialog with an optional message prompting the user to input some text."><code>prompt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/releaseEvents.html" title="Releases the window from trapping events of a specific type."><code>releaseEvents()</code></a></li><li><a href="window/requestAnimationFrame.html" title="You should call this method whenever you're ready to update your animation onscreen. This will request that your animation function be called before the browser performs the next repaint. The number of callbacks is usually 60 times per second, but will generally match the display refresh rate in most web browsers as per W3C recommendation. The callback rate may be reduced to a lower rate when running in background tabs or in hidden &lt;iframe&gt;s in order to improve performance and battery life."><code>requestAnimationFrame()</code></a></li><li><a href="Window/requestIdleCallback.html" title="The window.requestIdleCallback() method queues a function to be called&nbsp;during a browser's idle periods. This enables developers to perform background and low priority work on the main event loop, without impacting latency-critical events such as animation and input response. Functions are generally called in first-in-first-out order unless the function's timeout is reached before the browser calls it."><code>requestIdleCallback</code></a></li><li><a href="Window/resizeBy.html" title="Resizes the current window by a certain amount."><code>resizeBy()</code></a></li><li><a href="Window/resizeTo.html" title="Dynamically resizes window."><code>resizeTo()</code></a></li><li><a href="Window/restore.html" title="This method is currently not working, but you can use:"><code>restore()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="Window/routeEvent.html" title=""><code>routeEvent()</code></a></s></li><li><a href="Window/scroll.html" title="Scrolls the window to a particular place in the document."><code>scroll()</code></a></li><li><a href="Window/scrollBy.html" title="Scrolls the document in the window by the given amount."><code>scrollBy()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/scrollByLines.html" title="Scrolls the document by the given number of lines."><code>scrollByLines()</code></a></li><li><a href="Window/scrollByPages.html" title="Scrolls the current document by the specified number of pages."><code>scrollByPages()</code></a></li><li><a href="Window/scrollTo.html" title="Scrolls to a particular set of coordinates in the document."><code>scrollTo()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="Window/setCursor.html" title="Changes the cursor for the current window."><code>setCursor()</code></a></li><li><a href="Window/setImmediate.html" title="This method is used to break up long running operations and run a callback function immediately after the browser has completed other operations such as events and display updates."><code>setImmediate()</code></a></li><li><a href="WindowTimers/setInterval.html" title="Repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. Returns an intervalID."><code>setInterval()</code></a></li><li><a href="WindowTimers/setTimeout.html" title="Sets a timer which executes a function or specified piece of code once after the timer expires."><code>setTimeout()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="Window/showModalDialog.html" title="The Window.showModalDialog() creates and displays a modal dialog box containing a specified HTML document."><code>showModalDialog()</code></a></li><li><a href="Window/sizeToContent.html" title="The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called, for example once the DOMContentLoaded event has been thrown."><code>sizeToContent()</code></a></li><li><a href="Window/stop.html" title="This method stops window loading."><code>stop()</code></a></li><li><a href="Window/updateCommands.html" title="Updates the state of commands of the current chrome window (UI)."><code>updateCommands()</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -1408,12 +1458,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1421,9 +1471,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1432,42 +1481,51 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/Window" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/Window" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/cs/docs/Web/API/Window">
-            Čeština
+          <option title="Czech" value="/cs/docs/Web/API/Window">
+            Čeština (cs)
           </option>
-          <option value="/de/docs/Web/API/Window">
-            Deutsch
+          <option title="German" value="/de/docs/Web/API/Window">
+            Deutsch (de)
           </option>
-          <option value="/es/docs/Web/API/Window">
-            Español
+          <option title="Spanish" value="/es/docs/Web/API/Window">
+            Español (es)
           </option>
-          <option value="/fr/docs/Web/API/Window">
-            Français
+          <option title="French" value="/fr/docs/Web/API/Window">
+            Français (fr)
           </option>
-          <option value="/it/docs/Web/API/Window">
-            Italiano
+          <option title="Italian" value="/it/docs/Web/API/Window">
+            Italiano (it)
           </option>
-          <option value="/ja/docs/Web/API/Window">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/Window">
+            日本語 (ja)
           </option>
-          <option value="/ko/docs/Web/API/Window">
-            한국어
+          <option title="Korean" value="/ko/docs/Web/API/Window">
+            한국어 (ko)
           </option>
-          <option value="/pl/docs/Web/API/Window">
-            Polski
+          <option title="Dutch" value="/nl/docs/Web/API/Window">
+            Nederlands (nl)
           </option>
-          <option value="/pt-BR/docs/Web/API/Window">
-            Português (do&nbsp;Brasil)
+          <option title="Polish" value="/pl/docs/Web/API/Window">
+            Polski (pl)
           </option>
-          <option value="/ru/docs/Web/API/Window">
-            Русский
+          <option title="Portuguese (Brazilian)" value="/pt-BR/docs/Web/API/Window">
+            Português (do&nbsp;Brasil) (pt-BR)
           </option>
-          <option value="/zh-CN/docs/Web/API/Window">
-            中文 (简体)
+          <option title="Romanian" value="/ro/docs/Web/API/Window">
+            Română (ro)
+          </option>
+          <option title="Russian" value="/ru/docs/Web/API/Window">
+            Русский (ru)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/Window">
+            中文 (简体) (zh-CN)
+          </option>
+          <option title="Chinese (Traditional)" value="/zh-TW/docs/Web/API/Window">
+            正體中文 (繁體) (zh-TW)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1484,33 +1542,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:05:52 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Window by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:44:24 GMT -->
 </body></html>

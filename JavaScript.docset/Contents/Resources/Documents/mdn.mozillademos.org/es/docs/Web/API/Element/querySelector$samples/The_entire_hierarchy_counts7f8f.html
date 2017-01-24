@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/es/docs/Web/API/Element/querySelector$samples/The_entire_hierarchy_counts?revision=1078638 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:27:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <div>
+  <h5>Original content</h5>
+  <p>
+    inside paragraph
+    <span>inside span</span>
+    inside paragraph
+  </p>
+</div>
+<div>
+  <h5>Output</h5>
+  <div id="output"></div>
+</div>
+        
+        
+            <script type="text/javascript">
+                var baseElement = document.querySelector("p");
+document.getElementById("output").innerHTML =
+         (baseElement.querySelector("div span").innerHTML);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/es/docs/Web/API/Element/querySelector$samples/The_entire_hierarchy_counts?revision=1078638 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:27:09 GMT -->
+</html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Presentation_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:40:44 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Presentation_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:57:52 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,10 +69,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API">
   <meta name="twitter:title" content="Presentation API">
   
-  <meta property="og:description" content="TBD">
-  <meta name="description" content="TBD">
-  <meta name="twitter:description" content="TBD">
+  <meta property="og:description" content="The Presentation API is developed to effectively display web content through large scale presentation devices such as projectors and connected TVs. The relevant multimedia devices include wired displays, such as HDMI, DVI, or similar, and wireless technologies like Miracast, Chromecast, DLNA, or AirPlay.">
+  <meta name="description" content="The Presentation API is developed to effectively display web content through large scale presentation devices such as projectors and connected TVs. The relevant multimedia devices include wired displays, such as HDMI, DVI, or similar, and wireless technologies like Miracast, Chromecast, DLNA, or AirPlay.">
+  <meta name="twitter:description" content="The Presentation API is developed to effectively display web content through large scale presentation devices such as projectors and connected TVs. The relevant multimedia devices include wired displays, such as HDMI, DVI, or similar, and wireless technologies like Miracast, Chromecast, DLNA, or AirPlay.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPresentation_API" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Presentation_API" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Presentation_API" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPresentation_API" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPresentation_API" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Presentation_API">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -374,6 +364,16 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/MashKao" title="View profile: MashKao">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="MashKao" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">MashKao</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rolfedh" data-src="../../../../../secure.gravatar.com/avatar/4d9e73208c9af39018924d0e67821a796c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rolfedh</noscript></a>
                 </li>
@@ -406,7 +406,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Presentation_concepts_and_usage" rel="internal">Presentation concepts and usage</a></li><li><a href="#Interfaces" rel="internal">Interfaces</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_Compatibility" rel="internal">Browser Compatibility</a>
+                  <li><a href="#Presentation_concepts_and_usage" rel="internal">Presentation concepts and usage</a></li><li><a href="#Interfaces" rel="internal">Interfaces</a></li><li><a href="#Example" rel="internal">Example</a><ol><li><a href="#Monitor_availability_of_presentation_displays" rel="internal">Monitor availability of presentation displays </a></li><li><a href="#Starting_a_new_presentation" rel="internal">Starting a new presentation </a></li><li><a href="#Reconnect_to_a_presentation" rel="internal">Reconnect to a presentation </a></li><li><a href="#Presentation_initiation_by_the_controlling_UA" rel="internal">Presentation initiation by the controlling UA </a></li><li><a href="#Monitor_connection's_state_and_exchange_data" rel="internal">Monitor connection's state and exchange data </a></li><li><a href="#Monitor_available_connection(s)_and_say_hello" rel="internal">Monitor available connection(s) and say hello </a></li><li><a href="#Passing_locale_information_with_a_message" rel="internal">Passing locale information with a message </a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_Compatibility" rel="internal">Browser Compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -427,12 +427,6 @@
 
               
                 
-                  <div class="warning warning-review">
-                    <p>
-                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
-                    </p>
-                  </div>
-                
                 
                 
               
@@ -442,33 +436,279 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="overheadIndicator nonStandard nonStandardHeader"> 
-      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> Non-standard</strong><br> 
-      This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> 
-      </div><p></p>
+                    <p>
 
-<h2 id="Presentation_concepts_and_usage">Presentation concepts and usage</h2>
+</p><h2 id="Presentation_concepts_and_usage">Presentation concepts and usage</h2>
 
-<p>TBD</p>
+<p>The Presentation API is developed to effectively display web content through large scale presentation devices such as projectors and connected TVs. The relevant multimedia devices include wired displays, such as HDMI, DVI, or similar, and wireless technologies like Miracast, Chromecast, DLNA, or AirPlay.</p>
+
+<p><img src="../../../../../mdn.mozillademos.org/files/14544/presentation%20mode%20illustration.png" style="height: 382px; width: 945px;" alt=""></p>
+
+<p>&nbsp;</p>
+
+<p>In general, a web page uses Presentation Controller API to specify the web content to be rendered on presentation device and initiate the presentation session. With Presentation Receiver API, the presenting web content obtains the session status. After providing both the controller page and the receiver one with a messaged-based channel, a Web developer can implement the interaction between these two pages.</p>
+
+<p>Depending on features of the presentation device, any controller- and receiver page can be rendered by the same user agent, or by separated user agents.</p>
+
+<ul>
+ <li>For 1-UA mode devices, both pages are loaded by the same user agent. However, rendering result of the receiver page will be sent to the presentation device via supported remote rendering protocol.</li>
+ <li>For 2-UAs mode device, the receiver page is loaded directly on the presentation device. Controlling user agent communicates with presentation device via supported presentation control protocol, to control the presentation session and to transmit the message between two pages.</li>
+</ul>
+
+<p>&nbsp;</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
- <dt><a href="Presentation.html" title="The Presentation interface of the&nbsp;Presentation API&nbsp;provides access to presentation connections."><code>Presentation</code></a></dt>
- <dd>A navigator interface that provides access to PresentationConnections.</dd>
- <dt><a href="PresentationConnection.html" title="The PresentationConnection interface of the&nbsp;Presentation API&nbsp;provides methods and properties for managing a single presentation."><code>PresentationConnection</code></a></dt>
- <dd>Provides methods and properties for managing a single presentation.</dd>
- <dt><a href="PresentationConnectionList.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>PresentationConnectionList</code></a></dt>
- <dd>Provides a list of active <a href="PresentationConnection.html" title="The PresentationConnection interface of the&nbsp;Presentation API&nbsp;provides methods and properties for managing a single presentation."><code>PresentationConnection</code></a> objects.</dd>
- <dt><a href="PresentationAvailability.html" title="The PresentationAvailability interface of the&nbsp;Presentation API&nbsp;provides information on the availability of a presentation display."><code>PresentationAvailability</code></a></dt>
- <dd>Indicates the availabiltiy of an external screen available to the user agent via an implementation specific connection.</dd>
- <dt><a href="PresentationReceiver.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>PresentationReceiver</code></a></dt>
- <dd>Provides access to and communication with a controlling browsing context.</dd>
- <dt><a href="PresentationRequest.html" title="The PresentationRequest interface of the&nbsp;Presentation API&nbsp;provides methods for starting a new presentation or joining an active one."><code>PresentationRequest</code></a></dt>
- <dd>Provides methods for starting a new presentation or joining an active one.</dd>
- <dt><a href="PresentationConnectionAvailableEvent.html" title="The PresentationConnectionAvailableEvent interface of the&nbsp;Presentation API&nbsp;is fired on a PresentationRequest&nbsp;when a connection associated with the object is created."><code>PresentationConnectionAvailableEvent</code></a></dt>
- <dd>Fired on a PresentationRequest when a connection associated with the object is created.</dd>
+ <dt><a title="The Presentation can be defined as two possible user agents in the context: Controlling user agent and Receiving user agent." href="Presentation.html"><code>Presentation</code></a></dt>
+ <dd>In controlling browsing context, the <code>Presentation</code> interface provides a mechanism to override the browser default behavior of launching presentation to external screen. In receiving browsing context, <code>Presentation</code> interface provides the access to the available presentation connections.</dd>
+ <dt><a title="A PresentationRequest object is used to initiate or reconnect to a presentation made by a controlling browsing context. The PresentationRequest object MUST be implemented in a controlling browsing context provided by a controlling user agent." href="PresentationRequest.html"><code>PresentationRequest</code></a></dt>
+ <dd>Being associated with a request, a <a href="PresentationRequest.html">PresentationRequest</a> object is used to initiate or reconnect to a presentation made by a controlling browsing context.</dd>
+ <dt><a title="A PresentationAvailability object is associated with available presentation displays and represents the presentation display availability for a presentation request. If the controlling user agent can monitor the list of available presentation displays in the background (without a pending request to start()), the PresentationAvailability object MUST be implemented in a controlling browsing context." href="PresentationAvailability.html"><code>PresentationAvailability</code></a></dt>
+ <dd>A <a href="PresentationAvailability.html">PresentationAvailability</a> object is associated with available presentation displays and represents the <dfn>presentation display availability</dfn> for a presentation request.</dd>
+ <dt><a title="The PresentationConnectionAvailableEvent interface of the&nbsp;Presentation API&nbsp;is fired on a PresentationRequest&nbsp;when a connection associated with the object is created." href="PresentationConnectionAvailableEvent.html"><code>PresentationConnectionAvailableEvent</code></a></dt>
+ <dd>The <code>PresentationConnectionAvailableEvent</code> is fired on a <a title="The PresentationRequest interface of the&nbsp;Presentation API&nbsp;provides methods for starting a new presentation or joining an active one." href="PresentationRequest.html"><code>PresentationRequest</code></a>&nbsp;when a connection associated with the object is created.</dd>
+ <dt><a title="The PresentationConnection interface of the&nbsp;Presentation API&nbsp;provides methods and properties for managing a single presentation. Each presentation connection is represented by a PresentationConnection object. Both the controlling user agent and receiving user agent MUST implement PresentationConnection." href="PresentationConnection.html"><code>PresentationConnection</code></a></dt>
+ <dd>Each presentation connection is represented by a <a href="PresentationConnection.html">PresentationConnection</a> object.</dd>
+ <dt><a title="The PresentationConnectionCloseEvent interface of the&nbsp;Presentation API&nbsp;is fired on a PresentationConnection&nbsp;when it is closed." href="PresentationConnectionCloseEvent.html"><code>PresentationConnectionCloseEvent</code></a></dt>
+ <dd>A <code>PresentationConnectionCloseEvent</code> is fired when a presentation connection enters a <code>closed</code> state.</dd>
+ <dt><a title="The PresentationReceiver interface allows a receiving browsing context to access the controlling browsing contexts and communicate with them. The PresentationReceiver interface MUST be implemented in a receiving browsing context provided by a receiving user agent." href="PresentationReceiver.html"><code>PresentationReceiver</code></a></dt>
+ <dd>The <a href="PresentationReceiver.html">PresentationReceiver</a> allows a receiving browsing context to access the controlling browsing contexts and communicate with them.</dd>
+ <dt><a title="PresentationConnectionList is the collection of incoming presentation connections." href="PresentationConnectionList.html"><code>PresentationConnectionList</code></a></dt>
+ <dd><code>PresentationConnectionList</code> represents the collection of non-terminated presentation connections. It is also a monitor for the event of new available presentation connection.</dd>
 </dl>
+
+<h2 id="Example">Example</h2>
+
+<p>Example codes below highlight the usage of main features of the Presentation API: <code>controller.html</code> implements the controller and <code>presentation.html</code> implements the presentation. Both pages are served from the domain <code>http://example.org</code> (<code>http://example.org/controller.html</code> and <code>http://example.org/presentation.html</code>). These examples assume that the controlling page is managing one presentation at a time. Please refer to the comments in the code examples for further details.</p>
+
+<section id="monitor-availability-of-presentation-displays-example">
+<h3 id="Monitor_availability_of_presentation_displays"><span>Monitor availability of presentation displays </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"presentBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Present<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-comment">// The Present button is visible if at least one presentation display is available</span>
+  <span class="hljs-keyword">var</span> presentBtn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"presentBtn"</span>);
+  <span class="hljs-comment">// It is also possible to use relative presentation URL e.g. "presentation.html"</span>
+  <span class="hljs-keyword">var</span> presUrls = [<span class="hljs-string">"http://example.com/presentation.html"</span>,
+                  <span class="hljs-string">"http://example.net/alternate.html"</span>];
+  <span class="hljs-comment">// show or hide present button depending on display availability</span>
+  <span class="hljs-keyword">var</span> handleAvailabilityChange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">available</span>) </span>{
+    presentBtn.style.display = available ? <span class="hljs-string">"inline"</span> : <span class="hljs-string">"none"</span>;
+  };
+  <span class="hljs-comment">// Promise is resolved as soon as the presentation display availability is</span>
+  <span class="hljs-comment">// known.</span>
+  <span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> PresentationRequest(presUrls);
+  request.getAvailability().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">availability</span>) </span>{
+    <span class="hljs-comment">// availability.value may be kept up-to-date by the controlling UA as long</span>
+    <span class="hljs-comment">// as the availability object is alive. It is advised for the web developers</span>
+    <span class="hljs-comment">// to discard the object as soon as it's not needed.</span>
+    handleAvailabilityChange(availability.value);
+    availability.onchange = <span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{ handleAvailabilityChange(<span class="hljs-keyword">this</span>.value); };
+  }).catch(<span class="hljs-function"><span class="hljs-keyword">function</span>() </span>{
+    <span class="hljs-comment">// Availability monitoring is not supported by the platform, so discovery of</span>
+    <span class="hljs-comment">// presentation displays will happen only after request.start() is called.</span>
+    <span class="hljs-comment">// Pretend the devices are available for simplicity; or, one could implement</span>
+    <span class="hljs-comment">// a third state for the button.</span>
+    handleAvailabilityChange(<span class="hljs-literal">true</span>);
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="starting-a-new-presentation-example">
+<h3 id="Starting_a_new_presentation"><span>Starting a new presentation </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  presentBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> () </span>{
+    <span class="hljs-comment">// Start new presentation.</span>
+    request.start()
+      <span class="hljs-comment">// The connection to the presentation will be passed to setConnection on</span>
+      <span class="hljs-comment">// success.</span>
+      .then(setConnection);
+      <span class="hljs-comment">// Otherwise, the user canceled the selection dialog or no screens were</span>
+      <span class="hljs-comment">// found.</span>
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="reconnect-to-a-presentation-example">
+<h3 id="Reconnect_to_a_presentation"><span>Reconnect to a presentation </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"reconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Reconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> reconnect = <span class="hljs-function"><span class="hljs-keyword">function</span> () </span>{
+    <span class="hljs-comment">// read presId from localStorage if exists</span>
+    <span class="hljs-keyword">var</span> presId = localStorage[<span class="hljs-string">"presId"</span>];
+    <span class="hljs-comment">// presId is mandatory when reconnecting to a presentation.</span>
+    <span class="hljs-keyword">if</span> (!!presId) {
+      request.reconnect(presId)
+        <span class="hljs-comment">// The new connection to the presentation will be passed to</span>
+        <span class="hljs-comment">// setConnection on success.</span>
+        .then(setConnection);
+        <span class="hljs-comment">// No connection found for presUrl and presId, or an error occurred.</span>
+    }
+  };
+  <span class="hljs-comment">// On navigation of the controller, reconnect automatically.</span>
+  <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">"DOMContentLoaded"</span>, reconnect);
+  <span class="hljs-comment">// Or allow manual reconnection.</span>
+  reconnectBtn.onclick = reconnect;
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="presentation-initiation-by-the-controlling-ua-example">
+<h3 id="Presentation_initiation_by_the_controlling_UA"><span>Presentation initiation by the controlling UA </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-comment">&lt;!-- Setting presentation.defaultRequest allows the page to specify the
+     PresentationRequest to use when the controlling UA initiates a
+     presentation. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  navigator.presentation.defaultRequest = <span class="hljs-keyword">new</span> PresentationRequest(presUrls);
+  navigator.presentation.defaultRequest.onconnectionavailable = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
+    setConnection(evt.connection);
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="monitor-connection-s-state-and-exchange-data-example">
+<h3 id="Monitor_connection's_state_and_exchange_data"><span>Monitor connection's state and exchange data </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"disconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Disconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"stopBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Stop<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"reconnectBtn"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: none;"</span>&gt;</span>Reconnect<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">let</span> connection;
+
+  <span class="hljs-comment">// The Disconnect and Stop buttons are visible if there is a connected presentation</span>
+  <span class="hljs-keyword">const</span> stopBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#stopBtn"</span>);
+  <span class="hljs-keyword">const</span> reconnectBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#reconnectBtn"</span>);
+  <span class="hljs-keyword">const</span> disconnectBtn = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#disconnectBtn"</span>);
+
+  stopBtn.onclick = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+    connection &amp;&amp; connection.terminate();
+  };
+
+  disconnectBtn.onclick = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+    connection &amp;&amp; connection.close();
+  };
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setConnection</span>(<span class="hljs-params">newConnection</span>) </span>{
+    <span class="hljs-comment">// Disconnect from existing presentation, if not attempting to reconnect</span>
+    <span class="hljs-keyword">if</span> (connection &amp;&amp; connection != newConnection &amp;&amp; connection.state != <span class="hljs-string">'closed'</span>) {
+      connection.onclosed = <span class="hljs-literal">undefined</span>;
+      connection.close();
+    }
+
+    <span class="hljs-comment">// Set the new connection and save the presentation ID</span>
+    connection = newConnection;
+    localStorage[<span class="hljs-string">"presId"</span>] = connection.id;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showConnectedUI</span>() </span>{
+      <span class="hljs-comment">// Allow the user to disconnect from or terminate the presentation</span>
+      stopBtn.style.display = <span class="hljs-string">"inline"</span>;
+      disconnectBtn.style.display = <span class="hljs-string">"inline"</span>;
+      reconnectBtn.style.display = <span class="hljs-string">"none"</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">showDisconnectedUI</span>() </span>{
+      disconnectBtn.style.display = <span class="hljs-string">"none"</span>;
+      stopBtn.style.display = <span class="hljs-string">"none"</span>;
+      reconnectBtn.style.display = localStorage[<span class="hljs-string">"presId"</span>] ? <span class="hljs-string">"inline"</span> : <span class="hljs-string">"none"</span>;
+    }
+
+    <span class="hljs-comment">// Monitor the connection state</span>
+    connection.onconnect = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+      showConnectedUI();
+
+      <span class="hljs-comment">// Register message handler</span>
+      connection.onmessage = <span class="hljs-function"><span class="hljs-params">message</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Received message: <span class="hljs-subst">${message.data}</span>`</span>);
+      };
+
+      <span class="hljs-comment">// Send initial message to presentation page</span>
+      connection.send(<span class="hljs-string">"Say hello"</span>);
+    };
+
+    connection.onclose = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+      connection = <span class="hljs-literal">null</span>;
+      showDisconnectedUI();
+    };
+
+    connection.onterminate = <span class="hljs-function"><span class="hljs-params">_</span> =&gt;</span> {
+      <span class="hljs-comment">// Remove presId from localStorage if exists</span>
+      <span class="hljs-keyword">delete</span> localStorage[<span class="hljs-string">"presId"</span>];
+      connection = <span class="hljs-literal">null</span>;
+      showDisconnectedUI();
+    };
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="monitor-available-connection-s-and-say-hello">
+<h3 id="Monitor_available_connection(s)_and_say_hello"><span>Monitor available connection(s) and say hello </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword">var</span> addConnection = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">connection</span>) </span>{
+    <span class="hljs-keyword">this</span>.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
+      <span class="hljs-keyword">if</span> (message.data == <span class="hljs-string">"say hello"</span>)
+        <span class="hljs-keyword">this</span>.send(<span class="hljs-string">"hello"</span>);
+    };
+  };
+
+  navigator.presentation.receiver.connectionList.then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">list</span>) </span>{
+    list.connections.map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">connection</span>) </span>{
+      addConnection(connection);
+    });
+    list.onconnectionavailable = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+      addConnection(evt.connection);
+    };
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<section id="passing-locale-information-with-a-message">
+<h3 id="Passing_locale_information_with_a_message"><span>Passing locale information with a message </span></h3>
+
+<div class="example">
+<pre class="brush: js"><span class="hljs-comment">&lt;!-- controller.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  connection.send(<span class="hljs-string">"{string: '你好，世界!', lang: 'zh-CN'}"</span>);
+  connection.send(<span class="hljs-string">"{string: 'こんにちは、世界!', lang: 'ja'}"</span>);
+  connection.send(<span class="hljs-string">"{string: '안녕하세요, 세계!', lang: 'ko'}"</span>);
+  connection.send(<span class="hljs-string">"{string: 'Hello, world!', lang: 'en-US'}"</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- presentation.html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+  connection.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
+    <span class="hljs-keyword">var</span> messageObj = <span class="hljs-built_in">JSON</span>.parse(message.data);
+    <span class="hljs-keyword">var</span> spanElt = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">"SPAN"</span>);
+    spanElt.lang = messageObj.lang;
+    spanElt.textContent = messageObj.string;
+    <span class="hljs-built_in">document</span>.appendChild(spanElt);
+  };
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre>
+</div>
+</section>
+
+<p>&nbsp;</p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -480,8 +720,8 @@
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="http://w3c.github.io/presentation-api/" class="external" lang="en" title="The 'Presentation API' specification" hreflang="en">Presentation API</a></td>
-   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td><a lang="en" title="The 'Presentation API' specification" class="external" href="http://w3c.github.io/presentation-api/" hreflang="en">Presentation API</a></td>
+   <td><span class="spec-CR">Candidate Recommendation</span></td>
    <td>Initial definition.</td>
   </tr>
  </tbody>
@@ -552,28 +792,13 @@
 </div>
 
 <p>&nbsp;</p>
+
+<h2 id="See_also">See also</h2>
+
+<p><a href="https://mediascape.github.io/presentation-api-polyfill/" class="external">Presentation API polyfill</a> contains a JavaScript polyfill of the <a href="https://w3c.github.io/presentation-api/" class="external">Presentation API</a> specification under standardisation within the <a href="https://www.w3.org/2014/secondscreen/" class="external">Second Screen Working Group</a> at W3C. The polyfill is mostly intended for exploring how the Presentation API may be implemented on top of different presentation mechanisms.</p>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPresentation_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Presentation+API+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Presentation API on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Presentation API on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPresentation_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Presentation_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Presentation API on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -603,6 +828,10 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/MashKao">MashKao</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>
@@ -613,11 +842,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-03-03T06:24:27-08:00">Mar 3, 2016, 6:24:27 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/MashKao">MashKao</a>,
+                      <time datetime="2016-12-29T01:53:44.915242-08:00">Dec 29, 2016, 1:53:44 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -634,7 +900,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="Presentation_API.html"><code>Presentation_API</code></a></strong></li></ol>
+    <ol><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="Presentation.html"><code>Presentation</code></a></li><li><a href="PresentationAvailability.html"><code>PresentationAvailability</code></a></li><li><a href="PresentationDeviceInfoManager.html"><code>PresentationDeviceInfoManager</code></a></li><li><a href="PresentationRequest.html"><code>PresentationRequest</code></a></li><li><a href="PresentationSession.html"><code>PresentationSession</code></a></li><li><a href="PresentationSessionConnectEvent.html"><code>PresentationSessionConnectEvent</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Navigator/presentation.html"><code>Navigator.presentation</code></a></li><li><a href="Navigator/mozPresentationDeviceInfo.html"><code>Navigator.mozPresentationDeviceInfo</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/change.html"><code>change</code></a></li><li><a href="../Events/sessionavailable.html"><code>sessionavailable</code></a></li><li><a href="../Events/sessionconnect.html"><code>sessionconnect</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -658,12 +924,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -671,9 +937,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -690,63 +955,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/Presentation_API$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Presentation_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:40:45 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Presentation_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:57:53 GMT -->
 </body></html>

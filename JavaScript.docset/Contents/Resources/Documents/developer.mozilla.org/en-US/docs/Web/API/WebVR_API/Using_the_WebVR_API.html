@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:40:33 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:48:39 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -80,6 +79,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -95,10 +101,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +154,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +171,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +188,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +211,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +235,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +249,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +289,16 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="WebVR APIの使い方">日本語</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API" title="Japanese">日本語 (ja)</a></bdi></li>
                 
               
 
@@ -319,7 +310,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +323,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -439,7 +431,13 @@
               <article id="wikiArticle">
                 
                   
-                    <p class="summary">The <a href="../WebVR_API.html">WebVR API</a> is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the <a href="https://developer.oculus.com/" class="external">Oculus Rift</a>, and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.</p>
+                    <p></p><div class="overheadIndicator draft"> 
+    <p><strong>Draft</strong><br> 
+    This page is not complete.</p> 
+    <em>The WebVR API documentation is currently being updated to cover the v1.0 spec, therefore some of this information will be out of date. Contact <a href="https://developer.mozilla.org/profiles/chrisdavidmills">chrisdavidmills</a> if you have any questions about this work.</em> 
+</div><p></p>
+
+<p class="summary">The <a href="../WebVR_API.html">WebVR API</a> is a fantastic addition to the web developer's toolkit, allowing access to virtual reality hardware such as the <a href="https://developer.oculus.com/" class="external">Oculus Rift</a>, and converting outputted movement and orientation data into view rendering updates on a web app. But how do you get started in developing VR apps for the Web? This article will guide you through the basics.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Currently WebVR is at an experimental stage (you can find the <a href="http://mozvr.github.io/webvr-spec/webvr.html" class="external">latest spec here</a>); it currently works best in Firefox Nightly/Developer Edition, with some aspects of it also working in Google Chrome. Read <a href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html" class="external-icon external">Bringing VR to Chrome</a> by Brandon Jones for more details on that.</p>
@@ -477,7 +475,7 @@
 
 <h3 id="Accessing_the_VR_devices">Accessing the VR devices</h3>
 
-<p>The first thing to do is get a programmatic reference to the VR hardware connected to your computer. This is done using <a href="../Navigator/getVRDevices.html" title="The getVRDevices() method returns a promise that resolves to an array of objects representing any VR devices that are connected to the computer and compatible with the browser."><code>Navigator.getVRDevices</code></a>, which returns a promise that resolves to an array of all the vr devices connected to your computer.</p>
+<p>The first thing to do is get a programmatic reference to the VR hardware connected to your computer. This is done using <a href="../Navigator/getVRDisplays.html" title="The getVRDevices() method returns a promise that resolves to an array of objects representing any VR devices that are connected to the computer and compatible with the browser."><code>Navigator.getVRDevices</code></a>, which returns a promise that resolves to an array of all the vr devices connected to your computer.</p>
 
 <p>There are two kinds of object that may be returned:</p>
 
@@ -510,7 +508,7 @@ navigator.getVRDevices().then(function(devices) {
   }
 });</pre>
 
-<p>Here we grab the first instance we find of an <a href="../HMDVRDevice.html" title="The HMDVRDevice interface of the WebVR API represents a head mounted display, providing access to information about each eye, and allowing us to modify the current field of view."><code>HMDVRDevice</code></a> and store it in the <code>gHMD</code> variable. Next, we grab the first instance we find of a <a href="../PositionSensorVRDevice.html" title="The PositionSensorVRDevice interface of the WebVR API represents VR hardware's position sensor. You can access information such as the current position and orientation of the sensor in relation to the head mounted display through the PositionSensorVRDevice.getState() method."><code>PositionSensorVRDevice</code></a> and store it in the <code>gPositionSensor</code> variable, but only if its <a href="../VRDevice/hardWareUnitId-2.html" title="The hardwareUnitId read-only property of the VRDevice interface returns the distinct hardware ID for the overall hardware unit that this VRDevice is a part of. All devices that are part of the same physical piece of hardware will have the same hardwareUnitId."><code>VRDevice.hardWareUnitId</code></a> property matches that of the <code>gHMD</code> object. Separate devices that are part of the same overall hardware unit will share a hardware unit ID — this is how you check that you've got references to two matching devices.</p>
+<p>Here we grab the first instance we find of an <a href="../HMDVRDevice.html" title="The HMDVRDevice interface of the WebVR API represents a head mounted display, providing access to information about each eye, and allowing us to modify the current field of view."><code>HMDVRDevice</code></a> and store it in the <code>gHMD</code> variable. Next, we grab the first instance we find of a <a href="../PositionSensorVRDevice.html" title="The PositionSensorVRDevice interface of the WebVR API represents VR hardware's position sensor. You can access information such as the current position and orientation of the sensor in relation to the head mounted display through the PositionSensorVRDevice.getState() method."><code>PositionSensorVRDevice</code></a> and store it in the <code>gPositionSensor</code> variable, but only if its <a href="../VRDisplay/hardwareUnitId.html" title="The hardwareUnitId read-only property of the VRDevice interface returns the distinct hardware ID for the overall hardware unit that this VRDevice is a part of. All devices that are part of the same physical piece of hardware will have the same hardwareUnitId."><code>VRDevice.hardWareUnitId</code></a> property matches that of the <code>gHMD</code> object. Separate devices that are part of the same overall hardware unit will share a hardware unit ID — this is how you check that you've got references to two matching devices.</p>
 
 <h3 id="Initialising_the_app">Initialising the app</h3>
 
@@ -575,7 +573,7 @@ image.onload = draw;</pre>
 <pre class="brush: js">function setView() {
   var posState = gPositionSensor.getState();</pre>
 
-<p>First we call <a href="../PositionSensorVRDevice/getState.html" title="The getState() method of the PositionSensorVRDevice interface returns the current state of the position sensor for the current frame (e.g. within the current window.requestAnimationFrame callback) or for the previous frame, contained with a VRPositionState object. This is the method you'd normally want to use, versus PositionSensorVRDevice.getImmediateState."><code>PositionSensorVRDevice.getState</code></a> on the reference to our position sensor. This method returns everything you might want to know about the current state of the HMD — accessible through a <a href="../VRPositionState.html" title="The VRPositionState interface of the WebVR API represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPositionState</code></a> object — including its position, orientation, and more advanced information such as linear and angular velocity/acceleration.</p>
+<p>First we call <a href="../PositionSensorVRDevice/getState.html" title="The getState() method of the PositionSensorVRDevice interface returns the current state of the position sensor for the current frame (e.g. within the current window.requestAnimationFrame callback) or for the previous frame, contained with a VRPositionState object. This is the method you'd normally want to use, versus PositionSensorVRDevice.getImmediateState."><code>PositionSensorVRDevice.getState</code></a> on the reference to our position sensor. This method returns everything you might want to know about the current state of the HMD — accessible through a <a href="../VRPositionState.png" title="The VRPositionState interface of the WebVR API represents the position state at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"><code>VRPositionState</code></a> object — including its position, orientation, and more advanced information such as linear and angular velocity/acceleration.</p>
 
 <pre class="brush: js">  if(posState.hasPosition) {
     posPara.textContent = 'Position: x' + roundToTwo(posState.position.x) + " y"
@@ -590,11 +588,11 @@ image.onload = draw;</pre>
     }
   }</pre>
 
-<p>In the next part, we first check to make sure valid position information is available for the HMD using <a href="../VRPositionState/hasPosition.html" title="The hasPosition read-only property of the VRPositionState interface returns a boolean indicating whether the VRPositionState.position property is valid (i.e. if the hardware is currently registering a valid position). If it is false, the position property will return null."><code>VRPositionState.hasPosition</code></a>, so that we don't return an error and stop the app working (if the HMD is switched off, or not pointing at the position sensor.)</p>
+<p>In the next part, we first check to make sure valid position information is available for the HMD using <a href="../VRPose/hasPosition.html" title="The hasPosition read-only property of the VRPositionState interface returns a boolean indicating whether the VRPositionState.position property is valid (i.e. if the hardware is currently registering a valid position). If it is false, the position property will return null."><code>VRPositionState.hasPosition</code></a>, so that we don't return an error and stop the app working (if the HMD is switched off, or not pointing at the position sensor.)</p>
 
 <p>Then we output the current position information to a paragraph in the app UI for information purposes (rounded to two decimal places using a custom function to make it more readable.)</p>
 
-<p>Last up, we set our <code>xPos</code>, <code>yPos</code>, and <code>zPos</code> variables relative to the position information stored in <a href="../VRPositionState/position.html" title="The position read-only property of the VRPositionState interface returns the current position of the sensor relative to the head mounted display, as a 3D vector (DOMPoint value.)"><code>VRPositionState.position</code></a>. You'll notice that we have used an <code>if ... else</code> block to make sure the <code>zPos</code> value stays at 0.01 or above — the app was throwing an error if it went below 0.</p>
+<p>Last up, we set our <code>xPos</code>, <code>yPos</code>, and <code>zPos</code> variables relative to the position information stored in <a href="../VRPose/position.html" title="The position read-only property of the VRPositionState interface returns the current position of the sensor relative to the head mounted display, as a 3D vector (DOMPoint value.)"><code>VRPositionState.position</code></a>. You'll notice that we have used an <code>if ... else</code> block to make sure the <code>zPos</code> value stays at 0.01 or above — the app was throwing an error if it went below 0.</p>
 
 <pre class="brush: js">  if(posState.hasOrientation) {
     orientPara.textContent = 'Orientation: x' + roundToTwo(posState.orientation.x) + " y"
@@ -606,12 +604,12 @@ image.onload = draw;</pre>
 
   }</pre>
 
-<p>Next, we use a similar process to update the scene according to the HMD's orientation — check that valid orientation data is available using <a href="../VRPositionState/hasOrientation.html" title="The hasOrientation read-only property of the VRPositionState interface returns a boolean indicating whether the VRPositionState.orientation property is valid (i.e. if the hardware is currently registering a valid orientation). If it is false, the orientation property will return null."><code>VRPositionState.hasOrientation</code></a>, display orientation data in the UI for informational purposes, and then set the <code>xOrient</code>, <code>yOrient</code>, and <code>zOrient</code> values relative to the orientation information stored in <a href="../VRPositionState/orientation.html" title="The orientation read-only property of the VRPositionState interface returns the current orientation of the sensor relative to the head mounted display, as a quarternion value."><code>VRPositionState.orientation</code></a>.</p>
+<p>Next, we use a similar process to update the scene according to the HMD's orientation — check that valid orientation data is available using <a href="../VRPose/hasOrientation.html" title="The hasOrientation read-only property of the VRPositionState interface returns a boolean indicating whether the VRPositionState.orientation property is valid (i.e. if the hardware is currently registering a valid orientation). If it is false, the orientation property will return null."><code>VRPositionState.hasOrientation</code></a>, display orientation data in the UI for informational purposes, and then set the <code>xOrient</code>, <code>yOrient</code>, and <code>zOrient</code> values relative to the orientation information stored in <a href="../VRPose/orientation.html" title="The orientation read-only property of the VRPositionState interface returns the current orientation of the sensor relative to the head mounted display, as a quarternion value."><code>VRPositionState.orientation</code></a>.</p>
 
 <pre>  timePara.textContent = 'Timestamp: ' + Math.floor(posState.timeStamp);
 }</pre>
 
-<p>Finally, we output the current timeStamp stored in <a href="../VRPositionState/timeStamp.html" title="The timeStamp read-only property of the VRPositionState interface returns the current time stamp of the system — a monotonically increasing value representing the time since the current app was started."><code>VRPositionState.timeStamp</code></a> to the UI for information. This value can be useful for determining if position data has been updated, and what order updates have occured in.</p>
+<p>Finally, we output the current timeStamp stored in <a href="../VRPose/timeStamp.html" title="The timeStamp read-only property of the VRPositionState interface returns the current time stamp of the system — a monotonically increasing value representing the time since the current app was started."><code>VRPositionState.timeStamp</code></a> to the UI for information. This value can be useful for determining if position data has been updated, and what order updates have occured in.</p>
 
 <h3 id="Updating_the_scene">Updating the scene</h3>
 
@@ -710,13 +708,13 @@ image.onload = draw;</pre>
 
 <p>The other thing to calibrate is the field of view (FOV) of your headset — how much of the scene can be seen in the up, right, down and left directions. This information can be retrieved for each eye separately using the <a href="../HMDVRDevice/getEyeParameters.html" title="The getEyeParameters() method of the HMDVRDevice interface returns current parameters for the eye specified as its argument (&quot;left&quot; or &quot;right&quot;) — stored in a VREyeParameters object."><code>HMDVRDevice.getEyeParameters</code></a> method, which returns parameters for each eye separately (you need to call it twice, once with a parameter of <code>left</code>, and once with a parameter of <code>right</code>.) This returns a <a href="../VREyeParameters.html" title="The VREyeParameters interface of the WebVR API represents all the information required to correctly render a scene for a given eye, including field of view information."><code>VREyeParameters</code></a> object for each eye.</p>
 
-<p>As an example, you could retrieve the current field of view for an eye using <a href="../VREyeParameters/currentFieldOfView.html" title="The currentFieldOfView read-only property of the VREyeParameters interface describes the current field of view for the eye, as specified using HMDVRDevice.setFieldOfView. It defaults to VREyeParameters.recommendedFieldOfView."><code>VREyeParameters.currentFieldOfView</code></a>. This returns a <a href="../VRFieldOfView.html" title="The VRFieldOfView interface of the WebVR API represents a field of view defined by 4 different degree values describing the view from a center point."><code>VRFieldOfView</code></a> object containing four properties:</p>
+<p>As an example, you could retrieve the current field of view for an eye using <a href="../VREyeParameters/fieldOfView.html" title="The currentFieldOfView read-only property of the VREyeParameters interface describes the current field of view for the eye, as specified using HMDVRDevice.setFieldOfView. It defaults to VREyeParameters.recommendedFieldOfView."><code>VREyeParameters.currentFieldOfView</code></a>. This returns a <a href="../VRFieldOfView.html" title="The VRFieldOfView interface of the WebVR API represents a field of view defined by 4 different degree values describing the view from a center point."><code>VRFieldOfView</code></a> object containing four properties:</p>
 
 <ul>
- <li><a href="../VRFieldOfViewReadOnly/upDegrees.html" title="The upDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees upwards that the field of view extends in."><code>upDegrees</code></a>: The number of degrees upwards that the field of view extends in.</li>
- <li><a href="../VRFieldOfViewReadOnly/rightDegrees.html" title="The rightDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees to the right that the field of view extends in."><code>rightDegrees</code></a>: The number of degrees to the right that the field of view extends in.</li>
- <li><a href="../VRFieldOfViewReadOnly/downDegrees.html" title="The downDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees downwards that the field of view extends in."><code>downDegrees</code></a>: The number of degrees downwards that the field of view extends in.</li>
- <li><a href="../VRFieldOfViewReadOnly/leftDegrees.html" title="The leftDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees to the left that the field of view extends in."><code>leftDegrees</code></a>: The number of degrees to the left that the field of view extends in.</li>
+ <li><a href="../VRFieldOfView/upDegrees.html" title="The upDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees upwards that the field of view extends in."><code>upDegrees</code></a>: The number of degrees upwards that the field of view extends in.</li>
+ <li><a href="../VRFieldOfView/rightDegrees.html" title="The rightDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees to the right that the field of view extends in."><code>rightDegrees</code></a>: The number of degrees to the right that the field of view extends in.</li>
+ <li><a href="../VRFieldOfView/downDegrees.html" title="The downDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees downwards that the field of view extends in."><code>downDegrees</code></a>: The number of degrees downwards that the field of view extends in.</li>
+ <li><a href="../VRFieldOfView/leftDegrees.html" title="The leftDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of degrees to the left that the field of view extends in."><code>leftDegrees</code></a>: The number of degrees to the left that the field of view extends in.</li>
 </ul>
 
 <p>The field of view created is a pyramid shape, the apex of which is emanating from the eye.</p>
@@ -733,25 +731,6 @@ image.onload = draw;</pre>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Using+the+WebVR+API+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Using the WebVR API on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Using the WebVR API on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebVR_API%2FUsing_the_WebVR_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Using the WebVR API on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -794,10 +773,47 @@ image.onload = draw;</pre>
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
                       <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>,
-                      <time datetime="2015-12-04T01:54:24-08:00">Dec 4, 2015, 1:54:24 AM</time>
+                      <time datetime="2016-05-10T10:44:11-07:00">May 10, 2016, 10:44:11 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -815,12 +831,12 @@ image.onload = draw;</pre>
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -828,9 +844,8 @@ image.onload = draw;</pre>
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -839,12 +854,12 @@ image.onload = draw;</pre>
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/WebVR_API/Using_the_WebVR_API">
+            日本語 (ja)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -861,63 +876,38 @@ image.onload = draw;</pre>
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:40:34 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:48:42 GMT -->
 </body></html>

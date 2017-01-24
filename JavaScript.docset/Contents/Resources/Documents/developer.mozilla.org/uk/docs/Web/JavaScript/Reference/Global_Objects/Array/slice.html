@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:55:58 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:05:48 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/uk/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/uk/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -74,6 +73,10 @@
     
       <link rel="alternate" hreflang="ja" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">
     
+      <link rel="alternate" hreflang="ko" href="../../../../../../../ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">
+    
+      <link rel="alternate" hreflang="nl" href="../../../../../../../nl/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">
+    
       <link rel="alternate" hreflang="pl" href="../../../../../../../pl/docs/Web/JavaScript/Referencje/Obiekty/Array/slice.html" title="Array.prototype.slice()">
     
       <link rel="alternate" hreflang="pt-BR" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">
@@ -90,10 +93,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
   <meta name="twitter:title" content="Array.prototype.slice()">
   
-  <meta property="og:description" content="The slice() method returns a shallow copy of a portion of an array into a new array object.">
-  <meta name="description" content="The slice() method returns a shallow copy of a portion of an array into a new array object.">
-  <meta name="twitter:description" content="The slice() method returns a shallow copy of a portion of an array into a new array object.">
+  <meta property="og:description" content="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.">
+  <meta name="description" content="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.">
+  <meta name="twitter:description" content="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -111,10 +121,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -164,8 +174,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -181,9 +191,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Перейти до основного вмісту</a></li>
     <li><a id="skip-language" href="#language">Вибір мови</a></li>
-    
-      <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
-    
+    <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
   </ul>
 
   <!-- Header -->
@@ -200,34 +208,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Увійти
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2Fslice" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/uk/users/signin" class="login-link launch-persona-login" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2Fslice" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2Fslice" class="login-link js-login-link" data-service="GitHub">
+        Увійти
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-платформа<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-технології<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -237,18 +231,20 @@
               <li><a href="https://developer.mozilla.org/uk/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide/Graphics">Графіка</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/HTTP">HTTP</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/API">API / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Web/Apps">Застосунки</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">Довідники та посібники</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення Web</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення веб-розробки</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Tutorials">Посібники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Reference">Довідники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide">Посібники розробників</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Accessibility">Доступність</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Games">Розробка ігор</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web">...більше документації</a></li>
             </ul>
           </div>
@@ -259,10 +255,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons">Додатки</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -276,8 +269,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/MDN/Community">Приєднатися до спільноти MDN</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -314,30 +307,38 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/slice.html" title="Array.prototype.slice()">Català</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../de/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">Deutsch</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Англійська (США)">English (US) (en-US)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice.html" title="Array.prototype.slice()">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice.html" title="Array.prototype.slice()">Français</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/slice.html" title="Каталонська">Català (ca)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../de/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Німецька">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../pl/docs/Web/JavaScript/Referencje/Obiekty/Array/slice.html" title="Array.prototype.slice()">Polski</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice.html" title="Іспанська">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">Português (do&nbsp;Brasil)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice.html" title="Французька">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Японська">日本語 (ja)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Array.prototype.slice()">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Корейська">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../nl/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Голландська">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../pl/docs/Web/JavaScript/Referencje/Obiekty/Array/slice.html" title="Польська">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Португальська (Бразилія)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Російська">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html" title="Китайська (спрощене письмо)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -349,7 +350,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice$translate?tolocale=uk" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Редагувати<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -360,7 +363,6 @@
             <div class="title">Додатково</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice$history" rel="nofollow, noindex">Історія</a></li>
-                
                 
                 
                 
@@ -416,31 +418,76 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/uk/profiles/dbooth-boston" title="Переглянути профіль: dbooth-boston">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="dbooth-boston" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">dbooth-boston</noscript></a>
-                </li>
-            
-                <li class="shown">
                 <a href="https://developer.mozilla.org/uk/profiles/fscholz" title="Переглянути профіль: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/bdurk" title="Переглянути профіль: bdurk">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="bdurk" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">bdurk</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/manavm1990" title="Переглянути профіль: manavm1990">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="manavm1990" data-src="../../../../../../../../secure.gravatar.com/avatar/814f14350de9f7f66ab664489e483d7f6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">manavm1990</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/Dan-Dascalescu" title="Переглянути профіль: Dan-Dascalescu">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Dan-Dascalescu" data-src="../../../../../../../../secure.gravatar.com/avatar/fb5e3a539b1e23c54b080b6d12b411c26c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Dan-Dascalescu</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/ibratoev" title="Переглянути профіль: ibratoev">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ibratoev" data-src="../../../../../../../../secure.gravatar.com/avatar/e5705f8b209ebf7ff873e3083e28edb26c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ibratoev</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/rajinder-yadav" title="Переглянути профіль: rajinder-yadav">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rajinder-yadav" data-src="../../../../../../../../secure.gravatar.com/avatar/7cfc41f02252e18948c7f5a742368e8d6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rajinder-yadav</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/uk/profiles/eduardoboucas" title="Переглянути профіль: eduardoboucas">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="eduardoboucas" data-src="../../../../../../../../secure.gravatar.com/avatar/4f8072e22fae3cd98b876df304886bed6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">eduardoboucas</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/uk/profiles/realalexhomer" title="Переглянути профіль: realalexhomer">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="realalexhomer" data-src="../../../../../../../../secure.gravatar.com/avatar/3a54d6f6c58963e2860b7233e7c573726c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">realalexhomer</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/uk/profiles/RdV" title="Переглянути профіль: RdV">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="RdV" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">RdV</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/uk/profiles/DmitryKorlas" title="Переглянути профіль: DmitryKorlas">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="DmitryKorlas" data-src="../../../../../../../../secure.gravatar.com/avatar/5165cad1450af261875c990ee842c80d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">DmitryKorlas</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/uk/profiles/dbooth-boston" title="Переглянути профіль: dbooth-boston">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="dbooth-boston" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">dbooth-boston</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/LJHarb" title="Переглянути профіль: LJHarb">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="LJHarb" data-src="../../../../../../../../secure.gravatar.com/avatar/27f5eb444e2d61659e9fde1485dbab976c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">LJHarb</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/SphinxKnight" title="Переглянути профіль: SphinxKnight">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="SphinxKnight" data-src="../../../../../../../../secure.gravatar.com/avatar/8fb358ea9b7af22f5021a29e122ea0696c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">SphinxKnight</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/Equal" title="Переглянути профіль: Equal">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Equal" data-src="../../../../../../../../secure.gravatar.com/avatar/d9fde8d3d0cabcd893721788e40b98246c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Equal</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/maiochi" title="Переглянути профіль: maiochi">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="maiochi" data-src="../../../../../../../../secure.gravatar.com/avatar/1f45d4e8d7f56f8e49748dd3bd173ab66c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">maiochi</noscript></a>
                 </li>
@@ -561,8 +608,8 @@
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/uk/profiles/web@ramiro.org" title="Переглянути профіль: web@ramiro.org">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="web@ramiro.org" data-src="../../../../../../../../secure.gravatar.com/avatar/027f15dc07303806797b4558632410056c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">web@ramiro.org</noscript></a>
+                <a href="https://developer.mozilla.org/uk/profiles/rg" title="Переглянути профіль: rg">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rg" data-src="../../../../../../../../secure.gravatar.com/avatar/027f15dc07303806797b4558632410056c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rg</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -653,7 +700,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">У цій статті<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a></li><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Description" rel="internal">Description</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Return_a_portion_of_an_existing_array" rel="internal">Return a portion of an existing array</a></li><li><a href="#Using_slice" rel="internal">Using <code>slice</code></a></li></ol></li><li><a href="#Array-like_objects" rel="internal">Array-like objects</a></li><li><a href="#Streamlining_cross-browser_behavior" rel="internal">Streamlining cross-browser behavior</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Description" rel="internal">Description</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Return_a_portion_of_an_existing_array" rel="internal">Return a portion of an existing array</a></li><li><a href="#Using_slice" rel="internal">Using <code>slice</code></a></li></ol></li><li><a href="#Array-like_objects" rel="internal">Array-like objects</a></li><li><a href="#Streamlining_cross-browser_behavior" rel="internal">Streamlining cross-browser behavior</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -679,34 +726,48 @@
               
               
                 <div id="doc-pending-fallback" class="warning">
-                  <p><bdi>Наші волонтери ще не переклали цю статтю мовою: <bdi>Українська</bdi>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice$translate?tolocale=uk">Приєднайтесь до нас і допоможіть зробити це!</a></bdi></p>
+                  <p><bdi>Our volunteers haven't translated this article into <bdi>Українська</bdi> yet. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice$translate?tolocale=uk">Join us and help get the job done!</a><br> You can also read the article in <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice.html">English (US)</a>.</bdi></p>
                 </div>
               
 
               <!-- just the article content -->
               <article id="wikiArticle">
                 
-                  <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+                  <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
 
-<p>The <code><strong>slice()</strong></code> method returns a shallow copy of a portion of an array into a new array object.</p>
+<p>The <code><strong>slice()</strong></code> method returns a shallow copy of a portion of an array into a new array object selected from <code>begin</code> to <code>end</code> (<code>end</code> not included). The original array will not be modified.</p>
+
+<pre class="brush: js">var a = ["zero", "one", "two", "three"];
+var sliced = a.slice(1,3);
+
+console.log(a);      // [ "zero", "one", "two", "three" ]
+console.log(sliced); // [ "one", "two" ]
+</pre>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>arr</var>.slice([<var>begin</var>[, <var>end</var>]])</code></pre>
+<pre class="syntaxbox"><var>arr</var>.slice()
+<var>arr</var>.slice(<var>begin</var>)
+<var>arr</var>.slice(<var>begin</var>, <var>end</var>)
+</pre>
 
-<h2 id="Parameters">Parameters</h2>
+<h3 id="Parameters">Parameters</h3>
 
 <dl>
- <dt><code>begin</code></dt>
+ <dt><code>begin</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
  <dd>Zero-based index at which to begin extraction.</dd>
  <dd>As a negative index, <code>begin</code> indicates an offset from the end of the sequence. <code>slice(-2)</code> extracts the last two elements in the sequence.</dd>
  <dd>If <code>begin</code> is undefined, <code>slice</code> begins from index <code>0</code>.</dd>
- <dt><code>end</code></dt>
+ <dt><code>end</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
  <dd>Zero-based index at which to end extraction. <code>slice</code> extracts up to but not including <code>end</code>.</dd>
  <dd><code>slice(1,4)</code> extracts the second element through the fourth element (elements indexed 1, 2, and 3).</dd>
  <dd>As a negative index, <code>end</code> indicates an offset from the end of the sequence. <code>slice(2,-1)</code> extracts the third element through the second-to-last element in the sequence.</dd>
  <dd>If <code>end</code> is omitted, <code>slice</code> extracts through the end of the sequence (<code>arr.length</code>)<code>.</code></dd>
 </dl>
+
+<h3 id="Return_value">Return value</h3>
+
+<p>A new array containing the extracted elements.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -714,7 +775,7 @@
 
 <ul>
  <li>For object references (and not the actual object), <code>slice</code> copies object references into the new array. Both the original and new array refer to the same object. If a referenced object changes, the changes are visible to both the new and original arrays.</li>
- <li>For strings and numbers (not <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/String.html" title="The String global object is a constructor for strings, or a sequence of characters."><code>String</code></a> and <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Number.html" title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor."><code>Number</code></a> objects), <code>slice</code> copies strings and numbers into the new array. Changes to the string or number in one array does not affect the other array.</li>
+ <li>For strings,&nbsp;numbers and booleans (not <a title="The String global object is a constructor for strings, or a sequence of characters." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/String.html"><code>String</code></a>,&nbsp;<a title="The Number JavaScript object is a wrapper object allowing you to work with numerical values. A Number object is created using the Number() constructor." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Number.html"><code>Number</code></a> and <a title="The Boolean object is an object wrapper for a boolean value." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean.html"><code>Boolean</code></a>&nbsp;objects), <code>slice</code> copies the&nbsp;values into the&nbsp;new array. Changes to the string,&nbsp;number or boolean in one array does not affect the other array.</li>
 </ul>
 
 <p>If a new element is added to either array, the other array is not affected.</p>
@@ -726,6 +787,7 @@
 <pre class="brush: js">var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
 
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
 // citrus contains ['Orange','Lemon']
 </pre>
 
@@ -768,7 +830,7 @@ newCar[0].color = purple
 
 <h2 id="Array-like_objects">Array-like objects</h2>
 
-<p><code>slice</code> method can also be called to convert Array-like objects / collections to a new Array. You just bind the method to the object. The <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Functions/arguments.html" title="The arguments object is an Array-like object corresponding to the arguments passed to a function."><code>arguments</code></a> inside a function is an example of an 'array-like object'.</p>
+<p><code>slice</code> method can also be called to convert Array-like objects / collections to a new Array. You just bind the method to the object. The <a title="The arguments object is an Array-like object corresponding to the arguments passed to a function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Functions/arguments.html"><code>arguments</code></a> inside a function is an example of an 'array-like object'.</p>
 
 <pre class="brush: js">function list() {
   return Array.prototype.slice.call(arguments);
@@ -777,7 +839,7 @@ newCar[0].color = purple
 var list1 = list(1, 2, 3); // [1, 2, 3]
 </pre>
 
-<p>Binding can be done with the .<code>call</code> function of <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html" title="The Function.prototype property represents the Function prototype object."><code>Function.prototype</code></a> and it can also be reduced using <code>[].slice.call(arguments)</code> instead of <code>Array.prototype.slice.call</code>. Anyway, it can be simplified using <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html" title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."><code>bind</code></a>.</p>
+<p>Binding can be done with the .<code>call</code> function of <a title="The Function.prototype property represents the Function prototype object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html"><code>Function.prototype</code></a> and it can also be reduced using <code>[].slice.call(arguments)</code> instead of <code>Array.prototype.slice.call</code>. Anyway, it can be simplified using <a title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html"><code>bind</code></a>.</p>
 
 <pre class="brush: js">var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
@@ -791,7 +853,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 <h2 id="Streamlining_cross-browser_behavior">Streamlining cross-browser behavior</h2>
 
-<p>Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by <code>Array.prototype.slice</code> and IE &lt; 9 does not do so, versions of IE starting with version 9 do allow this, “shimming” it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently <em>de facto</em> standard behavior. (The shim also fixes IE to work with the second argument of <code>slice()</code> being an explicit <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/null.html" title="The value null&nbsp;represents the intentional absence of any object value. It is one of JavaScript's primitive values."><code>null</code></a>/<a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined.html" title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a> value as earlier versions of IE also did not allow but all modern browsers, including IE &gt;= 9, now do.)</p>
+<p>Although host objects (such as DOM objects) are not required by spec to follow the Mozilla behavior when converted by <code>Array.prototype.slice</code> and IE &lt; 9 does not do so, versions of IE starting with version 9 do allow this, “shimming” it can allow reliable cross-browser behavior. As long as other modern browsers continue to support this ability, as currently do IE, Mozilla, Chrome, Safari, and Opera, developers reading (DOM-supporting) slice code relying on this shim will not be misled by the semantics; they can safely rely on the semantics to provide the now apparently <em>de facto</em> standard behavior. (The shim also fixes IE to work with the second argument of <code>slice()</code> being an explicit <a title="The value null&nbsp;represents the intentional absence of any object value. It is one of JavaScript's primitive values." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/null.html"><code>null</code></a>/<a title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined.html"><code>undefined</code></a> value as earlier versions of IE also did not allow but all modern browsers, including IE &gt;= 9, now do.)</p>
 
 <pre class="brush: js">/**
  * Shim for "fixing" IE's lack of support (IE &lt; 9) for applying slice
@@ -869,22 +931,22 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262, 3rd edition, December 1999.pdf" class="external" lang="en" title="The 'ECMAScript 3rd Edition (ECMA-262)' specification" hreflang="en">ECMAScript 3rd Edition (ECMA-262)</a></td>
+   <td><a lang="en" title="The 'ECMAScript 3rd Edition (ECMA-262)' specification" class="external" href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262, 3rd edition, December 1999.pdf" hreflang="en">ECMAScript 3rd Edition (ECMA-262)</a></td>
    <td><span class="spec-Standard">Standard</span></td>
    <td>Initial definition. Implemented in JavaScript 1.2.</td>
   </tr>
   <tr>
-   <td><a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.10" class="external" lang="en" hreflang="en">ECMAScript 5.1 (ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.4.4.10" class="external">ECMAScript 5.1 (ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
    <td><span class="spec-Standard">Standard</span></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
-   <td><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.slice" class="external" lang="en" hreflang="en">ECMAScript 2015 (6th Edition, ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="http://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.slice" class="external">ECMAScript 2015 (6th Edition, ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
    <td><span class="spec-Standard">Standard</span></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
-   <td><a href="https://tc39.github.io/ecma262/#sec-array.prototype.slice" class="external" lang="en" hreflang="en">ECMAScript 2017 Draft (ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://tc39.github.io/ecma262/#sec-array.prototype.slice" class="external">ECMAScript 2017 Draft (ECMA-262)<br><small lang="en-US">The definition of 'Array.prototype.slice' in that specification.</small></a></td>
    <td><span class="spec-Draft">Draft</span></td>
    <td>&nbsp;</td>
   </tr>
@@ -952,30 +1014,12 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html" title="The call() method calls a function with a given this value and arguments provided individually."><code>Function.prototype.call()</code></a></li>
- <li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html" title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."><code>Function.prototype.bind()</code></a></li>
+ <li><a title="The splice() method changes the content of an array by removing existing elements and/or adding new elements." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice.html"><code>Array.prototype.splice()</code></a></li>
+ <li><a title="The call() method calls a function with a given this value and arguments provided individually." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html"><code>Function.prototype.call()</code></a></li>
+ <li><a title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html"><code>Function.prototype.bind()</code></a></li>
 </ul>
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Поширити:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2Fslice%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=%D0%AF+%D0%B4%D1%96%D0%B7%D0%BD%D0%B0%D0%B2%D1%81%D1%8F%28%D0%BB%D0%B0%D1%81%D1%8F%29+%D0%BF%D1%80%D0%BE+Array.prototype.slice%28%29+%D0%BD%D0%B0+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="Я дізнався(лася) про Array.prototype.slice() на MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="Я дізнався(лася) про Array.prototype.slice() на MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FArray%2Fslice%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="Я дізнався(лася) про Array.prototype.slice() на MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google +</a></li>
-        </ul>
-    </div>
 
               
 
@@ -995,8 +1039,6 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
       
         <li><a href="https://developer.mozilla.org/uk/docs/tag/Method">Method</a></li>
       
-        <li><a href="https://developer.mozilla.org/uk/docs/tag/prototype">prototype</a></li>
-      
         <li><a href="https://developer.mozilla.org/uk/docs/tag/Prototype">Prototype</a></li>
       
     </ul>
@@ -1005,9 +1047,27 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Зробили внесок у цю сторінку:</strong> 
-        <a href="https://developer.mozilla.org/uk/profiles/dbooth-boston">dbooth-boston</a>, 
-    
         <a href="https://developer.mozilla.org/uk/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/bdurk">bdurk</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/manavm1990">manavm1990</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/Dan-Dascalescu">Dan-Dascalescu</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/ibratoev">ibratoev</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/rajinder-yadav">rajinder-yadav</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/eduardoboucas">eduardoboucas</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/realalexhomer">realalexhomer</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/RdV">RdV</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/DmitryKorlas">DmitryKorlas</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/dbooth-boston">dbooth-boston</a>, 
     
         <a href="https://developer.mozilla.org/uk/profiles/LJHarb">LJHarb</a>, 
     
@@ -1063,7 +1123,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
     
         <a href="https://developer.mozilla.org/uk/profiles/Mook">Mook</a>, 
     
-        <a href="https://developer.mozilla.org/uk/profiles/web@ramiro.org">web@ramiro.org</a>, 
+        <a href="https://developer.mozilla.org/uk/profiles/rg">rg</a>, 
     
         <a href="https://developer.mozilla.org/uk/profiles/elabeca">elabeca</a>, 
     
@@ -1097,11 +1157,50 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Востаннє оновлена:</strong>
-                      <a href="https://developer.mozilla.org/uk/profiles/dbooth-boston">dbooth-boston</a>,
-                      <time datetime="2016-02-10T13:35:14-08:00">10 лют. 2016 р., 13:35:14</time>
+                      <a href="https://developer.mozilla.org/uk/profiles/fscholz">fscholz</a>,
+                      <time datetime="2016-10-28T08:27:38-07:00">28 жовт. 2016 р., 08:27:38</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Вивчайте найкраще з веб-розробки</h2>
+        <p class="newsletter-description">Підпишіться на нашу розсилку:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">Ел. пошта</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            Я погоджуюсь з тим, як Mozilla поводиться з моїми даними згідно з <a href="https://www.mozilla.org/privacy/">цією Політикою приватності</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Підписатися зараз</button>
+        </div>
+        
+        <p class="newsletter-lang">Поки що розсилка пропонується лише англійською мовою.</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Дякуємо! Будь ласка, перевірте свою пошту для підтвердження підписки.</h2>
+        <p>Якщо ви раніше не підтверджували підписку на Mozilla, то вам це, можливо, треба зробити. Будь ласка, відкрийте теку Вхідні або Спам своєї ел. пошти, щоб перевірити, чи не прийшов від нас лист.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Приховати підписку на розсилку</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -1118,7 +1217,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">Див. також</div>
-    <ol><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/index.html">Standard built-in objects</a></strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.html"><code>Array</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype.html" title="The Array.prototype property represents the prototype for the Array constructor."><code>Array.prototype</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length.html" title="The length property represents an unsigned, 32-bit integer that&nbsp;is always numerically greater than the highest index in the array."><code>Array.prototype.length</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/%40%40unscopables.html" title="The @@unscopable symbol property contains property names that were not included in the ECMAScript standard prior to the ES2015 (ES6) version. These properties are excluded from with statement bindings."><code>Array.prototype[@@unscopables]</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from.html" title="The Array.from() method creates a new Array instance from an array-like or iterable object."><code>Array.from()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray.html" title="The Array.isArray() method returns true if an object is an array, false if it is not."><code>Array.isArray()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/observe.html" title="The Array.observe() method was used for asynchronously observing changes to Arrays, similar to Object.observe() for objects. It provided a stream of changes in order of occurrence. It's equivalent to Object.observe() invoked with the accept type list [&quot;add&quot;, &quot;update&quot;, &quot;delete&quot;, &quot;splice&quot;]. However, this API has been deprecated and removed from Browsers. You can use the more general Proxy object instead."><code>Array.observe()</code></a></s></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of.html" title="The Array.of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments."><code>Array.of()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat.html" title="The concat() method returns a new array comprised of the array on which it is called joined with the array(s) and/or value(s) provided as arguments."><code>Array.prototype.concat()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin.html" title="The copyWithin() method copies the sequence of array elements within the array to the position starting at target. The copy is taken from the index positions of the second and third arguments start and end. The end argument is optional and defaults to the length of the array."><code>Array.prototype.copyWithin()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries.html" title="The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array."><code>Array.prototype.entries()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every.html" title="The every() method tests whether all elements in the array pass the test implemented by the provided function."><code>Array.prototype.every()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill.html" title="The fill() method fills all the elements of an array from a start index to an end index with a static value."><code>Array.prototype.fill()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter.html" title="Technical review completed."><code>Array.prototype.filter()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find.html" title="The find() method returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned."><code>Array.prototype.find()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex.html" title="The findIndex() method returns an index in the array, if an element in the array satisfies the provided testing function. Otherwise -1 is returned."><code>Array.prototype.findIndex()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach.html" title="The forEach() method executes a provided function once per array element."><code>Array.prototype.forEach()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes.html" title="The includes() method determines whether an array includes a certain element, returning true or false as appropriate."><code>Array.prototype.includes()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf.html" title="The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present."><code>Array.prototype.indexOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join.html" title="The join() method joins all elements of an array into a string."><code>Array.prototype.join()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys.html" title="The keys() method returns a new Array Iterator that contains the keys for each index in the array."><code>Array.prototype.keys()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf.html" title="The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex."><code>Array.prototype.lastIndexOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map.html" title="The map() method creates a new array with the results of calling a provided function on every element in this array."><code>Array.prototype.map()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop.html" title="The pop() method removes the last element from an array and returns that element."><code>Array.prototype.pop()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push.html" title="The push() method adds one or more elements to the end of an array and returns the new length of the array."><code>Array.prototype.push()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html" title="The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value."><code>Array.prototype.reduce()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight-2.html" title="The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) has to reduce it to a single value."><code>Array.prototype.reduceRight()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse.html" title="The reverse() method reverses an array in place. The first array element becomes the last and the last becomes the first."><code>Array.prototype.reverse()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift.html" title="The shift() method removes the first element from an array and returns that element. This method changes the length of the array."><code>Array.prototype.shift()</code></a></li><li><em><code>Array.prototype.slice()</code></em></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some.html" title="The some() method tests whether some element in the array passes the test implemented by the provided function."><code>Array.prototype.some()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort.html" title="The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points."><code>Array.prototype.sort()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice.html" title="The splice() method changes the content of an array by removing existing elements and/or adding new elements."><code>Array.prototype.splice()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString.html" title="The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma “,”)."><code>Array.prototype.toLocaleString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource.html" title="The toSource() method returns a string representing the source code of the array."><code>Array.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString.html" title="The toString() method returns a string representing the specified array and its elements."><code>Array.prototype.toString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift.html" title="The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array."><code>Array.prototype.unshift()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values.html" title="The values() method returns a new Array Iterator object that contains the values for each index in the array."><code>Array.prototype.values()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/%40%40iterator.html" title="The initial value of the @@iterator property is the same function object as the initial value of the values() property."><code>Array.prototype[@@iterator]()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unobserve.html" title="The Array.unobserve() method was used to remove observers set by Array.observe(), but has been deprecated and removed from Browsers. You can use the more general Proxy object instead."><code>Array.unobserve()</code></a></s></li></ol></li><li><strong>Inheritance:</strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments.html" title="The function.arguments property refers to an an array-like object corresponding to the arguments passed to a function. Use the simple variable arguments instead."><code>Function.arguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity.html" title="The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the Function.prototype.length property."><code>Function.arity</code></a></s></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller.html" title="The function.caller property returns the function that invoked the specified function."><code>Function.caller</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName.html" title="The function.displayName property returns the display name of the function."><code>Function.displayName</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length.html" title="The length property specifies the number of arguments expected by the function."><code>Function.length</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name.html" title="The function.name property returns the name of the function."><code>Function.name</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html" title="The Function.prototype property represents the Function prototype object."><code>Function.prototype</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object)."><code>Function.prototype.apply()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html" title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."><code>Function.prototype.bind()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html" title="The call() method calls a function with a given this value and arguments provided individually."><code>Function.prototype.call()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator.html" title="The isGenerator() method determines whether or not a function is a generator."><code>Function.prototype.isGenerator()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Function.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString.html" title="The toString() method returns a string representing the source code of the function."><code>Function.prototype.toString()</code></a></li></ol></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.html"><code>Object</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count.html" title="The __count__ property used to store the count of enumerable properties on the object, but it has been removed."><code>Object.prototype.__count__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available."><code>Object.prototype.__noSuchMethod__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent.html" title="The __parent__ property used to point to an object's context, but it has been removed."><code>Object.prototype.__parent__</code></a></s></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto.html" title="The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed."><code>Object.prototype.__proto__</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor.html" title="Returns a reference to the Object function that created the instance's prototype. Note that the value of this property is a reference to the function itself, not a string containing the function's name. The value is only read-only for primitive values such as&nbsp;1,&nbsp;true and&nbsp;&quot;test&quot;."><code>Object.prototype.constructor</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__.html" title="The __defineGetter__ method binds an object's property to a function to be called when that property is looked up."><code>Object.prototype.__defineGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__.html" title="The __defineSetter__ method binds an object's property to a function to be called when an attempt is made to set that property."><code>Object.prototype.__defineSetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__.html" title="The __lookupGetter__ method returns the function bound as a getter to the specified property."><code>Object.prototype.__lookupGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__.html" title="The __lookupSetter__ method returns the function bound as a setter to the specified property."><code>Object.prototype.__lookupSetter__()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty.html" title="The hasOwnProperty() method returns a boolean indicating whether the object has the specified property."><code>Object.prototype.hasOwnProperty()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf.html" title="The isPrototypeOf() method tests for an object in another object's prototype chain."><code>Object.prototype.isPrototypeOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable.html" title="The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable."><code>Object.prototype.propertyIsEnumerable()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString.html" title="The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes."><code>Object.prototype.toLocaleString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Object.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString.html" title="The toString() method returns a string representing object."><code>Object.prototype.toString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch.html" title="The unwatch() method removes a watchpoint set with the watch() method."><code>Object.prototype.unwatch()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf.html" title="Technical review completed."><code>Object.prototype.valueOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch.html" title="The watch() method watches for a property to be assigned a value and runs a function when that occurs."><code>Object.prototype.watch()</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/index.html">Standard built-in objects</a></strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array.html"><code>Array</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="The array length property sets or returns the number of elements in an array. It represents an unsigned, 32-bit integer that&nbsp;is always numerically greater than the highest index in the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length.html"><code>Array.length</code></a></li><li><a title="The Array.prototype property represents the prototype for the Array constructor and allows you to add new properties and methods to all Array objects." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype.html"><code>Array.prototype</code></a></li><li><a title="The @@unscopable symbol property contains property names that were not included in the ECMAScript standard prior to the ES2015 (ES6) version. These properties are excluded from with statement bindings." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/%40%40unscopables.html"><code>Array.prototype[@@unscopables]</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a title="The Array.from() method creates a new Array instance from an array-like or iterable object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from.html"><code>Array.from()</code></a></li><li><a title="The Array.isArray() determines whether the passed value is an Array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray.html"><code>Array.isArray()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The Array.observe() method was used for asynchronously observing changes to Arrays, similar to Object.observe() for objects. It provided a stream of changes in order of occurrence. It's equivalent to Object.observe() invoked with the accept type list [&quot;add&quot;, &quot;update&quot;, &quot;delete&quot;, &quot;splice&quot;]. However, this API has been deprecated and removed from Browsers. You can use the more general Proxy object instead." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/observe.html"><code>Array.observe()</code></a></s></li><li><a title="The Array.of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/of.html"><code>Array.of()</code></a></li><li><a title="The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat.html"><code>Array.prototype.concat()</code></a></li><li><a title="The copyWithin() method shallow copies part of an array to another location in the same array and returns it, without modifying its size." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin.html"><code>Array.prototype.copyWithin()</code></a></li><li><a title="The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries.html"><code>Array.prototype.entries()</code></a></li><li><a title="The every() method tests whether all elements in the array pass the test implemented by the provided function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every.html"><code>Array.prototype.every()</code></a></li><li><a title="The fill() method fills all the elements of an array from a start index to an end index with a static value." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill.html"><code>Array.prototype.fill()</code></a></li><li><a title="The filter() method creates a new array with all elements that pass the test implemented by the provided function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter.html"><code>Array.prototype.filter()</code></a></li><li><a title="The find() method returns a value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find.html"><code>Array.prototype.find()</code></a></li><li><a title="The findIndex() method returns an index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex.html"><code>Array.prototype.findIndex()</code></a></li><li><a title="The forEach() method executes a provided function once for each array element." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach.html"><code>Array.prototype.forEach()</code></a></li><li><a title="The includes() method determines whether an array includes a certain element, returning true or false as appropriate." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes.html"><code>Array.prototype.includes()</code></a></li><li><a title="The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf.html"><code>Array.prototype.indexOf()</code></a></li><li><a title="The join() method joins all elements of an array into a string." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join.html"><code>Array.prototype.join()</code></a></li><li><a title="The keys() method returns a new Array Iterator that contains the keys for each index in the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/keys.html"><code>Array.prototype.keys()</code></a></li><li><a title="The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf.html"><code>Array.prototype.lastIndexOf()</code></a></li><li><a title="The map() method creates a new array with the results of calling a provided function on every element in this array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map.html"><code>Array.prototype.map()</code></a></li><li><a title="The pop() method removes the last element from an array and returns that element. This method changes the length of the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop.html"><code>Array.prototype.pop()</code></a></li><li><a title="The push() method adds one or more elements to the end of an array and returns the new length of the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push.html"><code>Array.prototype.push()</code></a></li><li><a title="The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce-2.html"><code>Array.prototype.reduce()</code></a></li><li><a title="The reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) has to reduce it to a single value." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight-2.html"><code>Array.prototype.reduceRight()</code></a></li><li><a title="The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse.html"><code>Array.prototype.reverse()</code></a></li><li><a title="The shift() method removes the first element from an array and returns that element. This method changes the length of the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift.html"><code>Array.prototype.shift()</code></a></li><li><em><code>Array.prototype.slice()</code></em></li><li><a title="The some() method tests whether some element in the array passes the test implemented by the provided function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some.html"><code>Array.prototype.some()</code></a></li><li><a title="The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort.html"><code>Array.prototype.sort()</code></a></li><li><a title="The splice() method changes the content of an array by removing existing elements and/or adding new elements." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice.html"><code>Array.prototype.splice()</code></a></li><li><a title="The toLocaleString() method returns a string representing the elements of the array. The elements are converted to Strings using their toLocaleString methods and these Strings are separated by a locale-specific String (such as a comma “,”)." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString.html"><code>Array.prototype.toLocaleString()</code></a></li><li><a title="The toSource() method returns a string representing the source code of the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource.html"><code>Array.prototype.toSource()</code></a></li><li><a title="The toString() method returns a string representing the specified array and its elements." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString.html"><code>Array.prototype.toString()</code></a></li><li><a title="The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift.html"><code>Array.prototype.unshift()</code></a></li><li><a title="The values() method returns a new Array Iterator object that contains the values for each index in the array." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values.html"><code>Array.prototype.values()</code></a></li><li><a title="The initial value of the @@iterator property is the same function object as the initial value of the values() property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/%40%40iterator.html"><code>Array.prototype[@@iterator]()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The Array.unobserve() method was used to remove observers set by Array.observe(), but has been deprecated and removed from Browsers. You can use the more general Proxy object instead." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unobserve.html"><code>Array.unobserve()</code></a></s></li><li><a title="The Array[@@species] accessor property returns the Array constructor." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/%40%40species.html"><code>get Array[@@species]</code></a></li></ol></li><li><strong>Inheritance:</strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The function.arguments property refers to an an array-like object corresponding to the arguments passed to a function. Use the simple variable arguments instead." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments.html"><code>Function.arguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the Function.prototype.length property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity.html"><code>Function.arity</code></a></s></li><li><a title="The function.caller property returns the function that invoked the specified function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller.html"><code>Function.caller</code></a></li><li><a title="The function.displayName property returns the display name of the function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName.html"><code>Function.displayName</code></a></li><li><a title="The length property specifies the number of arguments expected by the function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length.html"><code>Function.length</code></a></li><li><a title="The function.name property returns the name of the function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name.html"><code>Function.name</code></a></li><li><a title="The Function.prototype property represents the Function prototype object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html"><code>Function.prototype</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><a title="The apply() method calls a function with a given this value and arguments provided as an array (or an array-like object)." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html"><code>Function.prototype.apply()</code></a></li><li><a title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html"><code>Function.prototype.bind()</code></a></li><li><a title="The call() method calls a function with a given this value and arguments provided individually." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html"><code>Function.prototype.call()</code></a></li><li><a title="The isGenerator() method determines whether or not a function is a generator." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator.html"><code>Function.prototype.isGenerator()</code></a></li><li><a title="The toSource() method returns a string representing the source code of the object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource.html"><code>Function.prototype.toSource()</code></a></li><li><a title="The toString() method returns a string representing the source code of the function." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString.html"><code>Function.prototype.toString()</code></a></li></ol></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.html"><code>Object</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The __count__ property used to store the count of enumerable properties on the object, but it has been removed." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count.html"><code>Object.prototype.__count__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html"><code>Object.prototype.__noSuchMethod__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="The __parent__ property used to point to an object's context, but it has been removed." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent.html"><code>Object.prototype.__parent__</code></a></s></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto.html"><code>Object.prototype.__proto__</code></a></li><li><a title="Returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name. The value is only read-only for primitive values such as&nbsp;1,&nbsp;true and&nbsp;&quot;test&quot;." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor.html"><code>Object.prototype.constructor</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The __defineGetter__ method binds an object's property to a function to be called when that property is looked up." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__.html"><code>Object.prototype.__defineGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The __defineSetter__ method binds an object's property to a function to be called when an attempt is made to set that property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__.html"><code>Object.prototype.__defineSetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The __lookupGetter__ method returns the function bound as a getter to the specified property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__.html"><code>Object.prototype.__lookupGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The __lookupSetter__ method returns the function bound as a setter to the specified property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__.html"><code>Object.prototype.__lookupSetter__()</code></a></li><li><a title="The hasOwnProperty() method returns a boolean indicating whether the object has the specified property." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty.html"><code>Object.prototype.hasOwnProperty()</code></a></li><li><a title="The isPrototypeOf() method checks if an object exists in another object's prototype chain." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf.html"><code>Object.prototype.isPrototypeOf()</code></a></li><li><a title="The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable.html"><code>Object.prototype.propertyIsEnumerable()</code></a></li><li><a title="The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString.html"><code>Object.prototype.toLocaleString()</code></a></li><li><a title="The toSource() method returns a string representing the source code of the object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource.html"><code>Object.prototype.toSource()</code></a></li><li><a title="The toString() method returns a string representing the object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString.html"><code>Object.prototype.toString()</code></a></li><li><a title="The unwatch() method removes a watchpoint set with the watch() method." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch.html"><code>Object.prototype.unwatch()</code></a></li><li><a title="The valueOf() method returns the primitive value of the specified object." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf.html"><code>Object.prototype.valueOf()</code></a></li><li><a title="The watch() method watches for a property to be assigned a value and runs a function when that occurs." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch.html"><code>Object.prototype.watch()</code></a></li><li><a title="The Object.setPrototypeOf() method sets the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null." href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf.html"><code>Object.setPrototypeOf()</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -1142,12 +1241,12 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">Про MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Умови</a></li>
@@ -1155,9 +1254,8 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Куки</a></li>
             <li><a href="http://github.com/mozilla/kuma">Зробіть внесок у код</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1166,36 +1264,42 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
     <form class="languages go" method="get" action="https://developer.mozilla.org/uk/docs/Web">
       <label for="language">Інші мови:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" selected="">
-          English (US)
+        <option title="Англійська (США)" value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/slice">
-            Català
+          <option title="Каталонська" value="/ca/docs/Web/JavaScript/Referencia/Objectes_globals/Array/slice">
+            Català (ca)
           </option>
-          <option value="/de/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
-            Deutsch
+          <option title="Німецька" value="/de/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            Deutsch (de)
           </option>
-          <option value="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice">
-            Español
+          <option title="Іспанська" value="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice">
+            Español (es)
           </option>
-          <option value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice">
-            Français
+          <option title="Французька" value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/slice">
+            Français (fr)
           </option>
-          <option value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
-            日本語
+          <option title="Японська" value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            日本語 (ja)
           </option>
-          <option value="/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/slice">
-            Polski
+          <option title="Корейська" value="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            한국어 (ko)
           </option>
-          <option value="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
-            Português (do&nbsp;Brasil)
+          <option title="Голландська" value="/nl/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            Nederlands (nl)
           </option>
-          <option value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
-            Русский
+          <option title="Польська" value="/pl/docs/Web/JavaScript/Referencje/Obiekty/Array/slice">
+            Polski (pl)
           </option>
-          <option value="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
-            中文 (简体)
+          <option title="Португальська (Бразилія)" value="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            Português (do&nbsp;Brasil) (pt-BR)
+          </option>
+          <option title="Російська" value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            Русский (ru)
+          </option>
+          <option title="Китайська (спрощене письмо)" value="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Перейти&lt;/button&gt;</noscript>
@@ -1212,33 +1316,38 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:55:58 GMT -->
+<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Array/slice by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:05:48 GMT -->
 </body></html>

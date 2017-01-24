@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:45:09 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:26:45 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,10 +69,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon">
   <meta name="twitter:title" content="WorkerNavigator.sendBeacon()">
   
-  <meta property="og:description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer small HTTP data from a worker to a web server.">
-  <meta name="description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer small HTTP data from a worker to a web server.">
-  <meta name="twitter:description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer small HTTP data from a worker to a web server.">
+  <meta property="og:description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer a small amount of data over HTTP from a worker to a web server. This is functionally equivalent to the Navigator.sendBeacon() method; see that article for additional details on what this method can be used for and why.">
+  <meta name="description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer a small amount of data over HTTP from a worker to a web server. This is functionally equivalent to the Navigator.sendBeacon() method; see that article for additional details on what this method can be used for and why.">
+  <meta name="twitter:description" content="The NavigatorWorker.sendBeacon() method can be used to asynchronously transfer a small amount of data over HTTP from a worker to a web server. This is functionally equivalent to the Navigator.sendBeacon() method; see that article for additional details on what this method can be used for and why.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerNavigator%2FsendBeacon" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/WorkerNavigator/sendBeacon" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/WorkerNavigator/sendBeacon" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerNavigator%2FsendBeacon" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerNavigator%2FsendBeacon" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -376,6 +366,11 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rolfedh" data-src="../../../../../../secure.gravatar.com/avatar/4d9e73208c9af39018924d0e67821a796c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rolfedh</noscript></a>
                 </li>
@@ -408,7 +403,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_values" rel="internal">Return values</a></li></ol></li><li><a href="#Example" rel="internal">Example</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a rel="internal" href="#Syntax">Syntax</a><ol><li><a rel="internal" href="#Parameters">Parameters</a></li><li><a rel="internal" href="#Return_value">Return value</a></li></ol></li><li><a rel="internal" href="#Example">Example</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#See_also">See also</a>
                 </li></ol>
               </div>
               
@@ -448,26 +443,25 @@
     <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
 </div><p></p>
 
-<p>The <code><strong>NavigatorWorker.sendBeacon()</strong></code> method can be used to asynchronously transfer small HTTP data from a <a href="../Worker.html" title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread."><code>worker</code></a> to a web server.</p>
+<p>The <code><strong>NavigatorWorker.sendBeacon()</strong></code> method can be used to asynchronously transfer a small amount of data over <a title="HTTP: HTTP (HyperText Transfer Protocol) is the basic protocol that enables file transfer on the Web. HTTP is textual (all communication is done in plain text) and stateless (no communication is aware of previous communications)." class="glossaryLink" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP">HTTP</a> from a <a title="The Worker interface of the Web Workers API represents a background task that can be easily created and can send messages back to its creator. Creating a worker is as simple as calling the Worker()&nbsp;constructor and specifying a script to be run in the worker thread." href="../Worker.html"><code>worker</code></a> to a web server. This is functionally equivalent to the <a title="The navigator.sendBeacon() method can be used to asynchronously transfer small HTTP data from the User Agent to a web server." href="../Navigator/sendBeacon.html"><code>Navigator.sendBeacon()</code></a> method; see that article for additional details on what this method can be used for and why.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"> 
-navigatorself.navigator.sendBeacon(<em>url</em>, <em>data</em>);
+<pre class="syntaxbox">self.navigator.sendBeacon(<em>url</em>, <em>data</em>);
 </pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>url</code></dt>
- <dd>The <code>url</code> parameter indicates the resolved URL where the <code>data</code> is to be transmitted.</dd>
+ <dd>The <code>url</code> parameter indicates the resolved URL to which the <code>data</code> is to be transmitted.</dd>
  <dt><code>data</code></dt>
- <dd>The <code>data</code> parameter is the <a href="../ArrayBufferView.html" title="ArrayBufferView is a helper type representing any of the following JavaScript TypedArray types:"><code>ArrayBufferView</code></a>, <a href="../Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a>, <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a>, or <a href="../FormData.html" title="The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to &quot;multipart/form-data&quot;."><code>FormData</code></a> data that is to be transmitted.</dd>
+ <dd>The <code>data</code> parameter is a <a title="ArrayBufferView is a helper type representing any of the following JavaScript TypedArray types:" href="../ArrayBufferView.html"><code>ArrayBufferView</code></a>, <a title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system." href="../Blob.html"><code>Blob</code></a>, <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a>, or <a title="The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to &quot;multipart/form-data&quot;." href="../FormData.html"><code>FormData</code></a> object containing the data to be transmitted.</dd>
 </dl>
 
-<h3 id="Return_values">Return values</h3>
+<h3 id="Return_value">Return value</h3>
 
-<p>The <strong>sendBeacon()</strong> method returns <code>true</code> if the user agent can successfully queue the <code>data</code> for transfer, Otherwise it returns <code>false</code>.</p>
+<p>The <code><strong>sendBeacon()</strong></code> method returns <code>true</code> if the user agent can successfully queue the <code>data</code> for transfer, Otherwise it returns <code>false</code>.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -475,7 +469,9 @@ navigatorself.navigator.sendBeacon(<em>url</em>, <em>data</em>);
 
 <pre class="brush: js">// Create a worker
 var myWorker = new Worker("worker-beacon.js");
+
 // Send the worker a message and set up a response callback
+
 myWorker.postMessage("Send beacon!");
 
 myWorker.onmessage = function(e) {
@@ -484,9 +480,10 @@ myWorker.onmessage = function(e) {
 };
 </pre>
 
-<p>In the following code snippet, the worker will use <code>sendBeacon()</code> to contact the server.</p>
+<p>In the following code snippet, we see the worker's <a title="The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method." href="../Worker/onmessage.html"><code>Worker.onmessage</code></a> event handler. The text passed as the message data when calling <a title="The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references." href="../Worker/postMessage.html"><code>Worker.postMessage()</code></a> is accepted by the event handler and sent to the server by calling <code>sendBeacon()</code>.</p>
 
 <pre class="brush: js">// Worker's onmessage handler
+
 onmessage = function(ev) {
   var msg = ev.data;
   self.navigator.sendBeacon("http://www.example.org/", msg);
@@ -503,7 +500,7 @@ onmessage = function(ev) {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://w3c.github.io/beacon/#sec-sendBeacon-method" class="external" lang="en" hreflang="en">Beacon<br><small lang="en-US">The definition of 'sendBeacon()' in that specification.</small></a></td>
+   <td><a hreflang="en" class="external" lang="en" href="https://w3c.github.io/beacon/#sec-sendBeacon-method">Beacon<br><small lang="en-US">The definition of 'sendBeacon()' in that specification.</small></a></td>
    <td><span class="spec-ED">Editor's Draft</span></td>
    <td>Initial definition</td>
   </tr>
@@ -575,32 +572,13 @@ onmessage = function(ev) {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="../Navigator/sendBeacon.html" title="The navigator.sendBeacon() method can be used to asynchronously transfer small HTTP data from the User Agent to a web server."><code>navigator.sendBeacon()</code></a></li>
+ <li><a title="The navigator.sendBeacon() method can be used to asynchronously transfer small HTTP data from the User Agent to a web server." href="../Navigator/sendBeacon.html"><code>navigator.sendBeacon()</code></a></li>
  <li><a href="https://developer.mozilla.org/Web/API/Beacon_API">Beacon API (Overview)</a></li>
  <li><a href="https://developer.mozilla.org/Web/API/Beacon_API/Using_the_Beacon_API">Using the Beacon API</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerNavigator%2FsendBeacon%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+WorkerNavigator.sendBeacon%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about WorkerNavigator.sendBeacon() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about WorkerNavigator.sendBeacon() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWorkerNavigator%2FsendBeacon%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about WorkerNavigator.sendBeacon() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -616,13 +594,21 @@ onmessage = function(ev) {
       
         <li><a href="../../../tag/API.html">API</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Beacon">Beacon</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Experimental">Experimental</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Method">Method</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Networking">Networking</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/sendBeacon">sendBeacon</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web Performance">Web Performance</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WorkerNavigator">WorkerNavigator</a></li>
       
     </ul>
   </div>
@@ -630,6 +616,8 @@ onmessage = function(ev) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/AFBarstow">AFBarstow</a>
@@ -640,11 +628,48 @@ onmessage = function(ev) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-03-02T09:35:47-08:00">Mar 2, 2016, 9:35:47 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-09-12T11:05:20-07:00">Sep 12, 2016, 11:05:20 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -661,7 +686,7 @@ onmessage = function(ev) {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../Web_Workers_API.html">Web Workers API</a></strong></li><li><strong><a href="../WorkerNavigator.html"><code>WorkerNavigator</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/appCodeName.html" title="The NavigatorID.appCodeName always returns 'Mozilla', on any browser. This property is kept only for compatibility purposes."><code>appCodeName</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/appName.html" title="The NavigatorID.appName property returns the name of the browser. The HTML5 specification also allows any browser to return &quot;Netscape&quot; here, for compatibility reasons."><code>appName</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/appVersion.html" title="Returns the version of the browser as a string. It may be either a plain version number, like &quot;5.0&quot;, or a version number followed by more detailed information. The HTML5 specification also allows any browser to return &quot;4.0&quot;, for compatibility reasons."><code>appVersion</code></a></li><li><a href="../NavigatorLanguage/language.html" title="The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI."><code>language</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="../NavigatorLanguage/languages.html" title="The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first."><code>languages</code></a></li><li><a href="../NavigatorOnLine/onLine.html" title="Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection."><code>onLine</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="permissions.html" title="The WorkerNavigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API."><code>permissions</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/platform.html" title="Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer."><code>platform</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/product.html" title="The NavigatorID.product property returns the product name of the current browser."><code>product</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/userAgent.html" title="The NavigatorID.userAgent read-only property returns the user agent string for the current browser."><code>userAgent</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>sendBeacon()</code></em></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../NavigatorID/taintEnabled.html" title="The NavigatorID.taintEnabled() method always returns false."><code>taintEnabled()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Workers API</strong></a><ol><li><a href="../AbstractWorker.html"><code>AbstractWorker</code></a></li><li><a href="../ChromeWorker.html"><code>ChromeWorker</code></a></li><li><a href="../DedicatedWorkerGlobalScope.html"><code>DedicatedWorkerGlobalScope</code></a></li><li><a href="../ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="../SharedWorker.html"><code>SharedWorker</code></a></li><li><a href="../SharedWorkerGlobalScope.html"><code>SharedWorkerGlobalScope</code></a></li><li><a href="../Worker.html"><code>Worker</code></a></li><li><a href="../WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></li><li><a href="../WorkerLocation.html"><code>WorkerLocation</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../Web_Workers_API.html">Web Workers API</a></strong></li><li><strong><a href="../WorkerNavigator.html"><code>WorkerNavigator</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The NavigatorID.appCodeName always returns 'Mozilla', on any browser. This property is kept only for compatibility purposes." href="../NavigatorID/appCodeName.html"><code>appCodeName</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The NavigatorID.appName property returns the name of the browser. The HTML5 specification also allows any browser to return &quot;Netscape&quot; here, for compatibility reasons." href="../NavigatorID/appName.html"><code>appName</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="Returns the version of the browser as a string. It may be either a plain version number, like &quot;5.0&quot;, or a version number followed by more detailed information. The HTML5 specification also allows any browser to return &quot;4.0&quot;, for compatibility reasons." href="../NavigatorID/appVersion.html"><code>appVersion</code></a></li><li><a title="The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI." href="../NavigatorLanguage/language.html"><code>language</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first." href="../NavigatorLanguage/languages.html"><code>languages</code></a></li><li><a title="Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection." href="../NavigatorOnLine/onLine.html"><code>onLine</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a title="The WorkerNavigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API." href="permissions.html"><code>permissions</code></a></li><li><a title="Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer." href="../NavigatorID/platform.html"><code>platform</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The NavigatorID.product property returns the product name of the current browser." href="../NavigatorID/product.html"><code>product</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The NavigatorID.userAgent read-only property returns the user agent string for the current browser." href="../NavigatorID/userAgent.html"><code>userAgent</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>sendBeacon()</code></em></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a title="The NavigatorID.taintEnabled() method always returns false." href="../NavigatorID/taintEnabled.html"><code>taintEnabled()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Workers API</strong></a><ol><li><a href="../AbstractWorker.html"><code>AbstractWorker</code></a></li><li><a href="../ChromeWorker.html"><code>ChromeWorker</code></a></li><li><a href="../DedicatedWorkerGlobalScope.html"><code>DedicatedWorkerGlobalScope</code></a></li><li><a href="../ServiceWorker.html"><code>ServiceWorker</code></a></li><li><a href="../SharedWorker.html"><code>SharedWorker</code></a></li><li><a href="../SharedWorkerGlobalScope.html"><code>SharedWorkerGlobalScope</code></a></li><li><a href="../Worker.html"><code>Worker</code></a></li><li><a href="../WorkerGlobalScope.html"><code>WorkerGlobalScope</code></a></li><li><a href="../WorkerLocation.html"><code>WorkerLocation</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -685,12 +710,12 @@ onmessage = function(ev) {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -698,9 +723,8 @@ onmessage = function(ev) {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -717,63 +741,38 @@ onmessage = function(ev) {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/WorkerNavigator/sendBeacon$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:45:09 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/sendBeacon by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:26:45 GMT -->
 </body></html>

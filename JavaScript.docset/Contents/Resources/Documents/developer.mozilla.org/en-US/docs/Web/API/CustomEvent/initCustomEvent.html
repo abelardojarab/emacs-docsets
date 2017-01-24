@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:37:10 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:15:03 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -63,6 +62,10 @@
   <link rel="canonical" href="initCustomEvent.html">
 
   
+    
+      <link rel="alternate" hreflang="zh-CN" href="../../../../../zh-CN/docs/Web/API/CustomEvent/initCustomEvent.html" title="CustomEvent.initCustomEvent()">
+    
+  
 
   <!-- document-specific social tags -->
   <meta property="og:title" content="CustomEvent.initCustomEvent()">
@@ -74,6 +77,13 @@
   <meta name="description" content="The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.">
   <meta name="twitter:description" content="The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +101,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +154,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +171,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +188,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCustomEvent%2FinitCustomEvent" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/CustomEvent/initCustomEvent" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/CustomEvent/initCustomEvent" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCustomEvent%2FinitCustomEvent" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCustomEvent%2FinitCustomEvent" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +211,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +235,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +249,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,13 +289,17 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
-                <li class="smaller">No translations exist for this article.</li>
+                
+                
+                
+                  <li><bdi><a rel="internal" href="../../../../../zh-CN/docs/Web/API/CustomEvent/initCustomEvent.html" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
               
 
               
@@ -313,7 +310,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +323,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -374,6 +372,11 @@
         
         <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
@@ -448,18 +451,18 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="overheadIndicator deprecated deprecatedHeader"> 
-            <p><strong><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Deprecated</strong><br>This feature has been removed from the Web standards. Though some browsers may still support it, it is in the process of being dropped. Do not use it in old or new projects. Pages or Web apps using it may break at any time.</p> 
+                    <p></p><section class="Quick_links" id="Quick_Links"><!-- --></section><div class="overheadIndicator deprecated deprecatedHeader"> 
+            <p><strong><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Deprecated</strong><br>This feature has been removed from the Web standards. Though some browsers may still support it, it is in the process of being dropped. Avoid using it and update existing code if possible; see the <a href="#Browser_compatibility">compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.</p> 
         </div><p></p>
 
 <p>The <code><strong>CustomEvent.initCustomEvent()</strong></code> method initializes a <code>CustomEvent</code> object. If the event has already been dispatched, this method does nothing.</p>
 
-<p>Events initialized in this way must have been created with the <a href="../Document/createEvent.html" title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent."><code>Document.createEvent()</code></a> method. This method must be called to set the event before it is dispatched, using <a href="../EventTarget/dispatchEvent.html" title="Dispatches an Event at the specified EventTarget, invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a>. Once dispatched, it doesn't do anything anymore.</p>
+<p>Events initialized in this way must have been created with the <a title="Creates an event of the type specified. The returned object should be first initialized and can then be passed to element.dispatchEvent." href="../Document/createEvent.html"><code>Document.createEvent()</code></a> method. This method must be called to set the event before it is dispatched, using <a title="Dispatches an Event at the specified EventTarget, invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()." href="../EventTarget/dispatchEvent.html"><code>EventTarget.dispatchEvent()</code></a>. Once dispatched, it doesn't do anything anymore.</p>
 
 <div class="note">
 <p><strong>Do not use this method anymore, as it is deprecated.</strong></p>
 
-<p>Instead use specific event constructors, like <a href="CustomEvent.html" title="The CustomEvent() constructor creates a new CustomEvent."><code>CustomEvent()</code></a>. The page on&nbsp;<a href="../../Guide/Events/Creating_and_triggering_events.html">Creating and triggering events</a> gives more information about the way to use these.</p>
+<p>Instead use specific event constructors, like <a title="The CustomEvent() constructor creates a new CustomEvent." href="CustomEvent.html"><code>CustomEvent()</code></a>. The page on&nbsp;<a href="../../Guide/Events/Creating_and_triggering_events.html">Creating and triggering events</a> gives more information about the way to use these.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -471,11 +474,11 @@
 
 <dl>
  <dt><code><em>type</em></code></dt>
- <dd>Is a <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> containing the name of the event.</dd>
+ <dd>Is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a> containing the name of the event.</dd>
  <dt><em><code>canBub</code></em><em><code>ble</code></em></dt>
- <dd>Is a <a href="../../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating whether the event bubbles up through the DOM or not.</dd>
+ <dd>Is a <a title="The Boolean object is an object wrapper for a boolean value." href="../../JavaScript/Reference/Global_Objects/Boolean.html"><code>Boolean</code></a> indicating whether the event bubbles up through the DOM or not.</dd>
  <dt><code><em>cancelable</em></code></dt>
- <dd>Is a <a href="../../JavaScript/Reference/Global_Objects/Boolean.html" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a> indicating whether the event is cancelable.</dd>
+ <dd>Is a <a title="The Boolean object is an object wrapper for a boolean value." href="../../JavaScript/Reference/Global_Objects/Boolean.html"><code>Boolean</code></a> indicating whether the event is cancelable.</dd>
  <dt><em><code>deta</code></em><em><code>il</code></em></dt>
  <dd>The data passed when initializing the event.</dd>
 </dl>
@@ -492,9 +495,9 @@
  </thead>
  <tbody>
   <tr>
-   <td><a href="http://dom.spec.whatwg.org/#dom-customevent-initcustomevent" class="external" lang="en" hreflang="en">DOM<br><small lang="en-US">The definition of 'CustomEvent' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://dom.spec.whatwg.org/#dom-customevent-initcustomevent" class="external">DOM<br><small lang="en-US">The definition of 'CustomEvent' in that specification.</small></a></td>
    <td><span class="spec-Living">Living Standard</span></td>
-   <td>Initial definition, but already deprecated in favor of the use of a constructor, <a href="CustomEvent.html" title="The CustomEvent() constructor creates a new CustomEvent."><code>CustomEvent()</code></a></td>
+   <td>Initial definition, but already deprecated in favor of the use of a constructor, <a title="The CustomEvent() constructor creates a new CustomEvent." href="CustomEvent.html"><code>CustomEvent()</code></a></td>
   </tr>
  </tbody>
 </table>
@@ -510,11 +513,13 @@
 </div><p></p>
 
 <div id="compat-desktop">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -522,8 +527,8 @@
   </tr>
   <tr>
    <td>Basic support</td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/6" title="Released on 2011-08-16.">6</a> (6)</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a title="Released on 2011-08-16." href="https://developer.mozilla.org/en-US/Firefox/Releases/6">6</a> (6)</td>
    <td>9</td>
    <td>11</td>
    <td>5.1 (533.3)</td>
@@ -533,11 +538,13 @@
 </div>
 
 <div id="compat-mobile">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Phone</th>
    <th>Opera Mobile</th>
@@ -545,7 +552,7 @@
   </tr>
   <tr>
    <td>Basic support</td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>6.0 (6)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -558,31 +565,12 @@
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="../CustomEvent.html" title="This interface inherits properties from its parent, Event."><code>CustomEvent</code></a></li>
- <li>The constructor to use instead of this deprecated method: <a href="CustomEvent.html" title="The CustomEvent() constructor creates a new CustomEvent."><code>CustomEvent()</code></a>.</li>
+ <li><a title="This interface inherits properties from its parent, Event:" href="../CustomEvent.html"><code>CustomEvent</code></a></li>
+ <li>The constructor to use instead of this deprecated method: <a title="The CustomEvent() constructor creates a new CustomEvent." href="CustomEvent.html"><code>CustomEvent()</code></a>.</li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCustomEvent%2FinitCustomEvent%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+CustomEvent.initCustomEvent%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about CustomEvent.initCustomEvent() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about CustomEvent.initCustomEvent() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FCustomEvent%2FinitCustomEvent%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about CustomEvent.initCustomEvent() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -616,6 +604,8 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Sole">Sole</a>, 
@@ -630,11 +620,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>,
-                      <time datetime="2015-06-30T10:02:14-07:00">Jun 30, 2015, 10:02:14 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-12-02T14:16:56.730881-08:00">Dec 2, 2016, 2:16:56 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -651,7 +678,7 @@
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../CustomEvent.html"><code>CustomEvent</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Constructor</strong></a><ol><li><a href="CustomEvent.html" title="The CustomEvent() constructor creates a new CustomEvent."><code>CustomEvent()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><em><code>CustomEvent.initCustomEvent()</code></em></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../Event.html"><code>Event</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for DOM</strong></a><ol><li><a href="../Attr.html"><code>Attr</code></a></li><li><a href="../ByteString.html"><code>ByteString</code></a></li><li><a href="../CDATASection.html"><code>CDATASection</code></a></li><li><a href="../CharacterData.html"><code>CharacterData</code></a></li><li><a href="../ChildNode.html"><code>ChildNode</code></a></li><li><a href="../Comment.html"><code>Comment</code></a></li><li><a href="../DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="../DOMError.html"><code>DOMError</code></a></li><li><a href="../DOMErrorHandler.html"><code>DOMErrorHandler</code></a></li><li><a href="../DOMException.html"><code>DOMException</code></a></li><li><a href="../DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="../DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="../DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="../DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="../DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="../DOMObject.html"><code>DOMObject</code></a></li><li><a href="../DOMParser.html"><code>DOMParser</code></a></li><li><a href="../DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="../DOMRect.html"><code>DOMRect</code></a></li><li><a href="../DOMString.html"><code>DOMString</code></a></li><li><a href="../DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="../DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="../DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="../Document.html"><code>Document</code></a></li><li><a href="../DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="../DocumentType.html"><code>DocumentType</code></a></li><li><a href="../Element.html"><code>Element</code></a></li><li><a href="../ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="../Entity.html"><code>Entity</code></a></li><li><a href="../EntityReference.html"><code>EntityReference</code></a></li><li><a href="../Event.html"><code>Event</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li><li><a href="../HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="../MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="../NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="../NodeList.html"><code>NodeList</code></a></li><li><a href="../NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="../ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="../PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="../Range.html"><code>Range</code></a></li><li><a href="../Selection.html"><code>Selection</code></a></li><li><a href="../Text.html"><code>Text</code></a></li><li><a href="../TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="../TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="../TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="../TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="../TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="../USVString.html"><code>USVString</code></a></li><li><a href="../UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="../XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../Document_Object_Model.html">Document Object Model</a></strong></li><li><strong><a href="../CustomEvent.html"><code>CustomEvent</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Constructor</strong></a><ol><li><a title="The CustomEvent() constructor creates a new CustomEvent." href="CustomEvent.html"><code>CustomEvent()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><em><code>initCustomEvent()</code></em></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../Event.html"><code>Event</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for DOM</strong></a><ol><li><a href="../Attr.html"><code>Attr</code></a></li><li><a href="../ByteString.html"><code>ByteString</code></a></li><li><a href="../CDATASection.html"><code>CDATASection</code></a></li><li><a href="../CSSPrimitiveValue.html"><code>CSSPrimitiveValue</code></a></li><li><a href="../CSSValue.html"><code>CSSValue</code></a></li><li><a href="../CSSValueList.html"><code>CSSValueList</code></a></li><li><a href="../CharacterData.html"><code>CharacterData</code></a></li><li><a href="../ChildNode.html"><code>ChildNode</code></a></li><li><a href="../Comment.html"><code>Comment</code></a></li><li><a href="../DOMConfiguration.html"><code>DOMConfiguration</code></a></li><li><a href="../DOMError.html"><code>DOMError</code></a></li><li><a href="../DOMErrorHandler.html"><code>DOMErrorHandler</code></a></li><li><a href="../DOMException.html"><code>DOMException</code></a></li><li><a href="../DOMImplementation.html"><code>DOMImplementation</code></a></li><li><a href="../DOMImplementationList.html"><code>DOMImplementationList</code></a></li><li><a href="../DOMImplementationRegistry.html"><code>DOMImplementationRegistry</code></a></li><li><a href="../DOMImplementationSource.html"><code>DOMImplementationSource</code></a></li><li><a href="../DOMLocator.html"><code>DOMLocator</code></a></li><li><a href="../DOMObject.html"><code>DOMObject</code></a></li><li><a href="../DOMParser.html"><code>DOMParser</code></a></li><li><a href="../DOMPoint.html"><code>DOMPoint</code></a></li><li><a href="../DOMRect.html"><code>DOMRect</code></a></li><li><a href="../DOMString.html"><code>DOMString</code></a></li><li><a href="../DOMTimeStamp.html"><code>DOMTimeStamp</code></a></li><li><a href="../DOMTokenList.html"><code>DOMTokenList</code></a></li><li><a href="../DOMUserData.html"><code>DOMUserData</code></a></li><li><a href="../Document.html"><code>Document</code></a></li><li><a href="../DocumentFragment.html"><code>DocumentFragment</code></a></li><li><a href="../DocumentType.html"><code>DocumentType</code></a></li><li><a href="../Element.html"><code>Element</code></a></li><li><a href="../ElementTraversal.html"><code>ElementTraversal</code></a></li><li><a href="../Entity.html"><code>Entity</code></a></li><li><a href="../EntityReference.html"><code>EntityReference</code></a></li><li><a href="../Event.html"><code>Event</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li><li><a href="../HTMLCollection.html"><code>HTMLCollection</code></a></li><li><a href="../MutationObserver.html"><code>MutationObserver</code></a></li><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../NodeFilter.html"><code>NodeFilter</code></a></li><li><a href="../NodeIterator.html"><code>NodeIterator</code></a></li><li><a href="../NodeList.html"><code>NodeList</code></a></li><li><a href="../NonDocumentTypeChildNode.html"><code>NonDocumentTypeChildNode</code></a></li><li><a href="../ProcessingInstruction.html"><code>ProcessingInstruction</code></a></li><li><a href="../PromiseResolver.html"><code>PromiseResolver</code></a></li><li><a href="../Range.html"><code>Range</code></a></li><li><a href="../Text.html"><code>Text</code></a></li><li><a href="../TextDecoder.html"><code>TextDecoder</code></a></li><li><a href="../TextEncoder.html"><code>TextEncoder</code></a></li><li><a href="../TimeRanges.html"><code>TimeRanges</code></a></li><li><a href="../TreeWalker.html"><code>TreeWalker</code></a></li><li><a href="../TypeInfo.html"><code>TypeInfo</code></a></li><li><a href="../USVString.html"><code>USVString</code></a></li><li><a href="../UserDataHandler.html"><code>UserDataHandler</code></a></li><li><a href="../XMLDocument.html"><code>XMLDocument</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -675,12 +702,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -688,13 +715,26 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Web/API/CustomEvent/initCustomEvent" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/CustomEvent/initCustomEvent">
+            中文 (简体) (zh-CN)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
   
 
         
@@ -707,33 +747,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:37:10 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:15:03 GMT -->
 </body></html>

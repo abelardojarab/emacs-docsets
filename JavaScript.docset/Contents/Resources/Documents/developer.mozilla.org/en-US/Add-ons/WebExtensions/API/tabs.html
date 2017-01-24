@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:23:22 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:19:25 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,19 +12,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
-
-    
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
       
@@ -32,17 +31,17 @@
       
     
 
-  <!-- common social tags -->
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -67,6 +66,12 @@
   <link rel="canonical" href="tabs.html">
 
   
+    
+      <link rel="alternate" hreflang="fr" href="../../../../fr/Add-ons/WebExtensions/API/tabs.html" title="tabs">
+    
+      <link rel="alternate" hreflang="ru" href="../../../../ru/Add-ons/WebExtensions/API/tabs.html" title="tabs">
+    
+  
 
   <!-- document-specific social tags -->
   <meta property="og:title" content="tabs">
@@ -74,10 +79,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs">
   <meta name="twitter:title" content="tabs">
   
-  <meta property="og:description" content="Interact with the browser's tab system. You can use this API to get a list of opened tabs and to create, modify, and rearrange tabs in the browser.">
-  <meta name="description" content="Interact with the browser's tab system. You can use this API to get a list of opened tabs and to create, modify, and rearrange tabs in the browser.">
-  <meta name="twitter:description" content="Interact with the browser's tab system. You can use this API to get a list of opened tabs and to create, modify, and rearrange tabs in the browser.">
+  <meta property="og:description" content="Interact with the browser's tab system.">
+  <meta name="description" content="Interact with the browser's tab system.">
+  <meta name="twitter:description" content="Interact with the browser's tab system.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -95,10 +107,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +160,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +177,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +194,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/Add-ons/WebExtensions/API/tabs" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/Add-ons/WebExtensions/API/tabs" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +217,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../../docs/Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +241,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +255,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -310,13 +305,19 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
-                <li class="smaller">No translations exist for this article.</li>
+                
+                
+                
+                  <li><bdi><a rel="internal" href="../../../../fr/Add-ons/WebExtensions/API/tabs.html" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ru/Add-ons/WebExtensions/API/tabs.html" title="Russian">Русский (ru)</a></bdi></li>
+                
               
 
               
@@ -327,7 +328,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -338,7 +341,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -365,7 +367,7 @@
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" rel="v:url" property="v:title">WebExtensions</a></li>
     
-      <li class="crumb" typeof="v:Breadcrumb"><a href="../API.html" rel="v:url" property="v:title">JavaScript APIs</a></li>
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API.png" rel="v:url" property="v:title">JavaScript APIs</a></li>
     
     <li class="crumb" typeof="v:Breadcrumb" property="v:title">tabs</li>
   </ol></nav>
@@ -397,6 +399,21 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/idupree" title="View profile: idupree">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="idupree" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">idupree</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/kmaglione" title="View profile: kmaglione">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kmaglione" data-src="../../../../../secure.gravatar.com/avatar/3bed1d05aaaecb772cbe11bebdca7eff6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kmaglione</noscript></a>
                 </li>
@@ -424,7 +441,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Types" rel="internal">Types</a></li><li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Functions" rel="internal">Functions</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a><ol><li><a href="#Chrome_incompatibilities" rel="internal">Chrome incompatibilities</a></li></ol></li><li><a href="#Example_add-ons" rel="internal">Example add-ons</a>
+                  <li><a href="#Types" rel="internal">Types</a></li><li><a href="#Properties" rel="internal">Properties</a></li><li><a href="#Functions" rel="internal">Functions</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a><ol><li><a href="#Chrome_incompatibilities" rel="internal">Chrome incompatibilities</a><ol><li><a href="#tabs" rel="internal">tabs</a></li></ol></li></ol></li><li><a href="#Example_add-ons" rel="internal">Example add-ons</a>
                 </li></ol>
               </div>
               
@@ -456,123 +473,515 @@
                   
                     <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
-<p>Interact with the browser's tab system. You can use this API to get a list of opened tabs and to create, modify, and rearrange tabs in the browser.
-</p>
-<p>You can use most of this API without any special permission. However, to access <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.faviconUrl</code>, you need to have the "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. In Firefox this also means you need "tabs" to <a href="Tabs/query-2.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query</code></a> by URL.</p>
+<p>Interact with the browser's tab system.</p>
+
+<p>You can use this API to get a list of opened tabs, filtered by various criteria, and to open, update, move, reload, and remove tabs. You can't directly access the content hosted by tabs using this API, but you can insert JavaScript and CSS into tabs using the <a href="tabs/executeScript.html" title="Injects JavaScript code into a page."><code>tabs.executeScript()</code></a> or <a href="tabs/insertCSS.html" title="Injects CSS into a page."><code>tabs.insertCSS()</code></a> APIs.</p>
+
+<p>You can use most of this API without any special permission. However:</p>
+
+<ul>
+ <li>to access <code>Tab.url</code>, <code>Tab.title</code>, and <code>Tab.favIconUrl</code>, you need to have the "tabs" <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a>. In Firefox this also means you need "tabs" to <a href="tabs/query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query</code></a> by URL.</li>
+ <li>to use <a href="tabs/executeScript.html" title="Injects JavaScript code into a page."><code>tabs.executeScript()</code></a> or <a href="tabs/insertCSS.html" title="Injects CSS into a page."><code>tabs.insertCSS()</code></a> you must have the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission</a> for the tab</li>
+</ul>
+
+<p>Alternatively, you can get these permissions temporarily, only for the currently active tab and only in response to an explicit user action, by asking for the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission">"activeTab" permission</a>.</p>
 
 <h2 id="Types">Types</h2>
 
 <dl>
- <dt><a href="Tabs/MutedInfoReason-2.html" title="Specifies the reason a tab was muted or unmuted."><code>tabs.MutedInfoReason</code></a></dt>
- <dd>An event that caused a muted state change.</dd>
- <dt><a href="Tabs/MutedInfo-2.html" title="Tab muted state and the reason for the last state change."><code>tabs.MutedInfo</code></a></dt>
- <dd>Tab muted state and the reason for the last state change.</dd>
- <dt><a href="Tabs/Tab-2.html" title="This type contains information about a tab."><code>tabs.Tab</code></a></dt>
- <dd>Contains various properties of a single tab.</dd>
- <dt><a href="Tabs/ZoomSettingsMode-2.html" title="Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to automatic."><code>tabs.ZoomSettingsMode</code></a></dt>
- <dd>Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to <code>automatic</code>.</dd>
- <dt><a href="Tabs/ZoomSettingsScope-2.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults to per-origin when in automatic mode, and per-tab otherwise."><code>tabs.ZoomSettingsScope</code></a></dt>
- <dd>Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults to <code>per-origin</code> when in <code>automatic</code> mode, and <code>per-tab</code> otherwise.</dd>
- <dt><a href="Tabs/ZoomSettings-2.html" title="Defines how zoom changes in a tab are handled and at what scope."><code>tabs.ZoomSettings</code></a></dt>
- <dd>Defines how zoom changes in a tab are handled and at what scope.</dd>
- <dt><a href="Tabs/TabStatus-2.html" title="Whether the tabs have completed loading."><code>tabs.TabStatus</code></a></dt>
- <dd>Whether the tabs have completed loading.</dd>
- <dt><a href="Tabs/WindowType-2.html" title="The type of window."><code>tabs.WindowType</code></a></dt>
- <dd>The type of window.</dd>
+ <dt><a href="tabs/MutedInfoReason.html" title="Specifies the reason a tab was muted or unmuted."><code>tabs.MutedInfoReason</code></a></dt>
+ <dd>Specifies the reason a tab was muted or unmuted.</dd>
+ <dt><a href="tabs/MutedInfo.html" title="This object contains a boolean indicating whether the tab is muted, and the reason for the last state change."><code>tabs.MutedInfo</code></a></dt>
+ <dd>This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.</dd>
+ <dt><a href="tabs/Tab.html" title="The type tabs.Tab contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth."><code>tabs.Tab</code></a></dt>
+ <dd>This type contains information about a tab.</dd>
+ <dt><a href="tabs/TabStatus.html" title="Indicates whether the tab has finished loading."><code>tabs.TabStatus</code></a></dt>
+ <dd>Indicates whether the tab has finished loading.</dd>
+ <dt><a href="tabs/WindowType.html" title="The type of window that hosts this tab."><code>tabs.WindowType</code></a></dt>
+ <dd>The type of window that hosts this tab.</dd>
+ <dt><a href="tabs/ZoomSettingsMode.html" title="Defines how zoom changes are handled. Add-ons can pass this value into tabs.setZoomSettings() to control how the browser handles attempts to change zoom settings for a tab. Defaults to &quot;automatic&quot;."><code>tabs.ZoomSettingsMode</code></a></dt>
+ <dd>Defines whether zoom changes are handled by the browser, by the add-on, or are disabled.</dd>
+ <dt><a href="tabs/ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to per-origin when tabs.zoomSettingsMode is &quot;automatic&quot;, and is always per-tab otherwise."><code>tabs.ZoomSettingsScope</code></a></dt>
+ <dd>Defines whether zoom changes will persist for the page's origin, or only take effect in this tab.</dd>
+ <dt><a href="tabs/ZoomSettings.html" title="Defines zoom settings for a tab: mode,&nbsp;scope, and default zoom factor."><code>tabs.ZoomSettings</code></a></dt>
+ <dd>Defines zoom settings <a href="tabs/ZoomSettingsMode.html" title="Defines how zoom changes are handled. Add-ons can pass this value into tabs.setZoomSettings() to control how the browser handles attempts to change zoom settings for a tab. Defaults to &quot;automatic&quot;."><code>mode</code></a>,&nbsp;<a href="tabs/ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to per-origin when tabs.zoomSettingsMode is &quot;automatic&quot;, and is always per-tab otherwise."><code>scope</code></a>, and default zoom factor.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
 
 <dl>
- <dt><a href="Tabs/TAB_ID_NONE-2.html" title="An ID which represents the absence of a browser tab."><code>tabs.TAB_ID_NONE</code></a></dt>
- <dd>An ID which represents the absence of a browser tab.</dd>
+ <dt><a href="tabs/TAB_ID_NONE.html" title="A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows)."><code>tabs.TAB_ID_NONE</code></a></dt>
+ <dd>A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).</dd>
 </dl>
 
 <h2 id="Functions">Functions</h2>
 
 <dl>
- <dt><a href="Tabs/get-2.html" title="Retrieves details about the specified tab."><code>tabs.get()</code></a></dt>
- <dd>Retrieves details about the specified tab.</dd>
- <dt><a href="Tabs/getCurrent-2.html" title="Gets the tab that this script call is being made from. May be undefined if called from a non-tab context (for example: a background page or popup view)."><code>tabs.getCurrent()</code></a></dt>
- <dd>Gets the tab that this script call is being made from. May be undefined if called from a non-tab context (for example: a background page or popup view).</dd>
- <dt><a href="Tabs/connect-2.html" title="Connects to the content script(s) in the specified tab. The runtime.onConnect event is fired in each content script running in the specified tab for the current extension. For more details, see content script messaging."><code>tabs.connect()</code></a></dt>
- <dd>Connects to the content script(s) in the specified tab. The <a href="Runtime/onConnect-2.html" title="Fired when a connection is made from either an extension process or a content script."><code>runtime.onConnect</code></a> event is fired in each content script running in the specified tab for the current extension. For more details, see <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts">content script messaging</a>.</dd>
- <dt><a href="Tabs/sendRequest-2.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>tabs.sendRequest()</code></a></dt>
- <dd>Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The <a href="Extension/onRequest-2.html" title="Fired when a request is sent from either an extension process or a content script."><code>extension.onRequest</code></a> event is fired in each content script running in the specified tab for the current extension.</dd>
- <dt><a href="Tabs/sendMessage-2.html" title="Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension."><code>tabs.sendMessage()</code></a></dt>
- <dd>Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The <a href="Runtime/onMessage-2.html" title="Fired when a message is sent from either an extension process or a content script."><code>runtime.onMessage</code></a> event is fired in each content script running in the specified tab for the current extension.</dd>
- <dt><a href="Tabs/getSelected-2.html" title="Gets the tab that is selected in the specified window."><code>tabs.getSelected()</code></a></dt>
- <dd>Gets the tab that is selected in the specified window.</dd>
- <dt><a href="Tabs/getAllInWindow-2.html" title="The documentation about this has not yet been written; please consider contributing!"><code>tabs.getAllInWindow()</code></a></dt>
- <dd>Gets details about all tabs in the specified window.</dd>
- <dt><a href="Tabs/create-2.html" title="Creates a new tab."><code>tabs.create()</code></a></dt>
+ <dt><a href="tabs/connect.html" title="Call this function to set up a connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab. This function returns a runtime.Port object."><code>tabs.connect()</code></a></dt>
+ <dd>Sets up a messaging connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> running in the specified tab.</dd>
+ <dt><a href="tabs/create.html" title="Creates a new tab."><code>tabs.create()</code></a></dt>
  <dd>Creates a new tab.</dd>
- <dt><a href="Tabs/duplicate-2.html" title="Duplicates a tab."><code>tabs.duplicate()</code></a></dt>
- <dd>Duplicates a tab.</dd>
- <dt><a href="Tabs/query-2.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>tabs.query()</code></a></dt>
- <dd>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</dd>
- <dt><a href="Tabs/highlight-2.html" title="Highlights the given tabs."><code>tabs.highlight()</code></a></dt>
- <dd>Highlights the given tabs.</dd>
- <dt><a href="Tabs/update-2.html" title="Modifies the properties of a tab. Properties that are not specified in updateProperties are not modified."><code>tabs.update()</code></a></dt>
- <dd>Modifies the properties of a tab. Properties that are not specified in <var>updateProperties</var> are not modified.</dd>
- <dt><a href="Tabs/move-2.html" title="Moves one or more tabs to a new position in the same window or in a different window."><code>tabs.move()</code></a></dt>
- <dd>Moves one or more tabs to a new position within its window, or to a new window. Note that tabs can only be moved to and from normal (<code>window.type === "normal"</code>) windows.</dd>
- <dt><a href="Tabs/reload-2.html" title="Reload a tab."><code>tabs.reload()</code></a></dt>
- <dd>Reload a tab.</dd>
- <dt><a href="Tabs/remove-2.html" title="Closes one or more tabs."><code>tabs.remove()</code></a></dt>
- <dd>Closes one or more tabs.</dd>
- <dt><a href="Tabs/detectLanguage-2.html" title="Detects the primary language of the content in a tab."><code>tabs.detectLanguage()</code></a></dt>
+ <dt><a href="tabs/captureVisibleTab.html" title="Creates a data URI encoding an image of the visible area of the currently active tab in the specified window. You must have the &lt;all_urls&gt; permission to use this method."><code>tabs.captureVisibleTab()</code></a></dt>
+ <dd>Creates a data URI encoding an image of the visible area of the currently active tab in the specified window.</dd>
+ <dt><a href="tabs/detectLanguage.html" title="Detects the primary language of the content in a tab, using the Compact Language Detector (CLD)."><code>tabs.detectLanguage()</code></a></dt>
  <dd>Detects the primary language of the content in a tab.</dd>
- <dt><a href="Tabs/captureVisibleTab-2.html" title="Captures the visible area of the currently active tab in the specified window. You must have &lt;all_urls&gt; permission to use this method."><code>tabs.captureVisibleTab()</code></a></dt>
- <dd>Captures the visible area of the currently active tab in the specified window. You must have <code>&lt;all_urls&gt;</code> permission to use this method.</dd>
- <dt><a href="Tabs/executeScript-2.html" title="Injects JavaScript code into a page. For details, see the programmatic injection section of the content scripts doc."><code>tabs.executeScript()</code></a></dt>
- <dd>Injects JavaScript code into a page. For details, see the programmatic injection section of the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts">content scripts</a> doc.</dd>
- <dt><a href="Tabs/insertCSS-2.html" title="Injects CSS into a page. For details, see the programmatic injection section of the content scripts doc."><code>tabs.insertCSS()</code></a></dt>
- <dd>Injects CSS into a page. For details, see the programmatic injection section of the <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts">content scripts</a> doc.</dd>
- <dt><a href="Tabs/setZoom-2.html" title="Zooms a specified tab."><code>tabs.setZoom()</code></a></dt>
- <dd>Zooms a specified tab.</dd>
- <dt><a href="Tabs/getZoom-2.html" title="Gets the current zoom factor of a specified tab."><code>tabs.getZoom()</code></a></dt>
- <dd>Gets the current zoom factor of a specified tab.</dd>
- <dt><a href="Tabs/setZoomSettings-2.html" title="Sets the zoom settings for a specified tab, which define how zoom changes are handled. These settings are reset to defaults upon navigating the tab."><code>tabs.setZoomSettings()</code></a></dt>
- <dd>Sets the zoom settings for a specified tab, which define how zoom changes are handled. These settings are reset to defaults upon navigating the tab.</dd>
- <dt><a href="Tabs/getZoomSettings-2.html" title="Gets the current zoom settings of a specified tab."><code>tabs.getZoomSettings()</code></a></dt>
- <dd>Gets the current zoom settings of a specified tab.</dd>
+ <dt><a href="tabs/duplicate.html" title="Duplicates a tab, given its ID."><code>tabs.duplicate()</code></a></dt>
+ <dd>Duplicates a tab.</dd>
+ <dt><a href="tabs/executeScript.html" title="Injects JavaScript code into a page."><code>tabs.executeScript()</code></a></dt>
+ <dd>Injects JavaScript code into a page.</dd>
+ <dt><a href="tabs/get.html" title="Given a tab ID, get the tab's details as a tabs.Tab object."><code>tabs.get()</code></a></dt>
+ <dd>Retrieves details about the specified tab.</dd>
+ <dt><a href="tabs/getAllInWindow.html" title="Gets details about all tabs in the specified window."><code>tabs.getAllInWindow()</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Gets details about all tabs in the specified window.</dd>
+ <dt><a href="tabs/getCurrent.html" title="Get&nbsp;a tabs.Tab containing information about the tab that this script is running in."><code>tabs.getCurrent()</code></a></dt>
+ <dd>Gets information about the tab that this script is running in, as a <a href="Tabs/Tab-2.html" title="This type contains information about a tab."><code>tabs.Tab</code></a> object.</dd>
+ <dt><a href="tabs/getSelected.html" title="Gets the tab that is selected in the specified window."><code>tabs.getSelected()</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Gets the tab that is selected in the specified window.</dd>
+ <dt><a href="tabs/getZoom.html" title="Gets the current zoom factor for the specified tab."><code>tabs.getZoom()</code></a></dt>
+ <dd>Gets the current zoom factor of the specified tab.</dd>
+ <dt><a href="tabs/getZoomSettings.html" title="Gets the current zoom settings for a specified tab."><code>tabs.getZoomSettings()</code></a></dt>
+ <dd>Gets the current zoom settings for the specified tab.</dd>
+ <dt><a href="tabs/highlight.html" title="A Promise that will be fulfilled with a&nbsp;windows.Window object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message."><code>tabs.highlight()</code></a></dt>
+ <dd>Highlights one or more tabs.</dd>
+ <dt><a href="tabs/insertCSS.html" title="Injects CSS into a page."><code>tabs.insertCSS()</code></a></dt>
+ <dd>Injects CSS into a page.</dd>
+ <dt><a href="tabs/removeCSS.html" title="Removes from a page CSS which was previously injected by a call to tabs.insertCSS()."><code>tabs.removeCSS()</code></a></dt>
+ <dd>Removes from a page CSS which was previously injected by calling <a href="tabs/insertCSS.html" title="Injects CSS into a page."><code>tabs.insertCSS()</code></a>.</dd>
+ <dt><a href="tabs/move.html" title="Moves one or more tabs to a new position in the same window or to a different window."><code>tabs.move()</code></a></dt>
+ <dd>Moves one or more tabs to a new position in the same window or to a different window.</dd>
+ <dt><a href="tabs/query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>tabs.query()</code></a></dt>
+ <dd>Gets all tabs that have the specified properties, or all tabs if no properties are specified.</dd>
+ <dt><a href="tabs/reload.html" title="Reload a tab, optionally bypassing the local web cache."><code>tabs.reload()</code></a></dt>
+ <dd>Reload a tab, optionally bypassing the local web cache.</dd>
+ <dt><a href="tabs/remove.html" title="Closes one or more tabs."><code>tabs.remove()</code></a></dt>
+ <dd>Closes one or more tabs.</dd>
+ <dt><a href="tabs/sendMessage.html" title="Sends a single message from the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab."><code>tabs.sendMessage()</code></a></dt>
+ <dd>Sends a single message to the content script(s) in the specified tab.</dd>
+ <dt><a href="tabs/sendRequest.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>tabs.sendRequest()</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Sends a single request to the content script(s) in the specified tab. <strong>Deprecated</strong>: use <a href="tabs/sendMessage.html" title="Sends a single message from the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab."><code>tabs.sendMessage()</code></a> instead.</dd>
+ <dt><a href="tabs/setZoom.html" title="Zooms the specified tab."><code>tabs.setZoom()</code></a></dt>
+ <dd>Zooms the specified tab.</dd>
+ <dt><a href="tabs/setZoomSettings.html" title="Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab."><code>tabs.setZoomSettings()</code></a></dt>
+ <dd>Sets the zoom settings for the specified tab.</dd>
+ <dt><a href="tabs/update.html" title="Navigate the tab to a new URL, or modify other properties of the tab."><code>tabs.update()</code></a></dt>
+ <dd>Navigate the tab to a new URL, or modify other properties of the tab.</dd>
 </dl>
 
 <h2 id="Events">Events</h2>
 
 <dl>
- <dt><a href="Tabs/onCreated-2.html" title="Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>tabs.onCreated</code></a></dt>
- <dd>Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set.</dd>
- <dt><a href="Tabs/onUpdated-2.html" title="Fired when a tab is updated."><code>tabs.onUpdated</code></a></dt>
- <dd>Fired when a tab is updated.</dd>
- <dt><a href="Tabs/onMoved-2.html" title="Fired when a tab is moved within a window. Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see tabs.onDetached."><code>tabs.onMoved</code></a></dt>
- <dd>Fired when a tab is moved within a window. Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see <a href="Tabs/onDetached-2.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>tabs.onDetached</code></a>.</dd>
- <dt><a href="Tabs/onSelectionChanged-2.html" title="Fires when the selected tab in a window changes."><code>tabs.onSelectionChanged</code></a></dt>
- <dd>Fires when the selected tab in a window changes.</dd>
- <dt><a href="Tabs/onActiveChanged-2.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>tabs.onActiveChanged</code></a></dt>
- <dd>Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to <a href="Tabs/onUpdated-2.html" title="Fired when a tab is updated."><code>tabs.onUpdated</code></a> events to be notified when a URL is set.</dd>
- <dt><a href="Tabs/onActivated-2.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>tabs.onActivated</code></a></dt>
- <dd>Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set.</dd>
- <dt><a href="Tabs/onHighlightChanged-2.html" title="Fired when the highlighted or selected tabs in a window changes."><code>tabs.onHighlightChanged</code></a></dt>
- <dd>Fired when the highlighted or selected tabs in a window changes.</dd>
- <dt><a href="Tabs/onHighlighted-2.html" title="Fired when the set of highlighted tabs in a window changes."><code>tabs.onHighlighted</code></a></dt>
- <dd>Fired when the highlighted or selected tabs in a window changes.</dd>
- <dt><a href="Tabs/onDetached-2.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>tabs.onDetached</code></a></dt>
- <dd>Fired when a tab is detached from a window, for example because it is being moved between windows.</dd>
- <dt><a href="Tabs/onAttached-2.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>tabs.onAttached</code></a></dt>
+ <dt><a href="tabs/onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>tabs.onActivated</code></a></dt>
+ <dd>Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired.</dd>
+ <dt><a href="tabs/onActiveChanged.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>tabs.onActiveChanged</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Fires when the selected tab in a window changes. <strong>Deprecated:</strong> use <a href="tabs/onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>tabs.onActivated</code></a> instead.</dd>
+ <dt><a href="tabs/onAttached.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>tabs.onAttached</code></a></dt>
  <dd>Fired when a tab is attached to a window, for example because it was moved between windows.</dd>
- <dt><a href="Tabs/onRemoved-2.html" title="Fired when a tab is closed."><code>tabs.onRemoved</code></a></dt>
+ <dt><a href="tabs/onCreated.html" title="Fired when a tab is created."><code>tabs.onCreated</code></a></dt>
+ <dd>Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired.</dd>
+ <dt><a href="tabs/onDetached.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>tabs.onDetached</code></a></dt>
+ <dd>Fired when a tab is detached from a window, for example because it is being moved between windows.</dd>
+ <dt><a href="tabs/onHighlightChanged.html" title="Fired when the highlighted or selected tabs in a window changes."><code>tabs.onHighlightChanged</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Fired when the highlighted or selected tabs in a window change. <strong>Deprecated:</strong> use <a href="tabs/onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>tabs.onHighlighted</code></a> instead.</dd>
+ <dt><a href="tabs/onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>tabs.onHighlighted</code></a></dt>
+ <dd>Fired when the highlighted or selected tabs in a window change.</dd>
+ <dt><a href="tabs/onMoved.html" title="Fired when a tab is moved within a window."><code>tabs.onMoved</code></a></dt>
+ <dd>Fired when a tab is moved within a window.</dd>
+ <dt><a href="tabs/onRemoved.html" title="Fired when a tab is closed."><code>tabs.onRemoved</code></a></dt>
  <dd>Fired when a tab is closed.</dd>
- <dt><a href="Tabs/onReplaced-2.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>tabs.onReplaced</code></a></dt>
- <dd>Fired when a tab is replaced with another tab due to prerendering or instant.</dd>
- <dt><a href="Tabs/onZoomChange-2.html" title="Fired when a tab is zoomed."><code>tabs.onZoomChange</code></a></dt>
+ <dt><a href="tabs/onReplaced.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>tabs.onReplaced</code></a></dt>
+ <dd>Fired when a tab is replaced with another tab due to prerendering.</dd>
+ <dt><a href="tabs/onSelectionChanged.html" title="Fires when the selected tab in a window changes."><code>tabs.onSelectionChanged</code></a> <span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></dt>
+ <dd>Fires when the selected tab in a window changes. <strong>Deprecated:</strong> use <a href="tabs/onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>tabs.onActivated</code></a> instead.</dd>
+ <dt><a href="tabs/onUpdated.html" title="Fired when a tab is updated."><code>tabs.onUpdated</code></a></dt>
+ <dd>Fired when a tab is updated.</dd>
+ <dt><a href="tabs/onZoomChange.html" title="Fired when a tab is zoomed."><code>tabs.onZoomChange</code></a></dt>
  <dd>Fired when a tab is zoomed.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p></p><div class="htab">    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a>    <ul>        <li class="selected"><a>Desktop</a></li>        <li><a>Mobile</a></li>    </ul><div id="compat-desktop"><table class="compat-table"><tbody><tr><th></th><th>Edge</th><th>Firefox</th><th>Chrome</th><th>Opera</th></tr><tr><td><code>MutedInfo</code></td><td>?</td><td>47.0</td><td>Yes</td><td>33</td></tr><tr><td><code>MutedInfoReason</code></td><td>?</td><td>47.0</td><td>Yes</td><td>33</td></tr><tr><td><code>TAB_ID_NONE</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>Tab</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>TabStatus</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>WindowType</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>ZoomSettings</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>ZoomSettingsMode</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>ZoomSettingsScope</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>captureVisibleTab</code></td><td>?</td><td>47.0</td><td>Yes</td><td>33</td></tr><tr><td><code>connect</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>create</code></td><td>?</td><td>45.0<a href="#create-Firefox"><strong><sup>1</sup></strong></a></td><td>Yes</td><td>33</td></tr><tr><td><code>detectLanguage</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>duplicate</code></td><td>?</td><td>47.0</td><td>Yes</td><td>33</td></tr><tr><td><code>executeScript</code></td><td>?</td><td>43.0</td><td>Yes</td><td>33</td></tr><tr><td><code>get</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>getAllInWindow</code></td><td>?</td><td>45.0</td><td>Yes</td><td>No</td></tr><tr><td><code>getCurrent</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>getSelected</code></td><td>?</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><code>getZoom</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>getZoomSettings</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>highlight</code></td><td>?</td><td>45.0</td><td>Yes</td><td>No</td></tr><tr><td><code>insertCSS</code></td><td>?</td><td>47.0</td><td>Yes</td><td>33</td></tr><tr><td><code>move</code></td><td>?</td><td>46.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onActivated</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onActiveChanged</code></td><td>?</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><code>onAttached</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onCreated</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onDetached</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onHighlightChanged</code></td><td>?</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><code>onHighlighted</code></td><td>?</td><td>45.0</td><td>Yes</td><td>No</td></tr><tr><td><code>onMoved</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onRemoved</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onReplaced</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onSelectionChanged</code></td><td>?</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><code>onUpdated</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>onZoomChange</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>query</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>reload</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>remove</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>sendMessage</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>sendRequest</code></td><td>?</td><td>No</td><td>Yes</td><td>No</td></tr><tr><td><code>setZoom</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>setZoomSettings</code></td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr><tr><td><code>update</code></td><td>?</td><td>45.0<a href="#update-Firefox"><strong><sup>2</sup></strong></a></td><td>Yes</td><td>33</td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><tbody><tr><th></th><th>Firefox</th></tr><tr><td><code>MutedInfo</code></td><td>No</td></tr><tr><td><code>MutedInfoReason</code></td><td>No</td></tr><tr><td><code>TAB_ID_NONE</code></td><td>No</td></tr><tr><td><code>Tab</code></td><td>No</td></tr><tr><td><code>TabStatus</code></td><td>No</td></tr><tr><td><code>WindowType</code></td><td>No</td></tr><tr><td><code>ZoomSettings</code></td><td>No</td></tr><tr><td><code>ZoomSettingsMode</code></td><td>No</td></tr><tr><td><code>ZoomSettingsScope</code></td><td>No</td></tr><tr><td><code>captureVisibleTab</code></td><td>No</td></tr><tr><td><code>connect</code></td><td>No</td></tr><tr><td><code>create</code></td><td>No</td></tr><tr><td><code>detectLanguage</code></td><td>No</td></tr><tr><td><code>duplicate</code></td><td>No</td></tr><tr><td><code>executeScript</code></td><td>No</td></tr><tr><td><code>get</code></td><td>No</td></tr><tr><td><code>getAllInWindow</code></td><td>No</td></tr><tr><td><code>getCurrent</code></td><td>No</td></tr><tr><td><code>getSelected</code></td><td>No</td></tr><tr><td><code>getZoom</code></td><td>No</td></tr><tr><td><code>getZoomSettings</code></td><td>No</td></tr><tr><td><code>highlight</code></td><td>No</td></tr><tr><td><code>insertCSS</code></td><td>No</td></tr><tr><td><code>move</code></td><td>No</td></tr><tr><td><code>onActivated</code></td><td>No</td></tr><tr><td><code>onActiveChanged</code></td><td>No</td></tr><tr><td><code>onAttached</code></td><td>No</td></tr><tr><td><code>onCreated</code></td><td>No</td></tr><tr><td><code>onDetached</code></td><td>No</td></tr><tr><td><code>onHighlightChanged</code></td><td>No</td></tr><tr><td><code>onHighlighted</code></td><td>No</td></tr><tr><td><code>onMoved</code></td><td>No</td></tr><tr><td><code>onRemoved</code></td><td>No</td></tr><tr><td><code>onReplaced</code></td><td>No</td></tr><tr><td><code>onSelectionChanged</code></td><td>No</td></tr><tr><td><code>onUpdated</code></td><td>No</td></tr><tr><td><code>onZoomChange</code></td><td>No</td></tr><tr><td><code>query</code></td><td>No</td></tr><tr><td><code>reload</code></td><td>No</td></tr><tr><td><code>remove</code></td><td>No</td></tr><tr><td><code>sendMessage</code></td><td>No</td></tr><tr><td><code>sendRequest</code></td><td>No</td></tr><tr><td><code>setZoom</code></td><td>No</td></tr><tr><td><code>setZoomSettings</code></td><td>No</td></tr><tr><td><code>update</code></td><td>No</td></tr></tbody></table></div></div><p><a name="create-Firefox">1. The 'selected' option is deprecated and not supported in Firefox. Use 'active' instead.</a><br><a name="update-Firefox">2. It's not possible to update the "highlighted" and "selected" properties.</a><br></p><p></p>
+<p></p><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="tabs/MutedInfo.html"><code>MutedInfo</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/MutedInfoReason.html"><code>MutedInfoReason</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/TAB_ID_NONE.html"><code>TAB_ID_NONE</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/Tab.html"><code>Tab</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="tabs/Tab.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/TabStatus.html"><code>TabStatus</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/WindowType.html"><code>WindowType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/ZoomSettings.html"><code>ZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/ZoomSettingsMode.html"><code>ZoomSettingsMode</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/ZoomSettingsScope.html"><code>ZoomSettingsScope</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/captureVisibleTab.html"><code>captureVisibleTab</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/connect.html"><code>connect</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="tabs/create.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="tabs/create.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/detectLanguage.html"><code>detectLanguage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/duplicate.html"><code>duplicate</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/executeScript.html"><code>executeScript</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">43.0 <a href="tabs/executeScript.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/getAllInWindow.html"><code>getAllInWindow</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/getCurrent.html"><code>getCurrent</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/getSelected.html"><code>getSelected</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/getZoom.html"><code>getZoom</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/getZoomSettings.html"><code>getZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/highlight.html"><code>highlight</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/insertCSS.html"><code>insertCSS</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0 <a href="tabs/insertCSS.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/move.html"><code>move</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">46.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onActivated.html"><code>onActivated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onActiveChanged.html"><code>onActiveChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onAttached.html"><code>onAttached</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onCreated.html"><code>onCreated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onDetached.html"><code>onDetached</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onHighlightChanged.html"><code>onHighlightChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onHighlighted.html"><code>onHighlighted</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onMoved.html"><code>onMoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onRemoved.html"><code>onRemoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onReplaced.html"><code>onReplaced</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onSelectionChanged.html"><code>onSelectionChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onUpdated.html"><code>onUpdated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/onZoomChange.html"><code>onZoomChange</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/query.html"><code>query</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="tabs/query.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="tabs/query.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/reload.html"><code>reload</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/removeCSS.html"><code>removeCSS</code></a></td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0 <a href="tabs/removeCSS.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/sendMessage.html"><code>sendMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/sendRequest.html"><code>sendRequest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/setZoom.html"><code>setZoom</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/setZoomSettings.html"><code>setZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="tabs/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="tabs/update.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="tabs/update.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><p></p>
 
 <div class="hidden note">
 <p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="https://developer.mozilla.org/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
@@ -580,35 +989,21 @@
 <p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
 </div>
 
-<p></p><h3 id="Chrome_incompatibilities">Chrome incompatibilities</h3>
+<p></p><h3 id="Chrome_incompatibilities">Chrome incompatibilities</h3><h4 id="tabs"><a href="tabs.html">tabs</a></h4>
 
-<ul><li>Firefox does not support:
-  <ul><li><code>sendRequest()</code></li>
-   <li><code>getSelected()</code></li>
-   <li><code>onActiveChanged</code></li>
-   <li><code>onHighlightChanged</code></li>
-   <li><code>onSelectionChanged</code></li>
-  </ul></li>
- <li>Additionally:
-  <ul><li>Firefox treats <code>highlighted</code> and <code>active</code> as the same, since Firefox has no concept of selecting multiple tabs.</li>
-   <li>In Firefox, you need the <code>tabs</code> <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permission</a> if you want to include <code>url</code> in the <code>queryInfo</code> parameter to <code><a href="tabs/query.html">tabs.query()</a></code>.</li>
-   <li>
-    <p>In Firefox, relative URLs passed into <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code> are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:</p>
+<ul><li>
+  <p>In Firefox, relative URLs passed into <code>tabs.executeScript()</code> or <code>tabs.insertCSS()</code> are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:</p>
 
-    <pre class="line-numbers  language-html"><code class="language-html">/path/to/script.js</code></pre>
-   </li>
-   <li>In Firefox, you can't open (using <a href="Tabs/create-2.html" title="Creates a new tab."><code>tabs.create</code></a>), or navigate to (using <a href="Tabs/update-2.html" title="Modifies the properties of a tab. Properties that are not specified in updateProperties are not modified."><code>tabs.update</code></a>) privileged URLs:
-    <ul><li>chrome: URLs</li>
-     <li>javascript: URLs</li>
-     <li>data: URLs</li>
-     <li>privileged about: URLs (for example, about:config, about:addons, about:debugging)</li>
-    </ul></li>
-  </ul></li>
-</ul> <h2 id="Example_add-ons">Example add-ons</h2><ul><li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify" class="external">beastify</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it" class="external">Bookmark it!</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out" class="external">chill-out</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui" class="external">inpage-toolbar-ui</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button" class="external">open-my-page-button</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs" class="external">tabs-tabs-tabs</a></li></ul><p></p>
+  <pre class="line-numbers  language-html"><code class="language-html">/path/to/script.js</code></pre>
+ </li>
+ <li>In Firefox, querying tabs by URL with <code>tabs.query() </code>requires&nbsp;<code>"tabs"</code>&nbsp;permission. In Chrome, it's possible without the <code>"tabs"</code>&nbsp;permission but will limit results to tabs whose URLs match host permissions.</li>
+</ul> <h2 id="Example_add-ons">Example add-ons</h2><ul><li><a href="https://github.com/mdn/webextensions-examples/tree/master/apply-css" class="external">apply-css</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/beastify" class="external">beastify</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it" class="external">bookmark-it</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/chill-out" class="external">chill-out</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo" class="external">context-menu-demo</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/cookie-bg-picker" class="external">cookie-bg-picker</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/history-deleter" class="external">history-deleter</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/list-cookies" class="external">list-cookies</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button" class="external">open-my-page-button</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs" class="external">tabs-tabs-tabs</a></li></ul><p></p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/tabs" class="external"><code>chrome.tabs</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json" class="external"><code>tabs.json</code></a> in the Chromium code.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">
@@ -644,25 +1039,6 @@
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+tabs+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about tabs on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about tabs on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Ftabs%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about tabs on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -702,6 +1078,12 @@
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
         <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
     
+        <a href="https://developer.mozilla.org/en-US/profiles/idupree">idupree</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/kmaglione">kmaglione</a>
     
                     </div>
@@ -711,10 +1093,47 @@
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
                       <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>,
-                      <time datetime="2016-04-15T11:49:08-07:00">Apr 15, 2016, 11:49:08 AM</time>
+                      <time datetime="2016-11-07T16:30:28-08:00">Nov 7, 2016, 4:30:28 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -737,30 +1156,64 @@
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites">Prerequisites</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_Installation">Packaging and Installation</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough">Walkthrough</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Examples</a> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_">What are WebExtensions?</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example WebExtensions</a> 
       </li></ol> 
     </li> 
      
-    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Guides">Guides</a> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#How_to">How to</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome">Porting from Google Chrome</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a> 
-      </li></ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Concepts">Concepts</a> 
+      <ol> 
+        <li><a href="../API.html">Using the JavaScript APIs</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components">User interface components</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Porting">Porting</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox add-on</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Firefox_workflow">Firefox workflow</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions and the Add-on ID</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">Publishing your WebExtension</a></li> 
+ 
+      </ol> 
     </li>   
      
-    <li data-default-state="open"><a href="../API.html">JavaScript APIs</a> 
-     <ol><li><a href="alarms.html">alarms</a></li><li><a href="bookmarks.html">bookmarks</a></li><li><a href="browserAction.html">browserAction</a></li><li><a href="commands.html">commands</a></li><li><a href="contextMenus.html">contextMenus</a></li><li><a href="cookies.html">cookies</a></li><li><a href="downloads.html">downloads</a></li><li><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="extension.html">extension</a></li><li><a href="extensionTypes.html">extensionTypes</a></li><li><a href="i18n.html">i18n</a></li><li><a href="idle.html">idle</a></li><li><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API/notifications.png">notifications</a></li><li><a href="pageAction.html">pageAction</a></li><li><a href="runtime.html">runtime</a></li><li><a href="storage.html">storage</a></li><li class="webextension-api-sidebar"><a href="tabs.html">tabs</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="tabs/captureVisibleTab.html" title="Captures the visible area of the currently active tab in the specified window. You must have &lt;all_urls&gt; permission to use this method."><code>captureVisibleTab()</code></a></li><li><a href="tabs/connect.html" title="Connects to the content script(s) in the specified tab. The runtime.onConnect event is fired in each content script running in the specified tab for the current extension. For more details, see content script messaging."><code>connect()</code></a></li><li><a href="tabs/create.html" title="Creates a new tab."><code>create()</code></a></li><li><a href="tabs/detectLanguage.html" title="Detects the primary language of the content in a tab."><code>detectLanguage()</code></a></li><li><a href="tabs/duplicate.html" title="Duplicates a tab."><code>duplicate()</code></a></li><li><a href="tabs/executeScript.html" title="Injects JavaScript code into a page. For details, see the programmatic injection section of the content scripts doc."><code>executeScript()</code></a></li><li><a href="tabs/get.html" title="Retrieves details about the specified tab."><code>get()</code></a></li><li><a href="tabs/getAllInWindow.html" title=""><code>getAllInWindow()</code></a></li><li><a href="tabs/getCurrent.html" title="Gets the tab that this script call is being made from. May be undefined if called from a non-tab context (for example: a background page or popup view)."><code>getCurrent()</code></a></li><li><a href="tabs/getSelected.html" title="Gets the tab that is selected in the specified window."><code>getSelected()</code></a></li><li><a href="tabs/getZoom.html" title="Gets the current zoom factor of a specified tab."><code>getZoom()</code></a></li><li><a href="tabs/getZoomSettings.html" title="Gets the current zoom settings of a specified tab."><code>getZoomSettings()</code></a></li><li><a href="tabs/highlight.html" title="Highlights the given tabs."><code>highlight()</code></a></li><li><a href="tabs/insertCSS.html" title="Injects CSS into a page. For details, see the programmatic injection section of the content scripts doc."><code>insertCSS()</code></a></li><li><a href="tabs/move.html" title="Moves one or more tabs to a new position in the same window or in a different window."><code>move()</code></a></li><li><a href="tabs/query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query()</code></a></li><li><a href="tabs/reload.html" title="Reload a tab."><code>reload()</code></a></li><li><a href="tabs/remove.html" title="Closes one or more tabs."><code>remove()</code></a></li><li><a href="tabs/sendMessage.html" title="Sends a single message to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The runtime.onMessage event is fired in each content script running in the specified tab for the current extension."><code>sendMessage()</code></a></li><li><a href="tabs/sendRequest.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>sendRequest()</code></a></li><li><a href="tabs/setZoom.html" title="Zooms a specified tab."><code>setZoom()</code></a></li><li><a href="tabs/setZoomSettings.html" title="Sets the zoom settings for a specified tab, which define how zoom changes are handled. These settings are reset to defaults upon navigating the tab."><code>setZoomSettings()</code></a></li><li><a href="tabs/update.html" title="Modifies the properties of a tab. Properties that are not specified in updateProperties are not modified."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="tabs/TAB_ID_NONE.html" title="An ID which represents the absence of a browser tab."><code>TAB_ID_NONE</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="tabs/MutedInfo.html" title="Tab muted state and the reason for the last state change."><code>MutedInfo</code></a></li><li><a href="tabs/MutedInfoReason.html" title="Specifies the reason a tab was muted or unmuted."><code>MutedInfoReason</code></a></li><li><a href="tabs/Tab.html" title="This type contains information about a tab."><code>Tab</code></a></li><li><a href="tabs/TabStatus.html" title="Whether the tabs have completed loading."><code>TabStatus</code></a></li><li><a href="tabs/WindowType.html" title="The type of window."><code>WindowType</code></a></li><li><a href="tabs/ZoomSettings.html" title="Defines how zoom changes in a tab are handled and at what scope."><code>ZoomSettings</code></a></li><li><a href="tabs/ZoomSettingsMode.html" title="Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to automatic."><code>ZoomSettingsMode</code></a></li><li><a href="tabs/ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults to per-origin when in automatic mode, and per-tab otherwise."><code>ZoomSettingsScope</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="tabs/onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>onActivated</code></a></li><li><a href="tabs/onActiveChanged.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActiveChanged</code></a></li><li><a href="tabs/onAttached.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>onAttached</code></a></li><li><a href="tabs/onCreated.html" title="Fired when a tab is created. Note that the tab's URL may not be set at the time this event fired, but you can listen to onUpdated events to be notified when a URL is set."><code>onCreated</code></a></li><li><a href="tabs/onDetached.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>onDetached</code></a></li><li><a href="tabs/onHighlightChanged.html" title="Fired when the highlighted or selected tabs in a window changes."><code>onHighlightChanged</code></a></li><li><a href="tabs/onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>onHighlighted</code></a></li><li><a href="tabs/onMoved.html" title="Fired when a tab is moved within a window. Only one move event is fired, representing the tab the user directly moved. Move events are not fired for the other tabs that must move in response. This event is not fired when a tab is moved between windows. For that, see tabs.onDetached."><code>onMoved</code></a></li><li><a href="tabs/onRemoved.html" title="Fired when a tab is closed."><code>onRemoved</code></a></li><li><a href="tabs/onReplaced.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>onReplaced</code></a></li><li><a href="tabs/onSelectionChanged.html" title="Fires when the selected tab in a window changes."><code>onSelectionChanged</code></a></li><li><a href="tabs/onUpdated.html" title="Fired when a tab is updated."><code>onUpdated</code></a></li><li><a href="tabs/onZoomChange.html" title="Fired when a tab is zoomed."><code>onZoomChange</code></a></li></ol></li></ol></li><li><a href="webNavigation.html">webNavigation</a></li><li><a href="webRequest.html">webRequest</a></li><li><a href="windows.html">windows</a></li></ol> 
+    <li data-default-state="open"><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API.png">JavaScript APIs</a> 
+     <ol><li><a href="../Browser_support_for_JavaScript_APIs.html">Browser support for JavaScript APIs</a></li><li><a href="alarms.html">alarms</a></li><li><a href="bookmarks.html">bookmarks</a></li><li><a href="browserAction.html">browserAction</a></li><li><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API/commands.png">commands</a></li><li><a href="contextMenus.html">contextMenus</a></li><li><a href="cookies.html">cookies</a></li><li><a href="downloads.html">downloads</a></li><li><a href="../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="extension.html">extension</a></li><li><a href="extensionTypes.html">extensionTypes</a></li><li><a href="history.html">history</a></li><li><a href="i18n.html">i18n</a></li><li><a href="idle.html">idle</a></li><li><a href="management.html">management</a></li><li><a href="notifications.html">notifications</a></li><li><a href="pageAction.html">pageAction</a></li><li><a href="runtime.html">runtime</a></li><li><a href="storage.html">storage</a></li><li class="webextension-api-sidebar"><a href="tabs.html">tabs</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="tabs/captureVisibleTab.html" title="Creates a data URI encoding an image of the visible area of the currently active tab in the specified window. You must have the &lt;all_urls&gt; permission to use this method."><code>captureVisibleTab()</code></a></li><li><a href="tabs/connect.html" title="Call this function to set up a connection between the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab. This function returns a runtime.Port object."><code>connect()</code></a></li><li><a href="tabs/create.html" title="Creates a new tab."><code>create()</code></a></li><li><a href="tabs/detectLanguage.html" title="Detects the primary language of the content in a tab, using the Compact Language Detector (CLD)."><code>detectLanguage()</code></a></li><li><a href="tabs/duplicate.html" title="Duplicates a tab, given its ID."><code>duplicate()</code></a></li><li><a href="tabs/executeScript.html" title="Injects JavaScript code into a page."><code>executeScript()</code></a></li><li><a href="tabs/get.html" title="Given a tab ID, get the tab's details as a tabs.Tab object."><code>get()</code></a></li><li><a href="tabs/getAllInWindow.html" title="Gets details about all tabs in the specified window."><code>getAllInWindow()</code></a></li><li><a href="tabs/getCurrent.html" title="Get&nbsp;a tabs.Tab containing information about the tab that this script is running in."><code>getCurrent()</code></a></li><li><a href="tabs/getSelected.html" title="Gets the tab that is selected in the specified window."><code>getSelected()</code></a></li><li><a href="tabs/getZoom.html" title="Gets the current zoom factor for the specified tab."><code>getZoom()</code></a></li><li><a href="tabs/getZoomSettings.html" title="Gets the current zoom settings for a specified tab."><code>getZoomSettings()</code></a></li><li><a href="tabs/highlight.html" title="A Promise that will be fulfilled with a&nbsp;windows.Window object containing details about the window whose tabs were highlighted. If the window could not be found or some other error occurs, the promise will be rejected with an error message."><code>highlight()</code></a></li><li><a href="tabs/insertCSS.html" title="Injects CSS into a page."><code>insertCSS()</code></a></li><li><a href="tabs/move.html" title="Moves one or more tabs to a new position in the same window or to a different window."><code>move()</code></a></li><li><a href="tabs/query.html" title="Gets all tabs that have the specified properties, or all tabs if no properties are specified."><code>query()</code></a></li><li><a href="tabs/reload.html" title="Reload a tab, optionally bypassing the local web cache."><code>reload()</code></a></li><li><a href="tabs/remove.html" title="Closes one or more tabs."><code>remove()</code></a></li><li><a href="tabs/sendMessage.html" title="Sends a single message from the add-on's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any content scripts that belong to this add-on and are running in the specified tab."><code>sendMessage()</code></a></li><li><a href="tabs/sendRequest.html" title="Sends a single request to the content script(s) in the specified tab, with an optional callback to run when a response is sent back. The extension.onRequest event is fired in each content script running in the specified tab for the current extension."><code>sendRequest()</code></a></li><li><a href="tabs/setZoom.html" title="Zooms the specified tab."><code>setZoom()</code></a></li><li><a href="tabs/setZoomSettings.html" title="Sets zoom settings for the specified tab. These settings are reset to the default settings upon navigating the tab."><code>setZoomSettings()</code></a></li><li><a href="tabs/update.html" title="Navigate the tab to a new URL, or modify other properties of the tab."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="tabs/TAB_ID_NONE.html" title="A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows)."><code>TAB_ID_NONE</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="tabs/MutedInfo.html" title="This object contains a boolean indicating whether the tab is muted, and the reason for the last state change."><code>MutedInfo</code></a></li><li><a href="tabs/MutedInfoReason.html" title="Specifies the reason a tab was muted or unmuted."><code>MutedInfoReason</code></a></li><li><a href="tabs/Tab.html" title="The type tabs.Tab contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth."><code>Tab</code></a></li><li><a href="tabs/TabStatus.html" title="Indicates whether the tab has finished loading."><code>TabStatus</code></a></li><li><a href="tabs/WindowType.html" title="The type of window that hosts this tab."><code>WindowType</code></a></li><li><a href="tabs/ZoomSettings.html" title="Defines zoom settings for a tab: mode,&nbsp;scope, and default zoom factor."><code>ZoomSettings</code></a></li><li><a href="tabs/ZoomSettingsMode.html" title="Defines how zoom changes are handled. Add-ons can pass this value into tabs.setZoomSettings() to control how the browser handles attempts to change zoom settings for a tab. Defaults to &quot;automatic&quot;."><code>ZoomSettingsMode</code></a></li><li><a href="tabs/ZoomSettingsScope.html" title="Defines whether zoom changes will persist for the page's origin, or only take effect in this tab. This defaults to per-origin when tabs.zoomSettingsMode is &quot;automatic&quot;, and is always per-tab otherwise."><code>ZoomSettingsScope</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="tabs/onActivated.html" title="Fires when the active tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActivated</code></a></li><li><a href="tabs/onActiveChanged.html" title="Fires when the selected tab in a window changes. Note that the tab's URL may not be set at the time this event fired, but you can listen to tabs.onUpdated events to be notified when a URL is set."><code>onActiveChanged</code></a></li><li><a href="tabs/onAttached.html" title="Fired when a tab is attached to a window, for example because it was moved between windows."><code>onAttached</code></a></li><li><a href="tabs/onCreated.html" title="Fired when a tab is created."><code>onCreated</code></a></li><li><a href="tabs/onDetached.html" title="Fired when a tab is detached from a window, for example because it is being moved between windows."><code>onDetached</code></a></li><li><a href="tabs/onHighlightChanged.html" title="Fired when the highlighted or selected tabs in a window changes."><code>onHighlightChanged</code></a></li><li><a href="tabs/onHighlighted.html" title="Fired when the set of highlighted tabs in a window changes."><code>onHighlighted</code></a></li><li><a href="tabs/onMoved.html" title="Fired when a tab is moved within a window."><code>onMoved</code></a></li><li><a href="tabs/onRemoved.html" title="Fired when a tab is closed."><code>onRemoved</code></a></li><li><a href="tabs/onReplaced.html" title="Fired when a tab is replaced with another tab due to prerendering or instant."><code>onReplaced</code></a></li><li><a href="tabs/onSelectionChanged.html" title="Fires when the selected tab in a window changes."><code>onSelectionChanged</code></a></li><li><a href="tabs/onUpdated.html" title="Fired when a tab is updated."><code>onUpdated</code></a></li><li><a href="tabs/onZoomChange.html" title="Fired when a tab is zoomed."><code>onZoomChange</code></a></li></ol></li></ol></li><li><a href="webNavigation.html">webNavigation</a></li><li><a href="webRequest.html">webRequest</a></li><li><a href="windows.html">windows</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Manifest keys</a> 
-    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
+    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK"><strong>Add-on SDK</strong></a></li> 
@@ -773,7 +1226,7 @@
     </li> 
      
     <li data-default-state="closed"><a href="../../SDK/High-Level_APIs.html">High-Level APIs</a> 
-      <ol><li><a href="../../SDK/High-Level_APIs/addon-page.html">addon-page</a></li><li><a href="../../SDK/High-Level_APIs/base64.html">base64</a></li><li><a href="../../SDK/High-Level_APIs/clipboard.html">clipboard</a></li><li><a href="../../SDK/High-Level_APIs/context-menu.html">context-menu</a></li><li><a href="../../SDK/High-Level_APIs/hotkeys.html">hotkeys</a></li><li><a href="../../SDK/High-Level_APIs/indexed-db.html">indexed-db</a></li><li><a href="../../SDK/High-Level_APIs/l10n.html">l10n</a></li><li><a href="../../SDK/High-Level_APIs/notifications.html">notifications</a></li><li><a href="../../SDK/High-Level_APIs/page-mod.html">page-mod</a></li><li><a href="../../SDK/High-Level_APIs/page-worker.html">page-worker</a></li><li><a href="../../SDK/High-Level_APIs/panel.html">panel</a></li><li><a href="../../SDK/High-Level_APIs/passwords.html">passwords</a></li><li><a href="../../SDK/High-Level_APIs/private-browsing.html">private-browsing</a></li><li><a href="../../SDK/High-Level_APIs/querystring.html">querystring</a></li><li><a href="../../SDK/High-Level_APIs/request.html">request</a></li><li><a href="../../SDK/High-Level_APIs/selection.html">selection</a></li><li><a href="../../SDK/High-Level_APIs/self.html">self</a></li><li><a href="../../SDK/High-Level_APIs/simple-prefs.html">simple-prefs</a></li><li><a href="../../SDK/High-Level_APIs/simple-storage.html">simple-storage</a></li><li><a href="../../SDK/High-Level_APIs/system.html">system</a></li><li><a href="../../SDK/High-Level_APIs/tabs.html">tabs</a></li><li><a href="../../SDK/High-Level_APIs/timers.html">timers</a></li><li><a href="../../SDK/High-Level_APIs/ui.html">ui</a></li><li><a href="../../SDK/High-Level_APIs/url.html">url</a></li><li><a href="../../SDK/High-Level_APIs/widget.html">widget</a></li><li><a href="../../SDK/High-Level_APIs/windows.html">windows</a></li></ol> 
+      <ol><li><a href="../../SDK/High-Level_APIs/addon-page.html">addon-page</a></li><li><a href="../../SDK/High-Level_APIs/base64.html">base64</a></li><li><a href="../../SDK/High-Level_APIs/clipboard.html">clipboard</a></li><li><a href="../../SDK/High-Level_APIs/context-menu.html">context-menu</a></li><li><a href="../../SDK/High-Level_APIs/hotkeys.html">hotkeys</a></li><li><a href="../../SDK/High-Level_APIs/indexed-db.html">indexed-db</a></li><li><a href="../../SDK/High-Level_APIs/l10n.html">l10n</a></li><li><a href="../../SDK/High-Level_APIs/notifications.html">notifications</a></li><li><a href="../../SDK/High-Level_APIs/page-mod.html">page-mod</a></li><li><a href="../../SDK/High-Level_APIs/page-worker.html">page-worker</a></li><li><a href="../../SDK/High-Level_APIs/panel.html">panel</a></li><li><a href="../../SDK/High-Level_APIs/passwords.html">passwords</a></li><li><a href="../../SDK/High-Level_APIs/private-browsing.html">private-browsing</a></li><li><a href="../../SDK/High-Level_APIs/querystring.html">querystring</a></li><li><a href="../../SDK/High-Level_APIs/request.html">request</a></li><li><a href="../../SDK/High-Level_APIs/selection.html">selection</a></li><li><a href="../../SDK/High-Level_APIs/self.html">self</a></li><li><a href="../../SDK/High-Level_APIs/simple-prefs.html">simple-prefs</a></li><li><a href="../../SDK/High-Level_APIs/simple-storage.html">simple-storage</a></li><li><a href="../../SDK/High-Level_APIs/system.html">system</a></li><li><a href="../../SDK/High-Level_APIs/tabs.html">tabs</a></li><li><a href="../../SDK/High-Level_APIs/timers.html">timers</a></li><li><a href="../../SDK/High-Level_APIs/ui.html">ui</a></li><li><a href="../../SDK/High-Level_APIs/url.html">url</a></li><li><a href="../../SDK/High-Level_APIs/webextension.html">webextension</a></li><li><a href="../../SDK/High-Level_APIs/widget.html">widget</a></li><li><a href="../../SDK/High-Level_APIs/windows.html">windows</a></li></ol> 
     </li> 
     <li data-default-state="closed"><a href="../../../docs/Mozilla/Add-ons/SDK/Low-Level_APIs.png">Low-Level APIs</a> 
       <ol><li><a href="../../SDK/Low-Level_APIs/_loader.html">/loader</a></li><li><a href="../../SDK/Low-Level_APIs/chrome.html">chrome</a></li><li><a href="../../SDK/Low-Level_APIs/console_plain-text.html">console/plain-text</a></li><li><a href="../../SDK/Low-Level_APIs/console_traceback.html">console/traceback</a></li><li><a href="../../SDK/Low-Level_APIs/content_content.html">content/content</a></li><li><a href="../../SDK/Low-Level_APIs/content_loader.html">content/loader</a></li><li><a href="../../SDK/Low-Level_APIs/content_mod.html">content/mod</a></li><li><a href="../../SDK/Low-Level_APIs/content_symbiont.html">content/symbiont</a></li><li><a href="../../SDK/Low-Level_APIs/content_worker.html">content/worker</a></li><li><a href="../../SDK/Low-Level_APIs/core_heritage.html">core/heritage</a></li><li><a href="../../SDK/Low-Level_APIs/core_namespace.html">core/namespace</a></li><li><a href="../../SDK/Low-Level_APIs/core_promise.html">core/promise</a></li><li><a href="../../SDK/Low-Level_APIs/dev_panel.html">dev/panel</a></li><li><a href="../../SDK/Low-Level_APIs/event_core.html">event/core</a></li><li><a href="../../SDK/Low-Level_APIs/event_target.html">event/target</a></li><li><a href="../../SDK/Low-Level_APIs/frame_hidden-frame.html">frame/hidden-frame</a></li><li><a href="../../SDK/Low-Level_APIs/frame_utils.html">frame/utils</a></li><li><a href="../../SDK/Low-Level_APIs/fs_path.html">fs/path</a></li><li><a href="../../SDK/Low-Level_APIs/io_byte-streams.html">io/byte-streams</a></li><li><a href="../../SDK/Low-Level_APIs/io_file.html">io/file</a></li><li><a href="../../SDK/Low-Level_APIs/io_text-streams.html">io/text-streams</a></li><li><a href="../../SDK/Low-Level_APIs/lang_functional.html">lang/functional</a></li><li><a href="../../SDK/Low-Level_APIs/lang_type.html">lang/type</a></li><li><a href="../../SDK/Low-Level_APIs/loader_cuddlefish.html">loader/cuddlefish</a></li><li><a href="../../SDK/Low-Level_APIs/loader_sandbox.html">loader/sandbox</a></li><li><a href="../../SDK/Low-Level_APIs/net_url.html">net/url</a></li><li><a href="../../SDK/Low-Level_APIs/net_xhr.html">net/xhr</a></li><li><a href="../../SDK/Low-Level_APIs/places_bookmarks.html">places/bookmarks</a></li><li><a href="../../SDK/Low-Level_APIs/places_favicon.html">places/favicon</a></li><li><a href="../../SDK/Low-Level_APIs/places_history.html">places/history</a></li><li><a href="../../SDK/Low-Level_APIs/platform_xpcom.html">platform/xpcom</a></li><li><a href="../../SDK/Low-Level_APIs/preferences_event-target.html">preferences/event-target</a></li><li><a href="../../SDK/Low-Level_APIs/preferences_service.html">preferences/service</a></li><li><a href="../../SDK/Low-Level_APIs/remote_child.html">remote/child</a></li><li><a href="../../SDK/Low-Level_APIs/remote_parent.html">remote/parent</a></li><li><a href="../../SDK/Low-Level_APIs/stylesheet_style.html">stylesheet/style</a></li><li><a href="../../SDK/Low-Level_APIs/stylesheet_utils.html">stylesheet/utils</a></li><li><a href="../../SDK/Low-Level_APIs/system_child_process.html">system/child_process</a></li><li><a href="../../SDK/Low-Level_APIs/system_environment.html">system/environment</a></li><li><a href="../../SDK/Low-Level_APIs/system_events.html">system/events</a></li><li><a href="../../SDK/Low-Level_APIs/system_runtime.html">system/runtime</a></li><li><a href="../../SDK/Low-Level_APIs/system_unload.html">system/unload</a></li><li><a href="../../SDK/Low-Level_APIs/system_xul-app.html">system/xul-app</a></li><li><a href="../../SDK/Low-Level_APIs/tabs_utils.html">tabs/utils</a></li><li><a href="../../SDK/Low-Level_APIs/test_assert.html">test/assert</a></li><li><a href="../../SDK/Low-Level_APIs/test_harness.html">test/harness</a></li><li><a href="../../SDK/Low-Level_APIs/test_httpd.html">test/httpd</a></li><li><a href="../../SDK/Low-Level_APIs/test_runner.html">test/runner</a></li><li><a href="../../SDK/Low-Level_APIs/test_utils.html">test/utils</a></li><li><a href="../../SDK/Low-Level_APIs/ui_button_action.html">ui/button/action</a></li><li><a href="../../SDK/Low-Level_APIs/ui_button_toggle.html">ui/button/toggle</a></li><li><a href="../../SDK/Low-Level_APIs/ui_frame.html">ui/frame</a></li><li><a href="../../SDK/Low-Level_APIs/ui_id.html">ui/id</a></li><li><a href="../../SDK/Low-Level_APIs/ui_sidebar.html">ui/sidebar</a></li><li><a href="../../SDK/Low-Level_APIs/ui_toolbar.html">ui/toolbar</a></li><li><a href="../../SDK/Low-Level_APIs/util_array.html">util/array</a></li><li><a href="../../SDK/Low-Level_APIs/util_collection.html">util/collection</a></li><li><a href="../../SDK/Low-Level_APIs/util_deprecate.html">util/deprecate</a></li><li><a href="../../SDK/Low-Level_APIs/util_list.html">util/list</a></li><li><a href="../../SDK/Low-Level_APIs/util_match-pattern.html">util/match-pattern</a></li><li><a href="../../SDK/Low-Level_APIs/util_object.html">util/object</a></li><li><a href="../../SDK/Low-Level_APIs/util_uuid.html">util/uuid</a></li><li><a href="../../SDK/Low-Level_APIs/window_utils.html">window/utils</a></li></ol> 
@@ -789,7 +1242,7 @@
     </li> 
  
     <li><a href="../../../docs/Mozilla/Add-ons/Firefox_for_Android/API.png">APIs</a> 
-      <ol><li><a href="../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/Home.png">Home.jsm</a></li><li><a href="../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
+      <ol><li><a href="../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../Firefox_for_Android/API/Home.html">Home.jsm</a></li><li><a href="../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
     </li>  
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions"><strong>Legacy</strong></a></li> 
@@ -865,12 +1318,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -878,13 +1331,29 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="French" value="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs">
+            Français (fr)
+          </option>
+          <option title="Russian" value="/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs">
+            Русский (ru)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
   
 
         
@@ -897,63 +1366,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:23:42 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/tabs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:19:27 GMT -->
 </body></html>

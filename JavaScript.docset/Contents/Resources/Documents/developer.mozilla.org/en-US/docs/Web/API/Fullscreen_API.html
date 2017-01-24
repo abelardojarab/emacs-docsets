@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:09:26 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:34:43 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -8,37 +8,36 @@
   
 
   
-  <title>Using fullscreen mode</title>
+  <title>Fullscreen API</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -81,15 +80,22 @@
   
 
   <!-- document-specific social tags -->
-  <meta property="og:title" content="Using fullscreen mode">
+  <meta property="og:title" content="Fullscreen API">
   <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">
-  <meta name="twitter:title" content="Using fullscreen mode">
+  <meta name="twitter:title" content="Fullscreen API">
   
-  <meta property="og:description" content="The fullscreen API provides an easy way for web content to be presented using the user's entire screen. This article provides information about using this API.">
-  <meta name="description" content="The fullscreen API provides an easy way for web content to be presented using the user's entire screen. This article provides information about using this API.">
-  <meta name="twitter:description" content="The fullscreen API provides an easy way for web content to be presented using the user's entire screen. This article provides information about using this API.">
+  <meta property="og:description" content="The Fullscreen API provides an easy way for web content to be presented using the user's entire screen. The API lets you easily direct the browser to make an element and its children, if any, occupy the fullscreen, eliminating all browser user interface and other applications from the screen for the duration.">
+  <meta name="description" content="The Fullscreen API provides an easy way for web content to be presented using the user's entire screen. The API lets you easily direct the browser to make an element and its children, if any, occupy the fullscreen, eliminating all browser user interface and other applications from the screen for the duration.">
+  <meta name="twitter:description" content="The Fullscreen API provides an easy way for web content to be presented using the user's entire screen. The API lets you easily direct the browser to make an element and its children, if any, occupy the fullscreen, eliminating all browser user interface and other applications from the screen for the duration.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -107,10 +113,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -160,8 +166,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -177,9 +183,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -196,34 +200,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFullscreen_API" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Fullscreen_API" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Fullscreen_API" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFullscreen_API" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFullscreen_API" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -233,18 +223,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -255,10 +247,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -272,8 +261,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,26 +301,28 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Using_full_screen_mode" title="Utiliser le mode plein écran">Français</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/Guide/DOM/Using_full_screen_mode" title="フルスクリーンモードを使用する">日本語</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/Guide/DOM/Using_full_screen_mode" title="Using fullscreen mode">한국어</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Using_full_screen_mode" title="French">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fullscreen_API" title="Usando o modo telacheia">Português (do&nbsp;Brasil)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/Guide/DOM/Using_full_screen_mode" title="Japanese">日本語 (ja)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/DOM/Using_fullscreen_mode" title="Using fullscreen mode">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/Guide/DOM/Using_full_screen_mode" title="Korean">한국어 (ko)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/DOM/Using_fullscreen_mode" title="全屏模式切换">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fullscreen_API" title="Portuguese (Brazilian)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode" title="使用全螢幕模式">正體中文 (繁體)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/DOM/Using_fullscreen_mode" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/DOM/Using_fullscreen_mode" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode" title="Chinese (Traditional)">正體中文 (繁體) (zh-TW)</a></bdi></li>
                 
               
 
@@ -343,7 +334,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -354,7 +347,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -379,7 +371,7 @@
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="../API.html" rel="v:url" property="v:title">Web APIs</a></li>
     
-    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Using fullscreen mode</li>
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Fullscreen API</li>
   </ol></nav>
       </div>
 
@@ -404,8 +396,18 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/HenryFaulknerClicks" title="View profile: HenryFaulknerClicks">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="HenryFaulknerClicks" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">HenryFaulknerClicks</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/libbymc" title="View profile: libbymc">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="libbymc" data-src="../../../../../secure.gravatar.com/avatar/9863d23087b5036d5a8431e7ccde214d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">libbymc</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/meckhardt" title="View profile: meckhardt">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="meckhardt" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">meckhardt</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -414,21 +416,56 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/craigkovatch" title="View profile: craigkovatch">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="craigkovatch" data-src="../../../../../secure.gravatar.com/avatar/cb48caf741b0441bcab095ccc68e14696c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">craigkovatch</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/SaschaNaz" title="View profile: SaschaNaz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="SaschaNaz" data-src="../../../../../secure.gravatar.com/avatar/f8c82bc9cbb037eb3f988371d941c5e86c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">SaschaNaz</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/StanE" title="View profile: StanE">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="StanE" data-src="../../../../../secure.gravatar.com/avatar/5776bc3d7db5df26732110eac59896646c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">StanE</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/zoehneto" title="View profile: zoehneto">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="zoehneto" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">zoehneto</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/YuanxiangFranck" title="View profile: YuanxiangFranck">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="YuanxiangFranck" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">YuanxiangFranck</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/tdillon" title="View profile: tdillon">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="tdillon" data-src="../../../../../secure.gravatar.com/avatar/6ca856bf3388e90d80e22ce1377402096c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">tdillon</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/HenryFaulknerClicks" title="View profile: HenryFaulknerClicks">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="HenryFaulknerClicks" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">HenryFaulknerClicks</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/themitchy" title="View profile: themitchy">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="themitchy" data-src="../../../../../secure.gravatar.com/avatar/0a1f7a121f595cca99b9131e4c048abc6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">themitchy</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/cvrebert" title="View profile: cvrebert">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="cvrebert" data-src="../../../../../secure.gravatar.com/avatar/1432b541cac41e85e190050a5361b3966c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">cvrebert</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/cpearce" title="View profile: cpearce">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="cpearce" data-src="../../../../../secure.gravatar.com/avatar/90b03607de8380a7f274f61e1fb0d0f66c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">cpearce</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/gauthamchandra" title="View profile: gauthamchandra">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gauthamchandra" data-src="../../../../../secure.gravatar.com/avatar/dd2d9ee200c3b5a25b967aaa725f83d46c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gauthamchandra</noscript></a>
                 </li>
@@ -557,13 +594,13 @@
         </div>
         
 
-        <h1>Using fullscreen mode</h1>
+        <h1>Fullscreen API</h1>
 
       </div>
       
 
       <!-- start the main content container -->
-        <div id="wiki-column-container" class="wiki-right-present wiki-left-closed wiki-left-none">
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
 
           <!-- content row with three strips -->
           <div class="column-container column-container-reverse">
@@ -576,7 +613,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Specification" rel="internal">Activating fullscreen mode</a><ol><li><a href="#Presentation_differences" rel="internal">Presentation differences</a></li><li><a href="#Notification" rel="internal">Notification</a></li><li><a href="#When_a_fullscreen_request_fails" rel="internal">When a fullscreen request fails</a></li></ol></li><li><a href="#Getting_out_of_full_screen_mode" rel="internal">Getting out of full screen mode</a></li><li><a href="#Other_information" rel="internal">Other information</a></li><li><a href="#Things_your_users_want_to_know" rel="internal">Things your users want to know</a></li><li><a href="#Specification" rel="internal">Example</a><ol><li><a href="#Watching_for_the_Enter_key" rel="internal">Watching for the Enter key</a></li><li><a href="#Toggling_fullscreen_mode" rel="internal">Toggling fullscreen mode</a></li></ol></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a><ol><li><a href="#Gecko_notes" rel="internal">Gecko notes</a></li></ol></li><li><a href="#Specification" rel="internal">Specification</a></li><li><a href="#Non-standard_methods" rel="internal">Non-standard methods</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Specification" rel="internal">Activating fullscreen mode</a><ol><li><a href="#Presentation_differences" rel="internal">Presentation differences</a></li><li><a href="#Notification" rel="internal">Notification</a></li><li><a href="#When_a_fullscreen_request_fails" rel="internal">When a fullscreen request fails</a></li></ol></li><li><a href="#Getting_out_of_full_screen_mode" rel="internal">Getting out of full screen mode</a></li><li><a href="#Other_information" rel="internal">Other information</a></li><li><a href="#Things_your_users_want_to_know" rel="internal">Things your users want to know</a></li><li><a href="#Specification" rel="internal">Example</a><ol><li><a href="#Watching_for_the_Enter_key" rel="internal">Watching for the Enter key</a></li><li><a href="#Toggling_fullscreen_mode" rel="internal">Toggling fullscreen mode</a></li></ol></li><li><a href="#Prefixing" rel="internal">Prefixing</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -589,13 +626,19 @@
             
 
             <!-- center: main article content -->
-            <div id="wiki-content" class="column-main wiki-column text-content">
+            <div id="wiki-content" class="column-half wiki-column text-content">
 
               
 
               
 
               
+                
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
+                    </p>
+                  </div>
                 
                 
                 
@@ -606,25 +649,19 @@
               <article id="wikiArticle">
                 
                   
-                    <p></p><div class="notice experimental"> 
-    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for the proper prefixes to use in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the spec changes.</p> 
-</div><p></p>
+                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><p></p>
 
-<p>The fullscreen API provides an easy way for web content to be presented using the user's entire screen. This article provides information about using this API.</p>
+<p class="summary">The <strong><code>Fullscreen API</code></strong> provides an easy way for web content to be presented using the user's entire screen. The API lets you easily direct the browser to make an element and its children, if any, occupy the fullscreen, eliminating all browser user interface and other applications from the screen for the duration.</p>
 
-<div class="note"><strong>Note:</strong> This API is early in the standardization process. Although both Gecko and Google Chrome have implementations, they are not currently mutually-compatible, and neither implements the current draft of the specification. For that reason, at <a href="Fullscreen_API.html#Gecko_notes" title="en/DOM/Using_full-screen_mode#Gecko_notes">least in Firefox</a>, it isn't enabled by default in Firefox 9, but is in Firefox 10. Because the <a href="http://fullscreen.spec.whatwg.org/" class="external">specification</a> is currently an extremely early draft, this documentation is subject to be entirely wrong, and is very preliminary. Once the specification has settled down a bit, the documentation will be cleaned up to be more browser-agnostic.</div>
-
-<p>The API lets you easily direct the browser to make an element and its children, if any, occupy the fullscreen, eliminating all browser user interface and other applications from the screen for the duration.</p>
+<div class="note">
+<p>For the moment not all browsers are using the unprefixed version of the API. Consult the <a href="#Prefixing">table summarizing the prefixes and name</a> differences between them.</p>
+</div>
 
 <h2 name="Specification" id="Specification">Activating fullscreen mode</h2>
 
-<p>Given an element that you'd like to present in fullscreen mode (such as a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="The HTML &lt;video&gt; element is used to embed video content. It may contain several video sources, represented using the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a>, for example), you can present it in fullscreen mode by simply calling its <code>requestFullscreen()</code> method; this method is implemented in Gecko as <a href="Element/requestFullScreen.html" title="{{ APIRef }}"><code>element.mozRequestFullScreen()</code></a>, in Trident as <code>element.msRequestFullscreen()</code> and in WebKit as <code>element.webkitRequestFullscreen()</code>.</p>
+<p>Given an element that you'd like to present in fullscreen mode (such as a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a>, for example), you can present it in fullscreen mode by simply calling its <code>requestFullscreen()</code> method.</p>
 
-<div class="note">
-<p><strong>Note:</strong>&nbsp;The <a href="http://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen" class="external">specification</a> uses the label, "Fullscreen" as in "requestFullscreen" or "fullscreenEnabled" - without a capital 's'. The implementation described here&nbsp;and other prefixed implementations&nbsp;may use a capital 'S'.</p>
-</div>
-
-<p>Let's consider this <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="The HTML &lt;video&gt; element is used to embed video content. It may contain several video sources, represented using the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> element:</p>
+<p>Let's consider this <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video" title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;video&gt;</code></a> element:</p>
 
 <pre class="brush: html">&lt;video controls id="myvideo"&gt;
 &nbsp; &lt;source src="somevideo.webm"&gt;&lt;/source&gt;
@@ -637,13 +674,7 @@
 <pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
-} else if (elem.msRequestFullscreen) {
-&nbsp; elem.msRequestFullscreen();
-} else if (elem.mozRequestFullScreen) {
-&nbsp; elem.mozRequestFullScreen();
-} else if (elem.webkitRequestFullscreen) {
-&nbsp; elem.webkitRequestFullscreen();
-}
+} 
 </pre>
 
 <h3 id="Presentation_differences">Presentation differences</h3>
@@ -660,46 +691,46 @@ if (elem.requestFullscreen) {
 
 <h3 id="Notification">Notification</h3>
 
-<p>When fullscreen mode is successfully engaged, the document which contains the element receives a <code>mozfullscreenchange</code> event. When fullscreen mode is exited, the document again receives a&nbsp; <code>mozfullscreenchange</code> event. Note that the <code>mozfullscreenchange</code> event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null <a href="Document/mozFullScreenElement.html" title="Returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>mozFullScreenElement</code></a>, you know you're in fullscreen mode.</p>
+<p>When fullscreen mode is successfully engaged, the document which contains the element receives a <code><a href="../Events/fullscreenchange.html" title="/en-US/docs/Web/Events/fullscreenchange">fullscreenchange</a></code> event. When fullscreen mode is exited, the document again receives a&nbsp; <code><a href="../Events/fullscreenchange.html" title="/en-US/docs/Web/Events/fullscreenchange">fullscreenchange</a></code> event. Note that the <code><a href="../Events/fullscreenchange.html" title="/en-US/docs/Web/Events/fullscreenchange">fullscreenchange</a></code> event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null <a href="Document/fullscreenElement.html" title="The Document.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>fullscreenElement</code></a>, you know you're in fullscreen mode.</p>
 
 <h3 id="When_a_fullscreen_request_fails">When a fullscreen request fails</h3>
 
-<p>It's not guaranteed that you'll be able to switch into fullscreen mode. For example, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="The&nbsp;HTML Inline Frame Element&nbsp;(&lt;iframe&gt;) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frame-set, but not both a body and a frame-set. However, an &lt;iframe&gt; can be used within a normal document body. Each browsing context has its own session history and active document. The browsing context that contains the embedded content is called the parent browsing context. The top-level browsing context (which has no parent) is typically the browser window."><code>&lt;iframe&gt;</code></a> elements have the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-mozallowfullscreen">mozallowfullscreen</a></code> attribute (<code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-webkitallowfullscreen">webkitallowfullscreen</a></code>, etc) in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a <code>mozfullscreenerror</code> event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.</p>
+<p>It's not guaranteed that you'll be able to switch into fullscreen mode. For example, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="The HTML Inline Frame Element (&lt;iframe&gt;) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frameset, but not both a body and a frameset. However, an &lt;iframe&gt; can be used within a normal document body. Each browsing context has its own session history and active document. The browsing context that contains the embedded content is called the parent browsing context. The top-level browsing context (which has no parent) is typically the browser window."><code>&lt;iframe&gt;</code></a> elements have the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-allowfullscreen">allowfullscreen</a></code> attribute in order to opt-in to allowing their content to be displayed in fullscreen mode. In addition, certain kinds of content, such as windowed plug-ins, cannot be presented in fullscreen mode. Attempting to put an element which can't be displayed in fullscreen mode (or the parent or descendant of such an element) won't work. Instead, the element which requested fullscreen will receive a <code>mozfullscreenerror</code> event. When a fullscreen request fails, Firefox will log an error message to the Web Console explaining why the request failed. In Chrome and newer versions of Opera however, no such warning is generated.</p>
 
 <div class="note">
-<p>NOTE: Fullscreen requests need to be called from within an event handler or otherwise they will be denied.&nbsp;</p>
+<p><strong>Note:</strong> Fullscreen requests need to be called from within an event handler or otherwise they will be denied.&nbsp;</p>
 </div>
 
 <h2 id="Getting_out_of_full_screen_mode">Getting out of full screen mode</h2>
 
-<p>The user always has the ability to exit fullscreen mode of their own accord; see <a href="#Things_your_users_want_to_know">Things your users want to know</a>. You can also do so programmatically by calling the <code>exitFullscreen()</code> method; this is implemented in Gecko as <a href="Document/mozCancelFullScreen.html" title="document.mozCancelFullScreen"><code>mozCancelFullScreen()</code></a>, WebKit as <code>webkitExitFullscreen(), </code>and Trident as <code>msExitFullscreen()</code>.</p>
+<p>The user always has the ability to exit fullscreen mode of their own accord; see <a href="#Things_your_users_want_to_know">Things your users want to know</a>. You can also do so programmatically by calling the <a href="ExitFullscreen.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>exitFullscreen()</code></a> method.</p>
 
 <h2 id="Other_information">Other information</h2>
 
-<p>The <a href="Document.html" title="Each web page loaded in the browser has its own document object. The Document interface serves as an entry point into the web page's content (the DOM tree, including elements such as &lt;body&gt; and &lt;table&gt;) and provides functionality which is global to the document (such as obtaining the page's URL and creating new elements in the document)."><code>document</code></a> provides some additional information that can be useful when developing fullscreen web applications:</p>
+<p>The <a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document."><code>document</code></a> provides some additional information that can be useful when developing fullscreen web applications:</p>
 
 <dl>
- <dt><a href="Document/mozFullScreenElement.html" title="Returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>fullscreenElement</code></a></dt>
+ <dt><a href="Document/fullscreenElement.html" title="The Document.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>fullscreenElement</code></a></dt>
  <dd>The <code>fullscreenElement</code> attribute tells you the <a href="Element.html" title="The Element interface represents an object of a Document. This interface describes methods and properties common to all kinds of elements. Specific behaviors are described in interfaces which inherit from Element but add additional functionality."><code>element</code></a> that's currently being displayed fullscreen. If this is non-null, the document is in fullscreen mode. If this is null, the document is not in fullscreen mode.</dd>
- <dt><a href="Document/mozFullScreenEnabled.html" title="Reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set."><code>fullscreenEnabled</code></a></dt>
+ <dt><a href="Document/fullscreenEnabled.html" title="The Document.fullscreenEnabled read-only property returns a Boolean that reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set."><code>fullscreenEnabled</code></a></dt>
  <dd>The <code>fullscreenEnabled</code> attribute tells you whether or not the document is currently in a state that would allow fullscreen mode to be requested.</dd>
 </dl>
 
 <h2 name="Things_your_users_want_to_know" id="Things_your_users_want_to_know">Things your users want to know</h2>
 
-<p>You'll want to be sure to let your users know that they can press the ESC key (or F11) to exit fullscreen mode.</p>
+<p>You'll want to be sure to let your users know that they can press the <kbd>ESC</kbd> key (or <kbd>F11</kbd>) to exit fullscreen mode.</p>
 
-<p>In addition, navigating to another page, changing tabs, or switching to another application (using, for example, Alt-Tab) while in fullscreen mode exits fullscreen mode as well.</p>
+<p>In addition, navigating to another page, changing tabs, or switching to another application (using, for example, <kbd>Alt</kbd>-<kbd>Tab</kbd>) while in fullscreen mode exits fullscreen mode as well.</p>
 
 <h2 name="Specification" id="Specification">Example</h2>
 
-<p>In this example, a video is presented in a web page. Pressing the Return or Enter key lets the user toggle between windowed and fullscreen presentation of the video.</p>
+<p>In this example, a video is presented in a web page. Pressing the <kbd>Return</kbd> or <kbd>Enter</kbd> key lets the user toggle between windowed and fullscreen presentation of the video.</p>
 
 <p><a href="https://developer.mozilla.org/samples/domref/fullscreen.html" class="button liveSample">View Live Examples</a></p>
 
-<h3 id="Watching_for_the_Enter_key">Watching for the Enter key</h3>
+<h3 id="Watching_for_the_Enter_key">Watching for the <kbd>Enter</kbd> key</h3>
 
-<p>When the page is loaded, this code is run to set up an event listener to watch for the 'enter' key.</p>
+<p>When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.</p>
 
 <pre class="brush: js">document.addEventListener("keydown", function(e) {
 &nbsp; if (e.keyCode == 13) {
@@ -710,41 +741,118 @@ if (elem.requestFullscreen) {
 
 <h3 id="Toggling_fullscreen_mode">Toggling fullscreen mode</h3>
 
-<p>This code is called when the user hits the Enter key, as seen above.</p>
+<p>This code is called when the user hits the <kbd>Enter</kbd> key, as seen above.</p>
 
 <pre class="brush: js">function toggleFullScreen() {
-&nbsp; if (!document.fullscreenElement &amp;&amp;    // alternative standard method
-&nbsp;     !document.mozFullScreenElement &amp;&amp; !document.webkitFullscreenElement &amp;&amp; !document.msFullscreenElement ) {  // current working methods
-&nbsp;&nbsp;&nbsp; if (document.documentElement.requestFullscreen) {
+&nbsp; if (!document.fullscreenElement) {
     &nbsp; document.documentElement.requestFullscreen();
-    } else if (document.documentElement.msRequestFullscreen) {
-&nbsp;     document.documentElement.msRequestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-&nbsp;     document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-&nbsp;     document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-    }
 &nbsp; } else {
 &nbsp;   if (document.exitFullscreen) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.exitFullscreen();
-    } else if (document.msExitFullscreen) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.msExitFullscreen();
-&nbsp;&nbsp;&nbsp; } else if (document.mozCancelFullScreen) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.mozCancelFullScreen();
-&nbsp;&nbsp;&nbsp; } else if (document.webkitExitFullscreen) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.webkitExitFullscreen();
-&nbsp;&nbsp;&nbsp; }
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.exitFullscreen(); 
+&nbsp;   }
 &nbsp; }
 }
 </pre>
 
-<p>This starts by looking at the value of the <code>fullscreenElement</code> attribute on the <a href="Document.html" title="Each web page loaded in the browser has its own document object. The Document interface serves as an entry point into the web page's content (the DOM tree, including elements such as &lt;body&gt; and &lt;table&gt;) and provides functionality which is global to the document (such as obtaining the page's URL and creating new elements in the document)."><code>document</code></a> (checking it prefixed with both <code>moz</code>,<code> ms</code>,<code> </code>and <code>webkit</code>). If it's <code>null</code>, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling either <a href="Element/requestFullScreen.html" title="{{ APIRef }}"><code>element.mozRequestFullScreen()</code></a> <code>msRequestFullscreen()</code>or <code>webkitRequestFullscreen()</code>, depending on which is available.</p>
+<p>This starts by looking at the value of the <code>fullscreenElement</code> attribute on the <a href="Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document."><code>document</code></a> (checking it prefixed with both <code>moz</code>,<code> ms</code>, or <code>webkit</code>). If it's <code>null</code>, the document is currently in windowed mode, so we need to switch to fullscreen mode. Switching to fullscreen mode is done by calling <a href="Element/requestFullscreen.html" title="The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed full-screen."><code>element.requestFullscreen()</code></a>.</p>
 
-<p>If fullscreen mode is already active (<code>fullscreenElement</code> is non-<code>null</code>), we call <a href="Document/mozCancelFullScreen.html" title="Takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its element.mozRequestFullScreen() method."><code>document.mozCancelFullScreen()</code></a>, <code>msExitFullscreen</code> or <code>webkitExitFullscreen()</code>, again depending on which browser is in use.</p>
+<p>If fullscreen mode is already active (<code>fullscreenElement</code> is non-<code>null</code>), we call <a href="Document/exitFullscreen.html" title="The Document.exitFullscreen() is a method that takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its Element.requestFullscreen() method."><code>document.exitFullscreen()</code></a>.</p>
+
+<h2 id="Prefixing">Prefixing</h2>
+
+<p>For the moment not all browsers are implementing the unprefixed version of the API. Here is the table summarizing the prefixes and name differences between them:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Standard</th>
+   <th scope="col">Blink (Chrome &amp; Opera)</th>
+   <th scope="col">Gecko (Firefox)</th>
+   <th scope="col">Internet Explorer 11</th>
+   <th scope="col">Edge</th>
+   <th scope="col">Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td><a href="Document/fullscreen.html" title="The Document.fullscreen read-only property reports whether or not the document is currently displaying content in fullscreen mode."><code>Document.fullscreen</code></a></td>
+   <td><code>webkitIsFullScreen</code></td>
+   <td><code>mozFullScreen</code></td>
+   <td><em>-</em></td>
+   <td><code>webkitIsFullScreen</code></td>
+   <td><code>webkitIsFullScreen</code></td>
+  </tr>
+  <tr>
+   <td><a href="Document/fullscreenEnabled.html" title="The Document.fullscreenEnabled read-only property returns a Boolean that reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set."><code>Document.fullscreenEnabled</code></a></td>
+   <td><code>webkitFullscreenEnabled</code></td>
+   <td><code>mozFullScreenEnabled</code></td>
+   <td><code>msFullscreenEnabled</code></td>
+   <td><code>webkitFullscreenEnabled</code></td>
+   <td><code>webkitFullscreenEnabled</code></td>
+  </tr>
+  <tr>
+   <td><a href="Document/fullscreenElement.html" title="The Document.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>Document.fullscreenElement</code></a></td>
+   <td><code>webkitFullscreenElement</code></td>
+   <td><code>mozFullScreenElement</code></td>
+   <td><code>msFullscreenElement</code></td>
+   <td><code>webkitFullscreenElement</code></td>
+   <td><code>webkitFullscreenElement</code></td>
+  </tr>
+  <tr>
+   <td><a href="Document/onfullscreenchange.html" title="The Document.onfullscreenchange property is an event handler for the fullscreenchange event that is fire when a document goes in or out of the fullscreen mode."><code>Document.onfullscreenchange</code></a></td>
+   <td><code>onwebkitfullscreenchange</code></td>
+   <td><code>onmozfullscreenchange</code></td>
+   <td><code>onmsfullscreenchange</code></td>
+   <td><code>onwebkitfullscreenchange</code></td>
+   <td><code>onwebkitfullscreenchange</code></td>
+  </tr>
+  <tr>
+   <td><a href="Document/onfullscreenerror.html" title="The Document.onfullscreenerror property is an event handler for the fullscreenchange event that is fire when a document goes that cannot go in fullscreen mode, even it has been requested."><code>Document.onfullscreenerror</code></a></td>
+   <td><code>onwebkitfullscreenerror</code></td>
+   <td><code>onmozfullscreenerror</code></td>
+   <td><code>onmsfullscreenerror</code></td>
+   <td><code>onwebkitfullscreenerror</code></td>
+   <td><code>onwebkitfullscreenerror</code></td>
+  </tr>
+  <tr>
+   <td><a href="Document/exitFullscreen.html" title="The Document.exitFullscreen() is a method that takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its Element.requestFullscreen() method."><code>Document.exitFullscreen()</code></a></td>
+   <td><code>webkitExitFullscreen()</code></td>
+   <td><code>mozCancelFullScreen()</code></td>
+   <td><code>msExitFullscreen()</code></td>
+   <td><code>webkitExitFullscreen()</code></td>
+   <td><code>webkitExitFullscreen()</code></td>
+  </tr>
+  <tr>
+   <td><a href="Element/requestFullscreen.html" title="The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed full-screen."><code>Element.requestFullscreen()</code></a></td>
+   <td><code>webkitRequestFullscreen()</code></td>
+   <td><code>mozRequestFullScreen()</code></td>
+   <td><code>msRequestFullscreen()</code></td>
+   <td><code>webkitRequestFullscreen()</code></td>
+   <td><code>webkitRequestFullscreen()</code></td>
+  </tr>
+ </thead>
+</table>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="https://fullscreen.spec.whatwg.org/" class="external" lang="en" title="The 'Fullscreen API' specification" hreflang="en">Fullscreen API</a></td>
+   <td><span class="spec-Living">Living Standard</span></td>
+   <td>Initial version.</td>
+  </tr>
+ </tbody>
+</table>
 
 <h2 name="Browser_compatibility" id="Browser_compatibility">Browser compatibility</h2>
 
-<p>Although&nbsp; Gecko , Trident, and WebKit implement a draft of this API, there are some subtle differences. This document doesn't necessarily try to call them all into focus. The article will be revised as the spec and implementations fall closer into alignment with one another.</p>
+<p>All browsers implement this APIs. Nevertheless some implement it with prefixed names we slighlty different spelling: e.g. instead of <code>requestFullscreen()</code>, there is a <code>MozRequestFullScreen()</code>.</p>
 
 <p></p><div class="htab"> 
     <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
@@ -760,6 +868,7 @@ if (elem.requestFullscreen) {
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -768,7 +877,9 @@ if (elem.requestFullscreen) {
   <tr>
    <td>Basic support</td>
    <td>15&nbsp;<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/9" title="Released on 2011-12-20.">9.0</a> (9.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/9" title="Released on 2011-12-20.">9.0</a> (9.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span><br>
+    <a href="https://developer.mozilla.org/en-US/Firefox/Releases/47" title="Released on 2016-06-07.">47</a> (47) (behind <code>full-screen-api.unprefix.enabled</code>)</td>
    <td>11 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-ms' as this browser considers it experimental">-ms</a></span></td>
    <td>12.10</td>
    <td>5.0 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
@@ -776,7 +887,9 @@ if (elem.requestFullscreen) {
   <tr>
    <td><code>fullscreenEnabled</code></td>
    <td>20 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/10" title="Released on 2012-01-31.">10.0</a> (10.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/10" title="Released on 2012-01-31.">10.0</a> (10.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span><br>
+    <a href="https://developer.mozilla.org/en-US/Firefox/Releases/47" title="Released on 2016-06-07.">47</a> (47) (behind <code>full-screen-api.unprefix.enabled</code>)</td>
    <td>11 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-ms' as this browser considers it experimental">-ms</a></span></td>
    <td>12.10</td>
    <td>5.1 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
@@ -792,6 +905,7 @@ if (elem.requestFullscreen) {
    <th>Feature</th>
    <th>Android</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Mobile</th>
    <th>Opera Mobile</th>
@@ -801,7 +915,9 @@ if (elem.requestFullscreen) {
    <td>Basic support</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td>28&nbsp;<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
-   <td>9.0 (9.0)<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>9.0 (9.0)<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-moz' as this browser considers it experimental">-moz</a></span><br>
+    47.0 (47) (behind <code>full-screen-api.unprefix.enabled</code>)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -810,7 +926,9 @@ if (elem.requestFullscreen) {
    <td><code>fullscreenEnabled</code></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td>28&nbsp;<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with '-webkit' as this browser considers it experimental">-webkit</a></span></td>
-   <td>10.0 (10.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>10.0 (10.0) <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span><br>
+    47.0 (47) (behind <code>full-screen-api.unprefix.enabled</code>)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -819,64 +937,20 @@ if (elem.requestFullscreen) {
 </table>
 </div>
 
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<p>Although this API was introduced in Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), it's not enabled by default in that release. To enable it, set the <code>full-screen-api.enabled</code> preference to <code>true</code>. The API is enabled by default in Gecko 10.0 (Firefox 10.0 / Thunderbird 10.0 / SeaMonkey 2.7). In Gecko all the API is spelt "fullScreen".</p>
-
-<h2 name="Specification" id="Specification">Specification</h2>
-
-<p><a href="http://fullscreen.spec.whatwg.org/" class="external">Fullscreen API</a></p>
-
-<h2 id="Non-standard_methods">Non-standard methods</h2>
-
-<p>These are some of the methods that browsers implemented before the standard was drafted. Having the standard methods described above it's better to avoid using the following ones:</p>
-
-<ul>
- <li><a href="Window/fullScreen.html" title="/en-US/docs/DOM/window.fullScreen"><code>window.fullScreen</code></a> (Firefox)</li>
- <li><code>HTMLMediaElement.webkitDisplayingFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitEnterFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitExitFullscreen</code></li>
- <li><code>HTMLMediaElement.webkitSupportsFullscreen</code></li>
-</ul>
-
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="Element/requestFullScreen.html" title="{{ APIRef }}"><code>element.mozRequestFullScreen()</code></a></li>
- <li><a href="Element/mozCancelFullScreen.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>element.mozCancelFullScreen()</code></a></li>
- <li><a href="Document/mozFullScreen.html" title="Reports whether or not the document is currently displaying content in fullscreen mode."><code>document.mozFullScreen</code></a></li>
- <li><a href="Document/mozFullScreenElement.html" title="Returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>document.mozFullScreenElement</code></a></li>
- <li><a href="Document/mozFullScreenEnabled.html" title="Reports whether or not full-screen mode is available. Full screen mode is available only for a page that has no windowed plug-ins in any of its documents, and if all &lt;iframe&gt; elements which contain the document have their allowfullscreen attribute set."><code>document.mozFullScreenEnabled</code></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-full-screen" title="The documentation about this has not yet been written; please consider contributing!"><code>:-moz-full-screen</code></a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-full-screen-ancestor" title="The :-moz-full-screen-ancestor&nbsp;CSS pseudo-class applies to all ancestors of the full-screen element, except containing frames in parent documents, which are the full-screen element in their own documents. However, those elements' ancestors have this class applied to them."><code>:-moz-full-screen-ancestor</code></a></li>
+ <li><a href="Fullscreen_API.html">Using fullscreen mode</a></li>
+ <li><a href="Element/requestFullscreen.html" title="The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed full-screen."><code>Element.requestFullscreen()</code></a></li>
+ <li><a href="Document/exitFullscreen.html" title="The Document.exitFullscreen() is a method that takes the document out of full-screen mode; this is used to reverse the effects of a call to make an element in the document full-screen using its Element.requestFullscreen() method."><code>Document.exitFullscreen()</code></a></li>
+ <li><a href="Document/fullscreen.html" title="The Document.fullscreen read-only property reports whether or not the document is currently displaying content in fullscreen mode."><code>Document.fullscreen</code></a></li>
+ <li><a href="Document/fullscreenElement.html" title="The Document.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."><code>Document.fullscreenElement</code></a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:fullscreen" title="The :fullscreen CSS pseudo-class applies to any element that's currently being displayed in full-screen mode. It selects not only to the top level element, but to the whole stack of elements that appears."><code>:fullscreen</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop" title="Each element in the top layer's stack has a ::backdrop pseudo-element. This pseudo-element is a box rendered immediately below the element (and above the element below the element in the stack, if any), within the same top layer."><code>::backdrop</code></a></li>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-allowfullscreen">allowfullscreen</a></code></li>
-</ul>
-
-<ul>
- <li><a href="http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html" class="external" title="http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html">Blog post: Firefox's HTML full-screen API enabled in Nightly builds</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFullscreen_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Using+fullscreen+mode+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Using fullscreen mode on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Using fullscreen mode on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFullscreen_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Using fullscreen mode on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -894,13 +968,13 @@ if (elem.requestFullscreen) {
       
         <li><a href="../../tag/DOM.html">DOM</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Full-screen">Full-screen</a></li>
+        <li><a href="../../tag/Fullscreen%20API.html">Fullscreen API</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Intermediate">Intermediate</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MakeBrowserAgnostic">MakeBrowserAgnostic</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/JS">JS</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video">Video</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Tutorial">Tutorial</a></li>
       
     </ul>
   </div>
@@ -908,9 +982,27 @@ if (elem.requestFullscreen) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/HenryFaulknerClicks">HenryFaulknerClicks</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/meckhardt">meckhardt</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/craigkovatch">craigkovatch</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/SaschaNaz">SaschaNaz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/StanE">StanE</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/zoehneto">zoehneto</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/YuanxiangFranck">YuanxiangFranck</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/tdillon">tdillon</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/HenryFaulknerClicks">HenryFaulknerClicks</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/themitchy">themitchy</a>, 
     
@@ -974,14 +1066,74 @@ if (elem.requestFullscreen) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/HenryFaulknerClicks">HenryFaulknerClicks</a>,
-                      <time datetime="2016-01-20T20:02:27-08:00">Jan 20, 2016, 8:02:27 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>,
+                      <time datetime="2016-12-08T13:44:43.955428-08:00">Dec 8, 2016, 1:44:43 PM</time>
                     </div>
                   
                 </div>
               
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
             </div>
 
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="Fullscreen_API.html">Fullscreen API</a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="Document/fullscreen.html"><code>Document.fullscreen</code></a></li><li><a href="Document/fullscreenElement.html"><code>Document.fullscreenElement</code></a></li><li><a href="Document/onfullscreenchange.html"><code>Document.onfullscreenchange</code></a></li><li><a href="Document/onfullscreenerror.html"><code>Document.onfullscreenerror</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="Document/exitFullscreen.html"><code>Document.exitFullscreen()</code></a></li><li><a href="Element/requestFullscreen.html"><code>Element.requestFullscreen()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../Events/fullscreenchange.html"><code>fullscreenchange</code></a></li><li><a href="../Events/fullscreenerror.html"><code>fullscreenerror</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
             
           </div>
         </div>
@@ -996,12 +1148,12 @@ if (elem.requestFullscreen) {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1009,9 +1161,8 @@ if (elem.requestFullscreen) {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1020,30 +1171,30 @@ if (elem.requestFullscreen) {
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/Fullscreen_API" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/Fullscreen_API" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/fr/docs/Web/Guide/DOM/Using_full_screen_mode">
-            Français
+          <option title="French" value="/fr/docs/Web/Guide/DOM/Using_full_screen_mode">
+            Français (fr)
           </option>
-          <option value="/ja/docs/Web/Guide/DOM/Using_full_screen_mode">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/Guide/DOM/Using_full_screen_mode">
+            日本語 (ja)
           </option>
-          <option value="/ko/docs/Web/Guide/DOM/Using_full_screen_mode">
-            한국어
+          <option title="Korean" value="/ko/docs/Web/Guide/DOM/Using_full_screen_mode">
+            한국어 (ko)
           </option>
-          <option value="/pt-BR/docs/Web/API/Fullscreen_API">
-            Português (do&nbsp;Brasil)
+          <option title="Portuguese (Brazilian)" value="/pt-BR/docs/Web/API/Fullscreen_API">
+            Português (do&nbsp;Brasil) (pt-BR)
           </option>
-          <option value="/ru/docs/DOM/Using_fullscreen_mode">
-            Русский
+          <option title="Russian" value="/ru/docs/DOM/Using_fullscreen_mode">
+            Русский (ru)
           </option>
-          <option value="/zh-CN/docs/DOM/Using_fullscreen_mode">
-            中文 (简体)
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/DOM/Using_fullscreen_mode">
+            中文 (简体) (zh-CN)
           </option>
-          <option value="/zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode">
-            正體中文 (繁體)
+          <option title="Chinese (Traditional)" value="/zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode">
+            正體中文 (繁體) (zh-TW)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1060,33 +1211,38 @@ if (elem.requestFullscreen) {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:09:32 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:34:48 GMT -->
 </body></html>

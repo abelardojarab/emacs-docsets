@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code$samples/Active_learning_2?revision=1145408 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <div class="output" style="height: 100px;overflow: auto;">
+  <p class="admitted">Admit: </p>
+  <p class="refused">Refuse: </p>
+</div>
+
+<textarea id="code" class="playable-code" style="height: 400px;">
+var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+    
+var admitted = document.querySelector('.admitted');
+var refused = document.querySelector('.refused');
+admitted.textContent = 'Admit: ';
+refused.textContent = 'Refuse: '
+
+// var i = 0;
+
+// refused.textContent += ;
+// admitted.textContent += ;
+
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+        
+        
+            <script type="text/javascript">
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nvar i = 0;\n\ndo {\n  if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n    refused.textContent += people[i] + \', \';\n  } else {\n    admitted.textContent += people[i] + \', \';\n  }\n  i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code$samples/Active_learning_2?revision=1145408 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+</html>

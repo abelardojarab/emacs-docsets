@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:56:12 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:06:22 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/uk/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/uk/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -64,17 +63,25 @@
 
   
     
+      <link rel="alternate" hreflang="de" href="../../../../../../../de/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
+    
       <link rel="alternate" hreflang="es" href="../../../../../../../es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply.html" title="Function.prototype.apply()">
     
       <link rel="alternate" hreflang="fr" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply.html" title="Function.prototype.apply()">
+    
+      <link rel="alternate" hreflang="it" href="../../../../../../../it/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
       <link rel="alternate" hreflang="ja" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
       <link rel="alternate" hreflang="ko" href="../../../../../../../ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
+      <link rel="alternate" hreflang="pl" href="../../../../../../../pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply.html" title="Function.prototype.apply()">
+    
       <link rel="alternate" hreflang="pt-BR" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
       <link rel="alternate" hreflang="ru" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
+    
+      <link rel="alternate" hreflang="tr" href="../../../../../../../tr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
       <link rel="alternate" hreflang="zh-CN" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">
     
@@ -92,6 +99,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -107,10 +121,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -160,8 +174,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -177,9 +191,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Перейти до основного вмісту</a></li>
     <li><a id="skip-language" href="#language">Вибір мови</a></li>
-    
-      <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
-    
+    <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
   </ul>
 
   <!-- Header -->
@@ -196,34 +208,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Увійти
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/uk/users/signin" class="login-link launch-persona-login" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply" class="login-link js-login-link" data-service="GitHub">
+        Увійти
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-платформа<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-технології<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -233,18 +231,20 @@
               <li><a href="https://developer.mozilla.org/uk/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide/Graphics">Графіка</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/HTTP">HTTP</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/API">API / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Web/Apps">Застосунки</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">Довідники та посібники</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення Web</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення веб-розробки</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Tutorials">Посібники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Reference">Довідники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide">Посібники розробників</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Accessibility">Доступність</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Games">Розробка ігор</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web">...більше документації</a></li>
             </ul>
           </div>
@@ -255,10 +255,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons">Додатки</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -272,8 +269,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/MDN/Community">Приєднатися до спільноти MDN</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -310,26 +307,38 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply.html" title="Function.prototype.apply()">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply.html" title="Function.prototype.apply()">Français</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Англійська (США)">English (US) (en-US)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">日本語</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">한국어</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../de/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Німецька">Deutsch (de)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">Português (do&nbsp;Brasil)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply.html" title="Іспанська">Español (es)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">Русский</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply.html" title="Французька">Français (fr)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Function.prototype.apply()">中文 (简体)</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../it/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Італійська">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Японська">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Корейська">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply.html" title="Польська">Polski (pl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Португальська (Бразилія)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Російська">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../tr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Турецька">Türkçe (tr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html" title="Китайська (спрощене письмо)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -341,7 +350,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply$translate?tolocale=uk" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Редагувати<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -352,7 +363,6 @@
             <div class="title">Додатково</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply$history" rel="nofollow, noindex">Історія</a></li>
-                
                 
                 
                 
@@ -408,8 +418,13 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/uk/profiles/gergob" title="Переглянути профіль: gergob">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gergob" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gergob</noscript></a>
+                <a href="https://developer.mozilla.org/uk/profiles/beytek" title="Переглянути профіль: beytek">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="beytek" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">beytek</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/eduardoboucas" title="Переглянути профіль: eduardoboucas">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="eduardoboucas" data-src="../../../../../../../../secure.gravatar.com/avatar/4f8072e22fae3cd98b876df304886bed6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">eduardoboucas</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -418,28 +433,38 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/stevemao" title="Переглянути профіль: stevemao">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="stevemao" data-src="../../../../../../../../secure.gravatar.com/avatar/084668018e4752a76a838f27e041d1826c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">stevemao</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/gergob" title="Переглянути профіль: gergob">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gergob" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gergob</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/uk/profiles/louisjimenez" title="Переглянути профіль: louisjimenez">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="louisjimenez" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">louisjimenez</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/jswisher" title="Переглянути профіль: jswisher">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jswisher" data-src="../../../../../../../../secure.gravatar.com/avatar/38185c2812cbcae186ebbe4a829106616c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jswisher</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/toddabrahm" title="Переглянути профіль: toddabrahm">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="toddabrahm" data-src="../../../../../../../../secure.gravatar.com/avatar/a64ea22d3cc77852dd79675a0706822e6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">toddabrahm</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="toddabrahm" data-src="../../../../../../../../secure.gravatar.com/avatar/a64ea22d3cc77852dd79675a0706822e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">toddabrahm</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/uk/profiles/geoctrl" title="Переглянути профіль: geoctrl">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="geoctrl" data-src="../../../../../../../../secure.gravatar.com/avatar/248786f3c32e4a89f25b18af88e775e56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">geoctrl</noscript></a>
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/uk/profiles/rexcviii" title="Переглянути профіль: rexcviii">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rexcviii" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rexcviii</noscript></a>
+                <a href="https://developer.mozilla.org/uk/profiles/RezaFarhadian" title="Переглянути профіль: RezaFarhadian">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="RezaFarhadian" data-src="../../../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">RezaFarhadian</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -690,7 +715,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">У цій статті<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li></ol></li><li><a href="#Description" rel="internal">Description</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Using_apply_to_chain_constructors" rel="internal">Using <code>apply</code> to chain constructors</a></li><li><a href="#Using_apply_and_built-in_functions" rel="internal">Using <code>apply</code> and built-in functions</a></li><li><a href="#Using_apply_in_monkey-patching" rel="internal">Using apply in "monkey-patching"</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Description" rel="internal">Description</a></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Using_apply_to_chain_constructors" rel="internal">Using <code>apply</code> to chain constructors</a></li><li><a href="#Using_apply_and_built-in_functions" rel="internal">Using <code>apply</code> and built-in functions</a></li><li><a href="#Using_apply_in_monkey-patching" rel="internal">Using apply in "monkey-patching"</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -716,7 +741,7 @@
               
               
                 <div id="doc-pending-fallback" class="warning">
-                  <p><bdi>Наші волонтери ще не переклали цю статтю мовою: <bdi>Українська</bdi>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply$translate?tolocale=uk">Приєднайтесь до нас і допоможіть зробити це!</a></bdi></p>
+                  <p><bdi>Our volunteers haven't translated this article into <bdi>Українська</bdi> yet. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply$translate?tolocale=uk">Join us and help get the job done!</a><br> You can also read the article in <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply.html">English (US)</a>.</bdi></p>
                 </div>
               
 
@@ -733,7 +758,7 @@
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox"><code><var>fun</var>.apply(<var>thisArg, </var>[<var>argsArray</var>])</code></pre>
+<pre class="syntaxbox"><var>fun</var>.apply(<var>thisArg, </var>[<var>argsArray</var>])</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
@@ -744,6 +769,10 @@
  <dd>An array-like object, specifying the arguments with which <em><code>fun</code></em> should be called, or <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/null.html" title="The value null&nbsp;represents the intentional absence of any object value. It is one of JavaScript's primitive values."><code>null</code></a> or <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined.html" title="The global undefined property represents the primitive value undefined. It is one of JavaScript's primitive types."><code>undefined</code></a> if no arguments should be provided to the function. Starting with ECMAScript 5 these arguments can be a generic array-like object instead of an array. See below for <a href="#Browser_compatibility">browser compatibility</a> information.</dd>
 </dl>
 
+<h3 id="Return_value">Return value</h3>
+
+<p>The result of calling the function with the specified <code><strong>this</strong></code> value and arguments.</p>
+
 <h2 id="Description">Description</h2>
 
 <p>You can assign a different <code>this</code> object when calling an existing function. <code>this</code> refers to the current object, the calling object. With <code>apply</code>, you can write a method once and then inherit it in another object, without having to rewrite the method for the new object.</p>
@@ -752,9 +781,11 @@
 
 <p>You can also use <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Functions/arguments.html" title="The arguments object is an Array-like object corresponding to the arguments passed to a function."><code>arguments</code></a> for the <code>argsArray</code> parameter. <code>arguments</code> is a local variable of a function. It can be used for all unspecified arguments of the called object. Thus, you do not have to know the arguments of the called object when you use the <code>apply</code> method. You can use <code>arguments</code> to pass all the arguments to the called object. The called object is then responsible for handling the arguments.</p>
 
-<p>Since ECMAScript 5th Edition you can also use any kind of object which is array-like, so in practice this means it's going to have a property <code>length</code> and integer properties in the range <code>(0...length)</code>. As an example you can now use a <a href="../../../../../../../en-US/docs/Web/API/NodeList.html" title="NodeList objects are collections of nodes such as those returned by Node.childNodes and the document.querySelectorAll method."><code>NodeList</code></a> or a&nbsp;custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
+<p>Since ECMAScript 5th Edition you can also use any kind of object which is array-like, so in practice this means it's going to have a property <code>length</code> and integer properties in the range <code>(0...length-1)</code>. As an example you can now use a <a href="../../../../../../../en-US/docs/Web/API/NodeList.html" title="NodeList objects are collections of nodes such as those returned by Node.childNodes and the document.querySelectorAll method."><code>NodeList</code></a> or a&nbsp;custom object like <code>{ 'length': 2, '0': 'eat', '1': 'bananas' }</code>.</p>
 
-<div><div class="note"><strong>Note:</strong>&nbsp;Most browsers, including Chrome 14 and Internet Explorer 9, still do not accept array-like objects and will throw an exception.</div></div>
+<div class="note">
+<p>Most browsers, including Chrome 14 and Internet Explorer 9, still do not accept array-like objects and will throw an exception.</p>
+</div>
 
 <h2 id="Examples">Examples</h2>
 
@@ -835,7 +866,8 @@ for (var i = 0; i &lt; numbers.length; i++) {
   var QUANTUM = 32768;
 
   for (var i = 0, len = arr.length; i &lt; len; i += QUANTUM) {
-    var submin = Math.min.apply(null, arr.slice(i, Math.min(i+QUANTUM, len)));
+    var submin = Math.min.apply(null, 
+                                arr.slice(i, Math.min(i+QUANTUM, len)));
     min = Math.min(submin, min);
   }
 
@@ -924,7 +956,7 @@ someobject.foo = function() {
   </tr>
   <tr>
    <td>ES 5.1 generic array-like object as <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Functions/arguments.html" title="The arguments object is an Array-like object corresponding to the arguments passed to a function."><code>arguments</code></a></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/4" title="Released on 2011-03-22.">4.0</a> (2.0)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -982,25 +1014,6 @@ someobject.foo = function() {
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Поширити:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=%D0%AF+%D0%B4%D1%96%D0%B7%D0%BD%D0%B0%D0%B2%D1%81%D1%8F%28%D0%BB%D0%B0%D1%81%D1%8F%29+%D0%BF%D1%80%D0%BE+Function.prototype.apply%28%29+%D0%BD%D0%B0+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="Я дізнався(лася) про Function.prototype.apply() на MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="Я дізнався(лася) про Function.prototype.apply() на MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FFunction%2Fapply%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="Я дізнався(лася) про Function.prototype.apply() на MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google +</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Мітки документа й учасники</h2>
@@ -1023,9 +1036,15 @@ someobject.foo = function() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Зробили внесок у цю сторінку:</strong> 
-        <a href="https://developer.mozilla.org/uk/profiles/gergob">gergob</a>, 
+        <a href="https://developer.mozilla.org/uk/profiles/beytek">beytek</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/eduardoboucas">eduardoboucas</a>, 
     
         <a href="https://developer.mozilla.org/uk/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/stevemao">stevemao</a>, 
+    
+        <a href="https://developer.mozilla.org/uk/profiles/gergob">gergob</a>, 
     
         <a href="https://developer.mozilla.org/uk/profiles/louisjimenez">louisjimenez</a>, 
     
@@ -1035,7 +1054,7 @@ someobject.foo = function() {
     
         <a href="https://developer.mozilla.org/uk/profiles/geoctrl">geoctrl</a>, 
     
-        <a href="https://developer.mozilla.org/uk/profiles/rexcviii">rexcviii</a>, 
+        <a href="https://developer.mozilla.org/uk/profiles/RezaFarhadian">RezaFarhadian</a>, 
     
         <a href="https://developer.mozilla.org/uk/profiles/Natalya_Surikova">Natalya_Surikova</a>, 
     
@@ -1133,11 +1152,50 @@ someobject.foo = function() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Востаннє оновлена:</strong>
-                      <a href="https://developer.mozilla.org/uk/profiles/gergob">gergob</a>,
-                      <time datetime="2016-01-22T04:13:47-08:00">22 січ. 2016 р., 04:13:47</time>
+                      <a href="https://developer.mozilla.org/uk/profiles/beytek">beytek</a>,
+                      <time datetime="2016-10-19T02:34:27-07:00">19 жовт. 2016 р., 02:34:27</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Вивчайте найкраще з веб-розробки</h2>
+        <p class="newsletter-description">Підпишіться на нашу розсилку:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">Ел. пошта</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            Я погоджуюсь з тим, як Mozilla поводиться з моїми даними згідно з <a href="https://www.mozilla.org/privacy/">цією Політикою приватності</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Підписатися зараз</button>
+        </div>
+        
+        <p class="newsletter-lang">Поки що розсилка пропонується лише англійською мовою.</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Дякуємо! Будь ласка, перевірте свою пошту для підтвердження підписки.</h2>
+        <p>Якщо ви раніше не підтверджували підписку на Mozilla, то вам це, можливо, треба зробити. Будь ласка, відкрийте теку Вхідні або Спам своєї ел. пошти, щоб перевірити, чи не прийшов від нас лист.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Приховати підписку на розсилку</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -1154,7 +1212,7 @@ someobject.foo = function() {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">Див. також</div>
-    <ol><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/index.html">Standard built-in objects</a></strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments.html" title="The function.arguments property refers to an an array-like object corresponding to the arguments passed to a function. Use the simple variable arguments instead."><code>Function.arguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity.html" title="The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the Function.prototype.length property."><code>Function.arity</code></a></s></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller.html" title="The function.caller property returns the function that invoked the specified function."><code>Function.caller</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName.html" title="The function.displayName property returns the display name of the function."><code>Function.displayName</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length.html" title="The length property specifies the number of arguments expected by the function."><code>Function.length</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name.html" title="The function.name property returns the name of the function."><code>Function.name</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html" title="The Function.prototype property represents the Function prototype object."><code>Function.prototype</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><em><code>Function.prototype.apply()</code></em></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html" title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."><code>Function.prototype.bind()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html" title="The call() method calls a function with a given this value and arguments provided individually."><code>Function.prototype.call()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator.html" title="The isGenerator() method determines whether or not a function is a generator."><code>Function.prototype.isGenerator()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Function.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString.html" title="The toString() method returns a string representing the source code of the function."><code>Function.prototype.toString()</code></a></li></ol></li><li><strong>Inheritance:</strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.html"><code>Object</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count.html" title="The __count__ property used to store the count of enumerable properties on the object, but it has been removed."><code>Object.prototype.__count__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available."><code>Object.prototype.__noSuchMethod__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent.html" title="The __parent__ property used to point to an object's context, but it has been removed."><code>Object.prototype.__parent__</code></a></s></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto.html" title="The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed."><code>Object.prototype.__proto__</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor.html" title="Returns a reference to the Object function that created the instance's prototype. Note that the value of this property is a reference to the function itself, not a string containing the function's name. The value is only read-only for primitive values such as&nbsp;1,&nbsp;true and&nbsp;&quot;test&quot;."><code>Object.prototype.constructor</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__.html" title="The __defineGetter__ method binds an object's property to a function to be called when that property is looked up."><code>Object.prototype.__defineGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__.html" title="The __defineSetter__ method binds an object's property to a function to be called when an attempt is made to set that property."><code>Object.prototype.__defineSetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__.html" title="The __lookupGetter__ method returns the function bound as a getter to the specified property."><code>Object.prototype.__lookupGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__.html" title="The __lookupSetter__ method returns the function bound as a setter to the specified property."><code>Object.prototype.__lookupSetter__()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty.html" title="The hasOwnProperty() method returns a boolean indicating whether the object has the specified property."><code>Object.prototype.hasOwnProperty()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf.html" title="The isPrototypeOf() method tests for an object in another object's prototype chain."><code>Object.prototype.isPrototypeOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable.html" title="The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable."><code>Object.prototype.propertyIsEnumerable()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString.html" title="The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes."><code>Object.prototype.toLocaleString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Object.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString.html" title="The toString() method returns a string representing object."><code>Object.prototype.toString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch.html" title="The unwatch() method removes a watchpoint set with the watch() method."><code>Object.prototype.unwatch()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf.html" title="Technical review completed."><code>Object.prototype.valueOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch.html" title="The watch() method watches for a property to be assigned a value and runs a function when that occurs."><code>Object.prototype.watch()</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/index.html">Standard built-in objects</a></strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function.html"><code>Function</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments.html" title="The function.arguments property refers to an an array-like object corresponding to the arguments passed to a function. Use the simple variable arguments instead."><code>Function.arguments</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/arity.html" title="The arity property used to return the number of arguments expected by the function, however, it no longer exists and has been replaced by the Function.prototype.length property."><code>Function.arity</code></a></s></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/caller.html" title="The function.caller property returns the function that invoked the specified function."><code>Function.caller</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName.html" title="The function.displayName property returns the display name of the function."><code>Function.displayName</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length.html" title="The length property specifies the number of arguments expected by the function."><code>Function.length</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name.html" title="The function.name property returns the name of the function."><code>Function.name</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype.html" title="The Function.prototype property represents the Function prototype object."><code>Function.prototype</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><em><code>Function.prototype.apply()</code></em></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind.html" title="The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called."><code>Function.prototype.bind()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call.html" title="The call() method calls a function with a given this value and arguments provided individually."><code>Function.prototype.call()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator.html" title="The isGenerator() method determines whether or not a function is a generator."><code>Function.prototype.isGenerator()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Function.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/toString.html" title="The toString() method returns a string representing the source code of the function."><code>Function.prototype.toString()</code></a></li></ol></li><li><strong>Inheritance:</strong></li><li><strong><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object.html"><code>Object</code></a></strong></li><li><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/count.html" title="The __count__ property used to store the count of enumerable properties on the object, but it has been removed."><code>Object.prototype.__count__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available."><code>Object.prototype.__noSuchMethod__</code></a></s></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent.html" title="The __parent__ property used to point to an object's context, but it has been removed."><code>Object.prototype.__parent__</code></a></s></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto.html" title="The __proto__ property of Object.prototype is an accessor property (a getter function and a setter function) that exposes the internal [[Prototype]] (either an object or null) of the object through which it is accessed."><code>Object.prototype.__proto__</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor.html" title="Returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name. The value is only read-only for primitive values such as&nbsp;1,&nbsp;true and&nbsp;&quot;test&quot;."><code>Object.prototype.constructor</code></a></li></ol></li><li><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__.html" title="The __defineGetter__ method binds an object's property to a function to be called when that property is looked up."><code>Object.prototype.__defineGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__.html" title="The __defineSetter__ method binds an object's property to a function to be called when an attempt is made to set that property."><code>Object.prototype.__defineSetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__.html" title="The __lookupGetter__ method returns the function bound as a getter to the specified property."><code>Object.prototype.__lookupGetter__()</code></a></li><li><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__.html" title="The __lookupSetter__ method returns the function bound as a setter to the specified property."><code>Object.prototype.__lookupSetter__()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty.html" title="The hasOwnProperty() method returns a boolean indicating whether the object has the specified property."><code>Object.prototype.hasOwnProperty()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf.html" title="The isPrototypeOf() method checks if an object exists in another object's prototype chain."><code>Object.prototype.isPrototypeOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable.html" title="The propertyIsEnumerable() method returns a Boolean indicating whether the specified property is enumerable."><code>Object.prototype.propertyIsEnumerable()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString.html" title="The toLocaleString() method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes."><code>Object.prototype.toLocaleString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource.html" title="The toSource() method returns a string representing the source code of the object."><code>Object.prototype.toSource()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString.html" title="The toString() method returns a string representing the object."><code>Object.prototype.toString()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/unwatch.html" title="The unwatch() method removes a watchpoint set with the watch() method."><code>Object.prototype.unwatch()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf.html" title="The valueOf() method returns the primitive value of the specified object."><code>Object.prototype.valueOf()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch.html" title="The watch() method watches for a property to be assigned a value and runs a function when that occurs."><code>Object.prototype.watch()</code></a></li><li><a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf.html" title="The Object.setPrototypeOf() method sets the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null."><code>Object.setPrototypeOf()</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -1178,12 +1236,12 @@ someobject.foo = function() {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">Про MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Умови</a></li>
@@ -1191,9 +1249,8 @@ someobject.foo = function() {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Куки</a></li>
             <li><a href="http://github.com/mozilla/kuma">Зробіть внесок у код</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1202,30 +1259,42 @@ someobject.foo = function() {
     <form class="languages go" method="get" action="https://developer.mozilla.org/uk/docs/Web">
       <label for="language">Інші мови:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" selected="">
-          English (US)
+        <option title="Англійська (США)" value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply">
-            Español
+          <option title="Німецька" value="/de/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            Deutsch (de)
           </option>
-          <option value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply">
-            Français
+          <option title="Іспанська" value="/es/docs/Web/JavaScript/Referencia/Objetos_globales/Function/apply">
+            Español (es)
           </option>
-          <option value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
-            日本語
+          <option title="Французька" value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply">
+            Français (fr)
           </option>
-          <option value="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
-            한국어
+          <option title="Італійська" value="/it/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            Italiano (it)
           </option>
-          <option value="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
-            Português (do&nbsp;Brasil)
+          <option title="Японська" value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            日本語 (ja)
           </option>
-          <option value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
-            Русский
+          <option title="Корейська" value="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            한국어 (ko)
           </option>
-          <option value="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
-            中文 (简体)
+          <option title="Польська" value="/pl/docs/Web/JavaScript/Referencje/Obiekty/Function/apply">
+            Polski (pl)
+          </option>
+          <option title="Португальська (Бразилія)" value="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            Português (do&nbsp;Brasil) (pt-BR)
+          </option>
+          <option title="Російська" value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            Русский (ru)
+          </option>
+          <option title="Турецька" value="/tr/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            Türkçe (tr)
+          </option>
+          <option title="Китайська (спрощене письмо)" value="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Перейти&lt;/button&gt;</noscript>
@@ -1242,33 +1311,38 @@ someobject.foo = function() {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:56:13 GMT -->
+<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Function/apply by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:06:24 GMT -->
 </body></html>

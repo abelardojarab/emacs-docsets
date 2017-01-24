@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:38:42 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:22:37 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,6 +75,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -91,10 +97,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +150,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +167,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +184,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCPeerConnection%2FremoteDescription" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/RTCPeerConnection/remoteDescription" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/RTCPeerConnection/remoteDescription" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCPeerConnection%2FremoteDescription" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCPeerConnection%2FremoteDescription" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +207,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +231,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +245,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,7 +285,7 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
@@ -313,7 +302,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +315,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -374,6 +364,11 @@
         
         <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/abbycar" title="View profile: abbycar">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="abbycar" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">abbycar</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
@@ -444,13 +439,13 @@
 
 <p>The read-only property <code><strong>RTCPeerConnection.remoteDescription</strong></code> returns a <a href="../RTCSessionDescription.html" title="The RTCSessionDescription interface represents the parameters of a session. Each RTCSessionDescription consists of a description type indicating which part of the offer/answer negotiation process it describes and of the SDP descriptor of the session."><code>RTCSessionDescription</code></a> describing the session (which includes configuration and media information) for the remote end of the connection. If this hasn't been set yet, this is <code>null</code>.</p>
 
-<p>The returned value typically reflects a remote description which has been received over the signaling server (as either an offer or an answer) and then put into effect by your code calling <a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format. The actual connection is affected by this change, so it must be able to support both the old and new descriptions in order for the change to actually take place. The method takes a single parameter—the session description—and it returns a Promise which is fulfilled once the description has been changed, asynchronously."><code>RTCPeerConnection.setRemoteDescription()</code></a> in response.</p>
+<p>The returned value typically reflects a remote description which has been received over the signaling server (as either an offer or an answer) and then put into effect by your code calling <a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format."><code>RTCPeerConnection.setRemoteDescription()</code></a> in response.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="syntaxbox"> var <em>sessionDescription</em> = <em>peerConnection</em>.remoteDescription;</pre>
 
-<p>On a more fundamental level, the returned value is the value of <a href="pendingRemoteDescription.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.pendingRemoteDescription</code></a> if that property isn't <code>null</code>; otherwise, the value of <a href="currentRemoteDescription.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.currentRemoteDescription</code></a> is returned. See "<a href="../WebRTC_API/Connectivity.html#Pending_and_current_descriptions">Pending and current descriptions</a>" in <a href="../WebRTC_API/Connectivity.html">WebRTC connectivity</a> for details on this algorithm and why it's used.</p>
+<p>On a more fundamental level, the returned value is the value of <a href="pendingRemoteDescription.html" title="The read-only property RTCPeerConnection.pendingRemoteDescription returns an RTCSessionDescription object describing a pending configuration change for the remote end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentRemoteDescription or RTCPeerConnection.remoteDescription to get the current session description for the remote endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>RTCPeerConnection.pendingRemoteDescription</code></a> if that property isn't <code>null</code>; otherwise, the value of <a href="currentRemoteDescription.html" title="The read-only property RTCPeerConnection.currentRemoteDescription returns an RTCSessionDescription object describing the remote end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>RTCPeerConnection.currentRemoteDescription</code></a> is returned. See "<a href="../WebRTC_API/Connectivity.html#Pending_and_current_descriptions">Pending and current descriptions</a>" in <a href="../WebRTC_API/Connectivity.html">WebRTC connectivity</a> for details on this algorithm and why it's used.</p>
 
 <h2 id="Example">Example</h2>
 
@@ -504,6 +499,7 @@ else {
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -512,6 +508,7 @@ else {
   <tr>
    <td>Basic support</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span> [1]</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span> [1]</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
@@ -528,6 +525,7 @@ else {
    <th>Feature</th>
    <th>Android</th>
    <th>Chrome for Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Mobile</th>
    <th>Opera Mobile</th>
@@ -537,6 +535,7 @@ else {
    <td>Basic support</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
@@ -564,6 +563,7 @@ else {
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -572,6 +572,7 @@ else {
   <tr>
    <td>Basic support</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span> [1]</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/22" title="Released on 2013-06-25.">22</a> (22) [1]</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
@@ -611,32 +612,13 @@ else {
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format. The actual connection is affected by this change, so it must be able to support both the old and new descriptions in order for the change to actually take place. The method takes a single parameter—the session description—and it returns a Promise which is fulfilled once the description has been changed, asynchronously."><code>RTCPeerConnection.setRemoteDescription()</code></a>, <a href="pendingRemoteDescription.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.pendingRemoteDescription</code></a>, <a href="currentRemoteDescription.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>RTCPeerConnection.currentRemoteDescription</code></a></li>
- <li><a href="setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format. The actual connection is affected by this change, so it must be able to support both the old and new descriptions in order for the change to actually take place. The method takes a single parameter—the session description—and it returns a Promise which is fulfilled once the description has been changed, asynchronously."><code>RTCPeerConnection.setLocalDescription()</code></a>, <a href="pendingLocalDescription.html" title="The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>RTCPeerConnection.pendingLocalDescription</code></a>, <a href="currentLocalDescription.html" title="The read-only property RTCPeerConnection.currentLocalDescription returns an RTCSessionDescription object describing the local end of the connection as it was most recently successfully negotiated since the last time the&nbsp; RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>RTCPeerConnection.currentLocalDescription</code></a>, <a href="localDescription.html" title="The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is null."><code>RTCPeerConnection.localDescription</code></a></li>
- <li><a href="../../Guide/API/WebRTC.html">WebRTC</a></li>
+ <li><a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format."><code>RTCPeerConnection.setRemoteDescription()</code></a>, <a href="pendingRemoteDescription.html" title="The read-only property RTCPeerConnection.pendingRemoteDescription returns an RTCSessionDescription object describing a pending configuration change for the remote end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentRemoteDescription or RTCPeerConnection.remoteDescription to get the current session description for the remote endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>RTCPeerConnection.pendingRemoteDescription</code></a>, <a href="currentRemoteDescription.html" title="The read-only property RTCPeerConnection.currentRemoteDescription returns an RTCSessionDescription object describing the remote end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>RTCPeerConnection.currentRemoteDescription</code></a></li>
+ <li><a href="setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format."><code>RTCPeerConnection.setLocalDescription()</code></a>, <a href="pendingLocalDescription.html" title="The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>RTCPeerConnection.pendingLocalDescription</code></a>, <a href="currentLocalDescription.html" title="The read-only property RTCPeerConnection.currentLocalDescription returns an RTCSessionDescription object describing the local end of the connection as it was most recently successfully negotiated since the last time the&nbsp; RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>RTCPeerConnection.currentLocalDescription</code></a>, <a href="localDescription.html" title="The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is null."><code>RTCPeerConnection.localDescription</code></a></li>
+ <li><a href="../../Guide/API/WebRTC.png">WebRTC</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCPeerConnection%2FremoteDescription%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+RTCPeerConnection.remoteDescription+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about RTCPeerConnection.remoteDescription on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about RTCPeerConnection.remoteDescription on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FRTCPeerConnection%2FremoteDescription%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about RTCPeerConnection.remoteDescription on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -670,6 +652,8 @@ else {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>
@@ -680,11 +664,48 @@ else {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
-                      <time datetime="2016-04-14T14:52:52-07:00">Apr 14, 2016, 2:52:52 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/abbycar">abbycar</a>,
+                      <time datetime="2016-12-22T15:14:11.948527-08:00">Dec 22, 2016, 3:14:11 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -701,7 +722,7 @@ else {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="../RTCPeerConnection.html"><code>RTCPeerConnection</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Constructor</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="RTCPeerConnection.html" title="The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer."><code>RTCPeerConnection()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="canTrickleIceCandidates.html" title="The read-only property RTCPeerConnection.canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates."><code>canTrickleIceCandidates</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="currentLocalDescription.html" title="The read-only property RTCPeerConnection.currentLocalDescription returns an RTCSessionDescription object describing the local end of the connection as it was most recently successfully negotiated since the last time the&nbsp; RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>currentLocalDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iceConnectionState.html" title="The read-only property RTCPeerConnection.iceConnectionState returns an enum of type RTCIceConnectionState that describes the ICE connection state for the connection."><code>iceConnectionState</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iceGatheringState.html" title="The read-only property RTCPeerConnection.iceGatheringState returns an enum of type RTCIceGatheringState that describes the ICE gathering state for the connection."><code>iceGatheringState</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="localDescription.html" title="The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is null."><code>localDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onaddstream.html" title="The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when&nbsp;the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call RTCPeerConnection.setRemoteDescription() and doesn't wait for the result of the SDP negotiation."><code>onaddstream</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ondatachannel.html" title="The RTCPeerConnection.ondatachannel event handler is a property containing the code to execute when&nbsp;the datachannel event, of type RTCDataChannelEvent, is received by this RTCPeerConnection. Such an event is sent when a RTCDataChannel is added to this connection, in response to the other peer creating a data channel."><code>ondatachannel</code></a></li><li><a href="onicecandidate.html" title="The RTCPeerConnection.onicecandidate event handler is a property containing the code to execute when the icecandidate event, of type RTCPeerConnectionIceEvent, is received by this RTCPeerConnection. Such an event is sent when a RTCIceCandidate object is added to the script."><code>onicecandidate</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="oniceconnectionstatechange.html" title="The RTCPeerConnection.oniceconnectionstatechange event handler is a property containing the code to execute whent the iceconnectionstatechange event, of type Event, is received by this RTCPeerConnection. Such an event is sent when the value of&nbsp; RTCPeerConnection.iceConnectionState changes."><code>oniceconnectionstatechange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidentityresult.html" title="The RTCPeerConnection.onidentityresult event handler is a property containing the code to execute when the identityresult event, of type RTCIdentityEvent, is received by this RTCPeerConnection. Such an event is sent when an identity assertion is generated, via getIdentityAssertion() or during the creation of an offer or an answer."><code>onidentityresult</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidpassertionerror.html" title="The RTCPeerConnection.onidpassertionerror event handler is a property containing the code to execute whent the idpassertionerror event, of type RTCIdentityErrorEvent, is received by this RTCPeerConnection. Such an event is sent when the associated identity provider (IdP) encounters an error while generating an identity assertion."><code>onidpassertionerror</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidpvalidationerror.html" title="The RTCPeerConnection.onidpvalidationerror event handler is a property containing the code to execute whent the idpvalidationerror event, of type RTCIdentityErrorEvent, is received by this RTCPeerConnection. Such an event is sent when the associated identity provider (IdP) encounters an error while validating an identity assertion."><code>onidpvalidationerror</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onnegotiationneeded.html" title="The RTCPeerConnection.onnegotiationneeded event handler is a property containing the code to execute when the negotiationneeded event, of type Event, is received by this RTCPeerConnection. Such an event is sent by the browser to inform that negotiation will be required at some point in the future."><code>onnegotiationneeded</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onpeeridentity.html" title="The RTCPeerConnection.onpeeridentity event handler is a property containing the code to execute whent the peeridentity event, of type Event, is received by this RTCPeerConnection. Such an event is sent when an identity assertion, received from a peer, has been successfully validated."><code>onpeeridentity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onremovestream.html" title="The RTCPeerConnection.onremovestream event handler is a property containing the code to execute whent the removestream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is removed from this connection."><code>onremovestream</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onsignalingstatechange.html" title="The RTCPeerConnection.onsignalingstatechange event handler is a property containing the code to execute whent the signalingstatechange event, of type Event, is received by this RTCPeerConnection. Such an event is sent when the value of RTCPeerConnection.signalingState changes, as the result of a call of RTCCPeerConnection.setLocalDescription() or RTCPeerConnection.setRemoteDescription()."><code>onsignalingstatechange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="peerIdentity.html" title="The read-only property RTCPeerConnection.peerIdentity returns an RTCIdentityAssertion, containing a DOMString once set and verified. If no peer has yet been set and verified, this property will return null. Once set, via the appropriate method, it can't be changed."><code>peerIdentity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="pendingLocalDescription.html" title="The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>pendingLocalDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>remoteDescription</code></em></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="signalingState.html" title="The read-only property RTCPeerConnection.signalingState returns an enum of type RTCSignalingState that describes the signaling state of the local connection, that is the state of its set-up process."><code>signalingState</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it should react by calling RTCPeerConnection.addIceCandidate() to hand off the newly-received candidate to the browser's ICE agent so that it's added to the remote description."><code>addIceCandidate()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="addStream.html" title="The RTCPeerConnection.addStream() method adds a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>addStream()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="close.html" title="The RTCPeerConnection.close() method closes the current peer connection. This should be called when you're ending your session."><code>close()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="RTCPeerConnection-2.html" title="The createAnswer() method of the RTCPeerConnection interface creates an answer to the offer received by the remote peer, in a two-part offer/answer negotiation of a connection. The two first parameters are respectively success and error callbacks, the optional third one represent options for the answer to be created."><code>createAnswer()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="createAnswer.html" title="Creates an answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. Once the answer is created, it should be sent to the source of the offer to continue the negotiation process."><code>createAnswer()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="createOffer.html" title="The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer which includes information about any MediaStreamTracks already attached to the WebRTC session, codec and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection."><code>createOffer()</code></a></li><li><a href="generateCertificate.html" title="The generateCertificate() method of the RTCPeerConnection interface creates and stores an X.509 certificate and corresponding private key then returns an RTCCertificate, providing access to it."><code>generateCertificate()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getIdentityAssertion.html" title="The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not &quot;closed&quot;."><code>getIdentityAssertion()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getLocalStreams.html" title="The RTCPeerConnection.getLocalStreams() method returns an array of MediaStream associated with the local end of the connection. The array may be empty."><code>getLocalStreams()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getRemoteStreams.html" title="The RTCPeerConnection.getRemoteStreams() method returns an array of MediaStream associated with the remote end of the connection. The array may be empty."><code>getRemoteStreams()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getStreamById.html" title="The RTCPeerConnection.getStreamById() method returns the MediaStream with the given id that is associated with local or remote end of the connection. If no stream matches, it returns null."><code>getStreamById()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="removeStream.html" title="The RTCPeerConnection.removeStream() method removes a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>removeStream()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setIdentityProvider.html" title="The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed."><code>setIdentityProvider()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format. The actual connection is affected by this change, so it must be able to support both the old and new descriptions in order for the change to actually take place. The method takes a single parameter—the session description—and it returns a Promise which is fulfilled once the description has been changed, asynchronously."><code>setLocalDescription()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format. The actual connection is affected by this change, so it must be able to support both the old and new descriptions in order for the change to actually take place. The method takes a single parameter—the session description—and it returns a Promise which is fulfilled once the description has been changed, asynchronously."><code>setRemoteDescription()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/addstream.html"><code>addstream</code></a></li><li><a href="../../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../../Events/removestream.html"><code>removestream</code></a></li><li><a href="../../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../../Events/identiyresult.html"><code>identiyresult</code></a></li><li><a href="../../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="../MediaDevices.html"><code>MediaDevices</code></a></li><li><a href="../MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="../Navigator/mediaDevices.html"><code>Navigator.mediaDevices</code></a></li><li><a href="../RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="../RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="../RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="../RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="../RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="../RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="../RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="../RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="../RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="../RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="../RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="../RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="../RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="../RTCPeerConnection.html"><code>RTCPeerConnection</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Constructor</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="RTCPeerConnection.html" title="The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer."><code>RTCPeerConnection()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="canTrickleIceCandidates.html" title="The read-only property RTCPeerConnection.canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates."><code>canTrickleIceCandidates</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="connectionState.html" title="The read-only connectionState property of the RTCPeerConnection interface indicates the current state of the peer connection by returning one of the string values specified by the enum RTCPeerConnectionState."><code>connectionState</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="currentLocalDescription.html" title="The read-only property RTCPeerConnection.currentLocalDescription returns an RTCSessionDescription object describing the local end of the connection as it was most recently successfully negotiated since the last time the&nbsp; RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>currentLocalDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="currentRemoteDescription.html" title="The read-only property RTCPeerConnection.currentRemoteDescription returns an RTCSessionDescription object describing the remote end of the connection as it was most recently successfully negotiated since the last time the RTCPeerConnection finished negotiating and connecting to a remote peer. Also included is a list of any ICE candidates that may already have been generated by the ICE agent since the offer or answer represented by the description was first instantiated."><code>currentRemoteDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="defaultIceServers.html" title="The read-only property RTCPeerConnection.defaultIceServers returns an array of objects based on the RTCIceServer dictionary, which indicates what—if any—ICE servers the browser will use by default if none are provided to the RTCPeerConnection in its RTCConfiguration. However, browsers are not required to provide any default ICE servers at all."><code>defaultIceServers</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iceConnectionState.html" title="The read-only property RTCPeerConnection.iceConnectionState returns an enum of type RTCIceConnectionState which state of the ICE agent associated with the RTCPeerConnection."><code>iceConnectionState</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="iceGatheringState.html" title="The read-only property RTCPeerConnection.iceGatheringState returns an enum of type RTCIceGatheringState that describes connection's ICE gathering state. This lets you detect, for example, when collection of ICE candidates has finished."><code>iceGatheringState</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="localDescription.html" title="The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is null."><code>localDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="onaddstream.html" title="The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when&nbsp;the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call setRemoteDescription() and doesn't wait for the result of the SDP negotiation."><code>onaddstream</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onconnectionstatechange.html" title="The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes."><code>onconnectionstatechange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ondatachannel.html" title="The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel()."><code>ondatachannel</code></a></li><li><a href="onicecandidate.html" title="The RTCPeerConnection.onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server."><code>onicecandidate</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="oniceconnectionstatechange.html" title="The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes."><code>oniceconnectionstatechange</code></a></li><li><a href="onicegatheringstatechange.html" title="The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes."><code>onicegatheringstatechange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidentityresult.html" title="The RTCPeerConnection.onidentityresult event handler is a property containing the code to execute when the identityresult event, of type RTCIdentityEvent, is received by this RTCPeerConnection. Such an event is sent when an identity assertion is generated, via getIdentityAssertion() or during the creation of an offer or an answer."><code>onidentityresult</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidpassertionerror.html" title="The RTCPeerConnection.onidpassertionerror event handler is a property containing the code to execute whent the idpassertionerror event, of type RTCIdentityErrorEvent, is received by this RTCPeerConnection. Such an event is sent when the associated identity provider (IdP) encounters an error while generating an identity assertion."><code>onidpassertionerror</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onidpvalidationerror.html" title="The RTCPeerConnection.onidpvalidationerror event handler is a property containing the code to execute whent the idpvalidationerror event, of type RTCIdentityErrorEvent, is received by this RTCPeerConnection. Such an event is sent when the associated identity provider (IdP) encounters an error while validating an identity assertion."><code>onidpvalidationerror</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onnegotiationneeded.html" title="The RTCPeerConnection.onnegotiationneeded property is an EventHandler which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation."><code>onnegotiationneeded</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onpeeridentity.html" title="The RTCPeerConnection.onpeeridentity event handler is a property containing the code to execute whent the peeridentity event, of type Event, is received by this RTCPeerConnection. Such an event is sent when an identity assertion, received from a peer, has been successfully validated."><code>onpeeridentity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onremovestream.html" title="The RTCPeerConnection.onremovestream event handler is a property containing the code to execute when&nbsp;the removestream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is removed from this connection."><code>onremovestream</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="onsignalingstatechange.html" title="The RTCPeerConnection.onsignalingstatechange property is an EventHandler which specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface. The function receives as input the event object, of type Event; this event is sent when the value of RTCPeerConnection.signalingState changes, as the result of a call to either setLocalDescription() or setRemoteDescription()."><code>onsignalingstatechange</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="ontrack.html" title="The RTCPeerConnection.ontrack property is an EventHandler which specifies a function to be called when the track event occurs on an RTCPeerConnection interface. The function receives as input the event object, of type RTCTrackEvent; this event is sent when a new incoming MediaStreamTrack has been created and associated with an RTCRtpReceiver object which has been added to the set of receivers on connection."><code>ontrack</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="peerIdentity.html" title="The read-only property RTCPeerConnection.peerIdentity returns an RTCIdentityAssertion, containing a DOMString once set and verified. If no peer has yet been set and verified, this property will return null. Once set, via the appropriate method, it can't be changed."><code>peerIdentity</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="pendingLocalDescription.html" title="The read-only property RTCPeerConnection.pendingLocalDescription returns an RTCSessionDescription object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentLocalDescription or RTCPeerConnection.localDescription to get the current state of the endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>pendingLocalDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="pendingRemoteDescription.html" title="The read-only property RTCPeerConnection.pendingRemoteDescription returns an RTCSessionDescription object describing a pending configuration change for the remote end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use RTCPeerConnection.currentRemoteDescription or RTCPeerConnection.remoteDescription to get the current session description for the remote endpoint. For details on the difference, see &quot;Pending and current descriptions&quot; in WebRTC connectivity."><code>pendingRemoteDescription</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>remoteDescription</code></em></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="sctp.html" title="The read-only sctp property on the RTCPeerConnection interface returns an RTCSctpTransport describing the SCTP transport over which SCTP data is being sent and received. If SCTP hasn't been negotiated, this value is null."><code>sctp</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="signalingState.html" title="The read-only signalingState property on the RTCPeerConnection interface returns one of the string values specified by the RTCSignalingState enum; these values describe the state of the signaling process on the local end of the connection while connecting or reconnecting to another peer. See &quot;Signaling&quot; in Lifetime of a WebRTC session for more details about the signaling process."><code>signalingState</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="addIceCandidate.html" title="When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate()."><code>addIceCandidate()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="addStream.html" title="The RTCPeerConnection.addStream() method adds a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>addStream()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="addTrack.html" title="The RTCPeerConnection method addTrack() adds a new media track to the connection. The track is added to the set of tracks which will be transmitted to the other peer."><code>addTrack()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="close.html" title="The RTCPeerConnection.close() method closes the current peer connection."><code>close()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="createAnswer.html" title="The createAnswer() method on the RTCPeerConnection interface creates an answer to an offer received from a remote peer during the offer/answer negotiation of a WebRTC connection. Once the answer is created, it should be sent to the source of the offer to continue the negotiation process."><code>createAnswer()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="createOffer.html" title="The createOffer() method of the RTCPeerConnection interface initiates the creation of an SDP offer which includes information about any MediaStreamTracks already attached to the WebRTC session, codec and options supported by the browser, and any candidates already gathered by the ICE agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection."><code>createOffer()</code></a></li><li><a href="generateCertificate.html" title="The generateCertificate() method of the RTCPeerConnection interface creates and stores an X.509 certificate and corresponding private key then returns an RTCCertificate, providing access to it."><code>generateCertificate()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getIdentityAssertion.html" title="The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not &quot;closed&quot;."><code>getIdentityAssertion()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getLocalStreams.html" title="The RTCPeerConnection.getLocalStreams() method returns an array of MediaStream associated with the local end of the connection. The array may be empty."><code>getLocalStreams()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getRemoteStreams.html" title="The RTCPeerConnection.getRemoteStreams() method returns an array of MediaStream associated with the remote end of the connection. The array may be empty."><code>getRemoteStreams()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="getStreamById.html" title="The RTCPeerConnection.getStreamById() method returns the MediaStream with the given id that is associated with local or remote end of the connection. If no stream matches, it returns null."><code>getStreamById()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><span class="sidebar-icon"><span title="This deprecated API should no longer be used, but will probably still work."><i class="icon-thumbs-down-alt"> </i></span></span><a href="removeStream.html" title="The RTCPeerConnection.removeStream() method removes a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it."><code>removeStream()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="removeTrack.html" title="The RTCPeerConnection.removeTrack() method tells the local end of the connection to stop sending media from the specified track, without actually removing the corresponding RTCRtpSender from the list of senders as reported by RTCPeerConnection.getSenders(). If the track is already stopped, or is not in the connection's senders list, this method has no effect."><code>removeTrack</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setConfiguration.html" title="The RTCPeerConnection.setConfiguration() method sets the current configuration of the RTCPeerConnection based on the values included in the specified RTCConfiguration object. This lets you change the ICE servers used by the connection and which transport policies to use."><code>setConfiguration()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setIdentityProvider.html" title="The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed."><code>setIdentityProvider()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setLocalDescription.html" title="The RTCPeerConnection.setLocalDescription() method changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format."><code>setLocalDescription()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="setRemoteDescription.html" title="The RTCPeerConnection.setRemoteDescription() method changes the remote description associated with the connection. This description specifies the properties of the remote end of the connection, including the media format."><code>setRemoteDescription()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/addstream.html"><code>addstream</code></a></li><li><a href="../../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../../Events/removestream.html"><code>removestream</code></a></li><li><a href="../../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../../Events/identityresult.html"><code>identityresult</code></a></li><li><a href="../../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="../MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="../Navigator/mediaDevices.html"><code>Navigator.mediaDevices</code></a></li><li><a href="../RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="../RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="../RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="../RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="../RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="../RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="../RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="../RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="../RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="../RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="../RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="../RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="../RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -725,12 +746,12 @@ else {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -738,9 +759,8 @@ else {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -757,33 +777,38 @@ else {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:38:42 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:22:37 GMT -->
 </body></html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM Reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:12:28 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM Reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:49:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM%2520Reference" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/DOM%20Reference" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/DOM%20Reference" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM%2520Reference" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM%2520Reference" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/DOM%2520Reference">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -287,585 +269,585 @@
   
   </ol>
 
-        <p>Found 170 documents</p>
+        <p>Found 167 documents</p>
         <ul class="document-list">
           
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/Window.importDialog">Archive/Web/Window.importDialog</a>
                 
-                  <small>Because opening windows on mobile isn't necessarily appropriate, the Firefox Mobile team designed ...</small>
+                  <small>Because opening windows on mobile isn't necessarily appropriate, the Firefox Mobile team ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraCapabilities.html">Mozilla/Firefox_OS/API/CameraCapabilities</a>
+              <a href="../Mozilla/B2G_OS/API/CameraCapabilities.html">Mozilla/B2G_OS/API/CameraCapabilities</a>
                 
                   <small>The CameraControl.capabilities property returns a CameraCapabilities object, which describes all ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraCapabilities/effects.html">Mozilla/Firefox_OS/API/CameraCapabilities/effects</a>
+              <a href="../Mozilla/B2G_OS/API/CameraCapabilities/effects.html">Mozilla/B2G_OS/API/CameraCapabilities/effects</a>
                 
-                  <small>The effects property value is an Array identifying the effects (such as normal, sepia, mono, etc.) ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraCapabilities/flashModes.html">Mozilla/Firefox_OS/API/CameraCapabilities/flashModes</a>
-                
-                  <small>The flashModes property is an Array of strings identifying each of the flash modes supported by the ...</small>
+                  <small>The effects property value is an Array identifying the effects (such as normal, sepia, mono, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl.html">Mozilla/Firefox_OS/API/CameraControl</a>
+              <a href="../Mozilla/B2G_OS/API/CameraCapabilities/flashModes.html">Mozilla/B2G_OS/API/CameraCapabilities/flashModes</a>
+                
+                  <small>The flashModes property is an Array of strings identifying each of the flash modes supported by ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl.html">Mozilla/B2G_OS/API/CameraControl</a>
                 
                   <small>When you use the CameraManager.getCamera() method to get a reference to a camera, you specify a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/capabilities.html">Mozilla/Firefox_OS/API/CameraControl/capabilities</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/capabilities.html">Mozilla/B2G_OS/API/CameraControl/capabilities</a>
                 
-                  <small>The capabilities property return a CameraCapabilities object, which describes the capabilities of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/effect.html">Mozilla/Firefox_OS/API/CameraControl/effect</a>
-                
-                  <small>The effect property is a string defining the effect to be used by the camera. When set, its value ...</small>
+                  <small>The capabilities property return a CameraCapabilities object, which describes the capabilities ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/focusDistanceNear.html">Mozilla/Firefox_OS/API/CameraControl/focusDistanceNear</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/effect.html">Mozilla/B2G_OS/API/CameraControl/effect</a>
+                
+                  <small>The effect property is a string defining the effect to be used by the camera. When set, its ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusDistanceNear.html">Mozilla/B2G_OS/API/CameraControl/focusDistanceNear</a>
                 
                   <small>The focusDistanceNear property value is a distance in meters used with ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/focusMode.html">Mozilla/Firefox_OS/API/CameraControl/focusMode</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusMode.html">Mozilla/B2G_OS/API/CameraControl/focusMode</a>
                 
                   <small>The focusMode property value is a string that defines which kind of focus mode the camera should ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/getPreviewStream.html">Mozilla/Firefox_OS/API/CameraControl/getPreviewStream</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStream.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStream</a>
                 
-                  <small>This method is used to configure and access a MediaStream from the camera. The resulting stream is ...</small>
+                  <small>This method is used to configure and access a MediaStream from the camera. The resulting stream ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/getPreviewStreamVideoMode.html">Mozilla/Firefox_OS/API/CameraControl/getPreviewStreamVideoMode</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode</a>
                 
                   <small>This method is used to configure and access a MediaStream from the camera. You use the resulting ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/onClosed.html">Mozilla/Firefox_OS/API/CameraControl/onClosed</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/onClosed.html">Mozilla/B2G_OS/API/CameraControl/onClosed</a>
                 
                   <small>The onClosed property is used to set an event handler that will track when a new CameraControl ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/release.html">Mozilla/Firefox_OS/API/CameraControl/release</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/release.html">Mozilla/B2G_OS/API/CameraControl/release</a>
                 
-                  <small>Releases the camera so that other applications can use it. You should call this whenever the camera ...</small>
+                  <small>Releases the camera so that other applications can use it. You should call this whenever the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/resumePreview.html">Mozilla/Firefox_OS/API/CameraControl/resumePreview</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/resumePreview.html">Mozilla/B2G_OS/API/CameraControl/resumePreview</a>
                 
                   <small>This method is used to resume the preview stream.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/setConfiguration.html">Mozilla/Firefox_OS/API/CameraControl/setConfiguration</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/setConfiguration.html">Mozilla/B2G_OS/API/CameraControl/setConfiguration</a>
                 
-                  <small>This method is used to set the camera configuration independently of the CameraManager.getCamera() ...</small>
+                  <small>This method is used to set the camera configuration independently of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/setExposureCompensation.html">Mozilla/Firefox_OS/API/CameraControl/setExposureCompensation</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/setExposureCompensation.html">Mozilla/B2G_OS/API/CameraControl/setExposureCompensation</a>
                 
                   <small>This method is used to change the exposure compensation value.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/startRecording.html">Mozilla/Firefox_OS/API/CameraControl/startRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/startRecording.html">Mozilla/B2G_OS/API/CameraControl/startRecording</a>
                 
                   <small>This method is used to start recording a video file on the device; the video is stored as a 3gp ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/stopRecording.html">Mozilla/Firefox_OS/API/CameraControl/stopRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/stopRecording.html">Mozilla/B2G_OS/API/CameraControl/stopRecording</a>
                 
                   <small>Stops recording video on the device; you should call this at some point after calling ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/takePicture.html">Mozilla/Firefox_OS/API/CameraControl/takePicture</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/takePicture.html">Mozilla/B2G_OS/API/CameraControl/takePicture</a>
                 
-                  <small>Captures a still image from the camera and passes it as a Blob to a success callback handler, which ...</small>
+                  <small>Captures a still image from the camera and passes it as a Blob to a success callback handler, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraManager.html">Mozilla/Firefox_OS/API/CameraManager</a>
+              <a href="../Mozilla/B2G_OS/API/CameraManager.html">Mozilla/B2G_OS/API/CameraManager</a>
                 
                   <small>The CameraManager interface provides access to any cameras available on the device being used.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DeviceStorage.html">Mozilla/Firefox_OS/API/DeviceStorage</a>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage.html">Mozilla/B2G_OS/API/DeviceStorage</a>
                 
                   <small>The DeviceStorage interface is used to access files on a specific storage area available on the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/familyName.html">Mozilla/Firefox_OS/API/MozContact/familyName</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/familyName.html">Mozilla/B2G_OS/API/MozContact/familyName</a>
                 
                   <small>The familyName property is a list of all the possible family names usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/givenName.html">Mozilla/Firefox_OS/API/MozContact/givenName</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/givenName.html">Mozilla/B2G_OS/API/MozContact/givenName</a>
                 
                   <small>The givenName property is a list of all the possible given names usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/honorificPrefix.html">Mozilla/Firefox_OS/API/MozContact/honorificPrefix</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificPrefix.html">Mozilla/B2G_OS/API/MozContact/honorificPrefix</a>
                 
                   <small>The honorificPrefix property is a list of all the possible honorific prefix usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/honorificSuffix.html">Mozilla/Firefox_OS/API/MozContact/honorificSuffix</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificSuffix.html">Mozilla/B2G_OS/API/MozContact/honorificSuffix</a>
                 
                   <small>The honorificSuffix property is a list of all the possible honorific suffixes usable for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/id.html">Mozilla/Firefox_OS/API/MozContact/id</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/id.html">Mozilla/B2G_OS/API/MozContact/id</a>
                 
                   <small>The id property is a unique string representing the contact within the device's contact database.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/init.html">Mozilla/Firefox_OS/API/MozContact/init</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/init.html">Mozilla/B2G_OS/API/MozContact/init</a>
                 
                   <small>The init method is used to initialize the mozContact object using a configuration object.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/name.html">Mozilla/Firefox_OS/API/MozContact/name</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/name.html">Mozilla/B2G_OS/API/MozContact/name</a>
                 
-                  <small>The name property is a list of all the possible names use to identify the contact. It's equivalent ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/published.html">Mozilla/Firefox_OS/API/MozContact/published</a>
-                
-                  <small>The published property provides the date of when the contact was stored for the first time on the ...</small>
+                  <small>The name property is a list of all the possible names use to identify the contact. It's ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/updated.html">Mozilla/Firefox_OS/API/MozContact/updated</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/published.html">Mozilla/B2G_OS/API/MozContact/published</a>
+                
+                  <small>The published property provides the date of when the contact was stored for the first time on ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/updated.html">Mozilla/B2G_OS/API/MozContact/updated</a>
                 
                   <small>The updated property provides the date of when the contact was updated for the last time on the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozNetworkStats/data.html">Mozilla/Firefox_OS/API/MozNetworkStats/data</a>
+              <a href="../Mozilla/B2G_OS/API/MozNetworkStats/data.html">Mozilla/B2G_OS/API/MozNetworkStats/data</a>
                 
                   <small>The data property is a list of data usage statistics chunk. Each chunk is a MozNetworkStatsData ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony.html">Mozilla/Firefox_OS/API/Telephony</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony.html">Mozilla/B2G_OS/API/Telephony</a>
                 
                   <small>The Telephony interface of the Web Telephony API provides support for dialing, answering, and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/active.html">Mozilla/Firefox_OS/API/Telephony/active</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/active.html">Mozilla/B2G_OS/API/Telephony/active</a>
                 
-                  <small>The active read-only property of the Telephony interface returns a TelephonyCall object indicating ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/dialEmergency.html">Mozilla/Firefox_OS/API/Telephony/dialEmergency</a>
-                
-                  <small>The dialEmergency() method of the Telephony interface dials an emergency phone number and returns a ...</small>
+                  <small>The active read-only property of the Telephony interface returns a TelephonyCall object ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/onincoming.html">Mozilla/Firefox_OS/API/Telephony/onincoming</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/dialEmergency.html">Mozilla/B2G_OS/API/Telephony/dialEmergency</a>
                 
-                  <small>The onincoming property of the Telephony interface specifies an event listener to receive incoming ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/ownAudioChannel.html">Mozilla/Firefox_OS/API/Telephony/ownAudioChannel</a>
-                
-                  <small>The ownAudioChannel() method of the Telephony interface designates the calling app as the owner of ...</small>
+                  <small>The dialEmergency() method of the Telephony interface dials an emergency phone number and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/ready.html">Mozilla/Firefox_OS/API/Telephony/ready</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/onincoming.html">Mozilla/B2G_OS/API/Telephony/onincoming</a>
                 
-                  <small>The ready read-only property of the Telephony interface provides an asynchronous notification that ...</small>
+                  <small>The onincoming property of the Telephony interface specifies an event listener to receive ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/speakerEnabled.html">Mozilla/Firefox_OS/API/Telephony/speakerEnabled</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/ownAudioChannel.html">Mozilla/B2G_OS/API/Telephony/ownAudioChannel</a>
+                
+                  <small>The ownAudioChannel() method of the Telephony interface designates the calling app as the owner ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/ready.html">Mozilla/B2G_OS/API/Telephony/ready</a>
+                
+                  <small>The ready read-only property of the Telephony interface provides an asynchronous notification ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/Telephony/speakerEnabled.html">Mozilla/B2G_OS/API/Telephony/speakerEnabled</a>
                 
                   <small>The speakerEnabled property of the Telephony interface indicates whether or not the speakerphone ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/startTone.html">Mozilla/Firefox_OS/API/Telephony/startTone</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/startTone.html">Mozilla/B2G_OS/API/Telephony/startTone</a>
                 
-                  <small>The startTone() method of the Telephony Interface begins generating the tone for the specified DTMF ...</small>
+                  <small>The startTone() method of the Telephony Interface begins generating the tone for the specified ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Telephony/stopTone.html">Mozilla/Firefox_OS/API/Telephony/stopTone</a>
+              <a href="../Mozilla/B2G_OS/API/Telephony/stopTone.html">Mozilla/B2G_OS/API/Telephony/stopTone</a>
                 
                   <small>The startTone() method of the Telephony Interface stops transmitting the currently-playing DTMF ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall.html">Mozilla/Firefox_OS/API/TelephonyCall</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall.html">Mozilla/B2G_OS/API/TelephonyCall</a>
                 
                   <small>The TelephonyCall interface of the Web Telephony API represents one telephone call, providing ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/answer.html">Mozilla/Firefox_OS/API/TelephonyCall/answer</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/answer.html">Mozilla/B2G_OS/API/TelephonyCall/answer</a>
                 
                   <small>The answer() method of the TelephonyCall interface answers an incoming call.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/disconnectedReason.html">Mozilla/Firefox_OS/API/TelephonyCall/disconnectedReason</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/disconnectedReason.html">Mozilla/B2G_OS/API/TelephonyCall/disconnectedReason</a>
                 
-                  <small>The disconnectedReason read-only property of the TelephonyCall interface indicates the reason why ...</small>
+                  <small>The disconnectedReason read-only property of the TelephonyCall interface indicates the reason ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/emergency.html">Mozilla/Firefox_OS/API/TelephonyCall/emergency</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/emergency.html">Mozilla/B2G_OS/API/TelephonyCall/emergency</a>
                 
                   <small>The emergency read-only property of the TelephonyCall interface indicates whether the current ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/error.html">Mozilla/Firefox_OS/API/TelephonyCall/error</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/error.html">Mozilla/B2G_OS/API/TelephonyCall/error</a>
                 
-                  <small>The error read-only property of the TelephonyCall interface indicates a returned error when a call ...</small>
+                  <small>The error read-only property of the TelephonyCall interface indicates a returned error when a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/hangUp.html">Mozilla/Firefox_OS/API/TelephonyCall/hangUp</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/hangUp.html">Mozilla/B2G_OS/API/TelephonyCall/hangUp</a>
                 
                   <small>The hangUp () method of the TelephonyCall interface hangs up an ongoing call.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/hold.html">Mozilla/Firefox_OS/API/TelephonyCall/hold</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/hold.html">Mozilla/B2G_OS/API/TelephonyCall/hold</a>
                 
                   <small>The hold() method of the TelephonyCall interface is used to put a call on hold.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/id.html">Mozilla/Firefox_OS/API/TelephonyCall/id</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/id.html">Mozilla/B2G_OS/API/TelephonyCall/id</a>
                 
                   <small>The id read-only property of the TelephonyCall interface indicates the caller id (usually the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/mergeable.html">Mozilla/Firefox_OS/API/TelephonyCall/mergeable</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/mergeable.html">Mozilla/B2G_OS/API/TelephonyCall/mergeable</a>
                 
-                  <small>The mergeable read-only property of the TelephonyCall interface indicates whether the current call ...</small>
+                  <small>The mergeable read-only property of the TelephonyCall interface indicates whether the current ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/number.html">Mozilla/Firefox_OS/API/TelephonyCall/number</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/number.html">Mozilla/B2G_OS/API/TelephonyCall/number</a>
                 
                   <small>The number read-only property of the TelephonyCall interface indicates the telephone number ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onalerting.html">Mozilla/Firefox_OS/API/TelephonyCall/onalerting</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onalerting.html">Mozilla/B2G_OS/API/TelephonyCall/onalerting</a>
                 
                   <small>The onalerting event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onbusy.html">Mozilla/Firefox_OS/API/TelephonyCall/onbusy</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onbusy.html">Mozilla/B2G_OS/API/TelephonyCall/onbusy</a>
                 
-                  <small>A reference to a function to be called to handle the Telephony API's busy event. This event occurs ...</small>
+                  <small>A reference to a function to be called to handle the Telephony API's busy event. This event ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onconnected.html">Mozilla/Firefox_OS/API/TelephonyCall/onconnected</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onconnected.html">Mozilla/B2G_OS/API/TelephonyCall/onconnected</a>
                 
                   <small>The onconnected event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onconnecting.html">Mozilla/Firefox_OS/API/TelephonyCall/onconnecting</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onconnecting.html">Mozilla/B2G_OS/API/TelephonyCall/onconnecting</a>
                 
                   <small>The onconnecting event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/ondialing.html">Mozilla/Firefox_OS/API/TelephonyCall/ondialing</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondialing.html">Mozilla/B2G_OS/API/TelephonyCall/ondialing</a>
                 
                   <small>The ondialing event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/ondisconnected.html">Mozilla/Firefox_OS/API/TelephonyCall/ondisconnected</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondisconnected.html">Mozilla/B2G_OS/API/TelephonyCall/ondisconnected</a>
                 
-                  <small>The ondisconnected event handler of the TelephonyCall interface is a reference to a function to be ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/ondisconnecting.html">Mozilla/Firefox_OS/API/TelephonyCall/ondisconnecting</a>
-                
-                  <small>The ondisconnecting event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                  <small>The ondisconnected event handler of the TelephonyCall interface is a reference to a function to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onerror.html">Mozilla/Firefox_OS/API/TelephonyCall/onerror</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ondisconnecting.html">Mozilla/B2G_OS/API/TelephonyCall/ondisconnecting</a>
                 
-                  <small>The onerror event handler of the TelephonyCall interface is a reference to a function to be called ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/ongroupchange.html">Mozilla/Firefox_OS/API/TelephonyCall/ongroupchange</a>
-                
-                  <small>The ongroupchange event handler of the TelephonyCall interface is a reference to a function to call ...</small>
+                  <small>The ondisconnecting event handler of the TelephonyCall interface is a reference to a function to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onheld.html">Mozilla/Firefox_OS/API/TelephonyCall/onheld</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onerror.html">Mozilla/B2G_OS/API/TelephonyCall/onerror</a>
                 
-                  <small>The onheld event handler of the TelephonyCall interface is a reference to a function to be called ...</small>
+                  <small>The onerror event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onholding.html">Mozilla/Firefox_OS/API/TelephonyCall/onholding</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/ongroupchange.html">Mozilla/B2G_OS/API/TelephonyCall/ongroupchange</a>
+                
+                  <small>The ongroupchange event handler of the TelephonyCall interface is a reference to a function to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onheld.html">Mozilla/B2G_OS/API/TelephonyCall/onheld</a>
+                
+                  <small>The onheld event handler of the TelephonyCall interface is a reference to a function to be ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onholding.html">Mozilla/B2G_OS/API/TelephonyCall/onholding</a>
                 
                   <small>The onholding event handler of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onincoming.html">Mozilla/Firefox_OS/API/TelephonyCall/onincoming</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onincoming.html">Mozilla/B2G_OS/API/TelephonyCall/onincoming</a>
                 
-                  <small>The onincoming () property of the TelephonyCall interface is a reference to a function to be called ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onresuming.html">Mozilla/Firefox_OS/API/TelephonyCall/onresuming</a>
-                
-                  <small>The onconnected event handler of the TelephonyCall interface is a reference to a function to call ...</small>
+                  <small>The onincoming () property of the TelephonyCall interface is a reference to a function to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/onstatechange.html">Mozilla/Firefox_OS/API/TelephonyCall/onstatechange</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onresuming.html">Mozilla/B2G_OS/API/TelephonyCall/onresuming</a>
                 
-                  <small>The onstatechange event handler of the TelephonyCall interface is a reference to a function to be ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/resume.html">Mozilla/Firefox_OS/API/TelephonyCall/resume</a>
-                
-                  <small>The resume() method of the TelephonyCall interface is used to resume a call that was previously put ...</small>
+                  <small>The onconnected event handler of the TelephonyCall interface is a reference to a function to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/secondId.html">Mozilla/Firefox_OS/API/TelephonyCall/secondId</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/onstatechange.html">Mozilla/B2G_OS/API/TelephonyCall/onstatechange</a>
+                
+                  <small>The onstatechange event handler of the TelephonyCall interface is a reference to a function to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/resume.html">Mozilla/B2G_OS/API/TelephonyCall/resume</a>
+                
+                  <small>The resume() method of the TelephonyCall interface is used to resume a call that was previously ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/secondId.html">Mozilla/B2G_OS/API/TelephonyCall/secondId</a>
                 
                   <small>The secondId read-only property of the TelephonyCall interface indicates the second caller's id ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/secondNumber.html">Mozilla/Firefox_OS/API/TelephonyCall/secondNumber</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/secondNumber.html">Mozilla/B2G_OS/API/TelephonyCall/secondNumber</a>
                 
                   <small>The secondNumber read-only property of the TelephonyCall interface indicates the second phone ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/serviceId.html">Mozilla/Firefox_OS/API/TelephonyCall/serviceId</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/serviceId.html">Mozilla/B2G_OS/API/TelephonyCall/serviceId</a>
                 
-                  <small>The serviceId read-only property of the TelephonyCall interface indicates which telephony service a ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/state.html">Mozilla/Firefox_OS/API/TelephonyCall/state</a>
-                
-                  <small>The state read-only property of the TelephonyCall interface returns the current state of the phone ...</small>
+                  <small>The serviceId read-only property of the TelephonyCall interface indicates which telephony ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCall/switchable.html">Mozilla/Firefox_OS/API/TelephonyCall/switchable</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/state.html">Mozilla/B2G_OS/API/TelephonyCall/state</a>
                 
-                  <small>The switchable read-only property of the TelephonyCall interface indicates whether the current call ...</small>
+                  <small>The state read-only property of the TelephonyCall interface returns the current state of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/add.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/add</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCall/switchable.html">Mozilla/B2G_OS/API/TelephonyCall/switchable</a>
+                
+                  <small>The switchable read-only property of the TelephonyCall interface indicates whether the current ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/add.html">Mozilla/B2G_OS/API/TelephonyCallGroup/add</a>
                 
                   <small>The add() method of the TelephonyCallGroup interface adds a specific TelephonyCall object to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/calls.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/calls</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/calls.html">Mozilla/B2G_OS/API/TelephonyCallGroup/calls</a>
                 
                   <small>The calls read-only property of the TelephonyCallGroup interface returns an array containing all ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/hangUp.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/hangUp</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/hangUp.html">Mozilla/B2G_OS/API/TelephonyCallGroup/hangUp</a>
                 
-                  <small>The hangUp () method of the TelephonyCallGroup interface hangs up the entire conference call, i.e. ...</small>
+                  <small>The hangUp () method of the TelephonyCallGroup interface hangs up the entire conference call, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/hold.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/hold</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/hold.html">Mozilla/B2G_OS/API/TelephonyCallGroup/hold</a>
                 
                   <small>The hold () method of the TelephonyCallGroup interface puts the entire conference call on hold, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/oncallschanged.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/oncallschanged</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/oncallschanged.html">Mozilla/B2G_OS/API/TelephonyCallGroup/oncallschanged</a>
                 
                   <small>The oncallschanged property of the Telephony interface specifies an event listener to receive ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/onerror.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/onerror</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/onerror.html">Mozilla/B2G_OS/API/TelephonyCallGroup/onerror</a>
                 
                   <small>The onerror property of the Telephony interface specifies an event listener to receive error ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/onheld.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/onheld</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/onheld.html">Mozilla/B2G_OS/API/TelephonyCallGroup/onheld</a>
                 
-                  <small>The onheld property of the Telephony interface specifies an event listener to receive held events. ...</small>
+                  <small>The onheld property of the Telephony interface specifies an event listener to receive held ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/onholding.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/onholding</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/onholding.html">Mozilla/B2G_OS/API/TelephonyCallGroup/onholding</a>
                 
                   <small>The onholding property of the Telephony interface specifies an event listener to receive holding ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/onresuming.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/onresuming</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/onresuming.html">Mozilla/B2G_OS/API/TelephonyCallGroup/onresuming</a>
                 
-                  <small>The onresuming property of the Telephony interface specifies an event listener to receive resuming ...</small>
+                  <small>The onresuming property of the Telephony interface specifies an event listener to receive ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/onstatechange.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/onstatechange</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/onstatechange.html">Mozilla/B2G_OS/API/TelephonyCallGroup/onstatechange</a>
                 
                   <small>The onstatechange property of the Telephony interface specifies an event listener to receive ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/remove.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/remove</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/remove.html">Mozilla/B2G_OS/API/TelephonyCallGroup/remove</a>
                 
                   <small>The remove () method of the TelephonyCallGroup interface removes a specific TelephonyCall object ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/TelephonyCallGroup/resume.html">Mozilla/Firefox_OS/API/TelephonyCallGroup/resume</a>
+              <a href="../Mozilla/B2G_OS/API/TelephonyCallGroup/resume.html">Mozilla/B2G_OS/API/TelephonyCallGroup/resume</a>
                 
                   <small>The resume () method of the TelephonyCallGroup interface resumes a previously held conference call.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Window/onmoztimechange.html">Mozilla/Firefox_OS/API/Window/onmoztimechange</a>
+              <a href="../Mozilla/B2G_OS/API/Window/onmoztimechange.html">Mozilla/B2G_OS/API/Window/onmoztimechange</a>
                 
                   <small>An event handler for the moztimechange events sent to the window.</small>
                 
@@ -874,7 +856,7 @@
             <li>
               <a href="../Web/API/BlobBuilder.html">Web/API/BlobBuilder</a>
                 
-                  <small>The BlobBuilder interface provides an easy way to construct Blob objects. Just create a BlobBuilder ...</small>
+                  <small>The BlobBuilder interface provides an easy way to construct Blob objects. Just create a ...</small>
                 
             </li>
           
@@ -944,7 +926,7 @@
             <li>
               <a href="../Web/API/Document/adoptNode.html">Web/API/Document/adoptNode</a>
                 
-                  <small>Adopts a node from an external document. The node and its subtree is removed from the document it's ...</small>
+                  <small>Adopts a node from an external document. The node and its subtree is removed from the document ...</small>
                 
             </li>
           
@@ -958,7 +940,7 @@
             <li>
               <a href="../Web/API/Document/createNSResolver.html">Web/API/Document/createNSResolver</a>
                 
-                  <small>Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a ...</small>
+                  <small>Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope ...</small>
                 
             </li>
           
@@ -977,16 +959,16 @@
             </li>
           
             <li>
-              <a href="../Web/API/Document/mozFullScreenEnabled.html">Web/API/Document/mozFullScreenEnabled</a>
+              <a href="../Web/API/Document/mozSetImageElement.html">Web/API/Document/mozSetImageElement</a>
                 
-                  <small>Reports whether or not full-screen mode is available. Full screen mode is available only for a page ...</small>
+                  <small>Changes the element being used as the CSS&nbsp;background for a background with a given background ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Document/mozSetImageElement.html">Web/API/Document/mozSetImageElement</a>
+              <a href="../Web/API/Document/xmlVersion.html">Web/API/Document/xmlVersion</a>
                 
-                  <small>Changes the element being used as the CSS&nbsp;background for a background with a given background ...</small>
+                  <small>Returns the version number as specified in the XML declaration (e.g., ?xml version="1.0"?) or ...</small>
                 
             </li>
           
@@ -1020,12 +1002,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1033,138 +1015,262 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1179,28 +1285,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM Reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:12:45 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM Reference by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:50:06 GMT -->
 </body></html>

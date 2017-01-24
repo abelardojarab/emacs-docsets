@@ -1,0 +1,1479 @@
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope="" itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout--><!-- Mirrored from angular.io/docs/js/latest/cookbook/ts-to-js.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:19 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<title>TypeScript to JavaScript</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"><meta name="robots" content="all"><meta name="referrer" content="origin"><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"><meta property="og:title" content="Angular"><meta property="og:image" content="../../../../resources/images/logos/standard/shield-large.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="184"><meta property="og:image:height" content="200"><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"><meta itemprop="name" content="Angular"><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"><meta itemprop="image" content="../../../../resources/images/logos/standard/shield-large.png"><link rel="icon" type="image/x-icon" href="../../../../resources/images/icons/favicon.ico"><link rel="stylesheet" href="../../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"><link href="../../../../../fonts.googleapis.com/css4765.css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"><link href="../../../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="../../../../resources/css/vendor/icomoon/style.css"><link rel="stylesheet" href="../../../../resources/css/vendor/animate.css"><link rel="stylesheet" href="../../../../resources/css/main.css"><!-- MOBILE ICONS -->
+<link rel="apple-touch-icon" sizes="57x57" href="../../../../resources/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../../../resources/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../../resources/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../../../resources/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../../resources/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../../../resources/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../../../resources/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../../../resources/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../../resources/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../../../../resources/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://angular.io/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><nav data-swiftype-index="false" scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5"><h1><a href="https://angular.io/" md-button="">Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="https://angular.io/features.html" md-button="">Features</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/" md-button="">Docs</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/events.html" md-button="">Events</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/news.html" md-button="">News</a></li><li class="l-right"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/quickstart.html" md-button="">Get Started</a></li></ul></nav><!-- Include this file ONLY when current.path[2] is defined--><nav data-swiftype-index="false" ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="sidenav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="sidenav-search st-input-wrapper"><div class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="text" placeholder="SEARCH DOCS..." class="st-default-search-input"></div><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><ul class="sidenav-links"><li class="sidenav-section no-border"><a href="../index.html" class="nav-title">Docs Home</a></li><!-- CORE DOCUMENTATION--><li class="sidenav-section-divider"><h3>Core Documentation</h3></li><li class="sidenav-section"><a href="../quickstart.html" title="Get up and running with Angular" class="nav-title ">Quickstart</a></li><li class="sidenav-section"><a href="../guide/index.html" title="How to read and use this documentation" class="nav-title is-parent ">Guide<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="../guide/index.html" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="../guide/architecture.html" title="The basic building blocks of Angular applications">2. Architecture</a></li><li class="nav-list-item "><a href="../guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="../guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="../guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="../guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="../guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="../guide/cheatsheet.html" title="Cheat Sheet">8. Cheat Sheet</a></li><li class="nav-list-item "><a href="../guide/style-guide.html" title="Write Angular with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="../guide/glossary.html" title="Brief definitions of the most important words in the Angular vocabulary">10. Glossary</a></li></ul></div></li><li class="sidenav-section no-border"><a href="../api/index.html" title="API Reference" class="nav-title ">API Reference</a></li><!-- ADVANCED DOCUMENATION--><li class="sidenav-section-divider"><h3>Additional Documentation</h3></li><li class="sidenav-section"><a href="../tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-parent ">Tutorial<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="../tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="../tutorial/toh-pt6.html" title="We convert our service and components to use Angular's HTTP service">7. HTTP</a></li></ul></div></li><li class="sidenav-section"><a href="../guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title is-parent ">Advanced<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="../guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="../guide/browser-support.html" title="Browser support and polyfills guide.">Browser support</a></li><li class="nav-list-item "><a href="../guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="../guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="../guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="../guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="../guide/npm-packages.html" title="Recommended npm packages, and how to specify package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="../guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="../guide/router.html" title="Discover the basics of screen navigation with the Angular router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="../guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="../guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="../guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li></ul></div></li><li class="sidenav-section"><a href="index.html" title="A collection of recipes for common Angular application scenarios" class="nav-title is-parent is-selected">Cookbook<img src="../../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"></a><div class="nav-unordered-lists"><ul><li class="nav-list-item "><a href="index.html" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Forms</a></li><li class="nav-list-item "><a href="form-validation.html" title="Validate user's form entries">Form Validation</a></li><li class="nav-list-item "><a href="set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item is-selected"><a href="ts-to-js.html" title="Convert Angular TypeScript examples into ES6 and ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></li></ul><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular for JavaScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><ul ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><li><a href="https://angular.io/docs/ts/latest/cookbook/ts-to-js.html" md-button="">Angular for TypeScript </a></li><li><a href="ts-to-js.html" md-button="">Angular for JavaScript </a></li><li><a href="https://angular.io/docs/dart/latest/cookbook/ts-to-js.html" md-button="">Angular for Dart </a></li></ul></nav></nav><script>// Could put in appCtrl but only needed here and clear here
+(function scrollToSelectedLink() {
+  var sideNav = document.getElementsByClassName('sidenav')[0];
+  var link = sideNav.getElementsByClassName('is-selected')[0];
+  if(link && link.offsetTop > window.innerHeight){
+    sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
+    //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
+  }
+})()</script><header class="hero background-sky"><h1 class="hero-title ">TypeScript to JavaScript </h1><div class="clear"></div></header><div class="banner"><p class="text-body">Convert Angular TypeScript examples into ES6 and ES5 JavaScript</p></div><article class="l-content-small grid-fluid docs-content"><script>function why(id, backTo) {
+  var id = "#"+id;
+  var el = document.querySelector(id);
+  el.hidden=el.hidden=!el.hidden;
+
+  if (el.hidden && backTo){
+    // the next line is required to work around a bug in WebKit (Chrome / Safari)
+    location.href = "#";
+    location.href =  "#" + backTo;
+  }
+}</script><script>function verbose(isVerbose) {
+  isVerbose = !! isVerbose;
+  var el = document.querySelector('button.verbose.off');
+  el.style.display = isVerbose ? 'block' : 'none';
+  var el = document.querySelector('button.verbose.on');
+  el.style.display = isVerbose ? 'none' : 'block';
+
+  CCSStylesheetRuleStyle('main','.l-verbose-section', 'display',
+    isVerbose ? 'block' : 'none');
+}
+</script><script>function CCSStylesheetRuleStyle(stylesheet, selectorText, style, value){
+  /* returns the value of the element style of the rule in the stylesheet
+  *  If no value is given, reads the value
+  *  If value is given, the value is changed and returned
+  *  If '' (empty string) is given, erases the value.
+  *  The browser will apply the default one
+  *
+  * string stylesheet: part of the .css name to be recognized, e.g. 'default'
+  * string selectorText: css selector, e.g. '#myId', '.myClass', 'thead td'
+  * string style: camelCase element style, e.g. 'fontSize'
+  * string value optional : the new value
+  */
+  var CCSstyle = undefined, rules, sheet;
+  for(var m in document.styleSheets){
+    sheet = document.styleSheets[m];
+    if(sheet.href && sheet.href.indexOf(stylesheet) != -1){
+    rules = sheet[document.all ? 'rules' : 'cssRules'];
+    for(var n in rules){
+      console.log(rules[n].selectorText);
+      if(rules[n].selectorText == selectorText){
+        CCSstyle = rules[n].style;
+        break;
+      }
+    }
+    break;
+    }
+  }
+  if(value == undefined)
+    return CCSstyle[style]
+  else
+    return CCSstyle[style] = value
+}
+</script><p>Anything you can do with Angular in <em>TypeScript</em>, you can also do
+in JavaScript. Translating from one language to the other is mostly a
+matter of changing the way you organize your code and access Angular APIs.</p>
+<p><em>TypeScript</em> is a popular language option for Angular development. 
+Most code examples on the Internet as well as on this site are written in <em>TypeScript</em>. 
+This cookbook contains recipes for translating <em>TypeScript</em>
+code examples to <em>ES6</em> and to <em>ES5</em> so that JavaScript developers
+can read and write Angular apps in their preferred dialect.</p>
+<a id="toc"></a><h2 id="table-of-contents">Table of contents</h2>
+<p><a href="#from-ts"><em>TypeScript</em> to <em>ES6</em> to <em>ES5</em></a><br>
+<a href="#modularity">Modularity: imports and exports</a><br>
+<a href="#class-metadata">Classes and Class Metadata</a><br>
+<a href="#dsl"><em>ES5</em> DSL</a><br>
+<a href="#interfaces">Interfaces</a><br>
+<a href="#io-decorators">Input and Output Metadata</a><br>
+<a href="#dependency-injection">Dependency Injection</a><br>
+<a href="#host-binding">Host Binding</a><br>
+<a href="#view-child-decorators">View and Child Decorators</a><br>
+<a href="#aot">AOT compilation in <em>TypeScript</em> Only</a><br></p>
+<p><strong>Run and compare the live <live-example name="cb-ts-to-js"><em>TypeScript</em></live-example> and <live-example name="cb-ts-to-js" lang="js">JavaScript</live-example>
+code shown in this cookbook.</strong></p>
+<a id="from-ts"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/TypeScript%20to%20ES6%20to%20ES5"></a><h2 id="_typescript_-to-_es6_-to-_es5_"><em>TypeScript</em> to <em>ES6</em> to <em>ES5</em></h2>
+<p><em>TypeScript</em> 
+<a href="https://www.typescriptlang.org/" target="_blank" title="&quot;TypeScript is a typed, superset of JavaScript&quot;">is a typed superset of <em>ES6 JavaScript</em></a>.
+&nbsp; <em>ES6 JavaScript</em> is a superset of <em>ES5 JavaScript</em>. &nbsp; <em>ES5</em> is the kind of JavaScript that runs natively in all modern browsers.
+The transformation of <em>TypeScript</em> code all the way down to <em>ES5</em> code can be seen as "shedding" features.</p>
+<p>The downgrade progression is</p>
+<ul>
+<li><em>TypeScript</em> to <em>ES6-with-decorators</em></li>
+<li><em>ES6-with-decorators</em> to <em>ES6-without-decorators</em> ("<em>plain ES6</em>")</li>
+<li><em>ES6-without-decorators</em> to <em>ES5</em></li>
+</ul>
+<p>When translating from <em>TypeScript</em> to <em>ES6-with-decorators</em>, remove 
+<a href="http://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers">class property access modifiers</a>
+such as <code>public</code> and <code>private</code>.
+Remove most of the 
+<a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">type declarations</a>, 
+such as <code>:string</code> and <code>:boolean</code>
+but <strong>keep the constructor parameter types which are used for dependency injection</strong>.</p>
+<p>From <em>ES6-with-decorators</em> to <em>plain ES6</em>, remove all 
+<a href="https://www.typescriptlang.org/docs/handbook/decorators.html">decorators</a>
+and the remaining types.
+You must declare properties in the class constructor (<code>this.title = '...'</code>) rather than in the body of the class.</p>
+<p>Finally, from <em>plain ES6</em> to <em>ES5</em>, the main missing features are <code>import</code>
+statements and <code>class</code> declarations. </p>
+<p>For <em>plain ES6</em> transpilation you can <em>start</em> with a setup similar to the 
+<a href="https://github.com/angular/quickstart"><em>TypeScript</em> quickstart</a> and adjust the application code accordingly. 
+Transpile with <a href="https://babeljs.io/">Babel</a> using the <code>es2015</code> preset. 
+To use decorators and annotations with Babel, install the 
+<a href="https://github.com/shuhei/babel-plugin-angular2-annotations"><code>angular2</code></a> preset as well.</p>
+<a id="modularity"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Importing%20and%20Exporting"></a><h2 id="importing-and-exporting">Importing and Exporting</h2>
+<h3 id="importing-angular-code">Importing Angular Code</h3>
+<p>In both <em>TypeScript</em> and <em>ES6</em>, you import Angular classes, functions, and other members with <em>ES6</em> <code>import</code> statements.</p>
+<p>In <em>ES5</em>, you access the Angular entities of the <a href="../glossary.html#scoped-package">the Angular packages</a>
+through the global <code>ng</code> object. 
+Anything you can import from <code>@angular</code> is a nested member of this <code>ng</code> object:</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format=".">import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {
+  LocationStrategy,
+  HashLocationStrategy
+} from '@angular/common';
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format=".">import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {
+  LocationStrategy,
+  HashLocationStrategy
+} from '@angular/common';
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format=".">import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {
+  LocationStrategy,
+  HashLocationStrategy
+} from '@angular/common';
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format=".">var platformBrowserDynamic = ng.platformBrowserDynamic.platformBrowserDynamic;
+var LocationStrategy = ng.common.LocationStrategy;
+var HashLocationStrategy = ng.common.HashLocationStrategy;
+</code-pane></code-tabs><h3 id="exporting-application-code">Exporting Application Code</h3>
+<p>Each file in a <em>TypeScript</em> or <em>ES6</em> Angular application constitutes an <em>ES6</em> module.
+When you want to make something available to other modules, you <code>export</code> it.</p>
+<p><em>ES5</em> lacks native support for modules. 
+In an Angular <em>ES5</em> application, you load each file manually by adding a <code>&lt;script&gt;</code> tag to <code>index.html</code>. </p>
+<div class="alert is-important"><p>The order of <code>&lt;script&gt;</code> tags is often significant. 
+You must load a file that defines a public JavaScript entity before a file that references that entity.</p>
+</div><p>The best practice in <em>ES5</em> is to create a form of modularity that avoids polluting the global scope. 
+Add one application namespace object such as <code>app</code> to the global <code>document</code>.
+Then each code file "exports" public entities by attaching them to that namespace object, e.g., <code>app.HeroComponent</code>.
+You could factor a large application into several sub-namespaces 
+which leads to "exports" along the lines of <code>app.heroQueries.HeroComponent</code>.</p>
+<p>Every <em>ES5</em> file should wrap code in an 
+<a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression">Immediately Invoked Function Expression (IIFE)</a>
+to limit unintentional leaking of private symbols into the global scope.</p>
+<p>Here is a <code>HeroComponent</code> as it might be defined and "exported" in each of the four language variants.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroComponent {
+  constructor() {
+    this.title = 'Hero Detail';
+  }
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent; // "export"
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-view',
+    template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+  })
+];
+
+function HeroComponent() {
+  this.title = "Hero Detail";
+}
+
+HeroComponent.prototype.getName = function() { return 'Windstorm'; };
+</code-pane></code-tabs><h3 id="importing-application-code">Importing Application Code</h3>
+<p>In <em>TypeScript</em> and <em>ES6</em> apps, you <code>import</code> things that have been exported from other modules.</p>
+<p>In <em>ES5</em> you use the shared namespace object to access "exported" entities from other files.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format=".">import { HeroComponent } from './hero.component';
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format=".">import { HeroComponent } from './hero.component';
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format=".">import { HeroComponent } from './hero.component';
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format=".">var HeroComponent = app.HeroComponent;
+</code-pane></code-tabs><div class="alert is-helpful"><p>Alternatively, you can use a module loader such as Webpack or
+Browserify in an Angular JavaScript project. In such a project, you would
+use <em>CommonJS</em> modules and the <code>require</code> function to load Angular framework code.
+Then use <code>module.exports</code> and <code>require</code> to export and import application  code.</p>
+</div><a id="class-metadata"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Classes%20and%20Class%20Metadata"></a><h2 id="classes-and-class-metadata">Classes and Class Metadata</h2>
+<h3 id="classes">Classes</h3>
+<p>Most Angular <em>TypeScript</em> and <em>ES6</em> code is written as classes.</p>
+<p>Properties and method parameters of <em>TypeScript</em> classes may be marked with the access modifiers
+<code>private</code>, <code>internal</code>, and <code>public</code>. 
+Remove these modifiers when translating to JavaScript.</p>
+<p>Most type declarations (e.g, <code>:string</code> and <code>:boolean</code>) should be removed when translating to JavaScript.
+When translating to <em>ES6-with-decorators</em>, <strong><em>do not remove types from constructor parameters!</em></strong></p>
+<p>Look for types in <em>TypeScript</em> property declarations.
+In general it is better to initialize such properties with default values because
+many browser JavaScript engines can generate more performant code.
+When <em>TypeScript</em> code follows this same advice, it can infer the property types
+and there is nothing to remove during translation. </p>
+<p>In <em>ES6-without-decorators</em>, properties of classes must be assigned inside the constructor.</p>
+<p><em>ES5</em> JavaScript has no classes. 
+Use the constructor function pattern instead, adding methods to the prototype.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroComponent {
+  constructor() {
+    this.title = 'Hero Detail';
+  }
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format="linenums">function HeroComponent() {
+  this.title = "Hero Detail";
+}
+
+HeroComponent.prototype.getName = function() { return 'Windstorm'; };
+</code-pane></code-tabs><h3 id="metadata">Metadata</h3>
+<p>When writing in <em>TypeScript</em> or <em>ES6-with-decorators</em>, 
+provide configuration and metadata by adorning a class with one or more <em>decorators</em>. 
+For example, you supply metadata to a component class by preceding its definition with a
+<a href="../api/core/index/Component-decorator.html"><code>@Component</code></a> decorator function whose
+argument is an object literal with metadata properties.</p>
+<p>In <em>plain ES6</em>, you provide metadata by attaching an <code>annotations</code> array to the <em>class</em>.
+Each item in the array is a new instance of a metadata decorator created with a similar metadata object literal.</p>
+<p>In <em>ES5</em>, you also provide an <code>annotations</code> array but you attach it to the <em>constructor function</em> rather than to a class.</p>
+<p>See these variations side-by-side:</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'hero-view',
+  template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+})
+export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'hero-view',
+  template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+})
+export class HeroComponent {
+  title = 'Hero Detail';
+  getName() {return 'Windstorm'; }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">import { Component } from '@angular/core';
+
+export class HeroComponent {
+  constructor() {
+    this.title = 'Hero Detail';
+  }
+  getName() {return 'Windstorm'; }
+}
+
+HeroComponent.annotations = [
+  new Component({
+    selector: 'hero-view',
+    template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+  })
+];
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent; // "export"
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-view',
+    template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+  })
+];
+
+function HeroComponent() {
+  this.title = "Hero Detail";
+}
+
+HeroComponent.prototype.getName = function() { return 'Windstorm'; };
+</code-pane></code-tabs><p><strong><em>External Template file</em></strong></p>
+<p>A large component template is often kept in a separate template file.</p>
+<div class="code-example"><header><h4>app/hero-title.component.html</h4></header><code-example language="html" format="">&lt;h1&gt;{{titlePrefix}} {{title}}&lt;/h1&gt;
+&lt;button (click)="ok()"&gt;OK&lt;/button&gt;
+&lt;p&gt;{{ msg }}&lt;/p&gt;
+</code-example></div><p>The component (<code>HeroTitleComponent</code> in this case) then references the template file in its metadata <code>templateUrl</code> property:</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format=".">@Component({
+  moduleId: module.id,
+  selector: 'hero-title',
+  templateUrl: 'hero-title.component.html'
+})
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format=".">@Component({
+  moduleId: module.id,
+  selector: 'hero-title',
+  templateUrl: 'hero-title.component.html'
+})
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format=".">HeroTitleComponent.annotations = [
+  new Component({
+    moduleId: module.id,
+    selector: 'hero-title',
+    templateUrl: 'hero-title.component.html'
+  })
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format=".">HeroTitleComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-title',
+    templateUrl: 'app/hero-title.component.html'
+  })
+];
+</code-pane></code-tabs><p>Note that the <em>TypeScript</em> and both <em>ES6</em> <code>templateUrl</code> properties identify the location of the template file <em>relative to the component module</em>.
+All three metadata configurations specify the <code>moduleId</code> property 
+so that Angular can calculate the proper module address.</p>
+<p>The <em>ES5</em> approach shown here does not support modules and therefore there is no way to calculate a <em>module-relative URL</em>.
+The <code>templateUrl</code> for the <em>ES5</em> code must specify the <em>path from the project root</em> and 
+omits the irrelevant <code>moduleId</code> property. </p>
+<div class="l-sub-section"><p>With the right tooling, the <code>moduleId</code> may not be needed in the other JavaScript dialects either.
+But it's safest to provide it anyway.</p>
+</div><a id="dsl"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/ES5%20DSL"></a><h2 id="_es5_-dsl"><em>ES5</em> DSL</h2>
+<p>This <em>ES5</em> pattern of creating a constructor and annotating it with metadata is so common that Angular 
+provides a convenience API to make it a little more compact and locates the metadata above the constructor, 
+as you would if you wrote in <em>TypeScript</em> or <em>ES6-with-decorators</em>.</p>
+<p>This <em>API</em> (<em>Application Programming Interface</em>) is commonly known as the <em>ES5 DSL</em> (<em>Domain Specific Language</em>).</p>
+<p>Set an application namespace property (e.g., <code>app.HeroDslComponent</code>) to the result of an <code>ng.core.Component</code> function call.
+Pass the same metadata object to <code>ng.core.Component</code> as you did before.
+Then chain a call to the <code>Class</code> method which takes an object defining the class constructor and instance methods.</p>
+<p>Here is an example of the <code>HeroComponent</code>, re-written with the DSL,
+next to the original <em>ES5</em> version for comparison:</p>
+<code-tabs><code-pane language="js" name="ES5 JavaScript with DSL" format="linenums">app.HeroComponent = ng.core.Component({
+  selector: 'hero-view-dsl',
+  template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;',
+})
+.Class({
+  constructor: function HeroComponent() {
+    this.title = "Hero Detail";
+  },
+
+  getName: function() { return 'Windstorm'; }
+});
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent; // "export"
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-view',
+    template: '&lt;h1&gt;{{title}}: {{getName()}}&lt;/h1&gt;'
+  })
+];
+
+function HeroComponent() {
+  this.title = "Hero Detail";
+}
+
+HeroComponent.prototype.getName = function() { return 'Windstorm'; };
+</code-pane></code-tabs><div class="callout is-helpful"><header>Name the constructor</header><p>A <strong>named</strong> constructor displays clearly in the console log
+if the component throws a runtime error. 
+An <strong>unnamed</strong> constructor displays as an anonymous function (e.g., <code>class0</code>) 
+which is impossible to find in the source code.</p>
+</div><h3 id="properties-with-getters-and-setters">Properties with getters and setters</h3>
+<p><em>TypeScript</em> and <em>ES6</em> support with getters and setters.
+Here's an example of a read-only <em>TypeScript</em> property with a getter
+that prepares a toggle-button label for the next clicked state:</p>
+<div class="code-example"><header><h4>ts/app/hero-queries.component.ts</h4></header><code-example language="ts" format="">get buttonLabel() {
+  return this.active ? 'Deactivate' : 'Activate';
+}
+</code-example></div><p>This <em>TypeScript</em> "getter" property is transpiled to an <em>ES5</em>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" title="Defined Properties">defined property</a>.
+The <em>ES5 DSL</em> does not support <em>defined properties</em> directly
+but you can still create them by extracting the "class" prototype and
+adding the <em>defined property</em> in raw JavaScript like this:</p>
+<div class="code-example"><header><h4>js/app/hero-queries.component.ts</h4></header><code-example language="js" format="">// add prototype property w/ getter outside the DSL
+var proto = app.heroQueries.HeroQueriesComponent.prototype;
+Object.defineProperty(proto, "buttonLabel", {
+    get: function () {
+        return this.active ? 'Deactivate' : 'Activate';
+    },
+    enumerable: true
+});
+</code-example></div><h3 id="dsl-for-other-classes">DSL for other classes</h3>
+<p>There are similar DSLs for other decorated classes. 
+You can define a directive with <code>ng.core.Directive</code>: </p>
+<code-example>app.MyDirective = ng.core.Directive({
+  selector: '[myDirective]'
+}).Class({
+  ...
+});</code-example><p>and a pipe with <code>ng.core.Pipe</code>:</p>
+<code-example>app.MyPipe = ng.core.Pipe({
+  name: 'myPipe'
+}).Class({
+  ...
+});
+</code-example><a class="dashAnchor" name="//apple_ref/Section/Interfaces"></a><a id="interfaces"></a><div class="l-main-section"></div><h2 id="interfaces">Interfaces</h2>
+<p>A <em>TypeScript</em> interface helps ensure that a class implements the interface's members correctly.
+We strongly recommend Angular interfaces where appropriate. 
+For example, the component class that implements the <code>ngOnInit</code> lifecycle hook method
+should implement the <code>OnInit</code> interface.</p>
+<p><em>TypeScript</em> interfaces exist for developer convenience and are not used by Angular at runtime.
+They have no physical manifestation in the generated JavaScript code.
+Just implement the methods and ignore interfaces when translating code samples from <em>TypeScript</em> to JavaScript.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'hero-lifecycle',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent implements OnInit {
+  name: string;
+  ngOnInit() {
+    // todo: fetch from server async
+    setTimeout(() =&gt; this.name = 'Windstorm', 0);
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'hero-lifecycle',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent {
+  name = '';
+  ngOnInit() {
+    // todo: fetch from server async
+    setTimeout(() =&gt; this.name = 'Windstorm', 0);
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">import { Component } from '@angular/core';
+export class HeroComponent {
+  ngOnInit() {
+    // todo: fetch from server async
+    setTimeout(() =&gt; this.name = 'Windstorm', 0);
+  }
+}
+
+HeroComponent.annotations = [
+  new Component({
+    selector: 'hero-lifecycle',
+    template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+  })
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent;
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-lifecycle',
+    template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+  })
+];
+
+function HeroComponent() { }
+
+HeroComponent.prototype.ngOnInit = function() {
+  // todo: fetch from server async
+  setTimeout(() =&gt; this.name = 'Windstorm', 0);
+};
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.HeroComponent = ng.core.Component({
+  selector: 'hero-lifecycle-dsl',
+  template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+})
+.Class({
+  constructor: function HeroComponent() { },
+  ngOnInit: function() {
+    // todo: fetch from server async
+    setTimeout(() =&gt; this.name = 'Windstorm', 0);
+  }
+});
+</code-pane></code-tabs><a id="io-decorators"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Input%20and%20Output%20Metadata"></a><h2 id="input-and-output-metadata">Input and Output Metadata</h2>
+<h3 id="input-and-output-decorators">Input and Output Decorators</h3>
+<p>In <em>TypeScript</em> and <em>ES6-with-decorators</em>, you often add metadata to class <em>properties</em> with <em>property decorators</em>.
+For example, you apply <a href="../guide/template-syntax.html#inputs-outputs"><code>@Input</code> and <code>@Output</code> property decorators</a> 
+to public class properties that will be the target of data binding expressions in parent components.</p>
+<p>There is no equivalent of a property decorator in <em>ES5</em> or <em>plain ES6</em>. 
+Fortunately, every property decorator has an equivalent representation in a class decorator metadata property.
+A <em>TypeScript</em> <code>@Input</code> property decorator can be represented by an item in the <code>Component</code> metadata's <code>inputs</code> array.</p>
+<p>You already know how to add <code>Component</code> or <code>Directive</code> class metadata in <em>any</em> JavaScript dialect so
+there's nothing fundamentally new about adding another property. 
+But note that what would have been <em>separate</em> <code>@Input</code> and <code>@Output</code> property decorators for each class property are
+combined in the metadata <code>inputs</code> and <code>outputs</code> <em>arrays</em>.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  moduleId: module.id,
+  selector: 'app-confirm',
+  templateUrl: 'confirm.component.html'
+})
+export class ConfirmComponent {
+  @Input() okMsg = '';
+  @Input('cancelMsg') notOkMsg = '';
+  @Output() ok = new EventEmitter();
+  @Output('cancel') notOk = new EventEmitter();
+
+  onOkClick() {
+    this.ok.emit(true);
+  }
+  onNotOkClick() {
+    this.notOk.emit(true);
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  moduleId: module.id,
+  selector: 'app-confirm',
+  templateUrl: 'confirm.component.html'
+})
+export class ConfirmComponent {
+  @Input() okMsg = '';
+  @Input('cancelMsg') notOkMsg = '';
+  @Output() ok = new EventEmitter();
+  @Output('cancel') notOk = new EventEmitter();
+
+  onOkClick() {
+    this.ok.emit(true);
+  }
+  onNotOkClick() {
+    this.notOk.emit(true);
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class ConfirmComponent {
+  constructor(){
+    this.ok    = new EventEmitter();
+    this.notOk = new EventEmitter();
+  }
+  onOkClick() {
+    this.ok.emit(true);
+  }
+  onNotOkClick() {
+    this.notOk.emit(true);
+  }
+}
+
+ConfirmComponent.annotations = [
+  new Component({
+    moduleId: module.id,
+    selector: 'app-confirm',
+    templateUrl: 'confirm.component.html',
+    inputs: [
+      'okMsg',
+      'notOkMsg: cancelMsg'
+    ],
+    outputs: [
+      'ok',
+      'notOk: cancel'
+    ]
+  })
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">app.ConfirmComponent = ConfirmComponent;
+
+ConfirmComponent.annotations = [
+  new ng.core.Component({
+    selector: 'app-confirm',
+    templateUrl: 'app/confirm.component.html',
+    inputs: [
+      'okMsg',
+      'notOkMsg: cancelMsg'
+    ],
+    outputs: [
+      'ok',
+      'notOk: cancel'
+    ]
+  })
+];
+
+function ConfirmComponent() {
+  this.ok    = new ng.core.EventEmitter();
+  this.notOk = new ng.core.EventEmitter();
+}
+
+ConfirmComponent.prototype.onOkClick = function() {
+  this.ok.emit(true);
+}
+
+ConfirmComponent.prototype.onNotOkClick = function() {
+  this.notOk.emit(true);
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.ConfirmComponent = ng.core.Component({
+  selector: 'app-confirm-dsl',
+  templateUrl: 'app/confirm.component.html',
+  inputs: [
+    'okMsg',
+    'notOkMsg: cancelMsg'
+  ],
+  outputs: [
+    'ok',
+    'notOk: cancel'
+  ]
+})
+.Class({
+  constructor: function ConfirmComponent() {
+    this.ok    = new ng.core.EventEmitter();
+    this.notOk = new ng.core.EventEmitter();
+  },
+
+  onOkClick: function() {
+    this.ok.emit(true);
+  },
+
+  onNotOkClick: function() {
+    this.notOk.emit(true);
+  }
+});
+</code-pane></code-tabs><p>In the previous example, one of the public-facing binding names (<code>cancelMsg</code>) 
+differs from the corresponding class property name (<code>notOkMsg</code>).
+That's OK but you must tell Angular about it so that it can map an external binding of <code>cancelMsg</code>
+to the component's <code>notOkMsg</code> property.</p>
+<p>In <em>TypeScript</em> and <em>ES6-with-decorators</em>, 
+you specify the special binding name in the argument to the property decorator.</p>
+<p>In <em>ES5</em> and <em>plain ES6</em> code, convey this pairing with the <code>propertyName: bindingName</code> syntax in the class metadata.</p>
+<div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/Dependency%20Injection"></a><h2 id="dependency-injection">Dependency Injection</h2>
+<p>Angular relies heavily on <a href="../guide/dependency-injection.html">Dependency Injection</a> to provide services to the objects it creates.
+When Angular creates a new component, directive, pipe or another service, 
+it sets the class constructor parameters to instances of services provided by an <em>Injector</em>.</p>
+<p>The developer must tell Angular what to inject into each parameter.</p>
+<h3 id="injection-by-class-type">Injection by Class Type</h3>
+<p>The easiest and most popular technique in <em>TypeScript</em> and <em>ES6-with-decorators</em> is to set the constructor parameter type
+to the class associated with the service to inject. </p>
+<p>The <em>TypeScript</em> transpiler writes parameter type information into the generated JavaScript.
+Angular reads that information at runtime and locates the corresponding service in the appropriate <em>Injector</em>..
+The <em>ES6-with-decorators</em> transpiler does essentially the same thing using the same parameter-typing syntax.</p>
+<p><em>ES5</em> and <em>plain ES6</em> lack types so you must identify "injectables" by attaching a <strong><code>parameters</code></strong> array to the constructor function. 
+Each item in the array specifies the service's injection token.</p>
+<p>As with <em>TypeScript</em> the most popular token is a class, 
+or rather a <em>constructor function</em> that represents a class in <em>ES5</em> and <em>plain ES6</em>.
+The format of the <code>parameters</code> array varies:</p>
+<ul>
+<li><p><em>plain ES6</em> — nest each constructor function in a sub-array.</p>
+</li>
+<li><p><em>ES5</em> — simply list the constructor functions.</p>
+</li>
+</ul>
+<p>When writing with <em>ES5 DSL</em>, set the <code>Class.constructor</code> property to
+an array whose first parameters are the injectable constructor functions and whose
+last parameter is the class constructor itself. 
+This format should be familiar to Angular 1 developers.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">import { Component }   from '@angular/core';
+import { DataService } from './data.service';
+
+@Component({
+  selector: 'hero-di',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent {
+  name = '';
+  constructor(dataService: DataService) {
+    this.name = dataService.getHeroName();
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">import { Component }   from '@angular/core';
+import { DataService } from './data.service';
+
+@Component({
+  selector: 'hero-di',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent {
+  name = '';
+  constructor(dataService: DataService) {
+    this.name = dataService.getHeroName();
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">import { Component }   from '@angular/core';
+import { DataService } from './data.service';
+
+export class HeroComponent {
+  constructor(dataService) {
+    this.name = dataService.getHeroName();
+  }
+}
+
+HeroComponent.annotations = [
+  new Component({
+    selector: 'hero-di',
+    template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+  })
+];
+
+HeroComponent.parameters = [
+  [DataService]
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent;
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-di',
+    template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+  })
+];
+
+HeroComponent.parameters = [ app.DataService ];
+
+function HeroComponent(dataService) {
+  this.name = dataService.getHeroName();
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.HeroComponent = ng.core.Component({
+  selector: 'hero-di-dsl',
+  template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+})
+.Class({
+  constructor: [
+    app.DataService,
+    function HeroComponent(service) {
+      this.name = service.getHeroName();
+    }
+  ]
+});
+</code-pane></code-tabs><h3 id="injection-with-the-inject-decorator">Injection with the @Inject decorator</h3>
+<p>Sometimes the dependency injection token isn't a class or constructor function.</p>
+<p>In <em>TypeScript</em> and <em>ES6-with-decorators</em>, you precede the class constructor parameter
+by calling the <code>@Inject()</code> decorator with the injection token.
+In the following example, the token is the string <code>'heroName'</code>.</p>
+<p>The other JavaScript dialects add a <code>parameters</code> array to the class contructor function.
+Each item constains a new instance of <code>Inject</code>:</p>
+<ul>
+<li><p><em>plain ES6</em> — each item is a new instance of <code>Inject(token)</code> in a sub-array.</p>
+</li>
+<li><p><em>ES5</em> — simply list the string tokens.</p>
+</li>
+</ul>
+<p>When writing with <em>ES5 DSL</em>, set the <code>Class.constructor</code> property to a function definition
+array as before. Create a new instance of <code>ng.core.Inject(token)</code> for each parameter. </p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  selector: 'hero-di-inject',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent {
+  constructor(@Inject('heroName') private name: string) { }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  selector: 'hero-di-inject',
+  template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+})
+export class HeroComponent {
+  constructor(@Inject('heroName') name) {
+    this.name = name;
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroComponent {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+HeroComponent.annotations = [
+  new Component({
+    selector: 'hero-di-inject',
+    template: `&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;`
+  })
+];
+
+HeroComponent.parameters = [
+  [new Inject('heroName')]
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent;
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-di-inject',
+    template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+  })
+];
+
+HeroComponent.parameters = [ 'heroName' ];
+
+function HeroComponent(name) {
+  this.name = name;
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.HeroComponent = ng.core.Component({
+  selector: 'hero-di-inject-dsl',
+  template: '&lt;h1&gt;Hero: {{name}}&lt;/h1&gt;'
+})
+.Class({
+  constructor: [
+    new ng.core.Inject('heroName'),
+    function HeroComponent(name) {
+      this.name = name;
+    }
+  ]
+});
+</code-pane></code-tabs><h3 id="additional-injection-decorators">Additional Injection Decorators</h3>
+<p>You can qualify injection behavior with injection decorators from <code>@angular/core</code>.</p>
+<p>In <em>TypeScript</em> and <em>ES6-with-decorators</em>, 
+you precede the constructor parameters with injection qualifiers such as:</p>
+<ul>
+<li><a href="../api/core/index/Optional-decorator.html"><code>@Optional</code></a> sets the parameter to <code>null</code> if the service is missing</li>
+<li><a href="../api/core/index/Attribute-interface.html"><code>@Attribute</code></a> to inject a host element attribute value</li>
+<li><a href="../api/core/index/ContentChild-decorator.html"><code>@ContentChild</code></a> to inject a content child</li>
+<li><a href="../api/core/index/ViewChild-decorator.html"><code>@ViewChild</code></a> to inject a view child</li>
+<li><a href="../api/core/index/Host-decorator.html"><code>@Host</code></a> to inject a service in this component or its host</li>
+<li><a href="../api/core/index/SkipSelf-decorator.html"><code>@SkipSelf</code></a> to inject a service provided in an ancestor of this component</li>
+</ul>
+<p>In <em>plain ES6</em> and <em>ES5</em>, create an instance of the equivalent injection qualifier in a nested array within the <code>parameters</code> array.
+For example, you'd write <code>new Optional()</code> in <em>plain ES6</em> and <code>new ng.core.Optional()</code> in <em>ES5</em>.</p>
+<p>When writing with <em>ES5 DSL</em>, set the <code>Class.constructor</code> property to a function definition
+array as before. Use a nested array to define a parameter's complete injection specification.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  moduleId: module.id,
+  selector: 'hero-title',
+  templateUrl: 'hero-title.component.html'
+})
+export class HeroTitleComponent {
+  msg: string = '';
+  constructor(
+    @Inject('titlePrefix') @Optional() private titlePrefix: string,
+    @Attribute('title') private title: string
+  ) { }
+
+  ok() {
+    this.msg = 'OK!';
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  moduleId: module.id,
+  selector: 'hero-title',
+  templateUrl: 'hero-title.component.html'
+})
+export class HeroTitleComponent {
+  msg = '';
+  constructor(
+    @Inject('titlePrefix') @Optional() titlePrefix,
+    @Attribute('title') title
+  ) {
+    this.titlePrefix = titlePrefix;
+    this.title = title;
+  }
+
+  ok() {
+    this.msg = 'OK!';
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroTitleComponent {
+  constructor(titlePrefix, title) {
+    this.titlePrefix = titlePrefix;
+    this.title  = title;
+    this.msg = '';
+  }
+
+  ok() {
+    this.msg = 'OK!';
+  }
+}
+
+HeroTitleComponent.annotations = [
+  new Component({
+    moduleId: module.id,
+    selector: 'hero-title',
+    templateUrl: 'hero-title.component.html'
+  })
+];
+
+HeroTitleComponent.parameters = [
+  [new Optional(), new Inject('titlePrefix')],
+  [new Attribute('title')]
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">  app.HeroTitleComponent = HeroTitleComponent;
+
+  HeroTitleComponent.annotations = [
+    new ng.core.Component({
+      selector: 'hero-title',
+      templateUrl: 'app/hero-title.component.html'
+    })
+  ];
+
+  function HeroTitleComponent(titlePrefix, title) {
+      this.titlePrefix = titlePrefix;
+      this.title  = title;
+      this.msg = '';
+  }
+
+  HeroTitleComponent.prototype.ok = function() {
+    this.msg = 'OK!';
+  }
+
+  HeroTitleComponent.parameters = [
+    [new ng.core.Optional(), new ng.core.Inject('titlePrefix')],
+    [new ng.core.Attribute('title')]
+  ];
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.HeroTitleComponent = ng.core.Component({
+  selector: 'hero-title-dsl',
+  templateUrl: 'app/hero-title.component.html'
+})
+.Class({
+  constructor: [
+    [ new ng.core.Optional(), new ng.core.Inject('titlePrefix') ],
+    new ng.core.Attribute('title'),
+    function HeroTitleComponent(titlePrefix, title) {
+      this.titlePrefix = titlePrefix;
+      this.title  = title;
+      this.msg = '';
+    }
+  ],
+
+  ok: function() {
+    this.msg = 'OK!';
+  }
+});
+</code-pane></code-tabs><div class="l-sub-section"><p>In the example above, there is no provider for the <code>'titlePrefix'</code> token.
+Without <code>Optional</code>, Angular would raise an error.
+With <code>Optional</code>, Angular sets the constructor parameter to <code>null</code> 
+and the component displays the title without a prefix.</p>
+</div><a class="dashAnchor" name="//apple_ref/Section/Host%20Binding"></a><a id="host-binding"></a><div class="l-main-section"></div><h2 id="host-binding">Host Binding</h2>
+<p>Angular supports bindings to properties and events of the <em>host element</em> which is the
+element whose tag matches the component selector.</p>
+<h3 id="host-decorators">Host Decorators</h3>
+<p>In <em>TypeScript</em> and <em>ES6-with-decorators</em>, you can use host property decorators to bind a host
+element to a component or directive.
+The <a href="../api/core/index/HostBinding-interface.html"><code>@HostBinding</code></a> decorator
+binds host element properties to component data properties. 
+The <a href="../api/core/index/HostListener-interface.html"><code>@HostListener</code></a> decorator binds
+host element events to component event handlers.</p>
+<p>In <em>plain ES6</em> or <em>ES5</em>, add a <code>host</code> attribute to the component metadata to achieve the
+same effect as <code>@HostBinding</code> and <code>@HostListener</code>. </p>
+<p>The  <code>host</code> value is an object whose properties are host property and listener bindings:</p>
+<ul>
+<li>Each key follows regular Angular binding syntax: <code>[property]</code> for host bindings
+or <code>(event)</code> for host listeners.</li>
+<li>Each value identifies the corresponding component property or method.</li>
+</ul>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  selector: 'hero-host',
+  template: `
+    &lt;h1 [class.active]="active"&gt;Hero Host in Decorators&lt;/h1&gt;
+    &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+  `,
+  // Styles within (but excluding) the &lt;hero-host&gt; element
+  styles: ['.active {background-color: yellow;}']
+})
+export class HeroHostComponent {
+  // HostBindings to the &lt;hero-host&gt; element
+  @HostBinding() title = 'Hero Host in Decorators Tooltip';
+  @HostBinding('class.heading') headingClass = true;
+
+  active = false;
+  clicks = 0;
+
+  // HostListeners on the entire &lt;hero-host&gt; element
+  @HostListener('click')
+  clicked() {
+    this.clicks += 1;
+  }
+
+  @HostListener('mouseenter', ['$event'])
+  enter(event: Event) {
+    this.active = true;
+    this.headingClass = false;
+  }
+
+  @HostListener('mouseleave', ['$event'])
+  leave(event: Event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  selector: 'hero-host',
+  template: `
+    &lt;h1 [class.active]="active"&gt;Hero Host in Decorators&lt;/h1&gt;
+    &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+  `,
+  // Styles within (but excluding) the &lt;hero-host&gt; element
+  styles: ['.active {background-color: yellow;}']
+})
+export class HeroHostComponent {
+  // HostBindings to the &lt;hero-host&gt; element
+  @HostBinding() title = 'Hero Host in Decorators Tooltip';
+  @HostBinding('class.heading') headingClass = true;
+
+  active = false;
+  clicks = 0;
+
+  // HostListeners on the entire &lt;hero-host&gt; element
+  @HostListener('click')
+  clicked() {
+    this.clicks += 1;
+  }
+
+  @HostListener('mouseenter', ['$event'])
+  enter(event: Event) {
+    this.active = true;
+    this.headingClass = false;
+  }
+
+  @HostListener('mouseleave', ['$event'])
+  leave(event: Event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroHostComponent {
+  constructor() {
+    this.active = false;
+    this.clicks = 0;
+    this.headingClass = true;
+    this.title = 'Hero Host Tooltip';
+  }
+
+  clicked() {
+    this.clicks += 1;
+  }
+
+  enter(event) {
+    this.active = true;
+    this.headingClass = false;
+  }
+
+  leave(event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+}
+
+HeroHostComponent.annotations = [
+  new Component({
+    selector: 'hero-host',
+    template: `
+      &lt;h1 [class.active]="active"&gt;Hero Host&lt;/h1&gt;
+      &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+    `,
+    host: {
+      // HostBindings to the &lt;hero-host&gt; element
+      '[title]': 'title',
+      '[class.heading]': 'headingClass',
+      '(click)': 'clicked()',
+
+      // HostListeners on the entire &lt;hero-host&gt; element
+      '(mouseenter)': 'enter($event)',
+      '(mouseleave)': 'leave($event)'
+    },
+    // Styles within (but excluding) the &lt;hero-host&gt; element
+    styles: ['.active {background-color: yellow;}']
+  })
+];
+</code-pane><code-pane language="js" name="ES5 JavaScript" format="linenums">app.HeroComponent = HeroComponent;
+
+HeroComponent.annotations = [
+  new ng.core.Component({
+    selector: 'hero-host',
+    template:
+      '&lt;h1 [class.active]="active"&gt;Hero Host&lt;/h1&gt;' +
+      '&lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;',
+    host: {
+      // HostBindings to the &lt;hero-host&gt; element
+      '[title]': 'title',
+      '[class.heading]': 'headingClass',
+      '(click)': 'clicked()',
+
+      // HostListeners on the entire &lt;hero-host&gt; element
+      '(mouseenter)': 'enter($event)',
+      '(mouseleave)': 'leave($event)'
+    },
+    // Styles within (but excluding) the &lt;hero-host&gt; element
+    styles: ['.active {background-color: yellow;}']
+  })
+];
+
+function HeroComponent() {
+  this.clicks = 0;
+  this.headingClass = true;
+  this.title = 'Hero Host Tooltip content';
+}
+
+HeroComponent.prototype.clicked = function() {
+  this.clicks += 1;
+}
+
+HeroComponent.prototype.enter = function(event) {
+  this.active = true;
+  this.headingClass = false;
+}
+
+HeroComponent.prototype.leave = function(event) {
+  this.active = false;
+  this.headingClass = true;
+}
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.HeroComponent = ng.core.Component({
+  selector: 'hero-host-dsl',
+  template: `
+    &lt;h1 [class.active]="active"&gt;Hero Host (DSL)&lt;/h1&gt;
+    &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+  `,
+  host: {
+    // HostBindings to the &lt;hero-host-dsl&gt; element
+    '[title]': 'title',
+    '[class.heading]': 'headingClass',
+    '(click)': 'clicked()',
+
+    // HostListeners on the entire &lt;hero-host-dsl&gt; element
+    '(mouseenter)': 'enter($event)',
+    '(mouseleave)': 'leave($event)'
+  },
+  // Styles within (but excluding) the &lt;hero-host-dsl&gt; element
+  styles: ['.active {background-color: coral;}']
+})
+.Class({
+  constructor: function HeroComponent() {
+    this.clicks = 0;
+    this.headingClass = true;
+    this.title = 'Hero Host Tooltip DSL content';
+  },
+
+  clicked() {
+    this.clicks += 1;
+  },
+
+  enter(event) {
+    this.active = true;
+    this.headingClass = false;
+  },
+
+  leave(event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+});
+</code-pane></code-tabs><h3 id="host-metadata">Host Metadata</h3>
+<p>Some developers prefer to specify host properties and listeners
+in the component metadata. 
+They'd <em>rather</em> do it the way you <em>must</em> do it <em>ES5</em> and <em>plain ES6</em>.</p>
+<p>The following re-implementation of the <code>HeroComponent</code> reminds us that <em>any property metadata decorator</em>
+can be expressed as component or directive metadata in both <em>TypeScript</em> and <em>ES6-with-decorators</em>.
+These particular <em>TypeScript</em> and <em>ES6</em> code snippets happen to be identical.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  selector: 'hero-host-meta',
+  template: `
+    &lt;h1 [class.active]="active"&gt;Hero Host in Metadata&lt;/h1&gt;
+    &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+  `,
+  host: {
+    // HostBindings to the &lt;hero-host-meta&gt; element
+    '[title]': 'title',
+    '[class.heading]': 'headingClass',
+
+    // HostListeners on the entire &lt;hero-host-meta&gt; element
+    '(click)': 'clicked()',
+    '(mouseenter)': 'enter($event)',
+    '(mouseleave)': 'leave($event)'
+  },
+  // Styles within (but excluding) the &lt;hero-host-meta&gt; element
+  styles: ['.active {background-color: coral;}']
+})
+export class HeroHostMetaComponent {
+  title = 'Hero Host in Metadata Tooltip';
+  headingClass = true;
+
+  active = false;
+  clicks = 0;
+
+  clicked() {
+    this.clicks += 1;
+  }
+
+  enter(event: Event) {
+    this.active = true;
+    this.headingClass = false;
+  }
+
+  leave(event: Event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+}
+</code-pane><code-pane language="es6
+  " name="ES6 JavaScript with decorators" format="linenums">@Component({
+  selector: 'hero-host-meta',
+  template: `
+    &lt;h1 [class.active]="active"&gt;Hero Host in Metadata&lt;/h1&gt;
+    &lt;div&gt;Heading clicks: {{clicks}}&lt;/div&gt;
+  `,
+  host: {
+    // HostBindings to the &lt;hero-host-meta&gt; element
+    '[title]': 'title',
+    '[class.heading]': 'headingClass',
+
+    // HostListeners on the entire &lt;hero-host-meta&gt; element
+    '(click)': 'clicked()',
+    '(mouseenter)': 'enter($event)',
+    '(mouseleave)': 'leave($event)'
+  },
+  // Styles within (but excluding) the &lt;hero-host-meta&gt; element
+  styles: ['.active {background-color: coral;}']
+})
+export class HeroHostMetaComponent {
+  title = 'Hero Host in Metadata Tooltip';
+  headingClass = true;
+
+  active = false;
+  clicks = 0;
+
+  clicked() {
+    this.clicks += 1;
+  }
+
+  enter(event: Event) {
+    this.active = true;
+    this.headingClass = false;
+  }
+
+  leave(event: Event) {
+    this.active = false;
+    this.headingClass = true;
+  }
+}
+</code-pane></code-tabs><a id="view-child-decorators"></a><div class="l-main-section"></div><h3 id="view-and-child-decorators">View and Child Decorators</h3>
+<p>Several <em>property</em> decorators query a component's nested view and content components.</p>
+<div class="l-sub-section"><p><em>View</em> children are associated with element tags that appear <em>within</em> the component's template.</p>
+<p><em>Content</em> children are associated with elements that appear <em>between</em> the component's element tags;
+they are projected into an <code>&lt;ng-content&gt;</code> slot in the component's template.     </p>
+</div><p>The <a href="../api/core/index/ViewChild-decorator.html"><code>@ViewChild</code></a> and
+<a href="../api/core/index/ViewChildren-decorator.html"><code>@ViewChildren</code></a> property decorators
+allow a component to query instances of other components that are used in
+its view. </p>
+<p>In <em>ES5</em> and <em>ES6</em>, you access a component's view children by adding a <code>queries</code> property to the component metadata. 
+The <code>queries</code> property value is a hash map.</p>
+<ul>
+<li>each <em>key</em> is the name of a component property that will hold the view child or children.</li>
+<li>each <em>value</em> is a new instance of either <code>ViewChild</code> or <code>ViewChildren</code>.</li>
+</ul>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  selector: 'hero-queries',
+  template: `
+    &lt;view-child *ngFor="let hero of heroData" [hero]="hero"&gt;
+      &lt;content-child&gt;&lt;/content-child&gt;
+    &lt;/view-child&gt;
+    &lt;button (click)="activate()"&gt;{{buttonLabel}} All&lt;/button&gt;
+  `
+})
+export class HeroQueriesComponent {
+  active = false;
+  heroData = [
+    {id: 1, name: 'Windstorm'},
+    {id: 2, name: 'LaughingGas'}
+  ];
+
+  @ViewChildren(ViewChildComponent) views: QueryList&lt;ViewChildComponent&gt;;
+
+  activate() {
+    this.active = !this.active;
+    this.views.forEach(
+      view =&gt; view.activate()
+    );
+  }
+
+  get buttonLabel() {
+    return this.active ? 'Deactivate' : 'Activate';
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  selector: 'hero-queries',
+  template: `
+    &lt;view-child *ngFor="let hero of heroData" [hero]="hero"&gt;
+      &lt;content-child&gt;&lt;/content-child&gt;
+    &lt;/view-child&gt;
+    &lt;button (click)="activate()"&gt;{{buttonLabel}} All&lt;/button&gt;
+  `
+})
+export class HeroQueriesComponent {
+  active = false;
+  heroData = [
+    {id: 1, name: 'Windstorm'},
+    {id: 2, name: 'LaughingGas'}
+  ];
+
+  @ViewChildren(ViewChildComponent) views;
+
+  activate() {
+    this.active = !this.active;
+    this.views.forEach(
+      view =&gt; view.activate()
+    );
+  }
+
+  get buttonLabel() {
+    return this.active ? 'Deactivate' : 'Activate';
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class HeroQueriesComponent {
+  constructor(){
+    this.active = false;
+    this.heroData = [
+      {id: 1, name: 'Windstorm'},
+      {id: 2, name: 'LaughingGas'}
+    ];
+  }
+
+  activate() {
+    this.active = !this.active;
+    this.views.forEach(
+      view =&gt; view.activate()
+    );
+  }
+
+  get buttonLabel() {
+    return this.active ? 'Deactivate' : 'Activate';
+  }
+}
+
+HeroQueriesComponent.annotations = [
+  new Component({
+    selector: 'hero-queries',
+    template: `
+      &lt;view-child *ngFor="let hero of heroData" [hero]="hero"&gt;
+        &lt;content-child&gt;&lt;/content-child&gt;
+      &lt;/view-child&gt;
+      &lt;button (click)="activate()"&gt;{{buttonLabel}} All&lt;/button&gt;
+    `,
+    queries: {
+      views: new ViewChildren(ViewChildComponent)
+    }
+  })
+];
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">  app.heroQueries.HeroQueriesComponent = ng.core.Component({
+    selector: 'hero-queries',
+    template:
+      '&lt;view-child *ngFor="let hero of heroData" [hero]="hero"&gt;' +
+        '&lt;content-child&gt;&lt;/content-child&gt;' +
+      '&lt;/view-child&gt;' +
+      '&lt;button (click)="activate()"&gt;{{buttonLabel}} All&lt;/button&gt;',
+    queries: {
+      views: new ng.core.ViewChildren(app.heroQueries.ViewChildComponent)
+    }
+  })
+  .Class({
+    constructor: function HeroQueriesComponent() {
+      this.active = false;
+      this.heroData = [
+        {id: 1, name: 'Windstorm'},
+        {id: 2, name: 'LaughingGas'}
+      ];
+    },
+
+    activate: function() {
+      this.active = !this.active;
+      this.views.forEach(function(view) {
+        view.activate();
+      });
+    },
+  });
+
+  // add prototype property w/ getter outside the DSL
+  var proto = app.heroQueries.HeroQueriesComponent.prototype;
+  Object.defineProperty(proto, "buttonLabel", {
+      get: function () {
+          return this.active ? 'Deactivate' : 'Activate';
+      },
+      enumerable: true
+  });
+</code-pane></code-tabs><p>The <a href="../api/core/index/ContentChild-decorator.html"><code>@ContentChild</code></a> and
+<a href="../api/core/index/ContentChildren-decorator.html"><code>@ContentChildren</code></a> property decorators
+allow a component to query instances of other components that have been projected
+into its view from elsewhere.</p>
+<p>They can be added in the same way as <a href="../api/core/index/ViewChild-decorator.html"><code>@ViewChild</code></a> and
+<a href="../api/core/index/ViewChildren-decorator.html"><code>@ViewChildren</code></a>.</p>
+<code-tabs><code-pane language="ts" name="TypeScript" format="linenums">@Component({
+  selector: 'view-child',
+  template: `
+  &lt;h2 [class.active]=active&gt;
+    {{hero.name}}
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/h2&gt;`,
+  styles: ['.active {font-weight: bold; background-color: skyblue;}']
+})
+export class ViewChildComponent {
+  @Input() hero: any;
+  active = false;
+
+  @ContentChild(ContentChildComponent) content: ContentChildComponent;
+
+  activate() {
+    this.active = !this.active;
+    this.content.activate();
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript with decorators" format="linenums">@Component({
+  selector: 'view-child',
+  template: `
+  &lt;h2 [class.active]=active&gt;
+    {{hero.name}}
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/h2&gt;`,
+  styles: ['.active {font-weight: bold; background-color: skyblue;}']
+})
+export class ViewChildComponent {
+  @Input() hero;
+  active = false;
+
+  @ContentChild(ContentChildComponent) content;
+
+  activate() {
+    this.active = !this.active;
+    this.content.activate();
+  }
+}
+</code-pane><code-pane language="es6" name="ES6 JavaScript" format="linenums">export class ViewChildComponent {
+  constructor() {
+    this.active = false;
+  }
+
+  activate() {
+    this.active = !this.active;
+    this.content.activate();
+  }
+}
+
+ViewChildComponent.annotations = [
+  new Component({
+    selector: 'view-child',
+    template: `&lt;h2 [class.active]=active&gt;
+      {{hero.name}}
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/h2&gt;`,
+    styles: ['.active {font-weight: bold; background-color: skyblue;}'],
+    inputs: ['hero'],
+    queries: {
+      content: new ContentChild(ContentChildComponent)
+    }
+  })
+];
+</code-pane><code-pane language="js
+  " name="ES5 JavaScript with DSL" format="linenums">app.heroQueries.ViewChildComponent = ng.core.Component({
+  selector: 'view-child',
+  template:
+    '&lt;h2 [class.active]=active&gt;' +
+      '{{hero.name}} ' +
+      '&lt;ng-content&gt;&lt;/ng-content&gt;' +
+    '&lt;/h2&gt;',
+  styles: ['.active {font-weight: bold; background-color: skyblue;}'],
+  inputs: ['hero'],
+  queries: {
+    content: new ng.core.ContentChild(app.heroQueries.ContentChildComponent)
+  }
+})
+.Class({
+  constructor: function HeroQueriesHeroComponent() {
+    this.active = false;
+  },
+
+  activate: function() {
+    this.active = !this.active;
+    this.content.activate();
+  }
+});
+</code-pane></code-tabs><div class="alert is-helpful"><p>In <em>TypeScript</em> and <em>ES6-with-decorators</em> you can also use the <code>queries</code> metadata 
+instead of the <code>@ViewChild</code> and <code>@ContentChild</code> property decorators.    </p>
+</div><a id="aot"></a><div class="l-main-section"></div><a class="dashAnchor" name="//apple_ref/Section/AOT%20Compilation%20in%20TypeScript%20only"></a><h2 id="aot-compilation-in-_typescript_-only">AOT Compilation in <em>TypeScript</em> only</h2>
+<p>Angular offers two modes of template compilation, JIT (<em>Just-in-Time</em>) and 
+<a href="aot-compiler.html">AOT (<em>Ahead-of-Time</em>)</a>.
+Currently the AOT compiler only works with <em>TypeScript</em> applications because, in part, it generates
+<em>TypeScript</em> files as an intermediate result.
+<strong>AOT is not an option for pure JavaScript applications</strong> at this time.</p></article><div data-swiftype-index="false" class="main-footer"><nav class="background-midnight grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="https://angular.io/about/">About</a></li><li><a href="https://angular.io/resources/#Education">Books &amp; Training</a></li><li><a href="https://angular.io/resources/">Tools &amp; Libraries</a></li><li><a href="https://angular.io/resources/">Community</a></li><li><a href="https://angular.io/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="https://angular.io/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="https://angular.io/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-midnight"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="https://angular.io/license">MIT-style License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="../styleguide.html" title="Style Guide" class="styleguide-trigger"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="../../../../resources/js/vendor/prettify.js"></script><script src="../../../../resources/js/vendor/lang-basic.js"></script><script src="../../../../resources/js/vendor/lang-dart.js"></script><script src="../../../../resources/js/vendor/lodash.js"></script><script src="../../../../resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-animate.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-aria.min.js"></script><script src="../../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="../../../../../cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="../../../../../cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="../../../../resources/js/site.js"></script><script src="../../../../resources/js/util.js"></script><script src="../../../../resources/js/controllers/app-controller.js"></script><script src="../../../../resources/js/controllers/resources-controller.js"></script><script src="../../../../resources/js/directives/cheatsheet.js"></script><script src="../../../../resources/js/directives/api-list.js"></script><script src="../../../../resources/js/directives/bio.js"></script><script src="../../../../resources/js/directives/bold.js"></script><script src="../../../../resources/js/directives/announcement-bar.js"></script><script src="../../../../resources/js/directives/code.js"></script><script src="../../../../resources/js/directives/copy.js"></script><script src="../../../../resources/js/directives/code-tabs.js"></script><script src="../../../../resources/js/directives/code-pane.js"></script><script src="../../../../resources/js/directives/code-example.js"></script><script src="../../../../resources/js/directives/if-docs.js"></script><script src="../../../../resources/js/directives/live-example.js"></script><script src="../../../../resources/js/directives/ngio-ex-path.js"></script><script src="../../../../resources/js/directives/scroll-y-offset-element.js"></script><script>window.onload = function() { setTimeout(function() {document.body.className = document.body.className+" dash-loaded"; if(location.hash) { setTimeout(function() {document.getElementsByName(location.hash.substring(1))[0].scrollIntoView()}, 1); }}, 10);  }</script>
+<!-- Mirrored from angular.io/docs/js/latest/cookbook/ts-to-js.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:19 GMT -->
+</body></html>

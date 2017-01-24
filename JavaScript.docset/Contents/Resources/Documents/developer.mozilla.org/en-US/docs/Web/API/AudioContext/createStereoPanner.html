@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:25:41 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:06:49 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -80,6 +79,13 @@
   
 
   
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
     
 
 
@@ -95,10 +101,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +154,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +171,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +188,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAudioContext%2FcreateStereoPanner" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/AudioContext/createStereoPanner" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/AudioContext/createStereoPanner" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAudioContext%2FcreateStereoPanner" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAudioContext%2FcreateStereoPanner" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +211,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +235,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +249,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +289,16 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/AudioContext/createStereoPanner" title="AudioContext.createStereoPanner()">日本語</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/AudioContext/createStereoPanner" title="Japanese">日本語 (ja)</a></bdi></li>
                 
               
 
@@ -319,7 +310,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +323,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -380,6 +372,11 @@
         
         <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
             <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
+                </li>
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
@@ -452,7 +449,7 @@
                     <p>
 
 </p><div>
-<p>The <code>createStereoPanner()</code> method of the <a href="../AudioContext.html" title="An AudioContext can be a target of events, therefore it implements the EventTarget interface."><code>AudioContext</code></a> interface creates a <a href="../StereoPannerNode.html" title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode."><code>StereoPannerNode</code></a>, which can be used to apply stereo panning to an audio source. It positions an incoming audio stream in a stereo image using a low-cost <a class="external-icon external" href="http://webaudio.github.io/web-audio-api/#equal-power">equal-power</a> panning algorithm.</p>
+<p>The <code>createStereoPanner()</code> method of the <a title="An AudioContext can be a target of events, therefore it implements the EventTarget interface." href="../AudioContext.html"><code>AudioContext</code></a> interface creates a <a title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode." href="../StereoPannerNode.html"><code>StereoPannerNode</code></a>, which can be used to apply stereo panning to an audio source. It positions an incoming audio stream in a stereo image using a low-cost <a href="http://webaudio.github.io/web-audio-api/#equal-power" class="external-icon external">equal-power</a> panning algorithm.</p>
 </div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -460,13 +457,13 @@
 <pre class="brush: js">var audioCtx = new AudioContext();
 var panNode = audioCtx.createStereoPanner();</pre>
 
-<h3 id="Description" name="Description">Returns</h3>
+<h3 name="Description" id="Description">Returns</h3>
 
-<p>A <a href="../StereoPannerNode.html" title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode."><code>StereoPannerNode</code></a>.</p>
+<p>A <a title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode." href="../StereoPannerNode.html"><code>StereoPannerNode</code></a>.</p>
 
-<h2 id="Example" name="Example">Example</h2>
+<h2 name="Example" id="Example">Example</h2>
 
-<p>In our <a class="external" href="http://mdn.github.io/stereo-panner-node/">StereoPannerNode example</a> (<a class="external" href="https://github.com/mdn/stereo-panner-node">see source code</a>) HTML we have a simple <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio" title="The HTML &lt;audio&gt; element is used to embed sound content in documents. It may contain several audio sources, represented using the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one."><code>&lt;audio&gt;</code></a> element along with a slider <a class="new" href="../input.html" title="The documentation about this has not yet been written; please consider contributing!"><code>input</code></a> to increase and decrease pan value. In the JavaScript we create a <a href="../MediaElementAudioSourceNode.html" title="A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio."><code>MediaElementAudioSourceNode</code></a> and a <a href="../StereoPannerNode.html" title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode."><code>StereoPannerNode</code></a>, and connect the two together using the <code>connect() </code>method. We then use an <code>oninput</code> event handler to change the value of the <a href="../StereoPannerNode/pan.html" title="An a-rate AudioParam containing the panning to apply."><code>StereoPannerNode.pan</code></a> parameter and update the pan value display when the slider is moved.</p>
+<p>In our <a href="http://mdn.github.io/stereo-panner-node/" class="external">StereoPannerNode example</a> (<a href="https://github.com/mdn/stereo-panner-node" class="external">see source code</a>) HTML we have a simple <a title="The HTML &lt;audio&gt; element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one." href="/en-US/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> element along with a slider <a title="The documentation about this has not yet been written; please consider contributing!" href="../Input.html" class="new"><code>input</code></a> to increase and decrease pan value. In the JavaScript we create a <a title="A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio." href="../MediaElementAudioSourceNode.html"><code>MediaElementAudioSourceNode</code></a> and a <a title="The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode." href="../StereoPannerNode.html"><code>StereoPannerNode</code></a>, and connect the two together using the <code>connect() </code>method. We then use an <code>oninput</code> event handler to change the value of the <a title="An a-rate AudioParam containing the panning to apply." href="../StereoPannerNode/pan.html"><code>StereoPannerNode.pan</code></a> parameter and update the pan value display when the slider is moved.</p>
 
 <p>Moving the slider left and right while the music is playing pans the music across to the left and right speakers of the output, respectively.</p>
 
@@ -509,7 +506,7 @@ panNode.connect(audioCtx.destination);</pre>
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a class="external" href="http://webaudio.github.io/web-audio-api/#widl-AudioContext-createStereoPanner-StereoPannerNode" hreflang="en" lang="en">Web Audio API<br><small lang="en-US">The definition of 'createStereoPanner()' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://webaudio.github.io/web-audio-api/#widl-AudioContext-createStereoPanner-StereoPannerNode" class="external">Web Audio API<br><small lang="en-US">The definition of 'createStereoPanner()' in that specification.</small></a></td>
    <td><span class="spec-WD">Working Draft</span></td>
    <td>&nbsp;</td>
   </tr>
@@ -519,7 +516,7 @@ panNode.connect(audioCtx.destination);</pre>
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <div><div class="htab"> 
-    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
     <ul> 
         <li class="selected"><a>Desktop</a></li> 
         <li><a>Mobile</a></li> 
@@ -532,6 +529,7 @@ panNode.connect(audioCtx.destination);</pre>
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -540,10 +538,11 @@ panNode.connect(audioCtx.destination);</pre>
   <tr>
    <td>Basic support</td>
    <td>42.0</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/37" title="Released on 2015-04-07.">37.0</a> (37.0)&nbsp;</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a title="Released on 2015-04-07." href="https://developer.mozilla.org/en-US/Firefox/Releases/37">37.0</a> (37.0)&nbsp;</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
   </tr>
  </tbody>
 </table>
@@ -555,6 +554,7 @@ panNode.connect(audioCtx.destination);</pre>
   <tr>
    <th>Feature</th>
    <th>Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>Firefox OS</th>
    <th>IE Mobile</th>
@@ -564,13 +564,14 @@ panNode.connect(audioCtx.destination);</pre>
   </tr>
   <tr>
    <td>Basic support</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>37.0</td>
    <td>2.2</td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td><span style="color: #f00;">Not&nbsp;supported</span></td>
-   <td><span style="color: #888;" title="Please update this with the earliest version of support.">(Yes)</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
   </tr>
  </tbody>
 </table>
@@ -584,25 +585,6 @@ panNode.connect(audioCtx.destination);</pre>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAudioContext%2FcreateStereoPanner%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+AudioContext.createStereoPanner%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about AudioContext.createStereoPanner() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about AudioContext.createStereoPanner() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FAudioContext%2FcreateStereoPanner%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about AudioContext.createStereoPanner() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -636,6 +618,8 @@ panNode.connect(audioCtx.destination);</pre>
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/kscarfone">kscarfone</a>, 
@@ -648,11 +632,48 @@ panNode.connect(audioCtx.destination);</pre>
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>,
-                      <time datetime="2015-02-20T18:15:05-08:00">Feb 20, 2015, 6:15:05 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-11-22T12:41:29-08:00">Nov 22, 2016, 12:41:29 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -669,7 +690,7 @@ panNode.connect(audioCtx.destination);</pre>
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../AudioContext.html"><code>AudioContext</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="currentTime.html" title="A double."><code>AudioContext.currentTime</code></a></li><li><a href="destination.html" title="An AudioDestinationNode."><code>AudioContext.destination</code></a></li><li><a href="listener.html" title="An AudioListener object."><code>AudioContext.listener</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozAudioChannelType.html" title="The readonly mozAudioChannelType property of the AudioContext interface can be used to set the audio channel that the sound playing in an audio context element will play in, on a Firefox OS device."><code>AudioContext.mozAudioChannelType</code></a></li><li><a href="sampleRate.html" title="A floating point number."><code>AudioContext.sampleRate</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="createAnalyser.html" title="An AnalyserNode."><code>AudioContext.createAnalyser()</code></a></li><li><a href="createBiquadFilter.html" title="A BiquadFilterNode."><code>AudioContext.createBiquadFilter()</code></a></li><li><a href="createBuffer.html" title="An AudioBuffer."><code>AudioContext.createBuffer()</code></a></li><li><a href="createBufferSource.html" title="An AudioBufferSourceNode."><code>AudioContext.createBufferSource()</code></a></li><li><a href="createChannelMerger.html" title="A ChannelMergerNode."><code>AudioContext.createChannelMerger()</code></a></li><li><a href="createChannelSplitter.html" title="A ChannelSplitterNode."><code>AudioContext.createChannelSplitter()</code></a></li><li><a href="createConvolver.html" title="A ConvolverNode."><code>AudioContext.createConvolver()</code></a></li><li><a href="createDelay.html" title="A DelayNode."><code>AudioContext.createDelay()</code></a></li><li><a href="createDynamicsCompressor.html" title="Compression lowers the volume of the loudest parts of the signal and raises the volume of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is especially important in games and musical applications where large numbers of individual sounds are played simultaneously, where you want to control the overall signal level and help avoid clipping (distorting) of the audio output."><code>AudioContext.createDynamicsCompressor()</code></a></li><li><a href="createGain.html" title="A GainNode."><code>AudioContext.createGain()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><a href="createJavaScriptNode.html" title=""><code>AudioContext.createJavaScriptNode()</code></a></li><li><a href="createMediaElementSource.html" title="For more details about media element audio source nodes, check out the MediaElementAudioSourceNode reference page."><code>AudioContext.createMediaElementSource()</code></a></li><li><a href="createMediaStreamDestination.html" title="()"><code>AudioContext.createMediaStreamDestination()</code></a></li><li><a href="createMediaStreamSource.html" title="()"><code>AudioContext.createMediaStreamSource()</code></a></li><li><a href="createOscillator.html" title="An OscillatorNode."><code>AudioContext.createOscillator()</code></a></li><li><a href="createPanner.html" title="The panner node is spatialized in relation to the AudioContext's AudioListener (defined by the AudioContext.listener attribute), which represents the position and orientation of the person listening to the audio."><code>AudioContext.createPanner()</code></a></li><li><a href="createPeriodicWave.html" title="A PeriodicWave."><code>AudioContext.createPeriodicWave()</code></a></li><li><a href="createScriptProcessor.html" title="A ScriptProcessorNode."><code>AudioContext.createScriptProcessor()</code></a></li><li><em><code>AudioContext.createStereoPanner()</code></em></li><li><a href="createWaveShaper.html" title="A WaveShaperNode."><code>AudioContext.createWaveShaper()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><a href="createWaveTable.html" title=""><code>AudioContext.createWaveTable()</code></a></li><li><a href="decodeAudioData.html" title="This is the preferred method of creating an audio source for Web Audio API from an audio track."><code>AudioContext.decodeAudioData()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages:</strong></a><ol><li><a href="../AnalyserNode.html"><code>AnalyserNode</code></a></li><li><a href="../AudioBuffer.html"><code>AudioBuffer</code></a></li><li><a href="../AudioBufferSourceNode.html"><code>AudioBufferSourceNode</code></a></li><li><a href="../../../Mozilla/Firefox_OS/API/AudioChannelManager.html"><code>AudioChannelManager</code></a></li><li><a href="../AudioDestinationNode.html"><code>AudioDestinationNode</code></a></li><li><a href="../AudioListener.html"><code>AudioListener</code></a></li><li><a href="../AudioNode.html"><code>AudioNode</code></a></li><li><a href="../AudioParam.html"><code>AudioParam</code></a></li><li><a href="../AudioProcessingEvent.html"><code>AudioProcessingEvent</code></a></li><li><a href="../BiquadFilterNode.html"><code>BiquadFilterNode</code></a></li><li><a href="../ChannelMergerNode.html"><code>ChannelMergerNode</code></a></li><li><a href="../ChannelSplitterNode.html"><code>ChannelSplitterNode</code></a></li><li><a href="../ChildNode.html"><code>ChildNode</code></a></li><li><a href="../ConvolverNode.html"><code>ConvolverNode</code></a></li><li><a href="../DelayNode.html"><code>DelayNode</code></a></li><li><a href="../DynamicsCompressorNode.html"><code>DynamicsCompressorNode</code></a></li><li><a href="../GainNode.html"><code>GainNode</code></a></li><li><a href="../MediaStreamAudioSourceNode.html"><code>MediaStreamAudioSourceNode</code></a></li><li><a href="../NotifyAudioAvailableEvent.html"><code>NotifyAudioAvailableEvent</code></a></li><li><a href="../OfflineAudioCompletionEvent.html"><code>OfflineAudioCompletionEvent</code></a></li><li><a href="../OfflineAudioContext.html"><code>OfflineAudioContext</code></a></li><li><a href="../OscillatorNode.html"><code>OscillatorNode</code></a></li><li><a href="../PannerNode.html"><code>PannerNode</code></a></li><li><a href="../ParentNode.html"><code>ParentNode</code></a></li><li><a href="../PeriodicWave.html"><code>PeriodicWave</code></a></li><li><a href="../ScriptProcessorNode.html"><code>ScriptProcessorNode</code></a></li><li><a href="../StereoPannerNode.html"><code>StereoPannerNode</code></a></li><li><a href="../WaveShaperNode.html"><code>WaveShaperNode</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../Web_Audio_API.html">Web Audio API</a></strong></li><li><strong><a href="../AudioContext.html"><code>AudioContext</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="" href="currentTime.html"><code>currentTime</code></a></li><li><a title="An AudioDestinationNode." href="destination.html"><code>destination</code></a></li><li><a title="An AudioListener object." href="listener.html"><code>listener</code></a></li><li><a title="The readonly mozAudioChannelType property of the AudioContext interface can be used to set the audio channel that the sound playing in an audio context element will play in, on a Firefox OS device." href="mozAudioChannelType.html"><code>mozAudioChannelType</code></a></li><li><a title="Technical review completed. Editorial review completed." href="onstatechange.html"><code>onstatechange</code></a></li><li><a title="A floating point number." href="sampleRate.html"><code>sampleRate</code></a></li><li><a title="A DOMString. Possible values are:" href="state.html"><code>state</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a title="The close() method of the AudioContext Interface closes the audio context, releasing any system audio resources that it uses." href="close.html"><code>close()</code></a></li><li><a title="An AnalyserNode." href="createAnalyser.html"><code>createAnalyser()</code></a></li><li><a title="A BiquadFilterNode." href="createBiquadFilter.html"><code>createBiquadFilter()</code></a></li><li><a title="An AudioBuffer." href="createBuffer.html"><code>createBuffer()</code></a></li><li><a title="An AudioBufferSourceNode." href="createBufferSource.html"><code>createBufferSource()</code></a></li><li><a title="A ChannelMergerNode." href="createChannelMerger.html"><code>createChannelMerger()</code></a></li><li><a title="A ChannelSplitterNode." href="createChannelSplitter.html"><code>createChannelSplitter()</code></a></li><li><a title="A ConvolverNode." href="createConvolver.html"><code>createConvolver()</code></a></li><li><a title="A DelayNode. The default DelayNode.delayTime if no parameter is passed to createDelay() is 0 seconds." href="createDelay.html"><code>createDelay()</code></a></li><li><a title="Compression lowers the volume of the loudest parts of the signal and raises the volume of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is especially important in games and musical applications where large numbers of individual sounds are played simultaneously, where you want to control the overall signal level and help avoid clipping (distorting) of the audio output." href="createDynamicsCompressor.html"><code>createDynamicsCompressor()</code></a></li><li><a title="A GainNode." href="createGain.html"><code>createGain()</code></a></li><li><a title="The createIIRFilter() method of the AudioContext interface creates an IIRFilterNode, which represents a general infinite impulse response (IIR) filter which can be configured to serve as various types of filter." href="createIIRFilter.html"><code>createIIRFilter()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="This method is obsolete, and has been renamed to &nbsp;AudioContext.createScriptProcessor. See also ScriptProcessorNode." href="createJavaScriptNode.html"><code>createJavaScriptNode()</code></a></s></li><li><a title="For more details about media element audio source nodes, check out the MediaElementAudioSourceNode reference page." href="createMediaElementSource.html"><code>createMediaElementSource()</code></a></li><li><a title="The MediaStream is created when the node is created and is accessible via the MediaStreamAudioDestinationNode's stream attribute. This stream can be used in a similar way as a MediaStream obtained via navigator.getUserMedia — it can, for example, be sent to a remote peer using the RTCPeerConnection addStream() method." href="createMediaStreamDestination.html"><code>createMediaStreamDestination()</code></a></li><li><a title="For more details about media stream audio source nodes, check out the MediaStreamAudioSourceNode reference page." href="createMediaStreamSource.html"><code>createMediaStreamSource()</code></a></li><li><a title="An OscillatorNode." href="createOscillator.html"><code>createOscillator()</code></a></li><li><a title="The panner node is spatialized in relation to the AudioContext's AudioListener (defined by the AudioContext.listener attribute), which represents the position and orientation of the person listening to the audio." href="createPanner.html"><code>createPanner()</code></a></li><li><a title="A PeriodicWave." href="createPeriodicWave.html"><code>createPeriodicWave()</code></a></li><li><a title="A ScriptProcessorNode." href="createScriptProcessor.html"><code>createScriptProcessor()</code></a></li><li><em><code>createStereoPanner()</code></em></li><li><a title="A WaveShaperNode." href="createWaveShaper.html"><code>createWaveShaper()</code></a></li><li><span class="sidebar-icon"><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></span><s class="obsoleteElement"><a title="" href="createWaveTable.html"><code>createWaveTable()</code></a></s></li><li><a title="This is the preferred method of creating an audio source for Web Audio API from an audio track." href="decodeAudioData.html"><code>decodeAudioData()</code></a></li><li><a title="The resume() method of the AudioContext Interface resumes the progression of time in an audio context that has previously been suspended." href="resume.html"><code>resume()</code></a></li><li><a title="The suspend() method of the AudioContext Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process — this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while." href="suspend.html"><code>suspend()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/statechange.html"><code>statechange</code></a></li><li><a href="../../Events/complete.html"><code>complete</code></a></li><li><a href="../../Events/ended.html"><code>ended</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/loaded.html"><code>loaded</code></a></li><li><a href="../../Events/audioprocess.html"><code>audioprocess</code></a></li><li><a href="../../Events/nodecreate.html"><code>nodecreate</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Web Audio API</strong></a><ol><li><a href="../AnalyserNode.html"><code>AnalyserNode</code></a></li><li><a href="../AudioBuffer.html"><code>AudioBuffer</code></a></li><li><a href="../AudioBufferSourceNode.html"><code>AudioBufferSourceNode</code></a></li><li><a href="../../../Mozilla/B2G_OS/API/AudioChannelManager.html"><code>AudioChannelManager</code></a></li><li><a href="../AudioDestinationNode.html"><code>AudioDestinationNode</code></a></li><li><a href="../AudioListener.html"><code>AudioListener</code></a></li><li><a href="../AudioNode.html"><code>AudioNode</code></a></li><li><a href="../AudioParam.html"><code>AudioParam</code></a></li><li><a href="../AudioProcessingEvent.html"><code>AudioProcessingEvent</code></a></li><li><a href="../BiquadFilterNode.html"><code>BiquadFilterNode</code></a></li><li><a href="../ChannelMergerNode.html"><code>ChannelMergerNode</code></a></li><li><a href="../ChannelSplitterNode.html"><code>ChannelSplitterNode</code></a></li><li><a href="../ConvolverNode.html"><code>ConvolverNode</code></a></li><li><a href="../DelayNode.html"><code>DelayNode</code></a></li><li><a href="../DynamicsCompressorNode.html"><code>DynamicsCompressorNode</code></a></li><li><a href="../GainNode.html"><code>GainNode</code></a></li><li><a href="../MediaElementAudioSourceNode.html"><code>MediaElementAudioSourceNode</code></a></li><li><a href="../MediaStreamAudioDestinationNode.html"><code>MediaStreamAudioDestinationNode</code></a></li><li><a href="../MediaStreamAudioSourceNode.html"><code>MediaStreamAudioSourceNode</code></a></li><li><a href="../NotifyAudioAvailableEvent.html"><code>NotifyAudioAvailableEvent</code></a></li><li><a href="../OfflineAudioCompletionEvent.html"><code>OfflineAudioCompletionEvent</code></a></li><li><a href="../OfflineAudioContext.html"><code>OfflineAudioContext</code></a></li><li><a href="../OscillatorNode.html"><code>OscillatorNode</code></a></li><li><a href="../PannerNode.html"><code>PannerNode</code></a></li><li><a href="../PeriodicWave.html"><code>PeriodicWave</code></a></li><li><a href="../ScriptProcessorNode.html"><code>ScriptProcessorNode</code></a></li><li><a href="../StereoPannerNode.html"><code>StereoPannerNode</code></a></li><li><a href="../WaveShaperNode.html"><code>WaveShaperNode</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -693,12 +714,12 @@ panNode.connect(audioCtx.destination);</pre>
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -706,9 +727,8 @@ panNode.connect(audioCtx.destination);</pre>
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -717,12 +737,12 @@ panNode.connect(audioCtx.destination);</pre>
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/AudioContext/createStereoPanner" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/AudioContext/createStereoPanner" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ja/docs/Web/API/AudioContext/createStereoPanner">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/AudioContext/createStereoPanner">
+            日本語 (ja)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -739,33 +759,38 @@ panNode.connect(audioCtx.destination);</pre>
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:25:41 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/AudioContext/createStereoPanner by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:06:50 GMT -->
 </body></html>

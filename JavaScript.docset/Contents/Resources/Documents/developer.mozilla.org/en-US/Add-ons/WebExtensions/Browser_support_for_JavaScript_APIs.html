@@ -1,0 +1,3489 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:34:02 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Browser support for JavaScript APIs</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons$styles">
+      
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$json">
+  <link rel="canonical" href="Browser_support_for_JavaScript_APIs.html">
+
+  
+    
+      <link rel="alternate" hreflang="ja" href="../../../ja/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs.html" title="JavaScript API 群のブラウザ実装状況">
+    
+      <link rel="alternate" hreflang="pt-PT" href="../../../pt-PT/Add-ons/WebExtensions/Suporte_navegador_APIs_JavaScript.html" title="Suporte de navegador para APIs de JavaScript">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Browser support for JavaScript APIs">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">
+  <meta name="twitter:title" content="Browser support for JavaScript APIs">
+  
+  <meta property="og:description" content="The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out https://github.com/mdn/browser-compat-data and send us a pull request.">
+  <meta name="description" content="The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out https://github.com/mdn/browser-compat-data and send us a pull request.">
+  <meta name="twitter:description" content="The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out https://github.com/mdn/browser-compat-data and send us a pull request.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs" contextmenu="edit-history-menu" data-search-url="" class="document zone ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FBrowser_support_for_JavaScript_APIs" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../docs/Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+  
+      
+        <div class="zone-article-header" id="document-main"><div class="center">
+          <!-- zone title -->
+          <div class="zone-title"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></div>
+          <!-- zone image -->
+          <div class="zone-image"></div>
+        </div></div>
+      
+
+     <!-- end is_zone -->
+
+    <div class="wiki-main-content"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="../../../ja/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs.html" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../pt-PT/Add-ons/WebExtensions/Suporte_navegador_APIs_JavaScript.html" title="Portuguese (Portugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla" rel="v:url" property="v:title">Mozilla</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons" rel="v:url" property="v:title">Add-ons</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" rel="v:url" property="v:title">WebExtensions</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Browser support for JavaScript APIs</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/wbamberg" title="View profile: wbamberg">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wbamberg" data-src="../../../../secure.gravatar.com/avatar/576b94c81f8ad97e58d63f12e5fdb00c6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wbamberg</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>Browser support for JavaScript APIs</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#alarms" rel="internal">alarms</a></li><li><a href="#bookmarks" rel="internal">bookmarks</a></li><li><a href="#browserAction" rel="internal">browserAction</a></li><li><a href="#commands" rel="internal">commands</a></li><li><a href="#contextMenus" rel="internal">contextMenus</a></li><li><a href="#cookies" rel="internal">cookies</a></li><li><a href="#downloads" rel="internal">downloads</a></li><li><a href="#events" rel="internal">events</a></li><li><a href="#extension" rel="internal">extension</a></li><li><a href="#extensionTypes" rel="internal">extensionTypes</a></li><li><a href="#history" rel="internal">history</a></li><li><a href="#i18n" rel="internal">i18n</a></li><li><a href="#idle" rel="internal">idle</a></li><li><a href="#management" rel="internal">management</a></li><li><a href="#notifications" rel="internal">notifications</a></li><li><a href="#pageAction" rel="internal">pageAction</a></li><li><a href="#runtime" rel="internal">runtime</a></li><li><a href="#storage" rel="internal">storage</a></li><li><a href="#tabs" rel="internal">tabs</a></li><li><a href="#webNavigation" rel="internal">webNavigation</a></li><li><a href="#webRequest" rel="internal">webRequest</a></li><li><a href="#windows" rel="internal">windows</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p>
+
+</p><div><h2 id="alarms">alarms</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/alarms/Alarm.html"><code>Alarm</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/clear.html"><code>clear</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/clearAll.html"><code>clearAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/alarms/onAlarm.html"><code>onAlarm</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="bookmarks">bookmarks</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/bookmarks/BookmarkTreeNode.html"><code>BookmarkTreeNode</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/BookmarkTreeNodeUnmodifiable.html"><code>BookmarkTreeNodeUnmodifiable</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/CreateDetails.html"><code>CreateDetails</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/bookmarks.export"><code>export</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/getChildren.html"><code>getChildren</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/getRecent.html"><code>getRecent</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/getSubTree.html"><code>getSubTree</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/getTree.html"><code>getTree</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Archive/Add-ons/bookmarks.import"><code>import</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/move.html"><code>move</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onChanged.html"><code>onChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">52.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onChildrenReordered.html"><code>onChildrenReordered</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onCreated.html"><code>onCreated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">52.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onImportBegan.html"><code>onImportBegan</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onImportEnded.html"><code>onImportEnded</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onMoved.html"><code>onMoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">52.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/onRemoved.html"><code>onRemoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">52.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/removeTree.html"><code>removeTree</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/search.html"><code>search</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/bookmarks/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="browserAction">browserAction</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/browserAction/ColorArray.html"><code>ColorArray</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/ImageDataType.html"><code>ImageDataType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/disable.html"><code>disable</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/enable.html"><code>enable</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/getBadgeBackgroundColor.html"><code>getBadgeBackgroundColor</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/getBadgeText.html"><code>getBadgeText</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/getPopup.html"><code>getPopup</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/getTitle.html"><code>getTitle</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/onClicked.html"><code>onClicked</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/setBadgeBackgroundColor.html"><code>setBadgeBackgroundColor</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/setBadgeText.html"><code>setBadgeText</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/setIcon.html"><code>setIcon</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/setPopup.html"><code>setPopup</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/browserAction/setTitle.html"><code>setTitle</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="commands">commands</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/commands/Command.html"><code>Command</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/commands/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/commands/onCommand.html"><code>onCommand</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="contextMenus">contextMenus</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/contextMenus/ACTION_MENU_TOP_LEVEL_LIMIT.html"><code>ACTION_MENU_TOP_LEVEL_LIMIT</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/ContextType.html"><code>ContextType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/contextMenus/ContextType.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/contextMenus/ContextType.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/ItemType.html"><code>ItemType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/OnClickData.html"><code>OnClickData</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0 <a href="API/contextMenus/create.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/onClicked.html"><code>onClicked</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/removeAll.html"><code>removeAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/contextMenus/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">48.0 <a href="API/contextMenus/update.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="cookies">cookies</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/cookies/Cookie.html"><code>Cookie</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/CookieStore.html"><code>CookieStore</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/OnChangedCause.html"><code>OnChangedCause</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/cookies/getAll.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/getAllCookieStores.html"><code>getAllCookieStores</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/cookies/getAllCookieStores.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/onChanged.html"><code>onChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/cookies/set.html"><code>set</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="downloads">downloads</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/downloads/BooleanDelta.html"><code>BooleanDelta</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/DangerType.html"><code>DangerType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/DoubleDelta.html"><code>DoubleDelta</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/DownloadItem.html"><code>DownloadItem</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/DownloadQuery.html"><code>DownloadQuery</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/DownloadTime.html"><code>DownloadTime</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/FilenameConflictAction.html"><code>FilenameConflictAction</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0 <a href="API/downloads/FilenameConflictAction.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/downloads/FilenameConflictAction.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/InterruptReason.html"><code>InterruptReason</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/State.html"><code>State</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/StringDelta.html"><code>StringDelta</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/acceptDanger.html"><code>acceptDanger</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/cancel.html"><code>cancel</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/download.html"><code>download</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0 <a href="API/downloads/download.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/downloads/download.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/drag.html"><code>drag</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/erase.html"><code>erase</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/getFileIcon.html"><code>getFileIcon</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/onChanged.html"><code>onChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/onCreated.html"><code>onCreated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/onErased.html"><code>onErased</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/open.html"><code>open</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/pause.html"><code>pause</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/removeFile.html"><code>removeFile</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/resume.html"><code>resume</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/search.html"><code>search</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/setShelfEnabled.html"><code>setShelfEnabled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/show.html"><code>show</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/downloads/showDefaultFolder.html"><code>showDefaultFolder</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="events">events</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/events/Event.html"><code>Event</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/events/Rule.html"><code>Rule</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/events/UrlFilter.html"><code>UrlFilter</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">50.0</td>
+      <td class="full-support">50.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="extension">extension</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/extension/ViewType.html"><code>ViewType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/getBackgroundPage.html"><code>getBackgroundPage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/getExtensionTabs.html"><code>getExtensionTabs</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/getURL.html"><code>getURL</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/getViews.html"><code>getViews</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/inIncognitoContext.html"><code>inIncognitoContext</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/isAllowedFileSchemeAccess.html"><code>isAllowedFileSchemeAccess</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/isAllowedIncognitoAccess.html"><code>isAllowedIncognitoAccess</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/lastError.html"><code>lastError</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/onRequest.html"><code>onRequest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/onRequestExternal.html"><code>onRequestExternal</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/sendRequest.html"><code>sendRequest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/extension/setUpdateUrlData.html"><code>setUpdateUrlData</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="extensionTypes">extensionTypes</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/extensionTypes/ImageDetails.html"><code>ImageDetails</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extensionTypes/ImageFormat.html"><code>ImageFormat</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/extensionTypes/InjectDetails.html"><code>InjectDetails</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/extensionTypes/InjectDetails.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/extensionTypes/RunAt.html"><code>RunAt</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="history">history</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/history/HistoryItem.html"><code>HistoryItem</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0 <a href="API/history/HistoryItem.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/TransitionType.html"><code>TransitionType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/VisitItem.html"><code>VisitItem</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/addUrl.html"><code>addUrl</code></a></td>
+      <td class="full-support">Yes <a href="API/history/addUrl.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33 <a href="API/history/addUrl.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/history/deleteAll.html"><code>deleteAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/deleteRange.html"><code>deleteRange</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/deleteUrl.html"><code>deleteUrl</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/getVisits.html"><code>getVisits</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/onVisitRemoved.html"><code>onVisitRemoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/onVisited.html"><code>onVisited</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/history/search.html"><code>search</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="i18n">i18n</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/i18n/LanguageCode.html"><code>LanguageCode</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/i18n/detectLanguage.html"><code>detectLanguage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/i18n/getAcceptLanguages.html"><code>getAcceptLanguages</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/i18n/getMessage.html"><code>getMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/i18n/getUILanguage.html"><code>getUILanguage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+    </tr>
+  </tbody>
+</table><h2 id="idle">idle</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/idle/IdleState.html"><code>IdleState</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/idle/onStateChanged.html"><code>onStateChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51 <a href="API/idle/onStateChanged.html#Browser_compatibility">*</a></td>
+      <td class="full-support">51 <a href="API/idle/onStateChanged.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/idle/queryState.html"><code>queryState</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/idle/queryState.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/idle/queryState.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/idle/setDetectionInterval.html"><code>setDetectionInterval</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51</td>
+      <td class="full-support">51</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="management">management</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/management/ExtensionInfo.html"><code>ExtensionInfo</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0 <a href="API/management/ExtensionInfo.html#Browser_compatibility">*</a></td>
+      <td class="full-support">51.0 <a href="API/management/ExtensionInfo.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/getPermissionWarningsById.html"><code>getPermissionWarningsById</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/getPermissionWarningsByManifest.html"><code>getPermissionWarningsByManifest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/getSelf.html"><code>getSelf</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">51.0</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/onDisabled.html"><code>onDisabled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/onEnabled.html"><code>onEnabled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/onInstalled.html"><code>onInstalled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/onUninstalled.html"><code>onUninstalled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/setEnabled.html"><code>setEnabled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/uninstall.html"><code>uninstall</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">Yes</td>
+    </tr>
+    <tr>
+      <td><a href="API/management/uninstallSelf.html"><code>uninstallSelf</code></a></td>
+      <td class="full-support">Yes <a href="API/management/uninstallSelf.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">Yes <a href="API/management/uninstallSelf.html#Browser_compatibility">*</a></td>
+    </tr>
+  </tbody>
+</table><h2 id="notifications">notifications</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/notifications/NotificationOptions.html"><code>NotificationOptions</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/notifications/NotificationOptions.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/notifications/NotificationOptions.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/TemplateType.html"><code>TemplateType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/notifications/TemplateType.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/notifications/TemplateType.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/notifications/TemplateType.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/clear.html"><code>clear</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/onButtonClicked.html"><code>onButtonClicked</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/onClicked.html"><code>onClicked</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/onClosed.html"><code>onClosed</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/notifications/onClosed.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/notifications/onClosed.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/notifications/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33 <a href="API/notifications/update.html#Browser_compatibility">*</a></td>
+    </tr>
+  </tbody>
+</table><h2 id="pageAction">pageAction</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/pageAction/ImageDataType.html"><code>ImageDataType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/getPopup.html"><code>getPopup</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">50.0 <a href="API/pageAction/getPopup.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/getTitle.html"><code>getTitle</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/hide.html"><code>hide</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">50.0 <a href="API/pageAction/hide.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/onClicked.html"><code>onClicked</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">50.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/setIcon.html"><code>setIcon</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/pageAction/setIcon.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/setPopup.html"><code>setPopup</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">50.0 <a href="API/pageAction/setPopup.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/setTitle.html"><code>setTitle</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/pageAction/show.html"><code>show</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">50.0 <a href="API/pageAction/show.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="runtime">runtime</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/runtime/MessageSender.html"><code>MessageSender</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/OnInstalledReason.html"><code>OnInstalledReason</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/OnRestartRequiredReason.html"><code>OnRestartRequiredReason</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/PlatformArch.html"><code>PlatformArch</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/PlatformInfo.html"><code>PlatformInfo</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/runtime/PlatformInfo.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/runtime/PlatformInfo.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/PlatformNaclArch.html"><code>PlatformNaclArch</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/PlatformOs.html"><code>PlatformOs</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/Port.html"><code>Port</code></a></td>
+      <td class="full-support">Yes <a href="API/runtime/Port.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0 <a href="API/runtime/Port.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/runtime/Port.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/runtime/Port.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/RequestUpdateCheckStatus.html"><code>RequestUpdateCheckStatus</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/connect.html"><code>connect</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/connectNative.html"><code>connectNative</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getBackgroundPage.html"><code>getBackgroundPage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getBrowserInfo.html"><code>getBrowserInfo</code></a></td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">51.0</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getManifest.html"><code>getManifest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getPackageDirectoryEntry.html"><code>getPackageDirectoryEntry</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getPlatformInfo.html"><code>getPlatformInfo</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/getURL.html"><code>getURL</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/id.html"><code>id</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/lastError.html"><code>lastError</code></a></td>
+      <td class="full-support">Yes <a href="API/runtime/lastError.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/runtime/lastError.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onBrowserUpdateAvailable.html"><code>onBrowserUpdateAvailable</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onConnect.html"><code>onConnect</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onConnectExternal.html"><code>onConnectExternal</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onInstalled.html"><code>onInstalled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">52.0 <a href="API/runtime/onInstalled.html#Browser_compatibility">*</a></td>
+      <td class="full-support">52.0 <a href="API/runtime/onInstalled.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onMessage.html"><code>onMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/runtime/onMessage.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onMessageExternal.html"><code>onMessageExternal</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onRestartRequired.html"><code>onRestartRequired</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onStartup.html"><code>onStartup</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onSuspend.html"><code>onSuspend</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onSuspendCanceled.html"><code>onSuspendCanceled</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/onUpdateAvailable.html"><code>onUpdateAvailable</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/openOptionsPage.html"><code>openOptionsPage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/reload.html"><code>reload</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">51.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/requestUpdateCheck.html"><code>requestUpdateCheck</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/sendMessage.html"><code>sendMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/runtime/sendMessage.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/sendNativeMessage.html"><code>sendNativeMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">50.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/runtime/setUninstallURL.html"><code>setUninstallURL</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="storage">storage</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/storage/StorageArea.html"><code>StorageArea</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageArea/clear.html"><code>StorageArea.clear</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageArea/get.html"><code>StorageArea.get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageArea/getBytesInUse.html"><code>StorageArea.getBytesInUse</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageArea/remove.html"><code>StorageArea.remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageArea/set.html"><code>StorageArea.set</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/storage/StorageArea/set.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/StorageChange.html"><code>StorageChange</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/local.html"><code>local</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/storage/local.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/managed.html"><code>managed</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/onChanged.html"><code>onChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/storage/sync.html"><code>sync</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+  </tbody>
+</table><h2 id="tabs">tabs</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/tabs/MutedInfo.html"><code>MutedInfo</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/MutedInfoReason.html"><code>MutedInfoReason</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/TAB_ID_NONE.html"><code>TAB_ID_NONE</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/Tab.html"><code>Tab</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/tabs/Tab.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/TabStatus.html"><code>TabStatus</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/WindowType.html"><code>WindowType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/ZoomSettings.html"><code>ZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/ZoomSettingsMode.html"><code>ZoomSettingsMode</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/ZoomSettingsScope.html"><code>ZoomSettingsScope</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/captureVisibleTab.html"><code>captureVisibleTab</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/connect.html"><code>connect</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/tabs/create.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/tabs/create.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/detectLanguage.html"><code>detectLanguage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/duplicate.html"><code>duplicate</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">47.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/executeScript.html"><code>executeScript</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">43.0 <a href="API/tabs/executeScript.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/getAllInWindow.html"><code>getAllInWindow</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/getCurrent.html"><code>getCurrent</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/getSelected.html"><code>getSelected</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/getZoom.html"><code>getZoom</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/getZoomSettings.html"><code>getZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/highlight.html"><code>highlight</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/insertCSS.html"><code>insertCSS</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0 <a href="API/tabs/insertCSS.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/move.html"><code>move</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">46.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onActivated.html"><code>onActivated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onActiveChanged.html"><code>onActiveChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onAttached.html"><code>onAttached</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onCreated.html"><code>onCreated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onDetached.html"><code>onDetached</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onHighlightChanged.html"><code>onHighlightChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onHighlighted.html"><code>onHighlighted</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onMoved.html"><code>onMoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onRemoved.html"><code>onRemoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onReplaced.html"><code>onReplaced</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onSelectionChanged.html"><code>onSelectionChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onUpdated.html"><code>onUpdated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/onZoomChange.html"><code>onZoomChange</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/query.html"><code>query</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/tabs/query.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/tabs/query.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/reload.html"><code>reload</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/removeCSS.html"><code>removeCSS</code></a></td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">49.0 <a href="API/tabs/removeCSS.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/sendMessage.html"><code>sendMessage</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/sendRequest.html"><code>sendRequest</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/setZoom.html"><code>setZoom</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/setZoomSettings.html"><code>setZoomSettings</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/tabs/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/tabs/update.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/tabs/update.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="webNavigation">webNavigation</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/webNavigation/TransitionQualifier.html"><code>TransitionQualifier</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0 <a href="API/webNavigation/TransitionQualifier.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/TransitionQualifier.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/TransitionType.html"><code>TransitionType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">48.0 <a href="API/webNavigation/TransitionType.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/TransitionType.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/getAllFrames.html"><code>getAllFrames</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/getFrame.html"><code>getFrame</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">47.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onBeforeNavigate.html"><code>onBeforeNavigate</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onBeforeNavigate.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onBeforeNavigate.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onBeforeNavigate.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onBeforeNavigate.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onBeforeNavigate.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onCommitted.html"><code>onCommitted</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onCommitted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onCommitted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onCommitted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onCommitted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onCommitted.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onCompleted.html"><code>onCompleted</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onCompleted.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onCreatedNavigationTarget.html"><code>onCreatedNavigationTarget</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onDOMContentLoaded.html"><code>onDOMContentLoaded</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onDOMContentLoaded.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onDOMContentLoaded.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onDOMContentLoaded.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onDOMContentLoaded.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onDOMContentLoaded.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onErrorOccurred.html"><code>onErrorOccurred</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onErrorOccurred.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onHistoryStateUpdated.html"><code>onHistoryStateUpdated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/webNavigation/onHistoryStateUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">47.0 <a href="API/webNavigation/onHistoryStateUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onReferenceFragmentUpdated.html"><code>onReferenceFragmentUpdated</code></a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onReferenceFragmentUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webNavigation/onReferenceFragmentUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webNavigation/onReferenceFragmentUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webNavigation/onReferenceFragmentUpdated.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webNavigation/onReferenceFragmentUpdated.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webNavigation/onTabReplaced.html"><code>onTabReplaced</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><h2 id="webRequest">webRequest</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/webRequest/BlockingResponse.html"><code>BlockingResponse</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/HttpHeaders.html"><code>HttpHeaders</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES.html"><code>MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/RequestFilter.html"><code>RequestFilter</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/webRequest/RequestFilter.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webRequest/RequestFilter.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/ResourceType.html"><code>ResourceType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/UploadData.html"><code>UploadData</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/handlerBehaviorChanged.html"><code>handlerBehaviorChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onAuthRequired.html"><code>onAuthRequired</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onBeforeRedirect.html"><code>onBeforeRedirect</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onBeforeRedirect.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">46.0 <a href="API/webRequest/onBeforeRedirect.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/webRequest/onBeforeRedirect.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onBeforeRequest.html"><code>onBeforeRequest</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onBeforeRequest.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onBeforeRequest.html#Browser_compatibility">*</a></td>
+      <td class="full-support">46.0 <a href="API/webRequest/onBeforeRequest.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webRequest/onBeforeRequest.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webRequest/onBeforeRequest.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onBeforeSendHeaders.html"><code>onBeforeSendHeaders</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onBeforeSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onBeforeSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webRequest/onBeforeSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webRequest/onBeforeSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webRequest/onBeforeSendHeaders.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onCompleted.html"><code>onCompleted</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/webRequest/onCompleted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/webRequest/onCompleted.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onErrorOccurred.html"><code>onErrorOccurred</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/webRequest/onErrorOccurred.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/webRequest/onErrorOccurred.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onHeadersReceived.html"><code>onHeadersReceived</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onHeadersReceived.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onHeadersReceived.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0 <a href="API/webRequest/onHeadersReceived.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0 <a href="API/webRequest/onHeadersReceived.html#Browser_compatibility">*</a></td>
+      <td class="full-support">33 <a href="API/webRequest/onHeadersReceived.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onResponseStarted.html"><code>onResponseStarted</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onResponseStarted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/webRequest/onResponseStarted.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/webRequest/onResponseStarted.html#Browser_compatibility">*</a></td>
+    </tr>
+    <tr>
+      <td><a href="API/webRequest/onSendHeaders.html"><code>onSendHeaders</code></a></td>
+      <td class="full-support">Yes <a href="API/webRequest/onSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/webRequest/onSendHeaders.html#Browser_compatibility">*</a></td>
+      <td class="full-support">48.0</td>
+      <td class="full-support">33 <a href="API/webRequest/onSendHeaders.html#Browser_compatibility">*</a></td>
+    </tr>
+  </tbody>
+</table><h2 id="windows">windows</h2><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><a href="API/windows/CreateType.html"><code>CreateType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/WINDOW_ID_CURRENT.html"><code>WINDOW_ID_CURRENT</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/WINDOW_ID_NONE.html"><code>WINDOW_ID_NONE</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/Window.html"><code>Window</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes <a href="API/windows/Window.html#Browser_compatibility">*</a></td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/WindowState.html"><code>WindowState</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/WindowType.html"><code>WindowType</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/create.html"><code>create</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0 <a href="API/windows/create.html#Browser_compatibility">*</a></td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/get.html"><code>get</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/getAll.html"><code>getAll</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/getCurrent.html"><code>getCurrent</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/getLastFocused.html"><code>getLastFocused</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/onCreated.html"><code>onCreated</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/onFocusChanged.html"><code>onFocusChanged</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/onRemoved.html"><code>onRemoved</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/remove.html"><code>remove</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+    <tr>
+      <td><a href="API/windows/update.html"><code>update</code></a></td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div>&nbsp;</div>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
+</div>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>,
+                      <time datetime="2016-12-05T14:24:58.006685-08:00">Dec 5, 2016, 2:24:58 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+     
+  <ol> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions"><strong>WebExtensions</strong></a></li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_">What are WebExtensions?</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Example WebExtensions</a> 
+      </li></ol> 
+    </li> 
+     
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#How_to">How to</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Concepts">Concepts</a> 
+      <ol> 
+        <li><a href="API.html">Using the JavaScript APIs</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components">User interface components</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Porting">Porting</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox add-on</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Firefox_workflow">Firefox workflow</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions and the Add-on ID</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">Publishing your WebExtension</a></li> 
+ 
+      </ol> 
+    </li>   
+     
+    <li data-default-state="closed"><a href="../../docs/Mozilla/Add-ons/WebExtensions/API.png">JavaScript APIs</a> 
+     <ol><li><a href="Browser_support_for_JavaScript_APIs.html">Browser support for JavaScript APIs</a></li><li><a href="API/alarms.html">alarms</a></li><li><a href="API/bookmarks.html">bookmarks</a></li><li><a href="API/browserAction.html">browserAction</a></li><li><a href="../../docs/Mozilla/Add-ons/WebExtensions/API/commands.png">commands</a></li><li><a href="API/contextMenus.html">contextMenus</a></li><li><a href="API/cookies.html">cookies</a></li><li><a href="API/downloads.html">downloads</a></li><li><a href="../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="API/extension.html">extension</a></li><li><a href="API/extensionTypes.html">extensionTypes</a></li><li><a href="API/history.html">history</a></li><li><a href="API/i18n.html">i18n</a></li><li><a href="API/idle.html">idle</a></li><li><a href="API/management.html">management</a></li><li><a href="API/notifications.html">notifications</a></li><li><a href="API/pageAction.html">pageAction</a></li><li><a href="API/runtime.html">runtime</a></li><li><a href="API/storage.html">storage</a></li><li><a href="API/tabs.html">tabs</a></li><li><a href="API/webNavigation.html">webNavigation</a></li><li><a href="API/webRequest.html">webRequest</a></li><li><a href="API/windows.html">windows</a></li></ol> 
+    </li> 
+     
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Manifest keys</a> 
+    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author">author</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer">developer</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
+    </li> 
+     
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK"><strong>Add-on SDK</strong></a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Installation">Installation</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Getting_started">Getting started</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK/Tutorials/Troubleshooting">Troubleshooting</a></li> 
+      </ol> 
+    </li> 
+     
+    <li data-default-state="closed"><a href="../SDK/High-Level_APIs.html">High-Level APIs</a> 
+      <ol><li><a href="../SDK/High-Level_APIs/addon-page.html">addon-page</a></li><li><a href="../SDK/High-Level_APIs/base64.html">base64</a></li><li><a href="../SDK/High-Level_APIs/clipboard.html">clipboard</a></li><li><a href="../SDK/High-Level_APIs/context-menu.html">context-menu</a></li><li><a href="../SDK/High-Level_APIs/hotkeys.html">hotkeys</a></li><li><a href="../SDK/High-Level_APIs/indexed-db.html">indexed-db</a></li><li><a href="../SDK/High-Level_APIs/l10n.html">l10n</a></li><li><a href="../SDK/High-Level_APIs/notifications.html">notifications</a></li><li><a href="../SDK/High-Level_APIs/page-mod.html">page-mod</a></li><li><a href="../SDK/High-Level_APIs/page-worker.html">page-worker</a></li><li><a href="../SDK/High-Level_APIs/panel.html">panel</a></li><li><a href="../SDK/High-Level_APIs/passwords.html">passwords</a></li><li><a href="../SDK/High-Level_APIs/private-browsing.html">private-browsing</a></li><li><a href="../SDK/High-Level_APIs/querystring.html">querystring</a></li><li><a href="../SDK/High-Level_APIs/request.html">request</a></li><li><a href="../SDK/High-Level_APIs/selection.html">selection</a></li><li><a href="../SDK/High-Level_APIs/self.html">self</a></li><li><a href="../SDK/High-Level_APIs/simple-prefs.html">simple-prefs</a></li><li><a href="../SDK/High-Level_APIs/simple-storage.html">simple-storage</a></li><li><a href="../SDK/High-Level_APIs/system.html">system</a></li><li><a href="../SDK/High-Level_APIs/tabs.html">tabs</a></li><li><a href="../SDK/High-Level_APIs/timers.html">timers</a></li><li><a href="../SDK/High-Level_APIs/ui.html">ui</a></li><li><a href="../SDK/High-Level_APIs/url.html">url</a></li><li><a href="../SDK/High-Level_APIs/webextension.html">webextension</a></li><li><a href="../SDK/High-Level_APIs/widget.html">widget</a></li><li><a href="../SDK/High-Level_APIs/windows.html">windows</a></li></ol> 
+    </li> 
+    <li data-default-state="closed"><a href="../../docs/Mozilla/Add-ons/SDK/Low-Level_APIs.png">Low-Level APIs</a> 
+      <ol><li><a href="../SDK/Low-Level_APIs/_loader.html">/loader</a></li><li><a href="../SDK/Low-Level_APIs/chrome.html">chrome</a></li><li><a href="../SDK/Low-Level_APIs/console_plain-text.html">console/plain-text</a></li><li><a href="../SDK/Low-Level_APIs/console_traceback.html">console/traceback</a></li><li><a href="../SDK/Low-Level_APIs/content_content.html">content/content</a></li><li><a href="../SDK/Low-Level_APIs/content_loader.html">content/loader</a></li><li><a href="../SDK/Low-Level_APIs/content_mod.html">content/mod</a></li><li><a href="../SDK/Low-Level_APIs/content_symbiont.html">content/symbiont</a></li><li><a href="../SDK/Low-Level_APIs/content_worker.html">content/worker</a></li><li><a href="../SDK/Low-Level_APIs/core_heritage.html">core/heritage</a></li><li><a href="../SDK/Low-Level_APIs/core_namespace.html">core/namespace</a></li><li><a href="../SDK/Low-Level_APIs/core_promise.html">core/promise</a></li><li><a href="../SDK/Low-Level_APIs/dev_panel.html">dev/panel</a></li><li><a href="../SDK/Low-Level_APIs/event_core.html">event/core</a></li><li><a href="../SDK/Low-Level_APIs/event_target.html">event/target</a></li><li><a href="../SDK/Low-Level_APIs/frame_hidden-frame.html">frame/hidden-frame</a></li><li><a href="../SDK/Low-Level_APIs/frame_utils.html">frame/utils</a></li><li><a href="../SDK/Low-Level_APIs/fs_path.html">fs/path</a></li><li><a href="../SDK/Low-Level_APIs/io_byte-streams.html">io/byte-streams</a></li><li><a href="../SDK/Low-Level_APIs/io_file.html">io/file</a></li><li><a href="../SDK/Low-Level_APIs/io_text-streams.html">io/text-streams</a></li><li><a href="../SDK/Low-Level_APIs/lang_functional.html">lang/functional</a></li><li><a href="../SDK/Low-Level_APIs/lang_type.html">lang/type</a></li><li><a href="../SDK/Low-Level_APIs/loader_cuddlefish.html">loader/cuddlefish</a></li><li><a href="../SDK/Low-Level_APIs/loader_sandbox.html">loader/sandbox</a></li><li><a href="../SDK/Low-Level_APIs/net_url.html">net/url</a></li><li><a href="../SDK/Low-Level_APIs/net_xhr.html">net/xhr</a></li><li><a href="../SDK/Low-Level_APIs/places_bookmarks.html">places/bookmarks</a></li><li><a href="../SDK/Low-Level_APIs/places_favicon.html">places/favicon</a></li><li><a href="../SDK/Low-Level_APIs/places_history.html">places/history</a></li><li><a href="../SDK/Low-Level_APIs/platform_xpcom.html">platform/xpcom</a></li><li><a href="../SDK/Low-Level_APIs/preferences_event-target.html">preferences/event-target</a></li><li><a href="../SDK/Low-Level_APIs/preferences_service.html">preferences/service</a></li><li><a href="../SDK/Low-Level_APIs/remote_child.html">remote/child</a></li><li><a href="../SDK/Low-Level_APIs/remote_parent.html">remote/parent</a></li><li><a href="../SDK/Low-Level_APIs/stylesheet_style.html">stylesheet/style</a></li><li><a href="../SDK/Low-Level_APIs/stylesheet_utils.html">stylesheet/utils</a></li><li><a href="../SDK/Low-Level_APIs/system_child_process.html">system/child_process</a></li><li><a href="../SDK/Low-Level_APIs/system_environment.html">system/environment</a></li><li><a href="../SDK/Low-Level_APIs/system_events.html">system/events</a></li><li><a href="../SDK/Low-Level_APIs/system_runtime.html">system/runtime</a></li><li><a href="../SDK/Low-Level_APIs/system_unload.html">system/unload</a></li><li><a href="../SDK/Low-Level_APIs/system_xul-app.html">system/xul-app</a></li><li><a href="../SDK/Low-Level_APIs/tabs_utils.html">tabs/utils</a></li><li><a href="../SDK/Low-Level_APIs/test_assert.html">test/assert</a></li><li><a href="../SDK/Low-Level_APIs/test_harness.html">test/harness</a></li><li><a href="../SDK/Low-Level_APIs/test_httpd.html">test/httpd</a></li><li><a href="../SDK/Low-Level_APIs/test_runner.html">test/runner</a></li><li><a href="../SDK/Low-Level_APIs/test_utils.html">test/utils</a></li><li><a href="../SDK/Low-Level_APIs/ui_button_action.html">ui/button/action</a></li><li><a href="../SDK/Low-Level_APIs/ui_button_toggle.html">ui/button/toggle</a></li><li><a href="../SDK/Low-Level_APIs/ui_frame.html">ui/frame</a></li><li><a href="../SDK/Low-Level_APIs/ui_id.html">ui/id</a></li><li><a href="../SDK/Low-Level_APIs/ui_sidebar.html">ui/sidebar</a></li><li><a href="../SDK/Low-Level_APIs/ui_toolbar.html">ui/toolbar</a></li><li><a href="../SDK/Low-Level_APIs/util_array.html">util/array</a></li><li><a href="../SDK/Low-Level_APIs/util_collection.html">util/collection</a></li><li><a href="../SDK/Low-Level_APIs/util_deprecate.html">util/deprecate</a></li><li><a href="../SDK/Low-Level_APIs/util_list.html">util/list</a></li><li><a href="../SDK/Low-Level_APIs/util_match-pattern.html">util/match-pattern</a></li><li><a href="../SDK/Low-Level_APIs/util_object.html">util/object</a></li><li><a href="../SDK/Low-Level_APIs/util_uuid.html">util/uuid</a></li><li><a href="../SDK/Low-Level_APIs/window_utils.html">window/utils</a></li></ol> 
+    </li>  
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Firefox_for_Android"><strong>Firefox for Android</strong></a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Firefox_for_Android">Getting started</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/Walkthrough">Walkthrough</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Debugging</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Firefox_for_Android/Code_snippets">Code snippets</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="../../docs/Mozilla/Add-ons/Firefox_for_Android/API.png">APIs</a> 
+      <ol><li><a href="../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../Firefox_for_Android/API/Home.html">Home.jsm</a></li><li><a href="../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
+    </li>  
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions"><strong>Legacy</strong></a></li> 
+     
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Bootstrapped_Extensions">Restartless extensions</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Bootstrapped_extensions">Overview</a></li> 
+      </ol> 
+    </li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions">Overlay extensions</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions">Overview</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li> 
+     
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Background">Lightweight themes</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Background">Overview</a></li> 
+      </ol> 
+    </li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Complete_themes">Complete themes</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes">Overview</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution"><strong>Publishing add-ons</strong></a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution">Guides</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li> 
+        <li><a href="https://addons.mozilla.org/developers/addon/submit/">Submit an add-on</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/AMO/Policy/Contact">Contact addons.mozilla.org</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://discourse.mozilla-community.org/c/add-ons"><strong>Community and support</strong></a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Channels">Channels</a> 
+      <ol> 
+        <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li> 
+        <li><a href="https://discourse.mozilla-community.org/c/add-ons">Add-on forums</a></li> 
+        <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li> 
+        <li><a href="https://groups.google.com/forum/#!forum/mozilla.dev.extensions">Development newsgroup</a></li> 
+        <li><a href="irc://irc.mozilla.org/extdev">IRC Channel</a></li> 
+      </ol> 
+    </li> 
+  </ol> 
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="Japanese" value="/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">
+            日本語 (ja)
+          </option>
+          <option title="Portuguese (Portugal)" value="/pt-PT/docs/Mozilla/Add-ons/WebExtensions/Suporte_navegador_APIs_JavaScript">
+            Português (Europeu) (pt-PT)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:34:04 GMT -->
+</body></html>

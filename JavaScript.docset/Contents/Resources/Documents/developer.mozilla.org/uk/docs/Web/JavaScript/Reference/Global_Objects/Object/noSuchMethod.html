@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:56:14 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:06:27 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/uk/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/uk/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -70,6 +69,8 @@
     
       <link rel="alternate" hreflang="ru" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Object.prototype.__noSuchMethod__">
     
+      <link rel="alternate" hreflang="zh-CN" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Object.prototype.__noSuchMethod__">
+    
   
 
   <!-- document-specific social tags -->
@@ -82,6 +83,13 @@
   <meta name="description" content="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available.">
   <meta name="twitter:description" content="The __noSuchMethod__ property used to reference a function to be executed when a non-existent method is called on an object, but this function is no longer available.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -99,10 +107,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -152,8 +160,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -169,9 +177,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Перейти до основного вмісту</a></li>
     <li><a id="skip-language" href="#language">Вибір мови</a></li>
-    
-      <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
-    
+    <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
   </ul>
 
   <!-- Header -->
@@ -188,34 +194,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Увійти
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2FnoSuchMethod" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/uk/users/signin" class="login-link launch-persona-login" data-next="/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2FnoSuchMethod" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2FnoSuchMethod" class="login-link js-login-link" data-service="GitHub">
+        Увійти
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-платформа<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-технології<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -225,18 +217,20 @@
               <li><a href="https://developer.mozilla.org/uk/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide/Graphics">Графіка</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/HTTP">HTTP</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/API">API / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Web/Apps">Застосунки</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">Довідники та посібники</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення Web</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення веб-розробки</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Tutorials">Посібники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Reference">Довідники</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide">Посібники розробників</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web/Accessibility">Доступність</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Games">Розробка ігор</a></li>
               <li><a href="https://developer.mozilla.org/uk/docs/Web">...більше документації</a></li>
             </ul>
           </div>
@@ -247,10 +241,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons">Додатки</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/uk/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -264,8 +255,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/uk/docs/MDN/Community">Приєднатися до спільноти MDN</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -302,18 +293,24 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/noSuchMethod.html" title="Object.prototype.__noSuchMethod__">Français</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Object.prototype.__noSuchMethod__">日本語</a></bdi></li>
+                  <li><bdi><a rel="internal" href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Англійська (США)">English (US) (en-US)</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Object.prototype.__noSuchMethod__">Русский</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/noSuchMethod.html" title="Французька">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ja/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Японська">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../ru/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Російська">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../../../../zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html" title="Китайська (спрощене письмо)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -325,7 +322,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod$translate?tolocale=uk" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Редагувати<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -336,7 +335,6 @@
             <div class="title">Додатково</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod$history" rel="nofollow, noindex">Історія</a></li>
-                
                 
                 
                 
@@ -500,7 +498,7 @@
               
               
                 <div id="doc-pending-fallback" class="warning">
-                  <p><bdi>Наші волонтери ще не переклали цю статтю мовою: <bdi>Українська</bdi>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod$translate?tolocale=uk">Приєднайтесь до нас і допоможіть зробити це!</a></bdi></p>
+                  <p><bdi>Our volunteers haven't translated this article into <bdi>Українська</bdi> yet. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod$translate?tolocale=uk">Join us and help get the job done!</a><br> You can also read the article in <a href="../../../../../../../en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod.html">English (US)</a>.</bdi></p>
                 </div>
               
 
@@ -719,25 +717,6 @@ console.log("bob's address is: " + bob.getAddr());
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Поширити:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2FnoSuchMethod%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=%D0%AF+%D0%B4%D1%96%D0%B7%D0%BD%D0%B0%D0%B2%D1%81%D1%8F%28%D0%BB%D0%B0%D1%81%D1%8F%29+%D0%BF%D1%80%D0%BE+Object.prototype.__noSuchMethod__+%D0%BD%D0%B0+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="Я дізнався(лася) про Object.prototype.__noSuchMethod__ на MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="Я дізнався(лася) про Object.prototype.__noSuchMethod__ на MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FObject%2FnoSuchMethod%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="Я дізнався(лася) про Object.prototype.__noSuchMethod__ на MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google +</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Мітки документа й учасники</h2>
@@ -757,8 +736,6 @@ console.log("bob's address is: " + bob.getAddr());
         <li><a href="https://developer.mozilla.org/uk/docs/tag/Property">Property</a></li>
       
         <li><a href="https://developer.mozilla.org/uk/docs/tag/Prototype">Prototype</a></li>
-      
-        <li><a href="https://developer.mozilla.org/uk/docs/tag/prototype">prototype</a></li>
       
     </ul>
   </div>
@@ -802,6 +779,45 @@ console.log("bob's address is: " + bob.getAddr());
                   
                 </div>
               
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Вивчайте найкраще з веб-розробки</h2>
+        <p class="newsletter-description">Підпишіться на нашу розсилку:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">Ел. пошта</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            Я погоджуюсь з тим, як Mozilla поводиться з моїми даними згідно з <a href="https://www.mozilla.org/privacy/">цією Політикою приватності</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Підписатися зараз</button>
+        </div>
+        
+        <p class="newsletter-lang">Поки що розсилка пропонується лише англійською мовою.</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Дякуємо! Будь ласка, перевірте свою пошту для підтвердження підписки.</h2>
+        <p>Якщо ви раніше не підтверджували підписку на Mozilla, то вам це, можливо, треба зробити. Будь ласка, відкрийте теку Вхідні або Спам своєї ел. пошти, щоб перевірити, чи не прийшов від нас лист.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Приховати підписку на розсилку</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
             </div>
 
             
@@ -841,12 +857,12 @@ console.log("bob's address is: " + bob.getAddr());
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">Про MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Умови</a></li>
@@ -854,9 +870,8 @@ console.log("bob's address is: " + bob.getAddr());
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Куки</a></li>
             <li><a href="http://github.com/mozilla/kuma">Зробіть внесок у код</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -865,18 +880,21 @@ console.log("bob's address is: " + bob.getAddr());
     <form class="languages go" method="get" action="https://developer.mozilla.org/uk/docs/Web">
       <label for="language">Інші мови:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod" selected="">
-          English (US)
+        <option title="Англійська (США)" value="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/noSuchMethod">
-            Français
+          <option title="Французька" value="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/noSuchMethod">
+            Français (fr)
           </option>
-          <option value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">
-            日本語
+          <option title="Японська" value="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">
+            日本語 (ja)
           </option>
-          <option value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">
-            Русский
+          <option title="Російська" value="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">
+            Русский (ru)
+          </option>
+          <option title="Китайська (спрощене письмо)" value="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Перейти&lt;/button&gt;</noscript>
@@ -893,63 +911,38 @@ console.log("bob's address is: " + bob.getAddr());
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.c7ba80fc053a.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 18:56:14 GMT -->
+<!-- Mirrored from developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Global_Objects/Object/noSuchMethod by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:06:27 GMT -->
 </body></html>

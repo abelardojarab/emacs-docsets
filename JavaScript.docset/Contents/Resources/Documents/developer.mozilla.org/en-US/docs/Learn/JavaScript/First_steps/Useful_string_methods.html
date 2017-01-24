@@ -1,0 +1,1356 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:32:32 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Useful string methods</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://developer.mozilla.org/en-US/docs/Learn$styles">
+      
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$json">
+  <link rel="canonical" href="Useful_string_methods.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Useful string methods">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">
+  <meta name="twitter:title" content="Useful string methods">
+  
+  <meta property="og:description" content="Now we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.">
+  <meta name="description" content="Now we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.">
+  <meta name="twitter:description" content="Now we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Learn/JavaScript/First_steps/Useful_string_methods" contextmenu="edit-history-menu" data-search-url="" class="document zone ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FLearn%2FJavaScript%2FFirst_steps%2FUseful_string_methods" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+  
+      
+        <div class="zone-article-header" id="document-main"><div class="center">
+          <!-- zone title -->
+          <div class="zone-title"><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></div>
+          <!-- zone image -->
+          <div class="zone-image"></div>
+        </div></div>
+      
+
+     <!-- end is_zone -->
+
+    <div class="wiki-main-content"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Learn" rel="v:url" property="v:title">Learn web development</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="v:url" property="v:title">JavaScript</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../First_steps.html" rel="v:url" property="v:title">JavaScript first steps</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Useful string methods</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/brenseid" title="View profile: brenseid">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="brenseid" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">brenseid</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/BaderSur" title="View profile: BaderSur">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="BaderSur" data-src="../../../../../../secure.gravatar.com/avatar/a5569dbfdfda4df9ff5a7818503db59b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">BaderSur</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/sngv" title="View profile: sngv">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="sngv" data-src="../../../../../../secure.gravatar.com/avatar/3b7b822e1b076eedd607aa1e3896f1b56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">sngv</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/BenCrab" title="View profile: BenCrab">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="BenCrab" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">BenCrab</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>Useful string methods</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Strings_as_objects" rel="internal">Strings as objects</a><ol><li><a href="#Finding_the_length_of_a_string" rel="internal">Finding the length of a string</a></li><li><a href="#Retrieving_a_specific_string_character" rel="internal">Retrieving a specific string character</a></li><li><a href="#Finding_a_substring_inside_a_string_and_extracting_it" rel="internal">Finding a substring inside a string and extracting it</a></li><li><a href="#Changing_case" rel="internal">Changing case</a></li><li><a href="#Updating_parts_of_a_string" rel="internal">Updating parts of a string</a></li></ol></li><li><a href="#Active_learning_examples" rel="internal">Active learning examples</a><ol><li><a href="#Filtering_greeting_messages" rel="internal">Filtering greeting messages</a></li><li><a href="#Fixing_capitalization" rel="internal">Fixing capitalization</a></li><li><a href="#Making_new_strings_from_old_parts" rel="internal">Making new strings from old parts</a></li></ol></li><li><a href="#Conclusion" rel="internal">Conclusion</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+
+<div><div class="prevnext"> 
+    <div><a href="Strings.html" style="float: left; width: 20%; text-align: left;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-left"></i> Previous </span></a><a href="../First_steps.html" style="float: left; width: 60%; text-align: center;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: First steps</span></a><a href="Arrays.html" style="width: 20%; float: right; text-align: right;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div> 
+    <p>&nbsp;</p> 
+</div></div>
+
+<p class="summary">Now we've looked at the very basics of strings, let's move up a gear and start thinking about what useful operations we can do on strings with built-in methods, such as finding the length of a text string, joining and splitting strings, substituting one character in a string for another, and more.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, an understanding of what JavaScript is.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To understand that strings are objects, and learn how to use some of the basic methods available on those objects to manipulate strings.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Strings_as_objects">Strings as objects</h2>
+
+<p id="Useful_string_methods">We've said it before, and we'll say it again — <em>everything</em> is an object in JavaScript. When you create a string, for example by using</p>
+
+<pre class="brush: js">var string = 'This is my string';</pre>
+
+<p>your variable becomes a string object instance, and as a result has a large number of properties and methods available to it. You can see this if you go to the <a href="../../../Web/JavaScript/Reference/Global_Objects/String.html" title="The String global object is a constructor for strings, or a sequence of characters."><code>String</code></a> object page and look down the list on the side of the page!</p>
+
+<p><strong>Now, before your brain starts melting, don't worry!</strong> You really don't need to know about most of these early on in your learning journey. But there are a few that you'll potentially use quite often that we'll look at here.&nbsp;</p>
+
+<p>Let's enter some examples into a fresh console. We've provided one below (you can also <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html" class="external">open this console</a> in a separate tab or window, or use the <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer console</a> if you'd prefer).</p>
+
+<div class="hidden">
+<h6 id="Hidden_code">Hidden code</h6>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;JavaScript console&lt;/title&gt;
+    &lt;style&gt;
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #0C323D;
+        color: #809089;
+        font-family: monospace;
+      }
+
+      body {
+        max-width: 700px;
+      }
+
+      p {
+        margin: 0;
+        width: 1%;
+        padding: 0 1%;
+        font-size: 16px;
+        line-height: 1.5;
+        float: left;
+      }
+
+      .input p {
+        margin-right: 1%;
+      }
+
+      .output p {
+        width: 100%;
+      }
+
+      .input input {
+        width: 96%;
+        float: left;
+        border: none;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: monospace;
+        padding: 0;
+        background: #0C323D;
+        color: #809089;
+      }
+
+      div {
+        clear: both;
+      }
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    
+  &lt;/body&gt;
+
+  &lt;script&gt;
+    var geval = eval;
+    function createInput() {
+      var inputDiv = document.createElement('div');
+      var inputPara = document.createElement('p');
+      var inputForm = document.createElement('input');
+
+      inputDiv.setAttribute('class','input');
+      inputPara.textContent = '&gt;';
+      inputDiv.appendChild(inputPara);
+      inputDiv.appendChild(inputForm);
+      document.body.appendChild(inputDiv);
+
+      inputForm.addEventListener('change', executeCode);
+    }
+
+    function executeCode(e) {
+      try {
+        var result = geval(e.target.value);
+      } catch(e) {
+        var result = 'error — ' + e.message;
+      }
+
+      var outputDiv = document.createElement('div');
+      var outputPara = document.createElement('p');
+
+      outputDiv.setAttribute('class','output');
+      outputPara.textContent = 'Result: ' + result;
+      outputDiv.appendChild(outputPara);
+      document.body.appendChild(outputDiv);
+
+      e.target.disabled = true;
+      e.target.parentNode.style.opacity = '0.5';
+
+      createInput()
+    }
+    
+    createInput();
+
+  &lt;/script&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<p><iframe id="frame_Hidden_code" height="300" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods%24samples/Hidden_code7e8f.html?revision=1149160" frameborder="0" width="100%" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h3 id="Finding_the_length_of_a_string">Finding the length of a string</h3>
+
+<p>This is easy — you simply use the <a href="../../../Web/JavaScript/Reference/Global_Objects/String/length.html" title="The length property represents the length of a string."><code>length</code></a> property. Try entering the following lines:</p>
+
+<pre class="brush: js">var browserType = 'mozilla';
+browserType.length;</pre>
+
+<p>This should return the number 7, because "mozilla" is 7&nbsp;characters long. This is useful for many reasons, for example you might want to find the lengths of a series of names so you can display them in order of length, or let a user know that a username he has entered into a form field is too long, if it is over a certain length.</p>
+
+<h3 id="Retrieving_a_specific_string_character">Retrieving a specific string character</h3>
+
+<p>On a related note, you can return any character inside a string by using <strong>square bracket notation</strong> — this means you include square brackets (<code>[]</code>) on the end of your variable name. Inside the square brackets you include the number of the character you want to return, so for example to retrieve the first letter you'd do this:</p>
+
+<pre class="brush: js">browserType[0];</pre>
+
+<p>Computers count from 0, not 1! To retrieve the last character of <em>any</em> string, we could use the following line, combining this technique with the <code>length</code> property we looked at above:</p>
+
+<pre class="brush: js">browserType[browserType.length-1];</pre>
+
+<p>The length of "mozilla" is 7, but because the count starts at 0, the character position is 6, hence us needing <code>length-1</code>. You could use this to, for example, find the first letter of a series of strings and order them alphabetically.</p>
+
+<h3 id="Finding_a_substring_inside_a_string_and_extracting_it">Finding a substring inside a string and extracting it</h3>
+
+<ol>
+ <li>Sometimes you'll want to find if a smaller string is present inside a larger one (we generally say <em>if a substring is present inside a string</em>). This can be done using the <a href="../../../Web/JavaScript/Reference/Global_Objects/String/indexOf.html" title="The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found."><code>indexOf()</code></a> method, which takes a single <a href="https://developer.mozilla.org/en-US/docs/Glossary/parameter" class="glossaryLink" title="parameter: A parameter is a named variable passed into a function. Parameter variables are used to import arguments into functions.">parameter</a> — the substring you want to search for. Try this:
+
+  <pre class="brush: js">browserType.indexOf('zilla');</pre>
+  This gives us a result of 2, because the substring "zilla" starts at position 2&nbsp;(0, 1, 2&nbsp;&nbsp;— so 3&nbsp;characters in) inside "mozilla". Such code could be used to filter strings.&nbsp;For example, say we have a list&nbsp;of web addresses and only want to&nbsp;print out the ones that contain "mozilla".</li>
+</ol>
+
+<ol start="2">
+ <li>This can be done in another way, which is possibly even more effective. Try the following:
+  <pre class="brush: js">browserType.indexOf('vanilla');</pre>
+  This should give you a result of <code>-1</code> — this is returned when the substring, in this case 'vanilla', is not found in the main string.<br>
+  <br>
+  You could use this to find all instances of strings that <strong>don't</strong> contain the substring 'mozilla', or <strong>do,</strong> if you use the negation operator, as shown below. You could do something like this:
+
+  <pre class="brush: js">if(browserType.indexOf('mozilla') !== -1) {
+  // do stuff with the string
+}</pre>
+ </li>
+ <li>When you know where a substring starts inside a string, and you know at which character you want it to end,&nbsp;<a href="../../../Web/JavaScript/Reference/Global_Objects/String/slice.html" title="The slice() method extracts a section of a string and returns a new string."><code>slice()</code></a> can be used to extract it. Try the following:
+  <pre class="brush: js">browserType.slice(0,3);</pre>
+  This returns "moz" — the first parameter is the character position to start extracting at, and the second parameter is the character position after the last one to be extracted. So the slice happens from the first position, up to, but not including, the last position.<br>
+  &nbsp;</li>
+ <li>Also, if you know that you want to extract all&nbsp;of the&nbsp;remaining characters in a string after a certain character, you don't have to include the second parameter, rather, you only need to include the character position from where you want to extract the remaining characters in a string. Try the following:
+  <pre class="brush: js">browserType.slice(2);</pre>
+  This returns "zilla" — this is because the character position of 2 is the letter z, and because you didn't include a second parameter, the substring that was returned was all of the remaining characters in the string.&nbsp;</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: The second parameter of <code>slice()</code> is optional: if you don't include it, the slice ends at the end of the original string. There are other options too; study the <a href="../../../Web/JavaScript/Reference/Global_Objects/String/slice.html" title="The slice() method extracts a section of a string and returns a new string."><code>slice()</code></a> page to see what else you can find out.</p>
+</div>
+
+<h3 id="Changing_case">Changing case</h3>
+
+<p>The string methods <a href="../../../Web/JavaScript/Reference/Global_Objects/String/toLowerCase.html" title="The toLowerCase() method returns the calling string value converted to lower case."><code>toLowerCase()</code></a> and <a href="../../../Web/JavaScript/Reference/Global_Objects/String/toUpperCase.html" title="The toUpperCase() method returns the calling string value converted to upper case."><code>toUpperCase()</code></a> take a string and convert all the characters to lower or upper case, respectively. This can be useful for example if you want to normalize all user-entered data before storing it in a database.</p>
+
+<p>Let's try entering the following lines to see what happens:</p>
+
+<pre class="brush: js">var radData = 'My NaMe Is MuD';
+radData.toLowerCase();
+radData.toUpperCase();</pre>
+
+<h3 id="Updating_parts_of_a_string">Updating parts of a string</h3>
+
+<p>You can replace one&nbsp;substring inside a string with another substring using the <a href="../../../Web/JavaScript/Reference/Global_Objects/String/replace.html" title="The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match."><code>replace()</code></a> method. This works very simply at a basic level, although there are some advanced things you can do with it that we won't go into yet.</p>
+
+<p>It takes two parameters — the string you want to replace, and the string you want to replace it with. Try this example:</p>
+
+<pre class="brush: js">browserType.replace('moz','van');</pre>
+
+<h2 id="Active_learning_examples">Active learning examples</h2>
+
+<p>In this section we'll get you to try your handing at writing some string manipulation code. In each exercise below, we have an array of strings, and a loop that processes each value in the array and displays it in a bulleted list. You don't need to understand arrays or loops right now — these will be explained in future articles. All you need to do in each case is write the code that will output the strings in the format that we want them in.</p>
+
+<p>Each example comes with a <em>Reset</em> button, which you can use to reset the code if you make a mistake and can't get it working again, and a <em>Show solution</em> button you can press to see a potential answer if you get really stuck.</p>
+
+<h3 id="Filtering_greeting_messages">Filtering greeting messages</h3>
+
+<p>In the first exercise we'll start you off simple — we have an array of greetings card messages, but we want to sort them to list just the Christmas messages. We want you to fill in a conditional test inside the <code>if( ... )</code> structure, to test each string and only print it in the list if it is a Christmas message.</p>
+
+<ol>
+ <li>First think about how you could test whether the message in each case is a Christmas message. What string is present in all of those messages, and what method could you use to test whether it is present?</li>
+ <li>You'll then need to write a conditional test of the form <em>operand1 operator operand2</em>. Is the thing on the left equal to the thing on the right? Or in this case, does the method call on the left return the result on the right?</li>
+ <li>Hint: In this case it is probably more useful to test whether the method call <em>isn't</em> equal to a certain result.</li>
+</ol>
+
+<div class="hidden">
+<h6 id="Playable_code">Playable code</h6>
+
+<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+
+&lt;ul&gt;
+
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;textarea id="code" class="playable-code" style="height: 290px;"&gt;
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var greetings = ['Happy Birthday!',
+                 'Merry Christmas my love',
+                 'A happy Christmas to all the family',
+                 'You\'re all I want for Christmas',
+                 'Get well soon'];
+
+for(var i = 0; i &lt; greetings.length; i++) {
+  var input = greetings[i];
+  // Your conditional test needs to go inside the parentheses
+  // in the line below, replacing what's currently there
+  if(greetings[i]) {
+    var result = input;
+    var listItem = document.createElement('li');
+    listItem.textContent = result;
+    list.appendChild(listItem);
+  }
+}
+&lt;/textarea&gt;
+
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="reset" type="button" value="Reset"&gt;
+  &lt;input id="solution" type="button" value="Show solution"&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: js">var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i &lt; greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+</pre>
+</div>
+
+<p><iframe id="frame_Playable_code" height="490" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods%24samples/Playable_code7e8f.html?revision=1149160" frameborder="0" width="100%" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h3 id="Fixing_capitalization">Fixing capitalization</h3>
+
+<p>In this exercise we have the names of UK cities, but the capitalization is all messed up. We want you to change them so that they are all lower case, except for a capital first letter. A good way to do this is to:</p>
+
+<ol>
+ <li>Convert the whole of the string contained in the <code>input</code> variable to lower case and store it in a new variable.</li>
+ <li>Grab the first letter of the string in this new variable and store it in another variable.</li>
+ <li>Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replace procedure in another new variable.</li>
+ <li>Change the value of the <code>result</code> variable to equal to the final result, not the <code>input</code>.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.</p>
+</div>
+
+<div class="hidden">
+<h6 id="Playable_code_2">Playable code 2</h6>
+
+<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+
+&lt;ul&gt;
+
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;textarea id="code" class="playable-code" style="height: 250px;"&gt;
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+for(var i = 0; i &lt; cities.length; i++) {
+  var input = cities[i];
+  // write your code just below here
+
+  var result = input;
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
+&lt;/textarea&gt;
+
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="reset" type="button" value="Reset"&gt;
+  &lt;input id="solution" type="button" value="Show solution"&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: js">var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i &lt; cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+</pre>
+</div>
+
+<p><iframe id="frame_Playable_code_2" height="450" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods%24samples/Playable_code_27e8f.html?revision=1149160" frameborder="0" width="100%" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h3 id="Making_new_strings_from_old_parts">Making new strings from old parts</h3>
+
+<p>In this last exercise the array contains a bunch of strings containing information about train stations in the North of England. The strings are data items that contain the three letter station code, followed by some machine-readable data, followed by a semi-colon, followed by the human-readable station name. For example:</p>
+
+<pre>MAN675847583748sjt567654;Manchester Piccadilly</pre>
+
+<p>We want to extract the station code and name, and put them together in a&nbsp; string with the following structure:</p>
+
+<pre>MAN: Manchester Piccadilly</pre>
+
+<p>We'd recommend doing it like this:</p>
+
+<ol>
+ <li>Extract the three-letter station code and store it in a new variable.</li>
+ <li>Find the character index number of the semi-colon.</li>
+ <li>Extract the human-readable station name using the semi-colon character index number as a reference point, and store it in a new variable.</li>
+ <li>Concatenate the two new variables and a string literal to make the final string.</li>
+ <li>Change the value of the <code>result</code> variable to equal to the final string, not the <code>input</code>.</li>
+</ol>
+
+<div class="hidden">
+<h6 id="Playable_code_3">Playable code 3</h6>
+
+<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+
+&lt;ul&gt;
+
+&lt;/ul&gt;
+
+&lt;/div&gt;
+
+&lt;textarea id="code" class="playable-code" style="height: 285px;"&gt;
+var list = document.querySelector('.output ul');
+list.innerHTML = '';
+var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                'GNF576746573fhdg4737dh4;Greenfield',
+                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                'SYB4f65hf75f736463;Stalybridge',
+                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+for(var i = 0; i &lt; stations.length; i++) {
+  var input = stations[i];
+  // write your code just below here   
+
+  var result = input;
+  var listItem = document.createElement('li');
+  listItem.textContent = result;
+  list.appendChild(listItem);
+}
+&lt;/textarea&gt;
+
+&lt;div class="playable-buttons"&gt;
+  &lt;input id="reset" type="button" value="Reset"&gt;
+  &lt;input id="solution" type="button" value="Show solution"&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: js">var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i &lt; stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var final = code + \': \' + name;\n  var result = final;\n var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+</pre>
+</div>
+
+<p><iframe id="frame_Playable_code_3" height="485" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods%24samples/Playable_code_37e8f.html?revision=1149160" frameborder="0" width="100%" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>You can't escape the fact that being able to handle words and sentences in programming is very important — particularly in JavaScript, as web sites are all about communicating with people. This article has given you the basics that you need to know about manipulating strings for now. This should serve you well as you go into more complex topics in the future. Next, we're going to look at the last major type of data we need to focus on in the short term — Arrays.</p>
+
+<p></p><div class="prevnext"> 
+    <div><a href="Strings.html" style="float: left; width: 20%; text-align: left;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-left"></i> Previous </span></a><a href="../First_steps.html" style="float: left; width: 60%; text-align: center;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: First steps</span></a><a href="Arrays.html" style="width: 20%; float: right; text-align: right;"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div> 
+    <p>&nbsp;</p> 
+</div><p></p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Article">Article</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Beginner">Beginner</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/case">case</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/CodingScripting">CodingScripting</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/indexof">indexof</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/JavaScript">JavaScript</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/l10n:priority">l10n:priority</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Learn">Learn</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/length">length</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/lower">lower</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/replace">replace</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/split">split</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/upper">upper</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/brenseid">brenseid</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BaderSur">BaderSur</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sngv">sngv</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/BenCrab">BenCrab</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/brenseid">brenseid</a>,
+                      <time datetime="2016-11-29T07:19:46-08:00">Nov 29, 2016, 7:19:46 AM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+     
+ 
+<ol> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"><strong>Complete beginners start here!</strong></a> 
+  </li><li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the Web works</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"><strong>HTML — Structuring the Web</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What's in the head? Metadata in HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Assessment: Marking up a letter</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Assessment: Structuring a page of content</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From object to iframe — other embedding technologies</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Assessment: Mozilla splash page</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"><strong>CSS — Styling the Web</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax">CSS syntax</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Selectors introduction</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">Simple selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Attribute selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors">Combinators and multiple selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">The box model</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">Assessment: Fundamental CSS comprehension</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Assessment: Typesetting a community school homepage</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap">Box model recap</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Borders">Borders</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">Advanced box effects</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">Assessment: Creating fancy letterheaded paper</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">Assessment: A cool-looking box</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grids</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="open"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"><strong>JavaScript — Dynamic client-side scripting</strong></a></li> 
+  <li data-default-state="open"><a href="../First_steps.html">JavaScript first steps</a> 
+    <ol> 
+      <li><a href="../First_steps.html">JavaScript first steps overview</a></li> 
+      <li><a href="What_is_JavaScript.html">What is JavaScript?</a></li> 
+      <li><a href="A_first_splash.html">A first splash into JavaScript</a></li> 
+      <li><a href="What_went_wrong.html">What went wrong? Troubleshooting JavaScript</a></li> 
+      <li><a href="Variables.html">Storing the information you need — Variables</a></li> 
+      <li><a href="Math.html">Basic in JavaScript — Numbers and operators</a></li> 
+      <li><a href="Strings.html">Handling text — Strings in JavaScript</a></li> 
+      <li><a href="Useful_string_methods.html">Useful string methods</a></li> 
+      <li><a href="Arrays.html">Arrays</a></li> 
+      <li><a href="Silly_story_generator.html">Assessment: Silly story generator</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="../Building_blocks.html">JavaScript building blocks</a> 
+    <ol> 
+      <li><a href="../Building_blocks.html">JavaScript building blocks overview</a></li> 
+      <li><a href="../Building_blocks/conditionals.html">Making decisions in your code — Conditionals</a></li> 
+      <li><a href="../Building_blocks/Looping_code.html">Looping code</a></li> 
+      <li><a href="../Building_blocks/Functions.html">Functions — Reusable blocks of code</a></li> 
+      <li><a href="../Building_blocks/Build_your_own_function.html">Build your own function</a></li> 
+      <li><a href="../Building_blocks/Return_values.html">Function return values</a></li> 
+      <li><a href="../Building_blocks/Events.html">Introduction to events</a></li> 
+      <li><a href="../Building_blocks/Image_gallery.html">Assessment: Image gallery</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="../Objects.html">Introducing JavaScript objects</a> 
+    <ol> 
+      <li><a href="../Objects.html">Introducing JavaScript objects overview</a></li> 
+      <li><a href="../Objects/Basics.html">Object basics</a></li> 
+      <li><a href="../Objects/Object-oriented_JS.html">Object-oriented JavaScript for beginners</a></li> 
+      <li><a href="../Objects/Object_prototypes.html">Object prototypes</a></li> 
+      <li><a href="../Objects/Inheritance.html">Inheritance in JavaScript</a></li> 
+      <li><a href="../Objects/JSON.html">Working with JSON data</a></li> 
+      <li><a href="../Objects/Object_building_practice.html">Object building practise</a></li> 
+      <li><a href="../Objects/Adding_bouncing_balls_features.html">Assessment: Adding features to our bouncing balls demo</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing"><strong>Tools and testing</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side"><strong>Server-side website programming</strong></a></li> 
+ 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps</a> 
+  <ol> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server-side</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li> 
+  </ol> 
+  </li> 
+ 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python)</a> 
+  <ol> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python) overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction">Introduction</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a development environment</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial: The Local Library website</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Part 2: Creating a skeleton website</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Tutorial Part 3: Using models</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site">Tutorial Part 4: Django admin site</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page">Tutorial Part 5: Creating our home page</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">Tutorial Part 6: Generic list and detail views</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions">Tutorial Part 7: Sessions framework</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">Tutorial Part 8: User authentication and permissions</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms">Tutorial Part 9: Working with forms</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing">Tutorial Part 10: Testing a Django web application</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Part 11: Deploying Django to production</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security">Web application security</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog">Assessment: DIY mini blog</a></li> 
+  </ol> 
+  </li> 
+  <li><a href="#"><strong>Further resources</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Other_learning_material">Advanced learning material</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/WebGL">WebGL: Graphics processing</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions">Common questions</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto">HTML questions</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto">CSS questions</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#How_the_Web_works">How the Web works</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Tools_and_setup">Tools and setup</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Design_and_accessibility">Design and accessibility</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/How_to_contribute">How to contribute</a></li> 
+</ol> 
+ 
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:32:33 GMT -->
+</body></html>

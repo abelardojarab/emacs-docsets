@@ -1,0 +1,882 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:14 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>MediaDevices.ondevicechange</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange$json">
+  <link rel="canonical" href="ondevicechange.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="MediaDevices.ondevicechange">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange">
+  <meta name="twitter:title" content="MediaDevices.ondevicechange">
+  
+  <meta property="og:description" content="The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app. You can at any time use enumerateDevices() to get the updated list of available devices.">
+  <meta name="description" content="The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app. You can at any time use enumerateDevices() to get the updated list of available devices.">
+  <meta name="twitter:description" content="The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app. You can at any time use enumerateDevices() to get the updated list of available devices.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/MediaDevices/ondevicechange" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2Fondevicechange" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../MediaDevices.html" rel="v:url" property="v:title">MediaDevices</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">MediaDevices.ondevicechange</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>MediaDevices.ondevicechange</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Value" rel="internal">Value</a></li></ol></li><li><a href="#Example" rel="internal">Example</a><ol><li><a href="#HTML_content" rel="internal">HTML content</a></li><li><a href="#CSS_content" rel="internal">CSS content</a></li><li><a href="#JavaScript_content" rel="internal">JavaScript content</a><ol><li><a href="#Other_code" rel="internal">Other code</a></li><li><a href="#Getting_and_drawing_the_device_list" rel="internal">Getting and drawing the device list</a></li><li><a href="#Handling_device_list_changes" rel="internal">Handling device list changes</a></li></ol></li><li><a href="#Result" rel="internal">Result</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><p></p>
+
+<p><span class="seoSummary">The <strong><code>MediaDevices.ondevicechange</code></strong> property is an <a href="../../Guide/Events/Event_handlers.html" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an&nbsp;event handler using:"><code>EventHandler</code></a> which specifies a function to be called when the <code><a href="../../Events/devicechange.html" title="/en-US/docs/Web/Events/devicechange">devicechange</a></code> event occurs on a <a href="../MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data."><code>MediaDevices</code></a> instance. This happens whenever the set of media devices available to the <a href="https://developer.mozilla.org/en-US/docs/Glossary/user_agent" class="glossaryLink" title="user agent: A user agent is a computer program representing a person, for example, a browser in a Web context.">user agent</a> and, by extension, to the web site or app. You can at any time use <a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a> to get the updated list of available devices.</span></p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>MediaDevices</em>.ondevicechange = <em>eventHandler</em>;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A function you provide which accepts as input a <a href="../Event.html" title="The Event interface represents any event of the DOM. It contains common properties and methods to any event."><code>Event</code></a> object describing the <a href="../Devicehange.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>devicehange</code></a> event that occurred. There is no information about the change included in the event object; to get the updated list of devices, you'll have to use <a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a>.</p>
+
+<h2 name="Example" id="Example">Example</h2>
+
+<p>In this example, we create a function called <code>updateDeviceList()</code>, which is called once when <a href="getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>MediaDevices.getUserMedia()</code></a> successfully obtains a stream, and then is called any time the device list changes. It displays in the browser window two lists: one of audio devices and one of video devices, with both the device's label (name) and whether it's an input or an output device. Because the example provides a handler for the <code><a href="../../Events/devicechange.html" title="/en-US/docs/Web/Events/devicechange">devicechange</a></code> event, the list is refreshed any time a media device is attached to or removed from the device running the sample.</p>
+
+<div class="hidden">
+<h3 id="HTML_content">HTML content</h3>
+
+<pre class="brush: html">&lt;p&gt;Click the start button below to begin the demonstration.&lt;/p&gt;
+&lt;div id="startButton" class="button"&gt;
+  Start
+&lt;/div&gt;
+&lt;video id="video" width="160" height="120" autoplay&gt;&lt;/video&gt;&lt;br&gt;
+
+&lt;div class="left"&gt;
+  &lt;h2&gt;Audio devices:&lt;/h2&gt;
+  &lt;ul class="deviceList" id="audioList"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="right"&gt;
+  &lt;h2&gt;Video devices:&lt;/h2&gt;
+  &lt;ul class="deviceList" id="videoList"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id="log"&gt;&lt;/div&gt;</pre>
+
+<h3 id="CSS_content">CSS content</h3>
+
+<pre class="brush: css">body {
+  font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+video {
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.button {
+  cursor: pointer;
+  width: 160px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+}
+
+h2 {
+  margin-bottom: 4px;
+}
+
+.left {
+  float:left;
+  width: 48%;
+  margin-right: 2%
+}
+
+.right {
+  float:right;
+  width: 48%;
+  margin-left: 2%
+}
+
+.deviceList {
+  border: 1px solid black;
+  list-style-type: none;
+  margin-top: 2px;
+  padding: 6px;
+}</pre>
+
+<h3 id="JavaScript_content">JavaScript content</h3>
+
+<h4 id="Other_code">Other code</h4>
+
+<p>Below is other code which, while needed to make this example work, isn'tt related directly to <code>ondevicechange</code>, so we won't go into any detail.</p>
+
+<pre class="brush: js">let videoElement = document.getElementById("video");
+let logElement = document.getElementById("log");
+
+function log(msg) {
+  logElement.innerHTML += msg + "&lt;br&gt;";
+}
+
+document.getElementById("startButton").addEventListener("click", function() {
+  navigator.mediaDevices.getUserMedia({
+    video: {
+      width: 160,
+      height: 120,
+      frameRate: 30
+    },
+    audio: {
+      sampleRate: 44100,
+      sampleSize: 16,
+      volume: 0.25
+    }
+  }).then(stream =&gt; {
+      videoElement.srcObject = stream;
+      updateDeviceList();
+    })
+    .catch(err =&gt; log(err.name + ": " + err.message));
+}, false);</pre>
+</div>
+
+<p>We set up global variables that contain references to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" title="The HTML &lt;ul&gt; element (or HTML Unordered List Element) represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property."><code>&lt;ul&gt;</code></a> elements that are used to list the audio and video devices:</p>
+
+<pre class="brush: js">let audioList = document.getElementById("audioList");
+let videoList = document.getElementById("videoList");</pre>
+
+<h4 id="Getting_and_drawing_the_device_list">Getting and drawing the device list</h4>
+
+<p>Now let's take a look at <code>updateDeviceList()</code> itself. This method is called any time we want to fetch the current list of media devices and then update the displayed lists of audo and video devices using that information.</p>
+
+<pre class="brush: js">function updateDeviceList() {
+  navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    audioList.innerHTML = "";
+    videoList.innerHTML = "";
+    
+    devices.forEach(function(device) {
+      let elem = document.createElement("li");      
+      let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+      
+      elem.innerHTML = "&lt;strong&gt;" + device.label + "&lt;/strong&gt; (" + direction + ")";
+      if (type === "audio") {
+        audioList.appendChild(elem);
+      } else if (type === "video") {
+        videoList.appendChild(elem);
+      }
+    });
+  });
+}</pre>
+
+<p><code>updateDeviceList()</code> consists entirely of a call to the function <a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a> on the <a href="../MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data."><code>MediaDevices</code></a> object referenced in the <a href="../Navigator/mediaDevices.html" title="The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screensharing."><code>navigator.mediaDevices</code></a> property, as well as the code that's run when the <a href="../../JavaScript/Reference/Global_Objects/promise-2.html" title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never."><code>promise</code></a> returned by <code>enumerateDevices()</code> is fulfilled. The fulfillment handler is called when the device list is ready. The list is passed into the fulfillment handler as an array of <a href="../MediaDeviceInfo.html" title="The MediaDevicesInfo interface contains&nbsp;information on the available media input and output devices."><code>MediaDeviceInfo</code></a> objects, each describing one media input or output device.</p>
+
+<p>A <a href="../../JavaScript/Reference/Global_Objects/Array/forEach.html" title="The forEach() method executes a provided function once per array element."><code>forEach()</code></a> loop is used to scan through all the devices. For each device, we create a new <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li" title="The HTML &lt;li&gt; element (or HTML List Item Element) is used to represent an item in a list. It must be contained in a parent element: an ordered list (&lt;ol&gt;), an unordered list (&lt;ul&gt;), or a menu (&lt;menu&gt;). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter."><code>&lt;li&gt;</code></a> object to be used to display it to the user.</p>
+
+<p>The line <code>let [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);</code> deserves special notice. This uses <a href="../../JavaScript/Reference/Operators/Destructuring_assignment.html">destructuring assignment</a> (a new feature of <a href="../../JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla.html">ECMAScript 6</a>) to assign the values of the first three items in the array returned by <a href="../../JavaScript/Reference/Global_Objects/String/match.html" title="The match() method retrieves the matches when matching a string against a regular expression."><code>String.match()</code></a> to the variables <code>kind</code>, <code>type</code>, and <code>direction</code>. We do this because the value of <a href="../MediaDeviceInfo/kind.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>MediaDeviceInfo.kind</code></a> is a single string that includes both the media type and the direction the media flows, such as "audioinput" or "videooutput". This line, then, pulls out the type ("audio" or "video") and direction ("input" or "output") so they can be used to construct the string displayed in the list.</p>
+
+<p>Once the string is assembled, containing the device's name in bold and the direction in parentheses, it's appended to the appropriate list by calling <a href="../Node/appendChild.html" title="The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node)."><code>appendChild()</code></a> on either <code>audioList</code> or <code>videoList</code>, as appropriate based on the device type.</p>
+
+<h4 id="Handling_device_list_changes">Handling device list changes</h4>
+
+<p>We call <code>updateDeviceList()</code> in two places. The first is in the <a href="getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>getUserMedia()</code></a> promise's fulfillment handler, to initially fill out the list when the stream is opened. The second is in the event handler for <code><a href="../../Events/devicechange.html" title="/en-US/docs/Web/Events/devicechange">devicechange</a></code>:</p>
+
+<pre class="brush: js">navigator.mediaDevices.ondevicechange = function(event) {
+  updateDeviceList();
+}</pre>
+
+<p>With this code in place, each time the user plugs in a camera, microphone, or other media device, or turns one on or off, we call <code>updateDeviceList()</code> to redraw the list of connected devices.</p>
+
+<h3 id="Result">Result</h3>
+
+<p><iframe id="frame_Example" height="460" src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/MediaDevices/ondevicechange%24samples/Example7d95.html?revision=1132957" frameborder="0" width="600" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="http://w3c.github.io/mediacapture-main/#dom-mediadevices-ondevicechange" class="external" lang="en" hreflang="en">Media Capture and Streams<br><small lang="en-US">The definition of 'ondevicechange' in that specification.</small></a></td>
+   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td>Initial specification.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/51" title="Released on 2017-01-24.">51</a> (51)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Support for the <code>devicechange</code> event and for <a href="ondevicechange.html" title="The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app. You can at any time use enumerateDevices() to get the updated list of available devices."><code>MediaDevices.ondevicechange</code></a> landed in Firefox 51, but <em>only for Mac</em>, and disabled by default. It can be enabled by setting the preference <code>media.ondevicechange.enabled</code> to <code>true</code>. Support for this event was added for Linux and Windows—and it was enabled by default—starting in Firefox 52.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>The <code><a href="../../Events/devicechange.html" title="/en-US/docs/Web/Events/devicechange">devicechange</a></code> event and its type, <a href="../Event.html" title="The Event interface represents any event of the DOM. It contains common properties and methods to any event."><code>Event</code></a>.</li>
+ <li><a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>MediaDevices.enumerateDevices()</code></a></li>
+ <li><a href="../MediaDeviceInfo.html" title="The MediaDevicesInfo interface contains&nbsp;information on the available media input and output devices."><code>MediaDeviceInfo</code></a></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Audio">Audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/audio">audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Event Handler">Event Handler</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Media">Media</a></li>
+      
+        <li><a href="../../../tag/Media%20Capture%20and%20Streams%20API.html">Media Capture and Streams API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MediaDevices">MediaDevices</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/ondevicechanged">ondevicechanged</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Property">Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video">Video</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/video">video</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-10-21T17:53:15-07:00">Oct 21, 2016, 5:53:15 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../Media_Capture_and_Streams_API_(Media_Streams).html">Media Capture and Streams API (Media Streams)</a></strong></li><li><strong><a href="../MediaDevices.html"><code>MediaDevices</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><em><code>ondevicechange</code></em></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a></li><li><a href="getSupportedConstraints.html" title="The getSupportedConstraints() method of the MediaDevices interface returns an object based on the MediaTrackSupportedConstraints dictionary, whose member fields each specify one of the constrainable properties the user agent understands."><code>getSupportedConstraints()</code></a></li><li><a href="getUserMedia.html" title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice."><code>getUserMedia()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/inactive.html"><code>inactive</code></a></li><li><a href="../../Events/active.html"><code>active</code></a></li><li><a href="../../Events/ended.html"><code>ended</code></a></li><li><a href="../../Events/mute.html"><code>mute</code></a></li><li><a href="../../Events/muted.html"><code>muted</code></a></li><li><a href="../../Events/unmute.html"><code>unmute</code></a></li><li><a href="../../Events/overconstrained.html"><code>overconstrained</code></a></li><li><a href="../../Events/ratechange.html"><code>ratechange</code></a></li><li><a href="../../Events/removetrack.html"><code>removetrack</code></a></li><li><a href="../../Events/addtrack.html"><code>addtrack</code></a></li><li><a href="../../Events/started.html"><code>started</code></a></li><li><a href="../../Events/devicechange.html"><code>devicechange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Media Capture and Streams</strong></a><ol><li><a href="../AudioStreamTrack.html"><code>AudioStreamTrack</code></a></li><li><a href="../BlobEvent.html"><code>BlobEvent</code></a></li><li><a href="../CanvasCaptureMediaStream.html"><code>CanvasCaptureMediaStream</code></a></li><li><a href="../ConstrainBoolean.html"><code>ConstrainBoolean</code></a></li><li><a href="../ConstrainDOMString.html"><code>ConstrainDOMString</code></a></li><li><a href="../ConstrainDouble.html"><code>ConstrainDouble</code></a></li><li><a href="../ConstrainLong.html"><code>ConstrainLong</code></a></li><li><a href="../DoubleRange.html"><code>DoubleRange</code></a></li><li><a href="../HTMLCanvasElement/captureStream.html"><code>HTMLCanvasElement.captureStream()</code></a></li><li><a href="../LongRange.html"><code>LongRange</code></a></li><li><a href="../MediaStream.html"><code>MediaStream</code></a></li><li><a href="../MediaStreamTrack.html"><code>MediaStreamTrack</code></a></li><li><a href="../MediaStreamTrackEvent.html"><code>MediaStreamTrackEvent</code></a></li><li><a href="../MediaTrackCapabilities.html"><code>MediaTrackCapabilities</code></a></li><li><a href="../MediaTrackConstraints.html"><code>MediaTrackConstraints</code></a></li><li><a href="../MediaTrackSettings.html"><code>MediaTrackSettings</code></a></li><li><a href="../MediaTrackSupportedConstraints.html"><code>MediaTrackSupportedConstraints</code></a></li><li><a href="../Navigator/mediaDevices.html"><code>Navigator.mediaDevices</code></a></li><li><a href="../NavigatorUserMedia.html"><code>NavigatorUserMedia</code></a></li><li><a href="../NavigatorUserMediaError.html"><code>NavigatorUserMediaError</code></a></li><li><a href="../VideoStreamTrack.html"><code>VideoStreamTrack</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/MediaDevices/ondevicechange$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/MediaDevices/ondevicechange$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:15 GMT -->
+</body></html>

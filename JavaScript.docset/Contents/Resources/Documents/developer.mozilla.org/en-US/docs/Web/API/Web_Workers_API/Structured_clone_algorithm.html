@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:30:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:14:12 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -66,7 +65,7 @@
     
       <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" title="Алгоритм структурированного клонирования">
     
-      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" title="The structured clone algorithm">
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" title="结构化克隆算法">
     
   
 
@@ -80,6 +79,13 @@
   <meta name="description" content="The structured clone algorithm is a new algorithm defined by the HTML5 specification for serializing complex JavaScript objects. It's more capable than JSON in that it supports the serialization of objects that contain cyclic graphs — objects can refer to objects that refer to other objects in the same graph. In addition, in some cases, the structured clone algorithm may be more efficient than JSON.">
   <meta name="twitter:description" content="The structured clone algorithm is a new algorithm defined by the HTML5 specification for serializing complex JavaScript objects. It's more capable than JSON in that it supports the serialization of objects that contain cyclic graphs — objects can refer to objects that refer to other objects in the same graph. In addition, in some cases, the structured clone algorithm may be more efficient than JSON.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -97,10 +103,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -150,8 +156,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -167,9 +173,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -186,34 +190,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWeb_Workers_API%2FStructured_clone_algorithm" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWeb_Workers_API%2FStructured_clone_algorithm" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWeb_Workers_API%2FStructured_clone_algorithm" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -223,18 +213,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -245,10 +237,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -262,8 +251,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -302,16 +291,18 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" title="Алгоритм структурированного клонирования">Русский</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" title="The structured clone algorithm">中文 (简体)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -323,7 +314,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -334,7 +327,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -386,6 +378,11 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/liuqipeng417" title="View profile: liuqipeng417">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="liuqipeng417" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">liuqipeng417</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
                 </li>
@@ -410,7 +407,7 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="evilpie" data-src="../../../../../../secure.gravatar.com/avatar/6bb31f7207fc068158047b9c8ad4592d6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">evilpie</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/BlindWanderer" title="View profile: BlindWanderer">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="BlindWanderer" data-src="../../../../../../secure.gravatar.com/avatar/3fb2d1d9349ce50e23f813797858b0e76c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">BlindWanderer</noscript></a>
                 </li>
@@ -437,7 +434,7 @@
             
                 <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/kevmoo" title="View profile: kevmoo">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kevmoo" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kevmoo</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kevmoo" data-src="../../../../../../secure.gravatar.com/avatar/b1aa63c3412db532c59b6b7ccd6b6ed26c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kevmoo</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -473,7 +470,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Benefits_over_JSON" rel="internal">Benefits over JSON</a></li><li><a href="#Things_that_don't_work_with_structured_clones" rel="internal">Things that don't work with structured clones</a></li><li><a href="#Supported_types" rel="internal">Supported types</a></li><li><a href="#Another_way_deep_copy‎" rel="internal">Another way: deep copy‎</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a rel="internal" href="#Benefits_over_JSON">Benefits over JSON</a></li><li><a rel="internal" href="#Things_that_don't_work_with_structured_clones">Things that don't work with structured clones</a></li><li><a rel="internal" href="#Supported_types">Supported types</a></li><li><a rel="internal" href="#Another_way_deep_copy‎">Another way: deep copy‎</a></li><li><a rel="internal" href="#See_also">See also</a>
                 </li></ol>
               </div>
               
@@ -503,7 +500,7 @@
               <article id="wikiArticle">
                 
                   
-                    <p>The structured clone algorithm is a new algorithm <a href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data" class="external" title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data">defined by the HTML5 specification</a> for serializing complex JavaScript objects. It's more capable than <a href="https://developer.mozilla.org/en/JSON" title="en/JSON">JSON</a>&nbsp;in that it supports the serialization of objects that contain cyclic graphs — objects can refer to objects that refer to other objects in the same graph. In addition, in some cases, the structured clone algorithm may be more efficient than JSON.</p>
+                    <p>The structured clone algorithm is a new algorithm <a title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data" class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">defined by the HTML5 specification</a> for serializing complex JavaScript objects. It's more capable than <a title="en/JSON" href="https://developer.mozilla.org/en/JSON">JSON</a>&nbsp;in that it supports the serialization of objects that contain cyclic graphs — objects can refer to objects that refer to other objects in the same graph. In addition, in some cases, the structured clone algorithm may be more efficient than JSON.</p>
 
 <p>The algorithm, in essence, walks over all the fields of the original object, duplicating the values of each field into a new object. If a field is, itself, an object with fields, those fields are walked over recursively until every field and sub-field is duplicated into the new object.</p>
 
@@ -512,20 +509,20 @@
 <p>There are a few key benefits of the structured clone algorithm over JSON:</p>
 
 <ul>
- <li>Structured clones can duplicate <a href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> objects.</li>
- <li>Structured clones can duplicate <a href="../Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a>, <a href="../File.html" title="The File interface provides information about files and allows to access their content."><code>File</code></a>, and <a href="../FileList.html" title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage."><code>FileList</code></a> objects.</li>
- <li>Structured clones can duplicate <a href="../ImageData.html" title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a> objects. The dimensions of the clone's <a href="../../JavaScript/Reference/Global_Objects/Uint8ClampedArray.html" title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)."><code>CanvasPixelArray</code></a> will match the original and have a duplicate of the same pixel data.</li>
+ <li>Structured clones can duplicate <a title="en/JavaScript/Reference/Global Objects/regexp" href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png"><code>RegExp</code></a> objects.</li>
+ <li>Structured clones can duplicate <a title="Technical review completed." href="../Blob.html"><code>Blob</code></a>, <a title="The File interface provides information about files and allows JavaScript in a web page to access their content." href="../File.html"><code>File</code></a>, and <a title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage." href="/en-US/docs/Web/API/FileList"><code>FileList</code></a> objects.</li>
+ <li>Structured clones can duplicate <a title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()." href="/en-US/docs/Web/API/ImageData"><code>ImageData</code></a> objects. The dimensions of the clone's <a title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)." href="../../JavaScript/Reference/Global_Objects/Uint8ClampedArray.html"><code>CanvasPixelArray</code></a> will match the original and have a duplicate of the same pixel data.</li>
  <li>Structured clones can correctly duplicate objects containing cyclic graphs of references.</li>
 </ul>
 
 <h2 id="Things_that_don't_work_with_structured_clones">Things that don't work with structured clones</h2>
 
 <ul>
- <li><a href="../../../JavaScript/Reference/Global_Objects/Error.png" title="en/JavaScript/Reference/Global Objects/Error"><code>Error</code></a> and <a href="../../../../../en/JavaScript/Reference/Global_Objects/Function.png" title="en/JavaScript/Reference/Global Objects/Function"><code>Function</code></a> objects cannot be duplicated by the structured clone algorithm; attempting to do so will throw a <code>DATA_CLONE_ERR</code>&nbsp;exception.</li>
+ <li><a title="en/JavaScript/Reference/Global Objects/Error" href="../../../JavaScript/Reference/Global_Objects/Error.png"><code>Error</code></a> and <a title="en/JavaScript/Reference/Global Objects/Function" href="../../../../../en/JavaScript/Reference/Global_Objects/Function.png"><code>Function</code></a> objects cannot be duplicated by the structured clone algorithm; attempting to do so will throw a <code>DATA_CLONE_ERR</code>&nbsp;exception.</li>
  <li>Attempting to clone DOM&nbsp;nodes will likewise throw a <code>DATA_CLONE_ERR</code>&nbsp;exception.</li>
  <li>Certain parameters of objects are not preserved:
   <ul>
-   <li>The <code>lastIndex</code> field of <a href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> objects is not preserved.</li>
+   <li>The <code>lastIndex</code> field of <a title="en/JavaScript/Reference/Global Objects/regexp" href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png"><code>RegExp</code></a> objects is not preserved.</li>
    <li>Property descriptors, setters, and getters (as well as similar metadata-like features)&nbsp;are not duplicated. For example, if an object is marked read-only using a property descriptor, it will be read-write in the duplicate, since that's the default condition.</li>
    <li>The prototype chain does not get walked and duplicated.</li>
   </ul>
@@ -563,15 +560,15 @@
    <td>The <code>lastIndex</code> field is not preserved.</td>
   </tr>
   <tr>
-   <td><a href="../Blob.html" title="A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The File interface is based on Blob, inheriting blob functionality and expanding it to support files on the user's system."><code>Blob</code></a></td>
+   <td><a title="Technical review completed." href="../Blob.html"><code>Blob</code></a></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
-   <td><a href="../File.html" title="The File interface provides information about files and allows to access their content."><code>File</code></a></td>
+   <td><a title="The File interface provides information about files and allows JavaScript in a web page to access their content." href="../File.html"><code>File</code></a></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
-   <td><a href="../FileList.html" title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage."><code>FileList</code></a></td>
+   <td><a title="An object of this type is returned by the files property of the HTML &lt;input&gt; element; this lets you access the list of files selected with the &lt;input type=&quot;file&quot;&gt; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage." href="/en-US/docs/Web/API/FileList"><code>FileList</code></a></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
@@ -583,7 +580,7 @@
    <td>This basically means all <a href="../../JavaScript/Typed_arrays.html">typed arrays</a> like Int32Array etc.</td>
   </tr>
   <tr>
-   <td><a href="../ImageData.html" title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."><code>ImageData</code></a></td>
+   <td><a title="The ImageData interface represents the underlying pixel data of an area of a &lt;canvas&gt; element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()." href="/en-US/docs/Web/API/ImageData"><code>ImageData</code></a></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
@@ -640,39 +637,20 @@
 }
 </pre>
 
-<div class="note"><strong>&nbsp; Note:</strong> This algorithm actually implements only <a href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png" title="RegExp"><code>RegExp</code></a>, <a href="../../../../../en/JavaScript/Reference/Global_Objects/Array.png" title="Array"><code>Array</code></a>, and <a href="../../../JavaScript/Reference/Global_Objects/Date.png" title="Date"><code>Date</code></a> special objects. You can implement other special cases depending on your needs.</div>
+<div class="note"><strong>&nbsp; Note:</strong> This algorithm actually implements only <a title="RegExp" href="../../../../../en/JavaScript/Reference/Global_Objects/RegExp.png"><code>RegExp</code></a>, <a title="Array" href="../../../../../en/JavaScript/Reference/Global_Objects/Array.png"><code>Array</code></a>, and <a title="Date" href="../../../JavaScript/Reference/Global_Objects/Date.png"><code>Date</code></a> special objects. You can implement other special cases depending on your needs.</div>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data" class="external" title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data">HTML5 Specification:&nbsp;Safe passing of structured data</a></li>
- <li><a href="../Window/history.html" title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)."><code>window.history</code></a></li>
- <li><a href="../Window/postMessage.html" title="The window.postMessage method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo document.domain being set by both pages to the same value). window.postMessage provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used."><code>window.postMessage()</code></a></li>
+ <li><a title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data" class="external" href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML5 Specification:&nbsp;Safe passing of structured data</a></li>
+ <li><a title="The Window.history read-only property returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in)." href="../Window/history.html"><code>window.history</code></a></li>
+ <li><a title="The window.postMessage method safely enables cross-origin communication. Normally, scripts on different pages are allowed to access each other if and only if the pages that executed them are at locations with the same protocol (usually both https), port number (443 being the default for https), and host (modulo document.domain being set by both pages to the same value). window.postMessage provides a controlled mechanism to circumvent this restriction in a way which is secure when properly used." href="../Window/postMessage.html"><code>window.postMessage()</code></a></li>
  <li><a href="../Web_Workers_API.html">Web Workers</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Components.utils.cloneInto">Components.utils.cloneInto</a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWeb_Workers_API%2FStructured_clone_algorithm%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+The+structured+clone+algorithm+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about The structured clone algorithm on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about The structured clone algorithm on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWeb_Workers_API%2FStructured_clone_algorithm%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about The structured clone algorithm on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -704,6 +682,8 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/liuqipeng417">liuqipeng417</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/abroz">abroz</a>, 
@@ -736,11 +716,48 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>,
-                      <time datetime="2015-08-28T23:24:13-07:00">Aug 28, 2015, 11:24:13 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/liuqipeng417">liuqipeng417</a>,
+                      <time datetime="2016-10-27T06:05:18-07:00">Oct 27, 2016, 6:05:18 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -758,12 +775,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -771,9 +788,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -782,15 +798,15 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">
-            Русский
+          <option title="Russian" value="/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">
+            Русский (ru)
           </option>
-          <option value="/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">
-            中文 (简体)
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -807,63 +823,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:30:37 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:14:14 GMT -->
 </body></html>

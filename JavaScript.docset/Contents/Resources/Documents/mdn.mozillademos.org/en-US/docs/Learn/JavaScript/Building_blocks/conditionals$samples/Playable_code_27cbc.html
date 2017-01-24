@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals$samples/Playable_code_2?revision=1145412 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <div class="output" style="height: 300px;">
+  <label for="theme">Select theme: </label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="psychedelic">Psychedelic</option>
+  </select>
+
+  <h1>This is my website</h1>
+</div>
+
+<hr>
+
+<textarea id="code" class="playable-code" style="height: 450px;">
+var select = document.querySelector('select');
+var html = document.querySelector('.output');
+
+select.onchange = function() {
+  var choice = select.value;
+
+  // ADD SWITCH STATEMENT
+}
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+        
+        
+            <script type="text/javascript">
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var select = document.querySelector(\'select\');\nvar html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n  var choice = select.value;\n\n  switch(choice) {\n    case \'black\':\n      update(\'black\',\'white\');\n      break;\n    case \'white\':\n      update(\'white\',\'black\');\n      break;\n    case \'purple\':\n      update(\'purple\',\'white\');\n      break;\n    case \'yellow\':\n      update(\'yellow\',\'darkgray\');\n      break;\n    case \'psychedelic\':\n      update(\'lime\',\'purple\');\n      break;\n  }\n}\n\nfunction update(bgColor, textColor) {\n  html.style.backgroundColor = bgColor;\n  html.style.color = textColor;\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals$samples/Playable_code_2?revision=1145412 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+</html>

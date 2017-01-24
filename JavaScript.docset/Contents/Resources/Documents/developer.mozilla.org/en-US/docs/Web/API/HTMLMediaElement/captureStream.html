@@ -1,0 +1,775 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:37:00 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>HTMLMediaElement.captureStream()</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream$json">
+  <link rel="canonical" href="captureStream.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="HTMLMediaElement.captureStream()">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream">
+  <meta name="twitter:title" content="HTMLMediaElement.captureStream()">
+  
+  <meta property="og:description" content="The captureStream() property of the HTMLMediaElement interface returns a MediaStream object which is streaming a real-time capture of the content being rendered in the media element.">
+  <meta name="description" content="The captureStream() property of the HTMLMediaElement interface returns a MediaStream object which is streaming a real-time capture of the content being rendered in the media element.">
+  <meta name="twitter:description" content="The captureStream() property of the HTMLMediaElement interface returns a MediaStream object which is streaming a real-time capture of the content being rendered in the media element.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/HTMLMediaElement/captureStream" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FHTMLMediaElement%2FcaptureStream" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../HTMLMediaElement.html" rel="v:url" property="v:title">HTMLMediaElement</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">HTMLMediaElement.captureStream()</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/GeraldNDA" title="View profile: GeraldNDA">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="GeraldNDA" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">GeraldNDA</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>HTMLMediaElement.captureStream()</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a rel="internal" href="#Syntax">Syntax</a><ol><li><a rel="internal" href="#Parameters">Parameters</a></li><li><a rel="internal" href="#Returns">Returns</a></li></ol></li><li><a rel="internal" href="#Example">Example</a></li><li><a rel="internal" href="#Specifications">Specifications</a></li><li><a rel="internal" href="#Browser_compatibility">Browser compatibility</a></li><li><a rel="internal" href="#See_also">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="notice experimental"> 
+    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
+</div><p></p>
+
+<p>The <strong><code>captureStream()</code></strong> property of the <a title="The HTMLMediaElement interface adds to HTMLElement the properties and methods needed to support basic media-related capabilities&nbsp;that are&nbsp;common to audio and video. The HTMLVideoElement and HTMLAudioElement elements both inherit this interface." href="../HTMLMediaElement.html"><code>HTMLMediaElement</code></a> interface returns a <a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a> object which is streaming a real-time capture of the content being rendered in the media element.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>mediaStream</em> = mediaElement.captureStream()</pre>
+
+<h3 id="Parameters">Parameters</h3>
+
+<p>None.</p>
+
+<h3 id="Returns">Returns</h3>
+
+<p>A&nbsp;<a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a> object which can be used as a source for audio and/or video data by other media processing code, or as a source for <a href="https://developer.mozilla.org/en-US/docs/Glossary/WebRTC">WebRTC</a>.</p>
+
+<h2 id="Example">Example</h2>
+
+<p>In this example, an event handler is established so that clicking a button starts capturing the contents of a media element with the ID <code>"playback"</code> into a <a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a>. The stream can then be used for other purposes—like a source for streaming over WebRTC, to allow sharing prerecorded videos with another person during a video call.</p>
+
+<pre class="brush: js">document.querySelector('.playAndRecord').addEventListener('click', function() {
+  var playbackElement = document.getElementById("playback");
+  var captureStream = playbackElement.captureStream();
+&nbsp; playbackElement.play();
+});
+</pre>
+
+<p>See <a href="../MediaStream_Recording_API/Recording_a_media_element.html">Recording a media element</a> for a longer and more intricate example and explanation.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td><a hreflang="en" class="external" lang="en" href="https://w3c.github.io/mediacapture-fromelement/#widl-HTMLMediaElement-captureStream-MediaStream">Media Capture from DOM Elements<br><small lang="en-US">The definition of 'captureStream()' in that specification.</small></a></td>
+   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div></div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)<sup>[1]</sup></th>
+   <th>Microsoft Edge</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>53.0</td>
+   <td><a title="Released on 2012-08-28." href="https://developer.mozilla.org/en-US/Firefox/Releases/15">15</a> (15) <span title="prefix" class="inlineIndicator prefixBox prefixBoxInline"><a title="The name of this feature is prefixed with '-moz' as this browser considers it experimental" href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes">-moz</a></span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>53.0</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Prior to Firefox 51, you couldn't use <code>captureStream()</code> on a media element whose source is, itself, a <a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a> (like a <a title="Use the &nbsp;HTML &lt;video&gt; element&nbsp;to embed video content in a document. The video element contains one or more video sources. To specify a video source, use either the src attribute or the &lt;source&gt; element; the browser will choose the most suitable one." href="/en-US/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a> element which is presenting a stream being received over a <a title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed." href="../RTCPeerConnection.html"><code>RTCPeerConnection</code></a>). Beginning in Firefox 51, this works. This means you can capture a stream from the video element and use <a title="The MediaRecorder interface of the MediaStream Recording API provides functionality to easily record media. It is created by the invocation of the MediaRecorder() constructor." href="../MediaRecorder.html"><code>MediaRecorder</code></a> to record it. See <a title="FIXED: video.mozCaptureStream doesn't work with a MediaStream src" class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1259788">bug&nbsp;1259788</a> for details.</p>
+
+<p>However, <code>captureStream()</code> is still prefixed as <code>mozCaptureStream()</code> on Firefox for good reason: there are some quirks in the present implementation which are worth noting:</p>
+
+<ul>
+ <li>The Firefox implementation currently only works as described in the specification when the media element's source is, itself, a <a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a>.</li>
+ <li>If the media element's source isn't a <code>MediaStream</code>, the output from this method isn't compatible with the spec, and if you change the source after starting capture, the output capture stream can't accept the new source data due to that incompatibility, so no <a title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well." href="../MediaStreamTrack.html"><code>MediaStreamTrack</code></a>s from the new source <code>MediaStream</code> are added to the captured stream, resulting in output that doesn't capture the updated source.</li>
+ <li>Switching the source back to a <code>MediaStream</code> adds tracks back to the stream and it works again as expected.</li>
+ <li>Calling <code>mozCaptureMediaStream()</code> on an element with a <code>MediaStream</code> source returns a stream that only contains tracks while the element is playing a <code>MediaStream</code>.</li>
+ <li>If you call <code>mozCaptureMediaStream()</code> on a media element with no source media, its compatibility mode will be based on the first source that's added; for example, if it's a <code>MediaStream</code>, then the capture stream will only work with MediaStream sources from then on.</li>
+ <li>This special behavior will be removed once the non-<code>MediaStream</code> source support is brought up to specification and the method is unprefixed. See <a title="FIXED: video.mozCaptureStream doesn't work with a MediaStream src" class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1259788#c160">bug&nbsp;1259788, comment 160</a> for details.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../MediaStream_Recording_API/Recording_a_media_element.html">Recording a media element</a></li>
+ <li><a href="../MediaStream_Recording_API.html">MediaStream Recording API</a></li>
+ <li><a title="The HTMLCanvasElement.captureStream() method returns a CanvasCaptureMediaStream that is a real-time video capture of the surface of the canvas." href="../HTMLCanvasElement/captureStream.html"><code>HTMLCanvasElement.captureStream()</code></a></li>
+ <li><a title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack." href="../MediaStream.html"><code>MediaStream</code></a></li>
+ <li><a href="../WebRTC_API.html">WebRTC API</a></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/audio">audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Audio">Audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/captureStream">captureStream</a></li>
+      
+        <li><a href="../../../tag/HTML%20DOM.html">HTML DOM</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/HTMLMediaElement">HTMLMediaElement</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Media">Media</a></li>
+      
+        <li><a href="../../../tag/Media%20Capture%20DOM%20Elements.html">Media Capture DOM Elements</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Method">Method</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/video">video</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video">Video</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/GeraldNDA">GeraldNDA</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-10-29T06:45:52-07:00">Oct 29, 2016, 6:45:52 AM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../HTMLMediaElement.html"><code>HTMLMediaElement</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="The HTMLMediaElement.audioTracks&nbsp;property is an&nbsp;AudioTrackList&nbsp;that represents the list of AudioTrack objects contained in the element." href="audioTracks.html"><code>audioTracks</code></a></li><li><a title="The HTMLMediaElement.autoplay property reflects the autoplay HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption." href="autoplay.html"><code>autoplay</code></a></li><li><a title="The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that&nbsp;indicates&nbsp;the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed." href="buffered.html"><code>buffered</code></a></li><li><a title="The HTMLMediaElement.controller property represents the media controller assigned to the element." href="controller.html"><code>controller</code></a></li><li><a title="The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls&nbsp;for playing the media item&nbsp;will&nbsp;be displayed." href="controls.html"><code>controls</code></a></li><li><a title="The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS settings attributes for details." href="crossOrigin.html"><code>crossOrigin</code></a></li><li><a title="The HTMLMediaElement.currentSrc property contains the absolute URL of the chosen media resource.&nbsp;This could happen, for example, if the web server selects a media file based on the resolution of the user's display.&nbsp;The value is&nbsp;an empty string if the networkState&nbsp;property is EMPTY." href="currentSrc.html"><code>currentSrc</code></a></li><li><a title="The HTMLMediaElement.currentTime&nbsp;property gives the current playback time in seconds. Setting this value seeks the media to the new time." href="currentTime.html"><code>currentTime</code></a></li><li><a title="The HTMLMediaElement.defaultMuted property reflects the muted HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the muted property." href="defaultMuted.html"><code>defaultMuted</code></a></li><li><a title="The HTMLMediaElement.defaultPlaybackRate property indicates the default playback rate for the media." href="defaultPlaybackRate.html"><code>defaultPlaybackRate</code></a></li><li><a title="The HTMLMediaElement.duration property gives the length of the media in seconds, or zero if no media data is available." href="duration.html"><code>duration</code></a></li><li><a title="The HTMLMediaElement.ended indicates whether the media element has ended playback." href="ended.html"><code>ended</code></a></li><li><a title="The HTMLMediaElement.error is the MediaError object for the most recent error, or null if there has not been an error." href="error.html"><code>error</code></a></li><li><a title="The HTMLMediaElement.initialTime&nbsp;is&nbsp;the initial playback position in seconds.&nbsp;   " href="initialTime.html"><code>initialTime</code></a></li><li><a title="The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the media element should start over when it reaches the end." href="loop.html"><code>loop</code></a></li><li><a title="The HTMLMediaElement.mediaGroup property reflects the mediagroup HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common controller." href="mediaGroup.html"><code>mediaGroup</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="Technical review completed." href="mozAudioChannelType.html"><code>mozAudioChannelType</code></a></li><li><a title="The HTMLMediaElement.muted indicates whether the media element muted." href="muted.html"><code>muted</code></a></li><li><a title="The HTMLMediaElement.networkState property indicates the current state of the fetching of media over the network." href="networkState.html"><code>networkState</code></a></li><li><a title="The read-only&nbsp;HTMLMediaElement.paused&nbsp;property tells&nbsp;whether the media element is paused." href="paused.html"><code>paused</code></a></li><li><a title="The HTMLMediaElement.playbackRate property sets&nbsp;the&nbsp;rate at which the media is being played back. This is used to implement user controls for fast forward, slow motion, and so forth. The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed." href="playbackRate.html"><code>playbackRate</code></a></li><li><a title="The HTMLMediaElement.readyState property indicates the readiness state of the media." href="readyState.html"><code>readyState</code></a></li><li><a title="The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains&nbsp;the time ranges that the user is able to seek to, if any." href="seekable.html"><code>seekable</code></a></li><li><a title="The HTMLMediaElement.sinkId&nbsp;read-only property&nbsp;returns&nbsp;a&nbsp;DOMString&nbsp;that is&nbsp;the unique ID of the audio device delivering output. If it is using the user agent default, it returns an empty string. This ID should be one of the&nbsp;MediaDeviceInfo.deviceid&nbsp;values returned fromMediaDevices.enumeratedDevices(),&nbsp;id-multimedia, or&nbsp;id-communications." href="sinkId.html"><code>sinkId</code></a></li><li><a title="The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element." href="src.html"><code>src</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a title="The HTMLMediaElement.canPlayType() method determines whether the specified media type can be played back." href="canPlayType.html"><code>canPlayType()</code></a></li><li><em><code>captureStream()</code></em></li><li><a title="The HTMLMediaElement.play() method attempts to begin playback of the media and returns a Promise which is fulfilled when the playback has been successfully started, and which is rejected if playback fails to begin for any reason (such as permission issues or other problems)." href="play.html"><code>play()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The HTMLMediaElement.seekToNextFrame() method asynchronously advances the the current play position to the next frame in the media." href="seekToNextFrame.html"><code>seekToNextFrame()</code></a></li><li><a title="The HTMLMediaElement.setSinkId() method sets&nbsp;the ID of the audio device to use for output and returns a&nbsp;Promise. This only works when the application is authorized to use the specified device." href="setSinkId.html"><code>setSinkId()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../HTMLElement.html"><code>HTMLElement</code></a></li><li><a href="../Element.html"><code>Element</code></a></li><li><a href="../Node.html"><code>Node</code></a></li><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/HTMLMediaElement/captureStream$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/HTMLMediaElement/captureStream$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:37:00 GMT -->
+</body></html>

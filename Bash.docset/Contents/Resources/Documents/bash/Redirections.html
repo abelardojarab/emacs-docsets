@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- This text is a brief description of the features that are present in
-the Bash shell (version 4.3, 2 February 2014).
+the Bash shell (version 4.4, 7 September 2016).
 
-This is Edition 4.3, last updated 2 February 2014,
+This is Edition 4.4, last updated 7 September 2016,
 of The GNU Bash Reference Manual,
-for Bash, Version 4.3.
+for Bash, Version 4.4.
 
-Copyright (C) 1988-2014 Free Software Foundation, Inc.
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -15,7 +15,7 @@ any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled
 "GNU Free Documentation License". -->
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ -->
 <head>
 <title>Redirections</title>
 
@@ -34,16 +34,16 @@ A copy of the license is included in the section entitled
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
 blockquote.smallquotation {font-size: smaller}
 div.display {margin-left: 3.2em}
 div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
 div.lisp {margin-left: 3.2em}
 div.smalldisplay {margin-left: 3.2em}
 div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
 div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
+kbd {font-style: oblique}
 pre.display {font-family: inherit}
 pre.format {font-family: inherit}
 pre.menu-comment {font-family: serif}
@@ -52,10 +52,9 @@ pre.smalldisplay {font-family: inherit; font-size: smaller}
 pre.smallexample {font-size: smaller}
 pre.smallformat {font-family: inherit; font-size: smaller}
 pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
 </style>
@@ -63,7 +62,7 @@ ul.no-bullet {list-style: none}
 
 </head>
 
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en">
 <a name="Redirections"></a>
 <div class="header">
 <p>
@@ -124,7 +123,10 @@ because the standard error was made a copy of the standard output
 before the standard output was redirected to <var>dirlist</var>.
 </p>
 <p>Bash handles several filenames specially when they are used in
-redirections, as described in the following table:
+redirections, as described in the following table.
+If the operating system on which Bash is running provides these
+special files, bash will use them; otherwise it will emulate them
+internally with the behavior described below.
 </p>
 <dl compact="compact">
 <dt><code>/dev/fd/<var>fd</var></code></dt>
@@ -261,18 +263,18 @@ expansion of <var>word</var>.
 current source until a line containing only <var>word</var>
 (with no trailing blanks) is seen.  All of
 the lines read up to that point are then used as the standard
-input for a command.
+input (or file descriptor <var>n</var> if <var>n</var> is specified) for a command.
 </p>
 <p>The format of here-documents is:
 </p><div class="example">
-<pre class="example">&lt;&lt;[-]<var>word</var>
+<pre class="example">[<var>n</var>]&lt;&lt;[-]<var>word</var>
         <var>here-document</var>
 <var>delimiter</var>
 </pre></div>
 
 <p>No parameter and variable expansion, command substitution,
 arithmetic expansion, or filename expansion is performed on
-<var>word</var>.  If any characters in <var>word</var> are quoted, the
+<var>word</var>.  If any part of <var>word</var> is quoted, the
 <var>delimiter</var> is the result of quote removal on <var>word</var>,
 and the lines in the here-document are not expanded.
 If <var>word</var> is unquoted,
@@ -292,15 +294,17 @@ natural fashion.
 <h4 class="subsection">3.6.7 Here Strings</h4>
 <p>A variant of here documents, the format is:
 </p><div class="example">
-<pre class="example">&lt;&lt;&lt; <var>word</var>
+<pre class="example">[<var>n</var>]&lt;&lt;&lt; <var>word</var>
 </pre></div>
 
 <p>The <var>word</var> undergoes
 brace expansion, tilde expansion, parameter and variable expansion,
 command substitution, arithmetic expansion, and quote removal.
 Pathname expansion and word splitting are not performed.
-The result is supplied as a single string to the command on its
-standard input.
+The result is supplied as a single string,
+with a newline appended,
+to the command on its
+standard input (or file descriptor <var>n</var> if <var>n</var> is specified).
 </p>
 <a name="Duplicating-File-Descriptors"></a>
 <h4 class="subsection">3.6.8 Duplicating File Descriptors</h4>

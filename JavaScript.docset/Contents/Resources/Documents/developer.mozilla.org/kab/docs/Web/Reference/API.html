@@ -1,0 +1,793 @@
+<html><!-- Mirrored from developer.mozilla.org/kab/docs/Web/Reference/API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 23:05:44 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Web API reference</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/kab/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Aẓeṭṭa n ineflayen n Mozilla">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/kab/search/xml" title="Aẓeṭṭa n ineflayen n Mozilla">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/kab/docs/Web/Reference/API$json">
+  <link rel="canonical" href="API.html">
+
+  
+    
+      <link rel="alternate" hreflang="en-US" href="../../../../en-US/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="ar" href="https://developer.mozilla.org/ar/docs/Web/مرجع./API" title="Web API reference">
+    
+      <link rel="alternate" hreflang="bn-BD" href="../../../../bn-BD/docs/Web/Reference/API.html" title="ওয়েব এপিআই রেফারেন্স">
+    
+      <link rel="alternate" hreflang="ca" href="../../../../ca/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="cs" href="../../../../cs/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="de" href="../../../../de/docs/Web/Reference/API.html" title="Web-API-Referenz">
+    
+      <link rel="alternate" hreflang="es" href="../../../../es/docs/Web/Reference/API.html" title="Referencias para API Web">
+    
+      <link rel="alternate" hreflang="fr" href="../../../../fr/docs/Web/Reference/API.html" title="Référence des API du Web">
+    
+      <link rel="alternate" hreflang="hu" href="../../../../hu/docs/Web/Reference/API.html" title="Web Alkalmazásprogramozási Felület Referencia">
+    
+      <link rel="alternate" hreflang="id" href="../../../../id/docs/Web/Reference/API.html" title="Referensi Web API">
+    
+      <link rel="alternate" hreflang="it" href="../../../../it/docs/Web/Reference/API.html" title="Riferimento delle Web API">
+    
+      <link rel="alternate" hreflang="ja" href="../../../../ja/docs/Web/Reference/API.html" title="Web API リファレンス">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/참조/API" title="Web API 설명집">
+    
+      <link rel="alternate" hreflang="ml" href="../../../../ml/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="nl" href="../../../../nl/docs/Web/Reference/API.html" title="WebAPI-referentie">
+    
+      <link rel="alternate" hreflang="pt-BR" href="../../../../pt-BR/docs/Web/Reference/API.html" title="Referências API Web">
+    
+      <link rel="alternate" hreflang="pt-PT" href="../../../../pt-PT/docs/Web/Reference/API.html" title="Referência da API da Web">
+    
+      <link rel="alternate" hreflang="ru" href="../../../../ru/docs/Web/Reference/API.html" title="Руководство Web API">
+    
+      <link rel="alternate" hreflang="th" href="../../../../th/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="tr" href="../../../../tr/docs/Web/Reference/API.html" title="Web API Referansı">
+    
+      <link rel="alternate" hreflang="uk" href="../../../../uk/docs/Web/Reference/API.html" title="Web API reference">
+    
+      <link rel="alternate" hreflang="zh-CN" href="../../../../zh-CN/docs/Web/Reference/API.html" title="Web API 参考">
+    
+      <link rel="alternate" hreflang="zh-TW" href="../../../../zh-TW/docs/Web/Reference/API.html" title="Web API 參考資料">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Web API reference">
+  <meta property="og:url" content="https://developer.mozilla.org/kab/docs/Web/Reference/API">
+  <meta name="twitter:url" content="https://developer.mozilla.org/kab/docs/Web/Reference/API">
+  <meta name="twitter:title" content="Web API reference">
+  
+  <meta property="og:description" content="Web yettmuddu-d deqs n yesnasen API i uselkem n deqs n twuriyin iwulmen. Ayagi yettwag s useqdec n tengalt&nbsp; JavaScript, udiɣ ak-yeǧǧ ad teggeḍ ayen tebɣiḍ s cwiṭ n useggem fessusen i yal window neɣ element , akken ad ternuḍ isemda udlifen neɣ imeslawen s useqdec n yesnase API WebGL neɣ Web Audio .">
+  <meta name="description" content="Web yettmuddu-d deqs n yesnasen API i uselkem n deqs n twuriyin iwulmen. Ayagi yettwag s useqdec n tengalt&nbsp; JavaScript, udiɣ ak-yeǧǧ ad teggeḍ ayen tebɣiḍ s cwiṭ n useggem fessusen i yal window neɣ element , akken ad ternuḍ isemda udlifen neɣ imeslawen s useqdec n yesnase API WebGL neɣ Web Audio .">
+  <meta name="twitter:description" content="Web yettmuddu-d deqs n yesnasen API i uselkem n deqs n twuriyin iwulmen. Ayagi yettwag s useqdec n tengalt&nbsp; JavaScript, udiɣ ak-yeǧǧ ad teggeḍ ayen tebɣiḍ s cwiṭ n useggem fessusen i yal window neɣ element , akken ad ternuḍ isemda udlifen neɣ imeslawen s useqdec n yesnase API WebGL neɣ Web Audio .">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/Reference/API" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/kab/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Ddu ɣer ugbur agejdan</a></li>
+    <li><a id="skip-language" href="#language">Fren tutlayt</a></li>
+    <li><a href="#q" id="skip-search">Ddu ɣer unadi</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/kab/" class="logo">Aẓeṭṭa n ineflayen n Mozilla</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fkab%2Fdocs%2FWeb%2FReference%2FAPI" class="login-link js-login-link" data-service="GitHub">
+        Kcem
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/kab/docs/Web">Titiknulujiyin Web<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Titiknulujiyin</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/Guide/Graphics">Idlifen</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/API">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Mozilla/Add-ons/WebExtensions">Isiɣzaf Web</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">Timsisɣal &amp; Imniren</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/kab/docs/Learn">Issin taneflit Web</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/Tutorials">Atuṭuṛyel</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/Reference">Timsisɣal</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/Guide">Imniren n uneflay</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web/Accessibility">Tuffart</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Games">Taneflit n wuraren</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Web">...ugar n isemliyen</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/kab/docs/Zones">Tasemlit n Mozilla<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/kab/docs/Mozilla/Add-ons">Izegrar</a></li>
+              <li><a href="https://developer.mozilla.org/kab/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/kab/docs/Tools">Ifecka n tneflit</a></li><li><a href="https://developer.mozilla.org/kab/docs/MDN/Feedback">Tikti<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Sis-d tallalt n Firefox<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Sis-d tallalt n tneflit web<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/kab/docs/MDN/Community">Ddu ɣer tmezdagnut MDN</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/kab/docs/Web/Reference/API">Azen ugur n ugbur<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Azen abug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/kab/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/kab/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Nadi</label>
+          <input type="search" id="main-q" name="q" placeholder="Nadi" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Nadi</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Tutlayin</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="../../../../en-US/docs/Web/Reference/API.html" title="Taglizit (Marikan)">English (US) (en-US)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ar/docs/Web/مرجع./API" title="Taɛrabt">عربي (ar)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../bn-BD/docs/Web/Reference/API.html" title="Tebengalit (Bengladic)">বাংলা (বাংলাদেশ) (bn-BD)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ca/docs/Web/Reference/API.html" title="Tkaṭalant">Català (ca)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../cs/docs/Web/Reference/API.html" title="Tačikit">Čeština (cs)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../de/docs/Web/Reference/API.html" title="Talmanit">Deutsch (de)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../es/docs/Web/Reference/API.html" title="Taspanit">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../fr/docs/Web/Reference/API.html" title="Tafransist">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../hu/docs/Web/Reference/API.html" title="Tahungaṛit">magyar (hu)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../id/docs/Web/Reference/API.html" title="Tandunizit">Bahasa Indonesia (id)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../it/docs/Web/Reference/API.html" title="Taṭeyanit">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ja/docs/Web/Reference/API.html" title="Tajapunit">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/참조/API" title="Takurit">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ml/docs/Web/Reference/API.html" title="Tamalayalamit">മലയാളം (ml)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../nl/docs/Web/Reference/API.html" title="Tahulandit">Nederlands (nl)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../pt-BR/docs/Web/Reference/API.html" title="Tapuṛtugit (Brizil)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../pt-PT/docs/Web/Reference/API.html" title="Tapuṛtugit(Puṛtugal)">Português (Europeu) (pt-PT)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ru/docs/Web/Reference/API.html" title="Tarusit">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../th/docs/Web/Reference/API.html" title="Taṭaylant">ไทย (th)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../tr/docs/Web/Reference/API.html" title="Taṭurkit">Türkçe (tr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../uk/docs/Web/Reference/API.html" title="Takrinit">Українська (uk)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../zh-CN/docs/Web/Reference/API.html" title="Tacinit (taḥerfit)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../zh-TW/docs/Web/Reference/API.html" title="Tacinit (tamensayt)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/kab/docs/Web/Reference/API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Ẓreg<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Talqayt</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Talqayt</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/kab/docs/Web/Reference/API$history" rel="nofollow, noindex">Amazray</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Siggez amagrad agi</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="Breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/kab" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/kab/docs/Web" rel="v:url" property="v:title">Web technology For developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/kab/docs/Web/Reference" rel="v:url" property="v:title">Web technology reference</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Web API reference</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Agmuḍ n unadi iɛeddan" data-empty-title="Ulac agmuḍ n unadi iɛeddan"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Igmaḍ n unadi yinek</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Igmaḍ n unadi d-iteddun" data-empty-title="Ulac agmuḍ n unadi iɛeddan"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="wali akk imttekkiyen" data-alternate-message="ffer imttekkiyen">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/kab/profiles/belkacem77" title="Sken amaɣnu: belkacem77">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="belkacem77" data-src="../../../../../secure.gravatar.com/avatar/c6699caf8745990a7ae7a4965d3a69396c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">belkacem77</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>Web API reference</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-closed wiki-right-none wiki-left-closed wiki-left-none">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-all wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+                  
+                      <div class="overheadIndicator translationInProgress"><p>Tasuqilt agi ur temmid ara. Ma ulac aɣilif, mudd afus di <a href="https://developer.mozilla.org/kab/docs/Web/Reference/API$edit">tsuqilt n umagrad agi</a> si teglizit.</p></div>
+                  
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p><span class="seoSummary">Web yettmuddu-d deqs n yesnasen API i uselkem n deqs n twuriyin iwulmen. Ayagi yettwag s useqdec n tengalt&nbsp; JavaScript, udiɣ ak-yeǧǧ ad teggeḍ ayen tebɣiḍ s cwiṭ n useggem fessusen i yal <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="https://developer.mozilla.org/kab/docs/Web/API/Window"><code>window</code></a> neɣ <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="https://developer.mozilla.org/kab/docs/Web/API/Element"><code>element</code></a>, akken ad ternuḍ isemda udlifen neɣ imeslawen s useqdec n yesnase API <a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> neɣ <a href="../../../../en-US/docs/Web/API/Web_Audio_API.html">Web Audio</a>.</span></p>
+
+<p>Yal agrudem iman-is deg isnasen API yettwabder deg&nbsp; <a href="../../../../en-US/docs/Web/API.html">umatar.</a></p>
+
+<p>Tella daɣen <a href="../../../../en-US/docs/Web/Events.html">tebdart n tedyanin meṛṛa yellan</a> di temsiɣelt n tedyanin.</p>
+
+<div class="cleared topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="../../../../en-US/docs/Web/API/Document_Object_Model.html">Document Object Model</a></dt>
+ <dd>DOM d asnas API ara yeǧǧen anekcum ar usnifel n isemli amiran. Yettaǧǧa aseqdec n isedcec n <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="https://developer.mozilla.org/kab/docs/Web/API/Node"><code>Node</code></a> akked <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="https://developer.mozilla.org/kab/docs/Web/API/Element"><code>Element</code></a> n isemli. HTML, XML akked SVG sɣezfent akken ad ttwasqedcen iferdisen nsen.</dd>
+ <dt>API n yibenk</dt>
+ <dd>This set of APIs allows access to various hardware features available to Web pages and applications. E.g. <a href="../../../../en-US/docs/Web/API/Ambient_Light_Events.html">Ambient Light Sensor API</a>, <a title="WebAPI/Battery_Status" href="../../../../en-US/docs/Web/API/Battery_Status_API.html">Battery Status API</a>, <a title="Using_geolocation" href="https://developer.mozilla.org/en-US/docs/Using_geolocation">Geolocation API</a>, <a title="API/Pointer_Lock_API" href="../../../../en-US/docs/Web/API/Pointer_Lock_API.html">Pointer Lock API</a>, <a title="WebAPI/Proximity" href="../../../../en-US/docs/Web/API/Proximity_Events.html">Proximity API</a>, <a title="WebAPI/Detecting_device_orientation" href="../../../../en-US/docs/Web/API/Detecting_device_orientation.html">Device Orientation API</a>, <a title="WebAPI/Detecting_device_orientation" href="../../../../en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation.html">Screen Orientation API</a>, <a title="WebAPI/WebBluetooth" href="../../../../en-US/docs/Web/API/Vibration_API.html">Vibration API</a>.</dd>
+ <dt>API n teɣwalt</dt>
+ <dd>These APIs let Web pages and applications communicate with other pages or devices. E.g. <a title="WebAPI/Network_Information" href="../../../../en-US/docs/Web/API/Network_Information_API.html">Network Information API</a>, <a title="/en-US/docs/WebAPI/Using_Web_Notifications" href="../../../../en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API.html">Web Notifications</a>, <a title="WebAPI/Push_Notifications" href="../../../../en-US/docs/Archive/Firefox_OS/API/Simple_Push_API.html">Simple Push API</a>.</dd>
+ <dt id="Data_management_APIs">API n usefrek n isefka</dt>
+ <dd>User data can be stored and managed using this set of APIs. E.g. <a title="WebAPI/FileHandle_API" href="../../../../en-US/docs/Web/API/File_Handle_API.html">FileHandle API</a>, <a title="IndexedDB" href="https://developer.mozilla.org/en-US/docs/IndexedDB">IndexedDB</a>.</dd>
+</dl>
+
+<p>In addition to these APIs that are available to any Web site or app, a set of more powerful Mozilla APIs are available to privileged and certified applications.</p>
+
+<dl>
+ <dt>API uzwiren</dt>
+ <dd>A privileged application is an installed app that has been given specific rights by the user. Privileged APIs include: <a title="WebAPI/TCP_Socket" href="../../../../en-US/docs/Mozilla/B2G_OS/API/TPC_Socket_API.html">TCP Socket API</a>, <a title="WebAPI/Contacts" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Contacts_API.html">Contacts API</a>, <a title="WebAPI/Device_Storage_API" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Device_Storage_API.html">Device Storage API</a>, <a title="DOM/Using_the_Browser_API" href="../../../../en-US/docs/Web/API/Using_the_Browser_API.html">Browser API</a>, <a title="WebAPI/Camera" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Camera_API.html">Camera API</a>.</dd>
+ <dt>API Aselkan</dt>
+ <dd>A certified application is a low-level application performing critical operations in an operating system like Firefox OS. Less privileged application interact with these applications using <a title="WebAPI/Web_Activities" href="../../../../en-US/docs/Archive/Firefox_OS/API/Web_Activities.html">Web Activities</a>.&nbsp; Certified APIs include:<a title="WebAPI/WebBluetooth" href="../../../../en-US/docs/Web/API/Web_Bluetooth_API.html"> Bluetooth API</a>, <a title="WebAPI/Mobile_Connection" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Mobile_Connection_API.html">Mobile Connection API</a>, <a title="WebAPI/Network_Stats" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Network_Stats_API.html">Network Stats API</a>, <a title="WebAPI/WebTelephony" href="../../../../en-US/docs/WebAPI/WebTelephony.png">Telephony</a>, <a title="WebAPI/WebSMS" href="../../../../en-US/docs/WebAPI/WebSMS.png">WebSMS</a>, <a title="WebAPI/WiFi_Information" href="../../../../en-US/docs/Mozilla/B2G_OS/API/WiFi_Information_API.html">WiFi Information API</a>, <a title="WebAPI/Power_Management" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Power_Management_API.html">Power Management API</a>, <a title="WebAPI/Settings" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Settings_API.html">Settings API</a>, <a title="WebAPI/Device_Storage_API" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Idle_API.html">Idle API</a>, <a title="WebAPI/Permissions" href="../../../../en-US/docs/Web/API/Permissions_API.html">Permissions API</a>, <a title="WebAPI/Time_and_Clock" href="../../../../en-US/docs/Mozilla/B2G_OS/API/Time_and_Clock_API.html">Time/Clock API</a>.</dd>
+</dl>
+</div>
+
+<div class="section">
+<h2 id="Tamezdagnut" class="Community">Tamezdagnut</h2>
+
+<p>Ddu ar tmezdagnut Web API di tebdart nneɣ n tnezwit neɣ agraw n isallen:</p>
+
+<ul>
+ <li><a class="external" href="https://lists.mozilla.org/listinfo/dev-webapi">am tebdart n tnezwit</a></li>
+ <li><a href="news://news.mozilla.org/mozilla.dev.webapi">am ugraw n isallen</a></li>
+ <li><a class="external" href="http://groups.google.com/group/mozilla.dev.webapi">am ugraw Google</a></li>
+ <li><a class="external" href="http://groups.google.com/group/mozilla.dev.webapi/feeds">am usuddem Web</a></li>
+</ul>
+
+<p>Daɣen, ddu ar usqerdec s sriddeg ubadu <a href="irc://irc.mozilla.org/webapi">#webapi</a> di <a class="external" href="https://wiki.mozilla.org/IRC">IRC</a>.</p>
+
+<h2 id="Isental_icudden" class="Related_Topics">Isental icudden</h2>
+
+<p>Isental-agi zemren ahat ak-nefɛen:</p>
+
+<ul>
+ <li><a href="../../../../en-US/docs/Web/API.html">Amatar n igrudmawen n API Web meṛṛa</a></li>
+</ul>
+</div>
+</div>
+
+<p>&nbsp;</p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Tibzimin akked imttekkiyen icuddden ɣer isemli</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Imttekiyen deg usebter agi:</strong> 
+        <a href="https://developer.mozilla.org/kab/profiles/belkacem77">belkacem77</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Asnifel anneggaru sɣur:</strong>
+                      <a href="https://developer.mozilla.org/kab/profiles/belkacem77">belkacem77</a>,
+                      <time datetime="2016-12-17T11:29:36.972645-08:00">17 Duǧ, 2016 11:29:36 n tufat</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Issin ayen yufraren deg tneflit web</h2>
+        <p class="newsletter-description">Jerred ɣer tebratt nneɣ n isallen:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">Imayl</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="imayl@amedya.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            Qebleɣ asefrek n telɣut-inu tudmawant sɣur Mozilla akken yella deg <a href="https://www.mozilla.org/privacy/">tsertit n tbaḍnit</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Jerred tura</button>
+        </div>
+        
+        <p class="newsletter-lang">Tabratt n isallen tella kan s Teglizit akka tura.</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Tanemmirt! Ma ulac aɣilif senqed tabwaṭ-inek n imaylen akken ad tesentmeḍ ajerred-inek.</h2>
+        <p>Ma yella ur tsentmeḍ ara ajerred inek ar tebratt n isallen icudden ar Mozilla, ahat tzemreḍ akka tura. Ma ulac aɣilif, wali ma yella yimayl di tebwaṭ inek n imaylen neɣ ula deg ispamen.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Ffer ajerred ɣer tebratt n isallen</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/kab/docs/Web/Reference/API$edit" label="Ẓreg asebter"></menuitem>
+    <menuitem data-action="/kab/docs/Web/Reference/API$history" label="Wali amazray n usebter"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network akked ittekkiyen iman-nsen.</p> <p>Akk igburen llan ddaw <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">n turagin-a</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">Ɣef MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Tiwtilin</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Tabaḍnit</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Inagan n tuqqna</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Ttekki deg tengalt</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/kab/docs/Web">
+      <label for="language">Tutlayin nniḍen:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="Taqbaylit" value="/kab/docs/Web/Reference/API" selected="">
+          Taqbaylit (kab)
+        </option>
+        
+          <option title="Taglizit (Marikan)" value="/en-US/docs/Web/Reference/API">
+            English (US) (en-US)
+          </option>
+          <option title="Taɛrabt" value="/ar/docs/Web/%D9%85%D8%B1%D8%AC%D8%B9./API">
+            عربي (ar)
+          </option>
+          <option title="Tebengalit (Bengladic)" value="/bn-BD/docs/Web/Reference/API">
+            বাংলা (বাংলাদেশ) (bn-BD)
+          </option>
+          <option title="Tkaṭalant" value="/ca/docs/Web/Reference/API">
+            Català (ca)
+          </option>
+          <option title="Tačikit" value="/cs/docs/Web/Reference/API">
+            Čeština (cs)
+          </option>
+          <option title="Talmanit" value="/de/docs/Web/Reference/API">
+            Deutsch (de)
+          </option>
+          <option title="Taspanit" value="/es/docs/Web/Reference/API">
+            Español (es)
+          </option>
+          <option title="Tafransist" value="/fr/docs/Web/Reference/API">
+            Français (fr)
+          </option>
+          <option title="Tahungaṛit" value="/hu/docs/Web/Reference/API">
+            magyar (hu)
+          </option>
+          <option title="Tandunizit" value="/id/docs/Web/Reference/API">
+            Bahasa Indonesia (id)
+          </option>
+          <option title="Taṭeyanit" value="/it/docs/Web/Reference/API">
+            Italiano (it)
+          </option>
+          <option title="Tajapunit" value="/ja/docs/Web/Reference/API">
+            日本語 (ja)
+          </option>
+          <option title="Takurit" value="/ko/docs/Web/%EC%B0%B8%EC%A1%B0/API">
+            한국어 (ko)
+          </option>
+          <option title="Tamalayalamit" value="/ml/docs/Web/Reference/API">
+            മലയാളം (ml)
+          </option>
+          <option title="Tahulandit" value="/nl/docs/Web/Reference/API">
+            Nederlands (nl)
+          </option>
+          <option title="Tapuṛtugit (Brizil)" value="/pt-BR/docs/Web/Reference/API">
+            Português (do&nbsp;Brasil) (pt-BR)
+          </option>
+          <option title="Tapuṛtugit(Puṛtugal)" value="/pt-PT/docs/Web/Reference/API">
+            Português (Europeu) (pt-PT)
+          </option>
+          <option title="Tarusit" value="/ru/docs/Web/Reference/API">
+            Русский (ru)
+          </option>
+          <option title="Taṭaylant" value="/th/docs/Web/Reference/API">
+            ไทย (th)
+          </option>
+          <option title="Taṭurkit" value="/tr/docs/Web/Reference/API">
+            Türkçe (tr)
+          </option>
+          <option title="Takrinit" value="/uk/docs/Web/Reference/API">
+            Українська (uk)
+          </option>
+          <option title="Tacinit (taḥerfit)" value="/zh-CN/docs/Web/Reference/API">
+            中文 (简体) (zh-CN)
+          </option>
+          <option title="Tacinit (tamensayt)" value="/zh-TW/docs/Web/Reference/API">
+            正體中文 (繁體) (zh-TW)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Bdu&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/kab/javascript.27293b44f8f8.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/kab/javascript.27293b44f8f8.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/kab/docs/Web/Reference/API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 23:05:50 GMT -->
+</body></html>

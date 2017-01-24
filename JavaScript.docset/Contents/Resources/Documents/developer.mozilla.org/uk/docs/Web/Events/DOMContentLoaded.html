@@ -1,0 +1,821 @@
+<html><!-- Mirrored from developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:40:07 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>DOMContentLoaded</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/uk/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/uk/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded$json">
+  <link rel="canonical" href="DOMContentLoaded.html">
+
+  
+    
+      <link rel="alternate" hreflang="en-US" href="../../../../en-US/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="es" href="../../../../es/docs/Web/Reference/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="fr" href="../../../../fr/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="ja" href="../../../../ja/docs/Web/Reference/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="pt-BR" href="../../../../pt-BR/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="ru" href="../../../../ru/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="zh-CN" href="../../../../zh-CN/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+      <link rel="alternate" hreflang="zh-TW" href="../../../../zh-TW/docs/Web/Events/DOMContentLoaded.html" title="DOMContentLoaded">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="DOMContentLoaded">
+  <meta property="og:url" content="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded">
+  <meta name="twitter:url" content="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded">
+  <meta name="twitter:title" content="DOMContentLoaded">
+  
+  <meta property="og:description" content="Подія DOMContentLoaded визивається, коли вихідний&nbsp;HTML документ повністю завантажився та був parsed, без очікування повного завантаження стилів, зображень, сабфреймів (subframes). Зовсім інша подія - load - має використовуватися лише для того, щоб визначити повне завантаження сторінки. Використання load там, де застосування DOMContentLoaded є більш доречним, є неймовірно популярою помилкою, тому будьте уважними.">
+  <meta name="description" content="Подія DOMContentLoaded визивається, коли вихідний&nbsp;HTML документ повністю завантажився та був parsed, без очікування повного завантаження стилів, зображень, сабфреймів (subframes). Зовсім інша подія - load - має використовуватися лише для того, щоб визначити повне завантаження сторінки. Використання load там, де застосування DOMContentLoaded є більш доречним, є неймовірно популярою помилкою, тому будьте уважними.">
+  <meta name="twitter:description" content="Подія DOMContentLoaded визивається, коли вихідний&nbsp;HTML документ повністю завантажився та був parsed, без очікування повного завантаження стилів, зображень, сабфреймів (subframes). Зовсім інша подія - load - має використовуватися лише для того, щоб визначити повне завантаження сторінки. Використання load там, де застосування DOMContentLoaded є більш доречним, є неймовірно популярою помилкою, тому будьте уважними.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/Events/DOMContentLoaded" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/uk/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Перейти до основного вмісту</a></li>
+    <li><a id="skip-language" href="#language">Вибір мови</a></li>
+    <li><a href="#q" id="skip-search">Перейти до пошуку</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/uk/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fuk%2Fdocs%2FWeb%2FEvents%2FDOMContentLoaded" class="login-link js-login-link" data-service="GitHub">
+        Увійти
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/uk/docs/Web">Веб-технології<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Технології</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide/Graphics">Графіка</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/API">API / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">Довідники та посібники</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/uk/docs/Learn">Вивчення веб-розробки</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/Tutorials">Посібники</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/Reference">Довідники</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/Guide">Посібники розробників</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web/Accessibility">Доступність</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Games">Розробка ігор</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Web">...більше документації</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/uk/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Add-ons">Додатки</a></li>
+              <li><a href="https://developer.mozilla.org/uk/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/uk/docs/Tools">Інструменти розробника</a></li><li><a href="https://developer.mozilla.org/uk/docs/MDN/Feedback">Зворотній зв'язок<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Отримати допомогу Firefox<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Довідка веб-розробки<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/uk/docs/MDN/Community">Приєднатися до спільноти MDN</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded">Повідомити про проблему вмісту<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Повідомити про помилку<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/uk/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/uk/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Пошук</label>
+          <input type="search" id="main-q" name="q" placeholder="Пошук" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Пошук</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Мови</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="../../../../en-US/docs/Web/Events/DOMContentLoaded.html" title="Англійська (США)">English (US) (en-US)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../es/docs/Web/Reference/Events/DOMContentLoaded.html" title="Іспанська">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../fr/docs/Web/Events/DOMContentLoaded.html" title="Французька">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ja/docs/Web/Reference/Events/DOMContentLoaded.html" title="Японська">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../pt-BR/docs/Web/Events/DOMContentLoaded.html" title="Португальська (Бразилія)">Português (do&nbsp;Brasil) (pt-BR)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../ru/docs/Web/Events/DOMContentLoaded.html" title="Російська">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../zh-CN/docs/Web/Events/DOMContentLoaded.html" title="Китайська (спрощене письмо)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="../../../../zh-TW/docs/Web/Events/DOMContentLoaded.html" title="Китайська (традиційне письмо)">正體中文 (繁體) (zh-TW)</a></bdi></li>
+                
+              
+
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Редагувати<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Додатково</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Додатково</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded$history" rel="nofollow, noindex">Історія</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Роздрукувати цю статтю</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="навігаційні ланцюги">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/uk" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/uk/docs/Web" rel="v:url" property="v:title">Веб-технології для розробників</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/uk/docs/Web/Events" rel="v:url" property="v:title">Event reference</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">DOMContentLoaded</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Попередній результат пошуку" data-empty-title="Немає попереднього результату пошуку"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Результати вашого пошуку</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Наступний результат пошуку" data-empty-title="Немає попереднього результату пошуку"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="подивитися всіх учасників" data-alternate-message="сховати учасників">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/uk/profiles/AlinaKuzmenko" title="Переглянути профіль: AlinaKuzmenko">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="AlinaKuzmenko" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">AlinaKuzmenko</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>DOMContentLoaded</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">У цій статті<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Прискорення" rel="internal">Прискорення</a></li><li><a href="#Основна_інформація" rel="internal">Основна інформація</a></li><li><a href="#Властивості" rel="internal">Властивості</a></li><li><a href="#Приклад" rel="internal">Приклад</a></li><li><a href="#Браузерна_сумісність" rel="internal">Браузерна сумісність</a></li><li><a href="#Подібні_події" rel="internal">Подібні події</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+                  
+                      <div class="overheadIndicator translationInProgress"><p>Переклад не закінчено. Будь ласка, допоможіть <a href="https://developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded$edit">перекласти цю статтю</a> з англійської.</p></div>
+                  
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><p></p>
+
+<p>Подія&nbsp;<code>DOMContentLoaded</code> визивається, коли вихідний&nbsp;HTML документ повністю завантажився та був parsed, без очікування повного завантаження стилів, зображень, сабфреймів (subframes). Зовсім інша подія -&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/load"><code>load</code></a>&nbsp;- має використовуватися лише для того, щоб визначити повне завантаження сторінки. Використання <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/load">load</a>&nbsp;</code>там, де застосування&nbsp;<code>DOMContentLoaded</code>&nbsp;є більш доречним, є неймовірно популярою помилкою, тому будьте уважними.</p>
+
+<p></p><div class="note"><strong>Note:</strong>&nbsp;Синхронний Javascript затримує парсинг DOM.</div><p></p>
+
+<p></p><div class="note"><strong>Note:</strong>&nbsp;Існує безліч універсальних та автономних бібліотек, які &nbsp;попонують кроссбраузерні методи для визначення готовності DOM.</div><p></p>
+
+<h2 id="Прискорення">Прискорення</h2>
+
+<p>Якщо ви хочете, щоб&nbsp;DOM запарсився (got parsed) якомога швидше після того, як користувач зробив запит сторінки, ви можете зробити ваш <a href="../../../../en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests.html">JavaScript асинхронним</a>&nbsp;та <a href="https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery" class="external">оптимізувати завантаження стилів</a>. Якщо цього не зробити, це сповільнить завантаження сторінки через те, що воно буде відбуватися паралельно і викрадати трафік у головного html&nbsp;документа.</p>
+
+<h2 id="Основна_інформація">Основна інформація</h2>
+
+<dl>
+ <dt style="width: 120px; text-align: right; float: left;">Specification</dt>
+ <dd style="margin: 0px 0px 0px 120px;"><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-end.html#the-end" class="external">HTML5</a></dd>
+ <dt style="width: 120px; text-align: right; float: left;">Interface</dt>
+ <dd style="margin: 0px 0px 0px 120px;">Event</dd>
+ <dt style="width: 120px; text-align: right; float: left;">Bubbles</dt>
+ <dd style="margin: 0px 0px 0px 120px;">Yes</dd>
+ <dt style="width: 120px; text-align: right; float: left;">Cancelable</dt>
+ <dd style="margin: 0px 0px 0px 120px;">Yes (although specified as a simple event that isn't cancelable)</dd>
+ <dt style="width: 120px; text-align: right; float: left;">Target</dt>
+ <dd style="margin: 0px 0px 0px 120px;">Document</dd>
+ <dt style="width: 120px; text-align: right; float: left;">Default Action</dt>
+ <dd style="margin: 0px 0px 0px 120px;">None.</dd>
+</dl>
+
+<h2 id="Властивості">Властивості</h2>
+
+<p></p><table class="standard-table"> 
+  <thead> 
+    <tr> 
+      <th scope="col">Property</th> 
+      <th scope="col">Type</th> 
+      <th scope="col">Description</th> 
+    </tr> 
+  </thead> 
+  <tbody> 
+  
+ <tr> 
+    <td><code>target</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></td> 
+    <td><a href="https://developer.mozilla.org/uk/docs/Web/API/EventTarget" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>EventTarget</code></a></td> 
+    <td>The event target (the topmost target in the DOM tree).</td> 
+ </tr> 
+  
+  <tr> 
+    <td><code>type</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></td> 
+    <td><a href="https://developer.mozilla.org/uk/docs/Web/API/DOMString" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMString</code></a></td> 
+    <td>The type of event.</td> 
+  </tr> 
+  <tr> 
+    <td><code>bubbles</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></td> 
+    <td><a href="https://developer.mozilla.org/uk/docs/Web/API/Boolean" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Boolean</code></a></td> 
+    <td>Whether the event normally bubbles or not</td> 
+  </tr> 
+  <tr> 
+    <td><code>cancelable</code> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></td> 
+    <td><a href="https://developer.mozilla.org/uk/docs/Web/API/Boolean" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>Boolean</code></a></td> 
+    <td>Whether the event is cancellable or not?</td> 
+  </tr></tbody></table><p></p>
+
+<h2 id="Приклад">Приклад</h2>
+
+<pre class="brush: html">&lt;script&gt;
+  document.addEventListener("DOMContentLoaded", function(event) {
+&nbsp;   console.log("DOM fully loaded and parsed");
+  });
+&lt;/script&gt;
+</pre>
+
+<pre class="brush: html">&lt;script&gt;
+  document.addEventListener("DOMContentLoaded", function(event) {
+&nbsp;   console.log("DOM fully loaded and parsed");
+  });
+
+for(var i=0; i&lt;1000000000; i++)
+{} // this synchronous script is going to delay parsing of the DOM. So the DOMContentLoaded event is going to launch later.
+&lt;/script&gt;
+</pre>
+
+<h2 id="Браузерна_сумісність">Браузерна сумісність</h2>
+
+<p></p><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>1.0<sup>[1]</sup></td>
+   <td>1.0 (1.7 or earlier)<sup>[1]</sup></td>
+   <td>9.0<sup>[2]</sup></td>
+   <td>9.0</td>
+   <td>3.1<sup>[1]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1]</sup></td>
+   <td>1.0 (1)<sup>[1]</sup></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span><sup>[2]</sup></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Bubbling для цієї події підтримується принаймні&nbsp;Gecko 1.9.2, Chrome 6, and Safari 4.</p>
+
+<p>[2] Internet Explorer 8 підтримує&nbsp;подію&nbsp;<code>readystatechange</code> ​​​​​​, яка може використовуватися для того, щоб визначити чи готовий DOM. У більш ранніх версіях Internet Explorer цей стан може бути визначений повторними спробами виконання&nbsp;<code>document.documentElement.doScroll("left");</code>, &nbsp;так як цей фрагмент&nbsp;коду буде викидати помилку, поки DOM не буде готовий.</p>
+
+<h2 id="Подібні_події">Подібні події</h2>
+
+<p></p><ul> 
+<li><a href="../../../../en-US/docs/Web/Events/DOMContentLoaded.html"><code>DOMContentLoaded</code></a></li> 
+<li><a href="../../../../en-US/docs/Web/Events/readystatechange.html"><code>readystatechange</code></a></li> 
+<li><a href="../../../../en-US/docs/Web/Events/load.html"><code>load</code></a></li> 
+<li><a href="../../../../en-US/docs/Web/Events/beforeunload.html"><code>beforeunload</code></a></li> 
+<li><a href="../../../../en-US/docs/Web/Events/unload.html"><code>unload</code></a></li> 
+</ul><p></p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Мітки документа й учасники</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Зробили внесок у цю сторінку:</strong> 
+        <a href="https://developer.mozilla.org/uk/profiles/AlinaKuzmenko">AlinaKuzmenko</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Востаннє оновлена:</strong>
+                      <a href="https://developer.mozilla.org/uk/profiles/AlinaKuzmenko">AlinaKuzmenko</a>,
+                      <time datetime="2016-07-16T01:41:58-07:00">16 лип. 2016 р., 01:41:58</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Вивчайте найкраще з веб-розробки</h2>
+        <p class="newsletter-description">Підпишіться на нашу розсилку:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">Ел. пошта</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            Я погоджуюсь з тим, як Mozilla поводиться з моїми даними згідно з <a href="https://www.mozilla.org/privacy/">цією Політикою приватності</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Підписатися зараз</button>
+        </div>
+        
+        <p class="newsletter-lang">Поки що розсилка пропонується лише англійською мовою.</p>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Дякуємо! Будь ласка, перевірте свою пошту для підтвердження підписки.</h2>
+        <p>Якщо ви раніше не підтверджували підписку на Mozilla, то вам це, можливо, треба зробити. Будь ласка, відкрийте теку Вхідні або Спам своєї ел. пошти, щоб перевірити, чи не прийшов від нас лист.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Приховати підписку на розсилку</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">Див. також</div>
+    <ol><li><strong><a href="https://developer.mozilla.org/uk/docs/Web/Events">Events</a></strong></li><li data-default-state="open"><a href="#"><strong>HTML DOM events</strong></a><ol><li><a href="DOMContentLoaded.html"><code>DOMContentLoaded</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/abort"><code>abort</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/afterprint"><code>afterprint</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/afterscriptexecute"><code>afterscriptexecute</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/autocomplete"><code>autocomplete</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/autocompleteerror"><code>autocompleteerror</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/beforeprint"><code>beforeprint</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/beforescriptexecute"><code>beforescriptexecute</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/beforeunload"><code>beforeunload</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/blur"><code>blur</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/cancel"><code>cancel</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/canplay"><code>canplay</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/canplaythrough"><code>canplaythrough</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/change"><code>change</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/click"><code>click</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/close"><code>close</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/connect"><code>connect</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/contextmenu"><code>contextmenu</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/durationchange"><code>durationchange</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/emptied"><code>emptied</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/error"><code>error</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/focus"><code>focus</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/hashchange"><code>hashchange</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/input"><code>input</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/invalid"><code>invalid</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/languagechange"><code>languagechange</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/load"><code>load</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/loadeddata"><code>loadeddata</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/loadedmetadata"><code>loadedmetadata</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/loadend"><code>loadend</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/loadstart"><code>loadstart</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/message"><code>message</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/offline"><code>offline</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/online"><code>online</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/open"><code>open</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/pagehide"><code>pagehide</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/pageshow"><code>pageshow</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/play"><code>play</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/playing"><code>playing</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/popstate"><code>popstate</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/progress"><code>progress</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/readystatechange"><code>readystatechange</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/rejectionhandled"><code>rejectionhandled</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/reset"><code>reset</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/seeked"><code>seeked</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/seeking"><code>seeking</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/select"><code>select</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/show"><code>show</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/sort"><code>sort</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/stalled"><code>stalled</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/storage"><code>storage</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/submit"><code>submit</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/suspend"><code>suspend</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/timeupdate"><code>timeupdate</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/toggle"><code>toggle</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/unhandledrejection"><code>unhandledrejection</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/unload"><code>unload</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/volumechange"><code>volumechange</code></a></li><li><a href="https://developer.mozilla.org/uk/docs/Web/Events/waiting"><code>waiting</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/uk/docs/Web/Events/DOMContentLoaded$edit" label="Редагувати сторінку"></menuitem>
+    <menuitem data-action="/uk/docs/Web/Events/DOMContentLoaded$history" label="Переглянути історію сторінки"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network і окремі учасники.</p> <p>Вміст доступний на умовах <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">цих ліцензій</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">Про MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Умови</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Конфіденційність</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Куки</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Зробіть внесок у код</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/uk/docs/Web">
+      <label for="language">Інші мови:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="Українська" value="/uk/docs/Web/Events/DOMContentLoaded" selected="">
+          Українська (uk)
+        </option>
+        
+          <option title="Англійська (США)" value="/en-US/docs/Web/Events/DOMContentLoaded">
+            English (US) (en-US)
+          </option>
+          <option title="Іспанська" value="/es/docs/Web/Reference/Events/DOMContentLoaded">
+            Español (es)
+          </option>
+          <option title="Французька" value="/fr/docs/Web/Events/DOMContentLoaded">
+            Français (fr)
+          </option>
+          <option title="Японська" value="/ja/docs/Web/Reference/Events/DOMContentLoaded">
+            日本語 (ja)
+          </option>
+          <option title="Португальська (Бразилія)" value="/pt-BR/docs/Web/Events/DOMContentLoaded">
+            Português (do&nbsp;Brasil) (pt-BR)
+          </option>
+          <option title="Російська" value="/ru/docs/Web/Events/DOMContentLoaded">
+            Русский (ru)
+          </option>
+          <option title="Китайська (спрощене письмо)" value="/zh-CN/docs/Web/Events/DOMContentLoaded">
+            中文 (简体) (zh-CN)
+          </option>
+          <option title="Китайська (традиційне письмо)" value="/zh-TW/docs/Web/Events/DOMContentLoaded">
+            正體中文 (繁體) (zh-TW)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Перейти&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/uk/javascript.cd2f5af00af5.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/uk/docs/Web/Events/DOMContentLoaded by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:40:08 GMT -->
+</body></html>

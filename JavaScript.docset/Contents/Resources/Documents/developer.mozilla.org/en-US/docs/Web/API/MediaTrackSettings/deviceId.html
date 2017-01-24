@@ -1,0 +1,738 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:45 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>MediaTrackSettings.deviceId</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId$json">
+  <link rel="canonical" href="deviceId.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="MediaTrackSettings.deviceId">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">
+  <meta name="twitter:title" content="MediaTrackSettings.deviceId">
+  
+  <meta property="og:description" content="The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().">
+  <meta name="description" content="The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().">
+  <meta name="twitter:description" content="The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia().">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/MediaTrackSettings/deviceId" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaTrackSettings%2FdeviceId" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../MediaTrackSettings.html" rel="v:url" property="v:title">MediaTrackSettings</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">MediaTrackSettings.deviceId</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>MediaTrackSettings.deviceId</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Value" rel="internal">Value</a></li></ol></li><li><a href="#Example" rel="internal">Example</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
+
+<p>The <a title="The MediaTrackSettings dictionary is used to return the current values configured for each of a MediaStreamTrack's settings. These values will adhere as closely as possible to any constraints previously described using a MediaTrackConstraints object and set using applyConstraints(), and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched." href="../MediaTrackSettings.html"><code>MediaTrackSettings</code></a> dictionary's <code><strong>deviceId</strong></code> property is a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a> which uniquely identifies the source for the corresponding <a title="The MediaStreamTrack interface represents&nbsp;a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well." href="../MediaStreamTrack.html"><code>MediaStreamTrack</code></a> for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the <a title="The MediaTrackConstraints dictionary's deviceId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the deviceId constrainable property." href="../MediaTrackConstraints/deviceId.html"><code>MediaTrackConstraints.deviceId</code></a> property you provided when calling either <a title="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice." href="../MediaDevices/getUserMedia.html"><code>getUserMedia()</code></a>.</p>
+
+<p>If needed, you can determine whether or not this constraint is supported by checking the value of <a title="The MediaTrackSupportedConstraints dictionary's deviceId property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the deviceId constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false." href="../MediaTrackSupportedConstraints/deviceId.html"><code>MediaTrackSupportedConstraints.deviceId</code></a> as returned by a call to <a title="The getSupportedConstraints() method of the MediaDevices interface returns an object based on the MediaTrackSupportedConstraints dictionary, whose member fields each specify one of the constrainable properties the user agent understands." href="../MediaDevices/getSupportedConstraints.html"><code>MediaDevices.getSupportedConstraints()</code></a>. However, typically this is unnecessary since browsers will simply ignore any constraints they're unfamiliar with.</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox">var <em>deviceId</em> = <em>MediaTrackSettings</em>.deviceId;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p>A <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a> whose value is an origin-unique identifier for the track's source. This ID is valid across multiple browsing sessions for the same origin and is guaranteed to be different for all other origins, so you can safely use it to request the same source be used for multiple sessions, for example.</p>
+
+<p>The actual value of the string, however, is determined by the source of the track, and there is no guarantee what form it will take, although the specification does recommend it be a GUID.</p>
+
+<p>Since there is a one-to-one pairing of ID with each source, all tracks with the same source will share the same ID for any given origin, so <a title="The getCapabilities() method of the MediaStreamTrack interface returns&nbsp;a MediaTrackCapabilities&nbsp;object which specifies the values or range of values which each constrianable property, based upon the platform and user agent." href="../MediaStreamTrack/getCapabilities.html"><code>MediaStreamTrack.getCapabilities()</code></a> will always return exactly one value for <code>deviceId</code>. That makes the device ID not useful for any changes to constraints when calling <a title="The applyConstraints() method of the MediaStreamTrack interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancelation, and so forth." href="../MediaStreamTrack/applyConstraints.html"><code>MediaStreamTrack.applyConstraints()</code></a>.</p>
+
+<div class="note">
+<p>An exception to the rule that device IDs are the same across browsing sessions: private browsing mode will use a different ID, and will change it each browsing session.</p>
+</div>
+
+<h2 name="Example" id="Example">Example</h2>
+
+<p>See "<a href="../Media_Streams_API/Constraints.html#Example_Constraint_exerciser">Example: Constraint exerciser</a>" in <a href="../Media_Streams_API/Constraints.html">Capabilities, constraints, and settings</a> for an example.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a lang="en" hreflang="en" href="http://w3c.github.io/mediacapture-main/#widl-MediaTrackSettings-deviceId" class="external">Media Capture and Streams<br><small lang="en-US">The definition of 'deviceId' in that specification.</small></a></td>
+   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td>Initial specification.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p></p><div class="htab"> 
+    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
+    <ul> 
+        <li class="selected"><a>Desktop</a></li> 
+        <li><a>Mobile</a></li> 
+    </ul> 
+</div><p></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a title="Released on 2015-02-24." href="https://developer.mozilla.org/en-US/Firefox/Releases/36">36</a> (36)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>36.0 (36)</td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../Media_Streams_API.html">Media Capture and Streams API</a></li>
+ <li><a href="../Media_Streams_API/Constraints.html">Capabilities, constraints, and settings</a></li>
+ <li><a title="The MediaTrackSettings dictionary's groupId property is a browsing-session unique DOMString which identifies the group of devices which includes the source for the MediaStreamTrack. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.groupId property you provided when calling either getUserMedia()." href="groupId.html"><code>MediaTrackSettings.groupId</code></a></li>
+ <li><a title="The MediaTrackConstraints dictionary's deviceId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the deviceId constrainable property." href="../MediaTrackConstraints/deviceId.html"><code>MediaTrackConstraints.deviceId</code></a></li>
+ <li><a title="The MediaTrackSettings dictionary is used to return the current values configured for each of a MediaStreamTrack's settings. These values will adhere as closely as possible to any constraints previously described using a MediaTrackConstraints object and set using applyConstraints(), and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched." href="../MediaTrackSettings.html"><code>MediaTrackSettings</code></a></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/deviceId">deviceId</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Media">Media</a></li>
+      
+        <li><a href="../../../tag/Media%20Capture%20and%20Streams%20API.html">Media Capture and Streams API</a></li>
+      
+        <li><a href="../../../tag/Media%20Streams%20API.html">Media Streams API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MediaTrackSettings">MediaTrackSettings</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Property">Property</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Settings">Settings</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebRTC">WebRTC</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-10-20T16:18:34-07:00">Oct 20, 2016, 4:18:34 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../Media_Capture_and_Streams_API_(Media_Streams).html">Media Capture and Streams API (Media Streams)</a></strong></li><li><strong><a href="../MediaTrackSettings.html"><code>MediaTrackSettings</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="The MediaTrackSettings dictionary's aspectRatio property is a double-precision floating-point number indicating the aspect ratio of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.aspectRatio property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="aspectRatio.html"><code>aspectRatio</code></a></li><li><a title="The MediaTrackSettings dictionary's channelCount property is an integer indicating how many audio channel the MediaStreamTrack is currently configured to have. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.channelCount property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="channelCount.html"><code>channelCount</code></a></li><li><em><code>deviceId</code></em></li><li><a title="The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="echoCancellation.html"><code>echoCancellation</code></a></li><li><a title="The MediaTrackSettings dictionary's facingMode property is a DOMString indicating the direction in which the camera producing the video track represented by the MediaStreamTrack is currently facing. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.facingMode property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="facingMode.html"><code>facingMode</code></a></li><li><a title="The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="frameRate.html"><code>frameRate</code></a></li><li><a title="The MediaTrackSettings dictionary's groupId property is a browsing-session unique DOMString which identifies the group of devices which includes the source for the MediaStreamTrack. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.groupId property you provided when calling either getUserMedia()." href="groupId.html"><code>groupId</code></a></li><li><a title="The MediaTrackSettings dictionary's height property is an integer indicating the number of pixels tall MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.height property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="height.html"><code>height</code></a></li><li><a title="The MediaTrackSettings dictionary's latency property is a double-precision floating-point number indicating the estimated latency (specified in seconds) of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.latency property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="latency.html"><code>latency</code></a></li><li><a title="The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="sampleRate.html"><code>sampleRate</code></a></li><li><a title="The MediaTrackSettings dictionary's sampleSize property is an integer indicating the linear sample size (in bits per sample) the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleSize property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="sampleSize.html"><code>sampleSize</code></a></li><li><a title="The MediaTrackSettings dictionary's volume property is a double-precision floating-point number indicating the volume of the MediaStreamTrack as currently configured, as a value from 0.0 (silence) to 1.0 (maximum supported volume for the device). This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.volume property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="volume.html"><code>volume</code></a></li><li><a title="The MediaTrackSettings dictionary's width property is an integer indicating the number of pixels wide MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.width property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()." href="width.html"><code>width</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/inactive.html"><code>inactive</code></a></li><li><a href="../../Events/active.html"><code>active</code></a></li><li><a href="../../Events/ended.html"><code>ended</code></a></li><li><a href="../../Events/mute.html"><code>mute</code></a></li><li><a href="../../Events/muted.html"><code>muted</code></a></li><li><a href="../../Events/unmute.html"><code>unmute</code></a></li><li><a href="../../Events/overconstrained.html"><code>overconstrained</code></a></li><li><a href="../../Events/ratechange.html"><code>ratechange</code></a></li><li><a href="../../Events/removetrack.html"><code>removetrack</code></a></li><li><a href="../../Events/addtrack.html"><code>addtrack</code></a></li><li><a href="../../Events/started.html"><code>started</code></a></li><li><a href="../../Events/devicechange.html"><code>devicechange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for Media Capture and Streams</strong></a><ol><li><a href="../AudioStreamTrack.html"><code>AudioStreamTrack</code></a></li><li><a href="../BlobEvent.html"><code>BlobEvent</code></a></li><li><a href="../CanvasCaptureMediaStream.html"><code>CanvasCaptureMediaStream</code></a></li><li><a href="../ConstrainBoolean.html"><code>ConstrainBoolean</code></a></li><li><a href="../ConstrainDOMString.html"><code>ConstrainDOMString</code></a></li><li><a href="../ConstrainDouble.html"><code>ConstrainDouble</code></a></li><li><a href="../ConstrainLong.html"><code>ConstrainLong</code></a></li><li><a href="../DoubleRange.html"><code>DoubleRange</code></a></li><li><a href="../HTMLCanvasElement/captureStream.html"><code>HTMLCanvasElement.captureStream()</code></a></li><li><a href="../LongRange.html"><code>LongRange</code></a></li><li><a href="../MediaDevices.html"><code>MediaDevices</code></a></li><li><a href="../MediaStream.html"><code>MediaStream</code></a></li><li><a href="../MediaStreamTrack.html"><code>MediaStreamTrack</code></a></li><li><a href="../MediaStreamTrackEvent.html"><code>MediaStreamTrackEvent</code></a></li><li><a href="../MediaTrackCapabilities.html"><code>MediaTrackCapabilities</code></a></li><li><a href="../MediaTrackConstraints.html"><code>MediaTrackConstraints</code></a></li><li><a href="../MediaTrackSupportedConstraints.html"><code>MediaTrackSupportedConstraints</code></a></li><li><a href="../Navigator/mediaDevices.html"><code>Navigator.mediaDevices</code></a></li><li><a href="../NavigatorUserMedia.html"><code>NavigatorUserMedia</code></a></li><li><a href="../NavigatorUserMediaError.html"><code>NavigatorUserMediaError</code></a></li><li><a href="../VideoStreamTrack.html"><code>VideoStreamTrack</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/MediaTrackSettings/deviceId$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/MediaTrackSettings/deviceId$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:45 GMT -->
+</body></html>

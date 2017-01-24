@@ -1,0 +1,1570 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:32:28 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>A first splash into JavaScript</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://developer.mozilla.org/en-US/docs/Learn$styles">
+      
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$json">
+  <link rel="canonical" href="A_first_splash.html">
+
+  
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/第一点" title="进入JavaScript的第一点">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="A first splash into JavaScript">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">
+  <meta name="twitter:title" content="A first splash into JavaScript">
+  
+  <meta property="og:description" content="Now you've learned something about the theory of JavaScript, and what you can do with it, we are going to give you a crash course in the basic features of JavaScript via a completely practical tutorial. Here you'll build up a simple &quot;Guess the number&quot; game, step by step.">
+  <meta name="description" content="Now you've learned something about the theory of JavaScript, and what you can do with it, we are going to give you a crash course in the basic features of JavaScript via a completely practical tutorial. Here you'll build up a simple &quot;Guess the number&quot; game, step by step.">
+  <meta name="twitter:description" content="Now you've learned something about the theory of JavaScript, and what you can do with it, we are going to give you a crash course in the basic features of JavaScript via a completely practical tutorial. Here you'll build up a simple &quot;Guess the number&quot; game, step by step.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Learn/JavaScript/First_steps/A_first_splash" contextmenu="edit-history-menu" data-search-url="" class="document zone ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FLearn%2FJavaScript%2FFirst_steps%2FA_first_splash" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+  
+      
+        <div class="zone-article-header" id="document-main"><div class="center">
+          <!-- zone title -->
+          <div class="zone-title"><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn web development</a></div>
+          <!-- zone image -->
+          <div class="zone-image"></div>
+        </div></div>
+      
+
+     <!-- end is_zone -->
+
+    <div class="wiki-main-content"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/第一点" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Learn" rel="v:url" property="v:title">Learn web development</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="v:url" property="v:title">JavaScript</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../First_steps.html" rel="v:url" property="v:title">JavaScript first steps</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">A first splash into JavaScript</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Jeremie" title="View profile: Jeremie">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="../../../../../../secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/beardedpayton" title="View profile: beardedpayton">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="beardedpayton" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">beardedpayton</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>A first splash into JavaScript</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Thinking_like_a_programmer" rel="internal">Thinking like a programmer</a><ol><li><a href="#Example_—_Guess_the_number_game" rel="internal">Example — Guess the number game</a></li></ol></li><li><a href="#Initial_setup" rel="internal">Initial setup</a></li><li><a href="#Adding_variables_to_store_our_data" rel="internal">Adding variables to store our data</a></li><li><a href="#Functions" rel="internal">Functions</a></li><li><a href="#Operators" rel="internal">Operators</a></li><li><a href="#Conditionals" rel="internal">Conditionals</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Finishing_the_game_functionality" rel="internal">Finishing the game functionality</a></li><li><a href="#Loops" rel="internal">Loops</a></li><li><a href="#A_small_discussion_on_objects" rel="internal">A small discussion on objects</a><ol><li><a href="#Playing_with_browser_objects" rel="internal">Playing with browser objects</a></li></ol></li><li><a href="#Finished_for_now..." rel="internal">Finished for now...</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
+
+<div><div class="prevnext"> 
+    <div><a style="float: left; width: 20%; text-align: left;" href="What_is_JavaScript.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-left"></i> Previous </span></a><a style="float: left; width: 60%; text-align: center;" href="../First_steps.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: First steps</span></a><a style="width: 20%; float: right; text-align: right;" href="What_went_wrong.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div> 
+    <p>&nbsp;</p> 
+</div></div>
+
+<p class="summary">Now you've learned something about the theory of JavaScript, and what you can do with it, we are going to give you a crash course in the basic features of JavaScript via a completely practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Prerequisites:</th>
+   <td>Basic computer literacy, a basic understanding of HTML and CSS, an understanding of what JavaScript is.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objective:</th>
+   <td>To have a first bit of experience at writing some JavaScript, and gain at least a basic understanding of what writing a JavaScript program involves.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>You won't be expected to understand all of the code in detail immediately — we just want to introduce you to the high level concepts for now, and give you an idea of how JavaScript (and other programming languages) work. In subsequent articles you'll revisit all these features in a lot more detail!</p>
+
+<div class="note">
+<p>Note: Many of the code features you'll see in JavaScript are the same as in other programming language — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.</p>
+</div>
+
+<h2 id="Thinking_like_a_programmer">Thinking like a programmer</h2>
+
+<p>One of the hardest things to learn in programming is not the syntax you need to learn, but how to apply it to solve real world problems. You need to start thinking like a programmer — this generally involves looking at descriptions of what your program needs to do and working out what code features are needed to achieve those things, and how to make them work together.</p>
+
+<p>This requires a mixture of hard work, experience with the programming syntax, and practice — and a bit of creativity. The more you code, the better you'll get at it. We can't promise that you'll develop "programmer brain" in 5 minutes, but we will give you plenty of opportunity to practise thinking like a programmer throughout the course.</p>
+
+<p>With that in mind, let's look at the example we'll be building up in this article, and review the general process of dissecting it into tangible tasks.</p>
+
+<h3 id="Example_—_Guess_the_number_game">Example — Guess the number game</h3>
+
+<p>In this article we'll show you how to build up the simple game you can see below:</p>
+
+<div class="hidden">
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+
+    &lt;title&gt;Number guessing game&lt;/title&gt;
+
+    &lt;style&gt;
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+      &lt;h1&gt;Number guessing game&lt;/h1&gt;
+
+      &lt;p&gt;We have selected a random number between 1 and 100. See if you can guess it in 10 turns or less. We'll tell you if your guess was too high or too low.&lt;/p&gt;
+
+&lt;div class="form"&gt;
+  &lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
+  &lt;input type="submit" value="Submit guess" class="guessSubmit"&gt;
+&lt;/div&gt;
+
+&lt;div class="resultParas"&gt;
+  &lt;p class="guesses"&gt;&lt;/p&gt;
+  &lt;p class="lastResult"&gt;&lt;/p&gt;
+  &lt;p class="lowOrHi"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;script&gt;
+
+  // Your JavaScript goes here
+
+  var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+  var guesses = document.querySelector('.guesses');
+  var lastResult = document.querySelector('.lastResult');
+  var lowOrHi = document.querySelector('.lowOrHi');
+
+  var guessSubmit = document.querySelector('.guessSubmit');
+  var guessField = document.querySelector('.guessField');
+  var guessCount = 1;
+  var resetButton;
+
+  function checkGuess() {
+    var userGuess = Number(guessField.value);
+    if(guessCount === 1) {
+      guesses.textContent = 'Previous guesses: ';
+    }
+    guesses.textContent += userGuess + ' ';
+
+     
+    if(userGuess === randomNumber) {
+      lastResult.textContent = 'Congratulations! You got it right!';
+      lastResult.style.backgroundColor = 'green';
+      lowOrHi.textContent = '';
+      setGameOver();
+    } else if(guessCount === 10) {
+      lastResult.textContent = '!!!GAME OVER!!!';
+      lowOrHi.textContent = '';
+      setGameOver();
+    } else {
+      lastResult.textContent = 'Wrong!';
+      lastResult.style.backgroundColor = 'red';
+      if(userGuess &lt; randomNumber) {
+        lowOrHi.textContent = 'Last guess was too low!';
+      } else if(userGuess &gt; randomNumber) {
+        lowOrHi.textContent = 'Last guess was too high!';
+      }
+    }
+    
+    guessCount++;
+    guessField.value = '';
+  }
+
+  guessSubmit.addEventListener('click', checkGuess);
+
+  function setGameOver() {
+    guessField.disabled = true;
+    guessSubmit.disabled = true;
+    resetButton = document.createElement('button');
+    resetButton.textContent = 'Start new game';
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener('click', resetGame);
+  }
+
+  function resetGame() {
+    guessCount = 1;
+
+    var resetParas = document.querySelectorAll('.resultParas p');
+    for(var i = 0 ; i &lt; resetParas.length ; i++) {
+      resetParas[i].textContent = '';
+    }
+
+    resetButton.parentNode.removeChild(resetButton);
+
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = '';
+    guessField.focus();
+
+    lastResult.style.backgroundColor = 'white';
+
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+  } 
+
+&lt;/script&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<p><iframe width="100%" frameborder="0" id="frame_Example_—_Guess_the_number_game" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash%24samples/Example_%e2%80%94_Guess_the_number_game7c39.html?revision=1145392" height="320" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<p>Have a go at playing it — familiarize yourself with the game before you move on.</p>
+
+<p>Let's imagine your boss has given you the following brief for creating this game:</p>
+
+<blockquote>
+<p>I want you to create a simple guess the number type game. It should choose a random number between 1 and 100, then challenge the player to guess the number in 10 turns. After each turn the player should be told if they are right or wrong, and if they are wrong, whether the guess was too low or too high. It should also tell the player what numbers they previously guessed. The game will end once the player guesses correctly, or once they run out of turns. when the game ends, the player should be given an option to start playing again.</p>
+</blockquote>
+
+<p>Upon looking at this brief, the first thing we can do is to start breaking it down into simple actionable tasks, in as much of a programmer mindset as possible:</p>
+
+<ol>
+ <li>Generate a random number between 1 and 100.</li>
+ <li>Record the turn number the player is on. Start it on 1.</li>
+ <li>Provide the player with a way to guess what the number is.</li>
+ <li>Once a guess has been submitted first record it somewhere so the user can see their previous guesses.</li>
+ <li>Next, check whether it is the correct number.</li>
+ <li>If it is correct:
+  <ol>
+   <li>Display congratulations message.</li>
+   <li>Stop the player from being able to enter more guesses (this would mess the game up).</li>
+   <li>Display control allowing the player to restart the game.</li>
+  </ol>
+ </li>
+ <li>If it is wrong and the player has turns left:
+  <ol>
+   <li>Tell the player they are wrong.</li>
+   <li>Allow them to enter another guess.</li>
+   <li>Increment the turn number by 1.</li>
+  </ol>
+ </li>
+ <li>If it is wrong and the player has no turns left:
+  <ol>
+   <li>Tell the player it is game over.</li>
+   <li>Stop the player from being able to enter more guesses (this would mess the game up).</li>
+   <li>Display control allowing the player to restart the game.</li>
+  </ol>
+ </li>
+ <li>Once the game restarts, make sure the game logic and UI are completely reset, then go back to step 1.</li>
+</ol>
+
+<p>Let's now move forward, looking at how we can turn these steps into code, building up the example, and exploring JavaScript features as we go.</p>
+
+<h2 id="Initial_setup">Initial setup</h2>
+
+<p>To begin this tutorial, we'd like you to make a local copy of the <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html" class="external">number-guessing-game-start.html</a> file (<a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html" class="external">see it live here</a>). Open it in both your text editor and your web browser. At the moment you'll see a simple heading, paragraph of instructions and form for entering a guess, but the form won't currently do anything.</p>
+
+<p>The place where we'll be adding all our code is inside the <a title="The &lt;script&gt; element (or HTML Script Element&nbsp;) is used to embed or reference an executable script within an HTML or XHTML document." href="/en-US/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> element at the bottom of the HTML:</p>
+
+<pre class="brush: html">&lt;script&gt;
+
+  // Your JavaScript goes here
+
+&lt;/script&gt;
+</pre>
+
+<h2 id="Adding_variables_to_store_our_data">Adding variables to store our data</h2>
+
+<p>Let's get started. First of all, add the following lines inside your <a title="The &lt;script&gt; element (or HTML Script Element&nbsp;) is used to embed or reference an executable script within an HTML or XHTML document." href="/en-US/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> element:</p>
+
+<pre class="brush: js">var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+var guesses = document.querySelector('.guesses');
+var lastResult = document.querySelector('.lastResult');
+var lowOrHi = document.querySelector('.lowOrHi');
+
+var guessSubmit = document.querySelector('.guessSubmit');
+var guessField = document.querySelector('.guessField');
+
+var guessCount = 1;
+var resetButton;</pre>
+
+<p>This section of the code sets up the variables we need to store the data our program will use. Variables are basically containers for values (such as numbers, or strings of text). You create a variable with the keyword <code>var</code> followed by a name for your variable. You can then assign a value to your variable with an equals sign (=) followed by the value you want to give it.</p>
+
+<p>In our example:</p>
+
+<ul>
+ <li>The first variable — <code>randomNumber</code> — is assigned a random number between 1 and 100, calculated using a mathematical algorithm.</li>
+ <li>The next three variables are each made to store a reference to the results paragraphs in our HTML, and are used to insert values into the paragraphs later on in the code:
+  <pre class="brush: html">&lt;p class="guesses"&gt;&lt;/p&gt;
+&lt;p class="lastResult"&gt;&lt;/p&gt;
+&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
+ </li>
+ <li>The next two variables store references to the form text input and submit button and are used to control submitting the guess later on.:
+  <pre class="brush: html">&lt;label for="guessField"&gt;Enter a guess: &lt;/label&gt;&lt;input type="text" id="guessField" class="guessField"&gt;
+&lt;input type="submit" value="Submit guess" class="guessSubmit"&gt;</pre>
+ </li>
+ <li>Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).</li>
+</ul>
+
+<div class="note">
+<p><strong>Note</strong>: You'll learn a lot more about variables later on in the course, starting with the <a href="https://developer.mozilla.org/en-US/docs/user:chrisdavidmills/variables">next article</a>.</p>
+</div>
+
+<h2 id="Functions">Functions</h2>
+
+<p>Next, add the following below your previous JavaScript:</p>
+
+<pre class="brush: js">function checkGuess() {
+  alert('I am a placeholder');
+}</pre>
+
+<p>Functions are reusable blocks of code that you can write once and run again and again, saving the need to keep repeating code all the time. This is really useful. There are a number of ways to define functions, but for now we'll concentrate on one simple type. Here we have defined a function by using the keyword <code>function</code>, followed by a name, with parentheses put after it. After that we put two curly braces (<code>{ }</code>). Inside the curly braces goes all the code that we want to run whenever we call the function.</p>
+
+<p>The code is run by typing the name of the function followed by the parentheses.</p>
+
+<p>Try saving your code now and refreshing it in the browser.</p>
+
+<p>Go into the <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a>, and enter the following line:</p>
+
+<pre class="brush: js">checkGuess();</pre>
+
+<p>You should see an alert come up that says "I am a placeholder"; we have defined a function in our code that creates an alert whenever we call it.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You'll learn a lot more about functions later in the course.</p>
+</div>
+
+<h2 id="Operators">Operators</h2>
+
+<p>JavaScript operators allow us to perform tests, do maths, join strings together, and other such things.</p>
+
+<p>Let's save our code and refresh the page shown in our browser. Open the <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">developer tools JavaScript console</a> if you haven't got it open already so you can try typing in the examples shown below — type in each one from the "Example" columns exactly as shown, pressing Return/enter after each one, and see what results they return. If you don't have easy access to the browser developer tools, you can always use the simple built in console seen below:</p>
+
+<div class="hidden">
+<h6 id="Hidden_code">Hidden code</h6>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;JavaScript console&lt;/title&gt;
+    &lt;style&gt;
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background-color: #0C323D;
+        color: #809089;
+        font-family: monospace;
+      }
+
+      body {
+        max-width: 700px;
+      }
+
+      p {
+        margin: 0;
+        width: 1%;
+        padding: 0 1%;
+        font-size: 16px;
+        line-height: 1.5;
+        float: left;
+      }
+
+      .input p {
+        margin-right: 1%;
+      }
+
+      .output p {
+        width: 100%;
+      }
+
+      .input input {
+        width: 96%;
+        float: left;
+        border: none;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: monospace;
+        padding: 0;
+        background: #0C323D;
+        color: #809089;
+      }
+
+      div {
+        clear: both;
+      }
+
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    
+  &lt;/body&gt;
+
+  &lt;script&gt;
+    var geval = eval;
+    function createInput() {
+      var inputDiv = document.createElement('div');
+      var inputPara = document.createElement('p');
+      var inputForm = document.createElement('input');
+
+      inputDiv.setAttribute('class','input');
+      inputPara.textContent = '&gt;';
+      inputDiv.appendChild(inputPara);
+      inputDiv.appendChild(inputForm);
+      document.body.appendChild(inputDiv);
+      inputDiv.focus();
+
+      inputForm.addEventListener('change', executeCode);
+    }
+
+    function executeCode(e) {
+      try {
+        var result = geval(e.target.value);
+      } catch(e) {
+        var result = 'error — ' + e.message;
+      }
+
+      var outputDiv = document.createElement('div');
+      var outputPara = document.createElement('p');
+
+      outputDiv.setAttribute('class','output');
+      outputPara.textContent = 'Result: ' + result;
+      outputDiv.appendChild(outputPara);
+      document.body.appendChild(outputDiv);
+
+      e.target.disabled = true;
+      e.target.parentNode.style.opacity = '0.5';
+
+      createInput()
+    }
+    
+    createInput();
+
+  &lt;/script&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<p><iframe width="100%" frameborder="0" id="frame_Hidden_code" src="../../../../../../mdn.mozillademos.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash%24samples/Hidden_code7c39.html?revision=1145392" height="300" class="live-sample-frame sample-code-frame"></iframe></p>
+
+<p>First let's look at arithmetic operators, for example:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Name</th>
+   <th scope="col">Example</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>+</code></td>
+   <td>Addition</td>
+   <td><code>6 + 9</code></td>
+  </tr>
+  <tr>
+   <td><code>-</code></td>
+   <td>Subtraction</td>
+   <td><code>20 - 15</code></td>
+  </tr>
+  <tr>
+   <td><code>*</code></td>
+   <td>Multiplication</td>
+   <td><code>3 * 7</code></td>
+  </tr>
+  <tr>
+   <td><code>/</code></td>
+   <td>Division</td>
+   <td><code>10 / 5</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>You can also use the + operator to join text strings together (called concatention in programming). Try entering the following lines:</p>
+
+<pre class="brush: js">var name = 'Bingo';
+name;
+var hello = ' says hello!';
+hello;
+var greeting = name + hello;
+greeting;</pre>
+
+<p>There are also some shortcut operators available, called augmented assignment operators. For example, if you want to simply add a new text string to an existing one and return the result, you could do this:</p>
+
+<pre class="brush: js">name += ' says hello!';</pre>
+
+<p>This is equivalent to</p>
+
+<pre class="brush: js">name = name + ' says hello!';</pre>
+
+<p>When we are running true/false tests (for example inside conditionals — see below), we use comparison operators, for example:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Name</th>
+   <th scope="col">Example</th>
+  </tr>
+  <tr>
+   <td><code>===</code></td>
+   <td>Strict equality (is it exactly the same?)</td>
+   <td><code>5 === 2 + 4</code></td>
+  </tr>
+  <tr>
+   <td><code>!==</code></td>
+   <td>Non-equality (is it not the same?)</td>
+   <td><code>'Chris' !== 'Ch' + 'ris'</code></td>
+  </tr>
+  <tr>
+   <td><code>&lt;</code></td>
+   <td>Less than</td>
+   <td><code>10 &lt; 6</code></td>
+  </tr>
+  <tr>
+   <td><code>&gt;</code></td>
+   <td>Greater than</td>
+   <td><code>10 &gt; 20</code></td>
+  </tr>
+ </thead>
+</table>
+
+<h2 id="Conditionals">Conditionals</h2>
+
+<p>Returning to our <code>checkGuess()</code> function, I think it's safe to say that we don't want it to just spit out a placeholder message. We want it to check whether a player's guess is correct or not, and respond appropriately.</p>
+
+<p>At this point, replace your current <code>checkGuess()</code> function with this version instead:</p>
+
+<pre class="brush: js">function checkGuess() {
+  var userGuess = Number(guessField.value);
+  if(guessCount === 1) {
+    guesses.textContent = 'Previous guesses: ';
+  }
+  guesses.textContent += userGuess + ' ';
+ 
+  if(userGuess === randomNumber) {
+    lastResult.textContent = 'Congratulations! You got it right!';
+    lastResult.style.backgroundColor = 'green';
+    lowOrHi.textContent = '';
+    setGameOver();
+  } else if(guessCount === 10) {
+    lastResult.textContent = '!!!GAME OVER!!!';
+    setGameOver();
+  } else {
+    lastResult.textContent = 'Wrong!';
+    lastResult.style.backgroundColor = 'red';
+    if(userGuess &lt; randomNumber) {
+      lowOrHi.textContent = 'Last guess was too low!';
+    } else if(userGuess &gt; randomNumber) {
+      lowOrHi.textContent = 'Last guess was too high!';
+    }
+  }
+ 
+  guessCount++;
+  guessField.value = '';
+  guessField.focus();
+}</pre>
+
+<p>This is a lot of code — phew! Let's go through each section and explain what it does.</p>
+
+<ul>
+ <li>The first line (line 2 above) declares a variable called <code>userGuess</code> and sets its value to the current value entered inside the text field. We also run this value through the built-in <code>Number()</code> method, just to make sure the value is definitely a number.</li>
+ <li>Next, we encounter our first conditional code block (lines 3–5 above). A conditional code block allows you to run code selectively, depending on whether a certain condition is true or not. It looks a bit like a function, but it isn't. The simplest form of conditional block starts with the keyword <code>if</code>, then some parentheses, then some curly braces. Inside the parentheses we include a test. If the test returns <code>true</code>, we run the code inside the curly braces. If not, we don't, and move on to the next bit of code. In this case the test is testing whether the <code>guessCount</code> variable is equal to <code>1</code>, i.e. whether this is the player's first go or not:
+  <pre class="brush: js">guessCount === 1</pre>
+  If it is, we make the guesses paragraph's text content equal to "Previous guesses: ". If not, we don't.</li>
+ <li>Line 6 appends the current <code>userGuess</code> value onto the end of the <code>guesses</code> paragraph, plus a blank space so there will be a space between each guess shown.</li>
+ <li>The next block (lines 8–24 above) does a few checks:
+  <ul>
+   <li>The first <code>if(){ }</code> checks whether the user's guess is equal to the <code>randomNumber</code> set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called <code>setGameOver()</code>, which we'll discuss later.</li>
+   <li>Now we've chained another test onto the end of the last one using an <code>else if(){ }</code> structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.</li>
+   <li>The final block chained onto the end of this code (the <code>else { }</code>) contains code that is only run if neither of the other two tests returns true (i.e. the player didn't guess right, but they have more guesses left). In this case we tell them they are wrong, then we perform another conditional test to check whether the guess was higher or lower than the answer, displaying a further message as appropriate to tell them higher or lower.</li>
+  </ul>
+ </li>
+ <li>The last three lines in the function (line 26–28 above) get us ready for the next guess to be submitted. We add 1 to the <code>guessCount</code> variable so the player uses up their turn (<code>++</code> is an incrementation operation — increment by 1), and empty the value out of the form text field and focus it again, ready for the next guess to be entered.</li>
+</ul>
+
+<h2 id="Events">Events</h2>
+
+<p>At this point we have a nicely implemented <code>checkGuess()</code> function, but it won't do anything because we haven't called it yet. Ideally we want to call it when the "Submit guess" button is pressed, and to do this we need to use an event. Events are actions happening in the browser like a button being clicked, or a page loading, or a video playing, which we can run blocks of code in response to. The constructs that listen out for the event happening are called <strong>event listeners</strong>, and the blocks of code run in response to the event firing are called <strong>event handlers</strong>.</p>
+
+<p>Add the following line below the closing curly brace of your <code>checkGuess()</code> function:</p>
+
+<pre class="brush: js">guessSubmit.addEventListener('click', checkGuess);</pre>
+
+<p>Here we are adding an event listener to the <code>guessSubmit</code> button. This is a method that takes two input values (called arguments) — the type of event we are listening out for (in this case <code>click</code>) as a string, and the code we want to run when the event occurs (in this case the <code>checkGuess()</code> function — note that we don't need to specify the parentheses when writing it inside <a title="The EventTarget.addEventListener() method registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest)." href="../../../Web/API/EventTarget/addEventListener.html"><code>addEventListener()</code></a>).</p>
+
+<p>Try saving and refreshing your code now, and your example should now work, to a point. The only problem now is that if you guess the correct answer or run out of guesses, the game will break because we've not yet defined the <code>setGameOver()</code> function that is supposed to be run once the game is over. Let's add our missing code now and complete the example functionality.</p>
+
+<h2 id="Finishing_the_game_functionality">Finishing the game functionality</h2>
+
+<p>Let's add that <code>setGameOver()</code> function to the bottom of our code and then walk through it. Add this now, below the rest of your JavaScript:</p>
+
+<pre class="brush: js">function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement('button');
+  resetButton.textContent = 'Start new game';
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener('click', resetGame);
+}</pre>
+
+<ul>
+ <li>The first two lines disable the form text input and button by setting their disabled properties to <code>true</code>. This is necessary, because if we didn't, the user could submit more guesses after the game is over, which would mess things up.</li>
+ <li>The next three lines generate a new <a title="The HTML &lt;button&gt; Element represents a clickable button." href="/en-US/docs/Web/HTML/Element/button"><code>&lt;button&gt;</code></a> element, set its text label to "Start new game", and add it to the bottom of our existing HTML.</li>
+ <li>The final line sets an event listener on our new button so that when it is clicked, a function called <code>resetGame()</code> is run.</li>
+</ul>
+
+<p>Now we need to define this function too! Add the following code, again to the bottom of your JavaScript:</p>
+
+<pre class="brush: js">function resetGame() {
+  guessCount = 1;
+
+  var resetParas = document.querySelectorAll('.resultParas p');
+  for(var i = 0 ; i &lt; resetParas.length ; i++) {
+    resetParas[i].textContent = '';
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = '';
+  guessField.focus();
+
+  lastResult.style.backgroundColor = 'white';
+
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}</pre>
+
+<p>This rather long block of code completely resets everything to how it was at the start of the game, so the player can have another go. It:</p>
+
+<ul>
+ <li>Puts the <code>guessCount</code> back down to 1.</li>
+ <li>Clears all the information paragraphs.</li>
+ <li>Removes the reset button from our code.</li>
+ <li>Enables the form elements, and empties and focuses the text field, ready for a new guess to be entered.</li>
+ <li>Removes the background color from the <code>lastResult</code> paragraph.</li>
+ <li>Generates a new random number so that you are not just guessing the same number again!</li>
+</ul>
+
+<p><strong>At this point you should have a fully working (simple) game — congratulations!</strong></p>
+
+<p>All we have left to do now in this article is talk about a few other important code features that you've already seen, although you may have not realized this.</p>
+
+<h2 id="Loops">Loops</h2>
+
+<p>One part of the above code that we need to take a more detailed look at is the <a href="../../../Web/JavaScript/Reference/Statements/for.html">for</a> loop. Loops are a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.</p>
+
+<p>To start with, go to your <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools JavaScript console</a> again, and enter the following:</p>
+
+<pre class="brush: js">for(var i = 1 ; i &lt; 21 ; i++) { console.log(i) }</pre>
+
+<p>What happened? The numbers 1 to 20 were printed out in your console. This is because of the loop. A <code>for</code> loop takes three input values (arguments):</p>
+
+<ol>
+ <li><strong>A starting value</strong>: In this case we are starting a count at 1, but this could be any number you like. You can replace <code>i</code> with any name you like too, but <code>i</code> is used as a convention because it's short and easy to remember.</li>
+ <li><strong>An exit condition</strong>: Here we have specified <code>i &lt; 21</code> — the loop will keep going until <code>i</code> is no longer less than 21. When <code>i</code> reaches 21, the loop with no longer run</li>
+ <li><strong>An incrementor</strong>: We have specified <code>i++</code>, which means "add 1 to i". The loop will run once for every value of <code>i</code>, until <code>i</code> reaches a value of 21 (as discussed above.) In this case, we are simply printing the value of <code>i</code> out to the console on every iteration using <a title="Outputs a message to the Web Console." href="../../../Web/API/Console/log.html"><code>console.log()</code></a>.</li>
+</ol>
+
+<p>Now let's look at the loop in our number guessing game — the following can be found inside the <code>resetGame()</code> function:</p>
+
+<pre class="brush: js">var resetParas = document.querySelectorAll('.resultParas p');
+for(var i = 0 ; i &lt; resetParas.length ; i++) {
+  resetParas[i].textContent = '';
+}</pre>
+
+<p>This code creates a variable containing a list of all the paragraphs inside <code>&lt;div class="resultParas"&gt;</code> using the <a title="Returns a list of the elements within the document (using depth-first pre-order traversal of the document's nodes) that match the specified group of selectors. The object returned is a NodeList." href="../../../Web/API/Document/querySelectorAll.html"><code>querySelectorAll()</code></a> method, then it loops through each one, removing the text content of each.</p>
+
+<h2 id="A_small_discussion_on_objects">A small discussion on objects</h2>
+
+<p>Let's add one more final improvement before we get to this discussion. Add the following line just below the <code>var resetButton;</code> line near the top of your JavaScript, then save your file:</p>
+
+<pre class="brush: js">guessField.focus();</pre>
+
+<p>This line uses the <a title="The HTMLElement.focus() method sets focus on the specified element, if it can be focused." href="../../../Web/API/HTMLElement/focus.html"><code>focus()</code></a> method to automatically put the text cursor into the <a title="The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute." href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> text field as soon as the page loads, meaning that the user can start typing their first guess right away, and doesn't have to click the form field first. It's only a small addition, but it improves usability — giving the user a good visual clue as to what they've got to do to play the game.</p>
+
+<p>Let's analyze what's going on here in a bit more detail. In JavaScript, everything is an object. An object is a collection of related functionality stored in a single grouping. You can create your own objects, but that is quite advanced and we won't be covering it until much later in the course. For now, we'll just briefly discuss the built-in objects that your browser contains, which allow you to do lots of useful things.</p>
+
+<p>In this particular case, we first created a <code>guessField</code> variable that stores a reference to the text input form field in our HTML — the following line can be found amongst our variable declarations near the top:</p>
+
+<pre class="brush: js">var guessField = document.querySelector('.guessField');</pre>
+
+<p>To get this reference, we used the <a title="Returns the first Element within the document (using depth-first pre-order traversal of the document's nodes|by first element in document markup and iterating through sequential nodes by order of amount of child nodes) that matches the specified group of selectors." href="../../../Web/API/Document/querySelector.html"><code>querySelector()</code></a> method of the <a title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document." href="/en-US/docs/Web/API/Document"><code>document</code></a> object. <code>querySelector()</code> takes one piece of information — a <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">CSS selector</a> that selects the element you want a reference to.</p>
+
+<p>Because <code>guessField</code> now contains a reference to an <a title="The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute." href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> element, it will now have access to a number of properties (basically variables stored inside objects, some of which can't have their values changed) and methods (basically functions stored inside objects). One method available to input elements is <code>focus()</code>, so we can now use this line to focus the text input:</p>
+
+<pre class="brush: js">guessField.focus();</pre>
+
+<p>Variables that don't contain references to form elements won't have <code>focus()</code> available to them. For example, the <code>guesses</code> variable contains a reference to a <a title="The HTML &lt;p&gt; element (or HTML Paragraph Element) represents a paragraph of text." href="/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a> element, and <code>guessCount</code> contains a number.</p>
+
+<h3 id="Playing_with_browser_objects">Playing with browser objects</h3>
+
+<p>Let's play with some browser objects a bit.</p>
+
+<ol>
+ <li>First of all open your program up in a browser.</li>
+ <li>Next, open your <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">browser developer tools</a>, and make sure the JavaScript console tab is open.</li>
+ <li>Type in <code>guessField</code> and the console will show you that the variable contains an <a title="The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute." href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> element. You'll also notice that the console autocompletes object names that exist inside the execution environment, including your variables!</li>
+ <li>Now type in the following:
+  <pre class="brush: js">guessField.value = 'Hello';</pre>
+  The <code>value</code> property represents the current value entered into the text field. You'll see that by entering this command, we've changed what that is!</li>
+ <li>Now try typing in <code>guesses</code> and pressing return. The console will show you that the variable contains a <a title="The HTML &lt;p&gt; element (or HTML Paragraph Element) represents a paragraph of text." href="/en-US/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a> element.</li>
+ <li>Now try entering the following line:
+  <pre class="brush: js">guesses.value</pre>
+  The browser will return <code>undefined</code>, because <code>value</code> doesn't exist on paragraphs.</li>
+ <li>To change the text inside a paragraph, you need the <a title="The Node.textContent&nbsp;property represents the text content of a node and its descendants." href="../../../Web/API/Node/textContent.html"><code>textContent</code></a> property instead. Try this:
+  <pre class="brush: js">guesses.textContent = 'Where is my paragraph?';</pre>
+ </li>
+ <li>Now for some fun stuff. Try entering the below lines, one by one:
+  <pre class="brush: js">guesses.style.backgroundColor = 'yellow';
+guesses.style.fontSize = '200%';
+guesses.style.padding = '10px';
+guesses.style.boxShadow = '3px 3px 6px black';</pre>
+  Every element on a page has a <code>style</code> property, which itself contains an object whose properties contain all the inline CSS styles applied to that element. This allows us to dynamically set new CSS styles on elements using JavaScript.</li>
+</ol>
+
+<h2 id="Finished_for_now...">Finished for now...</h2>
+
+<p>So that's it for building the example — you got to the end, well done! Try your final code out, or <a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html" class="external">play with our finished version here</a>. If you can't get the example to work, check it against the <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html" class="external">source code</a>.</p>
+
+<p></p><div class="prevnext"> 
+    <div><a style="float: left; width: 20%; text-align: left;" href="What_is_JavaScript.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-left"></i> Previous </span></a><a style="float: left; width: 60%; text-align: center;" href="../First_steps.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"><i class="icon-arrow-up"></i> Overview: First steps</span></a><a style="width: 20%; float: right; text-align: right;" href="What_went_wrong.html"><span style="display: inline-block; background: #eaeff2; border-radius: 4px; box-shadow: inset 0 -1px #bbbfc2; color: #4d4353; padding: 0.3em 0.8em;"> Next  <i class="icon-arrow-right"></i></span></a></div> 
+    <p>&nbsp;</p> 
+</div><p></p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Article">Article</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Beginner">Beginner</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/CodingScripting">CodingScripting</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Conditionals">Conditionals</a></li>
+      
+        <li><a href="../../../tag/events-2.html">events</a></li>
+      
+        <li><a href="../../../tag/Events.html">Events</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Functions">Functions</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/JavaScript">JavaScript</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/l10n:priority">l10n:priority</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Learn">Learn</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Objects">Objects</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/objects">objects</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Operators">Operators</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Variables">Variables</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/beardedpayton">beardedpayton</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Jeremie">Jeremie</a>,
+                      <time datetime="2016-11-21T06:58:17-08:00">Nov 21, 2016, 6:58:17 AM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+     
+ 
+<ol> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"><strong>Complete beginners start here!</strong></a> 
+  </li><li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">Getting started with the Web overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">How the Web works</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML"><strong>HTML — Structuring the Web</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What's in the head? Metadata in HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Assessment: Marking up a letter</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Assessment: Structuring a page of content</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From object to iframe — other embedding technologies</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Assessment: Mozilla splash page</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS"><strong>CSS — Styling the Web</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax">CSS syntax</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Selectors introduction</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors">Simple selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Attribute selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors">Combinators and multiple selectors</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">The box model</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">Assessment: Fundamental CSS comprehension</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Assessment: Typesetting a community school homepage</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap">Box model recap</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Borders">Borders</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">Advanced box effects</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">Assessment: Creating fancy letterheaded paper</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">Assessment: A cool-looking box</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grids</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="open"><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript"><strong>JavaScript — Dynamic client-side scripting</strong></a></li> 
+  <li data-default-state="open"><a href="../First_steps.html">JavaScript first steps</a> 
+    <ol> 
+      <li><a href="../First_steps.html">JavaScript first steps overview</a></li> 
+      <li><a href="What_is_JavaScript.html">What is JavaScript?</a></li> 
+      <li><a href="A_first_splash.html">A first splash into JavaScript</a></li> 
+      <li><a href="What_went_wrong.html">What went wrong? Troubleshooting JavaScript</a></li> 
+      <li><a href="Variables.html">Storing the information you need — Variables</a></li> 
+      <li><a href="Math.html">Basic in JavaScript — Numbers and operators</a></li> 
+      <li><a href="Strings.html">Handling text — Strings in JavaScript</a></li> 
+      <li><a href="Useful_string_methods.html">Useful string methods</a></li> 
+      <li><a href="Arrays.html">Arrays</a></li> 
+      <li><a href="Silly_story_generator.html">Assessment: Silly story generator</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="../Building_blocks.html">JavaScript building blocks</a> 
+    <ol> 
+      <li><a href="../Building_blocks.html">JavaScript building blocks overview</a></li> 
+      <li><a href="../Building_blocks/conditionals.html">Making decisions in your code — Conditionals</a></li> 
+      <li><a href="../Building_blocks/Looping_code.html">Looping code</a></li> 
+      <li><a href="../Building_blocks/Functions.html">Functions — Reusable blocks of code</a></li> 
+      <li><a href="../Building_blocks/Build_your_own_function.html">Build your own function</a></li> 
+      <li><a href="../Building_blocks/Return_values.html">Function return values</a></li> 
+      <li><a href="../Building_blocks/Events.html">Introduction to events</a></li> 
+      <li><a href="../Building_blocks/Image_gallery.html">Assessment: Image gallery</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="../Objects.html">Introducing JavaScript objects</a> 
+    <ol> 
+      <li><a href="../Objects.html">Introducing JavaScript objects overview</a></li> 
+      <li><a href="../Objects/Basics.html">Object basics</a></li> 
+      <li><a href="../Objects/Object-oriented_JS.html">Object-oriented JavaScript for beginners</a></li> 
+      <li><a href="../Objects/Object_prototypes.html">Object prototypes</a></li> 
+      <li><a href="../Objects/Inheritance.html">Inheritance in JavaScript</a></li> 
+      <li><a href="../Objects/JSON.html">Working with JSON data</a></li> 
+      <li><a href="../Objects/Object_building_practice.html">Object building practise</a></li> 
+      <li><a href="../Objects/Adding_bouncing_balls_features.html">Assessment: Adding features to our bouncing balls demo</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing"><strong>Tools and testing</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">Cross browser testing overview</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Introduction to cross browser testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Strategies for carrying out testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Handling common HTML and CSS problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Handling common JavaScript problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Handling common accessibility problems</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Implementing feature detection</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Introduction to automated testing</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Setting up your own test automation environment</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side"><strong>Server-side website programming</strong></a></li> 
+ 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps</a> 
+  <ol> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps">First steps overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server-side</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li> 
+  </ol> 
+  </li> 
+ 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python)</a> 
+  <ol> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django">Django web framework (Python) overview</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction">Introduction</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a development environment</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Tutorial: The Local Library website</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website">Tutorial Part 2: Creating a skeleton website</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models">Tutorial Part 3: Using models</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site">Tutorial Part 4: Django admin site</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page">Tutorial Part 5: Creating our home page</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views">Tutorial Part 6: Generic list and detail views</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions">Tutorial Part 7: Sessions framework</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Authentication">Tutorial Part 8: User authentication and permissions</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms">Tutorial Part 9: Working with forms</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing">Tutorial Part 10: Testing a Django web application</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment">Tutorial Part 11: Deploying Django to production</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/web_application_security">Web application security</a></li> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/django_assessment_blog">Assessment: DIY mini blog</a></li> 
+  </ol> 
+  </li> 
+  <li><a href="#"><strong>Further resources</strong></a></li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Other_learning_material">Advanced learning material</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/WebGL">WebGL: Graphics processing</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions">Common questions</a> 
+    <ol> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto">HTML questions</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto">CSS questions</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#How_the_Web_works">How the Web works</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Tools_and_setup">Tools and setup</a></li> 
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions#Design_and_accessibility">Design and accessibility</a></li> 
+    </ol> 
+  </li> 
+  <li data-default-state="closed"><a href="https://developer.mozilla.org/en-US/docs/Learn/How_to_contribute">How to contribute</a></li> 
+</ol> 
+ 
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Learn/JavaScript/First_steps/A_first_splash" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Learn/JavaScript/First_steps/%E7%AC%AC%E4%B8%80%E7%82%B9">
+            中文 (简体) (zh-CN)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:32:29 GMT -->
+</body></html>

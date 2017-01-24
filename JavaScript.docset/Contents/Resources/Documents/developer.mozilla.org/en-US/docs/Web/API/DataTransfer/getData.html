@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:28:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:10:57 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -63,6 +62,14 @@
   <link rel="canonical" href="getData.html">
 
   
+    
+      <link rel="alternate" hreflang="it" href="https://developer.mozilla.org/it/docs/Web/API/DataTransfer/getData" title="DataTransfer.getData()">
+    
+      <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/DragDrop/DataTransfer/getData" title="DataTransfer.getData()">
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/DataTransfer/getData" title="DataTransfer.getData()">
+    
+  
 
   <!-- document-specific social tags -->
   <meta property="og:title" content="DataTransfer.getData()">
@@ -74,6 +81,13 @@
   <meta name="description" content="The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string.">
   <meta name="twitter:description" content="The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +105,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +158,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +175,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +192,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDataTransfer%2FgetData" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/DataTransfer/getData" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/DataTransfer/getData" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDataTransfer%2FgetData" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDataTransfer%2FgetData" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +215,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +239,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +253,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,13 +293,21 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
-                <li class="smaller">No translations exist for this article.</li>
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/it/docs/Web/API/DataTransfer/getData" title="Italian">Italiano (it)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/DragDrop/DataTransfer/getData" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/DataTransfer/getData" title="Korean">한국어 (ko)</a></bdi></li>
+                
               
 
               
@@ -313,7 +318,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +331,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -372,20 +378,50 @@
           </span>
 
         
-        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rolfedh" data-src="../../../../../../secure.gravatar.com/avatar/4d9e73208c9af39018924d0e67821a796c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rolfedh</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle" title="View profile: erikadoyle">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="erikadoyle" data-src="../../../../../../secure.gravatar.com/avatar/0f2324340bc4d49b1c17e82a643d387b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">erikadoyle</noscript></a>
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/JeffersonScher" title="View profile: JeffersonScher">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="JeffersonScher" data-src="../../../../../../secure.gravatar.com/avatar/d68e75d55b50591694847ebe2375a1fa6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">JeffersonScher</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/toddpress" title="View profile: toddpress">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="toddpress" data-src="../../../../../../secure.gravatar.com/avatar/ee4762cc40fcf579c00314034942748e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">toddpress</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/brulecap" title="View profile: brulecap">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="brulecap" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">brulecap</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/NicolasGoudry" title="View profile: NicolasGoudry">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="NicolasGoudry" data-src="../../../../../../secure.gravatar.com/avatar/51f91987e5d72821d669a37979fdde386c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">NicolasGoudry</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/rolfedh" title="View profile: rolfedh">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rolfedh" data-src="../../../../../../secure.gravatar.com/avatar/4d9e73208c9af39018924d0e67821a796c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rolfedh</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/AFBarstow" title="View profile: AFBarstow">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="AFBarstow" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">AFBarstow</noscript></a>
                 </li>
@@ -413,7 +449,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Arguments" rel="internal">Arguments</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Example" rel="internal">Example</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Arguments" rel="internal">Arguments</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Example" rel="internal">Example</a><ol><li><a href="#HTML_Content" rel="internal">HTML Content</a></li><li><a href="#CSS_Content" rel="internal">CSS Content</a></li><li><a href="#JavaScript_Content" rel="internal">JavaScript Content</a></li><li><a href="#Result" rel="internal">Result</a></li></ol></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -434,12 +470,12 @@
 
               
                 
+                
                   <div class="warning warning-review">
                     <p>
-                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
+                      This article needs an editorial review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review">How you can help.</a>
                     </p>
                   </div>
-                
                 
                 
               
@@ -449,9 +485,11 @@
               <article id="wikiArticle">
                 
                   
-                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+                    <div>
+<p>
+</p></div>
 
-<p>The <strong><code>DataTransfer.getData()</code></strong> method retrieves drag data (as a <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a>) for the specified type. If the drag operation does not include data, this method returns an empty string.</p>
+<p>The <strong><code>DataTransfer.getData()</code></strong> method retrieves drag data (as a <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a>) for the specified type. If the drag operation does not include data, this method returns an empty string.</p>
 
 <p>Example data types are <code>text/plain</code> and <code>text/uri-list</code>.</p>
 
@@ -464,71 +502,61 @@
 
 <dl>
  <dt><em>format</em></dt>
- <dd>A <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the type of data to retrieve.</dd>
+ <dd>A <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a> representing the type of data to retrieve.</dd>
 </dl>
 
 <h3 id="Return_value">Return value</h3>
 
 <dl>
- <dt><a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></dt>
- <dd>A <a href="../DOMString.html" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a> representing the drag data for the specified <code>format</code>. If the drag operation has no data or the operation has no data for the specified <code>format</code>, this method returns an empty string.</dd>
+ <dt><a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a></dt>
+ <dd>A <a title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String." href="../DOMString.html"><code>DOMString</code></a> representing the drag data for the specified <code>format</code>. If the drag operation has no data or the operation has no data for the specified <code>format</code>, this method returns an empty string.</dd>
 </dl>
 
 <h2 id="Example">Example</h2>
 
-<p>This example shows the use of the <a href="../DataTransfer.html" title="The DataTransfer object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API."><code>DataTransfer</code></a> object's <a href="getData.html" title="The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string."><code>getData()</code></a>, <a href="setData.html" title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type."><code>setData()</code></a> and <a href="clearData.html" title="The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method will have no effect."><code>clearData()</code></a> methods.</p>
+<p>This example shows the use of the <a title="The DataTransfer object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see HTML Drag and Drop API." href="../DataTransfer.html"><code>DataTransfer</code></a> object's <a title="The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string." href="getData.html"><code>getData()</code></a> and <a title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type." href="setData.html"><code>setData()</code></a> methods.</p>
 
-<pre class="brush: js">&lt;!DOCTYPE html&gt;
-&lt;html lang=en&gt;
-&lt;title&gt;Examples of DataTransfer.{setData(),getData(),clearData()&lt;/title&gt;
-&lt;meta content="width=device-width"&gt;
-&lt;style&gt;
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #source {
-    color: blue;
-    border: 1px solid black;
-  }
-  #target {
-    border: 1px solid black;
-  }
-&lt;/style&gt;
-&lt;script&gt;
-function dragstart_handler(ev) {
- console.log("dragStart");
- // Change the source element's background color to signify drag has started
- ev.currentTarget.style.border = "dashed";
- // Set the drag's format and data. Use the event target's id for the data 
- ev.dataTransfer.setData("text/plain", ev.target.id);
-}
+<h3 id="HTML_Content">HTML Content</h3>
 
-function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
-}
-
-function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- // Get the data, which is the id of the drop target
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
- // Clear the drag data cache (for all formats/types)
- ev.dataTransfer.clearData();
-}
-&lt;/script&gt;
-&lt;body&gt;
-&lt;h1&gt;Examples of &lt;code&gt;DataTransfer&lt;/code&gt;: &lt;code&gt;setData()&lt;/code&gt;, &lt;code&gt;getData()&lt;/code&gt;, &lt;code&gt;clearData()&lt;/code&gt;&lt;/h1&gt;
- &lt;div&gt;
-   &lt;p id="source" ondragstart="dragstart_handler(event);" draggable="true"&gt;
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.&lt;/p&gt;
- &lt;/div&gt;
- &lt;div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);"&gt;Drop Zone&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<pre class="brush: html">&lt;div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;
+    &lt;span id="drag" draggable="true" ondragstart="drag(event)"&gt;drag me to the other box&lt;/span&gt;
+&lt;/div&gt;
+&lt;div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"&gt;&lt;/div&gt;
 </pre>
+
+<h3 id="CSS_Content">CSS Content</h3>
+
+<pre class="brush: css">#div1, #div2 {
+    width:100px;
+    height:50px;
+    padding:10px;
+    border:1px solid #aaaaaa;
+}
+</pre>
+
+<h3 id="JavaScript_Content">JavaScript Content</h3>
+
+<pre class="brush: js">function allowDrop(allowdropevent) {
+    allowdropevent.target.style.color = 'blue';
+    allowdropevent.preventDefault();
+}
+
+function drag(dragevent) {
+    dragevent.dataTransfer.setData("text", dragevent.target.id);
+    dragevent.target.style.color = 'green';
+}
+
+function drop(dropevent) {
+    dropevent.preventDefault();
+    var data = dropevent.dataTransfer.getData("text");
+    dropevent.target.appendChild(document.getElementById(data));
+    document.getElementById("drag").style.color = 'black';
+}
+</pre>
+
+<h3 id="Result">Result</h3>
+
+<p id="EmbedLiveSample('Example'_''_''_''_'WebAPIDataTransfergetData')"><iframe src="../../../../../../mdn.mozillademos.org/en-US/docs/Web/API/DataTransfer/getData%24samples/Exampleb7fc.html?revision=1150968" id="frame_Example" width="600" frameborder="0" class="live-sample-frame sample-code-frame"></iframe></p>
 
 <h2 id="Specifications">Specifications</h2>
 
@@ -540,13 +568,13 @@ function drop_handler(ev) {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-getdata" class="external" lang="en" hreflang="en">WHATWG HTML Living Standard<br><small lang="en-US">The definition of 'getData()' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-getdata" class="external">WHATWG HTML Living Standard<br><small lang="en-US">The definition of 'getData()' in that specification.</small></a></td>
    <td><span class="spec-Living">Living Standard</span></td>
    <td>&nbsp;</td>
   </tr>
   <tr>
-   <td><a href="http://www.w3.org/html/wg/drafts/html/master/editing.html#dom-datatransfer-getdata" class="external" lang="en" hreflang="en">HTML5.1<br><small lang="en-US">The definition of 'getData()' in that specification.</small></a></td>
-   <td><span class="spec-WD">Working Draft</span></td>
+   <td><a lang="en" hreflang="en" href="http://www.w3.org/html/wg/drafts/html/master/editing.html#dom-datatransfer-getdata" class="external">HTML5.1<br><small lang="en-US">The definition of 'getData()' in that specification.</small></a></td>
+   <td><span class="spec-REC">Recommendation</span></td>
    <td>Initial definition</td>
   </tr>
  </tbody>
@@ -563,11 +591,13 @@ function drop_handler(ev) {
 </div><p></p>
 
 <div id="compat-desktop">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -575,9 +605,9 @@ function drop_handler(ev) {
   </tr>
   <tr>
    <td>Basic support</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>10</td>
+   <td>4</td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>3.5 [1]</td>
+   <td><a title="Released on 2012-01-31." href="https://developer.mozilla.org/en-US/Firefox/Releases/10">10</a> (10)</td>
    <td>12</td>
    <td>3.1</td>
   </tr>
@@ -586,13 +616,15 @@ function drop_handler(ev) {
 </div>
 
 <div id="compat-mobile">
-<table class="compat-table">
+
+&nbsp;&nbsp; <table class="compat-table">
  <tbody>
   <tr>
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
    <th>Chrome for Android</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>Firefox OS</th>
    <th>IE Mobile</th>
@@ -603,8 +635,8 @@ function drop_handler(ev) {
    <td>Basic support</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td><td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>10.0 (10)[1]</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>10</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
@@ -614,36 +646,18 @@ function drop_handler(ev) {
 </table>
 </div>
 
+<p>[1] Before Firefox 48, this method always returned an empty list if the MIME type was not in a white list.</p>
+
 <h2 id="See_also">See also</h2>
 
-<p></p><ul> 
- <li><a href="https://developer.mozilla.org/Web/Guide/HTML/Drag_and_drop">Drag and drop</a></li> 
- <li><a href="https://developer.mozilla.org/Web/Guide/HTML/Drag_operations">Drag Operations</a></li> 
- <li><a href="https://developer.mozilla.org/Web/Guide/HTML/Recommended_Drag_Types">Recommended Drag Types</a></li> 
- <li><a href="https://developer.mozilla.org/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items">Dragging and Dropping Multiple Items</a><a></a></li><a> 
-</a></ul><p></p>
+<p></p><ul><li><a href="../HTML_Drag_and_Drop_API.html">Drag and drop</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations">Drag Operations</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Recommended_Drag_Types">Recommended Drag Types</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items">Dragging and Dropping Multiple Items</a></li>
+</ul><p></p>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDataTransfer%2FgetData%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+DataTransfer.getData%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about DataTransfer.getData() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about DataTransfer.getData() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FDataTransfer%2FgetData%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about DataTransfer.getData() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -673,9 +687,21 @@ function drop_handler(ev) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/JeffersonScher">JeffersonScher</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/toddpress">toddpress</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/brulecap">brulecap</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/NicolasGoudry">NicolasGoudry</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz">Sebastianz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/AFBarstow">AFBarstow</a>
     
@@ -685,11 +711,48 @@ function drop_handler(ev) {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/rolfedh">rolfedh</a>,
-                      <time datetime="2016-02-29T07:09:52-08:00">Feb 29, 2016, 7:09:52 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/erikadoyle">erikadoyle</a>,
+                      <time datetime="2016-12-02T14:26:47.519028-08:00">Dec 2, 2016, 2:26:47 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -706,7 +769,7 @@ function drop_handler(ev) {
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../DataTransfer.html"><code>DataTransfer</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="dropEffect.html" title="The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur."><code>dropEffect</code></a></li><li><a href="effectAllowed.html" title="The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations."><code>effectAllowed</code></a></li><li><a href="files.html" title="The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty."><code>files</code></a></li><li><a href="items.html" title="The DataTransfer.items property is a list of the data transfer items in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty."><code>items</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozCursor.html" title="The DataTransfer.mozCursor property returns or sets the drag cursor's state. This is primarily used to control the cursor during tab drags."><code>mozCursor</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozItemCount.html" title="The DataTransfer.mozItemCount property returns the number of items being dragged. This can be used, for example, to get the number of files being dragged."><code>mozItemCount</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozSourceNode.html" title="The DataTransfer.mozSourceNode property is used to determine the Node over which the mouse cursor was located when the the drag operation was initiated (for example, when a &lt;button&gt; was clicked). For external drags or if the calling function cannot reach the node, null is returned."><code>mozSourceNode</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozUserCancelled.html" title="The DataTransfer.mozUserCancelled property is used in the dragend event handler to determine if the user canceled the drag or not. If the user canceled the event, the property returns true and returns false otherwise. This property only applies to the dragend event."><code>mozUserCancelled</code></a></li><li><a href="types.html" title="The DataTransfer.types property is an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation."><code>types</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="addElement.html" title="The DataTransfer.addElement() method sets the drag source to the given element. This element will be the element to which drag and dragend events are fired, and not the defaut target (the node that was dragged)."><code>addElement()</code></a></li><li><a href="clearData.html" title="The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method will have no effect."><code>clearData()</code></a></li><li><em><code>getData()</code></em></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozClearDataAt.html" title="The DataTransfer.mozClearDataAt() method removes the data associated with the given format for an item at the specified index. The index must be in the range from zero to the number of items minus one."><code>mozClearDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozGetDataAt.html" title="The DataTransfer.mozGetDataAt() method is used to retrieve an item in the drag event's data transfer object, based on a given format and index. This method returns null if the specified item does not exist or if the index is not in the range from zero to the number of items minus one."><code>mozGetDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozSetDataAt.html" title="The DataTransfer.mozSetDataAt() method is used to add data to a specific index in the drag event's data transfer object."><code>mozSetDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a href="mozTypesAt.html" title="The DataTransfer.mozTypesAt() method returns a list of the format types that are stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned."><code>mozTypesAt()</code></a></li><li><a href="setData.html" title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type."><code>setData()</code></a></li><li><a href="setDragImage.html" title="When a drag occurs, a translucent image is generated from the drag target (the element the dragstart event is fired at), and follows the mouse pointer during the drag. This image is created automatically so you do not need to create it yourself. However, if a custom image is desired, the DataTransfer.setDragImage() method can be used to set the custom image to be used."><code>setDragImage()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/abort.html"><code>abort</code></a></li><li><a href="../../Events/autocomplete.html"><code>autocomplete</code></a></li><li><a href="../../Events/autocompleteerror.html"><code>autocompleteerror</code></a></li><li><a href="../../Events/DOMContentLoaded.html"><code>DOMContentLoaded</code></a></li><li><a href="../../Events/afterprint.html"><code>afterprint</code></a></li><li><a href="../../Events/afterscriptexecute.html"><code>afterscriptexecute</code></a></li><li><a href="../../Events/beforeprint.html"><code>beforeprint</code></a></li><li><a href="../../Events/beforescriptexecute.html"><code>beforescriptexecute</code></a></li><li><a href="../../Events/beforeunload.html"><code>beforeunload</code></a></li><li><a href="../../Events/blur.html"><code>blur</code></a></li><li><a href="../../Events/cancel.html"><code>cancel</code></a></li><li><a href="../../Events/change.html"><code>change</code></a></li><li><a href="../../Events/click.html"><code>click</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/connect.html"><code>connect</code></a></li><li><a href="../../Events/contextmenu.html"><code>contextmenu</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/focus.html"><code>focus</code></a></li><li><a href="../../Events/hashchange.html"><code>hashchange</code></a></li><li><a href="../../Events/input.html"><code>input</code></a></li><li><a href="../../Events/invalid.html"><code>invalid</code></a></li><li><a href="../../Events/languagechange.html"><code>languagechange</code></a></li><li><a href="../../Events/load.html"><code>load</code></a></li><li><a href="../../Events/loadend.html"><code>loadend</code></a></li><li><a href="../../Events/loadstart.html"><code>loadstart</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/offline.html"><code>offline</code></a></li><li><a href="../../Events/online.html"><code>online</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/pagehide.html"><code>pagehide</code></a></li><li><a href="../../Events/pageshow.html"><code>pageshow</code></a></li><li><a href="../../Events/popstate.html"><code>popstate</code></a></li><li><a href="../../Events/progress.html"><code>progress</code></a></li><li><a href="../../Events/readystatechange.html"><code>readystatechange</code></a></li><li><a href="../../Events/reset.html"><code>reset</code></a></li><li><a href="../../Events/select.html"><code>select</code></a></li><li><a href="../../Events/show.html"><code>show</code></a></li><li><a href="../../Events/sort.html"><code>sort</code></a></li><li><a href="../../Events/storage.html"><code>storage</code></a></li><li><a href="../../Events/submit.html"><code>submit</code></a></li><li><a href="../../Events/toggle.html"><code>toggle</code></a></li><li><a href="../../Events/unload.html"><code>unload</code></a></li><li><a href="../../Events/loadeddata.html"><code>loadeddata</code></a></li><li><a href="../../Events/loadedmetadata.html"><code>loadedmetadata</code></a></li><li><a href="../../Events/canplay.html"><code>canplay</code></a></li><li><a href="../../Events/playing.html"><code>playing</code></a></li><li><a href="../../Events/play.html"><code>play</code></a></li><li><a href="../../Events/canplaythrough.html"><code>canplaythrough</code></a></li><li><a href="../../Events/seeked.html"><code>seeked</code></a></li><li><a href="../../Events/seeking.html"><code>seeking</code></a></li><li><a href="../../Events/stalled.html"><code>stalled</code></a></li><li><a href="../../Events/suspend.html"><code>suspend</code></a></li><li><a href="../../Events/timeupdate.html"><code>timeupdate</code></a></li><li><a href="../../Events/volumechange.html"><code>volumechange</code></a></li><li><a href="../../Events/waiting.html"><code>waiting</code></a></li><li><a href="../../Events/durationchange.html"><code>durationchange</code></a></li><li><a href="../../Events/emptied.html"><code>emptied</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for HTML DOM</strong></a><ol><li><a href="../BeforeUnloadEvent.html"><code>BeforeUnloadEvent</code></a></li><li><a href="../DOMStringMap.html"><code>DOMStringMap</code></a></li><li><a href="../ErrorEvent.html"><code>ErrorEvent</code></a></li><li><a href="../GlobalEventHandlers.html"><code>GlobalEventHandlers</code></a></li><li><a href="../HTMLAnchorElement.html"><code>HTMLAnchorElement</code></a></li><li><a href="../HTMLAreaElement.html"><code>HTMLAreaElement</code></a></li><li><a href="../HTMLAudioElement.html"><code>HTMLAudioElement</code></a></li><li><a href="../HTMLBRElement.html"><code>HTMLBRElement</code></a></li><li><a href="../HTMLBaseElement.html"><code>HTMLBaseElement</code></a></li><li><a href="../HTMLBaseFontElement.html"><code>HTMLBaseFontElement</code></a></li><li><a href="../HTMLBodyElement.html"><code>HTMLBodyElement</code></a></li><li><a href="../HTMLButtonElement.html"><code>HTMLButtonElement</code></a></li><li><a href="../HTMLCanvasElement.html"><code>HTMLCanvasElement</code></a></li><li><a href="../HTMLContentElement.html"><code>HTMLContentElement</code></a></li><li><a href="../HTMLDListElement.html"><code>HTMLDListElement</code></a></li><li><a href="../HTMLDataElement.html"><code>HTMLDataElement</code></a></li><li><a href="../HTMLDataListElement.html"><code>HTMLDataListElement</code></a></li><li><a href="../HTMLDialogElement.html"><code>HTMLDialogElement</code></a></li><li><a href="../HTMLDivElement.html"><code>HTMLDivElement</code></a></li><li><a href="../HTMLDocument.html"><code>HTMLDocument</code></a></li><li><a href="../HTMLElement.html"><code>HTMLElement</code></a></li><li><a href="../HTMLEmbedElement.html"><code>HTMLEmbedElement</code></a></li><li><a href="../HTMLFieldSetElement.html"><code>HTMLFieldSetElement</code></a></li><li><a href="../HTMLFormControlsCollection.html"><code>HTMLFormControlsCollection</code></a></li><li><a href="../HTMLFormElement.html"><code>HTMLFormElement</code></a></li><li><a href="../HTMLFrameSetElement.html"><code>HTMLFrameSetElement</code></a></li><li><a href="../HTMLHRElement.html"><code>HTMLHRElement</code></a></li><li><a href="../HTMLHeadElement.html"><code>HTMLHeadElement</code></a></li><li><a href="../HTMLHeadingElement.html"><code>HTMLHeadingElement</code></a></li><li><a href="../HTMLHtmlElement.html"><code>HTMLHtmlElement</code></a></li><li><a href="../HTMLIFrameElement.html"><code>HTMLIFrameElement</code></a></li><li><a href="../HTMLImageElement.html"><code>HTMLImageElement</code></a></li><li><a href="../HTMLInputElement.html"><code>HTMLInputElement</code></a></li><li><a href="../HTMLIsIndexElement.html"><code>HTMLIsIndexElement</code></a></li><li><a href="../HTMLKeygenElement.html"><code>HTMLKeygenElement</code></a></li><li><a href="../HTMLLIElement.html"><code>HTMLLIElement</code></a></li><li><a href="../HTMLLabelElement.html"><code>HTMLLabelElement</code></a></li><li><a href="../HTMLLegendElement.html"><code>HTMLLegendElement</code></a></li><li><a href="../HTMLLinkElement.html"><code>HTMLLinkElement</code></a></li><li><a href="../HTMLMapElement.html"><code>HTMLMapElement</code></a></li><li><a href="../HTMLMediaElement.html"><code>HTMLMediaElement</code></a></li><li><a href="../HTMLMetaElement.html"><code>HTMLMetaElement</code></a></li><li><a href="../HTMLMeterElement.html"><code>HTMLMeterElement</code></a></li><li><a href="../HTMLModElement.html"><code>HTMLModElement</code></a></li><li><a href="../HTMLOListElement.html"><code>HTMLOListElement</code></a></li><li><a href="../HTMLObjectElement.html"><code>HTMLObjectElement</code></a></li><li><a href="../HTMLOptGroupElement.html"><code>HTMLOptGroupElement</code></a></li><li><a href="../HTMLOptionElement.html"><code>HTMLOptionElement</code></a></li><li><a href="../HTMLOptionsCollection.html"><code>HTMLOptionsCollection</code></a></li><li><a href="../HTMLOutputElement.html"><code>HTMLOutputElement</code></a></li><li><a href="../HTMLParagraphElement.html"><code>HTMLParagraphElement</code></a></li><li><a href="../HTMLParamElement.html"><code>HTMLParamElement</code></a></li><li><a href="../HTMLPictureElement.html"><code>HTMLPictureElement</code></a></li><li><a href="../HTMLPreElement.html"><code>HTMLPreElement</code></a></li><li><a href="../HTMLProgressElement.html"><code>HTMLProgressElement</code></a></li><li><a href="../HTMLQuoteElement.html"><code>HTMLQuoteElement</code></a></li><li><a href="../HTMLScriptElement.html"><code>HTMLScriptElement</code></a></li><li><a href="../HTMLSelectElement.html"><code>HTMLSelectElement</code></a></li><li><a href="../HTMLShadowElement.html"><code>HTMLShadowElement</code></a></li><li><a href="../HTMLSourceElement.html"><code>HTMLSourceElement</code></a></li><li><a href="../HTMLSpanElement.html"><code>HTMLSpanElement</code></a></li><li><a href="../HTMLStyleElement.html"><code>HTMLStyleElement</code></a></li><li><a href="../HTMLTableCaptionElement.html"><code>HTMLTableCaptionElement</code></a></li><li><a href="../HTMLTableCellElement.html"><code>HTMLTableCellElement</code></a></li><li><a href="../HTMLTableColElement.html"><code>HTMLTableColElement</code></a></li><li><a href="../HTMLTableDataCellElement.html"><code>HTMLTableDataCellElement</code></a></li><li><a href="../HTMLTableElement.html"><code>HTMLTableElement</code></a></li><li><a href="../HTMLTableHeaderCellElement.html"><code>HTMLTableHeaderCellElement</code></a></li><li><a href="../HTMLTableRowElement.html"><code>HTMLTableRowElement</code></a></li><li><a href="../HTMLTableSectionElement.html"><code>HTMLTableSectionElement</code></a></li><li><a href="../HTMLTemplateElement.png"><code>HTMLTemplateElement</code></a></li><li><a href="../HTMLTextAreaElement.html"><code>HTMLTextAreaElement</code></a></li><li><a href="../HTMLTimeElement.html"><code>HTMLTimeElement</code></a></li><li><a href="../HTMLTitleElement.html"><code>HTMLTitleElement</code></a></li><li><a href="../HTMLTrackElement.html"><code>HTMLTrackElement</code></a></li><li><a href="../HTMLUListElement.html"><code>HTMLUListElement</code></a></li><li><a href="../HTMLUnknownElement.html"><code>HTMLUnknownElement</code></a></li><li><a href="../HTMLVideoElement.html"><code>HTMLVideoElement</code></a></li><li><a href="../HashChangeEvent.html"><code>HashChangeEvent</code></a></li><li><a href="../History.html"><code>History</code></a></li><li><a href="../ImageData.html"><code>ImageData</code></a></li><li><a href="../Location.html"><code>Location</code></a></li><li><a href="../MessageChannel.html"><code>MessageChannel</code></a></li><li><a href="../MessageEvent.html"><code>MessageEvent</code></a></li><li><a href="../MessagePort.html"><code>MessagePort</code></a></li><li><a href="../Navigator.html"><code>Navigator</code></a></li><li><a href="../NavigatorGeolocation.html"><code>NavigatorGeolocation</code></a></li><li><a href="../NavigatorID.html"><code>NavigatorID</code></a></li><li><a href="../NavigatorLanguage.html"><code>NavigatorLanguage</code></a></li><li><a href="../NavigatorOnLine.html"><code>NavigatorOnLine</code></a></li><li><a href="../NavigatorPlugins.html"><code>NavigatorPlugins</code></a></li><li><a href="../PageTransitionEvent.html"><code>PageTransitionEvent</code></a></li><li><a href="../Plugin.html"><code>Plugin</code></a></li><li><a href="../PluginArray.html"><code>PluginArray</code></a></li><li><a href="../PopStateEvent.html"><code>PopStateEvent</code></a></li><li><a href="../PortCollection.html"><code>PortCollection</code></a></li><li><a href="../RadioNodeList.html"><code>RadioNodeList</code></a></li><li><a href="../Transferable.html"><code>Transferable</code></a></li><li><a href="../ValidityState.html"><code>ValidityState</code></a></li><li><a href="../Window.html"><code>Window</code></a></li><li><a href="../WindowBase64.html"><code>WindowBase64</code></a></li><li><a href="../WindowEventHandlers.html"><code>WindowEventHandlers</code></a></li><li><a href="../WindowTimers.html"><code>WindowTimers</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../DataTransfer.html"><code>DataTransfer</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a title="The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur." href="dropEffect.html"><code>dropEffect</code></a></li><li><a title="The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations." href="effectAllowed.html"><code>effectAllowed</code></a></li><li><a title="Editorial review completed." href="files.html"><code>files</code></a></li><li><a title="The DataTransfer.items property is a list of the data transfer items in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty." href="items.html"><code>items</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozCursor property returns or sets the drag cursor's state. This is primarily used to control the cursor during tab drags." href="mozCursor.html"><code>mozCursor</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozItemCount property returns the number of items being dragged. This can be used, for example, to get the number of files being dragged." href="mozItemCount.html"><code>mozItemCount</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozSourceNode property is used to determine the Node over which the mouse cursor was located when the the drag operation was initiated (for example, when a &lt;button&gt; was clicked). For external drags or if the calling function cannot reach the node, null is returned." href="/en-US/docs/Web/API/DataTransfer/mozSourceNode"><code>mozSourceNode</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozUserCancelled property is used in the dragend event handler to determine if the user canceled the drag or not. If the user canceled the event, the property returns true and returns false otherwise. This property only applies to the dragend event." href="mozUserCancelled.html"><code>mozUserCancelled</code></a></li><li><a title="The DataTransfer.types read-only property is an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation." href="types.html"><code>types</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.addElement() method sets the drag source to the given element. This element will be the element to which drag and dragend events are fired, and not the defaut target (the node that was dragged)." href="addElement.html"><code>addElement()</code></a></li><li><a title="The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing." href="clearData.html"><code>clearData()</code></a></li><li><em><code>getData()</code></em></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozClearDataAt() method removes the data associated with the given format for an item at the specified index. The index must be in the range from zero to the number of items minus one." href="mozClearDataAt.html"><code>mozClearDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozGetDataAt() method is used to retrieve an item in the drag event's data transfer object, based on a given format and index. This method returns null if the specified item does not exist or if the index is not in the range from zero to the number of items minus one." href="mozGetDataAt.html"><code>mozGetDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozSetDataAt() method is used to add data to a specific index in the drag event's data transfer object." href="mozSetDataAt.html"><code>mozSetDataAt()</code></a></li><li><span class="sidebar-icon"><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></span><a title="The DataTransfer.mozTypesAt() method returns a list of the format types that are stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned." href="mozTypesAt.html"><code>mozTypesAt()</code></a></li><li><a title="The DataTransfer.setData() method sets the drag operation's drag data to the specified data and type. If data for the given type does not exist, it is added at the end of the drag data store, such that the last item in the types list will be the new type. If data for the given type already exists, the existing data is replaced in the same position. That is, the order of the types list is not changed when replacing data of the same type." href="setData.html"><code>setData()</code></a></li><li><a title="When a drag occurs, a translucent image is generated from the drag target (the element the dragstart event is fired at), and follows the mouse pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, if a custom image is desired, the DataTransfer.setDragImage() method can be used to set the custom image to be used." href="setDragImage.html"><code>setDragImage()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/abort.html"><code>abort</code></a></li><li><a href="../../Events/autocomplete.html"><code>autocomplete</code></a></li><li><a href="../../Events/autocompleteerror.html"><code>autocompleteerror</code></a></li><li><a href="../../Events/DOMContentLoaded.html"><code>DOMContentLoaded</code></a></li><li><a href="../../Events/afterprint.html"><code>afterprint</code></a></li><li><a href="../../Events/afterscriptexecute.html"><code>afterscriptexecute</code></a></li><li><a href="../../Events/beforeprint.html"><code>beforeprint</code></a></li><li><a href="../../Events/beforescriptexecute.html"><code>beforescriptexecute</code></a></li><li><a href="../../Events/beforeunload.html"><code>beforeunload</code></a></li><li><a href="../../Events/blur.html"><code>blur</code></a></li><li><a href="../../Events/cancel.html"><code>cancel</code></a></li><li><a href="../../Events/change.html"><code>change</code></a></li><li><a href="../../Events/click.html"><code>click</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/connect.html"><code>connect</code></a></li><li><a href="../../Events/contextmenu.html"><code>contextmenu</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/focus.html"><code>focus</code></a></li><li><a href="../../Events/hashchange.html"><code>hashchange</code></a></li><li><a href="../../Events/input.html"><code>input</code></a></li><li><a href="../../Events/invalid.html"><code>invalid</code></a></li><li><a href="../../Events/languagechange.html"><code>languagechange</code></a></li><li><a href="../../Events/load.html"><code>load</code></a></li><li><a href="../../Events/loadend.html"><code>loadend</code></a></li><li><a href="../../Events/loadstart.html"><code>loadstart</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/offline.html"><code>offline</code></a></li><li><a href="../../Events/online.html"><code>online</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/pagehide.html"><code>pagehide</code></a></li><li><a href="../../Events/pageshow.html"><code>pageshow</code></a></li><li><a href="../../Events/popstate.html"><code>popstate</code></a></li><li><a href="../../Events/progress.html"><code>progress</code></a></li><li><a href="../../Events/readystatechange.html"><code>readystatechange</code></a></li><li><a href="../../Events/reset.html"><code>reset</code></a></li><li><a href="../../Events/select.html"><code>select</code></a></li><li><a href="../../Events/show.html"><code>show</code></a></li><li><a href="../../Events/sort.html"><code>sort</code></a></li><li><a href="../../Events/storage.html"><code>storage</code></a></li><li><a href="../../Events/submit.html"><code>submit</code></a></li><li><a href="../../Events/toggle.html"><code>toggle</code></a></li><li><a href="../../Events/unload.html"><code>unload</code></a></li><li><a href="../../Events/loadeddata.html"><code>loadeddata</code></a></li><li><a href="../../Events/loadedmetadata.html"><code>loadedmetadata</code></a></li><li><a href="../../Events/canplay.html"><code>canplay</code></a></li><li><a href="../../Events/playing.html"><code>playing</code></a></li><li><a href="../../Events/play.html"><code>play</code></a></li><li><a href="../../Events/canplaythrough.html"><code>canplaythrough</code></a></li><li><a href="../../Events/seeked.html"><code>seeked</code></a></li><li><a href="../../Events/seeking.html"><code>seeking</code></a></li><li><a href="../../Events/stalled.html"><code>stalled</code></a></li><li><a href="../../Events/suspend.html"><code>suspend</code></a></li><li><a href="../../Events/timeupdate.html"><code>timeupdate</code></a></li><li><a href="../../Events/volumechange.html"><code>volumechange</code></a></li><li><a href="../../Events/waiting.html"><code>waiting</code></a></li><li><a href="../../Events/durationchange.html"><code>durationchange</code></a></li><li><a href="../../Events/emptied.html"><code>emptied</code></a></li><li><a href="../../Events/unhandledrejection.html"><code>unhandledrejection</code></a></li><li><a href="../../Events/rejectionhandled.html"><code>rejectionhandled</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for HTML DOM</strong></a><ol><li><a href="../BeforeUnloadEvent.html"><code>BeforeUnloadEvent</code></a></li><li><a href="../DOMStringMap.html"><code>DOMStringMap</code></a></li><li><a href="../ErrorEvent.html"><code>ErrorEvent</code></a></li><li><a href="../GlobalEventHandlers.html"><code>GlobalEventHandlers</code></a></li><li><a href="../HTMLAnchorElement.html"><code>HTMLAnchorElement</code></a></li><li><a href="../HTMLAreaElement.html"><code>HTMLAreaElement</code></a></li><li><a href="../HTMLAudioElement.html"><code>HTMLAudioElement</code></a></li><li><a href="../HTMLBRElement.html"><code>HTMLBRElement</code></a></li><li><a href="../HTMLBaseElement.html"><code>HTMLBaseElement</code></a></li><li><a href="../HTMLBaseFontElement.html"><code>HTMLBaseFontElement</code></a></li><li><a href="../HTMLBodyElement.html"><code>HTMLBodyElement</code></a></li><li><a href="../HTMLButtonElement.html"><code>HTMLButtonElement</code></a></li><li><a href="../HTMLCanvasElement.html"><code>HTMLCanvasElement</code></a></li><li><a href="../HTMLContentElement.html"><code>HTMLContentElement</code></a></li><li><a href="../HTMLDListElement.html"><code>HTMLDListElement</code></a></li><li><a href="../HTMLDataElement.html"><code>HTMLDataElement</code></a></li><li><a href="../HTMLDataListElement.html"><code>HTMLDataListElement</code></a></li><li><a href="../HTMLDialogElement.html"><code>HTMLDialogElement</code></a></li><li><a href="../HTMLDivElement.html"><code>HTMLDivElement</code></a></li><li><a href="../HTMLDocument.html"><code>HTMLDocument</code></a></li><li><a href="../HTMLElement.html"><code>HTMLElement</code></a></li><li><a href="../HTMLEmbedElement.html"><code>HTMLEmbedElement</code></a></li><li><a href="../HTMLFieldSetElement.html"><code>HTMLFieldSetElement</code></a></li><li><a href="../HTMLFormControlsCollection.html"><code>HTMLFormControlsCollection</code></a></li><li><a href="../HTMLFormElement.html"><code>HTMLFormElement</code></a></li><li><a href="../HTMLFrameSetElement.html"><code>HTMLFrameSetElement</code></a></li><li><a href="../HTMLHRElement.html"><code>HTMLHRElement</code></a></li><li><a href="../HTMLHeadElement.html"><code>HTMLHeadElement</code></a></li><li><a href="../HTMLHeadingElement.html"><code>HTMLHeadingElement</code></a></li><li><a href="../HTMLHtmlElement.html"><code>HTMLHtmlElement</code></a></li><li><a href="../HTMLIFrameElement.html"><code>HTMLIFrameElement</code></a></li><li><a href="../HTMLImageElement.html"><code>HTMLImageElement</code></a></li><li><a href="../HTMLInputElement.html"><code>HTMLInputElement</code></a></li><li><a href="../HTMLIsIndexElement.html"><code>HTMLIsIndexElement</code></a></li><li><a href="../HTMLKeygenElement.html"><code>HTMLKeygenElement</code></a></li><li><a href="../HTMLLIElement.html"><code>HTMLLIElement</code></a></li><li><a href="../HTMLLabelElement.html"><code>HTMLLabelElement</code></a></li><li><a href="../HTMLLegendElement.html"><code>HTMLLegendElement</code></a></li><li><a href="../HTMLLinkElement.html"><code>HTMLLinkElement</code></a></li><li><a href="../HTMLMapElement.html"><code>HTMLMapElement</code></a></li><li><a href="../HTMLMediaElement.html"><code>HTMLMediaElement</code></a></li><li><a href="../HTMLMetaElement.html"><code>HTMLMetaElement</code></a></li><li><a href="../HTMLMeterElement.html"><code>HTMLMeterElement</code></a></li><li><a href="../HTMLModElement.html"><code>HTMLModElement</code></a></li><li><a href="../HTMLOListElement.html"><code>HTMLOListElement</code></a></li><li><a href="../HTMLObjectElement.html"><code>HTMLObjectElement</code></a></li><li><a href="../HTMLOptGroupElement.html"><code>HTMLOptGroupElement</code></a></li><li><a href="../HTMLOptionElement.html"><code>HTMLOptionElement</code></a></li><li><a href="../HTMLOptionsCollection.html"><code>HTMLOptionsCollection</code></a></li><li><a href="../HTMLOutputElement.html"><code>HTMLOutputElement</code></a></li><li><a href="../HTMLParagraphElement.html"><code>HTMLParagraphElement</code></a></li><li><a href="../HTMLParamElement.html"><code>HTMLParamElement</code></a></li><li><a href="../HTMLPictureElement.html"><code>HTMLPictureElement</code></a></li><li><a href="../HTMLPreElement.html"><code>HTMLPreElement</code></a></li><li><a href="../HTMLProgressElement.html"><code>HTMLProgressElement</code></a></li><li><a href="../HTMLQuoteElement.html"><code>HTMLQuoteElement</code></a></li><li><a href="../HTMLScriptElement.html"><code>HTMLScriptElement</code></a></li><li><a href="../HTMLSelectElement.html"><code>HTMLSelectElement</code></a></li><li><a href="../HTMLShadowElement.html"><code>HTMLShadowElement</code></a></li><li><a href="../HTMLSourceElement.html"><code>HTMLSourceElement</code></a></li><li><a href="../HTMLSpanElement.html"><code>HTMLSpanElement</code></a></li><li><a href="../HTMLStyleElement.html"><code>HTMLStyleElement</code></a></li><li><a href="../HTMLTableCaptionElement.html"><code>HTMLTableCaptionElement</code></a></li><li><a href="../HTMLTableCellElement.html"><code>HTMLTableCellElement</code></a></li><li><a href="../HTMLTableColElement.html"><code>HTMLTableColElement</code></a></li><li><a href="../HTMLTableDataCellElement.html"><code>HTMLTableDataCellElement</code></a></li><li><a href="../HTMLTableElement.html"><code>HTMLTableElement</code></a></li><li><a href="../HTMLTableHeaderCellElement.html"><code>HTMLTableHeaderCellElement</code></a></li><li><a href="../HTMLTableRowElement.html"><code>HTMLTableRowElement</code></a></li><li><a href="../HTMLTableSectionElement.html"><code>HTMLTableSectionElement</code></a></li><li><a href="../HTMLTemplateElement.png"><code>HTMLTemplateElement</code></a></li><li><a href="../HTMLTextAreaElement.html"><code>HTMLTextAreaElement</code></a></li><li><a href="../HTMLTimeElement.html"><code>HTMLTimeElement</code></a></li><li><a href="../HTMLTitleElement.html"><code>HTMLTitleElement</code></a></li><li><a href="../HTMLTrackElement.html"><code>HTMLTrackElement</code></a></li><li><a href="../HTMLUListElement.html"><code>HTMLUListElement</code></a></li><li><a href="../HTMLUnknownElement.html"><code>HTMLUnknownElement</code></a></li><li><a href="../HTMLVideoElement.html"><code>HTMLVideoElement</code></a></li><li><a href="../HashChangeEvent.html"><code>HashChangeEvent</code></a></li><li><a href="../History.html"><code>History</code></a></li><li><a href="../ImageData.html"><code>ImageData</code></a></li><li><a href="../Location.html"><code>Location</code></a></li><li><a href="../MessageChannel.html"><code>MessageChannel</code></a></li><li><a href="../MessageEvent.html"><code>MessageEvent</code></a></li><li><a href="../MessagePort.html"><code>MessagePort</code></a></li><li><a href="../Navigator.html"><code>Navigator</code></a></li><li><a href="../NavigatorGeolocation.html"><code>NavigatorGeolocation</code></a></li><li><a href="../NavigatorID.html"><code>NavigatorID</code></a></li><li><a href="../NavigatorLanguage.html"><code>NavigatorLanguage</code></a></li><li><a href="../NavigatorOnLine.html"><code>NavigatorOnLine</code></a></li><li><a href="../NavigatorPlugins.html"><code>NavigatorPlugins</code></a></li><li><a href="../PageTransitionEvent.html"><code>PageTransitionEvent</code></a></li><li><a href="../Plugin.html"><code>Plugin</code></a></li><li><a href="../PluginArray.html"><code>PluginArray</code></a></li><li><a href="../PopStateEvent.html"><code>PopStateEvent</code></a></li><li><a href="../PortCollection.html"><code>PortCollection</code></a></li><li><a href="../PromiseRejectionEvent.html"><code>PromiseRejectionEvent</code></a></li><li><a href="../RadioNodeList.html"><code>RadioNodeList</code></a></li><li><a href="../Transferable.html"><code>Transferable</code></a></li><li><a href="../ValidityState.html"><code>ValidityState</code></a></li><li><a href="../Window.html"><code>Window</code></a></li><li><a href="../WindowBase64.html"><code>WindowBase64</code></a></li><li><a href="../WindowEventHandlers.html"><code>WindowEventHandlers</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -730,12 +793,12 @@ function drop_handler(ev) {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -743,13 +806,32 @@ function drop_handler(ev) {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Web/API/DataTransfer/getData" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="Italian" value="/it/docs/Web/API/DataTransfer/getData">
+            Italiano (it)
+          </option>
+          <option title="Japanese" value="/ja/docs/DragDrop/DataTransfer/getData">
+            日本語 (ja)
+          </option>
+          <option title="Korean" value="/ko/docs/Web/API/DataTransfer/getData">
+            한국어 (ko)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
   
 
         
@@ -762,63 +844,38 @@ function drop_handler(ev) {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/DataTransfer/getData$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:28:08 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:10:58 GMT -->
 </body></html>

@@ -1,0 +1,396 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Package overview &#8212; pandas 0.19.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.19.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="pandas 0.19.2 documentation" href="index.html" />
+    <link rel="next" title="10 Minutes to pandas" href="10min.html" />
+    <link rel="prev" title="Frequently Asked Questions (FAQ)" href="faq.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="10min.html" title="10 Minutes to pandas"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQ)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<div class="content-wrapper">
+    <div class="content">
+        <div class="document">
+            <div class="sphinxsidebar">
+                <h3>Table Of Contents</h3>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What&#8217;s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Package overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-structures-at-a-glance">Data structures at a glance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-more-than-1-data-structure">Why more than 1 data structure?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mutability-and-copying-of-data">Mutability and copying of data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-support">Getting Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-team">Development Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10min.html">10 Minutes to pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsintro.html">Intro to Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Essential Basic Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Working with Text Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing and Selecting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">MultiIndex / Advanced Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computation.html">Computational tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing_data.html">Working with missing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="groupby.html">Group By: split-apply-combine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merging.html">Merge, join, and concatenate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reshaping.html">Reshaping and Pivot Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeseries.html">Time Series / Date functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timedeltas.html">Time Deltas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">IO Tools (Text, CSV, HDF5, ...)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote_data.html">Remote Data Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancingperf.html">Enhancing Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse.html">Sparse data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gotchas.html">Caveats and Gotchas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="r_interface.html">rpy2 / R interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ecosystem.html">pandas Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_r.html">Comparison with R / R libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sql.html">Comparison with SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sas.html">Comparison with SAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html">Release Notes</a></li>
+</ul>
+
+                <h3 style="margin-top: 1.5em;">Search</h3>
+
+                <form class="search" action="search.html" method="get">
+                    <input type="text" name="q" size="18"/>
+                    <input type="submit" value="Go"/>
+                    <input type="hidden" name="check_keywords" value="yes"/>
+                    <input type="hidden" name="area" value="default"/>
+                </form>
+                <p class="searchtip" style="font-size: 90%">
+                    Enter search terms or a module, class or function name.
+                </p>
+
+            </div>
+             
+            <div class="documentwrapper">
+                <div class="bodywrapper">
+                    <div class="body">
+                        
+  <div class="section" id="package-overview">
+<span id="overview"></span><h1>Package overview<a class="headerlink" href="#package-overview" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="index.html#module-pandas" title="pandas"><code class="xref py py-mod docutils literal"><span class="pre">pandas</span></code></a> consists of the following things</p>
+<blockquote>
+<div><ul class="simple">
+<li>A set of labeled array data structures, the primary of which are
+Series and DataFrame</li>
+<li>Index objects enabling both simple axis indexing and multi-level /
+hierarchical axis indexing</li>
+<li>An integrated group by engine for aggregating and transforming data sets</li>
+<li>Date range generation (date_range) and custom date offsets enabling the
+implementation of customized frequencies</li>
+<li>Input/Output tools: loading tabular data from flat files (CSV, delimited,
+Excel 2003), and saving and loading pandas objects from the fast and
+efficient PyTables/HDF5 format.</li>
+<li>Memory-efficient &#8220;sparse&#8221; versions of the standard data structures for storing
+data that is mostly missing or mostly constant (some fixed value)</li>
+<li>Moving window statistics (rolling mean, rolling standard deviation, etc.)</li>
+<li>Static and moving window linear and <a class="reference external" href="http://en.wikipedia.org/wiki/Panel_data">panel regression</a></li>
+</ul>
+</div></blockquote>
+<div class="section" id="data-structures-at-a-glance">
+<h2>Data structures at a glance<a class="headerlink" href="#data-structures-at-a-glance" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="24%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Dimensions</th>
+<th class="head">Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Series</td>
+<td>1D labeled homogeneously-typed array</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>DataFrame</td>
+<td>General 2D labeled, size-mutable tabular structure with
+potentially heterogeneously-typed columns</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Panel</td>
+<td>General 3D labeled, also size-mutable array</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="why-more-than-1-data-structure">
+<h3>Why more than 1 data structure?<a class="headerlink" href="#why-more-than-1-data-structure" title="Permalink to this headline">¶</a></h3>
+<p>The best way to think about the pandas data structures is as flexible
+containers for lower dimensional data. For example, DataFrame is a container
+for Series, and Panel is a container for DataFrame objects. We would like to be
+able to insert and remove objects from these containers in a dictionary-like
+fashion.</p>
+<p>Also, we would like sensible default behaviors for the common API functions
+which take into account the typical orientation of time series and
+cross-sectional data sets. When using ndarrays to store 2- and 3-dimensional
+data, a burden is placed on the user to consider the orientation of the data
+set when writing functions; axes are considered more or less equivalent (except
+when C- or Fortran-contiguousness matters for performance). In pandas, the axes
+are intended to lend more semantic meaning to the data; i.e., for a particular
+data set there is likely to be a &#8220;right&#8221; way to orient the data. The goal,
+then, is to reduce the amount of mental effort required to code up data
+transformations in downstream functions.</p>
+<p>For example, with tabular data (DataFrame) it is more semantically helpful to
+think of the <strong>index</strong> (the rows) and the <strong>columns</strong> rather than axis 0 and
+axis 1. And iterating through the columns of the DataFrame thus results in more
+readable code:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+    <span class="c1"># do something with series</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="mutability-and-copying-of-data">
+<h2>Mutability and copying of data<a class="headerlink" href="#mutability-and-copying-of-data" title="Permalink to this headline">¶</a></h2>
+<p>All pandas data structures are value-mutable (the values they contain can be
+altered) but not always size-mutable. The length of a Series cannot be
+changed, but, for example, columns can be inserted into a DataFrame. However,
+the vast majority of methods produce new objects and leave the input data
+untouched. In general, though, we like to <strong>favor immutability</strong> where
+sensible.</p>
+</div>
+<div class="section" id="getting-support">
+<h2>Getting Support<a class="headerlink" href="#getting-support" title="Permalink to this headline">¶</a></h2>
+<p>The first stop for pandas issues and ideas is the <a class="reference external" href="https://github.com/pandas-dev/pandas/issues">Github Issue Tracker</a>. If you have a general question,
+pandas community experts can answer through <a class="reference external" href="http://stackoverflow.com/questions/tagged/pandas">Stack Overflow</a>.</p>
+<p>Longer discussions occur on the <a class="reference external" href="http://groups.google.com/group/pystatsmodels">developer mailing list</a>, and commercial support
+inquiries for Lambda Foundry should be sent to: <a class="reference external" href="mailto:support&#37;&#52;&#48;lambdafoundry&#46;com">support<span>&#64;</span>lambdafoundry<span>&#46;</span>com</a></p>
+</div>
+<div class="section" id="credits">
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+<p>pandas development began at <a class="reference external" href="http://www.aqr.com">AQR Capital Management</a> in
+April 2008. It was open-sourced at the end of 2009. AQR continued to provide
+resources for development through the end of 2011, and continues to contribute
+bug reports today.</p>
+<p>Since January 2012, <a class="reference external" href="http://www.lambdafoundry.com">Lambda Foundry</a>, has
+been providing development resources, as well as commercial support,
+training, and consulting for pandas.</p>
+<p>pandas is only made possible by a group of people around the world like you
+who have contributed new code, bug reports, fixes, comments and ideas. A
+complete list can be found <a class="reference external" href="http://www.github.com/pandas-dev/pandas/contributors">on Github</a>.</p>
+</div>
+<div class="section" id="development-team">
+<h2>Development Team<a class="headerlink" href="#development-team" title="Permalink to this headline">¶</a></h2>
+<p>pandas is a part of the PyData project. The PyData Development Team is a
+collection of developers focused on the improvement of Python&#8217;s data
+libraries. The core team that coordinates development can be found on <a class="reference external" href="http://github.com/pydata">Github</a>. If you&#8217;re interested in contributing, please
+visit the <a class="reference external" href="http://pandas.pydata.org">project website</a>.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">=======</span>
+<span class="n">License</span>
+<span class="o">=======</span>
+
+<span class="n">pandas</span> <span class="ow">is</span> <span class="n">distributed</span> <span class="n">under</span> <span class="n">a</span> <span class="mi">3</span><span class="o">-</span><span class="n">clause</span> <span class="p">(</span><span class="s2">&quot;Simplified&quot;</span> <span class="ow">or</span> <span class="s2">&quot;New&quot;</span><span class="p">)</span> <span class="n">BSD</span>
+<span class="n">license</span><span class="o">.</span> <span class="n">Parts</span> <span class="n">of</span> <span class="n">NumPy</span><span class="p">,</span> <span class="n">SciPy</span><span class="p">,</span> <span class="n">numpydoc</span><span class="p">,</span> <span class="n">bottleneck</span><span class="p">,</span> <span class="n">which</span> <span class="nb">all</span> <span class="n">have</span>
+<span class="n">BSD</span><span class="o">-</span><span class="n">compatible</span> <span class="n">licenses</span><span class="p">,</span> <span class="n">are</span> <span class="n">included</span><span class="o">.</span> <span class="n">Their</span> <span class="n">licenses</span> <span class="n">follow</span> <span class="n">the</span> <span class="n">pandas</span>
+<span class="n">license</span><span class="o">.</span>
+
+<span class="n">pandas</span> <span class="n">license</span>
+<span class="o">==============</span>
+
+<span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2011</span><span class="o">-</span><span class="mi">2012</span><span class="p">,</span> <span class="n">Lambda</span> <span class="n">Foundry</span><span class="p">,</span> <span class="n">Inc</span><span class="o">.</span> <span class="ow">and</span> <span class="n">PyData</span> <span class="n">Development</span> <span class="n">Team</span>
+<span class="n">All</span> <span class="n">rights</span> <span class="n">reserved</span><span class="o">.</span>
+
+<span class="n">Copyright</span> <span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="mi">2008</span><span class="o">-</span><span class="mi">2011</span> <span class="n">AQR</span> <span class="n">Capital</span> <span class="n">Management</span><span class="p">,</span> <span class="n">LLC</span>
+<span class="n">All</span> <span class="n">rights</span> <span class="n">reserved</span><span class="o">.</span>
+
+<span class="n">Redistribution</span> <span class="ow">and</span> <span class="n">use</span> <span class="ow">in</span> <span class="n">source</span> <span class="ow">and</span> <span class="n">binary</span> <span class="n">forms</span><span class="p">,</span> <span class="k">with</span> <span class="ow">or</span> <span class="n">without</span>
+<span class="n">modification</span><span class="p">,</span> <span class="n">are</span> <span class="n">permitted</span> <span class="n">provided</span> <span class="n">that</span> <span class="n">the</span> <span class="n">following</span> <span class="n">conditions</span> <span class="n">are</span>
+<span class="n">met</span><span class="p">:</span>
+
+    <span class="o">*</span> <span class="n">Redistributions</span> <span class="n">of</span> <span class="n">source</span> <span class="n">code</span> <span class="n">must</span> <span class="n">retain</span> <span class="n">the</span> <span class="n">above</span> <span class="n">copyright</span>
+       <span class="n">notice</span><span class="p">,</span> <span class="n">this</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">conditions</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">following</span> <span class="n">disclaimer</span><span class="o">.</span>
+
+    <span class="o">*</span> <span class="n">Redistributions</span> <span class="ow">in</span> <span class="n">binary</span> <span class="n">form</span> <span class="n">must</span> <span class="n">reproduce</span> <span class="n">the</span> <span class="n">above</span>
+       <span class="n">copyright</span> <span class="n">notice</span><span class="p">,</span> <span class="n">this</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">conditions</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">following</span>
+       <span class="n">disclaimer</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">documentation</span> <span class="ow">and</span><span class="o">/</span><span class="ow">or</span> <span class="n">other</span> <span class="n">materials</span> <span class="n">provided</span>
+       <span class="k">with</span> <span class="n">the</span> <span class="n">distribution</span><span class="o">.</span>
+
+    <span class="o">*</span> <span class="n">Neither</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">copyright</span> <span class="n">holder</span> <span class="n">nor</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="nb">any</span>
+       <span class="n">contributors</span> <span class="n">may</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">endorse</span> <span class="ow">or</span> <span class="n">promote</span> <span class="n">products</span> <span class="n">derived</span>
+       <span class="kn">from</span> <span class="nn">this</span> <span class="n">software</span> <span class="n">without</span> <span class="n">specific</span> <span class="n">prior</span> <span class="n">written</span> <span class="n">permission</span><span class="o">.</span>
+
+<span class="n">THIS</span> <span class="n">SOFTWARE</span> <span class="n">IS</span> <span class="n">PROVIDED</span> <span class="n">BY</span> <span class="n">THE</span> <span class="n">COPYRIGHT</span> <span class="n">HOLDER</span> <span class="n">AND</span> <span class="n">CONTRIBUTORS</span>
+<span class="s2">&quot;AS IS&quot;</span> <span class="n">AND</span> <span class="n">ANY</span> <span class="n">EXPRESS</span> <span class="n">OR</span> <span class="n">IMPLIED</span> <span class="n">WARRANTIES</span><span class="p">,</span> <span class="n">INCLUDING</span><span class="p">,</span> <span class="n">BUT</span> <span class="n">NOT</span>
+<span class="n">LIMITED</span> <span class="n">TO</span><span class="p">,</span> <span class="n">THE</span> <span class="n">IMPLIED</span> <span class="n">WARRANTIES</span> <span class="n">OF</span> <span class="n">MERCHANTABILITY</span> <span class="n">AND</span> <span class="n">FITNESS</span> <span class="n">FOR</span>
+<span class="n">A</span> <span class="n">PARTICULAR</span> <span class="n">PURPOSE</span> <span class="n">ARE</span> <span class="n">DISCLAIMED</span><span class="o">.</span> <span class="n">IN</span> <span class="n">NO</span> <span class="n">EVENT</span> <span class="n">SHALL</span> <span class="n">THE</span> <span class="n">COPYRIGHT</span>
+<span class="n">OWNER</span> <span class="n">OR</span> <span class="n">CONTRIBUTORS</span> <span class="n">BE</span> <span class="n">LIABLE</span> <span class="n">FOR</span> <span class="n">ANY</span> <span class="n">DIRECT</span><span class="p">,</span> <span class="n">INDIRECT</span><span class="p">,</span> <span class="n">INCIDENTAL</span><span class="p">,</span>
+<span class="n">SPECIAL</span><span class="p">,</span> <span class="n">EXEMPLARY</span><span class="p">,</span> <span class="n">OR</span> <span class="n">CONSEQUENTIAL</span> <span class="n">DAMAGES</span> <span class="p">(</span><span class="n">INCLUDING</span><span class="p">,</span> <span class="n">BUT</span> <span class="n">NOT</span>
+<span class="n">LIMITED</span> <span class="n">TO</span><span class="p">,</span> <span class="n">PROCUREMENT</span> <span class="n">OF</span> <span class="n">SUBSTITUTE</span> <span class="n">GOODS</span> <span class="n">OR</span> <span class="n">SERVICES</span><span class="p">;</span> <span class="n">LOSS</span> <span class="n">OF</span> <span class="n">USE</span><span class="p">,</span>
+<span class="n">DATA</span><span class="p">,</span> <span class="n">OR</span> <span class="n">PROFITS</span><span class="p">;</span> <span class="n">OR</span> <span class="n">BUSINESS</span> <span class="n">INTERRUPTION</span><span class="p">)</span> <span class="n">HOWEVER</span> <span class="n">CAUSED</span> <span class="n">AND</span> <span class="n">ON</span> <span class="n">ANY</span>
+<span class="n">THEORY</span> <span class="n">OF</span> <span class="n">LIABILITY</span><span class="p">,</span> <span class="n">WHETHER</span> <span class="n">IN</span> <span class="n">CONTRACT</span><span class="p">,</span> <span class="n">STRICT</span> <span class="n">LIABILITY</span><span class="p">,</span> <span class="n">OR</span> <span class="n">TORT</span>
+<span class="p">(</span><span class="n">INCLUDING</span> <span class="n">NEGLIGENCE</span> <span class="n">OR</span> <span class="n">OTHERWISE</span><span class="p">)</span> <span class="n">ARISING</span> <span class="n">IN</span> <span class="n">ANY</span> <span class="n">WAY</span> <span class="n">OUT</span> <span class="n">OF</span> <span class="n">THE</span> <span class="n">USE</span>
+<span class="n">OF</span> <span class="n">THIS</span> <span class="n">SOFTWARE</span><span class="p">,</span> <span class="n">EVEN</span> <span class="n">IF</span> <span class="n">ADVISED</span> <span class="n">OF</span> <span class="n">THE</span> <span class="n">POSSIBILITY</span> <span class="n">OF</span> <span class="n">SUCH</span> <span class="n">DAMAGE</span><span class="o">.</span>
+
+<span class="n">About</span> <span class="n">the</span> <span class="n">Copyright</span> <span class="n">Holders</span>
+<span class="o">===========================</span>
+
+<span class="n">AQR</span> <span class="n">Capital</span> <span class="n">Management</span> <span class="n">began</span> <span class="n">pandas</span> <span class="n">development</span> <span class="ow">in</span> <span class="mf">2008.</span> <span class="n">Development</span> <span class="n">was</span>
+<span class="n">led</span> <span class="n">by</span> <span class="n">Wes</span> <span class="n">McKinney</span><span class="o">.</span> <span class="n">AQR</span> <span class="n">released</span> <span class="n">the</span> <span class="n">source</span> <span class="n">under</span> <span class="n">this</span> <span class="n">license</span> <span class="ow">in</span> <span class="mf">2009.</span>
+<span class="n">Wes</span> <span class="ow">is</span> <span class="n">now</span> <span class="n">an</span> <span class="n">employee</span> <span class="n">of</span> <span class="n">Lambda</span> <span class="n">Foundry</span><span class="p">,</span> <span class="ow">and</span> <span class="n">remains</span> <span class="n">the</span> <span class="n">pandas</span> <span class="n">project</span>
+<span class="n">lead</span><span class="o">.</span>
+
+<span class="n">The</span> <span class="n">PyData</span> <span class="n">Development</span> <span class="n">Team</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">developers</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PyData</span>
+<span class="n">project</span><span class="o">.</span> <span class="n">This</span> <span class="n">includes</span> <span class="nb">all</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PyData</span> <span class="n">sub</span><span class="o">-</span><span class="n">projects</span><span class="p">,</span> <span class="n">including</span> <span class="n">pandas</span><span class="o">.</span> <span class="n">The</span>
+<span class="n">core</span> <span class="n">team</span> <span class="n">that</span> <span class="n">coordinates</span> <span class="n">development</span> <span class="n">on</span> <span class="n">GitHub</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="n">here</span><span class="p">:</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pydata</span><span class="o">.</span>
+
+<span class="n">Full</span> <span class="n">credits</span> <span class="k">for</span> <span class="n">pandas</span> <span class="n">contributors</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">documentation</span><span class="o">.</span>
+
+<span class="n">Our</span> <span class="n">Copyright</span> <span class="n">Policy</span>
+<span class="o">====================</span>
+
+<span class="n">PyData</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">shared</span> <span class="n">copyright</span> <span class="n">model</span><span class="o">.</span> <span class="n">Each</span> <span class="n">contributor</span> <span class="n">maintains</span> <span class="n">copyright</span>
+<span class="n">over</span> <span class="n">their</span> <span class="n">contributions</span> <span class="n">to</span> <span class="n">PyData</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">important</span> <span class="n">to</span> <span class="n">note</span> <span class="n">that</span>
+<span class="n">these</span> <span class="n">contributions</span> <span class="n">are</span> <span class="n">typically</span> <span class="n">only</span> <span class="n">changes</span> <span class="n">to</span> <span class="n">the</span> <span class="n">repositories</span><span class="o">.</span> <span class="n">Thus</span><span class="p">,</span>
+<span class="n">the</span> <span class="n">PyData</span> <span class="n">source</span> <span class="n">code</span><span class="p">,</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">entirety</span><span class="p">,</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">the</span> <span class="n">copyright</span> <span class="n">of</span> <span class="nb">any</span> <span class="n">single</span>
+<span class="n">person</span> <span class="ow">or</span> <span class="n">institution</span><span class="o">.</span> <span class="n">Instead</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">collective</span> <span class="n">copyright</span> <span class="n">of</span> <span class="n">the</span>
+<span class="n">entire</span> <span class="n">PyData</span> <span class="n">Development</span> <span class="n">Team</span><span class="o">.</span> <span class="n">If</span> <span class="n">individual</span> <span class="n">contributors</span> <span class="n">want</span> <span class="n">to</span> <span class="n">maintain</span>
+<span class="n">a</span> <span class="n">record</span> <span class="n">of</span> <span class="n">what</span> <span class="n">changes</span><span class="o">/</span><span class="n">contributions</span> <span class="n">they</span> <span class="n">have</span> <span class="n">specific</span> <span class="n">copyright</span> <span class="n">on</span><span class="p">,</span>
+<span class="n">they</span> <span class="n">should</span> <span class="n">indicate</span> <span class="n">their</span> <span class="n">copyright</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">of</span> <span class="n">the</span> <span class="n">change</span>
+<span class="n">when</span> <span class="n">they</span> <span class="n">commit</span> <span class="n">the</span> <span class="n">change</span> <span class="n">to</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">PyData</span> <span class="n">repositories</span><span class="o">.</span>
+
+<span class="n">With</span> <span class="n">this</span> <span class="ow">in</span> <span class="n">mind</span><span class="p">,</span> <span class="n">the</span> <span class="n">following</span> <span class="n">banner</span> <span class="n">should</span> <span class="n">be</span> <span class="n">used</span> <span class="ow">in</span> <span class="nb">any</span> <span class="n">source</span> <span class="n">code</span>
+<span class="n">file</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">copyright</span> <span class="ow">and</span> <span class="n">license</span> <span class="n">terms</span><span class="p">:</span>
+
+<span class="c1">#-----------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2012, PyData Development Team</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># Distributed under the terms of the BSD Simplified License.</span>
+<span class="c1">#</span>
+<span class="c1"># The full license is in the LICENSE file, distributed with this software.</span>
+<span class="c1">#-----------------------------------------------------------------------------</span>
+
+<span class="n">Other</span> <span class="n">licenses</span> <span class="n">can</span> <span class="n">be</span> <span class="n">found</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">LICENSES</span> <span class="n">directory</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="clearer"></div>
+        </div>
+    </div>
+</div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="10min.html" title="10 Minutes to pandas"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="Frequently Asked Questions (FAQ)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<style type="text/css">
+    .scrollToTop {
+        text-align: center;
+        font-weight: bold;
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        display: none;
+    }
+</style>
+<a href="#" class="scrollToTop">Scroll To Top</a>
+<script type="text/javascript">
+$(document).ready(function() {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:35:36 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:16 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -68,6 +67,8 @@
     
       <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" title="MediaDevices.getUserMedia()">
     
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/getUserMedia" title="MediaDevices.getUserMedia()">
+    
   
 
   <!-- document-specific social tags -->
@@ -80,6 +81,13 @@
   <meta name="description" content="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice.">
   <meta name="twitter:description" content="The MediaDevices.getUserMedia() method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned Promise is resolved with the resulting MediaStream object. If the user denies permission, or media is not available, then the promise is rejected with PermissionDeniedError or NotFoundError respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -97,10 +105,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -150,8 +158,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -167,9 +175,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -186,34 +192,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2FgetUserMedia" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/MediaDevices/getUserMedia" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/MediaDevices/getUserMedia" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2FgetUserMedia" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2FgetUserMedia" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -223,18 +215,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -245,10 +239,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -262,8 +253,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -302,16 +293,20 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/MediaDevices/getUserMedia" title="MediaDevices.getUserMedia()">Español</a></bdi></li>
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" title="MediaDevices.getUserMedia()">日本語</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/es/docs/Web/API/MediaDevices/getUserMedia" title="Spanish">Español (es)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/getUserMedia" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -323,7 +318,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -334,7 +331,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -386,23 +382,8 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/fippo" title="View profile: fippo">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fippo" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fippo</noscript></a>
-                </li>
-            
-                <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/myakura" title="View profile: myakura">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="myakura" data-src="../../../../../../secure.gravatar.com/avatar/5053cd2607234c47d43959cc9430f1a56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">myakura</noscript></a>
-                </li>
-            
-                <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/jamix" title="View profile: jamix">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jamix" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jamix</noscript></a>
-                </li>
-            
-                <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/Sole" title="View profile: Sole">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sole" data-src="../../../../../../secure.gravatar.com/avatar/4ae094cd79788a2077f1b8dbd07a7c3f6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sole</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/libbymc" title="View profile: libbymc">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="libbymc" data-src="../../../../../../secure.gravatar.com/avatar/9863d23087b5036d5a8431e7ccde214d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">libbymc</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -411,6 +392,51 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/ottoetc" title="View profile: ottoetc">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ottoetc" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ottoetc</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/j1mr10rd4n" title="View profile: j1mr10rd4n">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="j1mr10rd4n" data-src="../../../../../../secure.gravatar.com/avatar/238e0d1f5459beda45183e2526eaca3e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">j1mr10rd4n</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/fippo" title="View profile: fippo">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fippo" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fippo</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/myakura" title="View profile: myakura">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="myakura" data-src="../../../../../../secure.gravatar.com/avatar/5053cd2607234c47d43959cc9430f1a56c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">myakura</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/jamix" title="View profile: jamix">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jamix" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jamix</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sole" title="View profile: Sole">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sole" data-src="../../../../../../secure.gravatar.com/avatar/4ae094cd79788a2077f1b8dbd07a7c3f6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sole</noscript></a>
+                </li>
+            
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/createMo" title="View profile: createMo">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="createMo" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">createMo</noscript></a>
                 </li>
@@ -423,11 +449,6 @@
                 <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/connormckelvey" title="View profile: connormckelvey">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="connormckelvey" data-src="../../../../../../secure.gravatar.com/avatar/a0280b31348c6d800d05e2407ad790c66c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">connormckelvey</noscript></a>
-                </li>
-            
-                <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/jpmedley" title="View profile: jpmedley">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jpmedley" data-src="../../../../../../secure.gravatar.com/avatar/fde784135f738cc182672e703dea9a4b6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jpmedley</noscript></a>
                 </li>
             
                 <li class="hidden">
@@ -488,7 +509,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Returns" rel="internal">Returns</a></li><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Errors" rel="internal">Errors</a></li></ol></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Using_the_Promise" rel="internal">Using the Promise</a></li><li><a href="#Width_and_height" rel="internal">Width and height</a></li><li><a href="#Frame_rate" rel="internal">Frame rate</a></li><li><a href="#Front_and_back_camera" rel="internal">Front and back camera</a></li></ol></li><li><a href="#Permissions" rel="internal">Permissions</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_value" rel="internal">Return value</a></li><li><a href="#Errors" rel="internal">Errors</a></li></ol></li><li><a href="#Examples" rel="internal">Examples</a><ol><li><a href="#Width_and_height" rel="internal">Width and height</a></li><li><a href="#Using_the_new_API_in_older_browsers" rel="internal">Using the new API in older browsers</a></li><li><a href="#Frame_rate" rel="internal">Frame rate</a></li><li><a href="#Front_and_back_camera" rel="internal">Front and back camera</a></li></ol></li><li><a href="#Permissions" rel="internal">Permissions</a></li><li><a href="#Specifications" rel="internal">Specifications</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#See_also" rel="internal">See also</a>
                 </li></ol>
               </div>
               
@@ -518,34 +539,37 @@
               <article id="wikiArticle">
                 
                   
-                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="notice experimental"> 
-    <p><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span> <strong>This is an experimental technology</strong><br>Because this technology's specification has not stabilized, check the <a href="#Browser_compatibility">compatibility table</a> for usage in various browsers. Also note that the syntax and behavior of an experimental technology is subject to change in future versions of browsers as the specification changes.</p> 
-</div></div>
+                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
 <p>The <code><strong>MediaDevices.getUserMedia()</strong></code> method prompts the user for permission to use one video and/or one audio input device such as a camera or screensharing and/or a microphone. If the user provides permission, then the returned <a href="../../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise interface represents a proxy for a value not necessarily known at its creation time. It allows you to associate handlers to an asynchronous action's eventual success or failure. This lets asynchronous methods return values like synchronous methods: instead of the final value, the asynchronous method returns a promise of having a value at some point in the future."><code>Promise</code></a> is resolved with the resulting <code><a href="../Media_Streams_API.html#LocalMediaStream">MediaStream</a></code> object. If the user denies permission, or media is not available, then the promise is rejected with <code>PermissionDeniedError</code> or <code>NotFoundError</code> respectively. Note that it is possible for the returned promise to neither resolve nor reject, as the user is not required to make a choice.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="syntaxbox">navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) { ... })
-.catch(function(error) { ... })</pre>
+<pre class="syntaxbox">var <em>promise</em> = <em>navigator.mediaDevices</em>.getUserMedia(<em>constraints</em>);
+</pre>
 
-<h3 id="Returns">Returns</h3>
+<p>Generally, you will access the <a href="../MediaDevices.html" title="The MediaDevices interface provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data."><code>MediaDevices</code></a> singleton object using <a href="../Navigator/mediaDevices.html" title="The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing."><code>navigator.mediaDevices</code></a>, like this:</p>
 
-<p>A <a href="../../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future."><code>Promise</code></a> that resolves to a <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks."><code>MediaStream</code></a> object.</p>
+<pre class="brush: js">navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
+  /* use the stream */
+}).catch(function(err) {
+  /* handle the error */
+});</pre>
 
 <h3 id="Parameters">Parameters</h3>
 
 <dl>
  <dt><code>constraints</code></dt>
  <dd>
- <p>Is a <a href="../MediaStreamConstraints.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>MediaStreamConstraints</code></a> object specifying the types of media to request, along with any requirements for each type.</p>
+ <p>Is a <a href="../MediaStreamConstraints.html" title="The MediaStreamConstraints dictionary is used when calling getUserMedia() to specify what kinds of tracks should be included in the returned MediaStream, and, optionally, to establish constraints for those tracks' settings."><code>MediaStreamConstraints</code></a> object specifying the types of media to request, along with any requirements for each type.</p>
 
- <p>The constraints parameter is a <code>MediaStreamConstaints</code> object with two members: <code>video</code> and <code>audio</code>, describing the media types requested. Either or both must be specified. If the browser cannot find all media tracks with the specified types that meet the constraints given, then the returned promise is rejected with <code>NotFoundError</code>.</p>
+ <p>The constraints parameter is a <code>MediaStreamConstraints</code> object with two members: <code>video</code> and <code>audio</code>, describing the media types requested. Either or both must be specified. If the browser cannot find all media tracks with the specified types that meet the constraints given, then the returned promise is rejected with <code>NotFoundError</code>.</p>
 
  <p>The following requests both audio and video without any specific requirements:</p>
 
  <pre class="brush: js">{ audio: true, video: true }</pre>
+
+ <p>If <code>true</code> is specified for a media type, the resulting stream is <em>required</em> to have that type of track in it. If one cannot be included for any reason, the call to <code>getUserMedia()</code> will result in an error.</p>
 
  <p>While information about a user's cameras and microphones are inaccessible for privacy reasons, an application can request the camera and microphone capabilities it needs and wants, using additional constraints. The following expresses a preference for 1280x720 camera resolution:</p>
 
@@ -578,7 +602,7 @@
   }
 }</pre>
 
- <p>An <code>ideal</code> value, when used, has gravity, which means that the browser will try to find the setting (and camera, if you have more than one), with the smallest <a href="http://w3c.github.io/mediacapture-main/#methods-5" class="external">fitness distance</a> from the ideal values given.</p>
+ <p>An <code>ideal</code> value, when used, has gravity, which means that the browser will try to find the setting (and camera, if you have more than one), with the smallest <a href="https://w3c.github.io/mediacapture-main/#dfn-fitness-distance" class="external">fitness distance</a> from the ideal values given.</p>
 
  <p>Plain values are inherently ideal, which means that the first of our resolution examples above could have been written like this:</p>
 
@@ -600,77 +624,92 @@
  </dd>
 </dl>
 
+<h3 id="Return_value">Return value</h3>
+
+<p>A <a href="../../JavaScript/Reference/Global_Objects/Promise.html" title="The Promise object is used for asynchronous computations. A Promise represents a value which may be available now, or in the future, or never."><code>Promise</code></a> whose fulfillment handler receives a <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a> object when the requested media has successfully been obtained.</p>
+
 <h3 id="Errors">Errors</h3>
 
-<p>Rejections of the returned promise are made with a <a href="../MediaStreamError.html" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>MediaStreamError</code></a> object that is modeled on&nbsp;<a href="../DOMException.html" title="The DOMException exception represents an abnormal event happening when a method or a property is used."><code>DOMException</code></a>. Relevant errors are:</p>
+<p>Rejections of the returned promise are made by passing a <a href="../DOMException.html" title="The DOMException interface represents an abnormal event (called an exception) which occurs as a result of calling a method or accessing a property of a web API. This is basically how error conditions are described in web APIs."><code>DOMException</code></a> error object to the promise's failure handler. Possible errors are:</p>
 
 <dl>
- <dt><code>SecurityError</code></dt>
- <dd>Permission to use a media device was denied by the user or the system.</dd>
+ <dt><code>AbortError</code></dt>
+ <dd>Although the user and operating system both granted access to the hardware device, and no hardware issues occurred that would cause a <code>NotReadableError</code>, some problem occurred which prevented the device from being used.</dd>
+ <dt><code>NotAllowedError</code></dt>
+ <dd>The user has specified that the current browsing instance is not permitted access to the device; or the user has denied access for the current session; or the user has denied all access to user media devices globally.
+ <div class="note">Older versions of the specification used <code>SecurityError</code> for this instead; <code>SecurityError</code> has taken on a new meaning.</div>
+ </dd>
  <dt><code>NotFoundError</code></dt>
- <dd>No media tracks of the type specified were found that satisfy the constraints specified.</dd>
+ <dd>No media tracks of the type specified were found that satisfy the given constraints.</dd>
+ <dt><code>NotReadableError</code></dt>
+ <dd>Although the user granted permission to use the matching devices, a hardware error occurred at the operating system, browser, or Web page level which prevented access to the device.</dd>
+ <dt><code>OverConstrainedError</code></dt>
+ <dd>The specified constraints resulted in no candidate devices which met the criteria requested. The error is an object of type <code>OverconstrainedError</code>, and has a <code>constraint</code> property whose string value is the name of a constraint which was impossible to meet, and a <code>message</code> property containing a human-readable string explaining the problem.
+ <div class="note">Because this error can occur even when the user has not yet granted permission to use the underlying device, it can potentially be used as a fingerprinting surface.</div>
+ </dd>
+ <dt><code>SecurityError</code></dt>
+ <dd>User media support is disabled on the <a href="../Document.html" title="The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree. The DOM tree includes elements such as &lt;body&gt; and &lt;table&gt;, among many others. It provides functionality global to the document, like how to obtain the page's URL and create new elements in the document."><code>Document</code></a> on which <code>getUserMedia()</code> was called. The mechanism by which user media support is enabled and disabled is left up to the individual user agent.</dd>
+ <dt><code>TypeError</code></dt>
+ <dd>The list of constraints specified is empty, or has all constraints set to <code>false</code>.</dd>
 </dl>
 
 <h2 id="Examples"><strong>Example</strong>s</h2>
 
-<h3 id="Using_the_Promise">Using the Promise</h3>
-
-<p>This example assigns the returned <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks."><code>MediaStream</code></a> object to the appropriate element.</p>
-
-<pre>var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
-
-p.then(function(mediaStream) {
-  var video = document.querySelector('video');
-  video.src = window.URL.createObjectURL(mediaStream);
-  video.onloadedmetadata = function(e) {
-    // Do something with the video here.
-  };
-});
-
-p.catch(function(err) { console.log(err.name); }); // always check for errors at the end.</pre>
-
 <h3 id="Width_and_height">Width and height</h3>
 
-<p>Here's an example of using <code>mediaDevices.getUserMedia()</code>, including a polyfill to cope with older browsers.</p>
+<p>This example gives a preference for camera resolution, and assigns the resulting <a href="../MediaStream.html" title="The MediaStream interface represents a stream of media content. A stream consists of several tracks such as&nbsp;video or audio tracks. Each track is specified as an instance of MediaStreamTrack."><code>MediaStream</code></a> object to a video element.</p>
 
-<pre class="brush: js">var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
+<pre>// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } }; 
 
-  // First get ahold of getUserMedia, if present
-  var getUserMedia = (navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia);
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+</pre>
 
-  // Some browsers just don't implement it - return a rejected promise with an error
-  // to keep a consistent interface
-  if(!getUserMedia) {
-    return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-  }
+<h3 id="Using_the_new_API_in_older_browsers">Using the new API in older browsers</h3>
 
-  // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-  return new Promise(function(successCallback, errorCallback) {
-    getUserMedia.call(navigator, constraints, successCallback, errorCallback);
-  });
-		
-}
+<p>Here's an example of using <code>navigator.mediaDevices.getUserMedia()</code>, with a polyfill to cope with older browsers. Note that this polyfill does not correct for legacy differences in constraints syntax, which means constraints won't work well across browsers. It is recommended to use the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill instead, which does handle constraints.</p>
 
-// Older browsers might not implement mediaDevices at all, so we set an empty object first
-if(navigator.mediaDevices === undefined) {
+<pre class="brush: js">// Older browsers might not implement mediaDevices at all, so we set an empty object first
+if (navigator.mediaDevices === undefined) {
   navigator.mediaDevices = {};
 }
 
 // Some browsers partially implement mediaDevices. We can't just assign an object
 // with getUserMedia as it would overwrite existing properties.
 // Here, we will just add the getUserMedia property if it's missing.
-if(navigator.mediaDevices.getUserMedia === undefined) {
-  navigator.mediaDevices.getUserMedia = promisifiedOldGUM;
+if (navigator.mediaDevices.getUserMedia === undefined) {
+  navigator.mediaDevices.getUserMedia = function(constraints) {
+
+    // First get ahold of the legacy getUserMedia, if present
+    var getUserMedia = (navigator.getUserMedia ||
+      navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia);
+
+    // Some browsers just don't implement it - return a rejected promise with an error
+    // to keep a consistent interface
+    if (!getUserMedia) {
+      return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+    }
+
+    // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+    return new Promise(function(resolve, reject) {
+      getUserMedia.call(navigator, constraints, resolve, reject);
+    });
+  }
 }
 
-// Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
-
-navigator.mediaDevices.getUserMedia(constraints)
+navigator.mediaDevices.getUserMedia({ audio: true, video: true })
 .then(function(stream) {
   var video = document.querySelector('video');
+  // Older browsers may not have srcObject
   video.src = window.URL.createObjectURL(stream);
   video.onloadedmetadata = function(e) {
     video.play();
@@ -746,18 +785,31 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
+   <th>Microsoft Edge</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
    <th>Safari (WebKit)</th>
   </tr>
   <tr>
-   <td>Stream API</td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1][3]</sup><br>
-    47</td>
-   <td>36<sup>[2]</sup></td>
+   <td>Basic support</td>
+   <td>53.0<sup>[1][3]</sup></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/36" title="Released on 2015-02-24.">36</a> (36) <sup>[2]</sup></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span><sup>[1]</sup></td>
+   <td>40<sup>[1]</sup></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+  </tr>
+  <tr>
+   <td>Promises</td>
+   <td>53.0</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/38" title="Released on 2015-05-19.">38</a> (38)</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
   </tr>
  </tbody>
@@ -771,6 +823,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>IE Phone</th>
    <th>Opera Mobile</th>
@@ -778,28 +831,40 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
    <th>Chrome for Android&nbsp;</th>
   </tr>
   <tr>
-   <td>Stream API</td>
+   <td>Basic support</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0<sup>[1][3]</sup></td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>36.0 (36) <sup>[2]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td>36<sup>[2]</sup></td>
+   <td>40<sup>[1]</sup></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0<sup>[1][3]</sup></td>
+  </tr>
+  <tr>
+   <td>Promises</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td>38.0 (38)</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>53.0</td>
   </tr>
  </tbody>
 </table>
 </div>
 
-<p>[1] Older versions of Chrome and Opera implement <code>navigator.webkitGetUserMedia</code>, the prefixed version of the legacy <a href="../Navigator/getUserMedia.html" title="The Navigator.getUserMedia() method prompts the user for permission to use 0 or 1 video and 0 or 1 audio input device such as a camera, a shared screen, or a microphone. If the user provides permission, then the successCallback is invoked with the resulting MediaStream object as its argument. If the user denies permission or media is not available, then the errorCallback is called with PermissionDeniedError or NotFoundError respectively. Note that it is possible for neither completion callback to be called, as the user is not required to make a choice."><code>navigator.getUserMedia</code></a> method.</p>
+<p>[1] Older versions of Chrome and Opera implement <code>navigator.webkitGetUserMedia</code>, the prefixed version of the legacy <a href="../Navigator/getUserMedia.html" title="The Navigator.getUserMedia() method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone). If permission is granted, a MediaStream whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a MediaStreamError object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed."><code>navigator.getUserMedia</code></a> method.</p>
 
-<p>In Chrome, this promise-based interface is only available through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill, or using the flag <a>chrome://flags/#enable-experimental-web-platform-features</a>.</p>
+<p>From version 47 to 52, the&nbsp;promise-based interface was&nbsp;only available through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill, or using the flag <a>chrome://flags/#enable-experimental-web-platform-features</a>. Starting with version 53, the promise-based interface is on by default, though that interface is still not available through <code>navigator</code>.</p>
 
-<p>Chrome uses an outdated constraint syntax, but the syntax described here is available through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill.</p>
+<p>[2] Older versions of Firefox implement <code>navigator.mozGetUserMedia</code>, the prefixed version of the legacy <a href="../Navigator/getUserMedia.html" title="The Navigator.getUserMedia() method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone). If permission is granted, a MediaStream whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a MediaStreamError object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed."><code>navigator.getUserMedia</code></a> method.</p>
 
-<p>[2] Older versions of Firefox implement <code>navigator.mozGetUserMedia</code>, the prefixed version of the legacy <a href="../Navigator/getUserMedia.html" title="The Navigator.getUserMedia() method prompts the user for permission to use 0 or 1 video and 0 or 1 audio input device such as a camera, a shared screen, or a microphone. If the user provides permission, then the successCallback is invoked with the resulting MediaStream object as its argument. If the user denies permission or media is not available, then the errorCallback is called with PermissionDeniedError or NotFoundError respectively. Note that it is possible for neither completion callback to be called, as the user is not required to make a choice."><code>navigator.getUserMedia</code></a> method.</p>
+<p>The promise-based version of this method and the constraint syntax described here are available as of Firefox 38. Earlier versions (32-37) used an outdated constraint syntax, but the syntax described here, as well as the promise-based interface, is available there through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill.</p>
 
-<p>This promise-based interface and the constraint syntax described here is available as of Firefox 38. Earlier versions (32-37) used an outdated constraint syntax, but the syntax described here, as well as the promise-based interface, is available there through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill.</p>
+<p>Firefox 49 includes changes to bring the possible <a href="#Errors">errors</a> up to date with the specification, including the change to the meaning of <code>SecurityError</code>.</p>
 
 <p>Opera uses an outdated constraint syntax, but the syntax described here is available through the <a href="https://github.com/webrtc/adapter" class="external">adapter.js</a> polyfill.</p>
 
@@ -820,25 +885,6 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2FgetUserMedia%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+MediaDevices.getUserMedia%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about MediaDevices.getUserMedia() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about MediaDevices.getUserMedia() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FMediaDevices%2FgetUserMedia%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about MediaDevices.getUserMedia() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -853,7 +899,13 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Audio">Audio</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Experimental">Experimental</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/audio">audio</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/getusermedia">getusermedia</a></li>
+      
+        <li><a href="../../../tag/Media%20Capture%20and%20Streams%20API.html">Media Capture and Streams API</a></li>
+      
+        <li><a href="../../../tag/Media%20Streams%20API.html">Media Streams API</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/MediaDevices">MediaDevices</a></li>
       
@@ -861,7 +913,11 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
       
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/video">video</a></li>
+      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Video">Video</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebRTC">WebRTC</a></li>
       
     </ul>
   </div>
@@ -869,6 +925,20 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Jib">Jib</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/ottoetc">ottoetc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/j1mr10rd4n">j1mr10rd4n</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/fippo">fippo</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/myakura">myakura</a>, 
@@ -877,15 +947,11 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
     
         <a href="https://developer.mozilla.org/en-US/profiles/Sole">Sole</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/Jib">Jib</a>, 
-    
         <a href="https://developer.mozilla.org/en-US/profiles/createMo">createMo</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/drob">drob</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/connormckelvey">connormckelvey</a>, 
-    
-        <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/mborn319">mborn319</a>, 
     
@@ -907,11 +973,48 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/fippo">fippo</a>,
-                      <time datetime="2016-02-03T13:02:42-08:00">Feb 3, 2016, 1:02:42 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>,
+                      <time datetime="2016-12-12T14:32:48.227176-08:00">Dec 12, 2016, 2:32:48 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -928,7 +1031,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
                   
   <div class="quick-links" id="quick-links">
     <div class="title see-also">See also</div>
-    <ol><li><strong><a href="../WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="../MediaDevices.html"><code>MediaDevices</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a></li><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><em><code>getUserMedia()</code></em></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/addstream.html"><code>addstream</code></a></li><li><a href="../../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../../Events/removestream.html"><code>removestream</code></a></li><li><a href="../../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../../Events/identiyresult.html"><code>identiyresult</code></a></li><li><a href="../../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="../MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="../Navigator/mediaDevices.html"><code>Navigator.mediaDevices</code></a></li><li><a href="../RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="../RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="../RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="../RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="../RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="../RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="../RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="../RTCPeerConnection.html"><code>RTCPeerConnection</code></a></li><li><a href="../RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="../RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="../RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="../RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="../RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="../RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
+    <ol><li><strong><a href="../WebRTC_API.html">WebRTC API</a></strong></li><li><strong><a href="../MediaDevices.html"><code>MediaDevices</code></a></strong></li><li data-default-state="open"><a href="#"><strong>Properties</strong></a><ol><li><a href="ondevicechange.html" title="The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app. You can at any time use enumerateDevices() to get the updated list of available devices."><code>ondevicechange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><span class="sidebar-icon"><span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></span><a href="enumerateDevices.html" title="The MediaDevices.enumerateDevices() method collects information about the media input and output devices available on the system."><code>enumerateDevices()</code></a></li><li><a href="getSupportedConstraints.html" title="The getSupportedConstraints() method of the MediaDevices interface returns an object based on the MediaTrackSupportedConstraints dictionary, whose member fields each specify one of the constrainable properties the user agent understands."><code>getSupportedConstraints()</code></a></li><li><em><code>getUserMedia()</code></em></li></ol></li><li data-default-state="open"><a href="#"><strong>Inheritance:</strong></a><ol><li><a href="../EventTarget.html"><code>EventTarget</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/addstream.html"><code>addstream</code></a></li><li><a href="../../Events/icecandidate.html"><code>icecandidate</code></a></li><li><a href="../../Events/iceconnectionstatechange.html"><code>iceconnectionstatechange</code></a></li><li><a href="../../Events/icegatheringstatechange.html"><code>icegatheringstatechange</code></a></li><li><a href="../../Events/negotiationneeded.html"><code>negotiationneeded</code></a></li><li><a href="../../Events/removestream.html"><code>removestream</code></a></li><li><a href="../../Events/signalingstatechange.html"><code>signalingstatechange</code></a></li><li><a href="../../Events/datachannel.html"><code>datachannel</code></a></li><li><a href="../../Events/close.html"><code>close</code></a></li><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/message.html"><code>message</code></a></li><li><a href="../../Events/open.html"><code>open</code></a></li><li><a href="../../Events/tonechange.html"><code>tonechange</code></a></li><li><a href="../../Events/identityresult.html"><code>identityresult</code></a></li><li><a href="../../Events/idpassertionerror.html"><code>idpassertionerror</code></a></li><li><a href="../../Events/idpvalidationerror.html"><code>idpvalidationerror</code></a></li><li><a href="../../Events/peeridentity.html"><code>peeridentity</code></a></li><li><a href="../../Events/isolationchange.html"><code>isolationchange</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Related pages for WebRTC</strong></a><ol><li><a href="../MediaStreamEvent.html"><code>MediaStreamEvent</code></a></li><li><a href="../RTCCertificate.html"><code>RTCCertificate</code></a></li><li><a href="../RTCConfiguration.html"><code>RTCConfiguration</code></a></li><li><a href="../RTCDataChannel.html"><code>RTCDataChannel</code></a></li><li><a href="../RTCDataChannelEvent.html"><code>RTCDataChannelEvent</code></a></li><li><a href="../RTCIdentityErrorEvent.html"><code>RTCIdentityErrorEvent</code></a></li><li><a href="../RTCIdentityEvent.html"><code>RTCIdentityEvent</code></a></li><li><a href="../RTCIdentityProviderRegistrar.html"><code>RTCIdentityProviderRegistrar</code></a></li><li><a href="../RTCPeerConnection.html"><code>RTCPeerConnection</code></a></li><li><a href="../RTCPeerConnectionIceEvent.html"><code>RTCPeerConnectionIceEvent</code></a></li><li><a href="../RTCRtpReceiver.html"><code>RTCRtpReceiver</code></a></li><li><a href="../RTCRtpSender.html"><code>RTCRtpSender</code></a></li><li><a href="../RTCSessionDescription.html"><code>RTCSessionDescription</code></a></li><li><a href="../RTCSessionDescriptionCallback.html"><code>RTCSessionDescriptionCallback</code></a></li><li><a href="../RTCStatsReport.html"><code>RTCStatsReport</code></a></li></ol></li></ol>
   </div>
                 
 
@@ -952,12 +1055,12 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -965,9 +1068,8 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -976,15 +1078,18 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/MediaDevices/getUserMedia" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/MediaDevices/getUserMedia" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/es/docs/Web/API/MediaDevices/getUserMedia">
-            Español
+          <option title="Spanish" value="/es/docs/Web/API/MediaDevices/getUserMedia">
+            Español (es)
           </option>
-          <option value="/ja/docs/Web/API/MediaDevices/getUserMedia">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/MediaDevices/getUserMedia">
+            日本語 (ja)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/MediaDevices/getUserMedia">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1001,33 +1106,38 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:35:41 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:17:26 GMT -->
 </body></html>

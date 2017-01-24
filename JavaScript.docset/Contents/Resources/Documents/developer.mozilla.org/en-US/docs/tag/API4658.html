@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:18:30 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:47:00 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D2" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/API?page=2" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/API?page=2" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D2" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D2" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D2">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -311,7 +293,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -322,13 +304,489 @@
   
   </ol>
 
-        <p>Found 3965 documents</p>
+        <p>Found 4384 documents</p>
         <ul class="document-list">
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_DestroyStream">Mozilla/Add-ons/Plugins/Reference/NPN_DestroyStream</a>
+                
+                  <small>Closes and deletes a stream.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetURL">Mozilla/Add-ons/Plugins/Reference/NPN_GetURL</a>
+                
+                  <small>Asks the browser to create a stream for the specified URL.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_MemFlush">Mozilla/Add-ons/Plugins/Reference/NPN_MemFlush</a>
+                
+                  <small>Requests that the browser free a specified amount of memory.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins">Mozilla/Add-ons/Plugins/Reference/NPN_ReloadPlugins</a>
+                
+                  <small>Reloads all of the installed plugins.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_RequestRead">Mozilla/Add-ons/Plugins/Reference/NPN_RequestRead</a>
+                
+                  <small>Requests a range of bytes from a seekable stream. This initiates a read operation; the actual ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Status">Mozilla/Add-ons/Plugins/Reference/NPN_Status</a>
+                
+                  <small>Lets a plug-in display a message on the browser's status line.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent">Mozilla/Add-ons/Plugins/Reference/NPN_UserAgent</a>
+                
+                  <small>Returns the browser's user agent field. This can be used to handle variations in different ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Version">Mozilla/Add-ons/Plugins/Reference/NPN_Version</a>
+                
+                  <small>Lets plugins obtain version information, both of the plug-in API and of the browser itself.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Write">Mozilla/Add-ons/Plugins/Reference/NPN_Write</a>
+                
+                  <small>Pushes data into a stream produced by the plug-in and consumed by the browser.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPP">Mozilla/Add-ons/Plugins/Reference/NPP</a>
+                
+                  <small>Represents a single instance of a plug-in. You specify one of these to any NPAPI function that ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPRegion">Mozilla/Add-ons/Plugins/Reference/NPRegion</a>
+                
+                  <small>Represents a platform-defined region of a page.</small>
+                
+            </li>
+          
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Plugins/Reference/NPSetWindowCallbackStruct">Mozilla/Add-ons/Plugins/Reference/NPSetWindowCallbackStruct</a>
+                
+                  <small>Contains information about the plug-in's Unix window environment.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/Alarm.html">Mozilla/Add-ons/WebExtensions/API/alarms/Alarm</a>
+                
+                  <small>Information about a single alarm. This object is returned from alarms.get() and alarms.getAll(), ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/clear.html">Mozilla/Add-ons/WebExtensions/API/alarms/clear</a>
+                
+                  <small>Cancels an alarm, given its name.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/clearAll.html">Mozilla/Add-ons/WebExtensions/API/alarms/clearAll</a>
+                
+                  <small>Cancels all active alarms.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/create.html">Mozilla/Add-ons/WebExtensions/API/alarms/create</a>
+                
+                  <small>Creates a new alarm.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/get.html">Mozilla/Add-ons/WebExtensions/API/alarms/get</a>
+                
+                  <small>Gets an alarm, given its name.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/getAll.html">Mozilla/Add-ons/WebExtensions/API/alarms/getAll</a>
+                
+                  <small>Gets all active alarms for this WebExtension.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/alarms/onAlarm.html">Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm</a>
+                
+                  <small>Fired when any alarm set by this add-on goes off.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks.html">Mozilla/Add-ons/WebExtensions/API/bookmarks</a>
+                
+                  <small>The WebExtensions bookmarks API lets an add-on interact with and manipulate the browser's ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode</a>
+                
+                  <small>An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable</a>
+                
+                  <small>The bookmarks.BookmarkTreeNodeUnmodifiable type is used to indicate the reason that a node in ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/create.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/create</a>
+                
+                  <small>Creates a bookmark or folder as a child of the BookmarkTreeNode with the specified parentId. To ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/CreateDetails.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails</a>
+                
+                  <small>The CreateDetails type is used to describe the properties of a new bookmark or bookmark folder ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/get.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/get</a>
+                
+                  <small>Given the ID of a bookmarks.BookmarkTreeNode or an array of such IDs, the bookmarks.get() method ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/getChildren.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren</a>
+                
+                  <small>bookmarks.getChildren() retrieves all the immediate children of a given bookmark folder, ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/getRecent.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent</a>
+                
+                  <small>The bookmarks.getRecent() method retrieves a specified number of the most recently added ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/getSubTree.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree</a>
+                
+                  <small>The bookmarks.getSubTree() method asynchronously retrieves a bookmarks.BookmarkTreeNode, given ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/getTree.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree</a>
+                
+                  <small>bookmarks.getTree() returns an array containing the root of the bookmarks tree as a ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/move.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/move</a>
+                
+                  <small>The bookmarks.move() method moves the specified BookmarkTreeNode to the specified destination ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onChanged.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged</a>
+                
+                  <small>Fired when there is a change to:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onChildrenReordered.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered</a>
+                
+                  <small>Fired when the children of a folder have changed their order due to the order being sorted in ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onCreated.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated</a>
+                
+                  <small>Fired when a bookmark item (a bookmark or a folder) is created.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onImportBegan.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportBegan</a>
+                
+                  <small>Fired when the browser has started importing a set of bookmarks.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onImportEnded.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded</a>
+                
+                  <small>Fired when the browser has finished importing a set of bookmarks.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onMoved.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved</a>
+                
+                  <small>Fired when a bookmark or folder is moved to a different parent folder and/or position within a ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/onRemoved.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved</a>
+                
+                  <small>Fired when a bookmark or folder is removed. When a folder is removed recursively, a single ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/remove.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/remove</a>
+                
+                  <small>The bookmarks.remove() method removes a single bookmark or an empty bookmark folder.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/removeTree.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree</a>
+                
+                  <small>The bookmarks.removeTree() method recursively removes a bookmark folder and all of its contents.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/search.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/search</a>
+                
+                  <small>The bookmarks.search() function searches for bookmarks matching the given query.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/bookmarks/update.html">Mozilla/Add-ons/WebExtensions/API/bookmarks/update</a>
+                
+                  <small>bookmarks.update() updates the title and/or URL of a bookmark, or the name of a bookmark folder.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction.html">Mozilla/Add-ons/WebExtensions/API/browserAction</a>
+                
+                  <small>If you specify a popup, it will be shown — and the content will be loaded — when the user clicks ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/ColorArray.html">Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray</a>
+                
+                  <small>An array of four integers in the range 0-255, defining an RGBA color. The four values specify ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/disable.html">Mozilla/Add-ons/WebExtensions/API/browserAction/disable</a>
+                
+                  <small>Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/enable.html">Mozilla/Add-ons/WebExtensions/API/browserAction/enable</a>
+                
+                  <small>Enables the browser action for a tab. By default, browser actions are enabled for all tabs.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor.html">Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor</a>
+                
+                  <small>Gets the background color of the browser action's badge.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/getBadgeText.html">Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText</a>
+                
+                  <small>Gets the browser action's badge text.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/getPopup.html">Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup</a>
+                
+                  <small>Gets the HTML document set as the popup for this browser action.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/getTitle.html">Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle</a>
+                
+                  <small>Gets the browser action's title.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/ImageDataType.html">Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType</a>
+                
+                  <small>Pixel data for an image. Must be an ImageData object (for example, from a canvas element).</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/onClicked.html">Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked</a>
+                
+                  <small>Fired when a browser action icon is clicked. This event will not fire if the browser action has ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/openPopup.html">Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup</a>
+                
+                  <small>This API is also available as browser.browserAction.openPopup() in a version that returns a promise.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor.html">Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor</a>
+                
+                  <small>Sets the background color for the badge.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/setBadgeText.html">Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText</a>
+                
+                  <small>Sets the badge text for the browser action. The badge is displayed on top of the icon.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/setIcon.html">Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon</a>
+                
+                  <small>Sets the icon for the browser action. The icon can be specified either as the path to an image ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/setPopup.html">Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup</a>
+                
+                  <small>Sets the HTML document that will be opened as a popup when the user clicks on the browser ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/browserAction/setTitle.html">Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle</a>
+                
+                  <small>Sets the browser action's title. The title is displayed in a tooltip over the browser action's ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/commands/Command.html">Mozilla/Add-ons/WebExtensions/API/commands/Command</a>
+                
+                  <small>Information about a command. This contains the information specified for the command in the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/commands/getAll.html">Mozilla/Add-ons/WebExtensions/API/commands/getAll</a>
+                
+                  <small>Gets all commands for this add-on that you have registered using the commands manifest.json key.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/commands/onCommand.html">Mozilla/Add-ons/WebExtensions/API/commands/onCommand</a>
+                
+                  <small>Events have three functions:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus.html">Mozilla/Add-ons/WebExtensions/API/contextMenus</a>
+                
+                  <small>Add items to the browser's context menu, to be displayed in the contexts you specify. For ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/ACTION_MENU_TOP_LEVEL_LIMIT.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/ACTION_MENU_TOP_LEVEL_LIMIT</a>
+                
+                  <small>The maximum number of top level extension items that can be added to a context menu item whose ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/ContextType.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/ContextType</a>
+                
+                  <small>The different contexts a menu can appear in. Specifying "all" is equivalent to the combination ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/create.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/create</a>
+                
+                  <small>Creates a new context menu item, given an options object defining properties for the item.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/ItemType.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/ItemType</a>
+                
+                  <small>The type of menu item.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/OnClickData.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/OnClickData</a>
+                
+                  <small>Information sent when a context menu item is clicked.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/onClicked.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/onClicked</a>
+                
+                  <small>Fired when a context menu item is clicked.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../../Add-ons/WebExtensions/API/contextMenus/remove.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/remove</a>
+                
+                  <small>Removes a context menu item.</small>
+                
+            </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/contextMenus/removeAll.html">Mozilla/Add-ons/WebExtensions/API/contextMenus/removeAll</a>
                 
-                  <small>Removes all context menu items added by this extension.</small>
+                  <small>Removes all context menu items added by this add-on.</small>
                 
             </li>
           
@@ -342,686 +800,210 @@
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies.html">Mozilla/Add-ons/WebExtensions/API/cookies</a>
                 
-                  <small>Get and set cookies, and be notified when they change.</small>
+                  <small>Enables WebExtensions to get and set cookies, and be notified when they change.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/Cookie.html">Mozilla/Add-ons/WebExtensions/API/cookies/Cookie</a>
                 
-                  <small>Represents information about an HTTP cookie.</small>
+                  <small>The Cookie type of the cookies API represents information about an HTTP cookie.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/CookieStore.html">Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore</a>
                 
-                  <small>Represents a cookie store in the browser. An incognito mode window, for instance, uses a separate ...</small>
+                  <small>The CookieStore type of the cookies API represents a cookie store in the browser.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/get.html">Mozilla/Add-ons/WebExtensions/API/cookies/get</a>
                 
-                  <small>Retrieves information about a single cookie. If more than one cookie of the same name exists for ...</small>
+                  <small>The get() method of the cookies API retrieves information about a single cookie, given its name ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/getAll.html">Mozilla/Add-ons/WebExtensions/API/cookies/getAll</a>
                 
-                  <small>Retrieves all cookies from a single cookie store that match the given information. The cookies ...</small>
+                  <small>The getAll() method of the cookies API retrieves all cookies from a single cookie store that ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/getAllCookieStores.html">Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores</a>
                 
-                  <small>Lists all existing cookie stores.</small>
+                  <small>The getAllCookieStores() method of the cookies API returns a list of all cookie stores.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/onChanged.html">Mozilla/Add-ons/WebExtensions/API/cookies/onChanged</a>
                 
-                  <small>Fired when a cookie is set or removed. As a special case, note that updating a cookie's properties ...</small>
+                  <small>The onChanged event of the cookies API is fired when a cookie is set or removed.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/OnChangedCause.html">Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause</a>
                 
-                  <small>The underlying reason behind the cookie's change. If a cookie was inserted, or removed via an ...</small>
+                  <small>The OnChangedCause type of the cookies API represents the reason a cookie changed.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/remove.html">Mozilla/Add-ons/WebExtensions/API/cookies/remove</a>
                 
-                  <small>Deletes a cookie by name.</small>
+                  <small>The remove() method of the cookies API deletes a cookie, given its name and URL.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/cookies/set.html">Mozilla/Add-ons/WebExtensions/API/cookies/set</a>
                 
-                  <small>Sets a cookie with the given cookie data. This method is equivalent to issuing an HTTP Set-Cookie ...</small>
+                  <small>The set() method of the cookies API sets a cookie containing the specified cookie data. This ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads.html">Mozilla/Add-ons/WebExtensions/API/downloads</a>
                 
-                  <small>Interact with the browser's download manager. You can use this module to download files, cancel, ...</small>
+                  <small>Enables WebExtensions to interact with the browser's download manager. You can use this API ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/acceptDanger.html">Mozilla/Add-ons/WebExtensions/API/downloads/acceptDanger</a>
                 
-                  <small>Prompt the user to either accept or cancel a dangerous download. acceptDanger() does not ...</small>
+                  <small>The acceptDanger () function of the downloads API prompts the user to either accept or cancel a ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/BooleanDelta.html">Mozilla/Add-ons/WebExtensions/API/downloads/BooleanDelta</a>
                 
-                  <small>Represents the difference between two booleans.</small>
+                  <small>The BooleanDelta type of the downloads API represents the difference between two booleans.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/cancel.html">Mozilla/Add-ons/WebExtensions/API/downloads/cancel</a>
                 
-                  <small>Cancel a download. When callback is run, the download is cancelled, completed, interrupted or ...</small>
+                  <small>The cancel () function of the downloads API cancels a download. The call will fail if the ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/DangerType.html">Mozilla/Add-ons/WebExtensions/API/downloads/DangerType</a>
                 
-                  <small>These string constants will never change, however the set of DangerTypes may change.</small>
+                  <small>The DangerType type of the downloads API defines a set of possible reasons that a downloadable ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/DoubleDelta.html">Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta</a>
                 
-                  <small>Represents the difference between two doubles.</small>
+                  <small>The DoubleDelta type of the downloads API represents the difference between two doubles.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/download.html">Mozilla/Add-ons/WebExtensions/API/downloads/download</a>
                 
-                  <small>Download a file, given its URL.</small>
+                  <small>The download() function of the downloads API downloads a file, given its URL and other optional ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/DownloadItem.html">Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem</a>
                 
-                  <small>Represents a downloaded file.</small>
+                  <small>The DownloadItem type of the downloads API represents a downloaded file.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/DownloadQuery.html">Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery</a>
                 
-                  <small>Parameters that combine to specify a predicate that can be used to select a set of downloads. Used ...</small>
+                  <small>The DownloadQuery type of the downloads API defines a set of parameters that can be used to ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/DownloadTime.html">Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime</a>
                 
-                  <small>A time specified as a Date object, a number of string representing milliseconds since the epoch, or ...</small>
+                  <small>The DownloadTime type of the downloads API represents the time a download took to complete.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/drag.html">Mozilla/Add-ons/WebExtensions/API/downloads/drag</a>
                 
-                  <small>Initiate dragging the file to another application.</small>
+                  <small>The drag () function of the downloads API initiates dragging the downloaded file to another ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/erase.html">Mozilla/Add-ons/WebExtensions/API/downloads/erase</a>
                 
-                  <small>Erase matching DownloadItems from history, without deleting the downloaded file.</small>
+                  <small>The erase () function of the downloads API erases matching DownloadItems from the browser's ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/FilenameConflictAction.html">Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction</a>
                 
-                  <small>Options for what to do if a filename conflicts with an existing file.</small>
+                  <small>The FilenameConflictAction type of the downloads API specifies what to do if the name of a ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/getFileIcon.html">Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon</a>
                 
-                  <small>Retrieve an icon for the specified download. For new downloads, file icons are available after the ...</small>
+                  <small>The getFileIcon () function of the downloads API retrieves an icon for the specified download.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/InterruptReason.html">Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason</a>
                 
-                  <small>The reason a download was interrupted.</small>
+                  <small>The InteruptReason type of the downloads API defines a set of possible reasons why a download ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/onChanged.html">Mozilla/Add-ons/WebExtensions/API/downloads/onChanged</a>
                 
-                  <small>When any of a downloads.DownloadItem 's properties except bytesReceived changes, this event fires ...</small>
+                  <small>The onChanged () event of the downloads API is fired when any of a downloads.DownloadItem 's ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/onCreated.html">Mozilla/Add-ons/WebExtensions/API/downloads/onCreated</a>
                 
-                  <small>This event fires when a download begins. The listener is passed the downloads.DownloadItem object.</small>
+                  <small>The onCreated () event of the downloads API fires when a download begins, i.e. when ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/onErased.html">Mozilla/Add-ons/WebExtensions/API/downloads/onErased</a>
                 
-                  <small>Fires with the downloadId when a download is erased from history.</small>
+                  <small>The onErased () event of the downloads API fires when a download is erased from the browser history.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/open.html">Mozilla/Add-ons/WebExtensions/API/downloads/open</a>
                 
-                  <small>Open the downloaded file.</small>
+                  <small>The open () function of the downloads API opens the downloaded file with its associated application.</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/WebExtensions/API/downloads/pause.html">Mozilla/Add-ons/WebExtensions/API/downloads/pause</a>
                 
-                  <small>Pause the download. If the request was successful the download is in a paused state. Otherwise ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/removeFile.html">Mozilla/Add-ons/WebExtensions/API/downloads/removeFile</a>
-                
-                  <small>Remove a downloaded file.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/resume.html">Mozilla/Add-ons/WebExtensions/API/downloads/resume</a>
-                
-                  <small>Resume a paused download. If the request was successful the download is in progress and unpaused. ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/search.html">Mozilla/Add-ons/WebExtensions/API/downloads/search</a>
-                
-                  <small>Find DownloadItems. Set query to the empty object to get all DownloadItems. To get a specific ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/setShelfEnabled.html">Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled</a>
-                
-                  <small></small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/show.html">Mozilla/Add-ons/WebExtensions/API/downloads/show</a>
-                
-                  <small>Show the downloaded file in its folder in a file manager.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/showDefaultFolder.html">Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder</a>
-                
-                  <small>Open the downloads folder in the file manager.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/State.html">Mozilla/Add-ons/WebExtensions/API/downloads/State</a>
-                
-                  <small>These string constants will never change, however the set of States may change.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/downloads/StringDelta.html">Mozilla/Add-ons/WebExtensions/API/downloads/StringDelta</a>
-                
-                  <small>Represents the difference between two strings.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Add-ons/WebExtensions/API/events.png">Mozilla/Add-ons/WebExtensions/API/events</a>
-                
-                  <small>Common types used by APIs that dispatch events.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/events/Event.html">Mozilla/Add-ons/WebExtensions/API/events/Event</a>
-                
-                  <small>An object which allows the addition and removal of listeners for a Chrome event.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/events/Rule.html">Mozilla/Add-ons/WebExtensions/API/events/Rule</a>
-                
-                  <small>Description of a declarative rule for handling events.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/events/UrlFilter.html">Mozilla/Add-ons/WebExtensions/API/events/UrlFilter</a>
-                
-                  <small>Filters URLs for various criteria. See event filtering. All criteria are case sensitive.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension.html">Mozilla/Add-ons/WebExtensions/API/extension</a>
-                
-                  <small>Utilities related to your add-on. Get URLs to resources packages with your add-on, get the Window ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/getBackgroundPage.html">Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage</a>
-                
-                  <small>Alias for runtime.getBackgroundPage().</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/getExtensionTabs.html">Mozilla/Add-ons/WebExtensions/API/extension/getExtensionTabs</a>
-                
-                  <small>Returns an array of the JavaScript 'window' objects for each of the tabs running inside the current ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/getURL.html">Mozilla/Add-ons/WebExtensions/API/extension/getURL</a>
-                
-                  <small>Converts a relative path within an extension install directory to a fully-qualified URL.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/getViews.html">Mozilla/Add-ons/WebExtensions/API/extension/getViews</a>
-                
-                  <small>Returns an array of the Window objects for each of the pages running inside the current extension.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/inIncognitoContext.html">Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext</a>
-                
-                  <small>True for content scripts running inside incognito tabs, and for extension pages running inside an ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess.html">Mozilla/Add-ons/WebExtensions/API/extension/isAllowedFileSchemeAccess</a>
-                
-                  <small>Retrieves the state of the extension's access to the 'file://' scheme (as determined by the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess.html">Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess</a>
-                
-                  <small>Retrieves the state of the extension's access to Incognito-mode (as determined by the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/lastError.html">Mozilla/Add-ons/WebExtensions/API/extension/lastError</a>
-                
-                  <small>An alias for runtime.lastError.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/onRequest.html">Mozilla/Add-ons/WebExtensions/API/extension/onRequest</a>
-                
-                  <small>Fired when a request is sent from either an extension process or a content script.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/onRequestExternal.html">Mozilla/Add-ons/WebExtensions/API/extension/onRequestExternal</a>
-                
-                  <small>Fired when a request is sent from another extension.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/sendRequest.html">Mozilla/Add-ons/WebExtensions/API/extension/sendRequest</a>
-                
-                  <small>Sends a single request to other listeners within the extension. Similar to runtime.connect, but ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/setUpdateUrlData.html">Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData</a>
-                
-                  <small>Sets parameters for the extension's update URL. This value is ignored for extensions that are ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extension/ViewType.html">Mozilla/Add-ons/WebExtensions/API/extension/ViewType</a>
-                
-                  <small>The type of extension view.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extensionTypes.html">Mozilla/Add-ons/WebExtensions/API/extensionTypes</a>
-                
-                  <small>Some common types used in other WebExtension APIs.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extensionTypes/ImageDetails.html">Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails</a>
-                
-                  <small>Details about the format and quality of an image.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extensionTypes/ImageFormat.html">Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat</a>
-                
-                  <small>The format of an image.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extensionTypes/InjectDetails.html">Mozilla/Add-ons/WebExtensions/API/extensionTypes/InjectDetails</a>
-                
-                  <small>Details of the script or CSS to inject. Either the code or the file property must be set, but both ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/extensionTypes/RunAt.html">Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt</a>
-                
-                  <small>The soonest that the JavaScript or CSS will be injected into the tab.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n.html">Mozilla/Add-ons/WebExtensions/API/i18n</a>
-                
-                  <small>Functions to internationalize your add-on. You can use these APIs to get localized strings from ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n/detectLanguage.html">Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage</a>
-                
-                  <small>Detects the language of the provided text using the Compact Language Detector (CLD).</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n/getAcceptLanguages.html">Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages</a>
-                
-                  <small>Gets the accept-languages of the browser. This is different from the locale used by the browser. To ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n/getMessage.html">Mozilla/Add-ons/WebExtensions/API/i18n/getMessage</a>
-                
-                  <small>Gets the localized string for the specified message.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n/getUILanguage.html">Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage</a>
-                
-                  <small>Gets the UI language of the browser. This is different from i18n.getAcceptLanguages which returns ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/i18n/LanguageCode.html">Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode</a>
-                
-                  <small>A language tag such as "en-US" or " fr ".</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/idle.html">Mozilla/Add-ons/WebExtensions/API/idle</a>
-                
-                  <small>Find out when the user's system is idle, locked, or active.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/idle/IdleState.html">Mozilla/Add-ons/WebExtensions/API/idle/IdleState</a>
-                
-                  <small>String describing the device's idle state.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/idle/onStateChanged.html">Mozilla/Add-ons/WebExtensions/API/idle/onStateChanged</a>
-                
-                  <small>Fired when the system changes to an active, idle or locked state. The event fires with "locked" if ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/idle/queryState.html">Mozilla/Add-ons/WebExtensions/API/idle/queryState</a>
-                
-                  <small>Returns "locked" if the system is locked, "idle" if the user has not generated any input for a ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/idle/setDetectionInterval.html">Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval</a>
-                
-                  <small>Sets the interval, in seconds, used to determine when the system is in an idle state for ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/clear.html">Mozilla/Add-ons/WebExtensions/API/notifications/clear</a>
-                
-                  <small>Clears a notification, given its ID.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/create.html">Mozilla/Add-ons/WebExtensions/API/notifications/create</a>
-                
-                  <small>Creates and displays a notification.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/getAll.html">Mozilla/Add-ons/WebExtensions/API/notifications/getAll</a>
-                
-                  <small>Gets the set of all current notifications created by the add-on.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/NotificationOptions.html">Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions</a>
-                
-                  <small>This type contains all the data needed to:</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/onButtonClicked.html">Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked</a>
-                
-                  <small>Fired when the user clicks one of the notification's buttons.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/onClicked.html">Mozilla/Add-ons/WebExtensions/API/notifications/onClicked</a>
-                
-                  <small>Fired when the user clicks a notification, but not on any of the notification's buttons (for that, ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/onClosed.html">Mozilla/Add-ons/WebExtensions/API/notifications/onClosed</a>
-                
-                  <small>Fired when a notification is closed, either by the system or by the user.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/TemplateType.html">Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType</a>
-                
-                  <small>This is a string, and represents the type of notification to create. There are four types of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/notifications/update.html">Mozilla/Add-ons/WebExtensions/API/notifications/update</a>
-                
-                  <small>Updates a notification, given its ID.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction.html">Mozilla/Add-ons/WebExtensions/API/pageAction</a>
-                
-                  <small>A page action is shown as a clickable icon inside the browser's address bar. You can listen for ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/getPopup.html">Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup</a>
-                
-                  <small>Gets the URL for the HTML document set as the popup for this page action.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/getTitle.html">Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle</a>
-                
-                  <small>Gets the title of the page action.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/hide.html">Mozilla/Add-ons/WebExtensions/API/pageAction/hide</a>
-                
-                  <small>Hides the page action for a given tab.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/ImageDataType.html">Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType</a>
-                
-                  <small>Pixel data for an image.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/onClicked.html">Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked</a>
-                
-                  <small>Fired when a page action icon is clicked. This event will not fire if the page action has a popup.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/setIcon.html">Mozilla/Add-ons/WebExtensions/API/pageAction/setIcon</a>
-                
-                  <small>Sets the icon for the page action. The icon can be specified either as the path to an image file or ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/setPopup.html">Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup</a>
-                
-                  <small>Sets the HTML document to be opened as a popup when the user clicks on the page action's icon.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/setTitle.html">Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle</a>
-                
-                  <small>Sets the title of the page action. This is displayed in a tooltip over the page action.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/pageAction/show.html">Mozilla/Add-ons/WebExtensions/API/pageAction/show</a>
-                
-                  <small>Shows the page action for a given tab. The page action is shown whenever the given tab is the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime.html">Mozilla/Add-ons/WebExtensions/API/runtime</a>
-                
-                  <small>This module provides information about your add-on and the environment it's running in. It also ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/connect.html">Mozilla/Add-ons/WebExtensions/API/runtime/connect</a>
-                
-                  <small>Attempts to connect listeners within an extension (such as the background page), or other ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/connectNative.html">Mozilla/Add-ons/WebExtensions/API/runtime/connectNative</a>
-                
-                  <small>Connects to a native application in the host machine.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/getBackgroundPage.html">Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage</a>
-                
-                  <small>Retrieves the Window for the add-on's background page.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/getManifest.html">Mozilla/Add-ons/WebExtensions/API/runtime/getManifest</a>
-                
-                  <small>object. The manifest.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry.html">Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry</a>
-                
-                  <small>Returns a DirectoryEntry for the package directory.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Add-ons/WebExtensions/API/runtime/getPlatformInfo.html">Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo</a>
-                
-                  <small>Returns information about the current platform.</small>
+                  <small>The pause () function of the downloads API pauses a download.</small>
                 
             </li>
           
@@ -1073,7 +1055,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -1090,12 +1072,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1103,14 +1085,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1118,127 +1101,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1253,28 +1359,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:19:17 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:47:43 GMT -->
 </body></html>

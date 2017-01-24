@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <!-- This text is a brief description of the features that are present in
-the Bash shell (version 4.3, 2 February 2014).
+the Bash shell (version 4.4, 7 September 2016).
 
-This is Edition 4.3, last updated 2 February 2014,
+This is Edition 4.4, last updated 7 September 2016,
 of The GNU Bash Reference Manual,
-for Bash, Version 4.3.
+for Bash, Version 4.4.
 
-Copyright (C) 1988-2014 Free Software Foundation, Inc.
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
@@ -15,7 +15,7 @@ any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled
 "GNU Free Documentation License". -->
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ -->
 <head>
 <title>Word Splitting</title>
 
@@ -34,16 +34,16 @@ A copy of the license is included in the section entitled
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
 blockquote.smallquotation {font-size: smaller}
 div.display {margin-left: 3.2em}
 div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
 div.lisp {margin-left: 3.2em}
 div.smalldisplay {margin-left: 3.2em}
 div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
 div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
+kbd {font-style: oblique}
 pre.display {font-family: inherit}
 pre.format {font-family: inherit}
 pre.menu-comment {font-family: serif}
@@ -52,10 +52,9 @@ pre.smalldisplay {font-family: inherit; font-size: smaller}
 pre.smallexample {font-size: smaller}
 pre.smallformat {font-family: inherit; font-size: smaller}
 pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
 </style>
@@ -63,7 +62,7 @@ ul.no-bullet {list-style: none}
 
 </head>
 
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en">
 <a name="Word-Splitting"></a>
 <div class="header">
 <p>
@@ -88,7 +87,7 @@ at the beginning and end of the results of the previous
 expansions are ignored, and any sequence of <code>IFS</code>
 characters not at the beginning or end serves to delimit words.
 If <code>IFS</code> has a value other than the default, then sequences of
-the whitespace characters <code>space</code> and <code>tab</code>
+the whitespace characters <code>space</code>, <code>tab</code>, and <code>newline</code>
 are ignored at the beginning and end of the
 word, as long as the whitespace character is in the
 value of <code>IFS</code> (an <code>IFS</code> whitespace character).
@@ -98,15 +97,27 @@ whitespace characters, delimits a field.  A sequence of <code>IFS</code>
 whitespace characters is also treated as a delimiter.
 If the value of <code>IFS</code> is null, no word splitting occurs.
 </p>
-<p>Explicit null arguments (<code>&quot;&quot;</code> or <code>''</code>) are retained.
+<p>Explicit null arguments (<code>&quot;&quot;</code> or <code>''</code>) are retained
+and passed to commands as empty strings.
 Unquoted implicit null arguments, resulting from the expansion of
 parameters that have no values, are removed.
 If a parameter with no value is expanded within double quotes, a
-null argument results and is retained.
+null argument results and is retained
+and passed to a command as an empty string.
+When a quoted null argument appears as part of a word whose expansion is
+non-null, the null argument is removed.
+That is, the word
+<code>-d''</code> becomes <code>-d</code> after word splitting and
+null argument removal.
 </p>
 <p>Note that if no expansion occurs, no splitting
 is performed.
 </p>
+<hr>
+<div class="header">
+<p>
+Next: <a href="Filename-Expansion.html#Filename-Expansion" accesskey="n" rel="next">Filename Expansion</a>, Previous: <a href="Process-Substitution.html#Process-Substitution" accesskey="p" rel="prev">Process Substitution</a>, Up: <a href="Shell-Expansions.html#Shell-Expansions" accesskey="u" rel="up">Shell Expansions</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Indexes.html#Indexes" title="Index" rel="index">Index</a>]</p>
+</div>
 
 
 

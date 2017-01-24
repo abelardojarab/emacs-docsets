@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGLShader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:33:35 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGLShader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:09:18 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -63,6 +62,12 @@
   <link rel="canonical" href="WebGLShader.html">
 
   
+    
+      <link rel="alternate" hreflang="ko" href="https://developer.mozilla.org/ko/docs/Web/API/WebGLShader" title="WebGLShader">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLShader" title="WebGLShader">
+    
+  
 
   <!-- document-specific social tags -->
   <meta property="og:title" content="WebGLShader">
@@ -74,6 +79,13 @@
   <meta name="description" content="The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders.">
   <meta name="twitter:description" content="The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -91,10 +103,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -144,8 +156,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -161,9 +173,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -180,34 +190,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGLShader" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/WebGLShader" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/WebGLShader" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGLShader" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGLShader" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -217,18 +213,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -239,10 +237,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -256,8 +251,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/WebGLShader">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -296,13 +291,19 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
-                <li class="smaller">No translations exist for this article.</li>
+                
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ko/docs/Web/API/WebGLShader" title="Korean">한국어 (ko)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLShader" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
+                
               
 
               
@@ -313,7 +314,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -324,7 +327,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -374,13 +376,28 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/teoli" title="View profile: teoli">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="teoli" data-src="../../../../../secure.gravatar.com/avatar/d0d90148e08e3b64ccf75c46f31442c56c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">teoli</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/MrOpposite" title="View profile: MrOpposite">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="MrOpposite" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">MrOpposite</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/zalomea" title="View profile: zalomea">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="zalomea" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">zalomea</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/TatumCreative" title="View profile: TatumCreative">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="TatumCreative" data-src="../../../../../secure.gravatar.com/avatar/3bec14d3db8ed72b447d97645a4899866c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">TatumCreative</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/gregtatum" title="View profile: gregtatum">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gregtatum" data-src="../../../../../secure.gravatar.com/avatar/3bec14d3db8ed72b447d97645a4899866c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gregtatum</noscript></a>
                 </li>
             
             </ul>
@@ -436,13 +453,13 @@
               <article id="wikiArticle">
                 
                   
-                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
+                    <div><section class="Quick_links" id="Quick_Links"><!-- --></section></div>
 
-<p>The <strong>WebGLShader</strong> is part of the <a href="WebGL_API.html">WebGL API</a> and can either be a vertex or a fragment shader. A <a href="WebGLProgram.html" title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program."><code>WebGLProgram</code></a> requires both types of shaders.</p>
+<p>The <strong>WebGLShader</strong> is part of the <a href="WebGL_API.html">WebGL API</a> and can either be a vertex or a fragment shader. A <a title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program." href="WebGLProgram.html"><code>WebGLProgram</code></a> requires both types of shaders.</p>
 
 <h2 id="Description">Description</h2>
 
-<p>To create a <strong>WebGLShader</strong> use <a href="WebGLRenderingContext/createShader.html" title="The WebGLRenderingContext.createShader() method of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()."><code>WebGLRenderingContext.createShader</code></a>, then hook up the GLSL source code using&nbsp;<a href="WebGLRenderingContext/shaderSource.html" title="The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader."><code>WebGLRenderingContext.shaderSource()</code></a>, and finally invoke <a href="WebGLRenderingContext/compileShader.html" title="The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram."><code>WebGLRenderingContext.compileShader()</code></a> to finish and compile the shader. At this point the <strong>WebGLShader</strong>&nbsp;is still not in a usable form and must still be attached to a&nbsp;<a href="WebGLProgram.html" title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program."><code>WebGLProgram</code></a>.</p>
+<p>To create a <strong>WebGLShader</strong> use <a title="The WebGLRenderingContext.createShader() method of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()." href="WebGLRenderingContext/createShader.html"><code>WebGLRenderingContext.createShader</code></a>, then hook up the GLSL source code using&nbsp;<a title="The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader." href="WebGLRenderingContext/shaderSource.html"><code>WebGLRenderingContext.shaderSource()</code></a>, and finally invoke <a title="The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram." href="WebGLRenderingContext/compileShader.html"><code>WebGLRenderingContext.compileShader()</code></a> to finish and compile the shader. At this point the <strong>WebGLShader</strong>&nbsp;is still not in a usable form and must still be attached to a&nbsp;<a title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program." href="WebGLProgram.html"><code>WebGLProgram</code></a>.</p>
 
 <pre class="brush: js">function createShader (gl, sourceCode, type) {
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
@@ -454,10 +471,11 @@
     var info = gl.getShaderInfoLog( shader );
     throw "Could not compile WebGL program. \n\n" + info;
   }
+  return shader;
 }
 </pre>
 
-<p>See <a href="WebGLProgram.html" title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program."><code>WebGLProgram</code></a>&nbsp;for information on attaching the shaders.</p>
+<p>See <a title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program." href="WebGLProgram.html"><code>WebGLProgram</code></a>&nbsp;for information on attaching the shaders.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -466,7 +484,7 @@
 <p>Note that there are many other strategies for writing and accessing shader source code strings.&nbsp;These example are for illustration purposes only.</p>
 
 <pre class="brush: js">var vertexShaderSource =
-  "attribute vec4 position;\n"
+  "attribute vec4 position;\n"+
   "void main() {\n"+
   "  gl_Position = position;\n"+
   "}\n";
@@ -496,7 +514,7 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.8" class="external" lang="en" hreflang="en">WebGL 1.0<br><small lang="en-US">The definition of 'WebGLShader' in that specification.</small></a></td>
+   <td><a lang="en" hreflang="en" href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.8" class="external">WebGL 1.0<br><small lang="en-US">The definition of 'WebGLShader' in that specification.</small></a></td>
    <td><span class="spec-REC">Recommendation</span></td>
    <td>Initial definition.</td>
   </tr>
@@ -505,129 +523,53 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div><div class="htab"> 
-    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a> 
-    <ul> 
-        <li class="selected"><a>Desktop</a></li> 
-        <li><a>Mobile</a></li> 
-    </ul> 
-</div></div>
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>9</td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/4" title="Released on 2011-03-22.">4.0</a> (2.0)</td>
-   <td>11</td>
-   <td>12</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/44" title="Released on 2016-01-26.">44</a> (44) [1]</td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td>25</td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
-   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td>12</td>
-   <td>8.1</td>
-  </tr>
-  <tr>
-   <td>Available in workers</td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td>44.0 (44) [1]</td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature is behind a feature preference setting. In about:config, set <code>gfx.offscreencanvas.enabled</code> to <code>true</code>.</p>
+<p></p><div class="htab"><a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a><ul><li class="selected"><a>Desktop</a></li><li><a>Mobile</a></li></ul></div><div id="compat-desktop"><table class="compat-table">  <thead>    <tr>      <th>Feature</th>      <th>Chrome</th>
+      <th>Edge</th>
+      <th>Firefox</th>
+      <th>Internet Explorer</th>
+      <th>Opera</th>
+      <th>Safari</th>
+      <th>Servo</th>
+    </tr>  </thead><tbody><tr><td>Basic Support</td><td>9</td><td>12</td><td>4.0</td><td>11</td><td>12</td><td>5.1</td><td><span style="color: #f00;">No support</span></td></tr><tr><td>Available in workers</td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span><a href="#note-1"><strong><sup>1</sup></strong></a></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table">  <thead>    <tr>      <th>Feature</th>      <th>Android</th>
+      <th>Chrome for Android</th>
+      <th>Edge Mobile</th>
+      <th>Firefox for Android</th>
+      <th>IE Mobile</th>
+      <th>Opera Mobile</th>
+      <th>Safari Mobile</th>
+    </tr>  </thead><tbody><tr><td>Basic Support</td><td><span style="color: #888;">(Yes)</span></td><td>25</td><td><span style="color: #f00;">No support</span></td><td><span style="color: #888;">(Yes)</span></td><td>11</td><td>12</td><td>8.1</td></tr><tr><td>Available in workers</td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td><td><span style="color: #f00;">No support</span></td></tr></tbody></table></div><p id="note-1">1. This feature is experimentally implemented since Firefox 44; to activate it, in about:config, set gfx.offscreencanvas.enabled to true</p><p></p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a href="WebGLProgram.html" title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program."><code>WebGLProgram</code></a></li>
- <li><a href="WebGLRenderingContext/attachShader.html" title="The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram."><code>WebGLRenderingContext.attachShader()</code></a></li>
- <li><a href="WebGLRenderingContext/bindAttribLocation.html" title="The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable."><code>WebGLRenderingContext.bindAttribLocation()</code></a></li>
- <li><a href="WebGLRenderingContext/compileShader.html" title="The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram."><code>WebGLRenderingContext.compileShader()</code></a></li>
- <li><a href="WebGLRenderingContext/createProgram.html" title="The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object."><code>WebGLRenderingContext.createProgram()</code></a></li>
- <li><a href="WebGLRenderingContext/createShader.html" title="The WebGLRenderingContext.createShader() method of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()."><code>WebGLRenderingContext.createShader()</code></a></li>
- <li><a href="WebGLRenderingContext/deleteProgram.html" title="The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted."><code>WebGLRenderingContext.deleteProgram()</code></a></li>
- <li><a href="WebGLRenderingContext/deleteShader.html" title="The WebGLRenderingContext.deleteShader() method of the WebGL API deletes a given WebGLShader object. This method has no effect if the shader has already been deleted."><code>WebGLRenderingContext.deleteShader()</code></a></li>
- <li><a href="WebGLRenderingContext/detachShader.html" title="The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached&nbsp;WebGLShader from a WebGLProgram."><code>WebGLRenderingContext.detachShader()</code></a></li>
- <li><a href="WebGLRenderingContext/getAttachedShaders.html" title="The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram."><code>WebGLRenderingContext.getAttachedShaders()</code></a></li>
- <li><a href="WebGLRenderingContext/getProgramParameter.html" title="The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program."><code>WebGLRenderingContext.getProgramParameter()</code></a></li>
- <li><a href="WebGLRenderingContext/getProgramInfoLog.html" title="The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects."><code>WebGLRenderingContext.getProgramInfoLog()</code></a></li>
- <li><a href="WebGLRenderingContext/getShaderParameter.html" title="The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader."><code>WebGLRenderingContext.getShaderParameter()</code></a></li>
- <li><a href="WebGLRenderingContext/getShaderPrecisionFormat.html" title="The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format."><code>WebGLRenderingContext.getShaderPrecisionFormat()</code></a></li>
- <li><a href="WebGLRenderingContext/getShaderInfoLog.html" title="The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information."><code>WebGLRenderingContext.getShaderInfoLog()</code></a></li>
- <li><a href="WebGLRenderingContext/getShaderSource.html" title="The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString."><code>WebGLRenderingContext.getShaderSource()</code></a></li>
- <li><a href="WebGLRenderingContext/isProgram.html" title="The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise."><code>WebGLRenderingContext.isProgram()</code></a></li>
- <li><a href="WebGLRenderingContext/isShader.html" title="The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise."><code>WebGLRenderingContext.isShader()</code></a></li>
- <li><a href="WebGLRenderingContext/linkProgram.html" title="The WebGLRenderingContext.linkProgram() method of the WebGL API links a given WebGLProgram to the attached vertex and fragment shaders."><code>WebGLRenderingContext.linkProgram()</code></a></li>
- <li><a href="WebGLRenderingContext/shaderSource.html" title="The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader."><code>WebGLRenderingContext.shaderSource()</code></a></li>
- <li><a href="WebGLRenderingContext/useProgram.html" title="The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part the current rendering state."><code>WebGLRenderingContext.useProgram()</code></a></li>
- <li><a href="WebGLRenderingContext/validateProgram.html" title="The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state."><code>WebGLRenderingContext.validateProgram()</code></a></li>
+ <li><a title="The WebGLProgram is part of the WebGL API and is a combination of two compiled WebGLShaders consisting of a vertex shader and a fragment shader (both written in GLSL). These are then linked into a usable program." href="WebGLProgram.html"><code>WebGLProgram</code></a></li>
+ <li><a title="The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram." href="WebGLRenderingContext/attachShader.html"><code>WebGLRenderingContext.attachShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable." href="WebGLRenderingContext/bindAttribLocation.html"><code>WebGLRenderingContext.bindAttribLocation()</code></a></li>
+ <li><a title="The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram." href="WebGLRenderingContext/compileShader.html"><code>WebGLRenderingContext.compileShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object." href="WebGLRenderingContext/createProgram.html"><code>WebGLRenderingContext.createProgram()</code></a></li>
+ <li><a title="The WebGLRenderingContext.createShader() method of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()." href="WebGLRenderingContext/createShader.html"><code>WebGLRenderingContext.createShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted." href="WebGLRenderingContext/deleteProgram.html"><code>WebGLRenderingContext.deleteProgram()</code></a></li>
+ <li><a title="The WebGLRenderingContext.deleteShader() method of the WebGL API deletes a given WebGLShader object. This method has no effect if the shader has already been deleted." href="WebGLRenderingContext/deleteShader.html"><code>WebGLRenderingContext.deleteShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached&nbsp;WebGLShader from a WebGLProgram." href="WebGLRenderingContext/detachShader.html"><code>WebGLRenderingContext.detachShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram." href="WebGLRenderingContext/getAttachedShaders.html"><code>WebGLRenderingContext.getAttachedShaders()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program." href="WebGLRenderingContext/getProgramParameter.html"><code>WebGLRenderingContext.getProgramParameter()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects." href="WebGLRenderingContext/getProgramInfoLog.html"><code>WebGLRenderingContext.getProgramInfoLog()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader." href="WebGLRenderingContext/getShaderParameter.html"><code>WebGLRenderingContext.getShaderParameter()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getShaderPrecisionFormat() method of the WebGL API returns a new WebGLShaderPrecisionFormat object describing the range and precision for the specified shader numeric format." href="WebGLRenderingContext/getShaderPrecisionFormat.html"><code>WebGLRenderingContext.getShaderPrecisionFormat()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information." href="WebGLRenderingContext/getShaderInfoLog.html"><code>WebGLRenderingContext.getShaderInfoLog()</code></a></li>
+ <li><a title="The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString." href="WebGLRenderingContext/getShaderSource.html"><code>WebGLRenderingContext.getShaderSource()</code></a></li>
+ <li><a title="The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise." href="WebGLRenderingContext/isProgram.html"><code>WebGLRenderingContext.isProgram()</code></a></li>
+ <li><a title="The WebGLRenderingContext.isShader() method of the WebGL API returns true if the passed WebGLShader is valid, false otherwise." href="WebGLRenderingContext/isShader.html"><code>WebGLRenderingContext.isShader()</code></a></li>
+ <li><a title="The WebGLRenderingContext.linkProgram() method of the WebGL API links a given WebGLProgram to the attached vertex and fragment shaders." href="WebGLRenderingContext/linkProgram.html"><code>WebGLRenderingContext.linkProgram()</code></a></li>
+ <li><a title="The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader." href="WebGLRenderingContext/shaderSource.html"><code>WebGLRenderingContext.shaderSource()</code></a></li>
+ <li><a title="The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part the current rendering state." href="WebGLRenderingContext/useProgram.html"><code>WebGLRenderingContext.useProgram()</code></a></li>
+ <li><a title="The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state." href="WebGLRenderingContext/validateProgram.html"><code>WebGLRenderingContext.validateProgram()</code></a></li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGLShader%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+WebGLShader+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about WebGLShader on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about WebGLShader on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FWebGLShader%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about WebGLShader on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -653,9 +595,15 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/MrOpposite">MrOpposite</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/zalomea">zalomea</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/TatumCreative">TatumCreative</a>
+        <a href="https://developer.mozilla.org/en-US/profiles/gregtatum">gregtatum</a>
     
                     </div>
                   
@@ -663,11 +611,48 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/fscholz">fscholz</a>,
-                      <time datetime="2016-01-19T13:31:20-08:00">Jan 19, 2016, 1:31:20 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/teoli">teoli</a>,
+                      <time datetime="2016-11-24T07:44:08-08:00">Nov 24, 2016, 7:44:08 AM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -708,12 +693,12 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -721,13 +706,29 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
+  
+    <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option title="English (US)" value="/en-US/docs/Web/API/WebGLShader" selected="">
+          English (US) (en-US)
+        </option>
+        
+          <option title="Korean" value="/ko/docs/Web/API/WebGLShader">
+            한국어 (ko)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/WebGLShader">
+            中文 (简体) (zh-CN)
+          </option>
+      </select>
+      <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
+    </form>
   
 
         
@@ -740,63 +741,38 @@ var fragmentShader = createShader(gl, fragmentShaderSource, gl.FRAGMENT_SHADER)
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/WebGLShader$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGLShader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:33:36 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/WebGLShader by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:09:18 GMT -->
 </body></html>

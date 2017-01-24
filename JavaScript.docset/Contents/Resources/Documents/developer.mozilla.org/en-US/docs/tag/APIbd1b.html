@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=33 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:53 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=33 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 01:48:14 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D33" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/API?page=33" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/API?page=33" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D33" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D33" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D33">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,7 +294,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -323,706 +305,706 @@
   
   </ol>
 
-        <p>Found 3965 documents</p>
+        <p>Found 4384 documents</p>
         <ul class="document-list">
           
             <li>
-              <a href="../Web/API/StyleSheet/ownerNode.html">Web/API/StyleSheet/ownerNode</a>
+              <a href="../Web/API/PositionSensorVRDevice/getImmediateState.html">Web/API/PositionSensorVRDevice/getImmediateState</a>
                 
-                  <small>ownerNode returns the node that associates this style sheet with the document.</small>
+                  <small>The getImmediateState() method of the VRDevice interface returns the current instantaneous ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/StyleSheet/parentStyleSheet.html">Web/API/StyleSheet/parentStyleSheet</a>
+              <a href="../Web/API/PositionSensorVRDevice/getState.html">Web/API/PositionSensorVRDevice/getState</a>
                 
-                  <small>Returns the stylesheet that is including this one, if any.</small>
+                  <small>The getState() method of the PositionSensorVRDevice interface returns the current state of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/StyleSheet/title.html">Web/API/StyleSheet/title</a>
+              <a href="../Web/API/PositionSensorVRDevice/resetSensor.html">Web/API/PositionSensorVRDevice/resetSensor</a>
                 
-                  <small>title returns the advisory title of the current style sheet.</small>
+                  <small>The resetSensor() method of the VRDevice interface can be used to reset the sensor if desired, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/StyleSheet/type.html">Web/API/StyleSheet/type</a>
+              <a href="../Web/API/Presentation.html">Web/API/Presentation</a>
                 
-                  <small>type specifies the style sheet language for this style sheet.</small>
+                  <small>The Presentation can be defined as two possible user agents in the context: Controlling user ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/StyleSheetList.html">Web/API/StyleSheetList</a>
+              <a href="../Web/API/Presentation/defaultRequest.html">Web/API/Presentation/defaultRequest</a>
                 
-                  <small>The StyleSheetList interface represents a list of StyleSheet.</small>
+                  <small>In a controlling user agent, the defaultRequest attribute MUST return the default presentation ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto.html">Web/API/SubtleCrypto</a>
+              <a href="../Web/API/PresentationAvailability.html">Web/API/PresentationAvailability</a>
                 
-                  <small>The SubtleCrypto interface represents a set of cryptographic primitives. It is available via the ...</small>
+                  <small>A PresentationAvailability object is associated with available presentation displays and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/decrypt.html">Web/API/SubtleCrypto/decrypt</a>
+              <a href="../Web/API/PresentationConnection.html">Web/API/PresentationConnection</a>
                 
-                  <small>The SubtleCrypto.decrypt() method returns a Promise of the cleartext corresponding to the ...</small>
+                  <small>The PresentationConnection interface of the Presentation API provides methods and properties for ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/deriveKey.html">Web/API/SubtleCrypto/deriveKey</a>
+              <a href="../Web/API/PresentationConnection/send.html">Web/API/PresentationConnection/send</a>
                 
-                  <small>The SubtleCrypto.deriveKey() method returns a Promise of a newly generated CryptoKey derivated from ...</small>
+                  <small>The PresentationConnection.send() method of the PresentationConnection interface&nbsp;sends either ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/digest.html">Web/API/SubtleCrypto/digest</a>
+              <a href="../Web/API/PresentationConnectionAvailableEvent.html">Web/API/PresentationConnectionAvailableEvent</a>
                 
-                  <small>The SubtleCrypto.digest() method returns a Promise of a digest generated from the hash function and ...</small>
+                  <small>The PresentationConnectionAvailableEvent interface of the Presentation API is fired on a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/encrypt.html">Web/API/SubtleCrypto/encrypt</a>
+              <a href="../Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent.html">Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent</a>
                 
-                  <small>The SubtleCrypto.encrypt() method returns a Promise of the encrypted data corresponding to the ...</small>
+                  <small>The PresentationConnectionAvailableInit() constructor creates a new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/exportKey.html">Web/API/SubtleCrypto/exportKey</a>
+              <a href="../Web/API/PresentationConnectionCloseEvent.html">Web/API/PresentationConnectionCloseEvent</a>
                 
-                  <small>The SubtleCrypto.exportKey() method returns a Promise of the key encrypted in the requested format. ...</small>
+                  <small>The PresentationConnectionCloseEvent interface of the Presentation API is fired on a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/generateKey.html">Web/API/SubtleCrypto/generateKey</a>
+              <a href="../Web/API/PresentationRequest.html">Web/API/PresentationRequest</a>
                 
-                  <small>The SubtleCrypto.generateKey() method returns a Promise of a newly generated CryptoKey, for ...</small>
+                  <small>A PresentationRequest object is used to initiate or reconnect to a presentation made by a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/importKey.html">Web/API/SubtleCrypto/importKey</a>
+              <a href="../Web/API/Presentation_API.html">Web/API/Presentation_API</a>
                 
-                  <small>The SubtleCrypto.importKey() method returns a Promise of the CryptoKey generated from the data ...</small>
+                  <small>The Presentation API is developed to effectively display web content through large scale ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/sign.html">Web/API/SubtleCrypto/sign</a>
+              <a href="../Web/API/ProcessingInstruction.html">Web/API/ProcessingInstruction</a>
                 
-                  <small>The SubtleCrypto.sign() method returns a Promise containing the signature corresponding to the ...</small>
+                  <small>A processing instruction provides an opportunity for application-specific instructions to be ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/unwrapKey.html">Web/API/SubtleCrypto/unwrapKey</a>
+              <a href="../Web/API/ProgressEvent.html">Web/API/ProgressEvent</a>
                 
-                  <small>The SubtleCrypto.unwrapKey() method returns a Promise of a CryptoKey corresponding to the wrapped ...</small>
+                  <small>The ProgressEvent interface represents events measuring progress of an underlying process, like ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/verify.html">Web/API/SubtleCrypto/verify</a>
+              <a href="../Web/API/ProgressEvent/initProgressEvent.html">Web/API/ProgressEvent/initProgressEvent</a>
                 
-                  <small>The SubtleCrypto.verify() method returns a Promise of a Boolean value indicating if the signature ...</small>
+                  <small>The ProgressEvent.initProgressEvent() method Initializes an animation event created using the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SubtleCrypto/wrapKey.html">Web/API/SubtleCrypto/wrapKey</a>
+              <a href="../Web/API/ProgressEvent/lengthComputable.html">Web/API/ProgressEvent/lengthComputable</a>
                 
-                  <small>The SubtleCrypto.wrapKey() method returns a Promise of a wrapped symmetric key for usage (transfer, ...</small>
+                  <small>The ProgressEvent.lengthComputable read-only property is a Boolean flag indicating if the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAElement.html">Web/API/SVGAElement</a>
+              <a href="../Web/API/ProgressEvent/loaded.html">Web/API/ProgressEvent/loaded</a>
                 
-                  <small>The SVGAElement interface provides access to the properties of a element, as well as methods to ...</small>
+                  <small>The ProgressEvent.loaded read-only property is an unsigned long long representing the amount of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAElement/SVGAlement.html">Web/API/SVGAElement/SVGAlement.target</a>
+              <a href="../Web/API/ProgressEvent/ProgressEvent.html">Web/API/ProgressEvent/ProgressEvent</a>
                 
-                  <small>The SVGAElement.target read-only property of SVGAElement returns an SVGAnimatedString object that ...</small>
+                  <small>The ProgressEvent() constructor returns a newly created ProgressEvent, representing the current ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAElement/target.html">Web/API/SVGAElement/target</a>
+              <a href="../Web/API/ProgressEvent/total.html">Web/API/ProgressEvent/total</a>
                 
-                  <small>The SVGAElement.target read-only property of SVGAElement returns an SVGAnimatedString object that ...</small>
+                  <small>The ProgressEvent.total read-only property is an unsigned long long representing the total ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAltGlyphElement.html">Web/API/SVGAltGlyphElement</a>
+              <a href="../Web/API/PromiseRejection.html">Web/API/PromiseRejection</a>
                 
-                  <small>The SVGAltGlyphElement interface represents an altglyph element. This interface makes it possible ...</small>
+                  <small>This object provides information about a Promise that has been rejected.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAltGlyphElement/glyphRef.html">Web/API/SVGAltGlyphElement/glyphRef</a>
+              <a href="../Web/API/PromiseRejection/promise.html">Web/API/PromiseRejection/promise</a>
                 
-                  <small>The SVGAltGlyphElement.glyphRef property is a DOMString representing a glyph identifier. It has the ...</small>
+                  <small>The promise read-only property of the PromiseRejection returns the ID of the Promise that the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAngle.html">Web/API/SVGAngle</a>
+              <a href="../Web/API/PromiseRejection/PromiseRejection.html">Web/API/PromiseRejection/PromiseRejection</a>
                 
-                  <small>The SVGAngle interface correspond to the angle basic data type.</small>
+                  <small>The PromiseRejection() constructor creates a new PromiseRejection object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimateColorElement.html">Web/API/SVGAnimateColorElement</a>
+              <a href="../Web/API/PromiseRejection/reason.html">Web/API/PromiseRejection/reason</a>
                 
-                  <small>The SVGAnimateColorElement interface corresponds to the animateColor element.</small>
+                  <small>The reason read-only property of the PromiseRejection returns the rejection reason for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedAngle.html">Web/API/SVGAnimatedAngle</a>
+              <a href="../Web/API/PromiseRejectionEvent.html">Web/API/PromiseRejectionEvent</a>
                 
-                  <small>The SVGAnimatedAngle interface is used for attributes of basic type angle which can be animated.</small>
+                  <small>The PromiseRejectionEvent interface represents events which are fired when JavaScript Promise s ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedBoolean.html">Web/API/SVGAnimatedBoolean</a>
+              <a href="../Web/API/PromiseRejectionEvent/promise.html">Web/API/PromiseRejectionEvent/promise</a>
                 
-                  <small>The SVGAnimatedBoolean interface is used for attributes of type boolean which can be animated.</small>
+                  <small>The PromiseRejectionEvent.promise read-only property indicates the JavaScript Promise which has ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedEnumeration.html">Web/API/SVGAnimatedEnumeration</a>
+              <a href="../Web/API/PromiseRejectionEvent/PromiseRejectionEvent.html">Web/API/PromiseRejectionEvent/PromiseRejectionEvent</a>
                 
-                  <small>The SVGAnimatedEnumeration interface is used for attributes whose value must be a constant from a ...</small>
+                  <small>The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedInteger.html">Web/API/SVGAnimatedInteger</a>
+              <a href="../Web/API/PromiseRejectionEvent/reason.html">Web/API/PromiseRejectionEvent/reason</a>
                 
-                  <small>The SVGAnimatedInteger interface is used for attributes of basic type integer which can be animated.</small>
+                  <small>The PromiseRejectionEvent.reason read-only property is any JavaScript value or Object which ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedLength.html">Web/API/SVGAnimatedLength</a>
+              <a href="../Web/API/PromiseResolver.html">Web/API/PromiseResolver</a>
                 
-                  <small>The SVGAnimatedLength interface is used for attributes of basic type length which can be animated.</small>
+                  <small>The PromiseResolver interface represents an object controlling the state and the result value of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedLengthList.html">Web/API/SVGAnimatedLengthList</a>
+              <a href="../Web/API/Proximity_Events.html">Web/API/Proximity_Events</a>
                 
-                  <small>The SVGAnimatedLengthList interface is used for attributes of type SVGLengthList which can be ...</small>
+                  <small>The proximity events are a handy way to know when a user is close to a device. These events make ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedNumber.html">Web/API/SVGAnimatedNumber</a>
+              <a href="../Web/API/PushEvent.html">Web/API/PushEvent</a>
                 
-                  <small>The SVGAnimatedNumber interface is used for attributes of basic type Number which can be animated.</small>
+                  <small>The PushEvent interface of the Push API represents a push message that has been received. This ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedNumberList.html">Web/API/SVGAnimatedNumberList</a>
+              <a href="../Web/API/PushEvent/data.html">Web/API/PushEvent/data</a>
                 
-                  <small>The SVGAnimatedNumber interface is used for attributes which take a list of numbers and which can ...</small>
+                  <small>The data read-only property of the PushEvent interface returns a reference to a PushMessageData ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedPoints.html">Web/API/SVGAnimatedPoints</a>
+              <a href="../Web/API/PushEvent/PushEvent.html">Web/API/PushEvent/PushEvent</a>
                 
-                  <small>The SVGAnimatedPoints interface supports elements which have a points attribute which holds a list ...</small>
+                  <small>The PushEvent() constructor creates a new PushEvent object. Note that the this constructor is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedPreserveAspectRatio.html">Web/API/SVGAnimatedPreserveAspectRatio</a>
+              <a href="../Web/API/PushManager.html">Web/API/PushManager</a>
                 
-                  <small>The SVGAnimatedPreserveAspectRatio interface is used for attributes of type SVGPreserveAspectRatio ...</small>
+                  <small>The PushManager interface of the Push API provides a way to receive notifications from ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedRect.html">Web/API/SVGAnimatedRect</a>
+              <a href="../Web/API/PushManager/getSubscription.html">Web/API/PushManager/getSubscription</a>
                 
-                  <small>The SVGAnimatedRect interface is used for attributes of basic SVGRect which can be animated.</small>
+                  <small>The PushManager.getSubscription() method of the PushManager interface retrieves an existing push ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedString.html">Web/API/SVGAnimatedString</a>
+              <a href="../Web/API/PushManager/hasPermission.html">Web/API/PushManager/hasPermission</a>
                 
-                  <small>The SVGAnimatedString interface represent string attributes which can be animated from each SVG ...</small>
+                  <small>The PushManager.hasPermission() method of the PushManager interface returns a Promise that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimatedTransformList.html">Web/API/SVGAnimatedTransformList</a>
+              <a href="../Web/API/PushManager/permissionState.html">Web/API/PushManager/permissionState</a>
                 
-                  <small>The SVGAnimatedTransformList interface is used for attributes which take a list of numbers and ...</small>
+                  <small>The permissionState() method of the PushManager interface returns a Promise that resolves to a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimateElement.html">Web/API/SVGAnimateElement</a>
+              <a href="../Web/API/PushManager/register.html">Web/API/PushManager/register</a>
                 
-                  <small>The SVGAnimateElement interface corresponds to the animate element.</small>
+                  <small>The register method is used to ask the system to request a new endpoint for notifications. This ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimateMotionElement.html">Web/API/SVGAnimateMotionElement</a>
+              <a href="../Web/API/PushManager/registrations.html">Web/API/PushManager/registrations</a>
                 
-                  <small>The SVGAnimateMotionElement interface corresponds to the animateMotion element.</small>
+                  <small>The registrations method is used to ask the system about existing push endpoint registrations.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimateTransformElement.html">Web/API/SVGAnimateTransformElement</a>
+              <a href="../Web/API/PushManager/subscribe.html">Web/API/PushManager/subscribe</a>
                 
-                  <small>The SVGAnimateTransformElement interface corresponds to the animateTransform element.</small>
+                  <small>The subscribe() method of the PushManager interface subscribes to a push service.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGAnimationElement.html">Web/API/SVGAnimationElement</a>
+              <a href="../Web/API/PushManager/unregister.html">Web/API/PushManager/unregister</a>
                 
-                  <small>The SVGAnimationElement interface is the base interface for all of the animation element ...</small>
+                  <small>The unregister() method was used to ask the system to unregister and delete the specified ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGCircleElement.html">Web/API/SVGCircleElement</a>
+              <a href="../Web/API/PushMessageData.html">Web/API/PushMessageData</a>
                 
-                  <small>The SVGCircleElement interface is an interface for the circle element. The circle element is ...</small>
+                  <small>The PushMessageData interface of the Push API provides methods which let you retrieve the push ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGClipPathElement.html">Web/API/SVGClipPathElement</a>
+              <a href="../Web/API/PushMessageData/arrayBuffer.html">Web/API/PushMessageData/arrayBuffer</a>
                 
-                  <small>The SVGClipPathElement interface provides access to the properties of clipPath elements, as well as ...</small>
+                  <small>The arrayBuffer() method of the PushMessageData interface extracts push message data as an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGCursorElement.html">Web/API/SVGCursorElement</a>
+              <a href="../Web/API/PushMessageData/blob.html">Web/API/PushMessageData/blob</a>
                 
-                  <small>The SVGCursorElement interface provides access to the properties of cursor elements, as well as ...</small>
+                  <small>The blob() method of the PushMessageData interface extracts push message data as a Blob object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGDefsElement.html">Web/API/SVGDefsElement</a>
+              <a href="../Web/API/PushMessageData/json.html">Web/API/PushMessageData/json</a>
                 
-                  <small>The SVGDefsElement interface corresponds to the defs element.</small>
+                  <small>The json() method of the PushMessageData interface extracts push message data as a JSON object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGDescElement.html">Web/API/SVGDescElement</a>
+              <a href="../Web/API/PushMessageData/text.html">Web/API/PushMessageData/text</a>
                 
-                  <small>The SVGDescElement interface corresponds to the desc element.</small>
+                  <small>The text() method of the PushMessageData interface extracts push message data as a plain text ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGElement.html">Web/API/SVGElement</a>
+              <a href="../Web/API/PushRegistrationManager.html">Web/API/PushRegistrationManager</a>
                 
-                  <small>All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from ...</small>
+                  <small>Returns an interface to register or unregister a push registration, get an active registration, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGEllipseElement.html">Web/API/SVGEllipseElement</a>
+              <a href="../Web/API/PushSubscription.html">Web/API/PushSubscription</a>
                 
-                  <small>The SVGEllipseElement interface provides access to the properties of ellipse elements, as well as ...</small>
+                  <small>The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGEvent.html">Web/API/SVGEvent</a>
+              <a href="../Web/API/PushSubscription/endpoint.html">Web/API/PushSubscription/endpoint</a>
                 
-                  <small>This section contains the Scalable Vector Graphics (SVG) event reference documentation.</small>
+                  <small>PushSubscription 의 읽기 전용 속성인 endpoint 는&nbsp;push subscription 과 연관있는&nbsp;endpoint &nbsp;값을 USVString 형태로 반환한다.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFilterElement.html">Web/API/SVGFilterElement</a>
+              <a href="../Web/API/PushSubscription/getKey.html">Web/API/PushSubscription/getKey</a>
                 
-                  <small>The SVGFilterElement interface provides access to the properties of filter elements, as well as ...</small>
+                  <small>The getKey() method of the PushSubscription interface returns an ArrayBuffer representing a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontElement.html">Web/API/SVGFontElement</a>
+              <a href="../Web/API/PushSubscription/options.html">Web/API/PushSubscription/options</a>
                 
-                  <small>The SVGFontElement interface corresponds to the font elements.</small>
+                  <small>The options read-only property of the PushSubscription interface an object containing containing ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontFaceElement.html">Web/API/SVGFontFaceElement</a>
+              <a href="../Web/API/PushSubscription/subscriptionId.html">Web/API/PushSubscription/subscriptionId</a>
                 
-                  <small>The SVGFontFaceElement interface corresponds to the font-face elements.</small>
+                  <small>The endpoint read-only property of the PushSubscription interface returns a DOMString containing ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontFaceFormatElement.html">Web/API/SVGFontFaceFormatElement</a>
+              <a href="../Web/API/PushSubscription/toJSON.html">Web/API/PushSubscription/toJSON</a>
                 
-                  <small>The SVGFontFaceFormatElement interface corresponds to the font-face-format elements.</small>
+                  <small>The toJSON() method of the PushSubscription interface is a standard serializer: it returns a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontFaceNameElement.html">Web/API/SVGFontFaceNameElement</a>
+              <a href="../Web/API/PushSubscription/unsubscribe.html">Web/API/PushSubscription/unsubscribe</a>
                 
-                  <small>The SVGFontFaceNameElement interface corresponds to the font-face-name elements.</small>
+                  <small>The unsubscribe() method of the PushSubscription interface returns a Promise that resolves to a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontFaceSrcElement.html">Web/API/SVGFontFaceSrcElement</a>
+              <a href="../Web/API/Push_API.html">Web/API/Push_API</a>
                 
-                  <small>The SVGFontFaceSrcElement interface corresponds to the font-face-src elements.</small>
+                  <small>The Push API gives web applications the ability to receive messages pushed to them from a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGFontFaceUriElement.html">Web/API/SVGFontFaceUriElement</a>
+              <a href="../Web/API/Push_API/Using_the_Push_API.html">Web/API/Push_API/Using_the_Push_API</a>
                 
-                  <small>The SVGFontFaceUriElement interface corresponds to the font-face-uri elements.</small>
+                  <small>The W3C Push API offers some exciting new functionality for developers to use in web ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGForeignObjectElement.html">Web/API/SVGForeignObjectElement</a>
+              <a href="../Web/API/RadioNodeList.html">Web/API/RadioNodeList</a>
                 
-                  <small>The SVGForeignObjectElement interface provides access to the properties of foreignObject elements, ...</small>
+                  <small>The RadioNodeList interface represents a collection of elements in a form or a fieldset element.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGGElement.html">Web/API/SVGGElement</a>
+              <a href="../Web/API/RandomSource.html">Web/API/RandomSource</a>
                 
-                  <small>The SVGGElement interface corresponds to the g element.</small>
+                  <small>RandomSource represents a source of cryptographically secure random numbers. It is available via ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGGlyphElement.html">Web/API/SVGGlyphElement</a>
+              <a href="../Web/API/RandomSource/getRandomValues.html">Web/API/RandomSource/getRandomValues</a>
                 
-                  <small>The SVGGlyphElement interface corresponds to the glyph elements.</small>
+                  <small>The RandomSource.getRandomValues() method lets you get cryptographically random values. The ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGGradientElement.html">Web/API/SVGGradientElement</a>
+              <a href="../Web/API/Range.html">Web/API/Range</a>
                 
-                  <small>The SVGGradient interface is a base interface used by SVGLinearGradientElement and ...</small>
+                  <small>The Range interface represents a fragment of a document that can contain nodes and parts of text ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGHKernElement.html">Web/API/SVGHKernElement</a>
+              <a href="../Web/API/Range/cloneContents.html">Web/API/Range/cloneContents</a>
                 
-                  <small>The SVGHKernElement interface corresponds to the hkern elements.</small>
+                  <small>The Range.cloneContents() returns a DocumentFragment copying the objects of type Node included ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGImageElement.html">Web/API/SVGImageElement</a>
+              <a href="../Web/API/Range/cloneRange.html">Web/API/Range/cloneRange</a>
                 
-                  <small>The SVGImageElement interface corresponds to the image element.</small>
+                  <small>The Range.cloneRange() method returns a Range object with boundary points identical to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGLength.html">Web/API/SVGLength</a>
+              <a href="../Web/API/Range/collapse.html">Web/API/Range/collapse</a>
                 
-                  <small>The SVGLength interface correspond to the length basic data type.</small>
+                  <small>The Range.collapse() method collapses the Range to one of its boundary points.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGLengthList.html">Web/API/SVGLengthList</a>
+              <a href="../Web/API/Range/collapsed.html">Web/API/Range/collapsed</a>
                 
-                  <small>The SVGLengthList defines a list of SVGLength objects.</small>
+                  <small>The Range.collapsed read-only property returns a Boolean flag indicating whether the start and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGLinearGradientElement.html">Web/API/SVGLinearGradientElement</a>
+              <a href="../Web/API/Range/commonAncestorContainer.html">Web/API/Range/commonAncestorContainer</a>
                 
-                  <small>The SVGLinearGradientElement interface corresponds to the linearGradient element.</small>
+                  <small>The Range.commonAncestorContainer read-only property returns the deepest — or furthest down the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGLineElement.html">Web/API/SVGLineElement</a>
+              <a href="../Web/API/Range/compareBoundaryPoints.html">Web/API/Range/compareBoundaryPoints</a>
                 
-                  <small>The SVGLineElement interface provides access to the properties of line elements, as well as methods ...</small>
+                  <small>The Range.compareBoundaryPoints() method compares the boundary points of the Range with another one.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGMaskElement.html">Web/API/SVGMaskElement</a>
+              <a href="../Web/API/Range/compareNode.html">Web/API/Range/compareNode</a>
                 
-                  <small>The SVGMaskElement interface provides access to the properties of mask elements, as well as methods ...</small>
+                  <small>The Range.compareNode() returns a constant indicating the position of the Node.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGMatrix.html">Web/API/SVGMatrix</a>
+              <a href="../Web/API/Range/comparePoint.html">Web/API/Range/comparePoint</a>
                 
-                  <small>Many of SVG's graphics operations utilize 2x3 matrices of the form:</small>
+                  <small>The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGMissingGlyphElement.html">Web/API/SVGMissingGlyphElement</a>
+              <a href="../Web/API/Range/createContextualFragment.html">Web/API/Range/createContextualFragment</a>
                 
-                  <small>The SVGMissingGlyphElement interface corresponds to the missing-glyph elements.</small>
+                  <small>The Range.createContextualFragment() method returns a DocumentFragment by invoking the HTML ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGMPathElement.html">Web/API/SVGMPathElement</a>
+              <a href="../Web/API/Range/deleteContents.html">Web/API/Range/deleteContents</a>
                 
-                  <small>The SVGMPathElement interface corresponds to the mpath element.</small>
+                  <small>The Range.deleteContents() removes the contents of the Range from the Document.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGNumber.html">Web/API/SVGNumber</a>
+              <a href="../Web/API/Range/detach.html">Web/API/Range/detach</a>
                 
-                  <small>The SVGNumber interface correspond to the number basic data type.</small>
+                  <small>The Range.detach() method releases a Range from use. This lets the browser choose to release ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGNumberList.html">Web/API/SVGNumberList</a>
+              <a href="../Web/API/Range/endContainer.html">Web/API/Range/endContainer</a>
                 
-                  <small>The SVGNumberList defines a list of SVGNumber objects.</small>
+                  <small>The Range.endContainer read-only property returns the Node within which the Range ends. To ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPathElement.html">Web/API/SVGPathElement</a>
+              <a href="../Web/API/Range/endOffset.html">Web/API/Range/endOffset</a>
                 
-                  <small>The SVGPathElement interface corresponds to the path element.</small>
+                  <small>The Range.endOffset read-only property returns a number representing where in the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPatternElement.html">Web/API/SVGPatternElement</a>
+              <a href="../Web/API/Range/extractContents.html">Web/API/Range/extractContents</a>
                 
-                  <small>The SVGPatternElement interface corresponds to the pattern element.</small>
+                  <small>The Range.extractContents() method moves contents of the Range from the document tree into a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPoint.html">Web/API/SVGPoint</a>
+              <a href="../Web/API/Range/getBoundingClientRect.html">Web/API/Range/getBoundingClientRect</a>
                 
-                  <small>An SVGPoint represents a 2D or 3D point in the SVG coordinate system.</small>
+                  <small>The Range.getBoundingClientRect() method returns a ClientRect object that bounds the contents of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPolygonElement.html">Web/API/SVGPolygonElement</a>
+              <a href="../Web/API/Range/getClientRects.html">Web/API/Range/getClientRects</a>
                 
-                  <small>The SVGPolygonElement interface provides access to the properties of polygon elements, as well as ...</small>
+                  <small>The Range.getClientRects() method returns a list of ClientRect objects representing the area of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPolylineElement.html">Web/API/SVGPolylineElement</a>
+              <a href="../Web/API/Range/insertNode.html">Web/API/Range/insertNode</a>
                 
-                  <small>The SVGPolylineElement interface provides access to the properties of polyline elements, as well as ...</small>
+                  <small>The Range.insertNode() method inserts a node at the start of the Range.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGPreserveAspectRatio.html">Web/API/SVGPreserveAspectRatio</a>
+              <a href="../Web/API/Range/intersectsNode.html">Web/API/Range/intersectsNode</a>
                 
-                  <small>The SVGPreserveAspectRatio interface corresponds to the preserveAspectRatio attribute, which is ...</small>
+                  <small>The Range.intersectsNode() method returns a boolean indicating whether the given Node intersects ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGRadialGradientElement.html">Web/API/SVGRadialGradientElement</a>
+              <a href="../Web/API/Range/isPointInRange.html">Web/API/Range/isPointInRange</a>
                 
-                  <small>The SVGRadialGradientElement interface corresponds to the radialGradient element.</small>
+                  <small>The Range.isPointInRange() method returns a boolean indicating whether the given point is in the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGRect.html">Web/API/SVGRect</a>
+              <a href="../Web/API/Range/Range.html">Web/API/Range/Range</a>
                 
-                  <small>The SVGRect represents a rectangle. Rectangles consist&nbsp;of codex/code and codey/code coordinate pair ...</small>
+                  <small>The Range() constructor returns a newly created Range object whose start and end is the global ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGRectElement.html">Web/API/SVGRectElement</a>
+              <a href="../Web/API/Range/selectNode.html">Web/API/Range/selectNode</a>
                 
-                  <small>The SVGRectElement interface provides access to the properties of rect elements, as well as methods ...</small>
+                  <small>The Range.selectNode() method sets the Range to contain the Node and its contents. The parent ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGScriptElement.html">Web/API/SVGScriptElement</a>
+              <a href="../Web/API/Range/selectNodeContents.html">Web/API/Range/selectNodeContents</a>
                 
-                  <small>The SVGScriptElement interface corresponds to the SVG script element.</small>
+                  <small>The Range.selectNodeContents() sets the Range to contain the contents of a Node.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGSetElement.html">Web/API/SVGSetElement</a>
+              <a href="../Web/API/Range/setEnd.html">Web/API/Range/setEnd</a>
                 
-                  <small>The SVGSetElement interface corresponds to the set element.</small>
+                  <small>The Range.setEnd() method sets the end position of a Range.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGStopElement.html">Web/API/SVGStopElement</a>
+              <a href="../Web/API/Range/setEndAfter.html">Web/API/Range/setEndAfter</a>
                 
-                  <small>The SVGStopElement interface corresponds to the stop element.</small>
+                  <small>The Range.setEndAfter() method sets the end position of a Range relative to another Node. The ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGStringList.html">Web/API/SVGStringList</a>
+              <a href="../Web/API/Range/setEndBefore.html">Web/API/Range/setEndBefore</a>
                 
-                  <small>The SVGStringList defines a list of DOMString objects.</small>
+                  <small>The Range.setEndBefore() method sets the end position of a Range relative to another Node. The ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGStylable.html">Web/API/SVGStylable</a>
+              <a href="../Web/API/Range/setStart.html">Web/API/Range/setStart</a>
                 
-                  <small>The SVGStylable interface is implemented on all objects corresponding to SVG elements that can have ...</small>
+                  <small>The Range.setStart() method sets the start position of a Range.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGStyleElement.html">Web/API/SVGStyleElement</a>
+              <a href="../Web/API/Range/setStartAfter.html">Web/API/Range/setStartAfter</a>
                 
-                  <small>The SVGStyleElement interface corresponds to the SVG style element.</small>
+                  <small>The Range.setStartAfter() method sets the start position of a Range relative to a Node. The ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGSVGElement.html">Web/API/SVGSVGElement</a>
+              <a href="../Web/API/Range/setStartBefore.html">Web/API/Range/setStartBefore</a>
                 
-                  <small>The SVGSVGElement interface provides access to the properties of svg elements, as well as methods ...</small>
+                  <small>The Range.setStartBefore() method sets the start position of a Range relative to another Node. ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGSwitchElement.html">Web/API/SVGSwitchElement</a>
+              <a href="../Web/API/Range/startContainer.html">Web/API/Range/startContainer</a>
                 
-                  <small>The SVGSwitchElement interface corresponds to the switch element.</small>
+                  <small>The Range.startContainer read-only property returns the Node within which the Range starts. To ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGSymbolElement.html">Web/API/SVGSymbolElement</a>
+              <a href="../Web/API/Range/startOffset.html">Web/API/Range/startOffset</a>
                 
-                  <small>The SVGSymbolElement interface corresponds to the symbol element.</small>
+                  <small>The Range.startOffset read-only property returns a number representing where in the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTests.html">Web/API/SVGTests</a>
+              <a href="../Web/API/Range/surroundContents.html">Web/API/Range/surroundContents</a>
                 
-                  <small>Interface SVGTests defines an interface which applies to all elements which have attributes ...</small>
+                  <small>The Range.surroundContents() method moves content of the Range into a new node, placing the new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTextElement.html">Web/API/SVGTextElement</a>
+              <a href="../Web/API/Range/toString.html">Web/API/Range/toString</a>
                 
-                  <small>The SVGTextElement interface corresponds to the text elements.</small>
+                  <small>The Range.toString() method is a stringifier returning the text of the Range.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTextPositioningElement.html">Web/API/SVGTextPositioningElement</a>
+              <a href="../Web/API/RenderingContext.html">Web/API/RenderingContext</a>
                 
-                  <small>The SVGTextPositioningElement interface is inherited by text-related interfaces: SVGTextElement, ...</small>
+                  <small>RenderingContext is a helper type representing any of the following rendering contexts ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTitleElement.html">Web/API/SVGTitleElement</a>
+              <a href="../Web/API/Request.html">Web/API/Request</a>
                 
-                  <small>The SVGTitleElement interface corresponds to the title element.</small>
+                  <small>The Request interface of the Fetch API represents a resource request.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTransform.html">Web/API/SVGTransform</a>
+              <a href="../Web/API/Request/cache.html">Web/API/Request/cache</a>
                 
-                  <small>SVGTransform is the interface for one of the component transformations within an SVGTransformList ; ...</small>
+                  <small>The cache read-only property of the Request interface contains the cache mode of the request. It ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTransformable.html">Web/API/SVGTransformable</a>
+              <a href="../Web/API/Request/clone.html">Web/API/Request/clone</a>
                 
-                  <small>Interface SVGTransformable contains properties and methods that apply to all elements which have ...</small>
+                  <small>The clone() method of the Request interface creates a copy of the current Request object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTransformList.html">Web/API/SVGTransformList</a>
+              <a href="../Web/API/Request/context.html">Web/API/Request/context</a>
                 
-                  <small>The SVGTransformList defines a list of SVGTransform objects.</small>
+                  <small>The context read-only property of the Request interface contains the context of the Request ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTRefElement.html">Web/API/SVGTRefElement</a>
+              <a href="../Web/API/Request/credentials.html">Web/API/Request/credentials</a>
                 
-                  <small>The SVGTRefElement interface provides access to the properties of tref elements, as well as methods ...</small>
+                  <small>The credentials read-only property of the Request interface indicates whether the user agent ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGTSpanElement.html">Web/API/SVGTSpanElement</a>
+              <a href="../Web/API/Request/headers.html">Web/API/Request/headers</a>
                 
-                  <small>The SVGTSpanElement interface provides access to the properties of tspan elements, as well as ...</small>
+                  <small>The headers read-only property of the Request interface contains the Headers object associated ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/SVGUseElement.html">Web/API/SVGUseElement</a>
+              <a href="../Web/API/Request/method.html">Web/API/Request/method</a>
                 
-                  <small>The SVGUseElement interface provides access to the properties of use elements, as well as methods ...</small>
+                  <small>The method read-only property of the Request interface contains the request's method (GET, POST, ...</small>
                 
             </li>
           
@@ -1075,7 +1057,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -1092,12 +1074,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1105,14 +1087,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1120,127 +1103,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1255,28 +1361,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=33 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:55 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=33 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 01:48:24 GMT -->
 </body></html>

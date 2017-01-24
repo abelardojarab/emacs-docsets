@@ -1,18 +1,18 @@
 <html><!-- This text is a brief description of the features that are present in
-the Bash shell (version 4.3, 2 February 2014).
+the Bash shell (version 4.4, 7 September 2016).
 
-This is Edition 4.3, last updated 2 February 2014,
+This is Edition 4.4, last updated 7 September 2016,
 of The GNU Bash Reference Manual,
-for Bash, Version 4.3.
+for Bash, Version 4.4.
 
-Copyright (C) 1988-2014 Free Software Foundation, Inc.
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled
-"GNU Free Documentation License". --><!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ --><head>
+"GNU Free Documentation License". --><!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ --><head>
 <title>The Shopt Builtin</title>
 
 <meta name="description" content="Bash Reference Manual: The Shopt Builtin">
@@ -30,16 +30,16 @@ A copy of the license is included in the section entitled
 <style type="text/css">
 <!--
 a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
 blockquote.smallquotation {font-size: smaller}
 div.display {margin-left: 3.2em}
 div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
 div.lisp {margin-left: 3.2em}
 div.smalldisplay {margin-left: 3.2em}
 div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
 div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
+kbd {font-style: oblique}
 pre.display {font-family: inherit}
 pre.format {font-family: inherit}
 pre.menu-comment {font-family: serif}
@@ -48,10 +48,9 @@ pre.smalldisplay {font-family: inherit; font-size: smaller}
 pre.smallexample {font-size: smaller}
 pre.smallformat {font-family: inherit; font-size: smaller}
 pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
 </style>
@@ -59,7 +58,7 @@ ul.no-bullet {list-style: none}
 
 </head>
 
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body lang="en">
 <a name="The-Shopt-Builtin"></a>
 <div class="header">
 <p>
@@ -190,7 +189,10 @@ bash-4.1 and later use the current locale’s collation sequence and strcoll(3).
 <dd><p>If set, Bash
 changes its behavior to that of version 3.2 with respect to locale-specific
 string comparison when using the <code>[[</code>
-conditional command’s ‘<samp>&lt;</samp>’ and ‘<samp>&gt;</samp>’ operators (see previous item).
+conditional command’s ‘<samp>&lt;</samp>’ and ‘<samp>&gt;</samp>’ operators (see previous item)
+and the effect of interrupting a command list.
+Bash versions 3.2 and earlier continue with the next command in the list
+after one terminates due to an interrupt.
 </p>
 </dd>
 <dt><code>compat40</code></dt>
@@ -216,6 +218,18 @@ The default Bash behavior remains as in previous versions.
 <dd><p>If set, Bash
 does not process the replacement string in the pattern substitution word
 expansion using quote removal.
+</p>
+</dd>
+<dt><code>compat43</code></dt>
+<dd><p>If set, Bash
+does not print a warning message if an attempt is made to use a quoted compound
+array assignment as an argument to <code>declare</code>,
+makes word expansion errors
+non-fatal errors that cause the current command to fail (the default behavior is
+to make them fatal errors that cause the shell to exit),
+and does not reset the
+loop state when a shell function is executed (this allows <code>break</code> or
+<code>continue</code> in a shell function to affect loops in the caller’s context).
 </p>
 </dd>
 <dt><code>complete_fullquote</code></dt>
@@ -269,7 +283,9 @@ This option is enabled by default for interactive shells.
 </p>
 </dd>
 <dt><code>extdebug</code></dt>
-<dd><p>If set, behavior intended for use by debuggers is enabled:
+<dd><p>If set at shell invocation, arrange to execute the debugger profile
+before the shell starts, identical to the <samp>--debugger</samp> option.
+If set after invocation, behavior intended for use by debuggers is enabled:
 </p>
 <ol>
 <li> The <samp>-F</samp> option to the <code>declare</code> builtin (see <a href="Bash-Builtins.html#Bash-Builtins">Bash Builtins</a>)
@@ -281,17 +297,17 @@ next command is skipped and not executed.
 
 </li><li> If the command run by the <code>DEBUG</code> trap returns a value of 2, and the
 shell is executing in a subroutine (a shell function or a shell script
-executed by the <code>.</code> or <code>source</code> builtins), a call to
-<code>return</code> is simulated.
+executed by the <code>.</code> or <code>source</code> builtins), the shell simulates
+a call to <code>return</code>.
 
 </li><li> <code>BASH_ARGC</code> and <code>BASH_ARGV</code> are updated as described in their
 descriptions (see <a href="Bash-Variables.html#Bash-Variables">Bash Variables</a>).
 
-</li><li> Function tracing is enabled:  command substitution, shell functions, and
+</li><li> Function tracing is enabled: command substitution, shell functions, and
 subshells invoked with <code>( <var>command</var> )</code> inherit the
 <code>DEBUG</code> and <code>RETURN</code> traps.
 
-</li><li> Error tracing is enabled:  command substitution, shell functions, and
+</li><li> Error tracing is enabled: command substitution, shell functions, and
 subshells invoked with <code>( <var>command</var> )</code> inherit the
 <code>ERR</code> trap.
 </li></ol>
@@ -374,6 +390,12 @@ by default.
 login shell exits (see <a href="Signals.html#Signals">Signals</a>).
 </p>
 </dd>
+<dt><code>inherit_errexit</code></dt>
+<dd><p>If set, command substitution inherits the value of the <code>errexit</code> option,
+instead of unsetting it in the subshell environment.
+This option is enabled when <small>POSIX</small> mode is enabled.
+</p>
+</dd>
 <dt><code>interactive_comments</code></dt>
 <dd><p>Allow a word beginning with ‘<samp>#</samp>’
 to cause that word and all remaining characters on that
@@ -399,7 +421,7 @@ The value may not be changed.
 </p>
 </dd>
 <dt><code>mailwarn</code></dt>
-<dd><p>If set, and a file that Bash is checking for mail has been  
+<dd><p>If set, and a file that Bash is checking for mail has been
 accessed since the last time it was checked, the message
 <code>"The mail in <var>mailfile</var> has been read"</code> is displayed.
 </p>
@@ -418,7 +440,9 @@ performing filename expansion.
 <dt><code>nocasematch</code></dt>
 <dd><p>If set, Bash matches patterns in a case-insensitive fashion when
 performing matching while executing <code>case</code> or <code>[[</code>
-conditional commands.
+conditional commands,
+when performing pattern substitution word expansions,
+or when filtering possible completions as part of programmable completion.
 </p>
 </dd>
 <dt><code>nullglob</code></dt>

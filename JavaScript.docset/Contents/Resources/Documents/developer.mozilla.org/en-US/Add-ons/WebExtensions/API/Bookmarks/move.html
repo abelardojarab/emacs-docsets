@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/bookmarks/move by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:22:46 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/bookmarks/move by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:18:40 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,19 +12,18 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
-
-    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
       
@@ -32,17 +31,17 @@
       
     
 
-  <!-- common social tags -->
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -78,10 +77,17 @@
   <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move">
   <meta name="twitter:title" content="bookmarks.move()">
   
-  <meta property="og:description" content="Moves the specified BookmarkTreeNode to the specified destination.">
-  <meta name="description" content="Moves the specified BookmarkTreeNode to the specified destination.">
-  <meta name="twitter:description" content="Moves the specified BookmarkTreeNode to the specified destination.">
+  <meta property="og:description" content="The bookmarks.move() method moves the specified BookmarkTreeNode to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.">
+  <meta name="description" content="The bookmarks.move() method moves the specified BookmarkTreeNode to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.">
+  <meta name="twitter:description" content="The bookmarks.move() method moves the specified BookmarkTreeNode to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -99,10 +105,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -152,8 +158,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -169,9 +175,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -188,34 +192,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Fbookmarks%2Fmove" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/Add-ons/WebExtensions/API/bookmarks/move" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/Add-ons/WebExtensions/API/bookmarks/move" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Fbookmarks%2Fmove" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2FAdd-ons%2FWebExtensions%2FAPI%2Fbookmarks%2Fmove" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -225,18 +215,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../../../docs/Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -247,10 +239,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -264,8 +253,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/Add-ons/WebExtensions/API/bookmarks/move">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -314,14 +303,16 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="../../../../../ja/Add-ons/WebExtensions/API/bookmarks/move.html" title="bookmarks.move()">日本語</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="../../../../../ja/Add-ons/WebExtensions/API/bookmarks/move.html" title="Japanese">日本語 (ja)</a></bdi></li>
                 
               
 
@@ -333,7 +324,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -344,7 +337,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -371,7 +363,7 @@
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions" rel="v:url" property="v:title">WebExtensions</a></li>
     
-      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">JavaScript APIs</a></li>
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API.png" rel="v:url" property="v:title">JavaScript APIs</a></li>
     
       <li class="crumb" typeof="v:Breadcrumb"><a href="../bookmarks.html" rel="v:url" property="v:title">bookmarks</a></li>
     
@@ -404,6 +396,16 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="wbamberg" data-src="../../../../../../secure.gravatar.com/avatar/576b94c81f8ad97e58d63f12e5fdb00c6c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">wbamberg</noscript></a>
                 </li>
             
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Makyen" title="View profile: Makyen">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Makyen" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Makyen</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
             </ul>
         </div>
         
@@ -427,7 +429,7 @@
               <div id="toc" class="toc toggleable" data-closed="true">
                 <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
                 <ol class="toggle-container">
-                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li></ol></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Examples" rel="internal">Examples</a>
+                  <li><a href="#Syntax" rel="internal">Syntax</a><ol><li><a href="#Parameters" rel="internal">Parameters</a></li><li><a href="#Return_value" rel="internal">Return value</a></li></ol></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Examples" rel="internal">Examples</a>
                 </li></ol>
               </div>
               
@@ -459,14 +461,15 @@
                   
                     <div><section id="Quick_Links" class="Quick_links"><!-- --></section></div>
 
-<p>Moves the specified <a href="BookmarkTreeNode-2.html" title="A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ordered within their parent folder."><code>BookmarkTreeNode</code></a> to the specified destination.</p>
+<p>The <strong><code>bookmarks.move()</code></strong> method moves the specified <a href="BookmarkTreeNode.html" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>BookmarkTreeNode</code></a> to the specified destination within the tree of bookmarks. This lets you move a bookmark to a new folder and/or position within the folder.</p>
+
+<p>This is an asynchronous function that returns a <code><a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/Promise.html">Promise</a></code>.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
-<pre class="brush: js">browser.bookmarks.move(
+<pre class="syntaxbox brush:js">var movingBookmark = browser.bookmarks.move(
   id,                    // string
-  destination,           // object
-  function(result) {...} // optional function
+  destination           // object
 )
 </pre>
 
@@ -474,36 +477,76 @@
 
 <dl>
  <dt><code>id</code></dt>
- <dd><code>string</code>. ID of the bookmark or folder to move.</dd>
+ <dd>A <a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/string-2.html" title="The String global object is a constructor for strings, or a sequence of characters."><code>string</code></a> containing the ID of the bookmark or folder to move.</dd>
  <dt><code>destination</code></dt>
- <dd><code>object</code>. Destination, specified as:</dd>
+ <dd>An <a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/object-2.html" title="The Object constructor creates an object wrapper."><code>object</code></a> which specifies the destination for the bookmark. This object must contain one or both of the following fields:</dd>
  <dd>
  <dl class="reference-values">
-  <dt><code>parentId</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
-  <dd><code>string</code>. ID of the parent folder.</dd>
-  <dt><code>index</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
-  <dd><code>integer</code>. Index position under the parent folder.</dd>
- </dl>
- </dd>
- <dt><code>callback</code><span class="inlineIndicator optional optionalInline">Optional</span></dt>
- <dd><code>function</code>. The function is passed the following arguments:</dd>
- <dd>
- <dl class="reference-values">
-  <dt><code>result</code></dt>
-  <dd><a href="BookmarkTreeNode-2.html" title="A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ordered within their parent folder."><code>bookmarks.BookmarkTreeNode</code></a>. The moved node.</dd>
+  <dt><code>parentId</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dd>A <a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/string-2.html" title="The String global object is a constructor for strings, or a sequence of characters."><code>string</code></a> which specifies the ID of the destination folder. If this value is left out, the bookmark is moved to a new location within its current folder.</dd>
+  <dt><code>index</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+  <dd>A 0-based index specifying the position within the folder to which to move the bookmark. A value of 0 moves the bookmark to the top of the folder. If this value is omitted, the bookmark is placed at the end of the new parent folder.</dd>
  </dl>
  </dd>
 </dl>
 
+<h3 id="Return_value">Return value</h3>
+
+<p>A <code><a href="../../../../docs/Web/JavaScript/Reference/Global_Objects/Promise.html">Promise</a></code> that will be fulfilled with a single <a href="BookmarkTreeNode.html" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>bookmarks.BookmarkTreeNode</code></a> object, describing the moved node.</p>
+
+<p>If the node corresponding to the <code>id</code> parameter can't be found, the promise is rejected with an error message.</p>
+
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-<div class="htab">    <a name="AutoCompatibilityTable" id="AutoCompatibilityTable"></a>    <ul>        <li class="selected"><a>Desktop</a></li>        <li><a>Mobile</a></li>    </ul><div id="compat-desktop"><table class="compat-table"><tbody><tr><th></th><th>Edge</th><th>Firefox</th><th>Chrome</th><th>Opera</th></tr><tr><td>Basic support</td><td>?</td><td>45.0</td><td>Yes</td><td>33</td></tr></tbody></table></div><div id="compat-mobile"><table class="compat-table"><tbody><tr><th></th><th>Firefox</th></tr><tr><td>Basic support</td><td>No</td></tr></tbody></table></div></div>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data" class="external">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p></p><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;"></th>
+      <th style="width: 12%;">Chrome</th>
+      <th style="width: 12%;">Edge</th>
+      <th style="width: 12%;">Firefox</th>
+      <th style="width: 12%;">Firefox for Android</th>
+      <th style="width: 12%;">Opera</th>
+    </tr><tr>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td>Basic support</td>
+      <td class="full-support">Yes</td>
+      <td class="no-support">No</td>
+      <td class="full-support">45.0</td>
+      <td class="no-support">No</td>
+      <td class="full-support">33</td>
+    </tr>
+  </tbody>
+</table><p></p>
+
 <h2 id="Examples">Examples</h2>
+
+<p>This example moves a bookmark so that it's the first bookmark in its current folder.</p>
+
+<pre class="brush: js">function onMoved(bookmarkItem) {
+  console.log(bookmarkItem.index);
+}
+
+function onRejected(error) {
+  console.log(`An error: ${error}`);
+}
+
+var bookmarkId = "abcdefghilkl";
+
+var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
+movingBookmark.then(onMoved, onRejected);</pre>
 
 <p></p>
 
 <div class="note"><strong>Acknowledgements</strong>
 
 <p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/bookmarks#method-move" class="external"><code>chrome.bookmarks</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json" class="external"><code>bookmarks.json</code></a> in the Chromium code.</p>
+
+<p>Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.</p>
 </div>
 
 <div class="hidden">
@@ -542,25 +585,6 @@
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Fbookmarks%2Fmove%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+bookmarks.move%28%29+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about bookmarks.move() on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about bookmarks.move() on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FMozilla%2FAdd-ons%2FWebExtensions%2FAPI%2Fbookmarks%2Fmove%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about bookmarks.move() on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -571,15 +595,13 @@
     <strong>Tags:</strong>&nbsp;
     <ul class="tags tags-small">
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/add-ons">add-ons</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Add-ons">Add-ons</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/add-ons">add-ons</a></li>
       
         <li><a href="../../../../docs/tag/API.html">API</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Bookmarks">Bookmarks</a></li>
-      
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/bookmarks">bookmarks</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Extensions">Extensions</a></li>
       
@@ -599,7 +621,11 @@
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>
+        <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Makyen">Makyen</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
     
                     </div>
                   
@@ -608,10 +634,47 @@
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
                       <a href="https://developer.mozilla.org/en-US/profiles/wbamberg">wbamberg</a>,
-                      <time datetime="2016-04-14T13:39:56-07:00">Apr 14, 2016, 1:39:56 PM</time>
+                      <time datetime="2016-11-01T14:25:24-07:00">Nov 1, 2016, 2:25:24 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -634,30 +697,64 @@
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Getting_started">Getting started</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Prerequisites">Prerequisites</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_Installation">Packaging and Installation</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Walkthrough">Walkthrough</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples">Examples</a> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions_">What are WebExtensions?</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second WebExtension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of a WebExtension</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Example_WebExtensions">Example WebExtensions</a> 
       </li></ol> 
     </li> 
      
-    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Guides">Guides</a> 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#How_to">How to</a> 
       <ol> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome">Porting from Google Chrome</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a> 
-        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li> 
-        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a> 
-      </li></ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li> 
+      </ol> 
+    </li> 
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Concepts">Concepts</a> 
+      <ol> 
+        <li><a href="../../API.html">Using the JavaScript APIs</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/User_interface_components">User interface components</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Porting">Porting</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox add-on</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li> 
+      </ol> 
+    </li>   
+ 
+    <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions#Firefox_workflow">Firefox workflow</a> 
+      <ol> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a> 
+        </li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">WebExtensions and the Add-on ID</a></li> 
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension">Publishing your WebExtension</a></li> 
+ 
+      </ol> 
     </li>   
      
-    <li data-default-state="open"><a href="../../API.html">JavaScript APIs</a> 
-     <ol><li><a href="../alarms.html">alarms</a></li><li class="webextension-api-sidebar"><a href="../bookmarks.html">bookmarks</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="create.html" title="Creates a bookmark or folder under the specified parentId. If url is null or missing, a folder will be created."><code>create()</code></a></li><li><a href="export.html" title="Exports bookmarks to an HTML bookmark file."><code>export()</code></a></li><li><a href="get.html" title="Given an ID or an array of IDs, retrieves the matching nodes."><code>get()</code></a></li><li><a href="getChildren.html" title="Retrieves the children of the specified BookmarkTreeNode ID."><code>getChildren()</code></a></li><li><a href="getRecent.html" title="Retrieves recently added bookmarks."><code>getRecent()</code></a></li><li><a href="getSubTree.html" title="Retrieves part of the bookmarks tree, starting at the specified node."><code>getSubTree()</code></a></li><li><a href="getTree.html" title="Retrieves the entire bookmarks tree."><code>getTree()</code></a></li><li><a href="import.html" title="Imports bookmarks from an HTML bookmark file."><code>import()</code></a></li><li><em><code>move()</code></em></li><li><a href="remove.html" title="Removes a bookmark or an empty bookmark folder."><code>remove()</code></a></li><li><a href="removeTree.html" title="Recursively removes a bookmark folder."><code>removeTree()</code></a></li><li><a href="search.html" title="Searches for bookmarks matching the given query. Matching bookmarks are returned as bookmarks.BookmarkTreeNode objects."><code>search()</code></a></li><li><a href="update.html" title="Update the title or URL of a bookmark, or the name of a bookmark folder."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="BookmarkTreeNode.html" title="A node (either a bookmark or a folder) in the bookmark tree. Child nodes are ordered within their parent folder."><code>BookmarkTreeNode</code></a></li><li><a href="BookmarkTreeNodeUnmodifiable.html" title="Indicates the reason that this node (bookmark or folder) is unmodifiable."><code>BookmarkTreeNodeUnmodifiable</code></a></li><li><a href="CreateDetails.html" title="Object specifying the properties of a new bookmark or folder. An instance of CreateDetails is passed to the bookmarks.create() function."><code>CreateDetails</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="onChanged.html" title="Fired when a bookmark or folder changes."><code>onChanged</code></a></li><li><a href="onChildrenReordered.html" title="Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a move()."><code>onChildrenReordered</code></a></li><li><a href="onCreated.html" title="Fired when a bookmark or folder is created."><code>onCreated</code></a></li><li><a href="onImportBegan.html" title="Fired when the browser has started importing a set of bookmarks."><code>onImportBegan</code></a></li><li><a href="onImportEnded.html" title="Fired when the browser has finished importing a set of bookmarks."><code>onImportEnded</code></a></li><li><a href="onMoved.html" title="Fired when a bookmark or folder is moved to a different parent folder."><code>onMoved</code></a></li><li><a href="onRemoved.html" title="Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents."><code>onRemoved</code></a></li></ol></li></ol></li><li><a href="../browserAction.html">browserAction</a></li><li><a href="../contextMenus.html">contextMenus</a></li><li><a href="../cookies.html">cookies</a></li><li><a href="../downloads.html">downloads</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="../extension.html">extension</a></li><li><a href="../extensionTypes.html">extensionTypes</a></li><li><a href="../i18n.html">i18n</a></li><li><a href="../idle.html">idle</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/notifications.png">notifications</a></li><li><a href="../pageAction.html">pageAction</a></li><li><a href="../runtime.html">runtime</a></li><li><a href="../storage.html">storage</a></li><li><a href="../tabs.html">tabs</a></li><li><a href="../webNavigation.html">webNavigation</a></li><li><a href="../webRequest.html">webRequest</a></li><li><a href="../windows.html">windows</a></li></ol> 
+    <li data-default-state="open"><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API.png">JavaScript APIs</a> 
+     <ol><li><a href="../../Browser_support_for_JavaScript_APIs.html">Browser support for JavaScript APIs</a></li><li><a href="../alarms.html">alarms</a></li><li class="webextension-api-sidebar"><a href="../bookmarks.html">bookmarks</a><ol><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="create.html" title="Creates a bookmark or folder as a child of the BookmarkTreeNode with the specified parentId. To create a folder, omit or leave empty the CreateDetails.url parameter."><code>create()</code></a></li><li><a href="get.html" title="Given the ID of a bookmarks.BookmarkTreeNode or an array of such IDs, the bookmarks.get() method retrieves the matching nodes."><code>get()</code></a></li><li><a href="getChildren.html" title="bookmarks.getChildren() retrieves all the immediate children of a given bookmark folder, identified as a BookmarkTreeNode ID."><code>getChildren()</code></a></li><li><a href="getRecent.html" title="The bookmarks.getRecent() method retrieves a specified number of the most recently added bookmarks as an array of BookmarkTreeNode objects."><code>getRecent()</code></a></li><li><a href="getSubTree.html" title="The bookmarks.getSubTree() method asynchronously retrieves a bookmarks.BookmarkTreeNode, given its ID."><code>getSubTree()</code></a></li><li><a href="getTree.html" title="bookmarks.getTree() returns an array containing the root of the bookmarks tree as a bookmarks.BookmarkTreeNode object."><code>getTree()</code></a></li><li><em><code>move()</code></em></li><li><a href="remove.html" title="The bookmarks.remove() method removes a single bookmark or an empty bookmark folder."><code>remove()</code></a></li><li><a href="removeTree.html" title="The bookmarks.removeTree() method recursively removes a bookmark folder and all of its contents."><code>removeTree()</code></a></li><li><a href="search.html" title="The bookmarks.search() function searches for bookmarks matching the given query. Matching bookmarks are passed into the specified callback function asbgh an array of bookmarks.BookmarkTreeNode objects."><code>search()</code></a></li><li><a href="update.html" title="bookmarks.update() updates the title and/or URL of a bookmark, or the name of a bookmark folder."><code>update()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Types</strong></a><ol><li><a href="BookmarkTreeNode.html" title="An object of type bookmarks.BookmarkTreeNode represents a node in the bookmark tree, where each node is a bookmark or bookmark folder. Child nodes are ordered by an index within their respective parent folders."><code>BookmarkTreeNode</code></a></li><li><a href="BookmarkTreeNodeUnmodifiable.html" title="The bookmarks.BookmarkTreeNodeUnmodifiable type is used to indicate the reason that a node in the bookmark tree (where each node is either a bookmark or a bookmark folder) cannot be changed. This is used as the value of the bookmarks.BookmarkTreeNode.unmodifiable.unmodifiable field on bookmark nodes."><code>BookmarkTreeNodeUnmodifiable</code></a></li><li><a href="CreateDetails.html" title="The CreateDetails type is used to describe the properties of a new bookmark or bookmark folder when calling the bookmarks.create() method."><code>CreateDetails</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="onChanged.html" title="Fired when there is a change to:"><code>onChanged</code></a></li><li><a href="onChildrenReordered.html" title="Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to bookmarks.move() or a drag operation in the UI."><code>onChildrenReordered</code></a></li><li><a href="onCreated.html" title="Fired when a bookmark or folder is created."><code>onCreated</code></a></li><li><a href="onImportBegan.html" title="Fired when the browser has started importing a set of bookmarks."><code>onImportBegan</code></a></li><li><a href="onImportEnded.html" title="Fired when the browser has finished importing a set of bookmarks."><code>onImportEnded</code></a></li><li><a href="onMoved.html" title="Fired when a bookmark or folder is moved to a different parent folder and/or position within a folder."><code>onMoved</code></a></li><li><a href="onRemoved.html" title="Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents."><code>onRemoved</code></a></li></ol></li></ol></li><li><a href="../browserAction.html">browserAction</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/commands.png">commands</a></li><li><a href="../contextMenus.html">contextMenus</a></li><li><a href="../cookies.html">cookies</a></li><li><a href="../downloads.html">downloads</a></li><li><a href="../../../../docs/Mozilla/Add-ons/WebExtensions/API/events.png">events</a></li><li><a href="../extension.html">extension</a></li><li><a href="../extensionTypes.html">extensionTypes</a></li><li><a href="../history.html">history</a></li><li><a href="../i18n.html">i18n</a></li><li><a href="../idle.html">idle</a></li><li><a href="../management.html">management</a></li><li><a href="../notifications.html">notifications</a></li><li><a href="../pageAction.html">pageAction</a></li><li><a href="../runtime.html">runtime</a></li><li><a href="../storage.html">storage</a></li><li><a href="../tabs.html">tabs</a></li><li><a href="../webNavigation.html">webNavigation</a></li><li><a href="../webRequest.html">webRequest</a></li><li><a href="../windows.html">windows</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">Manifest keys</a> 
-    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
+    <ol><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications">applications</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background">background</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy">content_security_policy</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui">options_ui</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name">short_name</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></li></ol> 
     </li> 
      
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/SDK"><strong>Add-on SDK</strong></a></li> 
@@ -686,7 +783,7 @@
     </li> 
  
     <li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API.png">APIs</a> 
-      <ol><li><a href="../../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/Home.png">Home.jsm</a></li><li><a href="../../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
+      <ol><li><a href="../../../Firefox_for_Android/API/Accounts.html">Accounts.jsm</a></li><li><a href="../../../Firefox_for_Android/API/BrowserApp.html">BrowserApp</a></li><li><a href="../../../Firefox_for_Android/API/HelperApps.html">HelperApps.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Home.html">Home.jsm</a></li><li><a href="../../../Firefox_for_Android/API/HomeProvider.html">HomeProvider.jsm</a></li><li><a href="../../../Firefox_for_Android/API/JavaAddonManager.html">JavaAddonManager.jsm</a></li><li><a href="../../../../docs/Mozilla/Add-ons/Firefox_for_Android/API/NativeWindow.png">NativeWindow</a></li><li><a href="../../../Firefox_for_Android/API/Notifications.html">Notifications.jsm</a></li><li><a href="../../../Firefox_for_Android/API/PageActions.html">PageActions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Prompt.html">Prompt.jsm</a></li><li><a href="../../../Firefox_for_Android/API/RuntimePermissions.html">RuntimePermissions.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Snackbars.html">Snackbars.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Sound.html">Sound.jsm</a></li><li><a href="../../../Firefox_for_Android/API/Tab.html">Tab</a></li></ol> 
     </li>  
  
     <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Overlay_Extensions"><strong>Legacy</strong></a></li> 
@@ -762,12 +859,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -775,9 +872,8 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -786,12 +882,12 @@
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move">
-            日本語
+          <option title="Japanese" value="/ja/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move">
+            日本語 (ja)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -808,63 +904,38 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/move$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/bookmarks/move by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:22:47 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/Add-ons/WebExtensions/API/bookmarks/move by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:18:41 GMT -->
 </body></html>

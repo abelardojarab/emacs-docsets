@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code$samples/Active_learning?revision=1145408 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+    </head>
+    <body>
+        
+            <div class="output" style="height: 410px;overflow: auto;">
+  
+</div>
+
+<textarea id="code" class="playable-code" style="height: 300px;">
+var output = document.querySelector('.output');
+output.innerHTML = '';
+
+// var i = 10;
+
+// var para = document.createElement('p');  
+// para.textContent = ;
+// output.appendChild(para);
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset">
+  <input id="solution" type="button" value="Show solution">
+</div>
+        
+        
+            <script type="text/javascript">
+                var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var code = textarea.value;
+
+function updateCode() {
+  eval(textarea.value);
+}
+
+reset.addEventListener("click", function() {
+  textarea.value = code;
+  updateCode();
+});
+
+solution.addEventListener("click", function() {
+  textarea.value = jsSolution;
+  updateCode();
+});
+
+var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n  var para = document.createElement(\'p\');\n  if(i === 10) {\n    para.textContent = \'Countdown \' + i;\n  } else if(i === 0) {\n    para.textContent = \'Blast off!\';\n  } else {\n    para.textContent = i;\n  }\n\n  output.appendChild(para);\n\n  i--;\n}';
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code$samples/Active_learning?revision=1145408 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:38 GMT -->
+</html>

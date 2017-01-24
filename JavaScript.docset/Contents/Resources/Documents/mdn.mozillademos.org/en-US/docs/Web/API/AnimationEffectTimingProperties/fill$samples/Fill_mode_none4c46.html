@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$samples/Fill_mode_none?revision=1138125 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:46:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            .main {
+  width: 300px;
+  height:300px;
+  border: 1px solid black;
+}
+
+.button {
+  cursor: pointer;
+  width: 300px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+  font: 14px "Open Sans", "Arial", sans-serif;
+}
+
+#text {
+  width: 160px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font: bold 2em "Lucida Grande", "Open Sans", sans-serif;
+} #box {
+  width: 200px;
+  height: 200px;
+  left: 50px;
+  top: 50px;
+  border: 1px solid #7788FF;
+  margin: 0;
+  position: relative;
+  background-color: #2233FF;
+  display: flex;
+  justify-content: center;
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <div class="main">
+  <div id="box">
+    <div id="text">Look! A box!</div>
+  </div>
+</div>
+<div class="button" id="animateButton">
+  Animate!
+</div>
+        
+        
+            <script type="text/javascript">
+                var boxRotationTiming = {
+  duration: 2000,
+  iterations: 1,
+  fill: "none"
+}; document.getElementById("animateButton").addEventListener("click", event => {
+  document.getElementById("box").animate(
+    boxRotationKeyframes,
+    boxRotationTiming
+  );
+}, false);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/AnimationEffectTimingProperties/fill$samples/Fill_mode_none?revision=1138125 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:46:08 GMT -->
+</html>

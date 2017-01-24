@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 19:19:15 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:46:18 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D12" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/API?page=12" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/API?page=12" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D12" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D12" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D12">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,7 +294,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -323,706 +305,706 @@
   
   </ol>
 
-        <p>Found 3965 documents</p>
+        <p>Found 4384 documents</p>
         <ul class="document-list">
           
             <li>
-              <a href="../Web/API/AudioListener/setOrientation.html">Web/API/AudioListener/setOrientation</a>
+              <a href="../Web/API/AnimationEffectReadOnly/getComputedTiming.html">Web/API/AnimationEffectReadOnly/getComputedTiming</a>
                 
-                  <small>Void.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioListener/setPosition.html">Web/API/AudioListener/setPosition</a>
-                
-                  <small>Void.</small>
+                  <small>The getComputedTiming() method of the AnimationEffectReadOnly interface returns the calculated ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioListener/speedOfSound.html">Web/API/AudioListener/speedOfSound</a>
+              <a href="../Web/API/AnimationEffectReadOnly/timing.html">Web/API/AnimationEffectReadOnly/timing</a>
                 
-                  <small>The speedOfSound property of the AudioListener interface is a double value representing the speed ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioNode.html">Web/API/AudioNode</a>
-                
-                  <small>The AudioNode interface is a generic interface for representing an audio processing module like an ...</small>
+                  <small>The AnimationEffectReadOnly.timing read-only attribute of the AnimationEffectReadOnly interface ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioNode/channelCount.html">Web/API/AudioNode/channelCount</a>
+              <a href="../Web/API/AnimationEffectTiming.html">Web/API/AnimationEffectTiming</a>
                 
-                  <small>channelCount 's usage and precise definition depend on the value of AudioNode.channelCountMode :</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioNode/channelCountMode.html">Web/API/AudioNode/channelCountMode</a>
-                
-                  <small>The possible values of channelCountMode and their meanings are:</small>
+                  <small>The AnimationEffectTiming interface of the Web Animations API is comprised of timing properties. ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioNode/channelInterpretation.html">Web/API/AudioNode/channelInterpretation</a>
+              <a href="../Web/API/AnimationEffectTimingProperties.html">Web/API/AnimationEffectTimingProperties</a>
                 
-                  <small>When the amount of channels doesn't match between an input and an output, up- or down-mixing ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioNode/connect(AudioNode).html">Web/API/AudioNode/connect(AudioNode)</a>
-                
-                  <small>A reference to the destination AudioNode object. In some browsers older implementations of this ...</small>
+                  <small>The AnimationEffectTimingProperties dictionary, part of the Web Animations API, is used by ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioNode/connect(AudioParam).html">Web/API/AudioNode/connect(AudioParam)</a>
+              <a href="../Web/API/AnimationEffectTimingProperties/delay.html">Web/API/AnimationEffectTimingProperties/delay</a>
                 
-                  <small>It is possible to connect an AudioNode output to more than one AudioParam, and more than one ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioNode/context.html">Web/API/AudioNode/context</a>
-                
-                  <small>An AudioContext object.</small>
+                  <small>The AnimationEffectTimingProperties dictionary's delay property in the Web Animations API ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioNode/disconnect.html">Web/API/AudioNode/disconnect</a>
+              <a href="../Web/API/AnimationEffectTimingProperties/direction.html">Web/API/AnimationEffectTimingProperties/direction</a>
                 
-                  <small>Void.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioNode/numberOfInputs.html">Web/API/AudioNode/numberOfInputs</a>
-                
-                  <small>An integer.</small>
+                  <small>The direction property of the Web Animations API dictionary AnimationEffectTimingProperties ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioNode/numberOfOutputs.html">Web/API/AudioNode/numberOfOutputs</a>
+              <a href="../Web/API/AnimationEffectTimingProperties/duration.html">Web/API/AnimationEffectTimingProperties/duration</a>
                 
-                  <small>An integer.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioParam.html">Web/API/AudioParam</a>
-                
-                  <small>There are two kinds of AudioParam, a-rate and k-rate parameters:</small>
+                  <small>The duration property of the dictionary AnimationEffectTimingProperties in the Web Animations ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioParam/cancelScheduledValues.html">Web/API/AudioParam/cancelScheduledValues</a>
+              <a href="../Web/API/AnimationEffectTimingProperties/easing.html">Web/API/AnimationEffectTimingProperties/easing</a>
                 
-                  <small>A reference to this AudioParam object. In some browsers older implementations of this interface ...</small>
+                  <small>The {domxref("AnimationEffectTimingProperties")}} dictionary's easing property in the Web ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioParam/defaultValue.html">Web/API/AudioParam/defaultValue</a>
+              <a href="../Web/API/AnimationEffectTimingProperties/endDelay.html">Web/API/AnimationEffectTimingProperties/endDelay</a>
+                
+                  <small>The endDelay property of the AnimationEffectTimingProperties dictionary (part of the Web ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingProperties/fill.html">Web/API/AnimationEffectTimingProperties/fill</a>
+                
+                  <small>The Web Animations API 's AnimationEffectTimingProperties dictionary's fill property specifies a ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingProperties/iterations.html">Web/API/AnimationEffectTimingProperties/iterations</a>
+                
+                  <small>The Web Animations API dictionary AnimationEffectTimingProperties 's iterations property ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingProperties/iterationStart.html">Web/API/AnimationEffectTimingProperties/iterationStart</a>
+                
+                  <small>Web Animations API 's AnimationEffectTimingProperties dictionary's iterationStart property ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly.html">Web/API/AnimationEffectTimingReadOnly</a>
+                
+                  <small>The AnimationEffectTimingReadOnly interface&nbsp;of the Web Animations API is comprised of timing ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/delay.html">Web/API/AnimationEffectTimingReadOnly/delay</a>
+                
+                  <small>The delay property of the AnimationEffectTimingReadOnly object represents the number of ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/direction.html">Web/API/AnimationEffectTimingReadOnly/direction</a>
+                
+                  <small>The direction property of the AnimationEffectTimingReadOnly dictionary object represents the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/duration.html">Web/API/AnimationEffectTimingReadOnly/duration</a>
+                
+                  <small>The duration property of AnimationEffectTimingReadOnly represents the duration in milliseconds ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/easing.html">Web/API/AnimationEffectTimingReadOnly/easing</a>
+                
+                  <small>The easing property of the AnimationEffectTimingReadOnly object represents the timing function ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/endDelay.html">Web/API/AnimationEffectTimingReadOnly/endDelay</a>
+                
+                  <small>The endDelay property of AnimationEffectTimingReadOnly represents the number of milliseconds to ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/fill.html">Web/API/AnimationEffectTimingReadOnly/fill</a>
+                
+                  <small>The fill property of AnimationEffectTimingReadOnly dictates how and when the animation's effects ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/iterations.html">Web/API/AnimationEffectTimingReadOnly/iterations</a>
+                
+                  <small>The iterations property of AnimationEffectTimingReadOnly represents the number of times the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEffectTimingReadOnly/iterationStart.html">Web/API/AnimationEffectTimingReadOnly/iterationStart</a>
+                
+                  <small>The iterationStart property of AnimationEffectTimingReadOnly represents which repetition the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent.html">Web/API/AnimationEvent</a>
+                
+                  <small>The AnimationEvent interface represents events providing information related to animations.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent/AnimationEvent.html">Web/API/AnimationEvent/AnimationEvent</a>
+                
+                  <small>The AnimationEvent() constructor returns a newly created AnimationEvent, representing an event ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent/animationName.html">Web/API/AnimationEvent/animationName</a>
+                
+                  <small>The AnimationEvent.animationName read-only property is a DOMString containing the value of the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent/elapsedTime.html">Web/API/AnimationEvent/elapsedTime</a>
+                
+                  <small>The AnimationEvent.elapsedTime read-only property is a float giving the amount of time the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent/initAnimationEvent.html">Web/API/AnimationEvent/initAnimationEvent</a>
+                
+                  <small>The AnimationEvent.initAnimationEvent() method Initializes an animation event created using the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationEvent/pseudoElement.html">Web/API/AnimationEvent/pseudoElement</a>
+                
+                  <small>The AnimationEvent.pseudoElement read-only property is a DOMString, starting with '::', ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationPlaybackEvent.html">Web/API/AnimationPlaybackEvent</a>
+                
+                  <small>The AnimationPlaybackEvent interface of the Web Animations API represents animation events.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent.html">Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent</a>
+                
+                  <small>The AnimationPlaybackEvent() constructor of the Web Animations API returns a new ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationPlaybackEvent/currentTime.html">Web/API/AnimationPlaybackEvent/currentTime</a>
+                
+                  <small>The currentTime read-only property of the AnimationPlaybackEvent interface represents the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationPlaybackEvent/timelineTime.html">Web/API/AnimationPlaybackEvent/timelineTime</a>
+                
+                  <small>The timelineTime read-only property of the AnimationPlaybackEvent interface represents the time ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationTimeline.html">Web/API/AnimationTimeline</a>
+                
+                  <small>The AnimationTimeline interface of the Web Animations API represents the timeline of an ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AnimationTimeline/currentTime.html">Web/API/AnimationTimeline/currentTime</a>
+                
+                  <small>The currentTime read-only property of the Web Animations API 's AnimationTimeline ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Apps/mgmt.html">Web/API/Apps/mgmt</a>
+                
+                  <small>Provides support for controlling Open Web apps in a browser.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/ArrayBufferView.html">Web/API/ArrayBufferView</a>
+                
+                  <small>ArrayBufferView is a helper type representing any of the following JavaScript TypedArray types:</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Attr.html">Web/API/Attr</a>
+                
+                  <small>This type represents a DOM element's attribute as an object. In most DOM methods, you will ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Attr/localName.html">Web/API/Attr/localName</a>
+                
+                  <small>The Attr.localName read-only property returns the local part of the qualified name of an element.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Attr/namespaceURI.html">Web/API/Attr/namespaceURI</a>
+                
+                  <small>The Attr.namespaceURI read-only property returns the namespace URI of the attribute, or null if ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/Attr/prefix.html">Web/API/Attr/prefix</a>
+                
+                  <small>The Attr.prefix read-only property returns the namespace prefix of the specified attribute, or ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer.html">Web/API/AudioBuffer</a>
+                
+                  <small>Objects of these types are designed to hold small audio snippets, typically less than 45&nbsp;s. For ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer/copyFromChannel.html">Web/API/AudioBuffer/copyFromChannel</a>
+                
+                  <small>The copyFromChannel() method of the AudioBuffer interface copies the samples from the specified ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer/copyToChannel.html">Web/API/AudioBuffer/copyToChannel</a>
+                
+                  <small>The copyToChannel() method of the AudioBuffer interface copies the samples to the specified ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer/duration.html">Web/API/AudioBuffer/duration</a>
+                
+                  <small>A double.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer/getChannelData.html">Web/API/AudioBuffer/getChannelData</a>
+                
+                  <small>A Float32Array.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioBuffer/length.html">Web/API/AudioBuffer/length</a>
                 
                   <small>A float.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioParam/exponentialRampToValueAtTime.html">Web/API/AudioParam/exponentialRampToValueAtTime</a>
+              <a href="../Web/API/AudioBuffer/numberOfChannels.html">Web/API/AudioBuffer/numberOfChannels</a>
                 
-                  <small>A reference to this AudioParam object. In some browsers older implementations of this interface ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioParam/linearRampToValueAtTime.html">Web/API/AudioParam/linearRampToValueAtTime</a>
-                
-                  <small>NOTE: both the example and live example are incorrect, see ...</small>
+                  <small>An integer.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioParam/setTargetAtTime.html">Web/API/AudioParam/setTargetAtTime</a>
+              <a href="../Web/API/AudioBuffer/sampleRate.html">Web/API/AudioBuffer/sampleRate</a>
                 
-                  <small>The change starts at the time specified in startTime and exponentially moves towards the value ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioParam/setValueAtTime.html">Web/API/AudioParam/setValueAtTime</a>
-                
-                  <small>A reference to this AudioParam object. In some browsers older implementations of this interface ...</small>
+                  <small>A float.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioParam/setValueCurveAtTime.html">Web/API/AudioParam/setValueCurveAtTime</a>
+              <a href="../Web/API/AudioBufferSourceNode.html">Web/API/AudioBufferSourceNode</a>
                 
-                  <small>A reference to this AudioParam object. In some browsers older implementations of this interface ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/AudioParam/value.html">Web/API/AudioParam/value</a>
-                
-                  <small>Though value can be set, any modifications happening while there are automation events scheduled — ...</small>
+                  <small>The AudioBufferSourceNode interface represents an audio source consisting of in-memory audio ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/AudioProcessingEvent.html">Web/API/AudioProcessingEvent</a>
+              <a href="../Web/API/AudioBufferSourceNode/buffer.html">Web/API/AudioBufferSourceNode/buffer</a>
                 
-                  <small>The Web Audio API AudioProcessingEvent represents events that occur when a ScriptProcessorNode ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BatteryManager.html">Web/API/BatteryManager</a>
-                
-                  <small>The BatteryManager interface provides ways to get information about the system's battery charge ...</small>
+                  <small>If the buffer property is set to the value NULL, it defines a single channel of silence.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BatteryManager/charging.html">Web/API/BatteryManager/charging</a>
+              <a href="../Web/API/AudioBufferSourceNode/detune.html">Web/API/AudioBufferSourceNode/detune</a>
                 
-                  <small>A Boolean value indicating whether or not the device's battery is currently being charged.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BatteryManager/chargingTime.html">Web/API/BatteryManager/chargingTime</a>
-                
-                  <small>Indicates the amount of time, in seconds, that remain until the battery is fully charged.</small>
+                  <small>The detune property of the AudioBufferSourceNode interface is an k-rate AudioParam representing ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BatteryManager/dischargingTime.html">Web/API/BatteryManager/dischargingTime</a>
+              <a href="../Web/API/AudioBufferSourceNode/loop.html">Web/API/AudioBufferSourceNode/loop</a>
                 
-                  <small>Indicates the amount of time, in seconds, that remains until the battery is fully discharged.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BatteryManager/level.html">Web/API/BatteryManager/level</a>
-                
-                  <small>Indicates the current battery charge level as a value between 0.0 and 1.0.</small>
+                  <small>The loop property's default value is false.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BatteryManager/onchargingchange.html">Web/API/BatteryManager/onchargingchange</a>
+              <a href="../Web/API/AudioBufferSourceNode/loopEnd.html">Web/API/AudioBufferSourceNode/loopEnd</a>
                 
-                  <small>Specifies an event listener to receive chargingchange events. These events occur when the battery ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BatteryManager/onchargingtimechange.html">Web/API/BatteryManager/onchargingtimechange</a>
-                
-                  <small>Specifies an event listener to receive chargingtimechange events. These events occur when the ...</small>
+                  <small>The loopEnd property's default value is 0.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BatteryManager/ondischargingtimechange.html">Web/API/BatteryManager/ondischargingtimechange</a>
+              <a href="../Web/API/AudioBufferSourceNode/loopStart.html">Web/API/AudioBufferSourceNode/loopStart</a>
                 
-                  <small>Specifies an event listener to receive dischargingtimechange events. These events occur when the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BatteryManager/onlevelchange.html">Web/API/BatteryManager/onlevelchange</a>
-                
-                  <small>Specifies an event listener to receive levelchange events. These events occur when the battery ...</small>
+                  <small>The loopStart property's default value is 0.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Battery_Status_API.html">Web/API/Battery_Status_API</a>
+              <a href="../Web/API/AudioBufferSourceNode/onended.html">Web/API/AudioBufferSourceNode/onended</a>
                 
-                  <small>The Battery Status API, more often referred to as the Battery API, provides information about the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BeforeInstallPromptEvent.html">Web/API/BeforeInstallPromptEvent</a>
-                
-                  <small>The BeforeInstallPromptEvent is passed into the onbeforeinstallprompt handler and displatched when ...</small>
+                  <small>The onended event handler of the AudioBufferSourceNode contains the callback associated with the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BeforeUnloadEvent.html">Web/API/BeforeUnloadEvent</a>
+              <a href="../Web/API/AudioBufferSourceNode/playbackRate.html">Web/API/AudioBufferSourceNode/playbackRate</a>
                 
-                  <small>The beforeunload event is fired when the window, the document and its resources are about to be ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BiquadFilterNode.html">Web/API/BiquadFilterNode</a>
-                
-                  <small>The BiquadFilterNode interface represents a simple low-order filter, and is created using the ...</small>
+                  <small>The default value is 1.0. When set to another value, the AudioBufferSourceNode resamples the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BiquadFilterNode/detune.html">Web/API/BiquadFilterNode/detune</a>
+              <a href="../Web/API/AudioBufferSourceNode/start.html">Web/API/AudioBufferSourceNode/start</a>
                 
-                  <small>An a-rate AudioParam.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BiquadFilterNode/frequency.html">Web/API/BiquadFilterNode/frequency</a>
-                
-                  <small>An AudioParam.</small>
+                  <small>The most simple example just starts the audio buffer playing from the beginning — you don't need ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BiquadFilterNode/gain.html">Web/API/BiquadFilterNode/gain</a>
+              <a href="../Web/API/AudioBufferSourceNode/stop.html">Web/API/AudioBufferSourceNode/stop</a>
                 
-                  <small>An AudioParam.</small>
+                  <small>The most simple example just stops the audio buffer playing immediately — you don't need to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BiquadFilterNode/getFrequencyResponse.html">Web/API/BiquadFilterNode/getFrequencyResponse</a>
+              <a href="../Web/API/AudioContext.html">Web/API/AudioContext</a>
+                
+                  <small>An AudioContext can be a target of events, therefore it implements the EventTarget interface.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioContext/close.html">Web/API/AudioContext/close</a>
+                
+                  <small>The close() method of the AudioContext Interface closes the audio context, releasing any system ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioContext/createAnalyser.html">Web/API/AudioContext/createAnalyser</a>
+                
+                  <small>An AnalyserNode.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioContext/createBiquadFilter.html">Web/API/AudioContext/createBiquadFilter</a>
                 
                   <small>A BiquadFilterNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BiquadFilterNode/Q.html">Web/API/BiquadFilterNode/Q</a>
+              <a href="../Web/API/AudioContext/createBuffer.html">Web/API/AudioContext/createBuffer</a>
                 
-                  <small>An AudioParam.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BiquadFilterNode/type.html">Web/API/BiquadFilterNode/type</a>
-                
-                  <small>A string (enum) representing a BiquadFilterType.</small>
+                  <small>An AudioBuffer.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Blob.html">Web/API/Blob</a>
+              <a href="../Web/API/AudioContext/createBufferSource.html">Web/API/AudioContext/createBufferSource</a>
                 
-                  <small>A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Blob/Blob.html">Web/API/Blob/Blob</a>
-                
-                  <small>The Blob() constructor returns a new Blob object. The content of the blob consists of the ...</small>
+                  <small>An AudioBufferSourceNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Blob/size.html">Web/API/Blob/size</a>
+              <a href="../Web/API/AudioContext/createChannelMerger.html">Web/API/AudioContext/createChannelMerger</a>
                 
-                  <small>The Blob.size property returns the size in bytes of the Blob or a File.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Blob/slice.html">Web/API/Blob/slice</a>
-                
-                  <small>The slice is used to create a new Blob object containing the data in the specified range of bytes ...</small>
+                  <small>A ChannelMergerNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Blob/type.html">Web/API/Blob/type</a>
+              <a href="../Web/API/AudioContext/createChannelSplitter.html">Web/API/AudioContext/createChannelSplitter</a>
                 
-                  <small>The type property of a Blob object provides the MIME type of the file. It returns an empty ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BlobBuilder.html">Web/API/BlobBuilder</a>
-                
-                  <small>The BlobBuilder interface provides an easy way to construct Blob objects. Just create a BlobBuilder ...</small>
+                  <small>A ChannelSplitterNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BlobEvent.html">Web/API/BlobEvent</a>
+              <a href="../Web/API/AudioContext/createConstantSource().html">Web/API/AudioContext/createConstantSource()</a>
                 
-                  <small>The BlobEvent interface represents events associated with a Blob. These blobs are typically, but ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BlobEvent/BlobEvent.html">Web/API/BlobEvent/BlobEvent</a>
-                
-                  <small>The BlobEvent() constructor returns a newly created BlobEvent object with an associated Blob.</small>
+                  <small>The createConstantSource() method of the AudioContext Interface creates a new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BlobEvent/data.html">Web/API/BlobEvent/data</a>
+              <a href="../Web/API/AudioContext/createConvolver.html">Web/API/AudioContext/createConvolver</a>
                 
-                  <small>The BlobEvent.data read-only property represents a Blob associated with the event.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/Bluetooth.html">Web/API/Bluetooth</a>
-                
-                  <small>The Bluetooth interface of the Web Bluetooth API returns a Promise to&nbsp;a BluetoothDevice object with ...</small>
+                  <small>A ConvolverNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Bluetooth/requestDevice.html">Web/API/Bluetooth/requestDevice</a>
+              <a href="../Web/API/AudioContext/createDelay.html">Web/API/AudioContext/createDelay</a>
                 
-                  <small>The Bluetooth.requestDevice() method of the Bluetooth interface returns&nbsp;a Promise to&nbsp;a ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothAdvertisingData.html">Web/API/BluetoothAdvertisingData</a>
-                
-                  <small>The BluetoothDevice interface of the Web Bluetooth API provides advertising data about a particular ...</small>
+                  <small>A DelayNode. The default DelayNode.delayTime if no parameter is passed to createDelay() is 0 ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothAdvertisingData/appearance.html">Web/API/BluetoothAdvertisingData/appearance</a>
+              <a href="../Web/API/AudioContext/createDynamicsCompressor.html">Web/API/AudioContext/createDynamicsCompressor</a>
                 
-                  <small>The appearance read-only property of the BluetoothAdvertisingData interface returns&nbsp;one of the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothAdvertisingData/manufacturerData.html">Web/API/BluetoothAdvertisingData/manufacturerData</a>
-                
-                  <small>The manufacturerData read-only property of the BluetoothAdvertisingData interface returns&nbsp;a map ...</small>
+                  <small>Compression lowers the volume of the loudest parts of the signal and raises the volume of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothAdvertisingData/rssi.html">Web/API/BluetoothAdvertisingData/rssi</a>
+              <a href="../Web/API/AudioContext/createGain.html">Web/API/AudioContext/createGain</a>
                 
-                  <small>The rssi read-only property of the BluetoothAdvertisingData interface returns&nbsp;the power at which ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothAdvertisingData/serviceData.html">Web/API/BluetoothAdvertisingData/serviceData</a>
-                
-                  <small>The serviceData read-only property of the BluetoothAdvertisingData interface returns&nbsp;a map that ...</small>
+                  <small>A GainNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothAdvertisingData/txPower.html">Web/API/BluetoothAdvertisingData/txPower</a>
+              <a href="../Web/API/AudioContext/createIIRFilter.html">Web/API/AudioContext/createIIRFilter</a>
                 
-                  <small>The txPower read-only property of the BluetoothAdvertisingData interface returns&nbsp;the transmission ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice.html">Web/API/BluetoothDevice</a>
-                
-                  <small>The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a ...</small>
+                  <small>The createIIRFilter() method of the AudioContext interface creates an IIRFilterNode, which ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/adData.html">Web/API/BluetoothDevice/adData</a>
+              <a href="../Web/API/AudioContext/createJavaScriptNode.html">Web/API/AudioContext/createJavaScriptNode</a>
                 
-                  <small>The BluetoothDevice.adData read-only property returns&nbsp;instance of BluetoothAdvertisingData ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice/deviceClass.html">Web/API/BluetoothDevice/deviceClass</a>
-                
-                  <small>The BluetoothDevice.deviceClass read-only property returns a number representing the Bluetooth ...</small>
+                  <small>This method is obsolete, and has been renamed to AudioContext.createScriptProcessor. See also ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/gattServer.html">Web/API/BluetoothDevice/gattServer</a>
+              <a href="../Web/API/AudioContext/createMediaElementSource.html">Web/API/AudioContext/createMediaElementSource</a>
                 
-                  <small>The BluetoothDevice.gattServer read-only property returns a&nbsp;reference to the device's GATT server ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice/id.html">Web/API/BluetoothDevice/id</a>
-                
-                  <small>The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device.</small>
+                  <small>For more details about media element audio source nodes, check out the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/name.html">Web/API/BluetoothDevice/name</a>
+              <a href="../Web/API/AudioContext/createMediaStreamDestination.html">Web/API/AudioContext/createMediaStreamDestination</a>
                 
-                  <small>The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice/paired.html">Web/API/BluetoothDevice/paired</a>
-                
-                  <small>The BluetoothDevice.paired read-only property returns a Boolean value indicating whether the device ...</small>
+                  <small>The MediaStream is created when the node is created and is accessible via the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/productID.html">Web/API/BluetoothDevice/productID</a>
+              <a href="../Web/API/AudioContext/createMediaStreamSource.html">Web/API/AudioContext/createMediaStreamSource</a>
                 
-                  <small>The BluetoothDevice.productID read-only property returns the&nbsp;16-bit Product ID field in the pnp_id ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice/productVersion.html">Web/API/BluetoothDevice/productVersion</a>
-                
-                  <small>The BluetoothDevice.productVersion read-only property returns the&nbsp;16-bit&nbsp;Product Version field in ...</small>
+                  <small>For more details about media stream audio source nodes, check out the MediaStreamAudioSourceNode ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/uuids.html">Web/API/BluetoothDevice/uuids</a>
+              <a href="../Web/API/AudioContext/createOscillator.html">Web/API/AudioContext/createOscillator</a>
                 
-                  <small>The BluetoothDevice.uuids read-only property lists&nbsp;the UUIDs of GATT services provided by the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothDevice/vendorID.html">Web/API/BluetoothDevice/vendorID</a>
-                
-                  <small>The BluetoothDevice.vendorID read-only property returns the&nbsp;16-bit Vendor ID field in the pnp_id ...</small>
+                  <small>An OscillatorNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothDevice/vendorIDSource.html">Web/API/BluetoothDevice/vendorIDSource</a>
+              <a href="../Web/API/AudioContext/createPanner.html">Web/API/AudioContext/createPanner</a>
                 
-                  <small>The BluetoothDevice.vendorIDSource read-only property returns the&nbsp;Vendor ID Source field in the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattDescriptor-2.html">Web/API/BluetoothGattDescriptor</a>
-                
-                  <small>The BluetoothGATTDescriptor interface of the Web Bluetooth API provides&nbsp;a GATT&nbsp;Descriptor, which ...</small>
+                  <small>The panner node is spatialized in relation to the AudioContext's AudioListener (defined by the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattDescriptor/characteristic.html">Web/API/BluetoothGattDescriptor/characteristic</a>
+              <a href="../Web/API/AudioContext/createPeriodicWave.html">Web/API/AudioContext/createPeriodicWave</a>
                 
-                  <small>The BluetoothGATTDescriptor.characteristic read-only property returns the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattDescriptor/readValue.html">Web/API/BluetoothGattDescriptor/readValue</a>
-                
-                  <small>The BluetoothGATTDescriptor.readValue() method returns a Promise that resolves to an ArrayBuffer ...</small>
+                  <small>A PeriodicWave.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattDescriptor/uuid.html">Web/API/BluetoothGattDescriptor/uuid</a>
+              <a href="../Web/API/AudioContext/createScriptProcessor.html">Web/API/AudioContext/createScriptProcessor</a>
                 
-                  <small>The BluetoothGATTDescriptor.uuid read-only property returns the UUID of the characteristic ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattDescriptor/value.html">Web/API/BluetoothGattDescriptor/value</a>
-                
-                  <small>The BluetoothGATTDescriptor.value read-only property returns&nbsp;an ArrayBuffer containing&nbsp;the ...</small>
+                  <small>A ScriptProcessorNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattDescriptor/writeValue.html">Web/API/BluetoothGattDescriptor/writeValue</a>
+              <a href="../Web/API/AudioContext/createStereoPanner.html">Web/API/AudioContext/createStereoPanner</a>
                 
-                  <small>The BluetoothGATTDescriptor.writeValue() method sets the value property to the bytes contained in ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattService.html">Web/API/BluetoothGattService</a>
-                
-                  <small>The BluetoothGattService interface of the Web Bluetooth API represents a service provided by a GATT ...</small>
+                  <small>A StereoPannerNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattService/device-2.html">Web/API/BluetoothGattService/device</a>
+              <a href="../Web/API/AudioContext/createWaveShaper.html">Web/API/AudioContext/createWaveShaper</a>
                 
-                  <small>The BluetoothGATTService.device read-only property returns information about a Bluetooth device ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattService/getCharacteristic-2.html">Web/API/BluetoothGattService/getCharacteristic</a>
-                
-                  <small>The BluetoothGATTService.getCharacteristic() method returns&nbsp;a Promise to an instance of ...</small>
+                  <small>A WaveShaperNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattService/getCharacteristics-2.html">Web/API/BluetoothGattService/getCharacteristics</a>
+              <a href="../Web/API/AudioContext/createWaveTable.html">Web/API/AudioContext/createWaveTable</a>
                 
-                  <small>The BluetoothGATTService.getCharacteristics() method returns&nbsp;a Promise to a list of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattService/getIncludedService-2.html">Web/API/BluetoothGattService/getIncludedService</a>
-                
-                  <small>The BluetoothGATTService.getIncludedService() method returns&nbsp;a Promise to&nbsp;an instance of ...</small>
+                  <small></small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattService/getIncludedServices-2.html">Web/API/BluetoothGattService/getIncludedServices</a>
+              <a href="../Web/API/AudioContext/currentTime.html">Web/API/AudioContext/currentTime</a>
                 
-                  <small>The BluetoothGATTService.getIncludedServices() method returns&nbsp;a Promise to&nbsp;an Array of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothGattService/isPrimary-2.html">Web/API/BluetoothGattService/isPrimary</a>
-                
-                  <small>The BluetoothGATTService.isPrimary read-only property returns&nbsp;a Boolean that indicates&nbsp;whether this ...</small>
+                  <small></small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothGattService/uuid-2.html">Web/API/BluetoothGattService/uuid</a>
+              <a href="../Web/API/AudioContext/decodeAudioData.html">Web/API/AudioContext/decodeAudioData</a>
                 
-                  <small>The BluetoothGATTService.uuid read-only property returns&nbsp;a DOMString representing the UUID of this ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic.html">Web/API/BluetoothRemoteGATTCharacteristic</a>
-                
-                  <small>The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a ...</small>
+                  <small>This is the preferred method of creating an audio source for Web Audio API from an audio track.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor.html">Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor</a>
+              <a href="../Web/API/AudioContext/destination.html">Web/API/AudioContext/destination</a>
                 
-                  <small>The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors.html">Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors</a>
-                
-                  <small>The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an ...</small>
+                  <small>An AudioDestinationNode.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/properties.html">Web/API/BluetoothRemoteGATTCharacteristic/properties</a>
+              <a href="../Web/API/AudioContext/listener.html">Web/API/AudioContext/listener</a>
                 
-                  <small>The BluetoothRemoteGATTCharacteristic.properties read-only property returns&nbsp;the properties of this ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/readValue.html">Web/API/BluetoothRemoteGATTCharacteristic/readValue</a>
-                
-                  <small>The BluetoothRemoteGATTCharacteristic.readValue() method returns a Promise that resolves to&nbsp;an ...</small>
+                  <small>An AudioListener object.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/service.html">Web/API/BluetoothRemoteGATTCharacteristic/service</a>
+              <a href="../Web/API/AudioContext/mozAudioChannelType.html">Web/API/AudioContext/mozAudioChannelType</a>
                 
-                  <small>The BluetoothRemoteGATTCharacteristic.service read-only property returns&nbsp;the BluetoothGATTService ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/startNotifications.html">Web/API/BluetoothRemoteGATTCharacteristic/startNotifications</a>
-                
-                  <small>The BluetoothRemoteGATTCharacteristic.startNotifications() method returns a Promise when ...</small>
+                  <small>The readonly mozAudioChannelType property of the AudioContext interface can be used to set the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications.html">Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications</a>
+              <a href="../Web/API/AudioContext/onstatechange.html">Web/API/AudioContext/onstatechange</a>
                 
-                  <small>The BluetoothRemoteGATTCharacteristic.startNotifications() method returns a Promise when ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/uuid.html">Web/API/BluetoothRemoteGATTCharacteristic/uuid</a>
-                
-                  <small>The BluetoothRemoteGATTCharacteristic.uuid read-only property returns DOMString containing&nbsp;the UUID ...</small>
+                  <small>The following snippet is taken from our AudioContext states demo (see it running live.) The ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/value.html">Web/API/BluetoothRemoteGATTCharacteristic/value</a>
+              <a href="../Web/API/AudioContext/resume.html">Web/API/AudioContext/resume</a>
                 
-                  <small>The BluetoothRemoteGATTCharacteristic.value read-only property returns&nbsp;currently cached ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTCharacteristic/writeValue.html">Web/API/BluetoothRemoteGATTCharacteristic/writeValue</a>
-                
-                  <small>The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes ...</small>
+                  <small>The resume() method of the AudioContext Interface resumes the progression of time in an audio ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTServer.html">Web/API/BluetoothRemoteGATTServer</a>
+              <a href="../Web/API/AudioContext/sampleRate.html">Web/API/AudioContext/sampleRate</a>
                 
-                  <small>The BluetoothRemoteGATTServer interface of the Web Bluetooth API represents a&nbsp;GATT Server&nbsp;on a ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Web/API/BluetoothRemoteGATTServer/connected.html">Web/API/BluetoothRemoteGATTServer/connected</a>
-                
-                  <small>The BluetoothRemoteGATTServer.connected read-only property returns a&nbsp;boolean value that returns ...</small>
+                  <small>A floating point number.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTServer/disconnect.html">Web/API/BluetoothRemoteGATTServer/disconnect</a>
+              <a href="../Web/API/AudioContext/state.html">Web/API/AudioContext/state</a>
                 
-                  <small>The BluetoothRemoteGATTServer.disconnect() method causes the script execution environment to ...</small>
+                  <small>A DOMString. Possible values are:</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/BluetoothRemoteGATTServer/getPrimaryService.html">Web/API/BluetoothRemoteGATTServer/getPrimaryService</a>
+              <a href="../Web/API/AudioContext/suspend.html">Web/API/AudioContext/suspend</a>
                 
-                  <small>The BluetoothRemoteGATTServer.getPrimaryService() method returns a promise to the primary ...</small>
+                  <small>The suspend() method of the AudioContext Interface suspends the progression of time in the audio ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioDestinationNode.html">Web/API/AudioDestinationNode</a>
+                
+                  <small>AudioDestinationNode has no output (as it is the output, no more AudioNode can be linked after ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioDestinationNode/maxChannelCount.html">Web/API/AudioDestinationNode/maxChannelCount</a>
+                
+                  <small>An unsigned long.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener.html">Web/API/AudioListener</a>
+                
+                  <small>It is important to note that there is only one listener per context and that it isn't an AudioNode.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener/dopplerFactor.html">Web/API/AudioListener/dopplerFactor</a>
+                
+                  <small>A double.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener/forwardX.html">Web/API/AudioListener/forwardX</a>
+                
+                  <small>The forwardX read-only property of the AudioListener interface is an AudioParam representing the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener/forwardY.html">Web/API/AudioListener/forwardY</a>
+                
+                  <small>The forwardY read-only property of the AudioListener interface is an AudioParam representing the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener/forwardZ.html">Web/API/AudioListener/forwardZ</a>
+                
+                  <small>The forwardZ read-only property of the AudioListener interface is an AudioParam representing the ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Web/API/AudioListener/positionX.html">Web/API/AudioListener/positionX</a>
+                
+                  <small>The positionX read-only property of the AudioListener interface is an AudioParam representing ...</small>
                 
             </li>
           
@@ -1075,7 +1057,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -1092,12 +1074,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1105,14 +1087,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1120,127 +1103,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1255,28 +1361,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 19:19:20 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=12 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:46:27 GMT -->
 </body></html>

@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:42:30 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:21:34 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -66,6 +65,10 @@
     
       <link rel="alternate" hreflang="ja" href="https://developer.mozilla.org/ja/docs/Web/API/Push_API/Using_the_Push_API" title="Using the Push API">
     
+      <link rel="alternate" hreflang="ru" href="https://developer.mozilla.org/ru/docs/Web/API/Push_API/Using_the_Push_API" title="Использование Push API">
+    
+      <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Push_API/Using_the_Push_API" title="Using the Push API">
+    
   
 
   <!-- document-specific social tags -->
@@ -78,6 +81,13 @@
   <meta name="description" content="The W3C Push API offers some exciting new functionality for developers to use in web applications: this article provides an introduction to getting Push notifications setup and running, with a simple demo.">
   <meta name="twitter:description" content="The W3C Push API offers some exciting new functionality for developers to use in web applications: this article provides an introduction to getting Push notifications setup and running, with a simple demo.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -95,10 +105,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +158,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +175,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +192,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPush_API%2FUsing_the_Push_API" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/Push_API/Using_the_Push_API" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/Push_API/Using_the_Push_API" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPush_API%2FUsing_the_Push_API" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPush_API%2FUsing_the_Push_API" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +215,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +239,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +253,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +293,20 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Push_API/Using_the_Push_API" title="Using the Push API">日本語</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ja/docs/Web/API/Push_API/Using_the_Push_API" title="Japanese">日本語 (ja)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/ru/docs/Web/API/Push_API/Using_the_Push_API" title="Russian">Русский (ru)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Push_API/Using_the_Push_API" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -319,7 +318,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +331,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -382,6 +382,11 @@
             <ul>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/jrconlin" title="View profile: jrconlin">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jrconlin" data-src="../../../../../../secure.gravatar.com/avatar/b0ad88743c34ae5c1a3ac93aff0881026c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jrconlin</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/freakypie" title="View profile: freakypie">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="freakypie" data-src="../../../../../../secure.gravatar.com/avatar/5802f11828c54cb5c66edc2e2a5503cc6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">freakypie</noscript></a>
                 </li>
@@ -398,7 +403,7 @@
             
                 <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/kitcambridge" title="View profile: kitcambridge">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kitcambridge" data-src="../../../../../../secure.gravatar.com/avatar/02174c4b097803262e87b6888fd5d8166c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kitcambridge</noscript></a>
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="kitcambridge" data-src="../../../../../../secure.gravatar.com/avatar/02174c4b097803262e87b6888fd5d8166c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">kitcambridge</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -406,7 +411,7 @@
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="gajus" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">gajus</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
                 </li>
@@ -417,8 +422,8 @@
                 </li>
             
                 <li class="hidden">
-                <a href="https://developer.mozilla.org/en-US/profiles/mar.castelluccio" title="View profile: mar.castelluccio">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="mar.castelluccio" data-src="../../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">mar.castelluccio</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/marco-c" title="View profile: marco-c">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="marco-c" data-src="../../../../../../secure.gravatar.com/avatar/16d4d4a441724e006b342ac12507caef6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">marco-c</noscript></a>
                 </li>
             
             </ul>
@@ -466,6 +471,12 @@
               
                 
                 
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs an editorial review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review">How you can help.</a>
+                    </p>
+                  </div>
+                
                 
               
               
@@ -479,7 +490,7 @@
 <p>The ability to push messages or notifications from a server to a client at any time—whether the app is active on your system or not—is something that has been enjoyed by native platforms for some time, and it is finally coming to the Web! Support for most of Push is now available in Firefox 43+ and Chrome 42+ on desktop, with mobile platforms hopefully following soon. <a href="../PushMessageData.html" title="The PushMessageData interface of the Push API provides methods which let you retrieve the push data sent by a server in various formats."><code>PushMessageData</code></a> is currently only supported experimentally in Firefox Nightly (44+), and the implementation is subject to change.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Early versions of Firefox OS used a proprietary version of this API called <a href="../../../Mozilla/Firefox_OS/API/Simple_Push_API.html">Simple Push</a>. This is being rendered obsolete by the Push API standard.</p>
+<p><strong>Note</strong>: Early versions of Firefox OS used a proprietary version of this API called <a href="../../../Archive/Firefox_OS/API/Simple_Push_API.html">Simple Push</a>. This is being rendered obsolete by the Push API standard.</p>
 </div>
 
 <h2 id="Demo_the_basis_of_a_simple_chat_server_app">Demo: the basis of a simple chat server app</h2>
@@ -539,7 +550,7 @@
  <li>Over in your service worker, set up a <code>push</code> event handler to respond to push messages being received.
   <ol>
    <li>If you want to respond by sending a channel message back to the main context (see Step 6) you need to first get a reference to the <code>port2</code> we sent over to the service worker context (<a href="../MessagePort.html" title="The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing sending of messages from one port and listening out for them arriving at the other."><code>MessagePort</code></a>). This is available on the <a href="../MessageEvent.html" title="A MessageEvent is the interface representing a message received by a target, being a WebSocket or a WebRTC RTCDataChannel"><code>MessageEvent</code></a> object passed to the <code>onmessage</code> handler (<a href="../ServiceWorkerGlobalScope/onmessage.html" title="The ServiceWorkerGlobalScope.onmessage event of the ServiceWorkerGlobalScope interface is called whenever incoming messages are received."><code>ServiceWorkerGlobalScope.onmessage</code></a>). Specifically, this is found in the <code>ports</code> property, index 0. Once this is done, you can send a message back to <code>port1</code>, using <a href="../MessagePort/postMessage.html" title="The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts."><code>MessagePort.postMessage()</code></a>.</li>
-   <li>If you want to respond by firing a system notification, you can do this by calling <a href="../ServiceWorkerRegistration/showNotification.html" title="The showNotification() method of the ServiceWorkerRegistration interface creates a notification on an active service worker."><code>ServiceWorkerRegistration.showNotification()</code></a>. Note that in our code we have run this inside an <a href="../ExtendableEvent/waitUntil.html" title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. When called in an EventHandler associated to the install event, it delays treating the installing&nbsp;worker as installed until the passed Promise resolves successfully. This is primarily used to ensure that a service worker is not considered installed until all of the core caches it depends on are populated."><code>ExtendableEvent.waitUntil()</code></a> method — this extends the lifetime of the event until after the notification has been fired, so we can make sure everything has happened that we want to happen.<span id="cke_bm_307E" style="display: none;">&nbsp;</span></li>
+   <li>If you want to respond by firing a system notification, you can do this by calling <a href="../ServiceWorkerRegistration/showNotification.html" title="The showNotification() method of the ServiceWorkerRegistration interface creates a notification on an active service worker."><code>ServiceWorkerRegistration.showNotification()</code></a>. Note that in our code we have run this inside an <a href="../ExtendableEvent/waitUntil.html" title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. In service workers, extending the life of an event prevents the browser from terminating the service worker before asynchronous operations within the event have completed."><code>ExtendableEvent.waitUntil()</code></a> method — this extends the lifetime of the event until after the notification has been fired, so we can make sure everything has happened that we want to happen.<span id="cke_bm_307E" style="display: none;">&nbsp;</span></li>
   </ol>
  </li>
 </ol>
@@ -769,6 +780,7 @@ nameInput.value = 'Bob';</pre>
 <ul>
  <li>We are using the Node.js <a href="https://nodejs.org/api/https.html" class="external">https module</a> to create the server, because for security purposes, service workers only work on a secure connection. This is why we need to include the <code>.pfx</code> security cert in the app, and reference it when creating the server in the Node code.</li>
  <li>When you send a push message without data, you simply send it to the endpoint URL using an HTTP <code>POST</code> request. However, when the push message contains data, you need to encrypt it, which is quite a complex process. As time goes on, libraries will appear to do this kind of thing for you; for this demo we used Marco Castelluccio's NodeJS <a href="https://github.com/marco-c/web-push" class="external">web-push library</a>. Have a look at the source code to get more of an idea of how the encryption is done (and read <a href="https://tools.ietf.org/html/draft-ietf-webpush-encryption-01" class="external">Message Encryption for Web Push</a> for more details.) The library <a href="https://github.com/chrisdavidmills/push-api-demo/blob/gh-pages/server.js#L43-L46" class="external">makes sending a push message simple</a>.</li>
+ <li>If you wish to have messages that collapse (newer updates will replace older updates), you can use the Topic feature. A topic is a special class of subscription update that has a <code>Topic</code> header. A topic name can be any URL safe, base64 string. For example, a header like "<code>Topic: MyFavoriteTopic-For2016</code>" is fine, but "<code>Topic: OMG! Kitties :)</code>" is not. Topic messages are collapsed when the subscriber is offline or unavailable. When they come back, they will receive only the lastest message per topic, along with whatever other messages are pending. "<a href="https://hacks.mozilla.org/2016/11/mozilla-push-server-now-supports-topics/" class="external">Mozilla Push Server now supports Topics</a>" on the Mozilla Hacks blog gives more details and examples.</li>
 </ul>
 
 <h3 id="The_service_worker">The service worker</h3>
@@ -810,7 +822,7 @@ nameInput.value = 'Bob';</pre>
 
 <p><img src="../../../../../../mdn.mozillademos.org/files/11855/subscribe-notification.png" style="display: block; height: 65px; margin: 0px auto; width: 326px;" alt=""></p>
 
-<p>Note that we do this from inside an <a href="../ExtendableEvent/waitUntil.html" title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. When called in an EventHandler associated to the install event, it delays treating the installing&nbsp;worker as installed until the passed Promise resolves successfully. This is primarily used to ensure that a service worker is not considered installed until all of the core caches it depends on are populated."><code>ExtendableEvent.waitUntil()</code></a> method; this is to make sure the service worker remains active until the notification has been sent. <code>waitUntil()</code> will extend the life cycle of the service worker until everything inside this method has completed.</p>
+<p>Note that we do this from inside an <a href="../ExtendableEvent/waitUntil.html" title="The ExtendableEvent.waitUntil() method extends the lifetime of the event. In service workers, extending the life of an event prevents the browser from terminating the service worker before asynchronous operations within the event have completed."><code>ExtendableEvent.waitUntil()</code></a> method; this is to make sure the service worker remains active until the notification has been sent. <code>waitUntil()</code> will extend the life cycle of the service worker until everything inside this method has completed.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Web notifications from service workers were introduced around Firefox version 42, but are likely to be removed again while the surrounding functionality (such as <code>Clients.openWindow()</code>) is properly implemented (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1203324" class="external" title="FIXED: Disable Web Notifications in service workers">bug&nbsp;1203324</a> for more details.)</p>
@@ -894,25 +906,6 @@ nameInput.value = 'Bob';</pre>
 
               
 
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPush_API%2FUsing_the_Push_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+Using+the+Push+API+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about Using the Push API on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about Using the Push API on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FPush_API%2FUsing_the_Push_API%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about Using the Push API on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
-
-              
-
                 <!-- contributors -->
                 <div class="wiki-block contributors">
                   <h2 class="offscreen">Document Tags and Contributors</h2>
@@ -945,6 +938,8 @@ nameInput.value = 'Bob';</pre>
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/jrconlin">jrconlin</a>, 
+    
         <a href="https://developer.mozilla.org/en-US/profiles/freakypie">freakypie</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
@@ -959,7 +954,7 @@ nameInput.value = 'Bob';</pre>
     
         <a href="https://developer.mozilla.org/en-US/profiles/m_t">m_t</a>, 
     
-        <a href="https://developer.mozilla.org/en-US/profiles/mar.castelluccio">mar.castelluccio</a>
+        <a href="https://developer.mozilla.org/en-US/profiles/marco-c">marco-c</a>
     
                     </div>
                   
@@ -967,11 +962,48 @@ nameInput.value = 'Bob';</pre>
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/freakypie">freakypie</a>,
-                      <time datetime="2016-04-19T12:09:03-07:00">Apr 19, 2016, 12:09:03 PM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/jrconlin">jrconlin</a>,
+                      <time datetime="2016-11-08T16:02:54-08:00">Nov 8, 2016, 4:02:54 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -989,12 +1021,12 @@ nameInput.value = 'Bob';</pre>
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1002,9 +1034,8 @@ nameInput.value = 'Bob';</pre>
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -1013,12 +1044,18 @@ nameInput.value = 'Bob';</pre>
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/Push_API/Using_the_Push_API" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/Push_API/Using_the_Push_API" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/ja/docs/Web/API/Push_API/Using_the_Push_API">
-            日本語
+          <option title="Japanese" value="/ja/docs/Web/API/Push_API/Using_the_Push_API">
+            日本語 (ja)
+          </option>
+          <option title="Russian" value="/ru/docs/Web/API/Push_API/Using_the_Push_API">
+            Русский (ru)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/Push_API/Using_the_Push_API">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1035,33 +1072,38 @@ nameInput.value = 'Bob';</pre>
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 15:42:31 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/Push_API/Using_the_Push_API by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:21:37 GMT -->
 </body></html>

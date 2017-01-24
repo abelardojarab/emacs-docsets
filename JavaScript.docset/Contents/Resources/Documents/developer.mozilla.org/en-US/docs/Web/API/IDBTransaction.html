@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/IDBTransaction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:19:30 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/IDBTransaction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:00:26 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,33 +12,32 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
     
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
     
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -64,6 +63,8 @@
 
   
     
+      <link rel="alternate" hreflang="fr" href="https://developer.mozilla.org/fr/docs/Web/API/IDBTransaction" title="IDBTransaction">
+    
       <link rel="alternate" hreflang="zh-CN" href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction" title="IDBTransaction">
     
   
@@ -78,6 +79,13 @@
   <meta name="description" content="Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see bug&nbsp;1112702.) Previously in a readwrite transaction IDBTransaction.oncomplete was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the complete event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The complete event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.">
   <meta name="twitter:description" content="Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see bug&nbsp;1112702.) Previously in a readwrite transaction IDBTransaction.oncomplete was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the complete event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The complete event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.">
   
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
 
   
     
@@ -95,10 +103,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': true,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -148,8 +156,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -165,9 +173,7 @@
   <ul id="nav-access">
     <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -184,34 +190,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FIDBTransaction" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/Web/API/IDBTransaction" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/Web/API/IDBTransaction" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FIDBTransaction" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FIDBTransaction" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -221,18 +213,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -243,10 +237,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +251,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/IDBTransaction">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -300,14 +291,18 @@
 
   <ul class="page-buttons" data-sticky="false">
       
-      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-globe"></i></button>
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
 
         <div class="submenu js-submenu" id="languages-menu-submenu">
           <div class="submenu-column">
             <ul id="translations">
               
                 
-                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction" title="IDBTransaction">中文 (简体)</a></bdi></li>
+                
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/fr/docs/Web/API/IDBTransaction" title="French">Français (fr)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="https://developer.mozilla.org/zh-CN/docs/Web/API/IDBTransaction" title="Chinese (Simplified)">中文 (简体) (zh-CN)</a></bdi></li>
                 
               
 
@@ -319,7 +314,9 @@
         </div>
       </li>
 
+      
       <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
 
         
 
@@ -330,7 +327,6 @@
             <div class="title">Advanced</div>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction$history" rel="nofollow, noindex">History</a></li>
-                
                 
                 
                 
@@ -380,8 +376,13 @@
             <ul>
             
                 <li class="shown">
-                <a href="https://developer.mozilla.org/en-US/profiles/i80and" title="View profile: i80and">
-                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="i80and" data-src="../../../../../secure.gravatar.com/avatar/dcd1756e82d772e55c7dd92d7bd7baf86c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">i80and</noscript></a>
+                <a href="https://developer.mozilla.org/en-US/profiles/libbymc" title="View profile: libbymc">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="libbymc" data-src="../../../../../secure.gravatar.com/avatar/9863d23087b5036d5a8431e7ccde214d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">libbymc</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/derekdreery" title="View profile: derekdreery">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="derekdreery" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">derekdreery</noscript></a>
                 </li>
             
                 <li class="shown">
@@ -390,21 +391,31 @@
                 </li>
             
                 <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/i80and" title="View profile: i80and">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="i80and" data-src="../../../../../secure.gravatar.com/avatar/dcd1756e82d772e55c7dd92d7bd7baf86c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">i80and</noscript></a>
+                </li>
+            
+                <li class="shown">
                 <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/Sebastianz" title="View profile: Sebastianz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sebastianz" data-src="../../../../../secure.gravatar.com/avatar/337fa9c543a4f881977b6d2fbbd2dea86c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sebastianz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/fscholz" title="View profile: fscholz">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="fscholz" data-src="../../../../../secure.gravatar.com/avatar/e24391c9174352988d819a9b9ea77c9e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">fscholz</noscript></a>
                 </li>
             
-                <li class="shown">
+                <li class="hidden">
                 <a href="https://developer.mozilla.org/en-US/profiles/nehasharma" title="View profile: nehasharma">
                 <noscript data-width="34" data-height="34" data-class="avatar" data-alt="nehasharma" data-src="../../../../../i2.wp.com/developer.cdn.mozilla.net/media/img/avatareb45.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">nehasharma</noscript></a>
                 </li>
@@ -508,6 +519,12 @@
 
               
                 
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
+                    </p>
+                  </div>
+                
                 
                 
               
@@ -520,7 +537,7 @@
                     <p></p><section id="Quick_Links" class="Quick_links"><!-- --></section><p></p>
 
 <div>
-<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/IndexedDB">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You actually use <a href="IDBDatabase.html" title="Inherits from: EventTarget"><code>IDBDatabase</code></a> to start transactions and <a href="IDBTransaction.html" title="Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see bug&nbsp;1112702.) Previously in a readwrite transaction IDBTransaction.oncomplete was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the complete event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The complete event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further."><code>IDBTransaction</code></a> to set the mode of the transaction (e.g. is it readonly or readwrite), and access an <a href="IDBObjectStore.html" title="This example shows a variety of different uses of ObjectStores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> to make a request. You can also use it to abort transactions.</p>
+<p>The <strong><code>IDBTransaction</code></strong> interface of the <a href="https://developer.mozilla.org/en-US/docs/IndexedDB">IndexedDB API</a> provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You actually use <a href="IDBDatabase.html" title="Inherits from: EventTarget"><code>IDBDatabase</code></a> to start transactions and <a href="IDBTransaction.html" title="Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see bug&nbsp;1112702.) Previously in a readwrite transaction IDBTransaction.oncomplete was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the complete event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The complete event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further."><code>IDBTransaction</code></a> to set the mode of the transaction (e.g. is it readonly or readwrite), and access an <a href="IDBObjectStore.html" title="This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> to make a request. You can also use it to abort transactions.</p>
 </div>
 
 <p>Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" class="external" title="FIXED: Switch IndexedDB transactions to be non-durable by default">bug&nbsp;1112702</a>.) Previously in a <code>readwrite</code> transaction <a href="IDBTransaction/oncomplete.html" title="The oncomplete event handler of the IDBTransaction interface handles the complete event, fired&nbsp;when the transaction successfully completes."><code>IDBTransaction.oncomplete</code></a> was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the <code>complete</code> event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The <code>complete</code> event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further.</p>
@@ -547,7 +564,7 @@ trans1.put("1", "key");
  <dt><a href="IDBTransaction/abort.html" title="All pending IDBRequest objects created during this transaction have their IDBRequest.error attribute set to AbortError."><code>IDBTransaction.abort</code></a></dt>
  <dd>Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, then this method throws an error event.</dd>
  <dt><a href="IDBTransaction/objectStore.html" title="Every call to this method on the same transaction object, with the same name, returns the same IDBObjectStore instance. If this method is called on a different transaction object, a different IDBObjectStore instance is returned."><code>IDBTransaction.objectStore</code></a></dt>
- <dd>Returns an <a href="IDBObjectStore.html" title="This example shows a variety of different uses of ObjectStores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> object representing an <span class="internalDFN">object store</span> that is part of the <span class="internalDFN">scope</span> of this <span class="internalDFN">transaction</span>.</dd>
+ <dd>Returns an <a href="IDBObjectStore.html" title="This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> object representing an <span class="internalDFN">object store</span> that is part of the <span class="internalDFN">scope</span> of this <span class="internalDFN">transaction</span>.</dd>
 </dl>
 
 <h2 id="Properties">Properties</h2>
@@ -558,7 +575,7 @@ trans1.put("1", "key");
  <dt><a href="IDBTransaction/mode.html" title="An IDBTransactionMode object defining the mode for isolating access to data in the current object stores:"><code>IDBTransaction.mode</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>The mode for isolating access to data in the object stores that are in the scope of the transaction. For possible values, see the Constants section below. The default value is <code><a href="#const_read_only">readonly</a></code>.</dd>
  <dt><a href="IDBTransaction/objectStoreNames.html" title="The objectStoreNames property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects."><code>IDBTransaction.objectStoreNames</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
- <dd>Returns a <a href="DOMStringList.html" title="A type returned by some APIs which contains a list of DOMString (strings)."><code>DOMStringList</code></a> of the names of <a href="IDBObjectStore.html" title="This example shows a variety of different uses of ObjectStores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> objects.</dd>
+ <dd>Returns a <a href="DOMStringList.html" title="A type returned by some APIs which contains a list of DOMString (strings)."><code>DOMStringList</code></a> of the names of <a href="IDBObjectStore.html" title="This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a> objects.</dd>
  <dt><a href="IDBTransaction/error.html" title="A DOMError containing the relevant error.&nbsp;In Chrome 48 and later this property returns a DOMException because DOMError has been removed from the DOM standard.&nbsp;The exact error is one of serveral possibilities. It can be a reference to the same error as the request object that raised it, or a transaction failure&nbsp;(for example&nbsp;QuotaExceededError or UnknownError)."><code>IDBTransaction.error</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
  <dd>Returns one of several types of error when there is an unsuccessful transaction. This property is <code>null</code> if the transaction is not finished, is finished and successfully committed, or was aborted with <a href="IDBTransaction/abort.html" title="All pending IDBRequest objects created during this transaction have their IDBRequest.error attribute set to AbortError."><code>IDBTransaction.abort</code></a> function.</dd>
 </dl>
@@ -578,7 +595,7 @@ trans1.put("1", "key");
 
 <div>
 <div><div class="overheadIndicator deprecated deprecatedHeader"> 
-            <p><strong><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Deprecated since Gecko 13 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)</strong><br>This feature has been removed from the Web standards. Though some browsers may still support it, it is in the process of being dropped. Do not use it in old or new projects. Pages or Web apps using it may break at any time.</p> 
+            <p><strong><span title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Deprecated since Gecko 13 (Firefox 13 / Thunderbird 13 / SeaMonkey 2.10)</strong><br>This feature has been removed from the Web standards. Though some browsers may still support it, it is in the process of being dropped. Avoid using it and update existing code if possible; see the <a href="#Browser_compatibility">compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.</p> 
         </div></div>
 
 <div class="warning">
@@ -624,7 +641,7 @@ trans1.put("1", "key");
 
     <p>(2 in Chrome)</p>
    </td>
-   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions.</td>
+   <td>Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase#setVersion"><code>setVersion()</code></a> method of <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a> objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions."</td>
   </tr>
  </tbody>
 </table>
@@ -688,7 +705,7 @@ function addData() {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td><a href="http://www.w3.org/TR/IndexedDB/#transaction" class="external" lang="en" hreflang="en">Indexed Database API<br><small lang="en-US">The definition of 'IDBTransaction' in that specification.</small></a></td>
+   <td><a href="https://www.w3.org/TR/IndexedDB/#transaction" class="external" lang="en" hreflang="en">Indexed Database API<br><small lang="en-US">The definition of 'IDBTransaction' in that specification.</small></a></td>
    <td><span class="spec-REC">Recommendation</span></td>
    <td>Initial definition</td>
   </tr>
@@ -711,6 +728,7 @@ function addData() {
   <tr>
    <th>Feature</th>
    <th>Chrome</th>
+   <th>Edge</th>
    <th>Firefox (Gecko)</th>
    <th>Internet Explorer</th>
    <th>Opera</th>
@@ -719,7 +737,8 @@ function addData() {
   <tr>
    <td>Basic support</td>
    <td>23<span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'webkit' as this browser considers it experimental">webkit</a></span><br>
-    24[1]</td>
+    24[1] (unprefixed)</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>10 <span class="inlineIndicator prefixBox prefixBoxInline" title="prefix"><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Prefixes" title="The name of this feature is prefixed with 'moz' as this browser considers it experimental">moz</a></span><br>
     <a href="https://developer.mozilla.org/en-US/Firefox/Releases/16" title="Released on 2012-10-09.">16.0</a> (16.0)</td>
    <td>10, partial</td>
@@ -729,17 +748,19 @@ function addData() {
   <tr>
    <td>Available in workers</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td>37.0 (37.0)</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>35</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
   </tr>
   <tr>
    <td><code>objectStoreNames</code> property</td>
    <td>48.0</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
+   <td><a href="https://developer.mozilla.org/en-US/Firefox/Releases/50" title="Released on 2016-11-08.">50.0</a> (50.0)</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>35</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
   </tr>
  </tbody>
@@ -753,6 +774,7 @@ function addData() {
    <th>Feature</th>
    <th>Android</th>
    <th>Android Webview</th>
+   <th>Edge</th>
    <th>Firefox Mobile (Gecko)</th>
    <th>Firefox OS</th>
    <th>IE Phone</th>
@@ -763,6 +785,7 @@ function addData() {
   <tr>
    <td>Basic support</td>
    <td>4.4</td>
+   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td>22.0 (22.0)</td>
    <td>1.0.1</td>
@@ -775,10 +798,11 @@ function addData() {
    <td>Available in workers</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td>37.0 (37.0)</td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
-   <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
+   <td>35</td>
    <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span title="Please update this with the earliest version of support." style="color: #888;">(Yes)</span></td>
   </tr>
@@ -786,10 +810,11 @@ function addData() {
    <td><code>objectStoreNames</code> property</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>48.0</td>
+   <td><span title="Compatibility unknown; please update this." style="color: rgb(255, 153, 0);">?</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
-   <td><span style="color: #f00;">No&nbsp;support</span></td>
+   <td>35</td>
    <td><span style="color: #f00;">No&nbsp;support</span></td>
    <td>48.0</td>
   </tr>
@@ -808,32 +833,13 @@ function addData() {
  <li>Starting transactions: <a href="IDBDatabase.html" title="Inherits from: EventTarget"><code>IDBDatabase</code></a></li>
  <li>Using transactions: <a href="IDBTransaction.html" title="Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see bug&nbsp;1112702.) Previously in a readwrite transaction IDBTransaction.oncomplete was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the complete event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The complete event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare most consumers should not need to concern themselves further."><code>IDBTransaction</code></a></li>
  <li>Setting a range of keys: <a href="IDBKeyRange.html" title="A key range can be a single value or a range with upper and lower bounds or endpoints. If the key range has both upper and lower bounds, then it is bounded; if it has no bounds, it is unbounded. A bounded key range can either be open (the endpoints are excluded) or closed (the endpoints are included). To retrieve all keys within a certain range, you can use the following code constructs:"><code>IDBKeyRange</code></a></li>
- <li>Retrieving and making changes to your data: <a href="IDBObjectStore.html" title="This example shows a variety of different uses of ObjectStores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a></li>
+ <li>Retrieving and making changes to your data: <a href="IDBObjectStore.html" title="This example shows a variety of different uses of object stores, from updating the data structure with IDBObjectStore.createIndex&nbsp;inside an onupgradeneeded function, to adding a new item to our object store with IDBObjectStore.add. For a full working example, see our&nbsp;To-do Notifications&nbsp;app (view example live.)"><code>IDBObjectStore</code></a></li>
  <li>Using cursors: <a href="IDBCursor.html" title="The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database."><code>IDBCursor</code></a></li>
  <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages" class="external">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/" class="external">view example live</a>.)</li>
 </ul>
                   
                 
               </article>
-
-              
-
-    
-    
-    
-
-    
-    
-    
-
-    <div class="share">
-        <strong>Share:</strong>
-        <ul>
-            <li><a href="http://twitter.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FIDBTransaction%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dtwitter.com&amp;text=I+learned+about+IDBTransaction+on+MDN." target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=twitter.com" data-title="I learned about IDBTransaction on MDN." class="share-link twitter"><i aria-hidden="true" class="icon-twitter"></i>Twitter</a></li>
-            <li><a href="http://facebook.com/sharer.php?s=100&amp;p[url]=https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=facebook.com" data-title="I learned about IDBTransaction on MDN." class="share-link facebook"><i aria-hidden="true" class="icon-facebook"></i>Facebook</a></li>
-            <li><a href="https://plus.google.com/share?url=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FAPI%2FIDBTransaction%3Futm_campaign%3Dshare%26utm_medium%3Ddoc%2Bshare%2Blink%26utm_source%3Dplus.google.com" target="_blank" data-url="https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction?utm_campaign=share&amp;utm_medium=doc+share+link&amp;utm_source=plus.google.com" data-title="I learned about IDBTransaction on MDN." class="share-link gplus"><i aria-hidden="true" class="icon-google-plus"></i>Google+</a></li>
-        </ul>
-    </div>
 
               
 
@@ -855,15 +861,13 @@ function addData() {
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/IndexedDB">IndexedDB</a></li>
       
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/indexeddb">indexeddb</a></li>
-      
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Interface">Interface</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/MakeBrowserAgnostic">MakeBrowserAgnostic</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Reference">Reference</a></li>
       
         <li><a href="https://developer.mozilla.org/en-US/docs/tag/Storage">Storage</a></li>
-      
-        <li><a href="https://developer.mozilla.org/en-US/docs/tag/storage">storage</a></li>
       
     </ul>
   </div>
@@ -871,9 +875,15 @@ function addData() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
-        <a href="https://developer.mozilla.org/en-US/profiles/i80and">i80and</a>, 
+        <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/derekdreery">derekdreery</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/jpmedley">jpmedley</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/i80and">i80and</a>, 
     
         <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
     
@@ -911,11 +921,48 @@ function addData() {
                   
                     <div class="contributors-sub">
                       <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
-                      <a href="https://developer.mozilla.org/en-US/profiles/i80and">i80and</a>,
-                      <time datetime="2016-04-04T11:01:00-07:00">Apr 4, 2016, 11:01:00 AM</time>
+                      <a href="https://developer.mozilla.org/en-US/profiles/libbymc">libbymc</a>,
+                      <time datetime="2016-12-12T13:45:27.623604-08:00">Dec 12, 2016, 1:45:27 PM</time>
                     </div>
                   
                 </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
               
             </div>
 
@@ -956,12 +1003,12 @@ function addData() {
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -969,9 +1016,8 @@ function addData() {
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
@@ -980,12 +1026,15 @@ function addData() {
     <form class="languages go" method="get" action="https://developer.mozilla.org/en-US/docs/Web">
       <label for="language">Other languages:</label>
       <select id="language" class="wiki-l10n" name="next" dir="ltr">
-        <option value="/en-US/docs/Web/API/IDBTransaction" selected="">
-          English (US)
+        <option title="English (US)" value="/en-US/docs/Web/API/IDBTransaction" selected="">
+          English (US) (en-US)
         </option>
         
-          <option value="/zh-CN/docs/Web/API/IDBTransaction">
-            中文 (简体)
+          <option title="French" value="/fr/docs/Web/API/IDBTransaction">
+            Français (fr)
+          </option>
+          <option title="Chinese (Simplified)" value="/zh-CN/docs/Web/API/IDBTransaction">
+            中文 (简体) (zh-CN)
           </option>
       </select>
       <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
@@ -1002,63 +1051,38 @@ function addData() {
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="../../../../../login.persona.org/include.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
-  <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/helpfulness.7b208a764d28.js" charset="utf-8"></script>
+  
 
   
-    <script type="text/javascript">
-        (function($) {
-            $('#wikiArticle').children('h2[id]').each(function() {
-                var id = $(this).attr('id');
-                var href = '/en-US/docs/Web/API/IDBTransaction$edit#' + id;
 
-                $('<a>').attr({
-                    href: href,
-                    'class': 'button section-edit only-icon'
-                })
-                .append($('<i aria-hidden="true" class="icon-pencil"></i>'))
-                .append($('<span>'))
-                .find('span')
-                .text(gettext('Edit'))
-                .end()
-                .on('click', function(e) {
-                    e.preventDefault();
-
-                    mdn.analytics.trackEvent({
-                        category: 'Section Edit',
-                        action: id
-                    }, function() {
-                        window.location = href;
-                    });
-                })
-                .appendTo(this);
-            });
-        })(jQuery);
-    </script>
+  
+    <script async="" type="text/javascript" src="../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
   
 
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/IDBTransaction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:19:33 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/IDBTransaction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 19:00:30 GMT -->
 </body></html>

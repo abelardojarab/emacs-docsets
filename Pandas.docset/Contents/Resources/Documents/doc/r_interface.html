@@ -1,0 +1,342 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>rpy2 / R interface &#8212; pandas 0.19.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.19.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="pandas 0.19.2 documentation" href="index.html" />
+    <link rel="next" title="pandas Ecosystem" href="ecosystem.html" />
+    <link rel="prev" title="Caveats and Gotchas" href="gotchas.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ecosystem.html" title="pandas Ecosystem"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="gotchas.html" title="Caveats and Gotchas"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<div class="content-wrapper">
+    <div class="content">
+        <div class="document">
+            <div class="sphinxsidebar">
+                <h3>Table Of Contents</h3>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What&#8217;s New</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Package overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10min.html">10 Minutes to pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cookbook.html">Cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsintro.html">Intro to Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Essential Basic Functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Working with Text Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="options.html">Options and Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="indexing.html">Indexing and Selecting Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">MultiIndex / Advanced Indexing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computation.html">Computational tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="missing_data.html">Working with missing data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="groupby.html">Group By: split-apply-combine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merging.html">Merge, join, and concatenate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reshaping.html">Reshaping and Pivot Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeseries.html">Time Series / Date functionality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="timedeltas.html">Time Deltas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="categorical.html">Categorical Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="io.html">IO Tools (Text, CSV, HDF5, ...)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="remote_data.html">Remote Data Access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enhancingperf.html">Enhancing Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sparse.html">Sparse data structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gotchas.html">Caveats and Gotchas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">rpy2 / R interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#updating-your-code-to-use-rpy2-functions">Updating your code to use rpy2 functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#r-interface-with-rpy2">R interface with rpy2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transferring-r-data-sets-into-python">Transferring R data sets into Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#converting-dataframes-into-r-objects">Converting DataFrames into R objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calling-r-functions-with-pandas-objects">Calling R functions with pandas objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#high-level-interface-to-r-estimators">High-level interface to R estimators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ecosystem.html">pandas Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_r.html">Comparison with R / R libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sql.html">Comparison with SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comparison_with_sas.html">Comparison with SAS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Internals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="release.html">Release Notes</a></li>
+</ul>
+
+                <h3 style="margin-top: 1.5em;">Search</h3>
+
+                <form class="search" action="search.html" method="get">
+                    <input type="text" name="q" size="18"/>
+                    <input type="submit" value="Go"/>
+                    <input type="hidden" name="check_keywords" value="yes"/>
+                    <input type="hidden" name="area" value="default"/>
+                </form>
+                <p class="searchtip" style="font-size: 90%">
+                    Enter search terms or a module, class or function name.
+                </p>
+
+            </div>
+             
+            <div class="documentwrapper">
+                <div class="bodywrapper">
+                    <div class="body">
+                        
+  <div class="section" id="rpy2-r-interface">
+<span id="rpy"></span><h1>rpy2 / R interface<a class="headerlink" href="#rpy2-r-interface" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In v0.16.0, the <code class="docutils literal"><span class="pre">pandas.rpy</span></code> interface has been <strong>deprecated and will be
+removed in a future version</strong>. Similar functionality can be accessed
+through the <a class="reference external" href="https://rpy2.readthedocs.io/">rpy2</a> project.
+See the <a class="reference internal" href="#rpy-updating"><span class="std std-ref">updating</span></a> section for a guide to port your
+code from the <code class="docutils literal"><span class="pre">pandas.rpy</span></code> to <code class="docutils literal"><span class="pre">rpy2</span></code> functions.</p>
+</div>
+<div class="section" id="updating-your-code-to-use-rpy2-functions">
+<span id="rpy-updating"></span><h2>Updating your code to use rpy2 functions<a class="headerlink" href="#updating-your-code-to-use-rpy2-functions" title="Permalink to this headline">¶</a></h2>
+<p>In v0.16.0, the <code class="docutils literal"><span class="pre">pandas.rpy</span></code> module has been <strong>deprecated</strong> and users are
+pointed to the similar functionality in <code class="docutils literal"><span class="pre">rpy2</span></code> itself (rpy2 &gt;= 2.4).</p>
+<p>Instead of importing <code class="docutils literal"><span class="pre">import</span> <span class="pre">pandas.rpy.common</span> <span class="pre">as</span> <span class="pre">com</span></code>, the following imports
+should be done to activate the pandas conversion support in rpy2:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rpy2.robjects</span> <span class="k">import</span> <span class="n">pandas2ri</span>
+<span class="n">pandas2ri</span><span class="o">.</span><span class="n">activate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Converting data frames back and forth between rpy2 and pandas should be largely
+automated (no need to convert explicitly, it will be done on the fly in most
+rpy2 functions).</p>
+<p>To convert explicitly, the functions are <code class="docutils literal"><span class="pre">pandas2ri.py2ri()</span></code> and
+<code class="docutils literal"><span class="pre">pandas2ri.ri2py()</span></code>. So these functions can be used to replace the existing
+functions in pandas:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">com.convert_to_r_dataframe(df)</span></code> should be replaced with <code class="docutils literal"><span class="pre">pandas2ri.py2ri(df)</span></code></li>
+<li><code class="docutils literal"><span class="pre">com.convert_robj(rdf)</span></code> should be replaced with <code class="docutils literal"><span class="pre">pandas2ri.ri2py(rdf)</span></code></li>
+</ul>
+<p>Note: these functions are for the latest version (rpy2 2.5.x) and were called
+<code class="docutils literal"><span class="pre">pandas2ri.pandas2ri()</span></code> and <code class="docutils literal"><span class="pre">pandas2ri.ri2pandas()</span></code> previously.</p>
+<p>Some of the other functionality in <cite>pandas.rpy</cite> can be replaced easily as well.
+For example to load R data as done with the <code class="docutils literal"><span class="pre">load_data</span></code> function, the
+current method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df_iris</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>can be replaced with:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rpy2.robjects</span> <span class="k">import</span> <span class="n">r</span>
+<span class="n">r</span><span class="o">.</span><span class="n">data</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+<span class="n">df_iris</span> <span class="o">=</span> <span class="n">pandas2ri</span><span class="o">.</span><span class="n">ri2py</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">convert_to_r_matrix</span></code> function can be replaced by the normal
+<code class="docutils literal"><span class="pre">pandas2ri.py2ri</span></code> to convert dataframes, with a subsequent call to R
+<code class="docutils literal"><span class="pre">as.matrix</span></code> function.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Not all conversion functions in rpy2 are working exactly the same as the
+current methods in pandas. If you experience problems or limitations in
+comparison to the ones in pandas, please report this at the
+<a class="reference external" href="https://github.com/pandas-dev/pandas/issues">issue tracker</a>.</p>
+</div>
+<p>See also the documentation of the <a class="reference external" href="http://rpy2.bitbucket.org/">rpy2</a> project.</p>
+</div>
+<div class="section" id="r-interface-with-rpy2">
+<h2>R interface with rpy2<a class="headerlink" href="#r-interface-with-rpy2" title="Permalink to this headline">¶</a></h2>
+<p>If your computer has R and rpy2 (&gt; 2.2) installed (which will be left to the
+reader), you will be able to leverage the below functionality. On Windows,
+doing this is quite an ordeal at the moment, but users on Unix-like systems
+should find it quite easy. rpy2 evolves in time, and is currently reaching
+its release 2.3, while the current interface is
+designed for the 2.2.x series. We recommend to use 2.2.x over other series
+unless you are prepared to fix parts of the code, yet the rpy2-2.3.0
+introduces improvements such as a better R-Python bridge memory management
+layer so it might be a good idea to bite the bullet and submit patches for
+the few minor differences that need to be fixed.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># if installing for the first time</span>
+<span class="n">hg</span> <span class="n">clone</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">lgautier</span><span class="o">/</span><span class="n">rpy2</span>
+
+<span class="n">cd</span> <span class="n">rpy2</span>
+<span class="n">hg</span> <span class="n">pull</span>
+<span class="n">hg</span> <span class="n">update</span> <span class="n">version_2</span><span class="o">.</span><span class="mf">2.</span><span class="n">x</span>
+<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To use R packages with this interface, you will need to install
+them inside R yourself. At the moment it cannot install them for
+you.</p>
+</div>
+<p>Once you have done installed R and rpy2, you should be able to import
+<code class="docutils literal"><span class="pre">pandas.rpy.common</span></code> without a hitch.</p>
+</div>
+<div class="section" id="transferring-r-data-sets-into-python">
+<h2>Transferring R data sets into Python<a class="headerlink" href="#transferring-r-data-sets-into-python" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>load_data</strong> function retrieves an R data set and converts it to the
+appropriate pandas object (most likely a DataFrame):</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="kn">import</span> <span class="nn">pandas.rpy.common</span> <span class="kn">as</span> <span class="nn">com</span>
+
+<span class="gp">In [2]: </span><span class="n">infert</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;infert&#39;</span><span class="p">)</span>
+
+<span class="gp">In [3]: </span><span class="n">infert</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gr">Out[3]: </span>
+<span class="go">  education   age  parity  induced  case  spontaneous  stratum  pooled.stratum</span>
+<span class="go">1    0-5yrs  26.0     6.0      1.0   1.0          2.0        1             3.0</span>
+<span class="go">2    0-5yrs  42.0     1.0      1.0   1.0          0.0        2             1.0</span>
+<span class="go">3    0-5yrs  39.0     6.0      2.0   1.0          0.0        3             4.0</span>
+<span class="go">4    0-5yrs  34.0     4.0      2.0   1.0          0.0        4             2.0</span>
+<span class="go">5   6-11yrs  35.0     3.0      1.0   1.0          1.0        5            32.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="converting-dataframes-into-r-objects">
+<h2>Converting DataFrames into R objects<a class="headerlink" href="#converting-dataframes-into-r-objects" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.8.</span></p>
+</div>
+<p>Starting from pandas 0.8, there is <strong>experimental</strong> support to convert
+DataFrames into the equivalent R object (that is, <strong>data.frame</strong>):</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="kn">import</span> <span class="nn">pandas.rpy.common</span> <span class="kn">as</span> <span class="nn">com</span>
+
+<span class="gp">In [5]: </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]},</span>
+<span class="gp">   ...:</span>                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;one&quot;</span><span class="p">,</span> <span class="s2">&quot;two&quot;</span><span class="p">,</span> <span class="s2">&quot;three&quot;</span><span class="p">])</span>
+<span class="gp">   ...:</span> 
+
+<span class="gp">In [6]: </span><span class="n">r_dataframe</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">convert_to_r_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="gp">In [7]: </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">r_dataframe</span><span class="p">))</span>
+<span class="go">&lt;class &#39;rpy2.robjects.vectors.DataFrame&#39;&gt;</span>
+
+<span class="gp">In [8]: </span><span class="k">print</span><span class="p">(</span><span class="n">r_dataframe</span><span class="p">)</span>
+<span class="go">      A B C</span>
+<span class="go">one   1 4 7</span>
+<span class="go">two   2 5 8</span>
+<span class="go">three 3 6 9</span>
+</pre></div>
+</div>
+<p>The DataFrame&#8217;s index is stored as the <code class="docutils literal"><span class="pre">rownames</span></code> attribute of the
+data.frame instance.</p>
+<p>You can also use <strong>convert_to_r_matrix</strong> to obtain a <code class="docutils literal"><span class="pre">Matrix</span></code> instance, but
+bear in mind that it will only work with homogeneously-typed DataFrames (as
+R matrices bear no information on the data type):</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="kn">import</span> <span class="nn">pandas.rpy.common</span> <span class="kn">as</span> <span class="nn">com</span>
+
+<span class="gp">In [10]: </span><span class="n">r_matrix</span> <span class="o">=</span> <span class="n">com</span><span class="o">.</span><span class="n">convert_to_r_matrix</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="gp">In [11]: </span><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">r_matrix</span><span class="p">))</span>
+<span class="go">&lt;class &#39;rpy2.robjects.vectors.Matrix&#39;&gt;</span>
+
+<span class="gp">In [12]: </span><span class="k">print</span><span class="p">(</span><span class="n">r_matrix</span><span class="p">)</span>
+<span class="go">      A B C</span>
+<span class="go">one   1 4 7</span>
+<span class="go">two   2 5 8</span>
+<span class="go">three 3 6 9</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calling-r-functions-with-pandas-objects">
+<h2>Calling R functions with pandas objects<a class="headerlink" href="#calling-r-functions-with-pandas-objects" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="high-level-interface-to-r-estimators">
+<h2>High-level interface to R estimators<a class="headerlink" href="#high-level-interface-to-r-estimators" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="clearer"></div>
+        </div>
+    </div>
+</div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="ecosystem.html" title="pandas Ecosystem"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="gotchas.html" title="Caveats and Gotchas"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">pandas 0.19.2 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<style type="text/css">
+    .scrollToTop {
+        text-align: center;
+        font-weight: bold;
+        position: fixed;
+        bottom: 60px;
+        right: 40px;
+        display: none;
+    }
+</style>
+<a href="#" class="scrollToTop">Scroll To Top</a>
+<script type="text/javascript">
+$(document).ready(function() {
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
+
+  </body>
+</html>

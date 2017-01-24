@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:12:00 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:49:19 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/DOM" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/DOM" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FDOM" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/DOM">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -316,13 +298,20 @@
   
   </ol>
 
-        <p>Found 908 documents</p>
+        <p>Found 941 documents</p>
         <ul class="document-list">
           
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/AJAX">AJAX</a>
                 
                   <small></small>
+                
+            </li>
+          
+            <li>
+              <a href="../Archive/Firefox_OS/API/DOMApplication/launch.html">Archive/Firefox_OS/API/DOMApplication/launch</a>
+                
+                  <small>This method doesn't return anything.</small>
                 
             </li>
           
@@ -334,23 +323,23 @@
             </li>
           
             <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/Browser_feature_detection">Archive/Web/Browser_feature_detection</a>
+                
+                  <small>Summary: An experimental approach to discovering degree of support for Standards</small>
+                
+            </li>
+          
+            <li>
               <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/Displaying_notifications_(deprecated)">Archive/Web/Displaying_notifications_(deprecated)</a>
                 
-                  <small>Firefox offers support for "desktop notifications"; these are notifications that are displayed to ...</small>
+                  <small>Firefox offers support for "desktop notifications"; these are notifications that are displayed ...</small>
                 
             </li>
           
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Archive/Web/Window.importDialog">Archive/Web/Window.importDialog</a>
                 
-                  <small>Because opening windows on mobile isn't necessarily appropriate, the Firefox Mobile team designed ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Browser_Feature_Detection">Browser_Feature_Detection</a>
-                
-                  <small>Summary: An experimental approach to discovering degree of support for Standards Among the methods ...</small>
+                  <small>Because opening windows on mobile isn't necessarily appropriate, the Firefox Mobile team ...</small>
                 
             </li>
           
@@ -364,7 +353,7 @@
             <li>
               <a href="../Extensions/Using_the_DOM_File_API_in_chrome_code.html">Extensions/Using_the_DOM_File_API_in_chrome_code</a>
                 
-                  <small>If you want to use the DOM&nbsp;File API in chrome code, you can do so without restriction. In fact, you ...</small>
+                  <small>If you want to use the DOM&nbsp;File API in chrome code, you can do so without restriction. In fact, ...</small>
                 
             </li>
           
@@ -392,7 +381,7 @@
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Introduction_to_using_XPath_in_JavaScript">Introduction_to_using_XPath_in_JavaScript</a>
                 
-                  <small>This document describes the interface for using XPath in JavaScript internally, in extensions, and ...</small>
+                  <small>This document describes the interface for using XPath in JavaScript internally, in extensions, ...</small>
                 
             </li>
           
@@ -411,6 +400,13 @@
             </li>
           
             <li>
+              <a href="../Learn/JavaScript/Client-side_web_APIs.html">Learn/JavaScript/Client-side_web_APIs</a>
+                
+                  <small>When writing client-side JavaScript for web sites or applications, you won't go very far before ...</small>
+                
+            </li>
+          
+            <li>
               <a href="../Listening_to_events_in_Firefox_extensions.html">Listening_to_events_in_Firefox_extensions</a>
                 
                   <small>Gecko uses events to pass information about interesting things that have occurred along to the ...</small>
@@ -420,7 +416,7 @@
             <li>
               <a href="../../Add-ons/Code_snippets/HTML_to_DOM.html">Mozilla/Add-ons/Code_snippets/HTML_to_DOM</a>
                 
-                  <small>Although you can now natively parse HTML using DOMParser and XMLHttpRequest, this is a new feature ...</small>
+                  <small>Although you can now natively parse HTML using DOMParser and XMLHttpRequest, this is a new ...</small>
                 
             </li>
           
@@ -434,21 +430,21 @@
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Code_snippets/Rosetta">Mozilla/Add-ons/Code_snippets/Rosetta</a>
                 
-                  <small>By default, the only possible standardized scripting language for HTML is ECMAScript. Hence, if you ...</small>
+                  <small>By default, the only possible standardized scripting language for HTML is ECMAScript. Hence, if ...</small>
                 
             </li>
           
             <li>
               <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Code_snippets/Timers/Daemons">Mozilla/Add-ons/Code_snippets/Timers/Daemons</a>
                 
-                  <small>In computer science a daemon is a task that runs as a background process, rather than being under ...</small>
+                  <small>In computer science a daemon is a task that runs as a background process, rather than being ...</small>
                 
             </li>
           
             <li>
               <a href="../../Add-ons/Overlay_Extensions/XUL_School/Adding_Events_and_Commands.html">Mozilla/Add-ons/Overlay_Extensions/XUL_School/Adding_Events_and_Commands</a>
                 
-                  <small>Just like with HTML, most JavaScript code execution is triggered by event handlers attached to DOM ...</small>
+                  <small>Just like with HTML, most JavaScript code execution is triggered by event handlers attached to ...</small>
                 
             </li>
           
@@ -460,562 +456,548 @@
             </li>
           
             <li>
-              <a href="../Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object.html">Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object</a>
-                
-                  <small>Starting with Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), you can easily add new ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/1.5">Mozilla/Firefox/Releases/1.5</a>
-                
-                  <small>Based on the Gecko 1.8 engine, Firefox 1.5 improved its already best in class standards support, ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching</a>
-                
-                  <small>Firefox 1.5 uses in-memory caching for entire Web pages, including their JavaScript states, for a ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/3.6/Interfaces_moved">Mozilla/Firefox/Releases/3.6/Interfaces_moved</a>
-                
-                  <small>These interfaces were moved to new locations in the tree in Gecko 1.9.2. This is generally only ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../../Firefox/Releases/3/DOM_improvements.html">Mozilla/Firefox/Releases/3/DOM_improvements</a>
-                
-                  <small>Firefox 3 offers a number of improvements to the Document Object Model (DOM), especially in regard ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/BluetoothManager.html">Mozilla/Firefox_OS/API/BluetoothManager</a>
+              <a href="../Mozilla/B2G_OS/API/BluetoothManager.html">Mozilla/B2G_OS/API/BluetoothManager</a>
                 
                   <small>The BluetoothManager interface of the Web Bluetooth API allows to access all Bluetooth adapters ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraCapabilities.html">Mozilla/Firefox_OS/API/CameraCapabilities</a>
+              <a href="../Mozilla/B2G_OS/API/CameraCapabilities.html">Mozilla/B2G_OS/API/CameraCapabilities</a>
                 
                   <small>The CameraControl.capabilities property returns a CameraCapabilities object, which describes all ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraCapabilities/flashModes.html">Mozilla/Firefox_OS/API/CameraCapabilities/flashModes</a>
+              <a href="../Mozilla/B2G_OS/API/CameraCapabilities/flashModes.html">Mozilla/B2G_OS/API/CameraCapabilities/flashModes</a>
                 
-                  <small>The flashModes property is an Array of strings identifying each of the flash modes supported by the ...</small>
+                  <small>The flashModes property is an Array of strings identifying each of the flash modes supported by ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl.html">Mozilla/Firefox_OS/API/CameraControl</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl.html">Mozilla/B2G_OS/API/CameraControl</a>
                 
                   <small>When you use the CameraManager.getCamera() method to get a reference to a camera, you specify a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/capabilities.html">Mozilla/Firefox_OS/API/CameraControl/capabilities</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/capabilities.html">Mozilla/B2G_OS/API/CameraControl/capabilities</a>
                 
-                  <small>The capabilities property return a CameraCapabilities object, which describes the capabilities of ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/effect.html">Mozilla/Firefox_OS/API/CameraControl/effect</a>
-                
-                  <small>The effect property is a string defining the effect to be used by the camera. When set, its value ...</small>
+                  <small>The capabilities property return a CameraCapabilities object, which describes the capabilities ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/focusDistanceNear.html">Mozilla/Firefox_OS/API/CameraControl/focusDistanceNear</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/effect.html">Mozilla/B2G_OS/API/CameraControl/effect</a>
+                
+                  <small>The effect property is a string defining the effect to be used by the camera. When set, its ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusDistanceNear.html">Mozilla/B2G_OS/API/CameraControl/focusDistanceNear</a>
                 
                   <small>The focusDistanceNear property value is a distance in meters used with ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/focusMode.html">Mozilla/Firefox_OS/API/CameraControl/focusMode</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/focusMode.html">Mozilla/B2G_OS/API/CameraControl/focusMode</a>
                 
                   <small>The focusMode property value is a string that defines which kind of focus mode the camera should ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/getPreviewStream.html">Mozilla/Firefox_OS/API/CameraControl/getPreviewStream</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStream.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStream</a>
                 
-                  <small>This method is used to configure and access a MediaStream from the camera. The resulting stream is ...</small>
+                  <small>This method is used to configure and access a MediaStream from the camera. The resulting stream ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/getPreviewStreamVideoMode.html">Mozilla/Firefox_OS/API/CameraControl/getPreviewStreamVideoMode</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode.html">Mozilla/B2G_OS/API/CameraControl/getPreviewStreamVideoMode</a>
                 
                   <small>This method is used to configure and access a MediaStream from the camera. You use the resulting ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/onClosed.html">Mozilla/Firefox_OS/API/CameraControl/onClosed</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/onClosed.html">Mozilla/B2G_OS/API/CameraControl/onClosed</a>
                 
                   <small>The onClosed property is used to set an event handler that will track when a new CameraControl ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/pauseRecording.html">Mozilla/Firefox_OS/API/CameraControl/pauseRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/pauseRecording.html">Mozilla/B2G_OS/API/CameraControl/pauseRecording</a>
                 
                   <small>The pauseRecording() method of the CameraControl interface is used to pause the recording of a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/release.html">Mozilla/Firefox_OS/API/CameraControl/release</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/release.html">Mozilla/B2G_OS/API/CameraControl/release</a>
                 
-                  <small>Releases the camera so that other applications can use it. You should call this whenever the camera ...</small>
+                  <small>Releases the camera so that other applications can use it. You should call this whenever the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/resumePreview.html">Mozilla/Firefox_OS/API/CameraControl/resumePreview</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/resumePreview.html">Mozilla/B2G_OS/API/CameraControl/resumePreview</a>
                 
                   <small>This method is used to resume the preview stream.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/resumeRecording.html">Mozilla/Firefox_OS/API/CameraControl/resumeRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/resumeRecording.html">Mozilla/B2G_OS/API/CameraControl/resumeRecording</a>
                 
                   <small>The resumeRecording() method of the CameraControl interface is used to resume the recording of a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/setConfiguration.html">Mozilla/Firefox_OS/API/CameraControl/setConfiguration</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/setConfiguration.html">Mozilla/B2G_OS/API/CameraControl/setConfiguration</a>
                 
-                  <small>This method is used to set the camera configuration independently of the CameraManager.getCamera() ...</small>
+                  <small>This method is used to set the camera configuration independently of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/setExposureCompensation.html">Mozilla/Firefox_OS/API/CameraControl/setExposureCompensation</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/setExposureCompensation.html">Mozilla/B2G_OS/API/CameraControl/setExposureCompensation</a>
                 
                   <small>This method is used to change the exposure compensation value.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/startRecording.html">Mozilla/Firefox_OS/API/CameraControl/startRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/startRecording.html">Mozilla/B2G_OS/API/CameraControl/startRecording</a>
                 
                   <small>This method is used to start recording a video file on the device; the video is stored as a 3gp ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/stopRecording.html">Mozilla/Firefox_OS/API/CameraControl/stopRecording</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/stopRecording.html">Mozilla/B2G_OS/API/CameraControl/stopRecording</a>
                 
                   <small>Stops recording video on the device; you should call this at some point after calling ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraControl/takePicture.html">Mozilla/Firefox_OS/API/CameraControl/takePicture</a>
+              <a href="../Mozilla/B2G_OS/API/CameraControl/takePicture.html">Mozilla/B2G_OS/API/CameraControl/takePicture</a>
                 
-                  <small>Captures a still image from the camera and passes it as a Blob to a success callback handler, which ...</small>
+                  <small>Captures a still image from the camera and passes it as a Blob to a success callback handler, ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/CameraManager.html">Mozilla/Firefox_OS/API/CameraManager</a>
+              <a href="../Mozilla/B2G_OS/API/CameraManager.html">Mozilla/B2G_OS/API/CameraManager</a>
                 
                   <small>The CameraManager interface provides access to any cameras available on the device being used.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/Camera_API/Introduction.html">Mozilla/Firefox_OS/API/Camera_API/Introduction</a>
+              <a href="../Mozilla/B2G_OS/API/Camera_API/Introduction.html">Mozilla/B2G_OS/API/Camera_API/Introduction</a>
                 
-                  <small>Through the Camera API, it is possible to take pictures with your device's camera and upload them ...</small>
+                  <small>Through the Camera API, it is possible to take pictures with your device's camera and upload ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DeviceStorage.html">Mozilla/Firefox_OS/API/DeviceStorage</a>
+              <a href="../Mozilla/B2G_OS/API/DeviceStorage.html">Mozilla/B2G_OS/API/DeviceStorage</a>
                 
                   <small>The DeviceStorage interface is used to access files on a specific storage area available on the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMApplication/launch.html">Mozilla/Firefox_OS/API/DOMApplication/launch</a>
-                
-                  <small>This method doesn't return anything.</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMCursor.html">Mozilla/Firefox_OS/API/DOMCursor</a>
+              <a href="../Mozilla/B2G_OS/API/DOMCursor.html">Mozilla/B2G_OS/API/DOMCursor</a>
                 
                   <small>A DOMCursor object represents an ongoing operation over a list of results. It is an enhanced ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMCursor/continue.html">Mozilla/Firefox_OS/API/DOMCursor/continue</a>
+              <a href="../Mozilla/B2G_OS/API/DOMCursor/continue.html">Mozilla/B2G_OS/API/DOMCursor/continue</a>
                 
-                  <small>The continue method is used to tell the cursor to move to the next result. The DOMCursor 's success ...</small>
+                  <small>The continue method is used to tell the cursor to move to the next result. The DOMCursor 's ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMCursor/done.html">Mozilla/Firefox_OS/API/DOMCursor/done</a>
+              <a href="../Mozilla/B2G_OS/API/DOMCursor/done.html">Mozilla/B2G_OS/API/DOMCursor/done</a>
                 
                   <small>The done property indicate if the DOMCursor has reached the last result.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest.html">Mozilla/Firefox_OS/API/DOMRequest</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest.html">Mozilla/B2G_OS/API/DOMRequest</a>
                 
-                  <small>A DOMRequest object represents an ongoing operation. It provides callbacks that are called when the ...</small>
+                  <small>A DOMRequest object represents an ongoing operation. It provides callbacks that are called when ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest/error.html">Mozilla/Firefox_OS/API/DOMRequest/error</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest/error.html">Mozilla/B2G_OS/API/DOMRequest/error</a>
                 
                   <small>This property can contain error information in a DOMError object.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest/onerror.html">Mozilla/Firefox_OS/API/DOMRequest/onerror</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest/onerror.html">Mozilla/B2G_OS/API/DOMRequest/onerror</a>
                 
                   <small>This property specifies a callback function to be run when a DOMRequest fails.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest/onsuccess.html">Mozilla/Firefox_OS/API/DOMRequest/onsuccess</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest/onsuccess.html">Mozilla/B2G_OS/API/DOMRequest/onsuccess</a>
                 
                   <small>This property specifies a callback function to be run when a DOMRequest completes successfully.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest/readyState.html">Mozilla/Firefox_OS/API/DOMRequest/readyState</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest/readyState.html">Mozilla/B2G_OS/API/DOMRequest/readyState</a>
                 
                   <small>This property is a string that indicates whether or not a DOMRequest operation has finished running.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/DOMRequest/result.html">Mozilla/Firefox_OS/API/DOMRequest/result</a>
+              <a href="../Mozilla/B2G_OS/API/DOMRequest/result.html">Mozilla/B2G_OS/API/DOMRequest/result</a>
                 
                   <small>This property provides the result value from a DOMRequest operation.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MMICall.html">Mozilla/Firefox_OS/API/MMICall</a>
+              <a href="../Mozilla/B2G_OS/API/MMICall.html">Mozilla/B2G_OS/API/MMICall</a>
                 
-                  <small>The MMICall interface of the Web Telephony API represents an MMI call, allowing us to receive the ...</small>
+                  <small>The MMICall interface of the Web Telephony API represents an MMI call, allowing us to receive ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MMICall/result.html">Mozilla/Firefox_OS/API/MMICall/result</a>
+              <a href="../Mozilla/B2G_OS/API/MMICall/result.html">Mozilla/B2G_OS/API/MMICall/result</a>
                 
                   <small>The result read-only property of the MMICall interface returns a promise that resolves to a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/familyName.html">Mozilla/Firefox_OS/API/MozContact/familyName</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/familyName.html">Mozilla/B2G_OS/API/MozContact/familyName</a>
                 
                   <small>The familyName property is a list of all the possible family names usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/givenName.html">Mozilla/Firefox_OS/API/MozContact/givenName</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/givenName.html">Mozilla/B2G_OS/API/MozContact/givenName</a>
                 
                   <small>The givenName property is a list of all the possible given names usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/honorificPrefix.html">Mozilla/Firefox_OS/API/MozContact/honorificPrefix</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificPrefix.html">Mozilla/B2G_OS/API/MozContact/honorificPrefix</a>
                 
                   <small>The honorificPrefix property is a list of all the possible honorific prefix usable for the contact.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/honorificSuffix.html">Mozilla/Firefox_OS/API/MozContact/honorificSuffix</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/honorificSuffix.html">Mozilla/B2G_OS/API/MozContact/honorificSuffix</a>
                 
                   <small>The honorificSuffix property is a list of all the possible honorific suffixes usable for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/id.html">Mozilla/Firefox_OS/API/MozContact/id</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/id.html">Mozilla/B2G_OS/API/MozContact/id</a>
                 
                   <small>The id property is a unique string representing the contact within the device's contact database.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/init.html">Mozilla/Firefox_OS/API/MozContact/init</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/init.html">Mozilla/B2G_OS/API/MozContact/init</a>
                 
                   <small>The init method is used to initialize the mozContact object using a configuration object.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/name.html">Mozilla/Firefox_OS/API/MozContact/name</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/name.html">Mozilla/B2G_OS/API/MozContact/name</a>
                 
-                  <small>The name property is a list of all the possible names use to identify the contact. It's equivalent ...</small>
-                
-            </li>
-          
-            <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/published.html">Mozilla/Firefox_OS/API/MozContact/published</a>
-                
-                  <small>The published property provides the date of when the contact was stored for the first time on the ...</small>
+                  <small>The name property is a list of all the possible names use to identify the contact. It's ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozContact/updated.html">Mozilla/Firefox_OS/API/MozContact/updated</a>
+              <a href="../Mozilla/B2G_OS/API/MozContact/published.html">Mozilla/B2G_OS/API/MozContact/published</a>
+                
+                  <small>The published property provides the date of when the contact was stored for the first time on ...</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozContact/updated.html">Mozilla/B2G_OS/API/MozContact/updated</a>
                 
                   <small>The updated property provides the date of when the contact was updated for the last time on the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsEvent.html">Mozilla/Firefox_OS/API/MozMmsEvent</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsEvent.html">Mozilla/B2G_OS/API/MozMmsEvent</a>
                 
                   <small>The DOM MozMmsEvent represents events related to WebSMS MMS messages.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/attachments.html">Mozilla/Firefox_OS/API/MozMmsMessage/attachments</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/attachments.html">Mozilla/B2G_OS/API/MozMmsMessage/attachments</a>
                 
-                  <small>The attachments property gives access to the list of all the MMS attachments (resources necessary ...</small>
+                  <small>The attachments property gives access to the list of all the MMS attachments (resources ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/delivery.html">Mozilla/Firefox_OS/API/MozMmsMessage/delivery</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/delivery.html">Mozilla/B2G_OS/API/MozMmsMessage/delivery</a>
                 
                   <small>The delivery property represents the current state of the message delivery from the device ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/deliveryStatus.html">Mozilla/Firefox_OS/API/MozMmsMessage/deliveryStatus</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/deliveryStatus.html">Mozilla/B2G_OS/API/MozMmsMessage/deliveryStatus</a>
                 
                   <small>The deliveryStatus property represents the current state of the message delivery from the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/expiryDate.html">Mozilla/Firefox_OS/API/MozMmsMessage/expiryDate</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/expiryDate.html">Mozilla/B2G_OS/API/MozMmsMessage/expiryDate</a>
                 
                   <small>The expiryDate property represents the expiry date for an MMS to be manually downloaded.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/id.html">Mozilla/Firefox_OS/API/MozMmsMessage/id</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/id.html">Mozilla/B2G_OS/API/MozMmsMessage/id</a>
                 
                   <small>The id property represents the unique id of the message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/read.html">Mozilla/Firefox_OS/API/MozMmsMessage/read</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/read.html">Mozilla/B2G_OS/API/MozMmsMessage/read</a>
                 
                   <small>The read property indicates if the message has been read (true) or not (false).</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/receivers.html">Mozilla/Firefox_OS/API/MozMmsMessage/receivers</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/receivers.html">Mozilla/B2G_OS/API/MozMmsMessage/receivers</a>
                 
                   <small>The receivers property provides the list of all receivers for a given message. Each receiver is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/sender.html">Mozilla/Firefox_OS/API/MozMmsMessage/sender</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/sender.html">Mozilla/B2G_OS/API/MozMmsMessage/sender</a>
                 
                   <small>The sender property provides the phone number of the sender of a given message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/smil.html">Mozilla/Firefox_OS/API/MozMmsMessage/smil</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/smil.html">Mozilla/B2G_OS/API/MozMmsMessage/smil</a>
                 
                   <small>The smil property represents a stringified version of the SMIL content of the message (an MMS is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/subject.html">Mozilla/Firefox_OS/API/MozMmsMessage/subject</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/subject.html">Mozilla/B2G_OS/API/MozMmsMessage/subject</a>
                 
                   <small>The subject property is a string representing the subject of the message (in many cases, its title).</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/threadId.html">Mozilla/Firefox_OS/API/MozMmsMessage/threadId</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/threadId.html">Mozilla/B2G_OS/API/MozMmsMessage/threadId</a>
                 
                   <small>The threadId property represents the id of the thread the message is part of.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/timestamp.html">Mozilla/Firefox_OS/API/MozMmsMessage/timestamp</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/timestamp.html">Mozilla/B2G_OS/API/MozMmsMessage/timestamp</a>
                 
                   <small>The timestamp property represents the timestamp of a given message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMmsMessage/type.html">Mozilla/Firefox_OS/API/MozMmsMessage/type</a>
+              <a href="../Mozilla/B2G_OS/API/MozMmsMessage/type.html">Mozilla/B2G_OS/API/MozMmsMessage/type</a>
                 
-                  <small>The type property represents the type of the message. It provides a convenient way to be sure that ...</small>
+                  <small>The type property represents the type of the message. It provides a convenient way to be sure ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileCellInfo/gsmCellId.html">Mozilla/Firefox_OS/API/MozMobileCellInfo/gsmCellId</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileCellInfo/gsmCellId.html">Mozilla/B2G_OS/API/MozMobileCellInfo/gsmCellId</a>
                 
                   <small>gsmCellId is a read-only property that provides the mobile Cell ID for the current GSM / WCDMA ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileCFInfo.html">Mozilla/Firefox_OS/API/MozMobileCFInfo</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileCFInfo.html">Mozilla/B2G_OS/API/MozMobileCFInfo</a>
                 
                   <small>The MozMobileCFInfo interface defines options used to retrieve or define call forwarding settings.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileConnection/onussdreceived.html">Mozilla/Firefox_OS/API/MozMobileConnection/onussdreceived</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileConnection/onussdreceived.html">Mozilla/B2G_OS/API/MozMobileConnection/onussdreceived</a>
                 
                   <small>The onussdreceived property specifies an event listener to receive ussdreceived events. These ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileConnectionInfo/relSignalStrength.html">Mozilla/Firefox_OS/API/MozMobileConnectionInfo/relSignalStrength</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileConnectionInfo/relSignalStrength.html">Mozilla/B2G_OS/API/MozMobileConnectionInfo/relSignalStrength</a>
                 
-                  <small>relSignalStrength is a read-only property that gives the signal strength, represented linearly as a ...</small>
+                  <small>relSignalStrength is a read-only property that gives the signal strength, represented linearly ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/delete.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/delete</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/delete.html">Mozilla/B2G_OS/API/MozMobileMessageManager/delete</a>
                 
                   <small>The delete method is used to delete a given message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/getMessage.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/getMessage</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/getMessage.html">Mozilla/B2G_OS/API/MozMobileMessageManager/getMessage</a>
                 
                   <small>The getMessage method is used to access a given SMS message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/getMessages.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/getMessages</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/getMessages.html">Mozilla/B2G_OS/API/MozMobileMessageManager/getMessages</a>
                 
                   <small>The getMessages method is used to access a list of messages.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/getSegmentInfoForText.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/getSegmentInfoForText</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/getSegmentInfoForText.html">Mozilla/B2G_OS/API/MozMobileMessageManager/getSegmentInfoForText</a>
                 
                   <small>The getSegmentInfoForText method is used to get the information necessary to create a multi-part ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/getThreads.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/getThreads</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/getThreads.html">Mozilla/B2G_OS/API/MozMobileMessageManager/getThreads</a>
                 
-                  <small>The getThreads method is used to iterate through a list of MozMobileMessageThread objects. Each of ...</small>
+                  <small>The getThreads method is used to iterate through a list of MozMobileMessageThread objects. Each ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/markMessageRead.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/markMessageRead</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/markMessageRead.html">Mozilla/B2G_OS/API/MozMobileMessageManager/markMessageRead</a>
                 
                   <small>The markMessageRead method is used to change the read state of a given message.</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/ondeliveryerror.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/ondeliveryerror</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/ondeliveryerror.html">Mozilla/B2G_OS/API/MozMobileMessageManager/ondeliveryerror</a>
                 
-                  <small>Specifies an event listener to receive deliveryerror events. These events occur when an SMS or MMS ...</small>
+                  <small>Specifies an event listener to receive deliveryerror events. These events occur when an SMS or ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/ondeliverysuccess.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/ondeliverysuccess</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/ondeliverysuccess.html">Mozilla/B2G_OS/API/MozMobileMessageManager/ondeliverysuccess</a>
                 
                   <small>Specifies an event listener to receive deliverysuccess events. These events occur when an SMS or ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/onfailed.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/onfailed</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/onfailed.html">Mozilla/B2G_OS/API/MozMobileMessageManager/onfailed</a>
                 
                   <small>Specifies an event listener to receive failed events. These events occur when an SMS or MMS has ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/onreceived.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/onreceived</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/onreceived.html">Mozilla/B2G_OS/API/MozMobileMessageManager/onreceived</a>
                 
                   <small>Specifies an event listener to receive received events. These events occur when an SMS or MMS is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/onretrieving.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/onretrieving</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/onretrieving.html">Mozilla/B2G_OS/API/MozMobileMessageManager/onretrieving</a>
                 
                   <small>Specifies an event listener to receive retrieving events. These events occur when an SMS or MMS ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/onsending.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/onsending</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/onsending.html">Mozilla/B2G_OS/API/MozMobileMessageManager/onsending</a>
                 
-                  <small>Specifies an event listener to receive sending events. These events occur when an SMS or MMS enters ...</small>
+                  <small>Specifies an event listener to receive sending events. These events occur when an SMS or MMS ...</small>
                 
             </li>
           
             <li>
-              <a href="../Mozilla/Firefox_OS/API/MozMobileMessageManager/onsent.html">Mozilla/Firefox_OS/API/MozMobileMessageManager/onsent</a>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/onsent.html">Mozilla/B2G_OS/API/MozMobileMessageManager/onsent</a>
                 
                   <small>Specifies an event listener to receive sent events. These events occur when an SMS or MMS is sent.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/retrieveMMS.html">Mozilla/B2G_OS/API/MozMobileMessageManager/retrieveMMS</a>
+                
+                  <small>The retrieveMMS method is used to access a given MMS message.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/send.html">Mozilla/B2G_OS/API/MozMobileMessageManager/send</a>
+                
+                  <small>The send method is used to send an SMS message to one or more receivers.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageManager/sendMMS.html">Mozilla/B2G_OS/API/MozMobileMessageManager/sendMMS</a>
+                
+                  <small>The sendMMS method is used to send an MMS message to one or more receivers.</small>
+                
+            </li>
+          
+            <li>
+              <a href="../Mozilla/B2G_OS/API/MozMobileMessageThread/body.html">Mozilla/B2G_OS/API/MozMobileMessageThread/body</a>
+                
+                  <small>The body property represents the body of the last message available in the thread.</small>
                 
             </li>
           
@@ -1078,12 +1060,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1091,138 +1073,262 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1237,28 +1343,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 14:12:28 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/DOM by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 18:49:46 GMT -->
 </body></html>

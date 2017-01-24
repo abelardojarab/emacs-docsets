@@ -1,0 +1,650 @@
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout-->
+<!-- Mirrored from angular.io/docs/js/latest/quickstart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>Quickstart</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Get up and running with Angular"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular"/><meta property="og:image" content="../../../resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Get up and running with Angular"/><meta itemprop="name" content="Angular"/><meta itemprop="description" content="Get up and running with Angular"/><meta itemprop="image" content="../../../resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="../../../resources/images/icons/favicon.ico"/><link rel="stylesheet" href="../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="../../../../fonts.googleapis.com/css4765.css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="../../../../fonts.googleapis.com/icone91f.css?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="../../../resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="../../../resources/css/vendor/animate.css"/><link rel="stylesheet" href="../../../resources/css/main.css"/><!-- MOBILE ICONS -->
+<link rel="apple-touch-icon" sizes="57x57" href="../../../resources/images/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../../../resources/images/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../../../resources/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../../../resources/images/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../resources/images/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../../../resources/images/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../../../resources/images/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../../../resources/images/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../resources/images/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="../../../resources/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://angular.io/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><nav data-swiftype-index="false" scroll-y-offset-element="scroll-y-offset-element" class="main-nav l-pinned-top l-layer-5"><h1><a href="https://angular.io/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="https://angular.io/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="https://angular.io/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="https://angular.io/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav><!-- Include this file ONLY when current.path[2] is defined--><nav data-swiftype-index="false" ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="sidenav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="sidenav-search st-input-wrapper"><div class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="text" placeholder="SEARCH DOCS..." class="st-default-search-input"/></div><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><ul class="sidenav-links"><li class="sidenav-section no-border"><a href="index.html" class="nav-title">Docs Home</a></li><!-- CORE DOCUMENTATION--><li class="sidenav-section-divider"><h3>Core Documentation</h3></li><li class="sidenav-section"><a href="quickstart.html" title="Get up and running with Angular" class="nav-title is-selected">Quickstart</a></li><li class="sidenav-section"><a href="guide/index.html" title="How to read and use this documentation" class="nav-title is-parent ">Guide<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="guide/index.html" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="guide/architecture.html" title="The basic building blocks of Angular applications">2. Architecture</a></li><li class="nav-list-item "><a href="guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="guide/cheatsheet.html" title="Cheat Sheet">8. Cheat Sheet</a></li><li class="nav-list-item "><a href="guide/style-guide.html" title="Write Angular with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="guide/glossary.html" title="Brief definitions of the most important words in the Angular vocabulary">10. Glossary</a></li></ul></div></li><li class="sidenav-section no-border"><a href="api/index.html" title="API Reference" class="nav-title ">API Reference</a></li><!-- ADVANCED DOCUMENATION--><li class="sidenav-section-divider"><h3>Additional Documentation</h3></li><li class="sidenav-section"><a href="tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-parent ">Tutorial<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="tutorial/index.html" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="tutorial/toh-pt6.html" title="We convert our service and components to use Angular's HTTP service">7. HTTP</a></li></ul></div></li><li class="sidenav-section"><a href="guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title is-parent ">Advanced<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="guide/browser-support.html" title="Browser support and polyfills guide.">Browser support</a></li><li class="nav-list-item "><a href="guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="guide/npm-packages.html" title="Recommended npm packages, and how to specify package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="guide/router.html" title="Discover the basics of screen navigation with the Angular router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li></ul></div></li><li class="sidenav-section"><a href="cookbook/index.html" title="A collection of recipes for common Angular application scenarios" class="nav-title is-parent ">Cookbook<img src="../../../resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="cookbook/index.html" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="cookbook/dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Forms</a></li><li class="nav-list-item "><a href="cookbook/form-validation.html" title="Validate user's form entries">Form Validation</a></li><li class="nav-list-item "><a href="cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="cookbook/ts-to-js.html" title="Convert Angular TypeScript examples into ES6 and ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="cookbook/visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></li></ul><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular for JavaScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><ul ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><li><a href="https://angular.io/docs/ts/latest/quickstart.html" md-button>Angular for TypeScript </a></li><li><a href="quickstart.html" md-button>Angular for JavaScript </a></li><li><a href="https://angular.io/docs/dart/latest/quickstart.html" md-button>Angular for Dart </a></li></ul></nav></nav><script>// Could put in appCtrl but only needed here and clear here
+(function scrollToSelectedLink() {
+  var sideNav = document.getElementsByClassName('sidenav')[0];
+  var link = sideNav.getElementsByClassName('is-selected')[0];
+  if(link && link.offsetTop > window.innerHeight){
+    sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
+    //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
+  }
+})()</script><header class="hero background-sky"><h1 class="hero-title ">Quickstart </h1><div class="clear"></div><h2 class="hero-subtitle">JavaScript</h2></header><div class="banner"><p class="text-body">This QuickStart guide demonstrates how to build and run a simple Angular application.</p></div><article class="l-content-small grid-fluid docs-content"><script>function why(id, backTo) {
+  var id = "#"+id;
+  var el = document.querySelector(id);
+  el.hidden=el.hidden=!el.hidden;
+
+  if (el.hidden && backTo){
+    // the next line is required to work around a bug in WebKit (Chrome / Safari)
+    location.href = "#";
+    location.href =  "#" + backTo;
+  }
+}</script><script>function verbose(isVerbose) {
+  isVerbose = !! isVerbose;
+  var el = document.querySelector('button.verbose.off');
+  el.style.display = isVerbose ? 'block' : 'none';
+  var el = document.querySelector('button.verbose.on');
+  el.style.display = isVerbose ? 'none' : 'block';
+
+  CCSStylesheetRuleStyle('main','.l-verbose-section', 'display',
+    isVerbose ? 'block' : 'none');
+}
+</script><script>function CCSStylesheetRuleStyle(stylesheet, selectorText, style, value){
+  /* returns the value of the element style of the rule in the stylesheet
+  *  If no value is given, reads the value
+  *  If value is given, the value is changed and returned
+  *  If '' (empty string) is given, erases the value.
+  *  The browser will apply the default one
+  *
+  * string stylesheet: part of the .css name to be recognized, e.g. 'default'
+  * string selectorText: css selector, e.g. '#myId', '.myClass', 'thead td'
+  * string style: camelCase element style, e.g. 'fontSize'
+  * string value optional : the new value
+  */
+  var CCSstyle = undefined, rules, sheet;
+  for(var m in document.styleSheets){
+    sheet = document.styleSheets[m];
+    if(sheet.href && sheet.href.indexOf(stylesheet) != -1){
+    rules = sheet[document.all ? 'rules' : 'cssRules'];
+    for(var n in rules){
+      console.log(rules[n].selectorText);
+      if(rules[n].selectorText == selectorText){
+        CCSstyle = rules[n].style;
+        break;
+      }
+    }
+    break;
+    }
+  }
+  if(value == undefined)
+    return CCSstyle[style]
+  else
+    return CCSstyle[style] = value
+}
+</script><p>Let&#39;s start from zero and build a super simple Angular application in JavaScript.</p>
+<div class="callout is-helpful"><header>Don't want JavaScript?</header><p>Although we&#39;re getting started in JavaScript, you can also write Angular apps
+in TypeScript and Dart by selecting either of those languages from the combo-box in the banner.</p>
+</div><div class="l-main-section"></div><h2 id="see-it-run-">See It Run!</h2>
+<p>Running the <live-example></live-example>
+is the quickest way to see an Angular app come to life.</p>
+<p>Clicking that link fires up a browser, loads the sample in <a href="http://plnkr.co/" title="Plunker">plunker</a>,
+and displays a simple message:</p>
+<figure class="image-display"><img src="../../../resources/images/devguide/quickstart/hello-angular.png" alt="Output of quickstart app"></figure><p>Here is the file structure:</p>
+<div class="filetree"><div class="file">angular-quickstart</div><div class="children"><div class="file">app</div><div class="children"><div class="file">app.component.js</div><div class="file">app.module.js</div><div class="file">main.js</div></div><div class="file">index.html</div><div class="file">styles.css</div></div></div><p>Functionally, it&#39;s an <code>index.html</code>, <code>styles.css</code> and three JavaScript files in an <code>app/</code> folder.
+We can handle that!</p>
+<p>Of course we won&#39;t build  many apps that only run in plunker. 
+Let&#39;s follow a process that&#39;s closer to what we&#39;d do in real life.</p>
+<ol>
+<li>Set up our development environment</li>
+<li>Write the Angular root component for our app</li>
+<li>Add an Angular Module</li>
+<li>Bootstrap it to take control of the main web page</li>
+<li>Write the main page (<code>index.html</code>)</li>
+<li>Add some CSS (<code>styles.css</code>)</li>
+</ol>
+<div class="l-sub-section"><p>We really can build the QuickStart from scratch in five minutes 
+if we follow the instructions and ignore the commentary.</p>
+<p>Most of us will be interested in the &quot;why&quot; as well as the &quot;how&quot; and that will take longer.</p>
+</div><div class="l-main-section"></div><h2 id="development-environment">Development Environment</h2>
+<p>We&#39;ll need a place to stand (the application project folder), some libraries 
+and your editor of choice.</p>
+<h3 id="create-a-new-project-folder">Create a new project folder</h3>
+<code-example format="">mkdir angular-quickstart
+cd    angular-quickstart</code-example><h3 id="add-the-libraries-we-need">Add the libraries we need</h3>
+<p>We recommend the <strong>npm</strong> package manager for acquiring and managing our development libraries.</p>
+<div class="l-sub-section"><p>Don&#39;t have npm?
+<a href="https://docs.npmjs.com/getting-started/installing-node" title="Installing Node.js and updating npm">Get it now</a>
+because we&#39;re going to use it now and repeatedly throughout this documentation.</p>
+</div><p>Add a <strong>package.json</strong> file to the project folder and copy/paste the following:</p>
+<div class="code-example"><header><h4>package.json</h4></header><code-example language="json" format=".">{
+  "name": "angular-quickstart",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "~2.4.0",
+
+    "angular-in-memory-web-api": "~0.1.16",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.0.0",
+    "lite-server": "^2.2.2"
+  }
+}
+</code-example></div><div class="l-sub-section"><p>Itching to know the details? We explain in the <a href="#package-json">appendix below</a>  </p>
+</div><p>Install these packages by opening a terminal window (command window in Windows) and
+running this npm command.</p>
+<code-example format="">npm install</code-example><div class="l-sub-section"><p>Scary <span style="color:red; font-weight: bold">error messages in red</span> may appear <strong>during</strong> install. 
+Ignore them. The install will succeed. See the <a href="#npm-errors">appendix below</a> for more information.</p>
+</div><div class="l-main-section"></div><h2 id="our-first-angular-component">Our First Angular Component</h2>
+<p>The <em>Component</em> is the most fundamental of Angular concepts. 
+A component manages a view - a piece of the web page where we display information
+to the user and respond to user feedback.</p>
+<p>Technically, a component is a class that controls a view template.
+We&#39;ll write a lot of them as we build Angular apps. This is our first attempt
+so we&#39;ll keep it ridiculously simple.</p>
+<h3 id="create-an-application-source-sub-folder">Create an application source sub-folder</h3>
+<p>We like to keep our application code in a sub-folder off the root called <code>app/</code>.
+Execute the following command in the console window.</p>
+<code-example format="">mkdir app
+cd    app</code-example><h3 id="add-the-component-file">Add the component file</h3>
+<p>Now add a file named <strong>app.component.js</strong> and paste the following lines:</p>
+<div class="code-example"><header><h4>app/app.component.js</h4></header><code-example language="js" format="">(function(app) {
+  app.AppComponent =
+    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1&gt;Hello Angular&lt;/h1&gt;&#39;
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-example></div><p>We&#39;re creating a visual component named <strong><code>AppComponent</code></strong> by chaining the
+<code>Component</code> and <code>Class</code> methods that belong to the <strong>global Angular core namespace, <code>ng.core</code></strong>.</p>
+<div class="code-example"><header><h4>app/app.component.js (component schema)</h4></header><code-example language="js" format="">  app.AppComponent =
+    ng.core.Component({
+    })
+    .Class({
+    });
+</code-example></div><p>The <strong><code>Component</code></strong> method takes a configuration object with three
+properties. The <strong><code>Class</code></strong> method is where we implement the component itself,
+giving it properties and methods that bind to the view and whatever
+behavior is appropriate for this part of the UI.</p>
+<p>Let&#39;s review this file in detail.</p>
+<h3 id="modules">Modules</h3>
+<p>Angular apps are modular. They consist of many files each dedicated to a purpose.</p>
+<p>ES5 JavaScript doesn&#39;t have a native module system.
+There are several popular 3rd party module systems we could use.
+Instead, for simplicity and to avoid picking favorites,
+we&#39;ll create a single global namespace for our application.</p>
+<p>We&#39;ll call it <code>app</code> and we&#39;ll add all of our code artifacts to this one global object.</p>
+<p>We don&#39;t want to pollute the global namespace with anything else.
+So within each file we surround the code in an IIFE (&quot;Immediately Invoked Function Expression&quot;).</p>
+<div class="code-example"><header><h4>app/app.component.js (IIFE)</h4></header><code-example language="js" format="">(function(app) {
+})(window.app || (window.app = {}));
+</code-example></div><p>We pass the global <code>app</code> namespace object into the IIFE, 
+taking care to initialize it with an empty object if it doesn&#39;t yet exist.</p>
+<p>Most application files <em>export</em> one thing by adding that thing to the <code>app</code> namespace.
+Our <code>app.component.js</code> file exports the <code>AppComponent</code>.</p>
+<div class="code-example"><header><h4>app/app.component.js (export)</h4></header><code-example language="js" format="">app.AppComponent =
+</code-example></div><p>A more sophisticated application would have child components that descended from
+<code>AppComponent</code> in a visual tree. 
+A more sophisticated app would have more files and modules, at least as many as it had components.</p>
+<p>Quickstart isn&#39;t sophisticated; one component is all we need.
+Yet modules play a fundamental organizational role in even this small app.</p>
+<p>Modules rely on other modules. In JavaScript Angular apps, when we need something
+provided by another module, we get it from the <code>app</code> object. 
+When another module needs to refer to <code>AppComponent</code>, it gets it from the <code>app.AppComponent</code> like this:</p>
+<div class="code-example"><header><h4>app/app.module.js (import)</h4></header><code-example language="js" format="">declarations: [ app.AppComponent ],
+</code-example></div><p>Angular is also modular. It is a collection of library modules. 
+Each library is itself a module made up of several, related feature modules.</p>
+<p>When we need something from Angular, we use the <code>ng</code> object.</p>
+<h3 id="the-class-definition-object">The Class definition object</h3>
+<p>At the bottom of the file is an empty, do-nothing class definition object for 
+our <code>AppComponent</code> class.
+When we&#39;re ready to build a substantive application, 
+we can expand this object with properties and application logic. 
+Our <code>AppComponent</code> class has nothing but an empty constructor because we 
+don&#39;t need it to do anything in this QuickStart.</p>
+<div class="code-example"><header><h4>app.component.js (class)</h4></header><code-example language="js" format="">    .Class({
+      constructor: function() {}
+    });
+</code-example></div><h3 id="the-component-definition-object">The Component definition object</h3>
+<p><code>ng.core.Component()</code> tells Angular that this class definition object
+ <em>is an Angular component</em>.
+The configuration object passed to the <code>ng.core.Component()</code> method has two
+fields, a <code>selector</code> and a <code>template</code>.</p>
+<div class="code-example"><header><h4>app.component.js (component)</h4></header><code-example language="js" format="">    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1&gt;Hello Angular&lt;/h1&gt;&#39;
+    })
+</code-example></div><p>The <code>selector</code> specifies a simple CSS selector for a host HTML element named <code>my-app</code>.
+Angular creates and displays an instance of our <code>AppComponent</code>
+wherever it encounters a <code>my-app</code> element in the host HTML.</p>
+<div class="alert is-helpful"><p>Remember the <code>my-app</code> selector! We&#39;ll need that information when we write our <code>index.html</code></p>
+</div><p>The <code>template</code> property holds the component&#39;s companion template.
+A template is a form of HTML that tells Angular how to render a view.
+Our template is a single line of HTML announcing &quot;Hello Angular&quot;.</p>
+<p>Now we need something to tell Angular to load this component.</p>
+<h3 id="add-an-ngmodule">Add an NgModule</h3>
+<p>Angular apps are composed of <a href="guide/ngmodule.html">Angular Modules</a> that 
+snuggly contain all our components and everything else we need for our app.</p>
+<p>Create the <code>app/app.module.js</code> file with the following content:</p>
+<div class="code-example"><header><h4>app/app.module.js</h4></header><code-example language="js" format="linenums">(function(app) {
+  app.AppModule =
+    ng.core.NgModule({
+      imports: [ ng.platformBrowser.BrowserModule ],
+      declarations: [ app.AppComponent ],
+      bootstrap: [ app.AppComponent ]
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-example></div><div class="l-sub-section"><p>Read more about the <code>NgModule</code> configuration in the <a href="#ngmodule">appendix below</a>.</p>
+</div><h3 id="bootstrap-it-">Bootstrap it!</h3>
+<p>Add a new file , <code>main.js</code>, to the <code>app/</code> folder as follows:</p>
+<div class="code-example"><header><h4>app/main.js</h4></header><code-example language="js" format="">(function(app) {
+  document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+    ng.platformBrowserDynamic
+      .platformBrowserDynamic()
+      .bootstrapModule(app.AppModule);
+  });
+})(window.app || (window.app = {}));
+</code-example></div><p>We need two things to launch the application:</p>
+<ol>
+<li>Angular&#39;s <code>platformBrowserDynamic().bootstrapModule</code> function</li>
+<li>The application root module that we just wrote.</li>
+</ol>
+<p>We have them both in our &#39;namespaces&#39;. 
+Then we call <code>bootstrapModule</code>, passing in the <strong>root app module</strong>, <code>AppModule</code>.</p>
+<div class="l-sub-section"><p>Learn why we need <code>bootstrapModule</code> from <code>ng.platformBrowserDynamic</code>
+and why we create a separate js files in the <a href="#main">appendix below</a>.</p>
+</div><p>We&#39;ve asked Angular to launch the app in a browser with our component at the root.
+Where will Angular put it? </p>
+<div class="l-main-section"></div><h2 id="add-the-index-html-">Add the <code>index.html</code></h2>
+<p>Angular displays our application in a specific location on our <code>index.html</code>.
+It&#39;s time to create that file.</p>
+<p>We won&#39;t put our <code>index.html</code> in the <code>app/</code> folder. 
+We&#39;ll locate it <strong>up one level, in the project root folder</strong>.</p>
+<code-example format="">cd ..</code-example><p>Now create the<code>index.html</code> file and paste the following lines:</p>
+<div class="code-example"><header><h4>index.html</h4></header><code-example language="html" format="">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Angular QuickStart JS&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;!-- 1. Load libraries --&gt;
+    &lt;!-- IE required polyfill --&gt;
+    &lt;script src=&quot;node_modules/core-js/client/shim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/zone.js/dist/zone.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/reflect-metadata/Reflect.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/rxjs/bundles/Rx.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- 2. Load our &#39;modules&#39; --&gt;
+    &lt;script src=&#39;app/app.component.js&#39;&gt;&lt;/script&gt;
+    &lt;script src=&#39;app/app.module.js&#39;&gt;&lt;/script&gt;
+    &lt;script src=&#39;app/main.js&#39;&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+
+  &lt;!-- 3. Display the application --&gt;
+  &lt;body&gt;
+    &lt;my-app&gt;Loading...&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-example></div><p>There are three noteworthy sections of HTML:</p>
+<ol>
+<li><p>We load the JavaScript libraries we need; learn about them <a href="#libraries">below</a>.</p>
+</li>
+<li><p>We load our JavaScript files.</p>
+</li>
+<li><p>We add the <code>&lt;my-app&gt;</code> tag in the <code>&lt;body&gt;</code>. <strong>This is where our app lives!</strong></p>
+</li>
+</ol>
+<p>When Angular calls the <code>bootstrapModule</code> function in <code>main.js</code>,
+it reads the <code>AppModule</code> metadata, sees that <code>AppComponent</code> is the bootstrap component, 
+finds the <code>my-app</code> selector, locates an element tag named <code>my-app</code>,
+and renders our application&#39;s view between those tags.</p>
+<h3 id="add-some-style">Add some style</h3>
+<p>Styles aren&#39;t essential but they&#39;re nice, and <code>index.html</code> assumes we have
+a stylesheet called <code>styles.css</code>.</p>
+<p>Create a <code>styles.css</code> file in the <em>project root</em> folder and start styling, perhaps with the minimal
+styles shown below. For the full set of master styles used by the documentation samples,
+see <a href="https://github.com/angular/angular.io/blob/master/public/docs/_examples/_boilerplate/styles.css">styles.css</a>.</p>
+<div class="code-example"><header><h4>styles.css</h4></header><code-example language="css" format="">h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+body {
+  margin: 2em;
+}
+
+ /*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */
+</code-example></div><div class="l-main-section"></div><h2 id="run-">Run!</h2>
+<p>Open a terminal window and enter this command:</p>
+<code-example format="">npm start</code-example><p>That command runs a static server called <strong>lite-server</strong> that loads <code>index.html</code> in a browser
+and refreshes the browser when application files change.</p>
+<p>In a few moments, a browser tab should open and display</p>
+<figure class="image-display"><img src="../../../resources/images/devguide/quickstart/hello-angular.png" alt="Output of quickstart app"></figure><p>Congratulations!  We are in business.</p>
+<div class="alert is-helpful"><p>If you see <code>Loading...</code> displayed instead, see the
+<a href="#es6support">Browser ES2015 support appendix</a>.</p>
+</div><h3 id="make-some-changes">Make some changes</h3>
+<p>Try changing the message to &quot;Hello Angular 2!&quot;.</p>
+<p><code>lite-server</code> is watching, so it should detect the change,
+refresh the browser, and display the revised message.</p>
+<p>It&#39;s a nifty way to develop an application!</p>
+<p>We close the terminal window when we&#39;re done to terminate the server.</p>
+<div class="l-main-section"></div><h2 id="final-structure">Final structure</h2>
+<p>Our final project folder structure looks like this:</p>
+<div class="filetree"><div class="file">angular-quickstart</div><div class="children"><div class="file">node_modules</div><div class="file">app</div><div class="children"><div class="file">app.component.js</div><div class="file">app.module.js</div><div class="file">main.js</div></div><div class="file">index.html</div><div class="file">package.json</div><div class="file">styles.css</div></div></div><p>And here are the files:</p>
+<code-tabs><code-pane language="js" name="app/app.component.js" format="linenums">(function(app) {
+  app.AppComponent =
+    ng.core.Component({
+      selector: &#39;my-app&#39;,
+      template: &#39;&lt;h1&gt;Hello Angular&lt;/h1&gt;&#39;
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="js" name="app/app.module.js" format="linenums">(function(app) {
+  app.AppModule =
+    ng.core.NgModule({
+      imports: [ ng.platformBrowser.BrowserModule ],
+      declarations: [ app.AppComponent ],
+      bootstrap: [ app.AppComponent ]
+    })
+    .Class({
+      constructor: function() {}
+    });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="js" name="app/main.js" format="linenums">(function(app) {
+  document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+    ng.platformBrowserDynamic
+      .platformBrowserDynamic()
+      .bootstrapModule(app.AppModule);
+  });
+})(window.app || (window.app = {}));
+</code-pane><code-pane language="html" name="index.html" format="linenums">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Angular QuickStart JS&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+
+    &lt;!-- 1. Load libraries --&gt;
+    &lt;!-- IE required polyfill --&gt;
+    &lt;script src=&quot;node_modules/core-js/client/shim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/zone.js/dist/zone.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/reflect-metadata/Reflect.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/rxjs/bundles/Rx.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!-- 2. Load our &#39;modules&#39; --&gt;
+    &lt;script src=&#39;app/app.component.js&#39;&gt;&lt;/script&gt;
+    &lt;script src=&#39;app/app.module.js&#39;&gt;&lt;/script&gt;
+    &lt;script src=&#39;app/main.js&#39;&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+
+  &lt;!-- 3. Display the application --&gt;
+  &lt;body&gt;
+    &lt;my-app&gt;Loading...&lt;/my-app&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;
+</code-pane><code-pane language="json" name="package.json" format="linenums">{
+  &quot;name&quot;: &quot;angular-quickstart&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;npm run lite&quot;,
+    &quot;lite&quot;: &quot;lite-server&quot;
+  },
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;dependencies&quot;: {
+    &quot;@angular/common&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/compiler&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/core&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/forms&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/http&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/platform-browser&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/platform-browser-dynamic&quot;: &quot;~2.4.0&quot;,
+    &quot;@angular/router&quot;: &quot;~3.4.0&quot;,
+    &quot;@angular/upgrade&quot;: &quot;~2.4.0&quot;,
+
+    &quot;angular-in-memory-web-api&quot;: &quot;~0.1.16&quot;,
+    &quot;core-js&quot;: &quot;^2.4.1&quot;,
+    &quot;reflect-metadata&quot;: &quot;^0.1.8&quot;,
+    &quot;rxjs&quot;: &quot;5.0.1&quot;,
+    &quot;zone.js&quot;: &quot;^0.7.4&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;concurrently&quot;: &quot;^3.0.0&quot;,
+    &quot;lite-server&quot;: &quot;^2.2.2&quot;
+  }
+}
+</code-pane><code-pane language="css
+  " name="styles.css" format="linenums">h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+body {
+  margin: 2em;
+}
+
+ /*
+  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
+  * for the full set of master styles used by the documentation samples
+  */
+</code-pane></code-tabs><div class="l-main-section"></div><h2 id="wrap-up">Wrap Up</h2>
+<p>Our first application doesn&#39;t do much. It&#39;s basically &quot;Hello, World&quot; for Angular.</p>
+<p>We kept it simple in our first pass: we wrote a little Angular component,
+we added some JavaScript libraries to <code>index.html</code>, and launched with a
+static file server. That&#39;s about all we&#39;d expect to do for a &quot;Hello, World&quot; app.</p>
+<p><strong>We have greater ambitions.</strong></p>
+<p>The good news is that the overhead of setup is (mostly) behind us. 
+We&#39;ll probably only touch the <code>package.json</code> to update libraries.
+Besides adding in the script files for our app &#39;modules&#39;,
+we&#39;ll likely open <code>index.html</code> only if we need to add a library or some css stylesheets.</p>
+<p>We&#39;re about to take the next step and build a small application that 
+demonstrates the great things we can build with Angular.</p>
+<p>Join us on the <a href="tutorial/index.html">Tour of Heroes Tutorial</a>!</p>
+<div class="l-main-section"></div><h2 id="appendices">Appendices</h2>
+<p>The balance of this chapter is a set of appendices that
+elaborate some of the points we covered quickly above.</p>
+<p>There is no essential material here. Continued reading is for the curious.</p>
+<a id="ie-polyfills"></a>
+<a id="es6support"></a>
+<a id="libraries"></a><div class="l-main-section"></div><h3 id="appendix-libraries">Appendix: Libraries</h3>
+<p>We loaded the following scripts</p>
+<div class="code-example"><header><h4>index.html</h4></header><code-example language="html" format="">    &lt;!-- IE required polyfill --&gt;
+    &lt;script src=&quot;node_modules/core-js/client/shim.min.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/zone.js/dist/zone.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/reflect-metadata/Reflect.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script src=&quot;node_modules/rxjs/bundles/Rx.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/core/bundles/core.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/common/bundles/common.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/compiler/bundles/compiler.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser/bundles/platform-browser.umd.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js&quot;&gt;&lt;/script&gt;
+</code-example></div><p>We began with an Internet Explorer polyfill. 
+IE requires a polyfill to run
+an application that relies on ES2015 promises and dynamic module loading.
+Most applications need those capabilities and most applications
+should run in Internet Explorer.</p>
+<p>Next are the polyfills for Angular, <code>zone.js</code> and <code>Reflect.js</code>,
+followed by the Reactive Extensions RxJS library.</p>
+<div class="l-sub-section"><p>Our QuickStart doesn&#39;t use the Reactive Extensions 
+but any substantial application will want them
+when working with observables.
+We added the library here in QuickStart so we don&#39;t forget later.</p>
+</div><p>Finally, we loaded the web development version of Angular itself.</p>
+<p>We&#39;ll make different choices as we gain experience and
+become more concerned about production qualities such as
+load times and memory footprint.  </p>
+<div class="l-main-section"></div>
+<div class="l-main-section"></div><p><a id="package-json"></a></p>
+<h3 id="appendix-package-json">Appendix: package.json</h3>
+<p><a href="https://docs.npmjs.com/">npm</a> is a popular package manager and Angular application developers rely on it
+to acquire and manage the libraries their apps require.</p>
+<p>We specify the packages we need in an npm <a href="https://docs.npmjs.com/files/package.json">package.json</a> file.</p>
+<p>The Angular team suggests the packages listed in the <code>dependencies</code> and <code>devDependencies</code>
+sections listed in this file:</p>
+<div class="code-example"><header><h4>package.json (dependencies)</h4></header><code-example language="json" format=".">{
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "~2.4.0",
+    "angular-in-memory-web-api": "~0.1.16",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.0.0",
+    "lite-server": "^2.2.2"
+  }
+}</code-example></div><div class="l-sub-section"><p>There are other possible package choices. 
+We&#39;re recommending this particular set that we know work well together. 
+Play along with us for now. 
+Feel free to make substitutions later to suit your tastes and experience.</p>
+</div><p>A <code>package.json</code> has an optional <strong>scripts</strong> section where we can define helpful
+commands to perform development and build tasks. 
+We&#39;ve included a number of such scripts in our suggested <code>package.json</code>:</p>
+<div class="code-example"><header><h4>package.json (scripts)</h4></header><code-example language="json" format=".">{
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server"
+  }
+}</code-example></div><p>We&#39;ve seen how we can run the server with this command:</p>
+<code-example format="">npm start</code-example><p>We are using the special <code>npm start</code> command, but all it does is run <code>npm run lite</code>.</p>
+<p>We execute npm scripts in that manner: <code>npm run</code> + <em>script-name</em>. Here&#39;s what these scripts do:</p>
+<ul>
+<li><code>npm run lite</code> - run the <a href="https://www.npmjs.com/package/lite-server">lite-server</a>, 
+a light-weight, static file server, written and maintained by <a href="http://johnpapa.net/">John Papa</a> 
+with excellent support for Angular apps that use routing.</li>
+</ul>
+<div class="l-main-section"></div><p><a id="npm-errors"></a></p>
+<h3 id="appendix-npm-errors-and-warnings">Appendix: npm errors and warnings</h3>
+<p>All is well if there are no console messages starting with <code>npm ERR!</code> <em>at the end</em> of <strong>npm install</strong>. 
+There might be a few <code>npm WARN</code> messages along the way &mdash; and that is perfectly fine.</p>
+<p>We often see an <code>npm WARN</code> message after a series of <code>gyp ERR!</code> messages. 
+Ignore them. A package may try to re-compile itself using <code>node-gyp</code>.
+If the re-compile fails, the package recovers (typically with a pre-built version)
+and everything works.</p>
+<p>Just make sure there are no <code>npm ERR!</code> messages at the very end of <code>npm install</code>.</p>
+<div class="l-main-section"></div><p><a id="ngmodule"></a></p>
+<h3 id="appendix-ngmodule-">Appendix: <strong><em>NgModule</em></strong></h3>
+<p>The <code>NgModule</code> decorator is listing:</p>
+<ol>
+<li>What other Angular Modules ours uses</li>
+<li>Which components and directives we declare in our components</li>
+<li>The component to bootstrap at the start </li>
+</ol>
+<p>We import our lone <code>app.AppComponent</code> and add it to both <code>declarations</code> and <code>bootstrap</code> array.</p>
+<p>Notice that we also add <code>ng.platformBrowser.BrowserModule</code> to the <code>imports</code> array. 
+This is the Angular Module that contains all the needed Angular bits and pieces to run our app in the browser.</p>
+<p>Angular itself is split into separate Angular Modules so we only need to import the ones we really use.</p>
+<p>One of the most common ones is <code>FormsModule</code>, and soon we&#39;ll also see <code>RouterModule</code> and <code>HttpModule</code>. </p>
+<div class="l-main-section"></div><p><a id="main"></a></p>
+<h3 id="appendix-main-js-">Appendix: <strong><em>main.js</em></strong></h3>
+<h4 id="bootstrapping-is-platform-specific">Bootstrapping is platform-specific</h4>
+<p>We use the <code>platformBrowserDynamic().bootstrapModule</code> function from <code>ng.platformBrowserDynamic</code>,
+not <code>ng.core</code>. There&#39;s a good reason.</p>
+<p>We only call &quot;core&quot; those capabilities that are the same across all platform targets.
+True, most Angular applications run only in a browser and we&#39;ll call the bootstrap function from
+this library most of the time. It&#39;s pretty &quot;core&quot; if we&#39;re always writing for a browser.</p>
+<p>But it is possible to load a component in a different environment. 
+We might load it on a mobile device with <a href="https://cordova.apache.org/">Apache Cordova</a> or <a href="https://www.nativescript.org/">NativeScript</a>.
+We might wish to render the first page of our application on the server 
+to improve launch performance or facilitate 
+<a href="http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf">SEO</a>.</p>
+<p>These targets require a different kind of bootstrap function that we&#39;d import from a different library.</p>
+<h4 id="why-do-we-create-a-separate-main-js-app-module-js-and-app-component-js-files-">Why do we create a separate <strong><em>main.js</em></strong>, <strong><em>app.module.js</em></strong> and <strong><em>app.component.js</em></strong> files?</h4>
+<p>The <em>main.js</em> file is tiny. This is just a QuickStart.
+We could have folded its few lines into the <code>app.module.js</code> file, and that one into
+<code>app.component.js</code> and spared ourselves some complexity.</p>
+<p>We didn&#39;t for what we believe to be good reasons:</p>
+<ol>
+<li>Doing it right is easy</li>
+<li>Testability</li>
+<li>Reusability</li>
+<li>Separation of concerns</li>
+<li>We learned about import and export</li>
+</ol>
+<h4 id="it-s-easy">It&#39;s easy</h4>
+<p>Sure it&#39;s an extra step and an extra file. How hard is that in the scheme of things?</p>
+<p>We&#39;ll see that a separate <code>main.js</code> and <code>app.module.js</code> is beneficial for <em>most</em> apps 
+even if it isn&#39;t critical for the QuickStart.
+Let&#39;s develop good habits now while the cost is low.</p>
+<h4 id="testability">Testability</h4>
+<p>We should be thinking about testability from the beginning
+even if we know we&#39;ll never test the QuickStart. </p>
+<p>It is difficult to unit test a component when there is a call to <code>bootstrapModule</code> in the same file.
+As soon as we load the component file to test the component, 
+the <code>bootstrapModule</code> function tries to load the application in the browser.
+It throws an error because we&#39;re not expecting to run the entire application, 
+just test the component. </p>
+<p>Relocating the <code>bootstrapModule</code> function to <code>main.js</code> eliminates this spurious error
+and leaves us with a clean component module file.</p>
+<h4 id="reusability">Reusability</h4>
+<p>We refactor, rename, and relocate files as our application evolves.
+We can&#39;t do any of those things while the file calls <code>bootstrapModule</code>.
+we can&#39;t move it. 
+We can&#39;t reuse the component in another application. 
+We can&#39;t pre-render the component on the server for better performance.</p>
+<h4 id="separation-of-concerns">Separation of concerns</h4>
+<p>A component&#39;s responsibility is to present and manage a view, and a NgModule&#39;s
+reponsibility is to define the application context.</p>
+<p>Launching the application has nothing to do with any of these.
+That&#39;s a separate concern. The friction we&#39;re encountering in testing and reuse
+stems from this unnecessary mix of responsibilities.</p>
+<h4 id="import-export">Import/Export</h4>
+<p>While writing a separate <code>main.js</code> and <code>app.module.js</code> files we learned an essential Angular skill:
+how to &#39;export&#39; from one &#39;module&#39; and &#39;import&#39; into another via our simple
+namespace abstraction. 
+We&#39;ll do a lot of that as we learn more Angular.</p></article><div data-swiftype-index="false" class="main-footer"><nav class="background-midnight grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="https://angular.io/about/">About</a></li><li><a href="https://angular.io/resources/#Education">Books & Training</a></li><li><a href="https://angular.io/resources/">Tools & Libraries</a></li><li><a href="https://angular.io/resources/">Community</a></li><li><a href="https://angular.io/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="https://angular.io/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="https://angular.io/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-midnight"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="https://angular.io/license">MIT-style License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="styleguide.html" title="Style Guide" class="styleguide-trigger"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="../../../resources/js/vendor/prettify.js"></script><script src="../../../resources/js/vendor/lang-basic.js"></script><script src="../../../resources/js/vendor/lang-dart.js"></script><script src="../../../resources/js/vendor/lodash.js"></script><script src="../../../resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-animate.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-aria.min.js"></script><script src="../../../../ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="../../../../cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="../../../../cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="../../../resources/js/site.js"></script><script src="../../../resources/js/util.js"></script><script src="../../../resources/js/controllers/app-controller.js"></script><script src="../../../resources/js/controllers/resources-controller.js"></script><script src="../../../resources/js/directives/cheatsheet.js"></script><script src="../../../resources/js/directives/api-list.js"></script><script src="../../../resources/js/directives/bio.js"></script><script src="../../../resources/js/directives/bold.js"></script><script src="../../../resources/js/directives/announcement-bar.js"></script><script src="../../../resources/js/directives/code.js"></script><script src="../../../resources/js/directives/copy.js"></script><script src="../../../resources/js/directives/code-tabs.js"></script><script src="../../../resources/js/directives/code-pane.js"></script><script src="../../../resources/js/directives/code-example.js"></script><script src="../../../resources/js/directives/if-docs.js"></script><script src="../../../resources/js/directives/live-example.js"></script><script src="../../../resources/js/directives/ngio-ex-path.js"></script><script src="../../../resources/js/directives/scroll-y-offset-element.js"></script><script>window.onload = function() { setTimeout(function() {document.body.className = document.body.className+" dash-loaded"; if(location.hash) { setTimeout(function() {document.getElementsByName(location.hash.substring(1))[0].scrollIntoView()}, 1); }}, 10);  }</script></body>
+<!-- Mirrored from angular.io/docs/js/latest/quickstart.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Jan 2017 12:05:17 GMT -->
+</html>

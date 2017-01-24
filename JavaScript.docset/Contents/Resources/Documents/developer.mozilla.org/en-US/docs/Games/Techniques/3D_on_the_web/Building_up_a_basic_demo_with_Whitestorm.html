@@ -1,0 +1,994 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 23:04:57 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Building up a basic demo with Whitestorm.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+      
+        <link rel="stylesheet" type="text/css" href="https://developer.mozilla.org/en-US/docs/Games$styles">
+      
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$json">
+  <link rel="canonical" href="Building_up_a_basic_demo_with_Whitestorm.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Building up a basic demo with Whitestorm.js">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js">
+  <meta name="twitter:title" content="Building up a basic demo with Whitestorm.js">
+  
+  <meta property="og:description" content="Whitestorm.js is a framework built on the top of Three.js technology, enhanced by features such as a built-in Physics engine — a modified Physi.js that acts as a wrapper around Ammo.js (Bullet Physics ported to JavaScript) with usage of web-workers technology — and a plugin system providing useful modularity. In this article we show how you can get started with Whitestorm.js.">
+  <meta name="description" content="Whitestorm.js is a framework built on the top of Three.js technology, enhanced by features such as a built-in Physics engine — a modified Physi.js that acts as a wrapper around Ammo.js (Bullet Physics ported to JavaScript) with usage of web-workers technology — and a plugin system providing useful modularity. In this article we show how you can get started with Whitestorm.js.">
+  <meta name="twitter:description" content="Whitestorm.js is a framework built on the top of Three.js technology, enhanced by features such as a built-in Physics engine — a modified Physi.js that acts as a wrapper around Ammo.js (Bullet Physics ported to JavaScript) with usage of web-workers technology — and a plugin system providing useful modularity. In this article we show how you can get started with Whitestorm.js.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js" contextmenu="edit-history-menu" data-search-url="" class="document zone ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="../../../../../users/github/login/indexb6a1.html?next=%2Fen-US%2Fdocs%2FGames%2FTechniques%2F3D_on_the_web%2FBuilding_up_a_basic_demo_with_Whitestorm.js" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="../../../../../../bugzilla.mozilla.org/form08e1.html?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+  
+      
+        <div class="zone-article-header" id="document-main"><div class="center">
+          <!-- zone title -->
+          <div class="zone-title"><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></div>
+          <!-- zone image -->
+          <div class="zone-image"></div>
+        </div></div>
+      
+
+     <!-- end is_zone -->
+
+    <div class="wiki-main-content"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Games" rel="v:url" property="v:title">Game development</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques" rel="v:url" property="v:title">Techniques for game development</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web" rel="v:url" property="v:title">3D games on the Web</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Building up a basic demo with Whitestorm.js</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/ScottKbka" title="View profile: ScottKbka">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="ScottKbka" data-src="../../../../../../secure.gravatar.com/avatar/cf3d27369d6da01dc7331711d9903d7f6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">ScottKbka</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="../../../../../../secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/sasha240100" title="View profile: sasha240100">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="sasha240100" data-src="../../../../../../secure.gravatar.com/avatar/e3afb495402b7c64563ca063ddaca8a86c02.png?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">sasha240100</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>Building up a basic demo with Whitestorm.js</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Environment_setup" rel="internal">Environment setup</a><ol><li><a href="#Node" rel="internal">Node</a></li><li><a href="#Bower" rel="internal">Bower</a></li><li><a href="#Manual" rel="internal">Manual</a></li></ol></li><li><a href="#Creating_a_basic_Whitestorm_app" rel="internal">Creating a basic Whitestorm app</a><ol><li><a href="#Getting_started" rel="internal">Getting started</a></li><li><a href="#Creating_a_world" rel="internal">Creating a world</a></li><li><a href="#Creating_a_sphere" rel="internal">Creating a sphere</a></li><li><a href="#Adding_a_cube" rel="internal">Adding a cube</a></li><li><a href="#Adding_a_light_source" rel="internal">Adding a light source</a></li><li><a href="#Making_things_happen" rel="internal">Making things happen</a></li></ol></li><li><a href="#Components_plugins" rel="internal">Components &amp; plugins</a></li><li><a href="#Playground" rel="internal">Playground</a></li><li><a href="#Conclusion" rel="internal">Conclusion</a></li><li><a href="#See_also" rel="internal">See also</a></li><li><a href="#Tutorials" rel="internal">Tutorials</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p class="summary"><a href="http://whitestormjs.xyz/" class="external">Whitestorm.js</a> is a framework built on the top of&nbsp;<a href="Building_up_a_basic_demo_with_Three.html">Three.js</a>&nbsp;technology, enhanced by features such as a built-in Physics engine — a modified&nbsp;<a href="http://chandlerprall.github.io/Physijs/" class="external">Physi.js</a> that acts as a wrapper around&nbsp;<a href="https://github.com/kripken/ammo.js/" class="external">Ammo.js</a>&nbsp;(Bullet Physics ported to JavaScript) with usage of web-workers technology — and a&nbsp; <a href="https://github.com/WhitestormJS/generator-whs-plugin" class="external">plugin system</a> providing useful modularity. In this article we show how you can get started with Whitestorm.js.</p>
+
+<p><a href="http://whitestormjs.xyz/" class="external"><img src="https://camo.githubusercontent.com/5e38fd133cffcd074aef767d3ea2ad2ab54eea7e/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4372696245412d58674141753777772e6a70673a6c61726765" style="height: 931px; width: 1891px;" alt=""></a></p>
+
+<h2 id="Environment_setup">Environment setup</h2>
+
+<p>Whitestorm.js can be used in Node applications, and included in client-side projects either manually or as a bower component.&nbsp; Let's look at how we can do this.</p>
+
+<h3 id="Node">Node</h3>
+
+<ol>
+ <li>Run&nbsp;<code>npm install whitestormjs</code>.</li>
+ <li>Import the <strong>whitetormjs</strong>&nbsp;module to your app and start using it, as demonstrated below:</li>
+</ol>
+
+<pre class="brush: js">import * as WHS from 'whitestormjs';
+
+const world = new WHS.World({
+  background: {
+    color: 0xDDDDDD
+  }
+});
+
+// ...</pre>
+
+<h3 id="Bower">Bower</h3>
+
+<ol>
+ <li>Run&nbsp;<code>bower install whitestormjs</code></li>
+ <li>Include&nbsp;<strong>whitetormjs</strong> in your app as follows:</li>
+</ol>
+
+<pre class="brush: html">&lt;script src="bower_components/whitestormjs/build/whitestorm.js"&gt;&lt;/script&gt;</pre>
+
+<h3 id="Manual">Manual</h3>
+
+<ol>
+ <li>Make a copy of the <a href="../../../../../../cdn.rawgit.com/WhitestormJS/whitestorm.js/9ae51f4b18a80e4dc31a1f9a2e0f6f742bdf7d95/build/whitestorm.js" class="external">WhitestormJS</a>&nbsp;library file in your app directory.</li>
+ <li>Include a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" title="The &lt;script&gt; element (or HTML Script Element&nbsp;) is used to embed or reference an executable script within an HTML or XHTML document."><code>&lt;script&gt;</code></a> element in your HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" title="The HTML &lt;head&gt; element provides general information (metadata) about the document, including its title and links to its&nbsp;scripts and style sheets."><code>&lt;head&gt;</code></a> (or after your <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" title="The HTML &lt;body&gt; Element represents the content of an HTML&nbsp;document. There can be only one &lt;body&gt; element in a document."><code>&lt;body&gt;</code></a>) to apply the Whitestorm JavaScript to your HTML:</li>
+</ol>
+
+<pre class="brush: html">&lt;script src="{path_to_lib}/whitestorm.js"&gt;&lt;/script&gt;</pre>
+
+<h2 id="Creating_a_basic_Whitestorm_app">Creating a basic Whitestorm app</h2>
+
+<p>Let's look at how we can create a quick sample Whitestorm app.</p>
+
+<h3 id="Getting_started">Getting started</h3>
+
+<ol>
+ <li>Create a new <code>index.html</code> file in a new directory. Use our <a href="https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html" class="external">simple template</a> if you don't already have one handy.</li>
+ <li>Remove any content that you might already have inside your document body (like the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p" title="The HTML &lt;p&gt; element (or HTML Paragraph Element) represents a paragraph of text."><code>&lt;p&gt;</code></a> element in our template above.)</li>
+ <li>Follow the <a href="#Manual">Manual</a> insrtructions above to apply the Whitestorm library to your HTML.</li>
+ <li>Create a new <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script" title="The &lt;script&gt; element (or HTML Script Element&nbsp;) is used to embed or reference an executable script within an HTML or XHTML document."><code>&lt;script&gt;</code></a> element just below the existing one, in which to write your app code.</li>
+</ol>
+
+<h3 id="Creating_a_world">Creating a world</h3>
+
+<p>Whitestorm has a global <code>WHS</code> object that stores all of its functionality. To start off with making a whitestorm app you need to create a <code>WHS.World</code> object, which represents the app's 3D scene. This allows you to set parameters of the scene like camera position and gravity, and it also processes any other objects added to the world (like spheres, for example — objects inside the scene can be considered children of the <code>WHS.World</code> object).</p>
+
+<p>Add the following code inside your second <code>&lt;script&gt;</code> element:</p>
+
+<pre class="brush: js">const world = new WHS.World({
+  stats: "fps",
+  autoresize: "window", // Call autoresize when app window is resized.
+
+  gravity: {
+    x: 0,
+    y: -5,
+    z: 0
+  },
+
+  camera: {
+    z: 50
+  },
+
+  container: document.body
+});</pre>
+
+<p>The members set inside this object are as follows:</p>
+
+<ol>
+ <li><code>stats</code>: Declares whether you want to display stats while your app is running. Options are <code>"fps"</code> (frames per second), <code>"ms"</code> (milliseconds elapsed), <code>"mb"</code> (megabytes downloaded), or boolean <code>false</code> if not required (which is also the default). Note that you'll see two stats boxes, one for the scene rendering and one for the physics engine.</li>
+ <li><code>autoresize</code>: Declares whether you want the Whitestorm app <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas" title="The HTML &lt;canvas&gt; Element can be used to draw graphics via scripting (usually JavaScript). For example, it can be used to draw graphs, make photo compositions or even perform animations. You may (and should) provide alternate content inside the &lt;canvas&gt; block. That content will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled."><code>&lt;canvas&gt;</code></a> to resize when the browser window is resized (<code>"window"</code>), when its container is resized (<code>"container"</code>), or not at all (boolean <code>false</code>, which is the default).</li>
+ <li><code>gravity</code>: Sets what gravity you want to act on objects in the scene, in the <code>x</code>, <code>y</code>, and <code>z</code> directions. The default is 0 in all directions.</li>
+ <li><code>camera</code>: Sets the position and other properties of the camera that will be viewing the scene.</li>
+ <li><code>container</code>: Sets the HTML DOM object that the Whitestorm app's <code>&lt;canvas&gt;</code> will be appended inside on the page. The default is <code>document.body</code>.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: See the Whitestorm reference for <a href="http://whitestormjs.xyz/?javascript#world" class="external">more information on WHS.World</a> features.</p>
+</div>
+
+<h3 id="Creating_a_sphere">Creating a sphere</h3>
+
+<p>Whitestorm has available a number of primitives available for creating common shapes in the world, which mostly act as wrappers around Three.js primitives. <code>WHS.Sphere</code> for example is analogous to Three's&nbsp;<code>THREE.SphereGeometry</code>, and is based on&nbsp;<code>WHS.Shape</code> — a class that wraps the Three API for working with meshes.</p>
+
+<p>Let's create one now. Add the following below your previous code addition:</p>
+
+<pre class="brush: js">const sphere = new WHS.Sphere({ // Create sphere object.
+  geometry: { // Create a THREE.SphereGeometry(3)
+    radius: 10,
+    widthSegments: 32,
+&nbsp;&nbsp;&nbsp; heightSegments: 32
+  },
+
+  mass: 10, // Mass of physical object.
+
+  material: { // Material
+    color: 0xff0000,
+    kind: 'phong' // THREE.MeshBasicMaterial
+  },
+
+  pos: { // Position vector.
+    x: 0,
+    y: 10,
+    z: 0
+  }
+});</pre>
+
+<p>Here we are specifying:</p>
+
+<ol>
+ <li><code>geometry</code>: Sets geometry information about the object; in this case we need to specify a radius for the sphere, plus the number of width and height segments for the sphere, which basically dictate how smooth the curvature will be (a higher number means smoother but also more expensive to render, and vice versa). 32 gives you a nice smooth curve.</li>
+ <li><code>mass</code>: Sets the relative mass of the object, which will for example have an effect on gravity's pull on the object.</li>
+ <li><code>material</code>: Sets the type of material we want to cover the surface of the object with. Here we are specifying <code>"phong"</code>, a kind of shiny material that allows us to see the shape of our object easily.</li>
+ <li><code>pos</code>: Sets the initial position of the object on the scene, as an <code>x</code>, <code>y</code>, <code>z</code> position vector.</li>
+</ol>
+
+<div class="note">
+<p><strong>Note</strong>: See the <a href="http://whitestormjs.xyz/?javascript#sphere" class="external">Whitestorm sphere documentation</a> for more information.</p>
+</div>
+
+<h3 id="Adding_a_cube">Adding a cube</h3>
+
+<p>Having one shape on the scene is a bit boring, so let's add a cube (box) as well. The <code>Box</code> object is analogous to the <code>THREE.BoxGeometry</code> primitive. Put the following code below your existing code:</p>
+
+<pre class="brush: js">const cube = new WHS.Box({
+  geometry: {
+    width: 10,
+    height: 10,
+    depth: 10
+  },
+
+  mass: 0,
+
+  material: {
+    kind: 'phong',
+    color: 0x0095DD
+  },
+
+  pos: {
+    x: -20,
+    y: 10,
+    z: 0
+  },
+
+  rot: {
+    x: 0.75,
+    y: 1
+  }
+});</pre>
+
+<p>The <code>Box</code> primitive works in a very similar way to the <code>Sphere</code> primitive — you can see familiar features above such as <code>geometry</code> (here we are providing a <code>width</code>, <code>height</code>, and <code>depth</code>, not a <code>radius</code>), <code>mass</code> (we've given it 0 so it isn't affected by gravity), <code>material</code>, and <code>pos</code>. There is a new feature here — <code>rot</code>, which specifies how much rotation to give the object around the different axes.</p>
+
+<div class="note">
+<p><strong>Note</strong>: See the <a href="http://whitestormjs.xyz/?javascript#box" class="external">Whitestorm box documentation</a> for more information.</p>
+</div>
+
+<h3 id="Adding_a_light_source">Adding a light source</h3>
+
+<p>At this point, we still won't be able to make out an awful lot because our world has no light. To do this, Whitestorm provides simple objects for adding light sources (see the <a href="http://whitestormjs.xyz/?javascript#ambient" class="external">light reference</a>). To add a directional light, add the following tothe bottom of your code:</p>
+
+<pre class="brush: js">const light = new WHS.DirectionalLight( {
+  light: {
+    color: 0xffffff,
+    intensity: 2
+  },
+
+  pos: {
+    x: 0,
+    y: 0,
+    z: 50
+  }
+});</pre>
+
+<p>First of all, we specify the base color of the light and its intensity, inside the <code>light</code> property. Second, we need to specify a position vaue, inside the <code>pos</code> property. This behaves a bit differently in this context, as it doesn't specify a single point for the light — instead, it specifies a direction for the light to travel in. This light is a solid sheet of light rays all travelling in the same direction, kind of like the sun. In this case, our "sunlight" is travelling from <code>(0,0,50)</code> to <code>(0,0,0)</code>.</p>
+
+<h3 id="Making_things_happen">Making things happen</h3>
+
+<p>Nothing will happen yet; you still need to add your sphere, cube, and light to the world, and start the app rendering. The following four lines will do this — add them to the scene now:</p>
+
+<pre class="brush: js">sphere.addTo(world); // Add Sphere to world.
+cube.addTo(world); // Add cube to the world.
+light.addTo(world); // Add light to the world.
+world.start(); // Start animations and physics simulation.
+</pre>
+
+<p>And that should be it — try saving and refeshing your code now, and you should see something like the following (with the ball moving down the screen due to the gravity in the <code>y</code> direction):</p>
+
+<p><img src="../../../../../../mdn.mozillademos.org/files/13993/whitestorm.png" style="display: block; margin: 0 auto;" alt=""></p>
+
+<div class="note">
+<p><strong>Note</strong>: You can check out the finished <a href="https://github.com/mdn/whitestorm-demo/tree/master" class="external">source code</a> for this demo on GitHub (see it <a href="https://mdn.github.io/whitestorm-demo/" class="external">running live</a> also).</p>
+</div>
+
+<h2 id="Components_plugins">Components &amp; plugins</h2>
+
+<p>Almost every whitestorm.js class is a component. Box, Sphere, Tetrahedron — all these are basic components, analogous to simple Three.js geometries.</p>
+
+<p>Adding custom components is possible, and very welcome. To develop your own plugin/component you have to follow these instructions:</p>
+
+<ol>
+ <li>Make a new repository</li>
+ <li>Install&nbsp;<a href="http://yeoman.io/" class="external">Yeoman</a> using <code>npm install -g yo</code></li>
+ <li>Install the <a href="https://github.com/WhitestormJS/generator-whs-plugin" class="external">Whitestorm.js plugin generator</a> using <code>npm install -g generator-whs-plugin</code></li>
+ <li>Run&nbsp;<code>yo whs-plugin</code> to generate a new Whitestorm plugin template</li>
+ <li>Edit the files in&nbsp;<code>src</code> for your needs. You will see already defined plugin source there; just change it as you want.</li>
+</ol>
+
+<h2 id="Playground">Playground</h2>
+
+<p>the <a href="http://whitestormjs.xyz/playground/" class="external">Whitestorm Playground</a> allows you to create a basic whitestorm app without downloading WhitestormJS or setting up a project — ideal for experimentation or learning. You can also share your app with others by clicking the “share” button and then you can share it on Twitter or Facebook, or just copy it to your clipboard.</p>
+
+<p><a href="http://whitestormjs.xyz/playground/?example=saturn&amp;dir=demo" class="external"><img src="https://camo.githubusercontent.com/9f4ad1d95ab33555db869e085a653761c291c8b3/68747470733a2f2f63646e2e706272642e636f2f696d616765732f356e6f57364d7a45532e706e67" alt=""></a></p>
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>The Whitestorm.js framework is suitable for developing complex 3D browser games that rely on calculating object collisions, and other such physics emulations. Its flexibility allows you to use its API without the parts you don't need — for example you can create games and other apps that don't need physics simulation using <code><a href="../../../../../../cdn.rawgit.com/WhitestormJS/whitestorm.js/9ae51f4b18a80e4dc31a1f9a2e0f6f742bdf7d95/build/whitestorm.light.js" class="external">whitestorm.light.js</a></code>, which doesn't include any of the physics code, so is much more lightweight than <code>whitestorm.js.</code></p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="http://whitestormjs.xyz/" class="external">WhitestormJS website / API</a></li>
+ <li><a href="https://github.com/WhitestormJS/whitestorm.js" class="external">Github</a>&nbsp;(Feel free to contribute)</li>
+ <li><a href="http://whitestormjs.xyz/playground/" class="external">Playground</a></li>
+ <li><a href="https://github.com/WhitestormJS/test-whitestorm-webpack" class="external">Test of using whitestorm.js with webpack</a></li>
+</ul>
+
+<h2 id="Tutorials">Tutorials</h2>
+
+<ul>
+ <li><a href="https://medium.com/whitestormjs-framework/developing-a-street-basketball-game-part-i-getting-workflow-ready-f4f6968e4d10#.iw8ionj09" class="external">Developing a street basketball game. Part I: Getting workflow ready</a></li>
+ <li><a href="https://medium.com/whitestormjs-framework/developing-a-street-basketball-game-part-ll-throw-a-ball-into-a-basket-261f123d6e9c#.5266ogrvj" class="external">Developing a street basketball game. Part ll: Throw a ball into a basket.</a></li>
+ <li><a href="https://medium.com/whitestormjs-framework/developing-a-street-basketball-game-part-lll-level-selecting-and-stats-b076747b13b3#.pincbpdwo" class="external">Developing a street basketball game. Part lll: Level selecting and stats</a></li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/3D">3D</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Advanced">Advanced</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Animation">Animation</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Beginner">Beginner</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Canvas">Canvas</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Games">Games</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Graphic">Graphic</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/JavaScript">JavaScript</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/physics">physics</a></li>
+      
+        <li><a href="../../../tag/three.html">three.js</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Tutori">Tutori</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/WebGL">WebGL</a></li>
+      
+        <li><a href="../../../tag/whitestorm.html">whitestorm.js</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/ScottKbka">ScottKbka</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/sasha240100">sasha240100</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/ScottKbka">ScottKbka</a>,
+                      <time datetime="2016-11-12T17:41:45-08:00">Nov 12, 2016, 5:41:45 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+                  <!-- zone subnav -->
+                  
+  <nav class="zone-subnav-container" role="navigation">
+    <div class="subnav" id="Subnav">
+      
+
+<ol>
+ <li><a href="#">Introduction</a>
+
+  <ol>
+   <li><a title="An introduction to the technologies useful for game developers and how to get started developing games using Web technologies. This article also looks at the business case for why it makes sense to create games for the Web" href="https://developer.mozilla.org/en-US/docs/Games/Introduction">Introduction to game development for the Web</a></li>
+   <li><a title="What is a video game, really? There are certain parts that are common between games (even if it doesn't seem like it). This article looks to explain concepts like main loops in a completely general context. When it does focus, it does so toward web standards." href="https://developer.mozilla.org/en-US/docs/Games/Anatomy">Anatomy of a video game</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Examples">Examples</a></li>
+  </ol>
+ </li>
+ <li><a href="#">APIs for game development</a>
+  <ol>
+   <li><a href="../../../Web/API/Canvas_API.html">Canvas</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+   <li><a href="../../../../Apps/Fundamentals/User_notifications/Full_screen_api.html">Full Screen</a></li>
+   <li><a href="../../../Web/API/Gamepad_API.html">Gamepad</a></li>
+   <li><a href="../../../Web/API/IndexedDB_API.html">IndexedDB</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+   <li><a href="../../../Web/API/Pointer_Lock_API.html">Pointer Lock</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a></li>
+   <li><a href="../../../Web/JavaScript/Reference/Global_Objects/TypedArray.html">Typed Arrays</a></li>
+   <li><a href="../../../Web/API/Web_Audio_API.html">Web Audio</a></li>
+   <li><a href="../../../Web/API/WebGL_API.html">WebGL</a></li>
+   <li><a href="../../../Web/API/WebRTC_API.html">WebRTC</a></li>
+   <li><a href="../../../Web/API/WebSockets_API.html">Web Sockets</a></li>
+   <li><a href="../../../Web/API/WebVR_API.html">WebVR</a></li>
+   <li><a href="../../../Web/API/Web_Workers_API.html">Web Workers</a></li>
+   <li><a href="../../../Web/API/XMLHttpRequest.html">XmlHttpRequest</a></li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques">Techniques</a>
+  <ol>
+   <li><a title="Especially when creating medium to large-sized games, async scripts are an essential technique to take advantage of, so that your game's JavaScript can be compiled off the main thread and be cached for future game running" href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Async_scripts">Using async scripts for asm.js</a></li>
+   <li><a title="How to make sure your game starts up quickly, smoothly, and without appearing to lock up the user's browser or device." href="https://developer.mozilla.org/en-US/docs/Apps/Developing/Optimizing_startup_performance">Optimizing startup performance</a></li>
+   <li><a title="In addition to providing support for audio and video communication, WebRTC lets you set up peer-to-peer data channels to exchange text or binary data actively between your players." href="https://developer.mozilla.org/en-US/docs/Games/Techniques/WebRTC_data_channels">Using WebRTC peer-to-peer data channels</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Efficient_animation_for_web_games">Efficient animation for web games</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web">3D games on the Web</a>
+    <ol>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web">3D games on the Web overview</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">Explaining basic 3D theory</a></li>
+     <li><a href="Building_up_a_basic_demo_with_Three.html">Building up a basic demo with Three.js</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas">Building up a basic demo with PlayCanvas</a></li>
+     <li><a href="Building_up_a_basic_demo_with_Whitestorm.html">Building up a basic demo with Whitestorm.js</a></li>
+     <li>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/WebVR">WebVR</a></p>
+     </li>
+    </ol>
+   </li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Audio_for_Web_Games">Audio for Web Games</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection">2D collision detection</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection">3D collision detection</a>
+    <ol>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection">3D collision detection overview</a></li>
+     <li><a href="../3D_collision_detection/Bounding_volume_collision_detection_with_THREE.html">Bounding volume collision detection with THREE.js</a></li>
+    </ol>
+   </li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps">Tiles and tilemaps</a>
+    <ol>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps">Tiles and tilemaps overview</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps">Static maps</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Scrolling_maps">Scrolling maps</a></li>
+    </ol>
+   </li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms">Implementing game control mechanisms</a>
+    <ol>
+     <li><strong><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms">Game control mechanisms overview</a></strong></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch">Mobile touch controls</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">Desktop mouse and keyboard controls</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_gamepad">Desktop gamepad controls</a></li>
+     <li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/Control_mechanisms/Other">Unconventional controls</a></li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials">Tutorials</a>
+  <ol>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">2D breakout game using pure JavaScript</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser">2D breakout game using Phaser</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation">2D maze game with device orientation</a></li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games">Publishing games</a>
+  <ol>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games">Publishing games overview</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_distribution">Game distribution</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_promotion">Game promotion</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Games/Publishing_games/Game_monetization">Game monetization</a></li>
+  </ol>
+ </li>
+</ol>
+    </div>
+  </nav>&nbsp;
+                
+
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Whitestorm.js by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 23:04:59 GMT -->
+</body></html>

@@ -1,0 +1,1083 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:26:51 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>browserAction</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$json">
+  <link rel="canonical" href="browserAction.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="browserAction">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction">
+  <meta name="twitter:title" content="browserAction">
+  
+  <meta property="og:description" content="Add a clickable button to the browser's toolbar. You can associate&nbsp;a popup with the button. Just like a normal web page,&nbsp;popup is specified using HTML, CSS and JavaScript.&nbsp;JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.">
+  <meta name="description" content="Add a clickable button to the browser's toolbar. You can associate&nbsp;a popup with the button. Just like a normal web page,&nbsp;popup is specified using HTML, CSS and JavaScript.&nbsp;JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.">
+  <meta name="twitter:description" content="Add a clickable button to the browser's toolbar. You can associate&nbsp;a popup with the button. Just like a normal web page,&nbsp;popup is specified using HTML, CSS and JavaScript.&nbsp;JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="User:bram/Add-ons/WebExtensions/API/browserAction" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FUser%3Abram%2FAdd-ons%2FWebExtensions%2FAPI%2FbrowserAction" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../../../Web/API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/User%3Abram/Add-ons/WebExtensions/API/browserAction">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/User:bram" rel="v:url" property="v:title">User:bram</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons" rel="v:url" property="v:title">Add-ons</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions" rel="v:url" property="v:title">WebExtensions</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../API.html" rel="v:url" property="v:title">JavaScript APIs</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">browserAction</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="../../../../../profiles/PushpitaPikuDey.html" title="View profile: PushpitaPikuDey">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="PushpitaPikuDey" data-src="../../../../../../../secure.gravatar.com/avatar/f4b22e727bb1b32bf1957c666d72874d6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">PushpitaPikuDey</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/bram" title="View profile: bram">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="bram" data-src="../../../../../../../secure.gravatar.com/avatar/518f41bf518bab305a2dda020ac6a82e6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">bram</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>browserAction</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#Styleguide" rel="internal">Styleguide</a></li><li><a href="#Example_add-ons" rel="internal">Example add-ons</a></li><li><a href="#Types" rel="internal">Types</a></li><li><a href="#Functions" rel="internal">Functions</a></li><li><a href="#Events" rel="internal">Events</a></li><li><a href="#Browser_compatibility" rel="internal">Browser compatibility</a></li><li><a href="#Subnav" rel="internal">Subnav</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs a technical review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/HowTo/Do_a_technical_review">How you can help.</a>
+                    </p>
+                  </div>
+                
+                
+                  <div class="warning warning-review">
+                    <p>
+                      This article needs an editorial review. <a href="https://developer.mozilla.org/docs/MDN/Contribute/Howto/Do_an_editorial_review">How you can help.</a>
+                    </p>
+                  </div>
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p>Add a clickable button to the browser's toolbar. You can associate&nbsp;a popup with the button. Just like a normal web page,&nbsp;popup is specified using HTML, CSS and JavaScript.&nbsp;JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts.</p>
+
+<p>If you specify a popup, it will be shown, and the content will be loaded, when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.</p>
+
+<p>You can define most of a browser action's properties declaratively using the <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> key in manifest.json, but can also redefine them programmatically using this API.</p>
+
+<p>See also the section on browser actions in <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">Anatomy of a WebExtension</a>.</p>
+
+<h2 id="Styleguide">Styleguide</h2>
+
+<p>Use browser actions to put a button in the main Mozilla Firefox toolbar. Per default this button will be placed to the right of the address bar. However, the user is free to move this button to multiple locations in the browser.</p>
+
+<h3 id="Button">Button</h3>
+
+<p>A browser action button is represented by one icon. Its states are defined by Firefox and will be adapted to match the operating system. Besides those states a button can be highlighted to indicate important events.</p>
+
+<p>Do not use additional indicators to show that the button opens a panel instead of performing an action. As most buttons open panels, having an additional indicator with each will only clutter the interface.</p>
+
+<h4 id="Icon">Icon</h4>
+
+<p>The icon should be clear and distinguishable in one color. To keep a clean appearance within Firefox and match individual OSs we will color the svg provided in the same color as other toolbar icons. The icon should be 16×16px outline svg (see example).</p>
+
+<p>To clearly identify your add-on, make sure to design an icon that is unique to your add-on.</p>
+
+<p>If the user moves the button to other locations the icon will be scaled accordingly.</p>
+
+<h5 id="Sizes">Sizes</h5>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>URL Bar</td>
+   <td>12×12 px</td>
+  </tr>
+  <tr>
+   <td>Toolbar</td>
+   <td>16×16 px</td>
+  </tr>
+  <tr>
+   <td>Menu Panel</td>
+   <td>32×32 px</td>
+  </tr>
+  <tr>
+   <td>Display Icon</td>
+   <td>64×64 px</td>
+  </tr>
+ </tbody>
+</table>
+
+<h4 id="States">States</h4>
+
+<p>Browser actions as other buttons have different appearances indicating their state.</p>
+
+<h5 id="enabled">enabled</h5>
+
+<p>Basic state of a button if it’s function is available.</p>
+
+<h5 id="disabled">disabled</h5>
+
+<p>Basic state of a button if it’s function is not available.</p>
+
+<p>Should not be needed on a browserAction as they should work all the time. If it does not, consider if it should rather be a page action.</p>
+
+<h5 id="highlighted_(unique_to_Firefox)">highlighted (unique to Firefox)</h5>
+
+<p>To indicate an important active state of a browser action you can set it to be highlighted. This will color the icon blue until the state is resolved.</p>
+
+<p>Can only be used if the icon is provided as an .svg</p>
+
+<h4 id="Locations">Locations</h4>
+
+<p>A browser action by default is placed in the toolbar to the right of the address bar. The user can however move it to any other location in the toolbar, the bookmark toolbar, the tab-bar, or the menu panel.</p>
+
+<p>In the menu panel the content specified to be displayed in the popup will be displayed in a sub-panel of the menu. Prepare your add-on to deal with the changed appearance if placed in the menu panel.</p>
+
+<h3 id="Tooltip">Tooltip</h3>
+
+<p>Users should be able to understand what will happen when they click the button. Therefore the tooltip should describe what the button does by clearly stating the action that will be performed on click.</p>
+
+<p>e.g. Do not just put the name of the add-on in the tooltip! Unless it is very descriptive of the action the button will perform.</p>
+
+<p>Do also not use the tooltip for any other form of information like elaborate statistics of your add-on. Keep it simple so that the users can easily understand what will happen if they click the button.</p>
+
+<h3 id="Badge">Badge</h3>
+
+<p>Use sparingly to inform users about important events. Do not use them to provide status constantly.</p>
+
+<p>The text can be up to 4 characters and will not extend beyond the borders of the button.</p>
+
+<p>We recommend using one of 3 states provided for different severity of notifications:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td>Casual</td>
+   <td>2EA3FF to #0996F8 (blue gradient)</td>
+  </tr>
+  <tr>
+   <td>Warning</td>
+   <td>#EE4B36 to #D92215 (red gradient)</td>
+  </tr>
+  <tr>
+   <td>Update</td>
+   <td>#70CF5B to #57BD35 (green gradient)</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>For compatibility with Chrome/Opera we will also support free color selection, recommend however usage of Firefox defaults to keep consistency.</p>
+
+<h3 id="Panel">Panel</h3>
+
+<p>Do use panels if your browser action provides the user with multiple actions or displays another form of content on request. To best integrate with Firefox make sure to align the content of the panel with our recommended styles.</p>
+
+<p>More info on how to build your panel can be found in Style Guide - Components - Panels.</p>
+
+<h3 id="Context_Menu">Context Menu</h3>
+
+<p>Do not block or replace the context menu. If necessary extend the context menu with functions needed for your add-on. Users should be able to find the same functionality they have learned to expect. For the context menu this is used control over features and their placement.</p>
+
+<p>e.g. add quick access to your add-ons options, add an alternative action to the default on-click actionz</p>
+
+<h3 id="Tips">Tips</h3>
+
+<p>For the best visual impact, follow these guidelines:</p>
+
+<ul>
+ <li>Do use browser actions for features that make sense on most pages.</li>
+ <li>Don't use browser actions for features that make sense for only a few pages.</li>
+ <li>Use page actions instead.</li>
+ <li>Do use svg icons that blend well with the other icons in Firefox.</li>
+</ul>
+
+<p></p><h2 id="Example_add-ons">Example add-ons</h2><ul><li><a href="https://github.com/mdn/webextensions-examples/tree/master/bookmark-it" class="external">Bookmark it!</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/favourite-colour" class="external">favourite-colour</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui" class="external">inpage-toolbar-ui</a></li><li><a href="https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button" class="external">open-my-page-button</a></li></ul><p></p>
+
+<h2 id="Types">Types</h2>
+
+<dl>
+ <dt><a title="An array of integers. An array of four integers in the range 0-255 defining an RGBA color. For example, opaque red is [255, 0, 0, 255]." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/ColorArray-2.html"><code>browserAction.ColorArray</code></a></dt>
+ <dd>An array of four integers in the range 0-255 defining an RGBA color.</dd>
+ <dt><a title="Pixel data for an image. Must be an ImageData object (for example, from a canvas element)." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/ImageDataType-2.html"><code>browserAction.ImageDataType</code></a></dt>
+ <dd>Pixel data for an image. Must be an <code><a href="../../../../Web/API/ImageData.html">ImageData</a></code> object (for example, from a <code>canvas</code> element).</dd>
+</dl>
+
+<h2 id="Functions">Functions</h2>
+
+<dl>
+ <dt><a title="Sets the browser action's title. This will be displayed in a tooltip." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/setTitle-2.html"><code>browserAction.setTitle()</code></a></dt>
+ <dd>Sets the browser action's title. This will be displayed in a tooltip.</dd>
+ <dt><a title="Gets the browser action's title." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/getTitle-2.html"><code>browserAction.getTitle()</code></a></dt>
+ <dd>Gets the browser action's title.</dd>
+ <dt><a title="Sets the icon for the browser action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the path or the imageData property must be specified." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/setIcon-2.html"><code>browserAction.setIcon()</code></a></dt>
+ <dd>Sets the browser action's icon.</dd>
+ <dt><a title="Sets the HTML document that will be opened as a popup when the user clicks on the browser action's icon." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/setPopup-2.html"><code>browserAction.setPopup()</code></a></dt>
+ <dd>Sets the HTML document to be opened as a popup when the user clicks on the browser action's icon.</dd>
+ <dt><a title="Gets the HTML document set as the popup for this browser action." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/getPopup-2.html"><code>browserAction.getPopup()</code></a></dt>
+ <dd>Gets the HTML document set as the browser action's popup.</dd>
+ <dt><a title="Sets the badge text for the browser action. The badge is displayed on top of the icon." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/setBadgeText-2.html"><code>browserAction.setBadgeText()</code></a></dt>
+ <dd>Sets the browser action's badge text. The badge is displayed on top of the icon.</dd>
+ <dt><a title="Gets the browser action's badge text." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/getBadgeText-2.html"><code>browserAction.getBadgeText()</code></a></dt>
+ <dd>Gets the browser action's badge text.</dd>
+ <dt><a title="Sets the background color for the badge." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/setBadgeBackgroundColor-2.html"><code>browserAction.setBadgeBackgroundColor()</code></a></dt>
+ <dd>Sets the badge's background color.</dd>
+ <dt><a title="Gets the background color of the browser action's badge." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/getBadgeBackgroundColor-2.html"><code>browserAction.getBadgeBackgroundColor()</code></a></dt>
+ <dd>Gets the badge's background color.</dd>
+ <dt><a title="Enables the browser action for a tab. By default, browser actions are enabled." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/enable-2.html"><code>browserAction.enable()</code></a></dt>
+ <dd>Enables the browser action for a tab. By default, browser actions are enabled.</dd>
+ <dt><a title="Disables the browser action for a tab." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/disable-2.html"><code>browserAction.disable()</code></a></dt>
+ <dd>Disables the browser action for a tab.</dd>
+ <dt><a title="Opens the extension popup window in the active window but does not grant tab permissions." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/openPopup-2.html"><code>browserAction.openPopup()</code></a></dt>
+ <dd>Opens the extension popup window in the active window but does not grant tab permissions.</dd>
+</dl>
+
+<h2 id="Events">Events</h2>
+
+<dl>
+ <dt><a title="Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup." href="../../../../../Add-ons/WebExtensions/API/BrowserAction/onClicked-2.html"><code>browserAction.onClicked</code></a></dt>
+ <dd>Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.</dd>
+</dl>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p></p><table class="webext-summary-compat-table">
+  <thead>
+    <tr>
+      <th style="width: 40%;" colspan="1"></th>
+      <th style="width: 48%;" colspan="4">Desktop</th>
+      <th style="width: 12%;" colspan="1">Mobile</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Edge</th>
+      <th>Firefox</th>
+      <th>Chrome</th>
+      <th>Opera</th>
+      <th>Firefox</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/ColorArray.html"><code>ColorArray</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/ImageDataType.html"><code>ImageDataType</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/disable.html"><code>disable</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/enable.html"><code>enable</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/getBadgeBackgroundColor.html"><code>getBadgeBackgroundColor</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/getBadgeText.html"><code>getBadgeText</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/getPopup.html"><code>getPopup</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/getTitle.html"><code>getTitle</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/onClicked.html"><code>onClicked</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/openPopup.html"><code>openPopup</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor.html"><code>setBadgeBackgroundColor</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/setBadgeText.html"><code>setBadgeText</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/setIcon.html"><code>setIcon</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/setPopup.html"><code>setPopup</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+    <tr>
+      <td><a href="../../../../../Add-ons/WebExtensions/API/browserAction/setTitle.html"><code>setTitle</code></a></td>
+      <td class="unknown-support">?</td>
+      <td class="full-support">45.0</td>
+      <td class="full-support">Yes</td>
+      <td class="full-support">33</td>
+      <td class="no-support">No</td>
+    </tr>
+  </tbody>
+</table><p></p>
+
+<div class="hidden note">
+<p>The "Chrome incompatibilities" section is included from <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities"> https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a> using the <a href="https://developer.mozilla.org/en-US/docs/Template:WebExtChromeCompat">WebExtChromeCompat</a> macro.</p>
+
+<p>If you need to update this content, edit <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities">https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities</a>, then shift-refresh this page to see your changes.</p>
+</div>
+
+<p></p><h3 id="Chrome_incompatibilities">Chrome incompatibilities</h3>
+
+<ul><li>Firefox does not support:
+  <ul><li><code>openPopup()</code></li>
+  </ul></li>
+</ul><p></p>
+
+<div class="note"><strong>Acknowledgements</strong>
+
+<p>This API is based on Chromium's <a href="https://developer.chrome.com/extensions/browserAction" class="external"><code>chrome.browserAction</code></a> API. This documentation is derived from <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json" class="external"><code>browser_action.json</code></a> in the Chromium code.</p>
+</div>
+
+<div class="hidden">
+<pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</pre>
+</div>
+
+<!-- -->
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="../../../../../profiles/PushpitaPikuDey.html">PushpitaPikuDey</a>, 
+    
+        <a href="https://developer.mozilla.org/en-US/profiles/bram">bram</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="../../../../../profiles/PushpitaPikuDey.html">PushpitaPikuDey</a>,
+                      <time datetime="2016-06-08T02:36:07-07:00">Jun 8, 2016, 2:36:07 AM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+                  <!-- zone subnav -->
+                  
+  <nav class="zone-subnav-container" role="navigation">
+    <div class="subnav" id="Subnav">
+      
+
+<ol>
+ <li><a href="https://wiki.mozilla.org/Add-ons/developer/communication">Upcoming changes</a></li>
+ <li><a style="color: #333;">WebExtensions</a>
+  <ol>
+   <li><a>Getting Started</a>
+    <ol>
+     <li><a href="https://developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions">Introduction</a></li>
+     <li><a>Your First WebExtensions</a></li>
+     <li><a>Your Second WebExtensions</a></li>
+     <li><a>Packaging and Installation</a></li>
+     <li><a>Anatomy of a WebExtension</a></li>
+     <li><a>Content Scripts</a></li>
+     <li><a>Debugging</a></li>
+    </ol>
+   </li>
+   <li><a>Guides</a>
+    <ol>
+     <li><a>Using the JavaScript APIs</a></li>
+     <li><a>Porting from Google Chrome</a></li>
+     <li><a>Internationalization</a></li>
+     <li><a>Security Practices</a></li>
+     <li><a>UX style guide</a></li>
+    </ol>
+   </li>
+   <li><a>EXAMPLES</a></li>
+   <li><a>References and APIs</a>
+    <ol>
+     <li><a href="../API.html">JavaScript APIs</a>
+      <ol>
+       <li><a>alarms</a></li>
+       <li><a>bookmarks</a></li>
+       <li><a href="browserAction.html">browserAction</a>
+        <ol>
+         <li><a>Methods</a>
+          <ol>
+           <li><a>disable() </a></li>
+           <li><a>enable()</a></li>
+           <li><a>getBadgeBackgroundColor()</a></li>
+           <li><a>getBadgeText()</a></li>
+           <li><a>getPopup()</a></li>
+           <li><a>getTitle()</a></li>
+           <li><a>openPopup()</a></li>
+           <li><a>setBadgeBackgroundColor()</a></li>
+           <li><a>setBadgeText()</a></li>
+           <li><a>setIcon()</a></li>
+           <li><a>setPopup()</a></li>
+           <li><a>setTitle()</a></li>
+          </ol>
+         </li>
+         <li><a>Types</a>
+          <ol>
+           <li><a>ColorArray</a></li>
+           <li><a>ImageDataType</a></li>
+          </ol>
+         </li>
+         <li><a>Events</a>
+          <ol>
+           <li><a>onClicked</a></li>
+          </ol>
+         </li>
+        </ol>
+       </li>
+       <li><a>contextMenus</a></li>
+       <li><a>cookies</a></li>
+       <li><a>downloads</a></li>
+       <li><a>events</a></li>
+       <li><a>extension</a></li>
+       <li><a>extensionTypes</a></li>
+       <li><a>i18n</a></li>
+       <li><a>idle</a></li>
+       <li><a>notifications</a></li>
+       <li><a>pageAction</a></li>
+       <li><a>runtime</a></li>
+       <li><a>storage</a></li>
+       <li><a>tabs</a></li>
+       <li><a>webNavigation</a></li>
+       <li><a>webRequest</a></li>
+       <li><a>windows</a></li>
+      </ol>
+     </li>
+     <li><a>Manifest Keys</a></li>
+     <li><a>Match Patterns</a></li>
+     <li><a>Chrome incompatibilities</a></li>
+    </ol>
+   </li>
+  </ol>
+ </li>
+ <li><a>Add-on SDK</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Marketplace/Publishing">Distribution</a></li>
+ <li><a>Other Add-ons</a></li>
+ <li><a>Help</a></li>
+</ol>
+    </div>
+  </nav>&nbsp;
+                
+
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/User:bram/Add-ons/WebExtensions/API/browserAction by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 20:26:59 GMT -->
+</body></html>

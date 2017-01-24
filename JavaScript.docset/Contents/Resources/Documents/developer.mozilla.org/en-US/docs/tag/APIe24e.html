@@ -1,4 +1,4 @@
-<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=35 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:55 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=35 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:22 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -12,30 +12,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
-  <link rel="home" href="https://developer.mozilla.org/en-US/">
-  <link rel="copyright" href="#copyright">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
 
   
     
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.593f20d8c365.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
 
     
   
-    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.13dd9abdfb62.css" rel="stylesheet" type="text/css">
+    <link href="../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
 
+    <!-- common social tags -->
     
-
-  <!-- common social tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
   
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta property="og:site_name" content="Mozilla Developer Network">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
-  <meta name="twitter:site" content="@MozDevNet">
-  <meta name="twitter:creator" content="@MozDevNet">
-
-  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
 
   <!-- third-generation iPad with high-resolution Retina display: -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
@@ -76,10 +75,10 @@
         
             (function(){
   var FLAGS = {
-    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': true
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
     },
     SWITCHES = {
-    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
     },
     SAMPLES = {
     
@@ -129,8 +128,8 @@
             // Assets that need to be dynamically injected
             assets_disabled: {
                 css: {
-                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.3d79df72080d.css',],
-                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
                 },
                 js: {
                     'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
@@ -146,9 +145,7 @@
   <ul id="nav-access">
     <li><a href="#content" id="skip-main">Skip to main content</a></li>
     <li><a id="skip-language" href="#language">Select language</a></li>
-    
-      <li><a href="#q" id="skip-search">Skip to search</a></li>
-    
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
   </ul>
 
   <!-- Header -->
@@ -165,34 +162,20 @@
     <div id="nav-sec">
         
                   <ul>
-                  <li>
-
+                  <li><div class="login">
     
-
-    <form>
-      <div class="oauth-login-container">
-          <div class="oauth-login-options" tabindex="0">
-              <span class="oauth-login-options-text">
-                Sign in
-              </span>
-              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D35" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
-              <span class="oauth-icon oauth-persona launch-persona-login wait-for-persona disabled" data-service="Persona" data-next="/en-US/docs/tag/API?page=35" title="Persona"><i class="icon-user" aria-hidden="true"></i></span>
-          </div>
-          <div class="oauth-login-picker" aria-hidden="true">
-              <ul>
-                  <li class="wait-for-persona disabled"><a href="https://developer.mozilla.org/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/docs/tag/API?page=35" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a></li>
-                  <li><a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D35" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a></li>
-              </ul>
-              
-          </div>
-      </div>
-    </form>
-</li>
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2Ftag%2FAPI%3Fpage%3D35" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
                 </ul>
         
     </div>
 
-    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
 
         <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
           <div class="submenu-column">
@@ -202,18 +185,20 @@
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
               <li><a href="../Web/API.html">APIs / DOM</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
             </ul>
           </div><div class="submenu-column last">
             <div class="title">References &amp; Guides</div>
             <ul>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
               <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
             </ul>
           </div>
@@ -224,10 +209,7 @@
           <div class="submenu-column">
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox">Firefox</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Firefox_OS">Firefox OS</a></li>
-              <li><a href="https://developer.mozilla.org/en-US/docs/Persona">Persona</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +223,8 @@
             </ul>
             <ul>
               <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
-              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/tag/API%3Fpage%3D35">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,7 +294,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -323,706 +305,706 @@
   
   </ol>
 
-        <p>Found 3965 documents</p>
+        <p>Found 4384 documents</p>
         <ul class="document-list">
           
             <li>
-              <a href="../Web/API/UIEvent/pageY.html">Web/API/UIEvent/pageY</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onmessage.html">Web/API/ServiceWorkerGlobalScope/onmessage</a>
                 
-                  <small>The UIEvent.pageY read-only property returns the vertical coordinate of the event relative to the ...</small>
+                  <small>The ServiceWorkerGlobalScope.onmessage event of the ServiceWorkerGlobalScope interface is called ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UIEvent/sourceCapabilities.html">Web/API/UIEvent/sourceCapabilities</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onnotificationclick.html">Web/API/ServiceWorkerGlobalScope/onnotificationclick</a>
                 
-                  <small>The UIEvent.sourceCapabilities read-only property returns an instance of the ...</small>
+                  <small>The ServiceWorkerGlobalScope.onnotificationclick property is an event handler called whenever ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UIEvent/UIEvent.html">Web/API/UIEvent/UIEvent</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onnotificationclose.html">Web/API/ServiceWorkerGlobalScope/onnotificationclose</a>
                 
-                  <small>The UIEvent() constructor creates a new UIEvent.</small>
+                  <small>The ServiceWorkerGlobalScope.onnotificationclose property is an event handler called whenever ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UIEvent/view.html">Web/API/UIEvent/view</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onpush.html">Web/API/ServiceWorkerGlobalScope/onpush</a>
                 
-                  <small>The UIEvent.view read-only property returns the WindowProxy object from which the event was ...</small>
+                  <small>The ServiceWorkerGlobalScope.onpush event of the ServiceWorkerGlobalScope interface is fired ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URL.html">Web/API/URL</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange.html">Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange</a>
                 
-                  <small>The URL interface represent an object providing static methods used for creating object URLs.</small>
+                  <small>The ServiceWorkerGlobalScope.onpushsubscriptionchange event of the ServiceWorkerGlobalScope ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URL/createObjectURL.html">Web/API/URL/createObjectURL</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/registration.html">Web/API/ServiceWorkerGlobalScope/registration</a>
                 
-                  <small>The URL.createObjectURL() static method creates a DOMString containing an URL representing the ...</small>
+                  <small>The registration read-only property of the ServiceWorkerGlobalScope interface returns a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URL/revokeObjectURL.html">Web/API/URL/revokeObjectURL</a>
+              <a href="../Web/API/ServiceWorkerGlobalScope/skipWaiting.html">Web/API/ServiceWorkerGlobalScope/skipWaiting</a>
                 
-                  <small>The URL.revokeObjectURL() static method releases an existing object URL which was previously ...</small>
+                  <small>The ServiceWorkerGlobalScope.skipWaiting() method of the ServiceWorkerGlobalScope forces the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URL/URL.html">Web/API/URL/URL</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent.html">Web/API/ServiceWorkerMessageEvent</a>
                 
-                  <small>The URL() constructor returns a newly created URL object representing the URL defined by the ...</small>
+                  <small>The ServiceWorkerMessageEvent interface of the ServiceWorker API contains information about an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams.html">Web/API/URLSearchParams</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/data.html">Web/API/ServiceWorkerMessageEvent/data</a>
                 
-                  <small>The URLSearchParams interface defines utility methods to work with the query string of a URL.</small>
+                  <small>The data read-only property of the ServiceWorkerMessageEvent interface returns the event's data. ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/append.html">Web/API/URLSearchParams/append</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/lastEventId.html">Web/API/ServiceWorkerMessageEvent/lastEventId</a>
                 
-                  <small>The append() method of the URLSearchParams interface appends&nbsp;a specified key/value pair as a new ...</small>
+                  <small>The lastEventID read-only property of the ServiceWorkerMessageEvent interface represents, in ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/delete.html">Web/API/URLSearchParams/delete</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/origin.html">Web/API/ServiceWorkerMessageEvent/origin</a>
                 
-                  <small>The delete() method of the URLSearchParams interface deletes the given search parameter&nbsp;and its ...</small>
+                  <small>The origin read-only property of the ServiceWorkerMessageEvent interface returns the origin of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/entries.html">Web/API/URLSearchParams/entries</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/ports.html">Web/API/ServiceWorkerMessageEvent/ports</a>
                 
-                  <small>The URLSearchParams.entries() method returns an iterator allowing to go through all key/value pairs ...</small>
+                  <small>The ports read-only property of the ServiceWorkerMessageEvent interface returns an array of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/get.html">Web/API/URLSearchParams/get</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent.html">Web/API/ServiceWorkerMessageEvent/ServiceWorkerMessageEvent</a>
                 
-                  <small>The get() method of the URLSearchParams interface returns the first value associated to the given ...</small>
+                  <small>The ServiceWorkerMessageEvent() constructor creates a new ServiceWorkerMessageEvent object instance.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/getAll.html">Web/API/URLSearchParams/getAll</a>
+              <a href="../Web/API/ServiceWorkerMessageEvent/source.html">Web/API/ServiceWorkerMessageEvent/source</a>
                 
-                  <small>The getAll() method of the URLSearchParams interface returns all the values associated&nbsp;with a given ...</small>
+                  <small>The source read-only property of the ServiceWorkerMessageEvent returns a reference to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/has.html">Web/API/URLSearchParams/has</a>
+              <a href="../Web/API/ServiceWorkerRegistration.html">Web/API/ServiceWorkerRegistration</a>
                 
-                  <small>The has() method of the URLSearchParams interface returns a Boolean that indicates whether a ...</small>
+                  <small>The ServiceWorkerRegistration interface of the ServiceWorker API represents the service worker ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/keys.html">Web/API/URLSearchParams/keys</a>
+              <a href="../Web/API/ServiceWorkerRegistration/active.html">Web/API/ServiceWorkerRegistration/active</a>
                 
-                  <small>The URLSearchParams.keys() method returns an iterator allowing to go through all keys contained in ...</small>
+                  <small>The active property of the ServiceWorkerRegistration interface returns a service worker whose ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/set.html">Web/API/URLSearchParams/set</a>
+              <a href="../Web/API/ServiceWorkerRegistration/getNotifications.html">Web/API/ServiceWorkerRegistration/getNotifications</a>
                 
-                  <small>The set() method of the URLSearchParams interface sets the value associated with a given search ...</small>
+                  <small>The getNotifications() method of the ServiceWorkerRegistration interface returns a list of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/toString.html">Web/API/URLSearchParams/toString</a>
+              <a href="../Web/API/ServiceWorkerRegistration/installing.html">Web/API/ServiceWorkerRegistration/installing</a>
                 
-                  <small>The toString() method of the URLSearchParams interface returns a string containg a query string ...</small>
+                  <small>The installing property of the ServiceWorkerRegistration interface returns a service worker ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/URLSearchParams.html">Web/API/URLSearchParams/URLSearchParams</a>
+              <a href="../Web/API/ServiceWorkerRegistration/onupdatefound.html">Web/API/ServiceWorkerRegistration/onupdatefound</a>
                 
-                  <small>The URLSearchParams() constructor creates and returns a new URLSearchParams object.</small>
+                  <small>The onupdatefound property of the ServiceWorkerRegistration interface is an EventListener ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLSearchParams/values.html">Web/API/URLSearchParams/values</a>
+              <a href="../Web/API/ServiceWorkerRegistration/periodicSync.html">Web/API/ServiceWorkerRegistration/periodicSync</a>
                 
-                  <small>The URLSearchParams.values() method returns an iterator allowing to go through all values contained ...</small>
+                  <small>The periodicSync read-only property of the ServiceWorkerRegistration interface returns a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly.html">Web/API/URLUtilsReadOnly</a>
+              <a href="../Web/API/ServiceWorkerRegistration/pushManager.html">Web/API/ServiceWorkerRegistration/pushManager</a>
                 
-                  <small>The URLUtilsReadOnly interface defines utility methods to work with URLs. It defines only ...</small>
+                  <small>The pushManager property of the ServiceWorkerRegistration interface returns a reference to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/hash.html">Web/API/URLUtilsReadOnly/hash</a>
+              <a href="../Web/API/ServiceWorkerRegistration/scope.html">Web/API/ServiceWorkerRegistration/scope</a>
                 
-                  <small>The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the ...</small>
+                  <small>The scope read-only property of the ServiceWorkerRegistration interface returns a unique ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/host.html">Web/API/URLUtilsReadOnly/host</a>
+              <a href="../Web/API/ServiceWorkerRegistration/showNotification.html">Web/API/ServiceWorkerRegistration/showNotification</a>
                 
-                  <small>The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the ...</small>
+                  <small>The showNotification() method of the ServiceWorkerRegistration interface creates a notification ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/hostname.html">Web/API/URLUtilsReadOnly/hostname</a>
+              <a href="../Web/API/ServiceWorkerRegistration/sync.html">Web/API/ServiceWorkerRegistration/sync</a>
                 
-                  <small>The URLUtilsReadOnly.hostname read-only property returns a DOMString containing the domain of the ...</small>
+                  <small>The sync property of the ServiceWorkerRegistration interface returns a reference to the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/href.html">Web/API/URLUtilsReadOnly/href</a>
+              <a href="../Web/API/ServiceWorkerRegistration/unregister.html">Web/API/ServiceWorkerRegistration/unregister</a>
                 
-                  <small>The URLUtilsReadOnly.href read-only property returns a DOMString containing the whole URL.</small>
+                  <small>The unregister method of the ServiceWorkerRegistration interface unregisters the service worker ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/origin.html">Web/API/URLUtilsReadOnly/origin</a>
+              <a href="../Web/API/ServiceWorkerRegistration/update.html">Web/API/ServiceWorkerRegistration/update</a>
                 
-                  <small>The URLUtilsReadOnly.origin read-only property is a DOMString containing the Unicode serialization ...</small>
+                  <small>The update method of the ServiceWorkerRegistration interface attempts to update the&nbsp;service ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/pathname.html">Web/API/URLUtilsReadOnly/pathname</a>
+              <a href="../Web/API/ServiceWorkerRegistration/waiting.html">Web/API/ServiceWorkerRegistration/waiting</a>
                 
-                  <small>The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' ...</small>
+                  <small>The waiting property of the ServiceWorkerRegistration interface returns a service worker whose ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/port.html">Web/API/URLUtilsReadOnly/port</a>
+              <a href="../Web/API/Service_Worker_API.html">Web/API/Service_Worker_API</a>
                 
-                  <small>The URLUtilsReadOnly.port read-only property returns a DOMString containing the port number of the ...</small>
+                  <small>A service worker is an event-driven worker registered against an origin and a path. It takes the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/protocol.html">Web/API/URLUtilsReadOnly/protocol</a>
+              <a href="../Web/API/ShadowRoot.html">Web/API/ShadowRoot</a>
                 
-                  <small>The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme ...</small>
+                  <small>The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/search.html">Web/API/URLUtilsReadOnly/search</a>
+              <a href="../Web/API/ShadowRoot/host.html">Web/API/ShadowRoot/host</a>
                 
-                  <small>The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the ...</small>
+                  <small>The host read-only property of the ShadowRoot returns the&nbsp;DOM element to which the ShadowRoot is ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/URLUtilsReadOnly/toString.html">Web/API/URLUtilsReadOnly/toString</a>
+              <a href="../Web/API/ShadowRoot/innerHTML.html">Web/API/ShadowRoot/innerHTML</a>
                 
-                  <small>The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It ...</small>
+                  <small>The innerHTML property of the ShadowRoot interface sets or returns the&nbsp;DOM tree inside the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UserDataHandler.html">Web/API/UserDataHandler</a>
+              <a href="../Web/API/SharedKeyframeList.html">Web/API/SharedKeyframeList</a>
                 
-                  <small>When associating user data with a key on a node, Node.setUserData () can also accept, in its third ...</small>
+                  <small>The SharedKeyframeList interface&nbsp;of the Web Animations API represents a sequence of keyframes ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UserProximityEvent.html">Web/API/UserProximityEvent</a>
+              <a href="../Web/API/SharedKeyframeList/SharedKeyframeList.html">Web/API/SharedKeyframeList/SharedKeyframeList</a>
                 
-                  <small>The UserProximityEvent indicates whether a nearby physical object is present by using the proximity ...</small>
+                  <small>The SharedKeyframeList() constructor of the SharedKeyframeList interface&nbsp;creates a new ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/UserProximityEvent/near.html">Web/API/UserProximityEvent/near</a>
+              <a href="../Web/API/SharedWorker.html">Web/API/SharedWorker</a>
                 
-                  <small>The near property tell if there is an object close to the device (true) or not (false).</small>
+                  <small>The SharedWorker interface represents a specific kind of worker that can be accessed from ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/Using_the_Browser_API.html">Web/API/Using_the_Browser_API</a>
+              <a href="../Web/API/SharedWorker/port.html">Web/API/SharedWorker/port</a>
                 
-                  <small>The HTML Browser API is an extension of the HTML iframe element that allows web apps to implement ...</small>
+                  <small>The port property of the SharedWorker interface returns a MessagePort object used to communicate ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/USVString.html">Web/API/USVString</a>
+              <a href="../Web/API/SharedWorker/SharedWorker.html">Web/API/SharedWorker/SharedWorker</a>
                 
-                  <small>USVString corresponds to the set of all possible sequences of unicode scalar values. USVString maps ...</small>
+                  <small>The SharedWorker() constructor creates a SharedWorker object that executes the script at the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/ValidityState.html">Web/API/ValidityState</a>
+              <a href="../Web/API/SharedWorkerGlobalScope.html">Web/API/SharedWorkerGlobalScope</a>
                 
-                  <small>The ValidityState interface represents the validity states that an element can be in, with respect ...</small>
+                  <small>The SharedWorkerGlobalScope object (the SharedWorker global scope) is accessible through the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/ValidityState/badInput.html">Web/API/ValidityState/badInput</a>
+              <a href="../Web/API/SharedWorkerGlobalScope/applicationCache.html">Web/API/SharedWorkerGlobalScope/applicationCache</a>
                 
-                  <small>The read-only property ValidityState.badInput indicates if the user has provided input that the ...</small>
+                  <small>The applicationCache read-only property of the SharedWorkerGlobalScope interface returns the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/ValidityState/tooLong.html">Web/API/ValidityState/tooLong</a>
+              <a href="../Web/API/SharedWorkerGlobalScope/name.html">Web/API/SharedWorkerGlobalScope/name</a>
                 
-                  <small>The read-only property ValidityState.tooLong indicates if the value of an input or textarea, after ...</small>
+                  <small>The name read-only property of the SharedWorkerGlobalScope interface returns the name that the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality.html">Web/API/VideoPlaybackQuality</a>
+              <a href="../Web/API/SharedWorkerGlobalScope/onconnect.html">Web/API/SharedWorkerGlobalScope/onconnect</a>
                 
-                  <small>The VideoPlaybackQuality interface represents the set of metrics describing the playback quality of ...</small>
+                  <small>The onconnect property of the SharedWorkerGlobalScope interface is an EventHandler representing ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality/corruptedVideoFrames.html">Web/API/VideoPlaybackQuality/corruptedVideoFrames</a>
+              <a href="../Web/API/SourceBuffer.html">Web/API/SourceBuffer</a>
                 
-                  <small>The VideoPlaybackQuality.corruptedVideoFrames read-only property returns an unsigned long ...</small>
+                  <small>The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality/creationTime.html">Web/API/VideoPlaybackQuality/creationTime</a>
+              <a href="../Web/API/SourceBuffer/abort.html">Web/API/SourceBuffer/abort</a>
                 
-                  <small>The VideoPlaybackQuality.creationTime read-only property returns a DOMHighResTimeStamp containing ...</small>
+                  <small>The abort() method of the SourceBuffer interface aborts the current segment and resets the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality/droppedVideoFrames.html">Web/API/VideoPlaybackQuality/droppedVideoFrames</a>
+              <a href="../Web/API/SourceBuffer/appendBuffer.html">Web/API/SourceBuffer/appendBuffer</a>
                 
-                  <small>The VideoPlaybackQuality.droppedVideoFrames read-only property returns an unsigned long containing ...</small>
+                  <small>The appendBuffer() method of the SourceBuffer interface appends media segment data from an ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality/totalFrameDelay.html">Web/API/VideoPlaybackQuality/totalFrameDelay</a>
+              <a href="../Web/API/SourceBuffer/appendStream.html">Web/API/SourceBuffer/appendStream</a>
                 
-                  <small>The VideoPlaybackQuality.totalFrameDelay read-only property returns a double containing the sum of ...</small>
+                  <small>The appendStream() method of the SourceBuffer interface appends media segment data from a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VideoPlaybackQuality/totalVideoFrames.html">Web/API/VideoPlaybackQuality/totalVideoFrames</a>
+              <a href="../Web/API/SourceBuffer/appendWindowEnd.html">Web/API/SourceBuffer/appendWindowEnd</a>
                 
-                  <small>The VideoPlaybackQuality.totalVideoFrames read-only property returns an unsigned long containing ...</small>
+                  <small>The appendWindowEnd property of the SourceBuffer interface controls the timestamp for the end of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRDevice.html">Web/API/VRDevice</a>
+              <a href="../Web/API/SourceBuffer/appendWindowStart.html">Web/API/SourceBuffer/appendWindowStart</a>
                 
-                  <small>The VR Device interface of the WebVR API represents a generic VR device connected to the user's ...</small>
+                  <small>The appendWindowStart property of the SourceBuffer interface controls the timestamp for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRDevice/deviceId.html">Web/API/VRDevice/deviceId</a>
+              <a href="../Web/API/SourceBuffer/audioTracks.html">Web/API/SourceBuffer/audioTracks</a>
                 
-                  <small>The deviceId read-only property of the VRDevice interface returns the ID for this specific ...</small>
+                  <small>The audioTracks read-only property of the SourceBuffer interface returns a list of the audio ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRDevice/deviceName.html">Web/API/VRDevice/deviceName</a>
+              <a href="../Web/API/SourceBuffer/buffered.html">Web/API/SourceBuffer/buffered</a>
                 
-                  <small>The deviceName read-only property of the VRDevice interface returns a human-readable name to ...</small>
+                  <small>The buffered read-only property of the SourceBuffer interface returns the time ranges that are ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRDevice/hardwareUnitId.html">Web/API/VRDevice/hardwareUnitId</a>
+              <a href="../Web/API/SourceBuffer/mode.html">Web/API/SourceBuffer/mode</a>
                 
-                  <small>The hardwareUnitId read-only property of the VRDevice interface returns the distinct hardware ID ...</small>
+                  <small>The mode property of the SourceBuffer interface controls whether media segments can be appended ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters.html">Web/API/VREyeParameters</a>
+              <a href="../Web/API/SourceBuffer/remove.html">Web/API/SourceBuffer/remove</a>
                 
-                  <small>The VREyeParameters interface of the WebVR API represents all the information required to correctly ...</small>
+                  <small>The remove() method of the SourceBuffer interface removes media segments within a specific time ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/currentFieldOfView.html">Web/API/VREyeParameters/currentFieldOfView</a>
+              <a href="../Web/API/SourceBuffer/textTracks.html">Web/API/SourceBuffer/textTracks</a>
                 
-                  <small>The currentFieldOfView read-only property of the VREyeParameters interface describes t he current ...</small>
+                  <small>The textTracks read-only property of the SourceBuffer interface returns a list of the text ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/eyeTranslation.html">Web/API/VREyeParameters/eyeTranslation</a>
+              <a href="../Web/API/SourceBuffer/timestampOffset.html">Web/API/SourceBuffer/timestampOffset</a>
                 
-                  <small>The eyeTranslation read-only property of the VREyeParameters interface represents the o ffset from ...</small>
+                  <small>The timestampOffset property of the SourceBuffer interface controls the offset applied to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/maximumFieldOfView.html">Web/API/VREyeParameters/maximumFieldOfView</a>
+              <a href="../Web/API/SourceBuffer/trackDefaults.html">Web/API/SourceBuffer/trackDefaults</a>
                 
-                  <small>The maximumFieldOfView read-only property of the VREyeParameters interface describes the maximum ...</small>
+                  <small>The trackDefaults property of the SourceBuffer interface specifies the default values to use if ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/minimumFieldOfView.html">Web/API/VREyeParameters/minimumFieldOfView</a>
+              <a href="../Web/API/SourceBuffer/updating.html">Web/API/SourceBuffer/updating</a>
                 
-                  <small>The minimumFieldOfView read-only property of the VREyeParameters interface describes the minimum ...</small>
+                  <small>The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/recommendedFieldOfView.html">Web/API/VREyeParameters/recommendedFieldOfView</a>
+              <a href="../Web/API/SourceBuffer/videoTracks.html">Web/API/SourceBuffer/videoTracks</a>
                 
-                  <small>The recommendedFieldOfView read-only property of the VREyeParameters interface describes the ...</small>
+                  <small>The videoTracks read-only property of the SourceBuffer interface returns a list of the video ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VREyeParameters/renderRect.html">Web/API/VREyeParameters/renderRect</a>
+              <a href="../Web/API/SourceBufferList.html">Web/API/SourceBufferList</a>
                 
-                  <small>The renderRect read-only property of the VREyeParameters interface specifies the viewport of a ...</small>
+                  <small>The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfView.html">Web/API/VRFieldOfView</a>
+              <a href="../Web/API/SourceBufferList/length.html">Web/API/SourceBufferList/length</a>
                 
-                  <small>The VRFieldOfView interface of the WebVR API represents a field of view defined by 4 different ...</small>
+                  <small>The length read-only property of the SourceBufferList interface returns the number of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfView/VRFieldOfView.html">Web/API/VRFieldOfView/VRFieldOfView</a>
+              <a href="../Web/API/SourceBufferList/SourceBuffer.html">Web/API/SourceBufferList/SourceBuffer</a>
                 
-                  <small>The VRFieldOfView() constructor creates a new VRFieldOFView object.</small>
+                  <small>The SourceBuffer() getter method of the SourceBufferList interface allows the SourceBuffer ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfViewReadOnly.html">Web/API/VRFieldOfViewReadOnly</a>
+              <a href="../Web/API/SpeechGrammar.html">Web/API/SpeechGrammar</a>
                 
-                  <small>The VRFieldOfViewReadOnly interface of the WebVR API contains the raw definition for the degree ...</small>
+                  <small>The SpeechGrammar interface of the Web Speech API represents a set of words or patterns of words ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfViewReadOnly/downDegrees.html">Web/API/VRFieldOfViewReadOnly/downDegrees</a>
+              <a href="../Web/API/SpeechGrammar/SpeechGrammar.html">Web/API/SpeechGrammar/SpeechGrammar</a>
                 
-                  <small>The downDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of ...</small>
+                  <small>The SpeechGrammar constructor of the SpeechGrammar interface creates a new SpeechGrammar object ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfViewReadOnly/leftDegrees.html">Web/API/VRFieldOfViewReadOnly/leftDegrees</a>
+              <a href="../Web/API/SpeechGrammar/src.html">Web/API/SpeechGrammar/src</a>
                 
-                  <small>The leftDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of ...</small>
+                  <small>The src property of the SpeechGrammar interface sets and returns a string containing the grammar ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfViewReadOnly/rightDegrees.html">Web/API/VRFieldOfViewReadOnly/rightDegrees</a>
+              <a href="../Web/API/SpeechGrammar/weight.html">Web/API/SpeechGrammar/weight</a>
                 
-                  <small>The rightDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of ...</small>
+                  <small>The optional weight property of the SpeechGrammar interface sets and returns the weight of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRFieldOfViewReadOnly/upDegrees.html">Web/API/VRFieldOfViewReadOnly/upDegrees</a>
+              <a href="../Web/API/SpeechGrammarList.html">Web/API/SpeechGrammarList</a>
                 
-                  <small>The upDegrees read-only property of the VRFieldOfViewReadOnly interface returns the number of ...</small>
+                  <small>The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState.html">Web/API/VRPositionState</a>
+              <a href="../Web/API/SpeechGrammarList/addFromString.html">Web/API/SpeechGrammarList/addFromString</a>
                 
-                  <small>The VRPositionState interface of the WebVR API represents the position state at a given timestamp ...</small>
+                  <small>The addFromString() method of the SpeechGrammarList interface takes a grammar present in a ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/angularAcceleration.html">Web/API/VRPositionState/angularAcceleration</a>
+              <a href="../Web/API/SpeechGrammarList/addFromURI.html">Web/API/SpeechGrammarList/addFromURI</a>
                 
-                  <small>The angularAcceleration read-only property of the VRPositionState interface returns the current ...</small>
+                  <small>The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/angularVelocity.html">Web/API/VRPositionState/angularVelocity</a>
+              <a href="../Web/API/SpeechGrammarList/item.html">Web/API/SpeechGrammarList/item</a>
                 
-                  <small>The angularVelocity read-only property of the VRPositionState interface returns the current angular ...</small>
+                  <small>The item getter of the SpeechGrammarList interface is a standard getter — it allows individual ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/hasOrientation.html">Web/API/VRPositionState/hasOrientation</a>
+              <a href="../Web/API/SpeechGrammarList/length.html">Web/API/SpeechGrammarList/length</a>
                 
-                  <small>The hasOrientation read-only property of the VRPositionState interface returns a boolean indicating ...</small>
+                  <small>The length read-only property of the SpeechGrammarList interface returns the number of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/hasPosition.html">Web/API/VRPositionState/hasPosition</a>
+              <a href="../Web/API/SpeechGrammarList/SpeechGrammarList.html">Web/API/SpeechGrammarList/SpeechGrammarList</a>
                 
-                  <small>The hasPosition read-only property of the VRPositionState interface returns a boolean indicating ...</small>
+                  <small>The SpeechGrammarList() constructor creates a new SpeechGrammarList object instance.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/linearAcceleration.html">Web/API/VRPositionState/linearAcceleration</a>
+              <a href="../Web/API/SpeechRecognition.html">Web/API/SpeechRecognition</a>
                 
-                  <small>The linearAcceleration read-only property of the VRPositionState interface returns the current ...</small>
+                  <small>The SpeechRecognition interface of the Web Speech API is the controller interface for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/linearVelocity.html">Web/API/VRPositionState/linearVelocity</a>
+              <a href="../Web/API/SpeechRecognition/abort.html">Web/API/SpeechRecognition/abort</a>
                 
-                  <small>The linearVelocity read-only property of the VRPositionState interface returns the current linear ...</small>
+                  <small>The abort() method of the Web Speech API stops the speech recognition service from listening to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/orientation.html">Web/API/VRPositionState/orientation</a>
+              <a href="../Web/API/SpeechRecognition/continuous.html">Web/API/SpeechRecognition/continuous</a>
                 
-                  <small>The orientation read-only property of the VRPositionState interface returns the current orientation ...</small>
+                  <small>The continuous property of the SpeechRecognition interface controls whether continuous results ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/position.html">Web/API/VRPositionState/position</a>
+              <a href="../Web/API/SpeechRecognition/grammars.html">Web/API/SpeechRecognition/grammars</a>
                 
-                  <small>The position read-only property of the VRPositionState interface returns the current position of ...</small>
+                  <small>The grammars property of the SpeechRecognition interface returns and sets a collection of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/VRPositionState/timeStamp.html">Web/API/VRPositionState/timeStamp</a>
+              <a href="../Web/API/SpeechRecognition/interimResults.html">Web/API/SpeechRecognition/interimResults</a>
                 
-                  <small>The timeStamp read-only property of the VRPositionState interface returns the current time stamp of ...</small>
+                  <small>The interimResults property of the SpeechRecognition interface controls whether interim results ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WaveShaperNode.html">Web/API/WaveShaperNode</a>
+              <a href="../Web/API/SpeechRecognition/lang.html">Web/API/SpeechRecognition/lang</a>
                 
-                  <small>A WaveShaperNode always has exactly one input and one output.</small>
+                  <small>The lang property of the SpeechRecognition interface returns and sets the language of the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WaveShaperNode/curve.html">Web/API/WaveShaperNode/curve</a>
+              <a href="../Web/API/SpeechRecognition/maxAlternatives.html">Web/API/SpeechRecognition/maxAlternatives</a>
                 
-                  <small>The curve property of the WaveShaperNode interface is a Float32Array of numbers describing the ...</small>
+                  <small>The maxAlternatives property of the SpeechRecognition interface sets the maximum number of ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WaveShaperNode/oversample.html">Web/API/WaveShaperNode/oversample</a>
+              <a href="../Web/API/SpeechRecognition/onaudioend.html">Web/API/SpeechRecognition/onaudioend</a>
                 
-                  <small>The oversample property of the WaveShaperNode interface is an enumerated value indicating if ...</small>
+                  <small>The onaudioend property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext.html">Web/API/WebGL2RenderingContext</a>
+              <a href="../Web/API/SpeechRecognition/onaudiostart.html">Web/API/SpeechRecognition/onaudiostart</a>
                 
-                  <small>The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing ...</small>
+                  <small>The onaudiostart property of the SpeechRecognition interface represents an event handler that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/beginQuery.html">Web/API/WebGL2RenderingContext/beginQuery</a>
+              <a href="../Web/API/SpeechRecognition/onend.html">Web/API/SpeechRecognition/onend</a>
                 
-                  <small>The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The ...</small>
+                  <small>The onend property of the SpeechRecognition interface represents an event handler that will run ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/beginTransformFeedback.html">Web/API/WebGL2RenderingContext/beginTransformFeedback</a>
+              <a href="../Web/API/SpeechRecognition/onerror.html">Web/API/SpeechRecognition/onerror</a>
                 
-                  <small>The WebGL2RenderingContext.beginTransformFeedback() method of the WebGL 2 API starts a transform ...</small>
+                  <small>The onerror property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/bindBufferBase.html">Web/API/WebGL2RenderingContext/bindBufferBase</a>
+              <a href="../Web/API/SpeechRecognition/onnomatch.html">Web/API/SpeechRecognition/onnomatch</a>
                 
-                  <small>The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer to ...</small>
+                  <small>The onnomatch property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/bindBufferRange.html">Web/API/WebGL2RenderingContext/bindBufferRange</a>
+              <a href="../Web/API/SpeechRecognition/onresult.html">Web/API/SpeechRecognition/onresult</a>
                 
-                  <small>The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given ...</small>
+                  <small>The onresult property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/bindSampler.html">Web/API/WebGL2RenderingContext/bindSampler</a>
+              <a href="../Web/API/SpeechRecognition/onsoundend.html">Web/API/SpeechRecognition/onsoundend</a>
                 
-                  <small>The WebGL2RenderingContext.bindSampler() method of the WebGL 2 API binds a passed WebGLSampler ...</small>
+                  <small>The onsoundend property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/bindTransformFeedback.html">Web/API/WebGL2RenderingContext/bindTransformFeedback</a>
+              <a href="../Web/API/SpeechRecognition/onsoundstart.html">Web/API/SpeechRecognition/onsoundstart</a>
                 
-                  <small>The WebGL2RenderingContext.bindTransformFeedback() method of the WebGL 2 API binds a passed ...</small>
+                  <small>The onsoundstart property of the SpeechRecognition interface represents an event handler that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/bindVertexArray.html">Web/API/WebGL2RenderingContext/bindVertexArray</a>
+              <a href="../Web/API/SpeechRecognition/onspeechend.html">Web/API/SpeechRecognition/onspeechend</a>
                 
-                  <small>The WebGL2RenderingContext.bindVertexArray() method of the WebGL 2 API binds a passed ...</small>
+                  <small>The onspeechend property of the SpeechRecognition interface represents an event handler that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/blitFramebuffer.html">Web/API/WebGL2RenderingContext/blitFramebuffer</a>
+              <a href="../Web/API/SpeechRecognition/onspeechstart.html">Web/API/SpeechRecognition/onspeechstart</a>
                 
-                  <small>The WebGL2RenderingContext.blitFramebuffer() method of the WebGL 2 API transfers a block of pixels ...</small>
+                  <small>The onspeechstart property of the SpeechRecognition interface represents an event handler that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/clearBuffer.html">Web/API/WebGL2RenderingContext/clearBuffer</a>
+              <a href="../Web/API/SpeechRecognition/onstart.html">Web/API/SpeechRecognition/onstart</a>
                 
-                  <small>The WebGL2RenderingContext.clearBuffer[fiuv]() methods of the WebGL 2 API clear buffers from the ...</small>
+                  <small>The onstart property of the SpeechRecognition interface represents an event handler that will ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/clientWaitSync.html">Web/API/WebGL2RenderingContext/clientWaitSync</a>
+              <a href="../Web/API/SpeechRecognition/serviceURI.html">Web/API/SpeechRecognition/serviceURI</a>
                 
-                  <small>The WebGL2RenderingContext.clientWaitSync() method of the WebGL 2 API blocks and waits for a ...</small>
+                  <small>The serviceURI property of the SpeechRecognition interface specifies the location of the speech ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/compressedTexImage3D.html">Web/API/WebGL2RenderingContext/compressedTexImage3D</a>
+              <a href="../Web/API/SpeechRecognition/SpeechRecognition.html">Web/API/SpeechRecognition/SpeechRecognition</a>
                 
-                  <small>The WebGL2RenderingContext.compressedTexImage3D() method of the WebGL API specifies a ...</small>
+                  <small>The SpeechRecognition() constructor creates a new SpeechRecognition object instance.</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/compressedTexSubImage3D.html">Web/API/WebGL2RenderingContext/compressedTexSubImage3D</a>
+              <a href="../Web/API/SpeechRecognition/start.html">Web/API/SpeechRecognition/start</a>
                 
-                  <small>The WebGL2RenderingContext.compressedTexSubImage3D() method of the WebGL API specifies a ...</small>
+                  <small>The start() method of the Web Speech API starts the speech recognition service listening to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/copyBufferSubData.html">Web/API/WebGL2RenderingContext/copyBufferSubData</a>
+              <a href="../Web/API/SpeechRecognition/stop.html">Web/API/SpeechRecognition/stop</a>
                 
-                  <small>The WebGL2RenderingContext.copyBufferSubData() method of the WebGL 2 API copies part of the data of ...</small>
+                  <small>The start() method of the Web Speech API stops the speech recognition service from listening to ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/copyTexSubImage3D.html">Web/API/WebGL2RenderingContext/copyTexSubImage3D</a>
+              <a href="../Web/API/SpeechRecognitionAlternative.html">Web/API/SpeechRecognitionAlternative</a>
                 
-                  <small>The WebGL2RenderingContext.copyTexSubImage3D() method of the WebGL API copies pixels from the ...</small>
+                  <small>The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/createQuery.html">Web/API/WebGL2RenderingContext/createQuery</a>
+              <a href="../Web/API/SpeechRecognitionAlternative/confidence.html">Web/API/SpeechRecognitionAlternative/confidence</a>
                 
-                  <small>The WebGL2RenderingContext.createQuery() method of the WebGL 2 API creates and initializes ...</small>
+                  <small>The confidence read-only property of the SpeechRecognitionResult interface returns a numeric ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/createSampler.html">Web/API/WebGL2RenderingContext/createSampler</a>
+              <a href="../Web/API/SpeechRecognitionAlternative/transcript.html">Web/API/SpeechRecognitionAlternative/transcript</a>
                 
-                  <small>The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes ...</small>
+                  <small>The transcript read-only property of the SpeechRecognitionResult interface returns a string ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/createTransformFeedback.html">Web/API/WebGL2RenderingContext/createTransformFeedback</a>
+              <a href="../Web/API/SpeechRecognitionError.html">Web/API/SpeechRecognitionError</a>
                 
-                  <small>The WebGL2RenderingContext.createTransformFeedback() method of the WebGL 2 API creates and ...</small>
+                  <small>The SpeechRecognitionError interface of the Web Speech API represents error messages from the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/createVertexArray.html">Web/API/WebGL2RenderingContext/createVertexArray</a>
+              <a href="../Web/API/SpeechRecognitionError/error.html">Web/API/SpeechRecognitionError/error</a>
                 
-                  <small>The WebGL2RenderingContext.createVertexArray() method of the WebGL 2 API creates and initializes a ...</small>
+                  <small>The error read-only property of the SpeechRecognitionError interface returns the type of error ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/deleteQuery.html">Web/API/WebGL2RenderingContext/deleteQuery</a>
+              <a href="../Web/API/SpeechRecognitionError/message.html">Web/API/SpeechRecognitionError/message</a>
                 
-                  <small>The WebGL2RenderingContext.deleteQuery() method of the WebGL 2 API deletes a given WebGLQuery ...</small>
+                  <small>The message read-only property of the SpeechRecognitionError interface returns a message ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/deleteSampler.html">Web/API/WebGL2RenderingContext/deleteSampler</a>
+              <a href="../Web/API/SpeechRecognitionEvent.html">Web/API/SpeechRecognitionEvent</a>
                 
-                  <small>The WebGL2RenderingContext.deleteSampler() method of the WebGL 2 API deletes a given WebGLSampler ...</small>
+                  <small>The SpeechRecognitionEvent interface of the Web Speech API represents the event object for the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/deleteSync.html">Web/API/WebGL2RenderingContext/deleteSync</a>
+              <a href="../Web/API/SpeechRecognitionEvent/emma.html">Web/API/SpeechRecognitionEvent/emma</a>
                 
-                  <small>The WebGL2RenderingContext.deleteSync() method of the WebGL 2 API deletes a given WebGLSync object.</small>
+                  <small>The emma read-only property of the SpeechRecognitionEvent interface returns an E xtensible ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/deleteTransformFeedback.html">Web/API/WebGL2RenderingContext/deleteTransformFeedback</a>
+              <a href="../Web/API/SpeechRecognitionEvent/interpretation.html">Web/API/SpeechRecognitionEvent/interpretation</a>
                 
-                  <small>The WebGL2RenderingContext.deleteTransformFeedback() method of the WebGL 2 API deletes a given ...</small>
+                  <small>The interpretation read-only property of the SpeechRecognitionEvent interface returns the ...</small>
                 
             </li>
           
             <li>
-              <a href="../Web/API/WebGL2RenderingContext/deleteVertexArray.html">Web/API/WebGL2RenderingContext/deleteVertexArray</a>
+              <a href="../Web/API/SpeechRecognitionEvent/resultIndex.html">Web/API/SpeechRecognitionEvent/resultIndex</a>
                 
-                  <small>The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given ...</small>
+                  <small>The resultIndex read-only property of the SpeechRecognitionEvent interface returns the lowest ...</small>
                 
             </li>
           
@@ -1075,7 +1057,7 @@
     
       <li class="skip">…</li>
     
-    <li><a href="APIce8a.html?page=40">40</a></li>
+    <li><a href="API7251.html?page=44">44</a></li>
   
   
     <li class="next">
@@ -1092,12 +1074,12 @@
   </div></main>
 
   <!-- Footer -->
-  <footer><div class="center">
+  <footer id="main-footer"><div class="center">
     <div class="column-container">
       <div class="column-main">
         
         <div class="contentinfo">
-          <p>© 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
           <ul>
             <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
             <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
@@ -1105,14 +1087,15 @@
             <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
             <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
           </ul>
-        <p></p>
-        
         </div>
+        
       </div>
       <div class="column-strip">
         
           
-              <form class="languages go" method="get" action="#">
+              
+
+<form class="languages go" method="get" action="#">
   <label for="language">Other languages:</label>
   
     
@@ -1120,127 +1103,250 @@
     
   
   <select id="language" class="autosubmit" name="lang">
-    <option value="af">
-        Afrikaans
-      </option><option value="ar">
-        عربي
-      </option><option value="az">
-        Azərbaycanca
-      </option><option value="bm">
-        Bamanankan
-      </option><option value="bn-BD">
-        বাংলা (বাংলাদেশ)
-      </option><option value="bn-IN">
-        বাংলা (ভারত)
-      </option><option value="ca">
-        Català
-      </option><option value="cs">
-        Čeština
-      </option><option value="de">
-        Deutsch
-      </option><option value="ee">
-        Eʋe
-      </option><option value="el">
-        Ελληνικά
-      </option><option value="en-US" selected="">
-        English (US)
-      </option><option value="es">
-        Español
-      </option><option value="fa">
-        فارسی
-      </option><option value="ff">
-        Pulaar-Fulfulde
-      </option><option value="fi">
-        suomi
-      </option><option value="fr">
-        Français
-      </option><option value="fy-NL">
-        Frysk
-      </option><option value="ga-IE">
-        Gaeilge
-      </option><option value="ha">
-        Hausa
-      </option><option value="he">
-        עברית
-      </option><option value="hi-IN">
-        हिन्दी (भारत)
-      </option><option value="hr">
-        Hrvatski
-      </option><option value="hu">
-        magyar
-      </option><option value="id">
-        Bahasa Indonesia
-      </option><option value="ig">
-        Igbo
-      </option><option value="it">
-        Italiano
-      </option><option value="ja">
-        日本語
-      </option><option value="ka">
-        ქართული
-      </option><option value="ko">
-        한국어
-      </option><option value="ln">
-        Lingála
-      </option><option value="mg">
-        Malagasy
-      </option><option value="ml">
-        മലയാളം
-      </option><option value="ms">
-        Melayu
-      </option><option value="my">
-        မြန်မာဘာသာ
-      </option><option value="nl">
-        Nederlands
-      </option><option value="pl">
-        Polski
-      </option><option value="pt-BR">
-        Português (do&nbsp;Brasil)
-      </option><option value="pt-PT">
-        Português (Europeu)
-      </option><option value="ro">
-        Română
-      </option><option value="ru">
-        Русский
-      </option><option value="son">
-        Soŋay
-      </option><option value="sq">
-        Shqip
-      </option><option value="sr">
-        Српски
-      </option><option value="sr-Latn">
-        Srpski
-      </option><option value="sv-SE">
-        Svenska
-      </option><option value="sw">
-        Kiswahili
-      </option><option value="ta">
-        தமிழ்
-      </option><option value="th">
-        ไทย
-      </option><option value="tl">
-        Tagalog
-      </option><option value="tn">
-        Setswana
-      </option><option value="tr">
-        Türkçe
-      </option><option value="uk">
-        Українська
-      </option><option value="vi">
-        Tiếng Việt
-      </option><option value="wo">
-        Wolof
-      </option><option value="xh">
-        isiXhosa
-      </option><option value="yo">
-        Yorùbá
-      </option><option value="zh-CN">
-        中文 (简体)
-      </option><option value="zh-TW">
-        正體中文 (繁體)
-      </option><option value="zu">
-        isiZulu
-      </option>
+    <option title="English (US)" value="en-US">
+      English (US) (en-US)
+    </option>
+    
+        <option title="Afrikaans" value="af">
+          Afrikaans (af)
+        </option>
+      
+        <option title="Arabic" value="ar">
+          عربي (ar)
+        </option>
+      
+        <option title="Azerbaijani" value="az">
+          Azərbaycanca (az)
+        </option>
+      
+        <option title="Bambara" value="bm">
+          Bamanankan (bm)
+        </option>
+      
+        <option title="Bengali (Bangladesh)" value="bn-BD">
+          বাংলা (বাংলাদেশ) (bn-BD)
+        </option>
+      
+        <option title="Bengali (India)" value="bn-IN">
+          বাংলা (ভারত) (bn-IN)
+        </option>
+      
+        <option title="Catalan" value="ca">
+          Català (ca)
+        </option>
+      
+        <option title="Czech" value="cs">
+          Čeština (cs)
+        </option>
+      
+        <option title="German" value="de">
+          Deutsch (de)
+        </option>
+      
+        <option title="Ewe" value="ee">
+          Eʋe (ee)
+        </option>
+      
+        <option title="Greek" value="el">
+          Ελληνικά (el)
+        </option>
+      
+        <option title="Spanish" value="es">
+          Español (es)
+        </option>
+      
+        <option title="Persian" value="fa">
+          فارسی (fa)
+        </option>
+      
+        <option title="Fulah" value="ff">
+          Pulaar-Fulfulde (ff)
+        </option>
+      
+        <option title="Finnish" value="fi">
+          suomi (fi)
+        </option>
+      
+        <option title="French" value="fr">
+          Français (fr)
+        </option>
+      
+        <option title="Frisian" value="fy-NL">
+          Frysk (fy-NL)
+        </option>
+      
+        <option title="Irish" value="ga-IE">
+          Gaeilge (ga-IE)
+        </option>
+      
+        <option title="Hausa" value="ha">
+          Hausa (ha)
+        </option>
+      
+        <option title="Hebrew" value="he">
+          עברית (he)
+        </option>
+      
+        <option title="Hindi (India)" value="hi-IN">
+          हिन्दी (भारत) (hi-IN)
+        </option>
+      
+        <option title="Croatian" value="hr">
+          Hrvatski (hr)
+        </option>
+      
+        <option title="Hungarian" value="hu">
+          magyar (hu)
+        </option>
+      
+        <option title="Indonesian" value="id">
+          Bahasa Indonesia (id)
+        </option>
+      
+        <option title="Igbo" value="ig">
+          Igbo (ig)
+        </option>
+      
+        <option title="Italian" value="it">
+          Italiano (it)
+        </option>
+      
+        <option title="Japanese" value="ja">
+          日本語 (ja)
+        </option>
+      
+        <option title="Georgian" value="ka">
+          ქართული (ka)
+        </option>
+      
+        <option title="Kabyle" value="kab">
+          Taqbaylit (kab)
+        </option>
+      
+        <option title="Korean" value="ko">
+          한국어 (ko)
+        </option>
+      
+        <option title="Lingala" value="ln">
+          Lingála (ln)
+        </option>
+      
+        <option title="Malagasy" value="mg">
+          Malagasy (mg)
+        </option>
+      
+        <option title="Malayalam" value="ml">
+          മലയാളം (ml)
+        </option>
+      
+        <option title="Malay" value="ms">
+          Melayu (ms)
+        </option>
+      
+        <option title="Burmese" value="my">
+          မြန်မာဘာသာ (my)
+        </option>
+      
+        <option title="Dutch" value="nl">
+          Nederlands (nl)
+        </option>
+      
+        <option title="Polish" value="pl">
+          Polski (pl)
+        </option>
+      
+        <option title="Portuguese (Brazilian)" value="pt-BR">
+          Português (do&nbsp;Brasil) (pt-BR)
+        </option>
+      
+        <option title="Portuguese (Portugal)" value="pt-PT">
+          Português (Europeu) (pt-PT)
+        </option>
+      
+        <option title="Romanian" value="ro">
+          Română (ro)
+        </option>
+      
+        <option title="Russian" value="ru">
+          Русский (ru)
+        </option>
+      
+        <option title="Songhai" value="son">
+          Soŋay (son)
+        </option>
+      
+        <option title="Albanian" value="sq">
+          Shqip (sq)
+        </option>
+      
+        <option title="Serbian" value="sr">
+          Српски (sr)
+        </option>
+      
+        <option title="Serbian" value="sr-Latn">
+          Srpski (sr-Latn)
+        </option>
+      
+        <option title="Swedish" value="sv-SE">
+          Svenska (sv-SE)
+        </option>
+      
+        <option title="Swahili" value="sw">
+          Kiswahili (sw)
+        </option>
+      
+        <option title="Tamil" value="ta">
+          தமிழ் (ta)
+        </option>
+      
+        <option title="Thai" value="th">
+          ไทย (th)
+        </option>
+      
+        <option title="Tagalog" value="tl">
+          Tagalog (tl)
+        </option>
+      
+        <option title="Tswana" value="tn">
+          Setswana (tn)
+        </option>
+      
+        <option title="Turkish" value="tr">
+          Türkçe (tr)
+        </option>
+      
+        <option title="Ukrainian" value="uk">
+          Українська (uk)
+        </option>
+      
+        <option title="Vietnamese" value="vi">
+          Tiếng Việt (vi)
+        </option>
+      
+        <option title="Wolof" value="wo">
+          Wolof (wo)
+        </option>
+      
+        <option title="Xhosa" value="xh">
+          isiXhosa (xh)
+        </option>
+      
+        <option title="Yoruba" value="yo">
+          Yorùbá (yo)
+        </option>
+      
+        <option title="Chinese (Simplified)" value="zh-CN">
+          中文 (简体) (zh-CN)
+        </option>
+      
+        <option title="Chinese (Traditional)" value="zh-TW">
+          正體中文 (繁體) (zh-TW)
+        </option>
+      
+        <option title="Zulu" value="zu">
+          isiZulu (zu)
+        </option>
+      
   </select>
   <noscript>&lt;button type="submit"&gt;Go&lt;/button&gt;</noscript>
 </form>
@@ -1255,28 +1361,29 @@
     
     <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
 
-    <form id="_persona_login" method="post" action="https://developer.mozilla.org/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request="{&quot;siteName&quot;: &quot;Mozilla Developer Network&quot;, &quot;siteLogo&quot;: &quot;/static/img/opengraph-logo.png&quot;}" data-persona-script="personainclude.js">
-  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token">
-  <input type="hidden" name="next" value="" id="_persona_next_url">
-  <input type="hidden" name="process" value="" id="_persona_process">
-  <input type="hidden" name="assertion" id="_persona_assertion">
-</form>
-
-    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
-
+    
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
       <script>
         if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
       </script>
-
     
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.4fef8f9a3076.js"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
   
-    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.bd71ca9fd27d.js" charset="utf-8" id="wikiscript"></script>
+    <script async="" type="text/javascript" src="../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
 
   
 
 
-<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=35 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 May 2016 17:24:55 GMT -->
+<!-- Mirrored from developer.mozilla.org/en-US/docs/tag/API?page=35 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Jan 2017 00:51:22 GMT -->
 </body></html>

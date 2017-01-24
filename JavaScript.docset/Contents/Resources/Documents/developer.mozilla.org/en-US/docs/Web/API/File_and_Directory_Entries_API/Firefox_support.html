@@ -1,0 +1,721 @@
+<html><!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:52:08 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script async="" src="../../../../../../www.google-analytics.com/analytics.js"></script><script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>File and Directory Entries API support in Firefox</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+    <link rel="home" href="https://developer.mozilla.org/en-US/">
+    <link rel="copyright" href="#copyright">
+  
+
+  
+    
+    
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/mdn.102019a5db43.css" rel="stylesheet" type="text/css">
+
+    
+  
+    <link href="../../../../../../developer.cdn.mozilla.net/static/build/styles/wiki.d9818563511b.css" rel="stylesheet" type="text/css">
+
+    
+
+    <!-- common social tags -->
+    
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta property="og:site_name" content="Mozilla Developer Network">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+    <meta name="twitter:site" content="@MozDevNet">
+    <meta name="twitter:creator" content="@MozDevNet">
+    <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+  
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="../../../../../../developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$json">
+  <link rel="canonical" href="Firefox_support.html">
+
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="File and Directory Entries API support in Firefox">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">
+  <meta name="twitter:title" content="File and Directory Entries API support in Firefox">
+  
+  <meta property="og:description" content="The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as IndexedDB ; see the blog post Why no FileSystem API in Firefox? for more insights.">
+  <meta name="description" content="The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as IndexedDB ; see the blog post Why no FileSystem API in Firefox? for more insights.">
+  <meta name="twitter:description" content="The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as IndexedDB ; see the blog post Why no FileSystem API in Firefox? for more insights.">
+  
+
+  
+  <script type="text/javascript">
+    
+      var document_saved = 0;
+    
+  </script>
+
+  
+    
+
+
+
+  
+</head>
+<body data-slug="Web/API/File_and_Directory_Entries_API/Firefox_support" contextmenu="edit-history-menu" data-search-url="" class="document  ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'sg_task_completion': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true,'newsletter': true,'newsletter_article': true,'foundation_callout': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = 'https://developer.mozilla.org/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets_disabled: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.e79881a73508.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.a042fac0d66c.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    <li><a href="#q" id="skip-search">Skip to search</a></li>
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="http://www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+    <a href="https://developer.mozilla.org/en-US/" class="logo">Mozilla Developer Network</a>
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li><div class="login">
+    
+      
+       <a href="https://developer.mozilla.org/users/github/login/?next=%2Fen-US%2Fdocs%2FWeb%2FAPI%2FFile_and_Directory_Entries_API%2FFirefox_support" class="login-link js-login-link" data-service="GitHub">
+        Sign in
+        <i class="icon-github" aria-hidden="true"></i>
+      </a>
+    
+</div></li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web">Web Technologies<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a></li>
+              <li><a href="../../API.html">APIs / DOM</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References &amp; Guides</div>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn">Learning web development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Games">Game development</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="https://developer.mozilla.org/en-US/docs/Tools">Developer Tools</a></li><li><a href="https://developer.mozilla.org/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.doc?bug_file_loc=https%3A//developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a target="_blank" href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="https://developer.mozilla.org/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="https://developer.mozilla.org/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="">
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+   <!-- end is_zone -->
+
+    <div class="wiki-main-content" id="document-main"><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                <li class="smaller">No translations exist for this article.</li>
+              
+
+              
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      
+      <li class="page-buttons-edit"><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+      
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="https://developer.mozilla.org/en-US/docs/Web" rel="v:url" property="v:title">Web technology for developers</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../../API.html" rel="v:url" property="v:title">Web APIs</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="../File_and_Directory_Entries_API.html" rel="v:url" property="v:title">File and Directory Entries API</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">File and Directory Entries API support in Firefox</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors">
+            <ul>
+            
+                <li class="shown">
+                <a href="https://developer.mozilla.org/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="../../../../../../secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf6c02.jpeg?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>File and Directory Entries API support in Firefox</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable" data-closed="true">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a rel="internal" href="#Chrome_deviations_from_the_specification">Chrome deviations from the specification</a></li><li><a rel="internal" href="#Limitations_in_Firefox">Limitations in Firefox</a></li><li><a rel="internal" href="#See_also">See also</a>
+                </li></ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><section id="Quick_Links" class="Quick_links"><!-- --></section><div class="overheadIndicator nonStandard nonStandardHeader"> 
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> Non-standard</strong><br> 
+      This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> 
+      </div></div>
+
+<p>The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as <a href="../IndexedDB_API.html">IndexedDB</a>; see the blog post <a class="external" href="https://hacks.mozilla.org/2012/07/why-no-filesystem-api-in-firefox/">Why no FileSystem API in Firefox?</a> for more insights.</p>
+
+<p>This has caused a number of popular web sites not to work properly on browsers other than Chrome. Because of that, an attempt was made to create a spec offering the features of Google's API which consensus could be reached on. The result was the <a href="../File_and_Directory_Entries_API.html">File and Directory Entries API</a>. This subset of the API provided by Chrome is still not fully specified; however, for web compatibility reasons, it was decided to implement a subset of the API in Firefox; this was introduced in Firefox 50.</p>
+
+<p>This article describes how the Firefox implementation of the File and Directory Entries API differs from other implementations and/or the specification.</p>
+
+<h2 id="Chrome_deviations_from_the_specification">Chrome deviations from the specification</h2>
+
+<p>The largest compatibility issue still remaining is that Chrome is still using older names for many of the interfaces in the API, since they implemented a related but different specification:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="row">Name in specification</th>
+   <th scope="col">Name in Google Chrome</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row"><code>FileSystemDirectoryEntry</code></th>
+   <td><code>DirectoryEntry</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemDirectoryEntrySync</code></th>
+   <td><code>DirectoryEntrySync</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemDirectoryReader</code></th>
+   <td><code>DirectoryReader</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemDirectoryReaderSync</code></th>
+   <td><code>DirectoryReaderSync</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemEntry</code></th>
+   <td><code>Entry</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemEntrySync</code></th>
+   <td><code>EntrySync</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemFileEntry</code></th>
+   <td><code>FileEntry</code></td>
+  </tr>
+  <tr>
+   <th scope="row"><code>FileSystemFileEntrySync</code></th>
+   <td><code>FileEntrySync</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Be sure to account for this in your code by allowing for both names. Hopefully Chrome will be updated soon to use the newer names!</p>
+
+<p>To ensure your code will work in both Chrome and other browsers, you can include code similar to the following:</p>
+
+<pre class="brush: js">var FileSystemDirectoryEntry = window.FileSystemDirectoryEntry || window.DirectoryEntry;
+var FileSystemEntry = window.FileSystemEntry || window.Entry;
+</pre>
+
+<h2 id="Limitations_in_Firefox">Limitations in Firefox</h2>
+
+<p>Next, let's look at limitations of the Firefox implementation of the API. In broad strokes, those limitations can be summarized as follows:</p>
+
+<ul>
+ <li>Content scripts can't create file systems or initiate access to a file system. There are only two ways to get access to file system entries at this time:
+  <ul>
+   <li>The <a title="The HTML element &lt;input&gt; is used to create interactive controls for web-based forms in order to accept data from the user. How an &lt;input&gt; works varies considerably depending on the value of its type attribute." href="/en-US/docs/Web/HTML/Element/input"><code>&lt;input&gt;</code></a> element, using the <a title="The read-only webkitEntries property of the HTMLInputElement interface contains an array of file system entries (as objects based on FileSystemEntry) representing files and/or directories selected by the user using an &lt;input&gt; element of type file." href="/en-US/docs/Web/API/HTMLInputElement/webkitEntries"><code>HTMLInputElement.webkitEntries</code></a> property to access an array of <a title="The FileSystemEntry interface of the File and Directory Entries API represents a single in a file system. The entry can be a file or a directory (directories are represented by the DirectoryEntry interface. It includes methods for working with files—including copying, moving, removing, and reading files—as well as information about a file it points to—including the file name and its path from the root to the entry." href="../FileSystemEntry.html"><code>FileSystemEntry</code></a> objects describing file system entries you can then read.</li>
+   <li>Using drag and drop by calling the <a title="The documentation about this has not yet been written; please consider contributing!" href="../DataTransferItem/webkitGetAsEntry.html"><code>DataTransferItem.getAsEntry()</code></a> method, which lets you get a <a title="The FileSystemFileEntry interface of the File System API represents a file in a file system. It offers properties describing the file's attributes, as well as methods for creating a FileWriter object to write to the file or a File object to read the file." href="../FileSystemFileEntry.html"><code>FileSystemFileEntry</code></a> or <a title="The FileSystemDirectoryEntry interface of the File and Directory Entries API represents a directory in a file system. It provides methods which make it possible to access and manipulate the files in a directory, as well as to access the entries within the directory." href="../FileSystemDirectoryEntry.html"><code>FileSystemDirectoryEntry</code></a> for files dropped on a drop zone.</li>
+  </ul>
+ </li>
+ <li>You can't use the <code><a href="../LocalFileSystem.html#requestFileSystem">LocalFileSystem.requestFileSystem()</a></code> method to get access to a specified local file system.</li>
+ <li>The <code><a href="../LocalFileSystem.html#resolveLocalFileSystemURL">LocalFileSystem.resolveLocalFileSystemURL()</a></code> method isn't implemented.</li>
+ <li>Only the asynchronous versions of the interfaces are implemented. Any interfaces with names that end in "<code>Sync"</code> aren't available.</li>
+ <li>Firefox only supports reading from files in the file system. You can't write to them. In particular, the <a title="The FileSystemFileEntry interface's method createWriter() returns a FileWriter object which can be used to write data into the file represented by the directory entry." href="../FileSystemFileEntry/createWriter.html"><code>FileSystemFileEntry.createWriter()</code></a> method, used to create a <a title="The documentation about this has not yet been written; please consider contributing!" class="new" href="../FileWriter.html"><code>FileWriter</code></a> to handle writing to a file, is not implemented and will just treturn an error.</li>
+ <li>Firefox doesn't support the <code>"filesystem:"</code> URL scheme.</li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="../File_and_Directory_Entries_API.html">File and Directory Entries API</a></li>
+ <li><a href="Introduction.html">Introduction to the File and Directory Entries API</a></li>
+ <li>Latest but still early specification for the <a class="external" href="https://wicg.github.io/entries-api/">File and Directory Entries API</a>.</li>
+ <li>Original specification for the <a class="external" href="https://dev.w3.org/2009/dap/file-system/file-dir-sys.html">File API: Directories and System</a> (often called the "FileSystem API"); Google Chrome was the only browser to implement this <strong>abandoned</strong> API.</li>
+</ul>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="../../../tag/API.html">API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Chrome">Chrome</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Compatibility">Compatibility</a></li>
+      
+        <li><a href="../../../tag/File%20and%20Directory%20Entries%20API.html">File and Directory Entries API</a></li>
+      
+        <li><a href="../../../tag/File%20System%20API.html">File System API</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Files">Files</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Firefox">Firefox</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/google">google</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/google chrome">google chrome</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Guide">Guide</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/offline">offline</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Offline">Offline</a></li>
+      
+        <li><a href="https://developer.mozilla.org/en-US/docs/tag/Web Compatibility">Web Compatibility</a></li>
+      
+    </ul>
+  </div>
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="https://developer.mozilla.org/en-US/profiles/Sheppy">Sheppy</a>,
+                      <time datetime="2016-09-27T12:03:27-07:00">Sep 27, 2016, 12:03:27 PM</time>
+                    </div>
+                  
+                </div>
+              
+
+              
+                  <div class="newsletter-box">
+                    <div class="newsletter">
+    <form id="newsletterForm" name="newsletter-form" class="nodisable" action="https://www.mozilla.org/en-US/newsletter/" method="post">
+        <h2 class="newsletter-teaser">Learn the best of web development</h2>
+        <p class="newsletter-description">Sign up for our newsletter:</p>
+        <input type="hidden" id="fmt" name="fmt" value="H">
+        <input type="hidden" id="newsletterNewslettersInput" name="newsletters" value="app-dev">
+
+        <div id="newsletterErrors" class="newsletter-errors"></div>
+
+        <div id="newsletterEmail" class="form-group">
+            <label for="newsletterEmailInput" class="form-label offscreen">E-mail</label>
+            <input type="email" id="newsletterEmailInput" name="email" class="form-input newsletter-input-email" required="" placeholder="you@example.com" size="30">
+        </div>
+
+        <div id="newsletterPrivacy" class="form-group form-group-agree hidden">
+            <input type="checkbox" id="newsletterPrivacyInput" name="privacy" required="">
+            <label for="newsletterPrivacyInput">
+            I'm okay with Mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/">Privacy Policy</a>.
+            </label>
+        </div>
+        <div id="newsletterSubmit">
+            <button id="newsletter-submit" type="submit" class="button positive">Sign up now</button>
+        </div>
+        
+    </form>
+    <div id="newsletterThanks" class="newsletter-thanks hidden">
+        <h2>Thanks! Please check your inbox to confirm your subscription.</h2>
+        <p>If you haven’t previously confirmed a subscription to a Mozilla-related newsletter you may have to do so. Please check your inbox or your spam filter for an email from us.
+        </p>
+    </div>
+    <button id="newsletterHide" type="button" class="only-icon newsletter-hide hidden"><span>Hide Newsletter Sign-up</span><i aria-hidden="true" class="icon-times"></i></button>
+</div>
+                  </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="title see-also">See also</div>
+    <ol><li><strong><a href="../File_and_Directory_Entries_API.html">File and Directory Entries API</a></strong></li><li data-default-state="open"><a href="#"><strong>Guides</strong></a><ol><li><a title="The original File System API was created to let browsers implement support for accessing a sandboxed virtual file system on the user's storage device. Work to standardize the specification was abandoned back in 2012, but by that point, Google Chrome included its own implementation of the API. Over time, a number of popular sites and Web applications came to use it, often without providing any means of falling back to standard APIs or even checking to be sure the API is available before using it. Mozilla instead opted to implement other APIs which can be used to solve many of the same problems, such as IndexedDB; see the blog post Why no FileSystem API in Firefox? for more insights." href="Firefox_support.html">File and Directory Entries API support in Firefox</a></li><li><a title="The File and Directory Entries API simulates a local file system that web apps can navigate around. You can develop apps that can read, write, and create files and directories in a&nbsp;sandboxed,&nbsp;virtual file system." href="Introduction.html">Introduction to the File and Directory Entries API</a></li></ol></li><li data-default-state="open"><a href="#"><strong>Interfaces</strong></a><ol><li><a href="../FileError.html"><code>FileError</code></a></li><li><a href="../FileException.html"><code>FileException</code></a></li><li><a href="../FileHandle.png"><code>FileHandle</code></a></li><li><a href="../FileRequest.html"><code>FileRequest</code></a></li><li><a href="../FileSystemDirectoryEntry.html"><code>FileSystemDirectoryEntry</code></a></li><li><a href="../FileSystemDirectoryEntrySync.html"><code>FileSystemDirectoryEntrySync</code></a></li><li><a href="../FileSystemDirectoryReader.html"><code>FileSystemDirectoryReader</code></a></li><li><a href="../FileSystemDirectoryReaderSync.html"><code>FileSystemDirectoryReaderSync</code></a></li><li><a href="../FileSystemEntry.html"><code>FileSystemEntry</code></a></li><li><a href="../FileSystemEntrySync.html"><code>FileSystemEntrySync</code></a></li><li><a href="../FileSystemFileEntry.html"><code>FileSystemFileEntry</code></a></li><li><a href="../FileSystemFileEntrySync.html"><code>FileSystemFileEntrySync</code></a></li><li><a href="../FileSystemFlags.html"><code>FileSystemFlags</code></a></li><li><a href="../FileSystem.html"><code>FileSystem</code></a></li><li><a href="../FileSystemSync.html"><code>FileSystemSync</code></a></li><li><a href="../HTMLInputElement.html"><code>HTMLInputElement</code></a></li><li><a href="../LocalFileSystem.html"><code>LocalFileSystem</code></a></li><li><a href="../LocalFileSystemSync.html"><code>LocalFileSystemSync</code></a></li><li><a href="../LockedFile.html"><code>LockedFile</code></a></li><li><a href="../Metadata.html"><code>Metadata</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Methods</strong></a><ol><li><a href="../Window/requestFileSystem.html"><code>Window.requestFileSystem()</code></a></li><li><a href="../Window/resolveLocalFileSystemURL.html"><code>Window.resolveLocalFileSystemURL()</code></a></li><li><a href="../WorkerGlobalScope/requestFileSystemSync.html"><code>WorkerGlobalScope.requestFileSystemSync()</code></a></li></ol></li><li data-default-state="open"><a href="#"><strong>Events</strong></a><ol><li><a href="../../Events/error.html"><code>error</code></a></li><li><a href="../../Events/writeend.html"><code>writeend</code></a></li></ol></li></ol>
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer id="main-footer"><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>© 2005-2017 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="https://developer.mozilla.org/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="https://developer.mozilla.org/docs/MDN/About">About MDN</a></li>
+            <li><a href="http://www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="http://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="http://github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="column-strip">
+        
+          
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/syntax-prism-min.js" charset="utf-8"></script><script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/main.69644b44d458.js" charset="utf-8"></script>
+    
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+    
+    
+    <script type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/wiki.d85ddd33511e.js" charset="utf-8" id="wikiscript"></script>
+
+  
+
+  
+
+  
+
+  
+    <script async="" type="text/javascript" src="../../../../../../developer.cdn.mozilla.net/static/build/js/newsletter.7cd3274169f2.js" charset="utf-8"></script>
+  
+
+
+
+<!-- Mirrored from developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API/Firefox_support by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 22:52:08 GMT -->
+</body></html>

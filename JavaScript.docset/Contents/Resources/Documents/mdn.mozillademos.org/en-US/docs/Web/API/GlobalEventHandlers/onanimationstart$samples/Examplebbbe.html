@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart$samples/Example?revision=1141845 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:48:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <link rel="stylesheet" type="text/css" href="../../../../../../../developer.mozilla.org/en-US/docs/Template_CustomSampleCSS2af1.css?raw=1" />
+        
+        <style type="text/css">
+            :root {
+  --boxwidth:50px;
+}
+
+.main {
+  width: 300px;
+  height:300px;
+  border: 1px solid black;
+}
+
+.button {
+  cursor: pointer;
+  width: 300px;
+  border: 1px solid black;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  color: white;
+  background-color: darkgreen;
+  font: 14px "Open Sans", "Arial", sans-serif;
+} 
+
+#text {
+  width: 46px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font: bold 1.4em "Lucida Grande", "Open Sans", sans-serif;
+} #box {
+  width: var(--boxwidth);
+  height: var(--boxwidth);
+  left: 0;
+  top: 0;
+  border: 1px solid #7788FF;
+  margin: 0;
+  position: relative;
+  background-color: #2233FF;
+  display: flex;
+  justify-content: center;
+} .slideAnimation {
+  animation: 5s ease-in-out 0s 1 slideBox;
+}
+
+@keyframes slideBox {
+  from {
+    left:0;
+    top:0;
+  }
+  to {
+    left:calc(100% - var(--boxwidth));
+    top:calc(100% - var(--boxwidth))
+  }
+}
+        </style>
+        
+    </head>
+    <body>
+        
+            <div class="main">
+  <div id="box">
+    <div id="text">Box</div>
+  </div>
+</div>
+
+<div class="button" id="play">
+  Play Animation
+</div>
+
+<pre id="log"></pre>
+        
+        
+            <script type="text/javascript">
+                function log(msg, event) {
+  let logBox = document.getElementById("log");
+ 
+  logBox.innerHTML += msg;
+ 
+  if (event) {
+    logBox.innerHTML += " <code>"+ event.animationName +
+        "</code> at time " + event.elapsedTime.toFixed(2) +
+        " seconds.";
+  }
+ 
+  logBox.innerHTML += "\n";
+}; let box = document.getElementById("box");
+
+box.onanimationstart = function(event) {
+  log("Animation started", event);
+}
+
+box.onanimationend = function(event) {
+  log("Animation stopped", event);
+}; document.getElementById("play").addEventListener("click", function(event) {
+  document.getElementById("box").className = "slideAnimation";
+  event.target.style.display = "none";
+}, false);
+            </script>
+        
+    </body>
+
+<!-- Mirrored from mdn.mozillademos.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart$samples/Example?revision=1141845 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Jan 2017 21:48:56 GMT -->
+</html>
