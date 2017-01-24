@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+<title>Sparse trees - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Document-structure.html#Document-structure" title="Document structure">
+<link rel="prev" href="Structure-editing.html#Structure-editing" title="Structure editing">
+<link rel="next" href="Plain-lists.html#Plain-lists" title="Plain lists">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Sparse-trees"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Plain-lists.html#Plain-lists">Plain lists</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Structure-editing.html#Structure-editing">Structure editing</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Document-structure.html#Document-structure">Document structure</a>
+<hr>
+</div>
+
+<h3 class="section">2.6 Sparse trees</h3>
+
+<p><a name="index-sparse-trees-171"></a><a name="index-trees_002c-sparse-172"></a><a name="index-folding_002c-sparse-trees-173"></a><a name="index-occur_002c-command-174"></a>
+<a name="index-org_002dshow_002dcontext_002ddetail-175"></a>An important feature of Org mode is the ability to construct <em>sparse
+trees</em> for selected information in an outline tree, so that the entire
+document is folded as much as possible, but the selected information is made
+visible along with the headline structure above it<a rel="footnote" href="Sparse-trees.html#fn-1" name="fnd-1"><sup>1</sup></a>.  Just try it out and you will see immediately how it
+works.
+
+   <p>Org mode contains several commands for creating such trees, all these
+commands can be accessed through a dispatcher:
+
+     
+<a name="index-C_002dc-_002f-176"></a>
+<a name="index-org_002dsparse_002dtree-177"></a>
+<dl><dt><kbd>C-c /</kbd> &nbsp;&nbsp;&nbsp;&nbsp;(<code>org-sparse-tree</code>)<dd>
+This prompts for an extra key to select a sparse-tree creating command. 
+<a name="index-C_002dc-_002f-r-178"></a><a name="index-C_002dc-_002f-_002f-179"></a><a name="index-org_002doccur-180"></a><br><dt><kbd>C-c / r</kbd>  <span class="roman">or</span>  <kbd>C-c / /</kbd> &nbsp;&nbsp;&nbsp;&nbsp;(<code>org-occur</code>)<dd>
+<a name="index-org_002dremove_002dhighlights_002dwith_002dchange-181"></a>Prompts for a regexp and shows a sparse tree with all matches.  If
+the match is in a headline, the headline is made visible.  If the match is in
+the body of an entry, headline and body are made visible.  In order to
+provide minimal context, also the full hierarchy of headlines above the match
+is shown, as well as the headline following the match.  Each match is also
+highlighted; the highlights disappear when the buffer is changed by an
+editing command<a rel="footnote" href="Sparse-trees.html#fn-2" name="fnd-2"><sup>2</sup></a>, or by pressing <kbd>C-c C-c</kbd>. 
+When called with a <kbd>C-u</kbd> prefix argument, previous highlights are kept,
+so several calls to this command can be stacked. 
+<a name="index-M_002dg-n-182"></a><a name="index-M_002dg-M_002dn-183"></a><a name="index-next_002derror-184"></a><br><dt><kbd>M-g n</kbd>  <span class="roman">or</span>  <kbd>M-g M-n</kbd> &nbsp;&nbsp;&nbsp;&nbsp;(<code>next-error</code>)<dd>
+Jump to the next sparse tree match in this buffer. 
+<a name="index-M_002dg-p-185"></a><a name="index-M_002dg-M_002dp-186"></a><a name="index-previous_002derror-187"></a><br><dt><kbd>M-g p</kbd>  <span class="roman">or</span>  <kbd>M-g M-p</kbd> &nbsp;&nbsp;&nbsp;&nbsp;(<code>previous-error</code>)<dd>
+Jump to the previous sparse tree match in this buffer. 
+</dl>
+
+<p class="noindent"><a name="index-org_002dagenda_002dcustom_002dcommands-188"></a>For frequently used sparse trees of specific search strings, you can
+use the option <code>org-agenda-custom-commands</code> to define fast
+keyboard access to specific sparse trees.  These commands will then be
+accessible through the agenda dispatcher (see <a href="Agenda-dispatcher.html#Agenda-dispatcher">Agenda dispatcher</a>). 
+For example:
+
+<pre class="lisp">     (setq org-agenda-custom-commands
+           '(("f" occur-tree "FIXME")))
+</pre>
+   <p class="noindent">will define the key <kbd>C-c a f</kbd> as a shortcut for creating
+a sparse tree matching the string &lsquo;<samp><span class="samp">FIXME</span></samp>&rsquo;.
+
+   <p>The other sparse tree commands select headings based on TODO keywords,
+tags, or properties and will be discussed later in this manual.
+
+   <p><a name="index-C_002dc-C_002de-C_002dv-189"></a><a name="index-printing-sparse-trees-190"></a><a name="index-visible-text_002c-printing-191"></a>To print a sparse tree, you can use the Emacs command
+<code>ps-print-buffer-with-faces</code> which does not print invisible parts of the
+document.  Or you can use <kbd>C-c C-e C-v</kbd> to export only the visible part
+of the document and print the resulting file.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Sparse-trees.html#fnd-1">1</a>]</small> See also the
+variable <code>org-show-context-detail</code> to decide how much context is shown
+around each match.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Sparse-trees.html#fnd-2">2</a>]</small> This depends on the option
+<code>org-remove-highlights-with-change</code></p>
+
+   <hr></div>
+
+   </body></html>
+

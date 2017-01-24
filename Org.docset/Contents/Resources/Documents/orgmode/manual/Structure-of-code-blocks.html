@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+<title>Structure of code blocks - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="next" href="Editing-source-code.html#Editing-source-code" title="Editing source code">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Structure-of-code-blocks"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Editing-source-code.html#Editing-source-code">Editing source code</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.1 Structure of code blocks</h3>
+
+<p><a name="index-code-block_002c-structure-2017"></a><a name="index-source-code_002c-block-structure-2018"></a><a name="index-g_t_0023_002bNAME-2019"></a><a name="index-g_t_0023_002bBEGIN_005fSRC-2020"></a>
+Org offers two ways to structure source code in Org documents: in a
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; block, and directly inline.  Both specifications are shown below.
+
+   <p>A &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block conforms to this structure:
+
+<pre class="example">     #+NAME: &lt;name&gt;
+     #+BEGIN_SRC &lt;language&gt; &lt;switches&gt; &lt;header arguments&gt;
+       &lt;body&gt;
+     #+END_SRC
+</pre>
+   <p>Org mode's templates system (see <a href="Easy-templates.html#Easy-templates">Easy templates</a>) speeds up creating
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks with just three keystrokes.  Do not be put-off by
+having to remember the source block syntax.  Org also works with other
+completion systems in Emacs, some of which predate Org and have custom
+domain-specific languages for defining templates.  Regular use of templates
+reduces errors, increases accuracy, and maintains consistency.
+
+   <p><a name="index-source-code_002c-inline-2021"></a>An inline code block conforms to this structure:
+
+<pre class="example">     src_&lt;language&gt;{&lt;body&gt;}
+</pre>
+   <p>or
+
+<pre class="example">     src_&lt;language&gt;[&lt;header arguments&gt;]{&lt;body&gt;}
+</pre>
+     <dl>
+<dt><code>#+NAME: &lt;name&gt;</code><dd>Optional.  Names the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block so it can be called, like a function,
+from other &lsquo;<samp><span class="samp">src</span></samp>&rsquo; blocks or inline blocks to evaluate or to capture the
+results.  Code from other blocks, other files, and from table formulas
+(see <a href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>) can use the name to reference a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block. 
+This naming serves the same purpose as naming Org tables.  Org mode requires
+unique names.  For duplicate names, Org mode's behavior is undefined. 
+<a name="index-g_t_0023_002bNAME-2022"></a><br><dt><code>#+BEGIN_SRC</code><br><dt><code>#+END_SRC</code><dd>Mandatory.  They mark the start and end of a block that Org requires.  The
+<code>#+BEGIN_SRC</code> line takes additional arguments, as described next. 
+<a name="index-begin-block_002c-end-block-2023"></a><br><dt><code>&lt;language&gt;</code><dd>Mandatory for live code blocks.  It is the identifier of the source code
+language in the block.  See <a href="Languages.html#Languages">Languages</a>, for identifiers of supported
+languages. 
+<a name="index-source-code_002c-language-2024"></a><br><dt><code>&lt;switches&gt;</code><dd>Optional.  Switches provide finer control of the code execution, export, and
+format (see the discussion of switches in <a href="Literal-examples.html#Literal-examples">Literal examples</a>)
+<a name="index-source-code_002c-switches-2025"></a><br><dt><code>&lt;header arguments&gt;</code><dd>Optional.  Heading arguments control many aspects of evaluation, export and
+tangling of code blocks (see <a href="Header-arguments.html#Header-arguments">Header arguments</a>).  Using Org's properties
+feature, header arguments can be selectively applied to the entire buffer or
+specific sub-trees of the Org document. 
+<br><dt><code>source code, header arguments</code><br><dt><code>&lt;body&gt;</code><dd>Source code in the dialect of the specified language identifier. 
+</dl>
+
+   </body></html>
+

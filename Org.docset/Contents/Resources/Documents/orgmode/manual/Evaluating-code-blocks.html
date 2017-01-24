@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+<title>Evaluating code blocks - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="prev" href="Extracting-source-code.html#Extracting-source-code" title="Extracting source code">
+<link rel="next" href="Library-of-Babel.html#Library-of-Babel" title="Library of Babel">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Evaluating-code-blocks"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Library-of-Babel.html#Library-of-Babel">Library of Babel</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Extracting-source-code.html#Extracting-source-code">Extracting source code</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.5 Evaluating code blocks</h3>
+
+<p><a name="index-code-block_002c-evaluating-2041"></a><a name="index-source-code_002c-evaluating-2042"></a><a name="index-g_t_0023_002bRESULTS-2043"></a>
+A note about security: With code evaluation comes the risk of harm.  Org
+safeguards by prompting for user's permission before executing any code in
+the source block.  To customize this safeguard (or disable it) see <a href="Code-evaluation-security.html#Code-evaluation-security">Code evaluation security</a>.
+
+   <p>Org captures the results of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block evaluation and inserts
+them in the Org file, right after the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  The insertion
+point is after a newline and the <code>#+RESULTS</code> label.  Org creates the
+<code>#+RESULTS</code> label if one is not already there.
+
+   <p>By default, Org enables only <code>emacs-lisp</code> &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks for
+execution.  See <a href="Languages.html#Languages">Languages</a> for identifiers to enable other languages.
+
+   <p><a name="index-C_002dc-C_002dc-2044"></a>Org provides many ways to execute &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks.  <kbd>C-c C-c</kbd> or
+<kbd>C-c C-v e</kbd> with the point on a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block<a rel="footnote" href="Evaluating-code-blocks.html#fn-1" name="fnd-1"><sup>1</sup></a> calls the
+<code>org-babel-execute-src-block</code> function, which executes the code in the
+block, collects the results, and inserts them in the buffer.
+
+   <p><a name="index-g_t_0023_002bCALL-2045"></a>By calling a named code block<a rel="footnote" href="Evaluating-code-blocks.html#fn-2" name="fnd-2"><sup>2</sup></a>
+from an Org mode buffer or a table.  Org can call the named &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code
+blocks from the current Org mode buffer or from the &ldquo;Library of Babel&rdquo;
+(see <a href="Library-of-Babel.html#Library-of-Babel">Library of Babel</a>).  Whether inline syntax or the <code>#+CALL:</code>
+syntax is used, the result is wrapped based on the variable
+<code>org-babel-inline-result-wrap</code>, which by default is set to <code>"=%s="</code>
+to produce verbatim text suitable for markup.
+
+   <p>The syntax for <code>#+CALL:</code> is
+
+<pre class="example">     #+CALL: &lt;name&gt;(&lt;arguments&gt;)
+     #+CALL: &lt;name&gt;[&lt;inside header arguments&gt;](&lt;arguments&gt;) &lt;end header arguments&gt;
+</pre>
+   <p>The syntax for inline named code block is
+
+<pre class="example">     ... call_&lt;name&gt;(&lt;arguments&gt;) ...
+     ... call_&lt;name&gt;[&lt;inside header arguments&gt;](&lt;arguments&gt;)[&lt;end header arguments&gt;] ...
+</pre>
+     <dl>
+<dt><code>&lt;name&gt;</code><dd>This is the name of the code block to be evaluated (see <a href="Structure-of-code-blocks.html#Structure-of-code-blocks">Structure of code blocks</a>). 
+<br><dt><code>&lt;arguments&gt;</code><dd>Org passes arguments to the code block using standard function call syntax. 
+For example, a <code>#+CALL:</code> line that passes &lsquo;<samp><span class="samp">4</span></samp>&rsquo; to a code block named
+<code>double</code>, which declares the header argument <code>:var n=2</code>, would be
+written as <code>#+CALL: double(n=4)</code>.  Note how this function call syntax is
+different from the header argument syntax. 
+<br><dt><code>&lt;inside header arguments&gt;</code><dd>Org passes inside header arguments to the named &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block using
+the header argument syntax.  Inside header arguments apply to code block
+evaluation.  For example, <code>[:results output]</code> collects results printed
+to <code>STDOUT</code> during code execution of that block.  Note how this header
+argument syntax is different from the function call syntax. 
+<br><dt><code>&lt;end header arguments&gt;</code><dd>End header arguments affect the results returned by the code block.  For
+example, <code>:results html</code> wraps the results in a <code>BEGIN_EXPORT html</code>
+block before inserting the results in the Org buffer.
+
+     <p>For more examples of header arguments for <code>#+CALL:</code> lines,
+see <a href="Arguments-in-function-calls.html#Arguments-in-function-calls">Arguments in function calls</a>. 
+</dl>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Evaluating-code-blocks.html#fnd-1">1</a>]</small> The option
+<code>org-babel-no-eval-on-ctrl-c-ctrl-c</code> can be used to remove code
+evaluation from the <kbd>C-c C-c</kbd> key binding.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Evaluating-code-blocks.html#fnd-2">2</a>]</small> Actually, the constructs call_&lt;name&gt;()
+and src_&lt;lang&gt;{} are not evaluated when they appear in a keyword line
+(i.e. lines starting with <code>#+KEYWORD:</code>, see <a href="In_002dbuffer-settings.html#In_002dbuffer-settings">In-buffer settings</a>).</p>
+
+   <hr></div>
+
+   </body></html>
+

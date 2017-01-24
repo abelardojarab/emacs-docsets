@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+<title>Macro replacement - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Exporting.html#Exporting" title="Exporting">
+<link rel="prev" href="Include-files.html#Include-files" title="Include files">
+<link rel="next" href="Comment-lines.html#Comment-lines" title="Comment lines">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Macro-replacement"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Comment-lines.html#Comment-lines">Comment lines</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Include-files.html#Include-files">Include files</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Exporting.html#Exporting">Exporting</a>
+<hr>
+</div>
+
+<h3 class="section">12.5 Macro replacement</h3>
+
+<p><a name="index-macro-replacement_002c-during-export-1639"></a><a name="index-g_t_0023_002bMACRO-1640"></a>
+You can define text snippets with
+
+<pre class="example">     #+MACRO: name   replacement text $1, $2 are arguments
+</pre>
+   <p class="noindent">which can be referenced
+<code>{{{name(arg1, arg2)}}}</code><a rel="footnote" href="Macro-replacement.html#fn-1" name="fnd-1"><sup>1</sup></a>.
+
+   <p>These references, called macros, can be inserted anywhere Org markup is
+recognized: paragraphs, headlines, verse blocks, tables cells and lists. 
+They can also be used in keywords accepting Org syntax, e.g.,
+<code>#+CAPTION</code>, <code>#+TITLE</code>, <code>#+AUTHOR</code>, <code>#+DATE</code> and some
+others, export back-end specific, ones.
+
+   <p>In addition to user-defined macros, a set of predefined macros can be used:
+
+     <dl>
+<dt><code>{{{title}}}</code><dt><code>{{{author}}}</code><dt><code>{{{email}}}</code><dd><a name="index-title_002c-macro-1641"></a><a name="index-author_002c-macro-1642"></a><a name="index-email_002c-macro-1643"></a>These macros are replaced with the information available at the time of
+export.
+
+     <br><dt><code>{{{date}}}</code><dt><code>{{{date(</code><var>FORMAT</var><code>)}}}</code><dd><a name="index-date_002c-macro-1644"></a>This macro refers to the <code>#+DATE</code> keyword. <var>FORMAT</var> is an optional
+argument to the <code>{{{date}}}</code> macro that will be used only if
+<code>#+DATE</code> is a single timestamp.  <var>FORMAT</var> should be a format string
+understood by <code>format-time-string</code>.
+
+     <br><dt><code>{{{time(</code><var>FORMAT</var><code>)}}}</code><dt><code>{{{modification-time(</code><var>FORMAT</var><code>, </code><var>VC</var><code>)}}}</code><dd><a name="index-time_002c-macro-1645"></a><a name="index-modification-time_002c-macro-1646"></a>These macros refer to the date and time when the document is exported and to
+the modification date and time, respectively.  <var>FORMAT</var> should be a
+format string understood by <code>format-time-string</code>.  If the second
+argument to the <code>modification-time</code> macro is non-<code>nil</code>, Org
+retrieves the information from the version control system, using
+<samp><span class="file">vc.el</span></samp>, instead of the file attributes.
+
+     <br><dt><code>{{{input-file}}}</code><dd><a name="index-input-file_002c-macro-1647"></a>This macro refers to the filename of the exported file, if any.
+
+     <br><dt><code>{{{property(</code><var>PROPERTY-NAME</var><code>)}}}</code><dt><code>{{{property(</code><var>PROPERTY-NAME</var><code>,</code><var>SEARCH-OPTION</var><code>)}}}</code><dd><a name="index-property_002c-macro-1648"></a>This macro returns the value of property <var>PROPERTY-NAME</var> in current
+entry.  If <var>SEARCH-OPTION</var> (see <a href="Search-options.html#Search-options">Search options</a>) refers to a remote
+entry, it will be used instead. 
+</dl>
+
+   <p>The surrounding brackets can be made invisible by setting
+<code>org-hide-macro-markers</code> non-<code>nil</code>.
+
+   <p>Macro expansion takes place during the very beginning of the export process.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Macro-replacement.html#fnd-1">1</a>]</small> Since commas separate arguments,
+commas within arguments have to be escaped with a backslash character. 
+Conversely, backslash characters before a comma, and only them, need to be
+escaped with another backslash character.</p>
+
+   <hr></div>
+
+   </body></html>
+

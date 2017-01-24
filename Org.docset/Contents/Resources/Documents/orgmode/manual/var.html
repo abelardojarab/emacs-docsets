@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+<title>var - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Specific-header-arguments.html#Specific-header-arguments" title="Specific header arguments">
+<link rel="next" href="results.html#results" title="results">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="var"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="results.html#results">results</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Specific-header-arguments.html#Specific-header-arguments">Specific header arguments</a>
+<hr>
+</div>
+
+<h5 class="subsubsection">14.8.2.1 <code>:var</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003avar_007d_002c-src-header-argument-2065"></a>Use <code>:var</code> for passing arguments to &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks.  The
+specifics of variables in &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks vary by the source language
+and are covered in the language-specific documentation.  The syntax for
+<code>:var</code>, however, is the same for all languages.  This includes declaring
+a variable, and assigning a default value.
+
+   <p>Arguments can take values as literals, or as references, or even as Emacs
+Lisp code (see <a href="var.html#var">Emacs Lisp evaluation of variables</a>).  References are
+names from the Org file from the lines <code>#+NAME:</code> or <code>#+RESULTS:</code>. 
+References can also refer to tables, lists, <code>#+BEGIN_EXAMPLE</code> blocks,
+other types of &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks, or the results of execution of
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks.
+
+   <p>For better performance, Org can cache results of evaluations.  But caching
+comes with severe limitations (see <a href="cache.html#cache">cache</a>).
+
+   <p>Argument values are indexed like arrays (see <a href="var.html#var">Indexable variable values</a>).
+
+   <p>The following syntax is used to pass arguments to &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks
+using the <code>:var</code> header argument.
+
+<pre class="example">     :var name=assign
+</pre>
+   <p>The <code>assign</code> is a literal value, such as a string &lsquo;<samp><span class="samp">"string"</span></samp>&rsquo;, a
+number &lsquo;<samp><span class="samp">9</span></samp>&rsquo;, a reference to a table, a list, a literal example, another
+code block (with or without arguments), or the results from evaluating a code
+block.
+
+   <p>Here are examples of passing values by reference:
+
+     <dl>
+<dt><dfn>table</dfn><dd>an Org mode table named with either a <code>#+NAME:</code> line
+
+     <pre class="example">          #+NAME: example-table
+          | 1 |
+          | 2 |
+          | 3 |
+          | 4 |
+          
+          #+NAME: table-length
+          #+BEGIN_SRC emacs-lisp :var table=example-table
+          (length table)
+          #+END_SRC
+          
+          #+RESULTS: table-length
+          : 4
+</pre>
+     <br><dt><dfn>list</dfn><dd>a simple list named with a <code>#+NAME:</code> line.  Note that only the top level
+list items are passed along.  Nested list items are ignored.
+
+     <pre class="example">          #+NAME: example-list
+            - simple
+              - not
+              - nested
+            - list
+          
+          #+BEGIN_SRC emacs-lisp :var x=example-list
+            (print x)
+          #+END_SRC
+          
+          #+RESULTS:
+          | simple | list |
+</pre>
+     <br><dt><dfn>code block without arguments</dfn><dd>a code block name (from the example above), as assigned by <code>#+NAME:</code>,
+optionally followed by parentheses
+
+     <pre class="example">          #+BEGIN_SRC emacs-lisp :var length=table-length()
+          (* 2 length)
+          #+END_SRC
+          
+          #+RESULTS:
+          : 8
+</pre>
+     <br><dt><dfn>code block with arguments</dfn><dd>a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block name, as assigned by <code>#+NAME:</code>, followed by
+parentheses and optional arguments passed within the parentheses following
+the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block name using standard function call syntax
+
+     <pre class="example">          #+NAME: double
+          #+BEGIN_SRC emacs-lisp :var input=8
+          (* 2 input)
+          #+END_SRC
+          
+          #+RESULTS: double
+          : 16
+          
+          #+NAME: squared
+          #+BEGIN_SRC emacs-lisp :var input=double(input=2)
+          (* input input)
+          #+END_SRC
+          
+          #+RESULTS: squared
+          : 4
+</pre>
+     <br><dt><dfn>literal example</dfn><dd>a literal example block named with a <code>#+NAME:</code> line
+
+     <pre class="example">          #+NAME: literal-example
+          #+BEGIN_EXAMPLE
+          A literal example
+          on two lines
+          #+END_EXAMPLE
+          
+          #+NAME: read-literal-example
+          #+BEGIN_SRC emacs-lisp :var x=literal-example
+            (concatenate 'string x " for you.")
+          #+END_SRC
+          
+          #+RESULTS: read-literal-example
+          : A literal example
+          : on two lines for you.
+          
+</pre>
+     </dl>
+
+<h5 class="subsubheading">Indexable variable values</h5>
+
+<p>Indexing variable values enables referencing portions of a variable.  Indexes
+are 0 based with negative values counting backwards from the end.  If an
+index is separated by <code>,</code>s then each subsequent section will index as
+the next dimension.  Note that this indexing occurs <em>before</em> other
+table-related header arguments are applied, such as <code>:hlines</code>,
+<code>:colnames</code> and <code>:rownames</code>.  The following example assigns the
+last cell of the first row the table <code>example-table</code> to the variable
+<code>data</code>:
+
+<pre class="example">     #+NAME: example-table
+     | 1 | a |
+     | 2 | b |
+     | 3 | c |
+     | 4 | d |
+     
+     #+BEGIN_SRC emacs-lisp :var data=example-table[0,-1]
+       data
+     #+END_SRC
+     
+     #+RESULTS:
+     : a
+</pre>
+   <p>Ranges of variable values can be referenced using two integers separated by a
+<code>:</code>, in which case the entire inclusive range is referenced.  For
+example the following assigns the middle three rows of <code>example-table</code>
+to <code>data</code>.
+
+<pre class="example">     #+NAME: example-table
+     | 1 | a |
+     | 2 | b |
+     | 3 | c |
+     | 4 | d |
+     | 5 | 3 |
+     
+     #+BEGIN_SRC emacs-lisp :var data=example-table[1:3]
+       data
+     #+END_SRC
+     
+     #+RESULTS:
+     | 2 | b |
+     | 3 | c |
+     | 4 | d |
+</pre>
+   <p>To pick the entire range, use an empty index, or the single character
+<code>*</code>.  <code>0:-1</code> does the same thing.  Example below shows how to
+reference the first column only.
+
+<pre class="example">     #+NAME: example-table
+     | 1 | a |
+     | 2 | b |
+     | 3 | c |
+     | 4 | d |
+     
+     #+BEGIN_SRC emacs-lisp :var data=example-table[,0]
+       data
+     #+END_SRC
+     
+     #+RESULTS:
+     | 1 | 2 | 3 | 4 |
+</pre>
+   <p>Index referencing can be used for tables and code blocks.  Index referencing
+can handle any number of dimensions.  Commas delimit multiple dimensions, as
+shown below.
+
+<pre class="example">     #+NAME: 3D
+     #+BEGIN_SRC emacs-lisp
+       '(((1  2  3)  (4  5  6)  (7  8  9))
+         ((10 11 12) (13 14 15) (16 17 18))
+         ((19 20 21) (22 23 24) (25 26 27)))
+     #+END_SRC
+     
+     #+BEGIN_SRC emacs-lisp :var data=3D[1,,1]
+       data
+     #+END_SRC
+     
+     #+RESULTS:
+     | 11 | 14 | 17 |
+</pre>
+   <h5 class="subsubheading">Emacs Lisp evaluation of variables</h5>
+
+<p>Emacs lisp code can set the values for variables.  To differentiate a value
+from lisp code, Org interprets any value starting with <code>(</code>, <code>[</code>,
+<code>'</code> or <code>`</code> as Emacs Lisp code.  The result of evaluating that code
+is then assigned to the value of that variable.  The following example shows
+how to reliably query and pass file name of the Org mode buffer to a code
+block using headers.  We need reliability here because the file's name could
+change once the code in the block starts executing.
+
+<pre class="example">     #+BEGIN_SRC sh :var filename=(buffer-file-name) :exports both
+       wc -w $filename
+     #+END_SRC
+</pre>
+   <p>Note that values read from tables and lists will not be mistakenly evaluated
+as Emacs Lisp code, as illustrated in the following example.
+
+<pre class="example">     #+NAME: table
+     | (a b c) |
+     
+     #+HEADER: :var data=table[0,0]
+     #+BEGIN_SRC perl
+       $data
+     #+END_SRC
+     
+     #+RESULTS:
+     : (a b c)
+</pre>
+   </body></html>
+

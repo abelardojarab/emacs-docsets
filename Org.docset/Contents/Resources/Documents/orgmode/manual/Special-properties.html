@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+<title>Special properties - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Properties-and-columns.html#Properties-and-columns" title="Properties and columns">
+<link rel="prev" href="Property-syntax.html#Property-syntax" title="Property syntax">
+<link rel="next" href="Property-searches.html#Property-searches" title="Property searches">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Special-properties"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Property-searches.html#Property-searches">Property searches</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Property-syntax.html#Property-syntax">Property syntax</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Properties-and-columns.html#Properties-and-columns">Properties and columns</a>
+<hr>
+</div>
+
+<h3 class="section">7.2 Special properties</h3>
+
+<p><a name="index-properties_002c-special-718"></a>
+Special properties provide an alternative access method to Org mode features,
+like the TODO state or the priority of an entry, discussed in the previous
+chapters.  This interface exists so that you can include these states in
+a column view (see <a href="Column-view.html#Column-view">Column view</a>), or to use them in queries.  The
+following property names are special and should not be used as keys in the
+properties drawer:
+
+   <p><a name="index-property_002c-special_002c-ALLTAGS-719"></a><a name="index-property_002c-special_002c-BLOCKED-720"></a><a name="index-property_002c-special_002c-CLOCKSUM-721"></a><a name="index-property_002c-special_002c-CLOCKSUM_005fT-722"></a><a name="index-property_002c-special_002c-CLOSED-723"></a><a name="index-property_002c-special_002c-DEADLINE-724"></a><a name="index-property_002c-special_002c-FILE-725"></a><a name="index-property_002c-special_002c-ITEM-726"></a><a name="index-property_002c-special_002c-PRIORITY-727"></a><a name="index-property_002c-special_002c-SCHEDULED-728"></a><a name="index-property_002c-special_002c-TAGS-729"></a><a name="index-property_002c-special_002c-TIMESTAMP-730"></a><a name="index-property_002c-special_002c-TIMESTAMP_005fIA-731"></a><a name="index-property_002c-special_002c-TODO-732"></a>
+<pre class="example">     ALLTAGS      <span class="roman">All tags, including inherited ones.</span>
+     BLOCKED      <span class="roman">"t" if task is currently blocked by children or siblings.</span>
+     CLOCKSUM     <span class="roman">The sum of CLOCK intervals in the subtree.  </span><code>org-clock-sum</code>
+                  <span class="roman">must be run first to compute the values in the current buffer.</span>
+     CLOCKSUM_T   <span class="roman">The sum of CLOCK intervals in the subtree for today.</span>
+                  <code>org-clock-sum-today</code><span class="roman"> must be run first to compute the</span>
+                  <span class="roman">values in the current buffer.</span>
+     CLOSED       <span class="roman">When was this entry closed?</span>
+     DEADLINE     <span class="roman">The deadline time string, without the angular brackets.</span>
+     FILE         <span class="roman">The filename the entry is located in.</span>
+     ITEM         <span class="roman">The headline of the entry.</span>
+     PRIORITY     <span class="roman">The priority of the entry, a string with a single letter.</span>
+     SCHEDULED    <span class="roman">The scheduling timestamp, without the angular brackets.</span>
+     TAGS         <span class="roman">The tags defined directly in the headline.</span>
+     TIMESTAMP    <span class="roman">The first keyword-less timestamp in the entry.</span>
+     TIMESTAMP_IA <span class="roman">The first inactive timestamp in the entry.</span>
+     TODO         <span class="roman">The TODO keyword of the entry.</span>
+</pre>
+   </body></html>
+

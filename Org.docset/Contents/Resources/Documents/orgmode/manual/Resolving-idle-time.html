@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+<title>Resolving idle time - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Clocking-work-time.html#Clocking-work-time" title="Clocking work time">
+<link rel="prev" href="The-clock-table.html#The-clock-table" title="The clock table">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Resolving-idle-time"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-clock-table.html#The-clock-table">The clock table</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Clocking-work-time.html#Clocking-work-time">Clocking work time</a>
+<hr>
+</div>
+
+<h4 class="subsection">8.4.3 Resolving idle time and continuous clocking</h4>
+
+<h5 class="subsubheading">Resolving idle time</h5>
+
+<p><a name="index-resolve-idle-time-943"></a><a name="index-org_002dclock_002dx11idle_002dprogram_002dname-944"></a>
+<a name="index-idle_002c-resolve_002c-dangling-945"></a>If you clock in on a work item, and then walk away from your
+computer&mdash;perhaps to take a phone call&mdash;you often need to &ldquo;resolve&rdquo; the
+time you were away by either subtracting it from the current clock, or
+applying it to another one.
+
+   <p><a name="index-org_002dclock_002didle_002dtime-946"></a>By customizing the variable <code>org-clock-idle-time</code> to some integer, such
+as 10 or 15, Emacs can alert you when you get back to your computer after
+being idle for that many minutes<a rel="footnote" href="Resolving-idle-time.html#fn-1" name="fnd-1"><sup>1</sup></a>, and ask what you want to do with the idle time. 
+There will be a question waiting for you when you get back, indicating how
+much idle time has passed (constantly updated with the current amount), as
+well as a set of choices to correct the discrepancy:
+
+     <dl>
+<dt><kbd>k</kbd><dd>To keep some or all of the minutes and stay clocked in, press <kbd>k</kbd>.  Org
+will ask how many of the minutes to keep.  Press &lt;RET&gt; to keep them all,
+effectively changing nothing, or enter a number to keep that many minutes. 
+<br><dt><kbd>K</kbd><dd>If you use the shift key and press <kbd>K</kbd>, it will keep however many minutes
+you request and then immediately clock out of that task.  If you keep all of
+the minutes, this is the same as just clocking out of the current task. 
+<br><dt><kbd>s</kbd><dd>To keep none of the minutes, use <kbd>s</kbd> to subtract all the away time from
+the clock, and then check back in from the moment you returned. 
+<br><dt><kbd>S</kbd><dd>To keep none of the minutes and just clock out at the start of the away time,
+use the shift key and press <kbd>S</kbd>.  Remember that using shift will always
+leave you clocked out, no matter which option you choose. 
+<br><dt><kbd>C</kbd><dd>To cancel the clock altogether, use <kbd>C</kbd>.  Note that if instead of
+canceling you subtract the away time, and the resulting clock amount is less
+than a minute, the clock will still be canceled rather than clutter up the
+log with an empty entry. 
+</dl>
+
+   <p>What if you subtracted those away minutes from the current clock, and now
+want to apply them to a new clock?  Simply clock in to any task immediately
+after the subtraction.  Org will notice that you have subtracted time &ldquo;on
+the books&rdquo;, so to speak, and will ask if you want to apply those minutes to
+the next task you clock in on.
+
+   <p>There is one other instance when this clock resolution magic occurs.  Say you
+were clocked in and hacking away, and suddenly your cat chased a mouse who
+scared a hamster that crashed into your UPS's power button!  You suddenly
+lose all your buffers, but thanks to auto-save you still have your recent Org
+mode changes, including your last clock in.
+
+   <p>If you restart Emacs and clock into any task, Org will notice that you have a
+dangling clock which was never clocked out from your last session.  Using
+that clock's starting time as the beginning of the unaccounted-for period,
+Org will ask how you want to resolve that time.  The logic and behavior is
+identical to dealing with away time due to idleness; it is just happening due
+to a recovery event rather than a set amount of idle time.
+
+   <p>You can also check all the files visited by your Org agenda for dangling
+clocks at any time using <kbd>M-x org-resolve-clocks RET</kbd> (or <kbd>C-c C-x C-z</kbd>).
+
+<h5 class="subsubheading">Continuous clocking</h5>
+
+<p><a name="index-continuous-clocking-947"></a><a name="index-org_002dclock_002dcontinuously-948"></a>
+You may want to start clocking from the time when you clocked out the
+previous task.  To enable this systematically, set <code>org-clock-continuously</code>
+to <code>t</code>.  Each time you clock in, Org retrieves the clock-out time of the
+last clocked entry for this session, and start the new clock from there.
+
+   <p>If you only want this from time to time, use three universal prefix arguments
+with <code>org-clock-in</code> and two <kbd>C-u C-u</kbd> with <code>org-clock-in-last</code>.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Resolving-idle-time.html#fnd-1">1</a>]</small> On computers using Mac OS X,
+idleness is based on actual user idleness, not just Emacs' idle time.  For
+X11, you can install a utility program <samp><span class="file">x11idle.c</span></samp>, available in the
+<code>contrib/scripts</code> directory of the Org git distribution, or install the
+<samp><span class="file">xprintidle</span></samp> package and set it to the variable
+<code>org-clock-x11idle-program-name</code> if you are running Debian, to get the
+same general treatment of idleness.  On other systems, idle time refers to
+Emacs idle time only.</p>
+
+   <hr></div>
+
+   </body></html>
+

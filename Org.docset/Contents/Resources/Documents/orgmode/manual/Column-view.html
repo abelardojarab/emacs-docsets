@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+<title>Column view - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Properties-and-columns.html#Properties-and-columns" title="Properties and columns">
+<link rel="prev" href="Property-inheritance.html#Property-inheritance" title="Property inheritance">
+<link rel="next" href="Property-API.html#Property-API" title="Property API">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Column-view"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Property-API.html#Property-API">Property API</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Property-inheritance.html#Property-inheritance">Property inheritance</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Properties-and-columns.html#Properties-and-columns">Properties and columns</a>
+<hr>
+</div>
+
+<h3 class="section">7.5 Column view</h3>
+
+<p>A great way to view and edit properties in an outline tree is
+<em>column view</em>.  In column view, each outline node is turned into a
+table row.  Columns in this table provide access to properties of the
+entries.  Org mode implements columns by overlaying a tabular structure
+over the headline of each item.  While the headlines have been turned
+into a table row, you can still change the visibility of the outline
+tree.  For example, you get a compact table by switching to CONTENTS
+view (<kbd>S-&lt;TAB&gt; S-&lt;TAB&gt;</kbd>, or simply <kbd>c</kbd> while column view
+is active), but you can still open, read, and edit the entry below each
+headline.  Or, you can switch to column view after executing a sparse
+tree command and in this way get a table only for the selected items. 
+Column view also works in agenda buffers (see <a href="Agenda-views.html#Agenda-views">Agenda views</a>) where
+queries have collected selected items, possibly from a number of files.
+
+<ul class="menu">
+<li><a accesskey="1" href="Defining-columns.html#Defining-columns">Defining columns</a>:             The COLUMNS format property
+<li><a accesskey="2" href="Using-column-view.html#Using-column-view">Using column view</a>:            How to create and use column view
+<li><a accesskey="3" href="Capturing-column-view.html#Capturing-column-view">Capturing column view</a>:        A dynamic block for column view
+</ul>
+
+   </body></html>
+

@@ -1,0 +1,238 @@
+<html lang="en">
+<head>
+<title>Weekly/daily agenda - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Built_002din-agenda-views.html#Built_002din-agenda-views" title="Built-in agenda views">
+<link rel="next" href="Global-TODO-list.html#Global-TODO-list" title="Global TODO list">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Weekly%2fdaily-agenda"></a>
+<a name="Weekly_002fdaily-agenda"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Global-TODO-list.html#Global-TODO-list">Global TODO list</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Built_002din-agenda-views.html#Built_002din-agenda-views">Built-in agenda views</a>
+<hr>
+</div>
+
+<h4 class="subsection">10.3.1 The weekly/daily agenda</h4>
+
+<p><a name="index-agenda-1114"></a><a name="index-weekly-agenda-1115"></a><a name="index-daily-agenda-1116"></a>
+The purpose of the weekly/daily <em>agenda</em> is to act like a page of a
+paper agenda, showing all the tasks for the current week or day.
+
+     
+<a name="index-org_002dagenda_002c-command-1117"></a>
+<a name="index-C_002dc-a-a-1118"></a>
+<a name="index-org_002dagenda_002dlist-1119"></a>
+<dl><dt><kbd>C-c a a &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-agenda-list</code><kbd>)</kbd><dd>
+Compile an agenda for the current week from a list of Org files.  The agenda
+shows the entries for each day.  With a numeric prefix<a rel="footnote" href="Weekly_002fdaily-agenda.html#fn-1" name="fnd-1"><sup>1</sup></a>  (like <kbd>C-u 2 1
+C-c a a</kbd>) you may set the number of days to be displayed. 
+</dl>
+
+   <p><a name="index-org_002dagenda_002dspan-1120"></a><a name="index-org_002dagenda_002dndays-1121"></a><a name="index-org_002dagenda_002dstart_002dday-1122"></a><a name="index-org_002dagenda_002dstart_002don_002dweekday-1123"></a>The default number of days displayed in the agenda is set by the variable
+<code>org-agenda-span</code> (or the obsolete <code>org-agenda-ndays</code>).  This
+variable can be set to any number of days you want to see by default in the
+agenda, or to a span name, such as <code>day</code>, <code>week</code>, <code>month</code> or
+<code>year</code>.  For weekly agendas, the default is to start on the previous
+monday (see <code>org-agenda-start-on-weekday</code>).  You can also set the start
+date using a date shift: <code>(setq org-agenda-start-day "+10d")</code> will
+start the agenda ten days from today in the future.
+
+   <p>Remote editing from the agenda buffer means, for example, that you can
+change the dates of deadlines and appointments from the agenda buffer. 
+The commands available in the Agenda buffer are listed in <a href="Agenda-commands.html#Agenda-commands">Agenda commands</a>.
+
+<h5 class="subsubheading">Calendar/Diary integration</h5>
+
+<p><a name="index-calendar-integration-1124"></a><a name="index-diary-integration-1125"></a>
+Emacs contains the calendar and diary by Edward M. Reingold.  The
+calendar displays a three-month calendar with holidays from different
+countries and cultures.  The diary allows you to keep track of
+anniversaries, lunar phases, sunrise/set, recurrent appointments
+(weekly, monthly) and more.  In this way, it is quite complementary to
+Org.  It can be very useful to combine output from Org with
+the diary.
+
+   <p>In order to include entries from the Emacs diary into Org mode's
+agenda, you only need to customize the variable
+
+<pre class="lisp">     (setq org-agenda-include-diary t)
+</pre>
+   <p class="noindent">After that, everything will happen automatically.  All diary
+entries including holidays, anniversaries, etc., will be included in the
+agenda buffer created by Org mode.  &lt;SPC&gt;, &lt;TAB&gt;, and
+&lt;RET&gt; can be used from the agenda buffer to jump to the diary
+file in order to edit existing diary entries.  The <kbd>i</kbd> command to
+insert new entries for the current date works in the agenda buffer, as
+well as the commands <kbd>S</kbd>, <kbd>M</kbd>, and <kbd>C</kbd> to display
+Sunrise/Sunset times, show lunar phases and to convert to other
+calendars, respectively.  <kbd>c</kbd> can be used to switch back and forth
+between calendar and agenda.
+
+   <p>If you are using the diary only for sexp entries and holidays, it is
+faster to not use the above setting, but instead to copy or even move
+the entries into an Org file.  Org mode evaluates diary-style sexp
+entries, and does it faster because there is no overhead for first
+creating the diary display.  Note that the sexp entries must start at
+the left margin, no whitespace is allowed before them.  For example,
+the following segment of an Org file will be processed and entries
+will be made in the agenda:
+
+<pre class="example">     * Holidays
+       :PROPERTIES:
+       :CATEGORY: Holiday
+       :END:
+     %%(org-calendar-holiday)   ; special function for holiday names
+     
+     * Birthdays
+       :PROPERTIES:
+       :CATEGORY: Ann
+       :END:
+     %%(org-anniversary 1956  5 14)<a rel="footnote" href="Weekly_002fdaily-agenda.html#fn-2" name="fnd-2"><sup>2</sup></a> Arthur Dent is %d years old
+     %%(org-anniversary 1869 10  2) Mahatma Gandhi would be %d years old
+</pre>
+   <h5 class="subsubheading">Anniversaries from BBDB</h5>
+
+<p><a name="index-BBDB_002c-anniversaries-1126"></a><a name="index-anniversaries_002c-from-BBDB-1127"></a>
+If you are using the Big Brothers Database to store your contacts, you will
+very likely prefer to store anniversaries in BBDB rather than in a
+separate Org or diary file.  Org supports this and will show BBDB
+anniversaries as part of the agenda.  All you need to do is to add the
+following to one of your agenda files:
+
+<pre class="example">     * Anniversaries
+       :PROPERTIES:
+       :CATEGORY: Anniv
+       :END:
+     %%(org-bbdb-anniversaries)
+</pre>
+   <p>You can then go ahead and define anniversaries for a BBDB record.  Basically,
+you need to press <kbd>C-o anniversary &lt;RET&gt;</kbd> with the cursor in a BBDB
+record and then add the date in the format <code>YYYY-MM-DD</code> or <code>MM-DD</code>,
+followed by a space and the class of the anniversary (&lsquo;<samp><span class="samp">birthday</span></samp>&rsquo; or
+&lsquo;<samp><span class="samp">wedding</span></samp>&rsquo;, or a format string).  If you omit the class, it will default to
+&lsquo;<samp><span class="samp">birthday</span></samp>&rsquo;.  Here are a few examples, the header for the file
+<samp><span class="file">org-bbdb.el</span></samp> contains more detailed information.
+
+<pre class="example">     1973-06-22
+     06-22
+     1955-08-02 wedding
+     2008-04-14 %s released version 6.01 of org mode, %d years ago
+</pre>
+   <p>After a change to BBDB, or for the first agenda display during an Emacs
+session, the agenda display will suffer a short delay as Org updates its
+hash with anniversaries.  However, from then on things will be very fast&mdash;much
+faster in fact than a long list of &lsquo;<samp><span class="samp">%%(diary-anniversary)</span></samp>&rsquo; entries
+in an Org or Diary file.
+
+   <p>If you would like to see upcoming anniversaries with a bit of forewarning,
+you can use the following instead:
+
+<pre class="example">     * Anniversaries
+       :PROPERTIES:
+       :CATEGORY: Anniv
+       :END:
+     %%(org-bbdb-anniversaries-future 3)
+</pre>
+   <p>That will give you three days' warning: on the anniversary date itself and the
+two days prior. The argument is optional: if omitted, it defaults to 7.
+
+<h5 class="subsubheading">Appointment reminders</h5>
+
+<p><a name="index-g_t_0040file_007bappt_002eel_007d-1128"></a><a name="index-appointment-reminders-1129"></a><a name="index-appointment-1130"></a><a name="index-reminders-1131"></a>
+Org can interact with Emacs appointments notification facility.  To add the
+appointments of your agenda files, use the command <code>org-agenda-to-appt</code>. 
+This command lets you filter through the list of your appointments and add
+only those belonging to a specific category or matching a regular expression. 
+It also reads a <code>APPT_WARNTIME</code> property which will then override the
+value of <code>appt-message-warning-time</code> for this appointment.  See the
+docstring for details.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Weekly_002fdaily-agenda.html#fnd-1">1</a>]</small> For backward
+compatibility, the universal prefix <kbd>C-u</kbd> causes all TODO entries to be
+listed before the agenda.  This feature is deprecated, use the dedicated TODO
+list, or a block agenda instead (see <a href="Block-agenda.html#Block-agenda">Block agenda</a>).</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Weekly_002fdaily-agenda.html#fnd-2">2</a>]</small> <code>org-anniversary</code> is just like <code>diary-anniversary</code>, but the argument order is always according to ISO and therefore independent of the value of <code>calendar-date-style</code>.</p>
+
+   <hr></div>
+
+   </body></html>
+

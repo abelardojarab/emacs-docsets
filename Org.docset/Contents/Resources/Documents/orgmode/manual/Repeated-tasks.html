@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+<title>Repeated tasks - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Deadlines-and-scheduling.html#Deadlines-and-scheduling" title="Deadlines and scheduling">
+<link rel="prev" href="Inserting-deadline_002fschedule.html#Inserting-deadline_002fschedule" title="Inserting deadline/schedule">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Repeated-tasks"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Inserting-deadline_002fschedule.html#Inserting-deadline_002fschedule">Inserting deadline/schedule</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Deadlines-and-scheduling.html#Deadlines-and-scheduling">Deadlines and scheduling</a>
+<hr>
+</div>
+
+<h4 class="subsection">8.3.2 Repeated tasks</h4>
+
+<p><a name="index-tasks_002c-repeated-889"></a><a name="index-repeated-tasks-890"></a>
+Some tasks need to be repeated again and again.  Org mode helps to
+organize such tasks using a so-called repeater in a DEADLINE, SCHEDULED,
+or plain timestamp.  In the following example
+<pre class="example">     ** TODO Pay the rent
+        DEADLINE: &lt;2005-10-01 Sat +1m&gt;
+</pre>
+   <p class="noindent">the <code>+1m</code> is a repeater; the intended interpretation is that the task
+has a deadline on &lt;2005-10-01&gt; and repeats itself every (one) month starting
+from that time.  You can use yearly, monthly, weekly, daily and hourly repeat
+cookies by using the <code>y/w/m/d/h</code> letters.  If you need both a repeater
+and a special warning period in a deadline entry, the repeater should come
+first and the warning period last: <code>DEADLINE: &lt;2005-10-01 Sat +1m -3d&gt;</code>.
+
+   <p><a name="index-org_002dtodo_002drepeat_002dto_002dstate-891"></a>Deadlines and scheduled items produce entries in the agenda when they are
+over-due, so it is important to be able to mark such an entry as completed
+once you have done so.  When you mark a DEADLINE or a SCHEDULE with the TODO
+keyword DONE, it will no longer produce entries in the agenda.  The problem
+with this is, however, that then also the <em>next</em> instance of the
+repeated entry will not be active.  Org mode deals with this in the following
+way: When you try to mark such an entry DONE (using <kbd>C-c C-t</kbd>), it will
+shift the base date of the repeating timestamp by the repeater interval, and
+immediately set the entry state back to TODO<a rel="footnote" href="Repeated-tasks.html#fn-1" name="fnd-1"><sup>1</sup></a>.  In the example above, setting the state to DONE would actually
+switch the date like this:
+
+<pre class="example">     ** TODO Pay the rent
+        DEADLINE: &lt;2005-11-01 Tue +1m&gt;
+</pre>
+   <p>To mark a task with a repeater as <code>DONE</code>, use <kbd>C-- 1 C-c C-t</kbd>
+(i.e., <code>org-todo</code> with a numeric prefix argument of -1.)
+
+   <p><a name="index-org_002dlog_002drepeat-892"></a>A timestamp<a rel="footnote" href="Repeated-tasks.html#fn-2" name="fnd-2"><sup>2</sup></a> will be added under the deadline, to keep
+a record that you actually acted on the previous instance of this deadline.
+
+   <p>As a consequence of shifting the base date, this entry will no longer be
+visible in the agenda when checking past dates, but all future instances
+will be visible.
+
+   <p>With the &lsquo;<samp><span class="samp">+1m</span></samp>&rsquo; cookie, the date shift will always be exactly one
+month.  So if you have not paid the rent for three months, marking this
+entry DONE will still keep it as an overdue deadline.  Depending on the
+task, this may not be the best way to handle it.  For example, if you
+forgot to call your father for 3 weeks, it does not make sense to call
+him 3 times in a single day to make up for it.  Finally, there are tasks
+like changing batteries which should always repeat a certain time
+<i>after</i> the last time you did it.  For these tasks, Org mode has
+special repeaters  &lsquo;<samp><span class="samp">++</span></samp>&rsquo; and &lsquo;<samp><span class="samp">.+</span></samp>&rsquo;.  For example:
+
+<pre class="example">     ** TODO Call Father
+        DEADLINE: &lt;2008-02-10 Sun ++1w&gt;
+        Marking this DONE will shift the date by at least one week,
+        but also by as many weeks as it takes to get this date into
+        the future.  However, it stays on a Sunday, even if you called
+        and marked it done on Saturday.
+     ** TODO Empty kitchen trash
+        DEADLINE: &lt;2008-02-08 Fri 20:00 ++1d&gt;
+        Marking this DONE will shift the date by at least one day, and
+        also by as many days as it takes to get the timestamp into the
+        future.  Since there is a time in the timestamp, the next
+        deadline in the future will be on today's date if you
+        complete the task before 20:00.
+     ** TODO Check the batteries in the smoke detectors
+        DEADLINE: &lt;2005-11-01 Tue .+1m&gt;
+        Marking this DONE will shift the date to one month after
+        today.
+</pre>
+   <p><a name="index-org_002dagenda_002dskip_002dscheduled_002dif_002ddeadline_002dis_002dshown-893"></a>You may have both scheduling and deadline information for a specific task. 
+If the repeater is set for the scheduling information only, you probably want
+the repeater to be ignored after the deadline.  If so, set the variable
+<code>org-agenda-skip-scheduled-if-deadline-is-shown</code> to
+<code>repeated-after-deadline</code>.  However, any scheduling information without
+a repeater is no longer relevant once the task is done, and thus, removed
+upon repeating the task.  If you want both scheduling and deadline
+information to repeat after the same interval, set the same repeater for both
+timestamps.
+
+   <p>An alternative to using a repeater is to create a number of copies of a task
+subtree, with dates shifted in each copy.  The command <kbd>C-c C-x c</kbd> was
+created for this purpose, it is described in <a href="Structure-editing.html#Structure-editing">Structure editing</a>.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Repeated-tasks.html#fnd-1">1</a>]</small> In fact, the target
+state is taken from, in this sequence, the <code>REPEAT_TO_STATE</code> property or
+the variable <code>org-todo-repeat-to-state</code>.  If neither of these is
+specified, the target state defaults to the first state of the TODO state
+sequence.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Repeated-tasks.html#fnd-2">2</a>]</small> You can change this using the option
+<code>org-log-repeat</code>, or the <code>#+STARTUP</code> options <code>logrepeat</code>,
+<code>lognoterepeat</code>, and <code>nologrepeat</code>.  With <code>lognoterepeat</code>, you
+will also be prompted for a note.</p>
+
+   <hr></div>
+
+   </body></html>
+

@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+<title>Key bindings and useful functions - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="prev" href="Noweb-reference-syntax.html#Noweb-reference-syntax" title="Noweb reference syntax">
+<link rel="next" href="Batch-execution.html#Batch-execution" title="Batch execution">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Key-bindings-and-useful-functions"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Batch-execution.html#Batch-execution">Batch execution</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.11 Key bindings and useful functions</h3>
+
+<p><a name="index-code-block_002c-key-bindings-2102"></a>
+Many common Org mode key sequences are re-bound depending on the context.
+
+   <p>Active key bindings in code blocks:
+
+   <p><table summary=""><a name="index-C_002dc-C_002dc-2103"></a><tr align="left"><td valign="top" width="25%"><kbd>C-c C-c</kbd> </td><td valign="top" width="75%"><code>org-babel-execute-src-block</code>
+<a name="index-C_002dc-C_002do-2104"></a><br></td></tr><tr align="left"><td valign="top" width="25%"><kbd>C-c C-o</kbd> </td><td valign="top" width="75%"><code>org-babel-open-src-block-result</code>
+<a name="index-M_002dup-2105"></a><br></td></tr><tr align="left"><td valign="top" width="25%"><kbd>M-&lt;up&gt;</kbd>    </td><td valign="top" width="75%"><code>org-babel-load-in-session</code>
+<a name="index-M_002ddown-2106"></a><br></td></tr><tr align="left"><td valign="top" width="25%"><kbd>M-&lt;down&gt;</kbd>  </td><td valign="top" width="75%"><code>org-babel-switch-to-session</code>
+   <br></td></tr></table>
+
+   <p>Active key bindings in Org mode buffer:
+
+   <p><table summary=""><a name="index-C_002dc-C_002dv-p-2107"></a><a name="index-C_002dc-C_002dv-C_002dp-2108"></a><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v p</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-p</kbd> </td><td valign="top" width="55%"><code>org-babel-previous-src-block</code>
+<a name="index-C_002dc-C_002dv-n-2109"></a><a name="index-C_002dc-C_002dv-C_002dn-2110"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v n</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-n</kbd> </td><td valign="top" width="55%"><code>org-babel-next-src-block</code>
+<a name="index-C_002dc-C_002dv-e-2111"></a><a name="index-C_002dc-C_002dv-C_002de-2112"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v e</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-e</kbd> </td><td valign="top" width="55%"><code>org-babel-execute-maybe</code>
+<a name="index-C_002dc-C_002dv-o-2113"></a><a name="index-C_002dc-C_002dv-C_002do-2114"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v o</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-o</kbd> </td><td valign="top" width="55%"><code>org-babel-open-src-block-result</code>
+<a name="index-C_002dc-C_002dv-v-2115"></a><a name="index-C_002dc-C_002dv-C_002dv-2116"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v v</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-v</kbd> </td><td valign="top" width="55%"><code>org-babel-expand-src-block</code>
+<a name="index-C_002dc-C_002dv-u-2117"></a><a name="index-C_002dc-C_002dv-C_002du-2118"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v u</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-u</kbd> </td><td valign="top" width="55%"><code>org-babel-goto-src-block-head</code>
+<a name="index-C_002dc-C_002dv-g-2119"></a><a name="index-C_002dc-C_002dv-C_002dg-2120"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v g</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-g</kbd> </td><td valign="top" width="55%"><code>org-babel-goto-named-src-block</code>
+<a name="index-C_002dc-C_002dv-r-2121"></a><a name="index-C_002dc-C_002dv-C_002dr-2122"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v r</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-r</kbd> </td><td valign="top" width="55%"><code>org-babel-goto-named-result</code>
+<a name="index-C_002dc-C_002dv-b-2123"></a><a name="index-C_002dc-C_002dv-C_002db-2124"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v b</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-b</kbd> </td><td valign="top" width="55%"><code>org-babel-execute-buffer</code>
+<a name="index-C_002dc-C_002dv-s-2125"></a><a name="index-C_002dc-C_002dv-C_002ds-2126"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v s</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-s</kbd> </td><td valign="top" width="55%"><code>org-babel-execute-subtree</code>
+<a name="index-C_002dc-C_002dv-d-2127"></a><a name="index-C_002dc-C_002dv-C_002dd-2128"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v d</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-d</kbd> </td><td valign="top" width="55%"><code>org-babel-demarcate-block</code>
+<a name="index-C_002dc-C_002dv-t-2129"></a><a name="index-C_002dc-C_002dv-C_002dt-2130"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v t</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-t</kbd> </td><td valign="top" width="55%"><code>org-babel-tangle</code>
+<a name="index-C_002dc-C_002dv-f-2131"></a><a name="index-C_002dc-C_002dv-C_002df-2132"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v f</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-f</kbd> </td><td valign="top" width="55%"><code>org-babel-tangle-file</code>
+<a name="index-C_002dc-C_002dv-c-2133"></a><a name="index-C_002dc-C_002dv-C_002dc-2134"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v c</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-c</kbd> </td><td valign="top" width="55%"><code>org-babel-check-src-block</code>
+<a name="index-C_002dc-C_002dv-j-2135"></a><a name="index-C_002dc-C_002dv-C_002dj-2136"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v j</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-j</kbd> </td><td valign="top" width="55%"><code>org-babel-insert-header-arg</code>
+<a name="index-C_002dc-C_002dv-l-2137"></a><a name="index-C_002dc-C_002dv-C_002dl-2138"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v l</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-l</kbd> </td><td valign="top" width="55%"><code>org-babel-load-in-session</code>
+<a name="index-C_002dc-C_002dv-i-2139"></a><a name="index-C_002dc-C_002dv-C_002di-2140"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v i</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-i</kbd> </td><td valign="top" width="55%"><code>org-babel-lob-ingest</code>
+<a name="index-C_002dc-C_002dv-I-2141"></a><a name="index-C_002dc-C_002dv-C_002dI-2142"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v I</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-I</kbd> </td><td valign="top" width="55%"><code>org-babel-view-src-block-info</code>
+<a name="index-C_002dc-C_002dv-z-2143"></a><a name="index-C_002dc-C_002dv-C_002dz-2144"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v z</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-z</kbd> </td><td valign="top" width="55%"><code>org-babel-switch-to-session-with-code</code>
+<a name="index-C_002dc-C_002dv-a-2145"></a><a name="index-C_002dc-C_002dv-C_002da-2146"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v a</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-a</kbd> </td><td valign="top" width="55%"><code>org-babel-sha1-hash</code>
+<a name="index-C_002dc-C_002dv-h-2147"></a><a name="index-C_002dc-C_002dv-C_002dh-2148"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v h</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-h</kbd> </td><td valign="top" width="55%"><code>org-babel-describe-bindings</code>
+<a name="index-C_002dc-C_002dv-x-2149"></a><a name="index-C_002dc-C_002dv-C_002dx-2150"></a><br></td></tr><tr align="left"><td valign="top" width="45%"><kbd>C-c C-v x</kbd>   <span class="roman">or</span>   <kbd>C-c C-v C-x</kbd> </td><td valign="top" width="55%"><code>org-babel-do-key-sequence-in-edit-buffer</code>
+   <br></td></tr></table>
+
+<!-- Extended key bindings when control key is kept pressed: -->
+<!-- @multitable @columnfractions 0.25 0.75 -->
+<!-- @item @kbd{C-c C-v C-a} @tab @code{org-babel-sha1-hash} -->
+<!-- @item @kbd{C-c C-v C-b} @tab @code{org-babel-execute-buffer} -->
+<!-- @item @kbd{C-c C-v C-f} @tab @code{org-babel-tangle-file} -->
+<!-- @item @kbd{C-c C-v C-l} @tab @code{org-babel-lob-ingest} -->
+<!-- @item @kbd{C-c C-v C-p} @tab @code{org-babel-expand-src-block} -->
+<!-- @item @kbd{C-c C-v C-s} @tab @code{org-babel-execute-subtree} -->
+<!-- @item @kbd{C-c C-v C-t} @tab @code{org-babel-tangle} -->
+<!-- @item @kbd{C-c C-v C-z} @tab @code{org-babel-switch-to-session} -->
+<!-- @end multitable -->
+   </body></html>
+

@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+<title>Using the property API - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Hacking.html#Hacking" title="Hacking">
+<link rel="prev" href="Extracting-agenda-information.html#Extracting-agenda-information" title="Extracting agenda information">
+<link rel="next" href="Using-the-mapping-API.html#Using-the-mapping-API" title="Using the mapping API">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Using-the-property-API"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Using-the-mapping-API.html#Using-the-mapping-API">Using the mapping API</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Extracting-agenda-information.html#Extracting-agenda-information">Extracting agenda information</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Hacking.html#Hacking">Hacking</a>
+<hr>
+</div>
+
+<h3 class="section">A.11 Using the property API</h3>
+
+<p><a name="index-API_002c-for-properties-2352"></a><a name="index-properties_002c-API-2353"></a>
+Functions for working with properties.
+
+<div class="defun">
+&mdash; Function: <b>org-entry-properties</b><var> &amp;optional pom which<a name="index-org_002dentry_002dproperties-2354"></a></var><br>
+<blockquote><p>Get all properties of the entry at point-or-marker POM.<br>
+This includes the TODO keyword, the tags, time strings for deadline,
+scheduled, and clocking, and any additional properties defined in the
+entry.  The return value is an alist.  Keys may occur multiple times
+if the property key was used several times.<br>
+POM may also be <code>nil</code>, in which case the current entry is used. 
+If WHICH is <code>nil</code> or <code>all</code>, get all properties.  If WHICH is
+<code>special</code> or <code>standard</code>, only get that subclass. 
+</p></blockquote></div>
+
+   <p><a name="index-org_002duse_002dproperty_002dinheritance-2355"></a><a name="index-org_002dinsert_002dproperty_002ddrawer-2356"></a>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-get</b><var> pom property &amp;optional inherit<a name="index-org_002dentry_002dget-2357"></a></var><br>
+<blockquote><p>Get value of <code>PROPERTY</code> for entry at point-or-marker <code>POM</code>.  By
+default, this only looks at properties defined locally in the entry.  If
+<code>INHERIT</code> is non-<code>nil</code> and the entry does not have the property,
+then also check higher levels of the hierarchy.  If <code>INHERIT</code> is the
+symbol <code>selective</code>, use inheritance if and only if the setting of
+<code>org-use-property-inheritance</code> selects <code>PROPERTY</code> for inheritance. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-delete</b><var> pom property<a name="index-org_002dentry_002ddelete-2358"></a></var><br>
+<blockquote><p>Delete the property <code>PROPERTY</code> from entry at point-or-marker POM. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-put</b><var> pom property value<a name="index-org_002dentry_002dput-2359"></a></var><br>
+<blockquote><p>Set <code>PROPERTY</code> to <code>VALUE</code> for entry at point-or-marker POM. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-buffer-property-keys</b><var> &amp;optional include-specials<a name="index-org_002dbuffer_002dproperty_002dkeys-2360"></a></var><br>
+<blockquote><p>Get all property keys in the current buffer. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-insert-property-drawer</b><var><a name="index-org_002dinsert_002dproperty_002ddrawer-2361"></a></var><br>
+<blockquote><p>Insert a property drawer for the current entry. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-put-multivalued-property</b><var> pom property &amp;rest values<a name="index-org_002dentry_002dput_002dmultivalued_002dproperty-2362"></a></var><br>
+<blockquote><p>Set <code>PROPERTY</code> at point-or-marker <code>POM</code> to <code>VALUES</code>. 
+<code>VALUES</code> should be a list of strings.  They will be concatenated, with
+spaces as separators. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-get-multivalued-property</b><var> pom property<a name="index-org_002dentry_002dget_002dmultivalued_002dproperty-2363"></a></var><br>
+<blockquote><p>Treat the value of the property <code>PROPERTY</code> as a whitespace-separated
+list of values and return the values as a list of strings. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-add-to-multivalued-property</b><var> pom property value<a name="index-org_002dentry_002dadd_002dto_002dmultivalued_002dproperty-2364"></a></var><br>
+<blockquote><p>Treat the value of the property <code>PROPERTY</code> as a whitespace-separated
+list of values and make sure that <code>VALUE</code> is in this list. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-remove-from-multivalued-property</b><var> pom property value<a name="index-org_002dentry_002dremove_002dfrom_002dmultivalued_002dproperty-2365"></a></var><br>
+<blockquote><p>Treat the value of the property <code>PROPERTY</code> as a whitespace-separated
+list of values and make sure that <code>VALUE</code> is <em>not</em> in this list. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; Function: <b>org-entry-member-in-multivalued-property</b><var> pom property value<a name="index-org_002dentry_002dmember_002din_002dmultivalued_002dproperty-2366"></a></var><br>
+<blockquote><p>Treat the value of the property <code>PROPERTY</code> as a whitespace-separated
+list of values and check if <code>VALUE</code> is in this list. 
+</p></blockquote></div>
+
+<div class="defun">
+&mdash; User Option: <b>org-property-allowed-value-functions</b><var><a name="index-org_002dproperty_002dallowed_002dvalue_002dfunctions-2367"></a></var><br>
+<blockquote><p>Hook for functions supplying allowed values for a specific property. 
+The functions must take a single argument, the name of the property, and
+return a flat list of allowed values.  If &lsquo;<samp><span class="samp">:ETC</span></samp>&rsquo; is one of
+the values, use the values as completion help, but allow also other values
+to be entered.  The functions must return <code>nil</code> if they are not
+responsible for this property. 
+</p></blockquote></div>
+
+   </body></html>
+

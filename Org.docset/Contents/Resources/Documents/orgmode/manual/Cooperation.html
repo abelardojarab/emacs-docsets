@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+<title>Cooperation - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Interaction.html#Interaction" title="Interaction">
+<link rel="next" href="Conflicts.html#Conflicts" title="Conflicts">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Cooperation"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Conflicts.html#Conflicts">Conflicts</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Interaction.html#Interaction">Interaction</a>
+<hr>
+</div>
+
+<h4 class="subsection">15.10.1 Packages that Org cooperates with</h4>
+
+     
+<a name="index-g_t_0040file_007bcalc_002eel_007d-2276"></a>
+<a name="index-Gillespie_002c-Dave-2277"></a>
+<dl><dt><samp><span class="file">calc.el</span></samp> by Dave Gillespie<dd>Org uses the Calc package for tables to implement spreadsheet functionality
+(see <a href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>).  Org also uses Calc for embedded calculations. 
+See <a href="http://orgmode.org/calc/Embedded-Mode.html#Embedded-Mode">Embedded Mode</a>. 
+<br><dt><samp><span class="file">constants.el</span></samp> by Carsten Dominik<dd><a name="index-g_t_0040file_007bconstants_002eel_007d-2278"></a><a name="index-Dominik_002c-Carsten-2279"></a><a name="index-org_002dtable_002dformula_002dconstants-2280"></a>Org can use names for constants in formulas in tables.  Org can also use
+calculation suffixes for units, such as &lsquo;<samp><span class="samp">M</span></samp>&rsquo; for &lsquo;<samp><span class="samp">Mega</span></samp>&rsquo;.  For a
+standard collection of such constants, install the <samp><span class="file">constants</span></samp> package. 
+Install version 2.0 of this package, available at
+<a href="http://www.astro.uva.nl/~dominik/Tools">http://www.astro.uva.nl/~dominik/Tools</a>.  Org checks if the function
+<code>constants-get</code> has been autoloaded.  Installation instructions are in
+the file, <samp><span class="file">constants.el</span></samp>. 
+<br><dt><samp><span class="file">cdlatex.el</span></samp> by Carsten Dominik<dd><a name="index-g_t_0040file_007bcdlatex_002eel_007d-2281"></a><a name="index-Dominik_002c-Carsten-2282"></a>Org mode can use CDLaTeX package to efficiently enter LaTeX fragments
+into Org files (see <a href="CDLaTeX-mode.html#CDLaTeX-mode">CDLaTeX mode</a>). 
+<br><dt><samp><span class="file">imenu.el</span></samp> by Ake Stenhoff and Lars Lindberg<dd><a name="index-g_t_0040file_007bimenu_002eel_007d-2283"></a>Imenu creates dynamic menus based on an index of items in a file.  Org mode
+supports Imenu menus.  Enable it with a mode hook as follows:
+     <pre class="lisp">          (add-hook 'org-mode-hook
+                    (lambda () (imenu-add-to-menubar "Imenu")))
+</pre>
+     <p><a name="index-org_002dimenu_002ddepth-2284"></a>By default the Imenu index is two levels deep.  Change the index depth using
+thes variable, <code>org-imenu-depth</code>. 
+<br><dt><samp><span class="file">speedbar.el</span></samp> by Eric M. Ludlam<dd><a name="index-g_t_0040file_007bspeedbar_002eel_007d-2285"></a><a name="index-Ludlam_002c-Eric-M_002e-2286"></a>Speedbar package creates a special Emacs frame for displaying files and index
+items in files.  Org mode supports Speedbar; users can drill into Org files
+directly from the Speedbar.  The <kbd>&lt;</kbd> in the Speedbar frame tweeks the
+agenda commands to that file or to a subtree. 
+<a name="index-g_t_0040file_007btable_002eel_007d-2287"></a><br><dt><samp><span class="file">table.el</span></samp> by Takaaki Ota<dd><a name="index-C_002dc-C_002dc-2288"></a><a name="index-table-editor_002c-_0040file_007btable_002eel_007d-2289"></a><a name="index-g_t_0040file_007btable_002eel_007d-2290"></a><a name="index-Ota_002c-Takaaki-2291"></a>
+Complex ASCII tables with automatic line wrapping, column- and row-spanning,
+and alignment can be created using the Emacs table package by Takaaki Ota. 
+Org mode recognizes such tables and export them properly.  <kbd>C-c '</kbd> to
+edit these tables in a special buffer, much like Org's &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code
+blocks.  Because of interference with other Org mode functionality, Takaaki
+Ota tables cannot be edited directly in the Org buffer.
+          
+<a name="index-C_002dc-_0027-2292"></a>
+<a name="index-org_002dedit_002dspecial-2293"></a>
+<dl><dt><kbd>C-c ' &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-edit-special</code><kbd>)</kbd><dd>
+Edit a <samp><span class="file">table.el</span></samp> table.  Works when the cursor is in a table.el table. 
+<a name="index-C_002dc-_007e-2294"></a><a name="index-org_002dtable_002dcreate_002dwith_002dtable_002eel-2295"></a><br><dt><kbd>C-c ~ &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-create-with-table.el</code><kbd>)</kbd><dd>
+Insert a <samp><span class="file">table.el</span></samp> table.  If there is already a table at point, this
+command converts it between the <samp><span class="file">table.el</span></samp> format and the Org mode
+format.  See the documentation string of the command <code>org-convert-table</code>
+for details. 
+</dl>
+     </dl>
+
+   </body></html>
+

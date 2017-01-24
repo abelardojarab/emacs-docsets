@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+<title>Working With Source Code - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Publishing.html#Publishing" title="Publishing">
+<link rel="next" href="Miscellaneous.html#Miscellaneous" title="Miscellaneous">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 8.2.10 (release_8.2.10).
+
+Copyright (C) 2004--2014 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="toc_Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="toc_Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="toc_Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="toc_Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="toc_Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="toc_TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="toc_Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="toc_Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="toc_Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="toc_Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="toc_Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="toc_Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="toc_Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="toc_Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="toc_Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="toc_Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="toc_Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="toc_MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="toc_History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="toc_Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="toc_Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="toc_Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Working-With-Source-Code"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Miscellaneous.html#Miscellaneous">Miscellaneous</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Publishing.html#Publishing">Publishing</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">14 Working with source code</h2>
+
+<p><a name="index-Schulte_002c-Eric-1937"></a><a name="index-Davison_002c-Dan-1938"></a><a name="index-source-code_002c-working-with-1939"></a>
+Source code can be included in Org mode documents using a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block,
+e.g.:
+
+<pre class="example">     #+BEGIN_SRC emacs-lisp
+       (defun org-xor (a b)
+          "Exclusive or."
+          (if a (not b) b))
+     #+END_SRC
+</pre>
+   <p>Org mode provides a number of features for working with live source code,
+including editing of code blocks in their native major-mode, evaluation of
+code blocks, converting code blocks into source files (known as <dfn>tangling</dfn>
+in literate programming), and exporting code blocks and their
+results in several formats.  This functionality was contributed by Eric
+Schulte and Dan Davison, and was originally named Org-babel.
+
+   <p>The following sections describe Org mode's code block handling facilities.
+
+<ul class="menu">
+<li><a accesskey="1" href="Structure-of-code-blocks.html#Structure-of-code-blocks">Structure of code blocks</a>:     Code block syntax described
+<li><a accesskey="2" href="Editing-source-code.html#Editing-source-code">Editing source code</a>:          Language major-mode editing
+<li><a accesskey="3" href="Exporting-code-blocks.html#Exporting-code-blocks">Exporting code blocks</a>:        Export contents and/or results
+<li><a accesskey="4" href="Extracting-source-code.html#Extracting-source-code">Extracting source code</a>:       Create pure source code files
+<li><a accesskey="5" href="Evaluating-code-blocks.html#Evaluating-code-blocks">Evaluating code blocks</a>:       Place results of evaluation in the Org mode buffer
+<li><a accesskey="6" href="Library-of-Babel.html#Library-of-Babel">Library of Babel</a>:             Use and contribute to a library of useful code blocks
+<li><a accesskey="7" href="Languages.html#Languages">Languages</a>:                    List of supported code block languages
+<li><a accesskey="8" href="Header-arguments.html#Header-arguments">Header arguments</a>:             Configure code block functionality
+<li><a accesskey="9" href="Results-of-evaluation.html#Results-of-evaluation">Results of evaluation</a>:        How evaluation results are handled
+<li><a href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>:       Literate programming in Org mode
+<li><a href="Key-bindings-and-useful-functions.html#Key-bindings-and-useful-functions">Key bindings and useful functions</a>:   Work quickly with code blocks
+<li><a href="Batch-execution.html#Batch-execution">Batch execution</a>:              Call functions from the command line
+</ul>
+
+<!-- node-name,  next,  previous,  up -->
+<!-- Structure of code blocks, Editing source code, Working With Source Code, Working With Source Code -->
+   </body></html>
+

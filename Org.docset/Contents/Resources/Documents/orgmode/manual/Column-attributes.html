@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+<title>Column attributes - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Defining-columns.html#Defining-columns" title="Defining columns">
+<link rel="prev" href="Scope-of-column-definitions.html#Scope-of-column-definitions" title="Scope of column definitions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Column-attributes"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Scope-of-column-definitions.html#Scope-of-column-definitions">Scope of column definitions</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Defining-columns.html#Defining-columns">Defining columns</a>
+<hr>
+</div>
+
+<h5 class="subsubsection">7.5.1.2 Column attributes</h5>
+
+<p>A column definition sets the attributes of a column.  The general
+definition looks like this:
+
+<pre class="example">      %[<var>width</var>]<var>property</var>[(<var>title</var>)][{<var>summary-type</var>}]
+</pre>
+   <p class="noindent">Except for the percent sign and the property name, all items are
+optional.  The individual parts have the following meaning:
+
+<pre class="example">     <var>width</var>           <span class="roman">An integer specifying the width of the column in characters.</span>
+                     <span class="roman">If omitted, the width will be determined automatically.</span>
+     <var>property</var>        <span class="roman">The property that should be edited in this column.</span>
+                     <span class="roman">Special properties representing meta data are allowed here</span>
+                     <span class="roman">as well (see <a href="Special-properties.html#Special-properties">Special properties</a>)</span>
+     <var>title</var>           <span class="roman">The header text for the column.  If omitted, the property</span>
+                     <span class="roman">name is used.</span>
+     {<var>summary-type</var>}  <span class="roman">The summary type.  If specified, the column values for</span>
+                     <span class="roman">parent nodes are computed from the children<a rel="footnote" href="Column-attributes.html#fn-1" name="fnd-1"><sup>1</sup></a>.</span>
+                     <span class="roman">Supported summary types are:</span>
+                     {+}       <span class="roman">Sum numbers in this column.</span>
+                     {+;%.1f}  <span class="roman">Like &lsquo;</span><samp><span class="samp">+</span></samp><span class="roman">&rsquo;, but format result with &lsquo;</span><samp><span class="samp">%.1f</span></samp><span class="roman">&rsquo;.</span>
+                     {$}       <span class="roman">Currency, short for &lsquo;</span><samp><span class="samp">+;%.2f</span></samp><span class="roman">&rsquo;.</span>
+                     {min}     <span class="roman">Smallest number in column.</span>
+                     {max}     <span class="roman">Largest number.</span>
+                     {mean}    <span class="roman">Arithmetic mean of numbers.</span>
+                     {X}       <span class="roman">Checkbox status, &lsquo;</span><samp><span class="samp">[X]</span></samp><span class="roman">&rsquo; if all children are &lsquo;</span><samp><span class="samp">[X]</span></samp><span class="roman">&rsquo;.</span>
+                     {X/}      <span class="roman">Checkbox status, &lsquo;</span><samp><span class="samp">[n/m]</span></samp><span class="roman">&rsquo;.</span>
+                     {X%}      <span class="roman">Checkbox status, &lsquo;</span><samp><span class="samp">[n%]</span></samp><span class="roman">&rsquo;.</span>
+                     {:}       <span class="roman">Sum times, HH:MM, plain numbers are
+                     hours<a rel="footnote" href="Column-attributes.html#fn-2" name="fnd-2"><sup>2</sup></a>.</span>
+                     {:min}    <span class="roman">Smallest time value in column.</span>
+                     {:max}    <span class="roman">Largest time value.</span>
+                     {:mean}   <span class="roman">Arithmetic mean of time values.</span>
+                     {@min}    <span class="roman">Minimum age<a rel="footnote" href="Column-attributes.html#fn-3" name="fnd-3"><sup>3</sup></a> (in
+                     days/hours/mins/seconds).</span>
+                     {@max}    <span class="roman">Maximum age (in days/hours/mins/seconds).</span>
+                     {@mean}   <span class="roman">Arithmetic mean of ages (in days/hours/mins/seconds).</span>
+                     {est+}    <span class="roman">Add &lsquo;</span><samp><span class="samp">low-high</span></samp><span class="roman">&rsquo; estimates.</span>
+</pre>
+   <p>The <code>est+</code> summary type requires further explanation.  It is used for
+combining estimates, expressed as &lsquo;<samp><span class="samp">low-high</span></samp>&rsquo; ranges or plain numbers. 
+For example, instead of estimating a particular task will take 5 days, you
+might estimate it as 5&ndash;6 days if you're fairly confident you know how much
+work is required, or 1&ndash;10 days if you don't really know what needs to be
+done.  Both ranges average at 5.5 days, but the first represents a more
+predictable delivery.
+
+   <p>When combining a set of such estimates, simply adding the lows and highs
+produces an unrealistically wide result.  Instead, <code>est+</code> adds the
+statistical mean and variance of the sub-tasks, generating a final estimate
+from the sum.  For example, suppose you had ten tasks, each of which was
+estimated at 0.5 to 2 days of work.  Straight addition produces an estimate
+of 5 to 20 days, representing what to expect if everything goes either
+extremely well or extremely poorly.  In contrast, <code>est+</code> estimates the
+full job more realistically, at 10&ndash;15 days.
+
+   <p>Numbers are right-aligned when a format specifier with an explicit width like
+<code>%5d</code> or <code>%5.1f</code> is used.
+
+   <p><a name="index-org_002dcolumns_002dsummary_002dtypes-754"></a>You can also define custom summary types by setting
+<code>org-columns-summary-types</code>, which see.
+
+   <p>Here is an example for a complete columns definition, along with allowed
+values.
+
+<pre class="example">     :COLUMNS:  %25ITEM %9Approved(Approved?){X} %Owner %11Status \<a rel="footnote" href="Column-attributes.html#fn-4" name="fnd-4"><sup>4</sup></a>
+                        %10Time_Estimate{:} %CLOCKSUM %CLOCKSUM_T
+     :Owner_ALL:    Tammy Mark Karl Lisa Don
+     :Status_ALL:   "In progress" "Not started yet" "Finished" ""
+     :Approved_ALL: "[ ]" "[X]"
+</pre>
+   <p class="noindent">The first column, &lsquo;<samp><span class="samp">%25ITEM</span></samp>&rsquo;, means the first 25 characters of the
+item itself, i.e., of the headline.  You probably always should start the
+column definition with the &lsquo;<samp><span class="samp">ITEM</span></samp>&rsquo; specifier.  The other specifiers
+create columns &lsquo;<samp><span class="samp">Owner</span></samp>&rsquo; with a list of names as allowed values, for
+&lsquo;<samp><span class="samp">Status</span></samp>&rsquo; with four different possible values, and for a checkbox
+field &lsquo;<samp><span class="samp">Approved</span></samp>&rsquo;.  When no width is given after the &lsquo;<samp><span class="samp">%</span></samp>&rsquo;
+character, the column will be exactly as wide as it needs to be in order
+to fully display all values.  The &lsquo;<samp><span class="samp">Approved</span></samp>&rsquo; column does have a
+modified title (&lsquo;<samp><span class="samp">Approved?</span></samp>&rsquo;, with a question mark).  Summaries will
+be created for the &lsquo;<samp><span class="samp">Time_Estimate</span></samp>&rsquo; column by adding time duration
+expressions like HH:MM, and for the &lsquo;<samp><span class="samp">Approved</span></samp>&rsquo; column, by providing
+an &lsquo;<samp><span class="samp">[X]</span></samp>&rsquo; status if all children have been checked.  The
+&lsquo;<samp><span class="samp">CLOCKSUM</span></samp>&rsquo; and &lsquo;<samp><span class="samp">CLOCKSUM_T</span></samp>&rsquo; columns are special, they lists the
+sums of CLOCK intervals in the subtree, either for all clocks or just for
+today.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Column-attributes.html#fnd-1">1</a>]</small> If
+                more than one summary type apply to the property, the parent
+                values are computed according to the first of them.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Column-attributes.html#fnd-2">2</a>]</small> A time can also be a duration, using effort
+                modifiers defined in <code>org-effort-durations</code>, e.g.,
+                &lsquo;<samp><span class="samp">3d 1h</span></samp>&rsquo;.  If any value in the column is as such, the
+                summary will also be an effort duration.</p>
+
+   <p class="footnote"><small>[<a name="fn-3" href="Column-attributes.html#fnd-3">3</a>]</small> An age is defined as
+                a duration since a given time-stamp (see <a href="Timestamps.html#Timestamps">Timestamps</a>).  It
+                can  also be expressed as days, hours, minutes and seconds,
+                identified by &lsquo;<samp><span class="samp">d</span></samp>&rsquo;, &lsquo;<samp><span class="samp">h</span></samp>&rsquo;, &lsquo;<samp><span class="samp">m</span></samp>&rsquo; and &lsquo;<samp><span class="samp">s</span></samp>&rsquo;
+                suffixes, all mandatory, e.g., &lsquo;<samp><span class="samp">0d 13h 0m 10s</span></samp>&rsquo;.</p>
+
+   <p class="footnote"><small>[<a name="fn-4" href="Column-attributes.html#fnd-4">4</a>]</small> Please note that the COLUMNS definition must be on a single line&mdash;it is wrapped here only because of formatting constraints.</p>
+
+   <hr></div>
+
+   </body></html>
+

@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+<title>Include files - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Exporting.html#Exporting" title="Exporting">
+<link rel="prev" href="Table-of-contents.html#Table-of-contents" title="Table of contents">
+<link rel="next" href="Macro-replacement.html#Macro-replacement" title="Macro replacement">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Include-files"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Macro-replacement.html#Macro-replacement">Macro replacement</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Table-of-contents.html#Table-of-contents">Table of contents</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Exporting.html#Exporting">Exporting</a>
+<hr>
+</div>
+
+<h3 class="section">12.4 Include files</h3>
+
+<p><a name="index-include-files_002c-during-export-1636"></a>
+During export, you can include the content of another file.  For example, to
+include your <samp><span class="file">.emacs</span></samp> file, you could use:
+<a name="index-g_t_0023_002bINCLUDE-1637"></a>
+<pre class="example">     #+INCLUDE: "~/.emacs" src emacs-lisp
+</pre>
+   <p class="noindent">The first parameter names the the file to include.  The optional second and
+third parameter specify the markup (i.e., &lsquo;<samp><span class="samp">example</span></samp>&rsquo;, &lsquo;<samp><span class="samp">export</span></samp>&rsquo; or
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo;), and, if the markup is either &lsquo;<samp><span class="samp">export</span></samp>&rsquo; or &lsquo;<samp><span class="samp">src</span></samp>&rsquo;, the
+language for formatting the contents.
+
+   <p>If markup is requested, the included content will be placed within an
+appropriate block<a rel="footnote" href="Include-files.html#fn-1" name="fnd-1"><sup>1</sup></a>.  No changes to the included content are made
+and it is the responsibility of the user to ensure that the result is valid
+Org syntax.  For markup &lsquo;<samp><span class="samp">example</span></samp>&rsquo; and &lsquo;<samp><span class="samp">src</span></samp>&rsquo;, which is requesting a
+literal example, the content will be code-escaped before inclusion.
+
+   <p>If no markup is requested, the text will be assumed to be in Org mode format
+and will be processed normally.  However, footnote labels (see <a href="Footnotes.html#Footnotes">Footnotes</a>)
+in the file will be made local to that file.  Contents of the included file
+will belong to the same structure (headline, item) containing the
+<code>INCLUDE</code> keyword.  In particular, headlines within the file will become
+children of the current section.  That behavior can be changed by providing
+an additional keyword parameter, <code>:minlevel</code>.  In that case, all
+headlines in the included file will be shifted so the one with the lowest
+level reaches that specified level.  For example, to make a file become a
+sibling of the current top-level headline, use
+
+<pre class="example">     #+INCLUDE: "~/my-book/chapter2.org" :minlevel 1
+</pre>
+   <p>You can also include a portion of a file by specifying a lines range using
+the <code>:lines</code> keyword parameter.  The line at the upper end of the range
+will not be included.  The start and/or the end of the range may be omitted
+to use the obvious defaults.
+
+<pre class="example">     #+INCLUDE: "~/.emacs" :lines "5-10"   <span class="roman">Include lines 5 to 10, 10 excluded</span>
+     #+INCLUDE: "~/.emacs" :lines "-10"    <span class="roman">Include lines 1 to 10, 10 excluded</span>
+     #+INCLUDE: "~/.emacs" :lines "10-"    <span class="roman">Include lines from 10 to EOF</span>
+</pre>
+   <p>Finally, you may use a file-link to extract an object as matched by
+<code>org-link-search</code><a rel="footnote" href="Include-files.html#fn-2" name="fnd-2"><sup>2</sup></a>
+(see <a href="Search-options.html#Search-options">Search options</a>).  If the <code>:only-contents</code> property is non-<code>nil</code>,
+only the contents of the requested element will be included, omitting
+properties drawer and planning-line if present.  The <code>:lines</code> keyword
+operates locally with respect to the requested element.  Some examples:
+
+<pre class="example">     #+INCLUDE: "./paper.org::#theory" :only-contents t
+        <span class="roman">Include the body of the heading with the custom id &lsquo;</span><samp><span class="samp">theory</span></samp><span class="roman">&rsquo;</span>
+     #+INCLUDE: "./paper.org::mytable"  <span class="roman">Include named element.</span>
+     #+INCLUDE: "./paper.org::*conclusion" :lines 1-20
+        <span class="roman">Include the first 20 lines of the headline named &lsquo;</span><samp><span class="samp">conclusion</span></samp><span class="roman">&rsquo;.</span>
+</pre>
+     
+<a name="index-C_002dc-_0027-1638"></a>
+<dl><dt><kbd>C-c '</kbd><dd>Visit the include file at point. 
+</dl>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Include-files.html#fnd-1">1</a>]</small> While you can request paragraphs (&lsquo;<samp><span class="samp">verse</span></samp>&rsquo;,
+&lsquo;<samp><span class="samp">quote</span></samp>&rsquo;, &lsquo;<samp><span class="samp">center</span></samp>&rsquo;), but this places severe restrictions on the type
+of content that is permissible</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Include-files.html#fnd-2">2</a>]</small> Note that
+<code>org-link-search-must-match-exact-headline</code> is locally bound to non-<code>nil</code>. 
+Therefore, <code>org-link-search</code> only matches headlines and named elements.</p>
+
+   <hr></div>
+
+   </body></html>
+

@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+<title>Tag inheritance - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Tags.html#Tags" title="Tags">
+<link rel="next" href="Setting-tags.html#Setting-tags" title="Setting tags">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Tag-inheritance"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Setting-tags.html#Setting-tags">Setting tags</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Tags.html#Tags">Tags</a>
+<hr>
+</div>
+
+<h3 class="section">6.1 Tag inheritance</h3>
+
+<p><a name="index-tag-inheritance-652"></a><a name="index-inheritance_002c-of-tags-653"></a><a name="index-sublevels_002c-inclusion-into-tags-match-654"></a>
+<i>Tags</i> make use of the hierarchical structure of outline trees.  If a
+heading has a certain tag, all subheadings will inherit the tag as
+well.  For example, in the list
+
+<pre class="example">     * Meeting with the French group      :work:
+     ** Summary by Frank                  :boss:notes:
+     *** TODO Prepare slides for him      :action:
+</pre>
+   <p class="noindent">the final heading will have the tags &lsquo;<samp><span class="samp">:work:</span></samp>&rsquo;, &lsquo;<samp><span class="samp">:boss:</span></samp>&rsquo;,
+&lsquo;<samp><span class="samp">:notes:</span></samp>&rsquo;, and &lsquo;<samp><span class="samp">:action:</span></samp>&rsquo; even though the final heading is not
+explicitly marked with all those tags.  You can also set tags that all
+entries in a file should inherit just as if these tags were defined in
+a hypothetical level zero that surrounds the entire file.  Use a line like
+this<a rel="footnote" href="Tag-inheritance.html#fn-1" name="fnd-1"><sup>1</sup></a>:
+
+   <p><a name="index-g_t_0023_002bFILETAGS-655"></a>
+<pre class="example">     #+FILETAGS: :Peter:Boss:Secret:
+</pre>
+   <p class="noindent"><a name="index-org_002duse_002dtag_002dinheritance-656"></a><a name="index-org_002dtags_002dexclude_002dfrom_002dinheritance-657"></a>To limit tag inheritance to specific tags, use <code>org-tags-exclude-from-inheritance</code>. 
+To turn it off entirely, use <code>org-use-tag-inheritance</code>.
+
+   <p><a name="index-org_002dtags_002dmatch_002dlist_002dsublevels-658"></a>When a headline matches during a tags search while tag inheritance is turned
+on, all the sublevels in the same tree will (for a simple match form) match
+as well<a rel="footnote" href="Tag-inheritance.html#fn-2" name="fnd-2"><sup>2</sup></a>.  The list
+of matches may then become very long.  If you only want to see the first tags
+match in a subtree, configure <code>org-tags-match-list-sublevels</code> (not
+recommended).
+
+   <p><a name="index-org_002dagenda_002duse_002dtag_002dinheritance-659"></a>Tag inheritance is relevant when the agenda search tries to match a tag,
+either in the <code>tags</code> or <code>tags-todo</code> agenda types.  In other agenda
+types, <code>org-use-tag-inheritance</code> has no effect.  Still, you may want to
+have your tags correctly set in the agenda, so that tag filtering works fine,
+with inherited tags.  Set <code>org-agenda-use-tag-inheritance</code> to control
+this: the default value includes all agenda types, but setting this to <code>nil</code>
+can really speed up agenda generation.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Tag-inheritance.html#fnd-1">1</a>]</small> As with all these in-buffer settings, pressing <kbd>C-c C-c</kbd>
+activates any changes in the line.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Tag-inheritance.html#fnd-2">2</a>]</small> This is only true if the search does not involve more
+complex tests including properties (see <a href="Property-searches.html#Property-searches">Property searches</a>).</p>
+
+   <hr></div>
+
+   </body></html>
+

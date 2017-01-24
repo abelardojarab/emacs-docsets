@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+<title>Publishing action - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Configuration.html#Configuration" title="Configuration">
+<link rel="prev" href="Selecting-files.html#Selecting-files" title="Selecting files">
+<link rel="next" href="Publishing-options.html#Publishing-options" title="Publishing options">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Publishing-action"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Publishing-options.html#Publishing-options">Publishing options</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Selecting-files.html#Selecting-files">Selecting files</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Configuration.html#Configuration">Configuration</a>
+<hr>
+</div>
+
+<h4 class="subsection">13.1.4 Publishing action</h4>
+
+<p><a name="index-action_002c-for-publishing-1996"></a>
+Publishing means that a file is copied to the destination directory and
+possibly transformed in the process.  The default transformation is to export
+Org files as HTML files, and this is done by the function
+<code>org-html-publish-to-html</code>, which calls the HTML exporter (see <a href="HTML-export.html#HTML-export">HTML export</a>).  But you also can publish your content as PDF files using
+<code>org-latex-publish-to-pdf</code> or as <code>ascii</code>, <code>Texinfo</code>, etc.,
+using the corresponding functions.
+
+   <p>If you want to publish the Org file as an <code>.org</code> file but with the
+<i>archived</i>, <i>commented</i> and <i>tag-excluded</i> trees removed, use the
+function <code>org-org-publish-to-org</code>.  This will produce <samp><span class="file">file.org</span></samp>
+and put it in the publishing directory.  If you want a htmlized version of
+this file, set the parameter <code>:htmlized-source</code> to <code>t</code>, it will
+produce <samp><span class="file">file.org.html</span></samp> in the publishing directory<a rel="footnote" href="Publishing-action.html#fn-1" name="fnd-1"><sup>1</sup></a>.
+
+   <p>Other files like images only need to be copied to the publishing destination. 
+For this you can use <code>org-publish-attachment</code>.  For non-org files, you
+always need to specify the publishing function:
+
+   <p><table summary=""><tr align="left"><td valign="top" width="30%"><code>:publishing-function</code>
+</td><td valign="top" width="70%">Function executing the publication of a file.  This may also be a
+list of functions, which will all be called in turn. 
+<br></td></tr><tr align="left"><td valign="top" width="30%"><code>:htmlized-source</code>
+</td><td valign="top" width="70%">non-<code>nil</code> means, publish htmlized source.
+   <br></td></tr></table>
+
+   <p>The function must accept three arguments: a property list containing at least
+a <code>:publishing-directory</code> property, the name of the file to be published
+and the path to the publishing directory of the output file.  It should take
+the specified file, make the necessary transformation (if any) and place the
+result into the destination folder.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Publishing-action.html#fnd-1">1</a>]</small> If the
+publishing directory is the same than the source directory, <samp><span class="file">file.org</span></samp>
+will be exported as <samp><span class="file">file.org.org</span></samp>, so probably don't want to do this.</p>
+
+   <hr></div>
+
+   </body></html>
+

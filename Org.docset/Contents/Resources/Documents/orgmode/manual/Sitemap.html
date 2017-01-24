@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+<title>Sitemap - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Configuration.html#Configuration" title="Configuration">
+<link rel="prev" href="Publishing-links.html#Publishing-links" title="Publishing links">
+<link rel="next" href="Generating-an-index.html#Generating-an-index" title="Generating an index">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Sitemap"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Generating-an-index.html#Generating-an-index">Generating an index</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Publishing-links.html#Publishing-links">Publishing links</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Configuration.html#Configuration">Configuration</a>
+<hr>
+</div>
+
+<h4 class="subsection">13.1.7 Generating a sitemap</h4>
+
+<p><a name="index-sitemap_002c-of-published-pages-2000"></a>
+The following properties may be used to control publishing of
+a map of files for a given project.
+
+   <p><table summary=""><tr align="left"><td valign="top" width="35%"><code>:auto-sitemap</code>
+</td><td valign="top" width="65%">When non-<code>nil</code>, publish a sitemap during <code>org-publish-current-project</code>
+or <code>org-publish-all</code>.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-filename</code>
+</td><td valign="top" width="65%">Filename for output of sitemap.  Defaults to <samp><span class="file">sitemap.org</span></samp> (which
+becomes <samp><span class="file">sitemap.html</span></samp>).
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-title</code>
+</td><td valign="top" width="65%">Title of sitemap page.  Defaults to name of file.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-function</code>
+</td><td valign="top" width="65%">Plug-in function to use for generation of the sitemap. 
+Defaults to <code>org-publish-org-sitemap</code>, which generates a plain list
+of links to all files in the project.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-sort-folders</code>
+</td><td valign="top" width="65%">Where folders should appear in the sitemap.  Set this to <code>first</code>
+(default) or <code>last</code> to display folders first or last,
+respectively.  Any other value will mix files and folders.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-sort-files</code>
+</td><td valign="top" width="65%">How the files are sorted in the site map.  Set this to
+<code>alphabetically</code> (default), <code>chronologically</code> or
+<code>anti-chronologically</code>.  <code>chronologically</code> sorts the files with
+older date first while <code>anti-chronologically</code> sorts the files with newer
+date first.  <code>alphabetically</code> sorts the files alphabetically.  The date of
+a file is retrieved with <code>org-publish-find-date</code>.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-ignore-case</code>
+</td><td valign="top" width="65%">Should sorting be case-sensitive?  Default <code>nil</code>.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-file-entry-format</code>
+</td><td valign="top" width="65%">With this option one can tell how a sitemap's entry is formatted in the
+sitemap.  This is a format string with some escape sequences: <code>%t</code> stands
+for the title of the file, <code>%a</code> stands for the author of the file and
+<code>%d</code> stands for the date of the file.  The date is retrieved with the
+<code>org-publish-find-date</code> function and formatted with
+<code>org-publish-sitemap-date-format</code>.  Default <code>%t</code>.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-date-format</code>
+</td><td valign="top" width="65%">Format string for the <code>format-time-string</code> function that tells how
+a sitemap entry's date is to be formatted.  This property bypasses
+<code>org-publish-sitemap-date-format</code> which defaults to <code>%Y-%m-%d</code>.
+
+<p><br></td></tr><tr align="left"><td valign="top" width="35%"><code>:sitemap-sans-extension</code>
+</td><td valign="top" width="65%">When non-<code>nil</code>, remove filenames' extensions from the generated sitemap. 
+Useful to have cool URIs (see <a href="http://www.w3.org/Provider/Style/URI">http://www.w3.org/Provider/Style/URI</a>). 
+Defaults to <code>nil</code>.
+
+   <br></td></tr></table>
+
+   </body></html>
+

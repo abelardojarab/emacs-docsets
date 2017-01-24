@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+<title>Working with source code - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Publishing.html#Publishing" title="Publishing">
+<link rel="next" href="Miscellaneous.html#Miscellaneous" title="Miscellaneous">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Working-with-source-code"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Miscellaneous.html#Miscellaneous">Miscellaneous</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Publishing.html#Publishing">Publishing</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">14 Working with source code</h2>
+
+<p><a name="index-Schulte_002c-Eric-2014"></a><a name="index-Davison_002c-Dan-2015"></a><a name="index-source-code_002c-working-with-2016"></a>
+Source code here refers to any code typed in Org mode documents.  Org can
+manage source code in any Org file once such code is tagged with begin and
+end markers.  Working with source code begins with tagging source code
+blocks.  Tagged &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks are not restricted to the preamble or
+the end of an Org document; they can go anywhere&mdash;with a few exceptions,
+such as not inside comments and fixed width areas.  Here's a sample
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block in emacs-lisp:
+
+<pre class="example">     #+BEGIN_SRC emacs-lisp
+       (defun org-xor (a b)
+          "Exclusive or."
+          (if a (not b) b))
+     #+END_SRC
+</pre>
+   <p>Org can take the code in the block between the &lsquo;<samp><span class="samp">#+BEGIN_SRC</span></samp>&rsquo; and
+&lsquo;<samp><span class="samp">#+END_SRC</span></samp>&rsquo; tags, and format, compile, execute, and show the results. 
+Org can simplify many housekeeping tasks essential to modern code
+maintenance.  That's why these blocks in Org mode literature are sometimes
+referred to as &lsquo;<samp><span class="samp">live code</span></samp>&rsquo; blocks (as compared to the static text and
+documentation around it).  Users can control how &lsquo;<samp><span class="samp">live</span></samp>&rsquo; they want each
+block by tweaking the headers for compiling, execution, extraction.
+
+   <p>Org's &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block type is one of many block types, such as quote,
+export, verse, latex, example, and verbatim.  This section pertains to
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks between &lsquo;<samp><span class="samp">#+BEGIN_SRC</span></samp>&rsquo; and &lsquo;<samp><span class="samp">#+END_SRC</span></samp>&rsquo;
+
+   <p>For editing &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks, Org provides native Emacs major-modes. 
+That leverages the latest Emacs features for that source code language mode.
+
+   <p>For exporting, Org can then extract &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks into compilable
+source files (in a conversion process known as <dfn>tangling</dfn> in literate
+programming terminology).
+
+   <p>For publishing, Org's back-ends can handle the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks and the
+text for output to a variety of formats with native syntax highlighting.
+
+   <p>For executing the source code in the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks, Org provides
+facilities that glue the tasks of compiling, collecting the results of the
+execution, and inserting them back to the Org file.  Besides text output,
+results may include links to other data types that Emacs can handle: audio,
+video, and graphics.
+
+   <p>An important feature of Org's execution of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks is
+passing variables, functions, and results between &lsquo;<samp><span class="samp">src</span></samp>&rsquo; blocks.  Such
+interoperability uses a common syntax even if these &lsquo;<samp><span class="samp">src</span></samp>&rsquo; blocks are in
+different source code languages.  The integration extends to linking the
+debugger's error messages to the line in the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block in the Org
+file.  That should partly explain why this functionality by the original
+contributors, Eric Schulte and Dan Davison, was called &lsquo;<samp><span class="samp">Org Babel</span></samp>&rsquo;.
+
+   <p>In literate programming, the main appeal is code and documentation
+co-existing in one file.  Org mode takes this several steps further.  First
+by enabling execution, and then by inserting results of that execution back
+into the Org file.  Along the way, Org provides extensive formatting
+features, including handling tables.  Org handles multiple source code
+languages in one file, and provides a common syntax for passing variables,
+functions, and results between &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks.
+
+   <p>Org mode fulfills the promise of easy verification and maintenance of
+publishing reproducible research by keeping all these in the same file: text,
+data, code, configuration settings of the execution environment, the results
+of the execution, and associated narratives, claims, references, and internal
+and external links.
+
+   <p>Details of Org's facilities for working with source code are shown next.
+
+<ul class="menu">
+<li><a accesskey="1" href="Structure-of-code-blocks.html#Structure-of-code-blocks">Structure of code blocks</a>:     Code block syntax described
+<li><a accesskey="2" href="Editing-source-code.html#Editing-source-code">Editing source code</a>:          Language major-mode editing
+<li><a accesskey="3" href="Exporting-code-blocks.html#Exporting-code-blocks">Exporting code blocks</a>:        Export contents and/or results
+<li><a accesskey="4" href="Extracting-source-code.html#Extracting-source-code">Extracting source code</a>:       Create pure source code files
+<li><a accesskey="5" href="Evaluating-code-blocks.html#Evaluating-code-blocks">Evaluating code blocks</a>:       Place results of evaluation in the Org mode buffer
+<li><a accesskey="6" href="Library-of-Babel.html#Library-of-Babel">Library of Babel</a>:             Use and contribute to a library of useful code blocks
+<li><a accesskey="7" href="Languages.html#Languages">Languages</a>:                    List of supported code block languages
+<li><a accesskey="8" href="Header-arguments.html#Header-arguments">Header arguments</a>:             Configure code block functionality
+<li><a accesskey="9" href="Results-of-evaluation.html#Results-of-evaluation">Results of evaluation</a>:        How evaluation results are handled
+<li><a href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>:       Literate programming in Org mode
+<li><a href="Key-bindings-and-useful-functions.html#Key-bindings-and-useful-functions">Key bindings and useful functions</a>:   Work quickly with code blocks
+<li><a href="Batch-execution.html#Batch-execution">Batch execution</a>:              Call functions from the command line
+</ul>
+
+   </body></html>
+

@@ -1,0 +1,196 @@
+<html lang="en">
+<head>
+<title>Org-Plot - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Tables.html#Tables" title="Tables">
+<link rel="prev" href="The-spreadsheet.html#The-spreadsheet" title="The spreadsheet">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Org-Plot"></a>
+<a name="Org_002dPlot"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Tables.html#Tables">Tables</a>
+<hr>
+</div>
+
+<h3 class="section">3.6 Org-Plot</h3>
+
+<p><a name="index-graph_002c-in-tables-452"></a><a name="index-plot-tables-using-Gnuplot-453"></a><a name="index-g_t_0023_002bPLOT-454"></a>
+Org-Plot can produce graphs of information stored in org tables, either
+graphically or in ASCII-art.
+
+<h4 class="subheading">Graphical plots using <samp><span class="file">Gnuplot</span></samp></h4>
+
+<p>Org-Plot produces 2D and 3D graphs using <samp><span class="file">Gnuplot</span></samp>
+<a href="http://www.gnuplot.info/">http://www.gnuplot.info/</a> and <samp><span class="file">gnuplot-mode</span></samp>
+<a href="http://xafs.org/BruceRavel/GnuplotMode">http://xafs.org/BruceRavel/GnuplotMode</a>.  To see this in action, ensure
+that you have both Gnuplot and Gnuplot mode installed on your system, then
+call <kbd>C-c " g</kbd> or <kbd>M-x org-plot/gnuplot &lt;RET&gt;</kbd> on the following
+table.
+
+<pre class="example">     #+PLOT: title:"Citas" ind:1 deps:(3) type:2d with:histograms set:"yrange [0:]"
+     | Sede      | Max cites | H-index |
+     |-----------+-----------+---------|
+     | Chile     |    257.72 |   21.39 |
+     | Leeds     |    165.77 |   19.68 |
+     | Sao Paolo |     71.00 |   11.50 |
+     | Stockholm |    134.19 |   14.33 |
+     | Morelia   |    257.56 |   17.67 |
+</pre>
+   <p>Notice that Org Plot is smart enough to apply the table's headers as labels. 
+Further control over the labels, type, content, and appearance of plots can
+be exercised through the <code>#+PLOT:</code> lines preceding a table.  See below
+for a complete list of Org-plot options.  The <code>#+PLOT:</code> lines are
+optional.  For more information and examples see the Org-plot tutorial at
+<a href="http://orgmode.org/worg/org-tutorials/org-plot.html">http://orgmode.org/worg/org-tutorials/org-plot.html</a>.
+
+<h5 class="subsubheading">Plot Options</h5>
+
+     <dl>
+<dt><code>set</code><dd>Specify any <samp><span class="command">gnuplot</span></samp> option to be set when graphing.
+
+     <br><dt><code>title</code><dd>Specify the title of the plot.
+
+     <br><dt><code>ind</code><dd>Specify which column of the table to use as the <code>x</code> axis.
+
+     <br><dt><code>deps</code><dd>Specify the columns to graph as a Lisp style list, surrounded by parentheses
+and separated by spaces for example <code>dep:(3 4)</code> to graph the third and
+fourth columns (defaults to graphing all other columns aside from the <code>ind</code>
+column).
+
+     <br><dt><code>type</code><dd>Specify whether the plot will be <code>2d</code>, <code>3d</code>, or <code>grid</code>.
+
+     <br><dt><code>with</code><dd>Specify a <code>with</code> option to be inserted for every col being plotted
+(e.g., <code>lines</code>, <code>points</code>, <code>boxes</code>, <code>impulses</code>, etc...). 
+Defaults to <code>lines</code>.
+
+     <br><dt><code>file</code><dd>If you want to plot to a file, specify <code>"</code><var>path/to/desired/output-file</var><code>"</code>.
+
+     <br><dt><code>labels</code><dd>List of labels to be used for the <code>deps</code> (defaults to the column headers
+if they exist).
+
+     <br><dt><code>line</code><dd>Specify an entire line to be inserted in the Gnuplot script.
+
+     <br><dt><code>map</code><dd>When plotting <code>3d</code> or <code>grid</code> types, set this to <code>t</code> to graph a
+flat mapping rather than a <code>3d</code> slope.
+
+     <br><dt><code>timefmt</code><dd>Specify format of Org mode timestamps as they will be parsed by Gnuplot. 
+Defaults to &lsquo;<samp><span class="samp">%Y-%m-%d-%H:%M:%S</span></samp>&rsquo;.
+
+     <br><dt><code>script</code><dd>If you want total control, you can specify a script file (place the file name
+between double-quotes) which will be used to plot.  Before plotting, every
+instance of <code>$datafile</code> in the specified script will be replaced with
+the path to the generated data file.  Note: even if you set this option, you
+may still want to specify the plot type, as that can impact the content of
+the data file. 
+</dl>
+
+<h4 class="subheading">ASCII bar plots</h4>
+
+<p>While the cursor is on a column, typing <kbd>C-c " a</kbd> or
+<kbd>M-x orgtbl-ascii-plot &lt;RET&gt;</kbd> create a new column containing an
+ASCII-art bars plot.  The plot is implemented through a regular column
+formula.  When the source column changes, the bar plot may be updated by
+refreshing the table, for example typing <kbd>C-u C-c *</kbd>.
+
+<pre class="example">     | Sede          | Max cites |              |
+     |---------------+-----------+--------------|
+     | Chile         |    257.72 | WWWWWWWWWWWW |
+     | Leeds         |    165.77 | WWWWWWWh     |
+     | Sao Paolo     |     71.00 | WWW;         |
+     | Stockholm     |    134.19 | WWWWWW:      |
+     | Morelia       |    257.56 | WWWWWWWWWWWH |
+     | Rochefourchat |      0.00 |              |
+     #+TBLFM: $3='(orgtbl-ascii-draw $2 0.0 257.72 12)
+</pre>
+   <p>The formula is an elisp call:
+<pre class="lisp">     (orgtbl-ascii-draw COLUMN MIN MAX WIDTH)
+</pre>
+     <dl>
+<dt><code>COLUMN</code><dd>  is a reference to the source column.
+
+     <br><dt><code>MIN MAX</code><dd>  are the minimal and maximal values displayed.  Sources values
+  outside this range are displayed as &lsquo;<samp><span class="samp">too small</span></samp>&rsquo;
+  or &lsquo;<samp><span class="samp">too large</span></samp>&rsquo;.
+
+     <br><dt><code>WIDTH</code><dd>  is the width in characters of the bar-plot.  It defaults to &lsquo;<samp><span class="samp">12</span></samp>&rsquo;.
+
+   </dl>
+
+   </body></html>
+

@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+<title>Template expansion - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Capture-templates.html#Capture-templates" title="Capture templates">
+<link rel="prev" href="Template-elements.html#Template-elements" title="Template elements">
+<link rel="next" href="Templates-in-contexts.html#Templates-in-contexts" title="Templates in contexts">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Template-expansion"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Templates-in-contexts.html#Templates-in-contexts">Templates in contexts</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Template-elements.html#Template-elements">Template elements</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Capture-templates.html#Capture-templates">Capture templates</a>
+<hr>
+</div>
+
+<h5 class="subsubsection">9.1.3.2 Template expansion</h5>
+
+<p>In the template itself, special <kbd>%</kbd>-escapes<a rel="footnote" href="Template-expansion.html#fn-1" name="fnd-1"><sup>1</sup></a> allow
+dynamic insertion of content.  The templates are expanded in the order given here:
+
+<pre class="smallexample">     %[<var>file</var>]     <span class="roman">Insert the contents of the file given by </span><var>file</var><span class="roman">.</span>
+     %(<var>sexp</var>)     <span class="roman">Evaluate Elisp </span><var>sexp</var><span class="roman"> and replace with the result.</span>
+                       <span class="roman">For convenience, %:keyword (see below) placeholders</span>
+                       <span class="roman">within the expression will be expanded prior to this.</span>
+                       <span class="roman">The sexp must return a string.</span>
+     %&lt;...&gt;      <span class="roman">The result of format-time-string on the ... format specification.</span>
+     %t          <span class="roman">Timestamp, date only.</span>
+     %T          <span class="roman">Timestamp, with date and time.</span>
+     %u, %U      <span class="roman">Like the above, but inactive timestamps.</span>
+     %i          <span class="roman">Initial content, the region when capture is called while the</span>
+                 <span class="roman">region is active.</span>
+                 <span class="roman">The entire text will be indented like </span><code>%i</code><span class="roman"> itself.</span>
+     %a          <span class="roman">Annotation, normally the link created with </span><code>org-store-link</code><span class="roman">.</span>
+     %A          <span class="roman">Like </span><code>%a</code><span class="roman">, but prompt for the description part.</span>
+     %l          <span class="roman">Like %a, but only insert the literal link.</span>
+     %c          <span class="roman">Current kill ring head.</span>
+     %x          <span class="roman">Content of the X clipboard.</span>
+     %k          <span class="roman">Title of the currently clocked task.</span>
+     %K          <span class="roman">Link to the currently clocked task.</span>
+     %n          <span class="roman">User name (taken from </span><code>user-full-name</code><span class="roman">).</span>
+     %f          <span class="roman">File visited by current buffer when org-capture was called.</span>
+     %F          <span class="roman">Full path of the file or directory visited by current buffer.</span>
+     %:keyword   <span class="roman">Specific information for certain link types, see below.</span>
+     %^g         <span class="roman">Prompt for tags, with completion on tags in target file.</span>
+     %^G         <span class="roman">Prompt for tags, with completion all tags in all agenda files.</span>
+     %^t         <span class="roman">Like </span><code>%t</code><span class="roman">, but prompt for date.  Similarly </span><code>%^T</code><span class="roman">, </span><code>%^u</code><span class="roman">, </span><code>%^U</code><span class="roman">.</span>
+                 <span class="roman">You may define a prompt like </span><code>%^{Birthday}t</code><span class="roman">.</span>
+     %^C         <span class="roman">Interactive selection of which kill or clip to use.</span>
+     %^L         <span class="roman">Like </span><code>%^C</code><span class="roman">, but insert as link.</span>
+     %^{<var>prop</var>}p   <span class="roman">Prompt the user for a value for property </span><var>prop</var><span class="roman">.</span>
+     %^{<var>prompt</var>}  <span class="roman">prompt the user for a string and replace this sequence with it.</span>
+                 <span class="roman">You may specify a default value and a completion table with</span>
+                 <span class="roman">%^{prompt|default|completion2|completion3...}.</span>
+                 <span class="roman">The arrow keys access a prompt-specific history.</span>
+     %\1 ... %\N <span class="roman">Insert the text entered at the Nth %^{</span><var>prompt</var><span class="roman">}, where </span><code>N</code><span class="roman"> is</span>
+                 <span class="roman">a number, starting from 1.</span>
+     %?          <span class="roman">After completing the template, position cursor here.</span>
+</pre>
+   <p class="noindent">For specific link types, the following keywords will be
+defined<a rel="footnote" href="Template-expansion.html#fn-2" name="fnd-2"><sup>2</sup></a>:
+
+   <p><a name="index-org_002dfrom_002dis_002duser_002dregexp-994"></a>
+<pre class="smallexample">     Link type                        |  Available keywords
+     ---------------------------------+----------------------------------------------
+     bbdb                             |  %:name %:company
+     irc                              |  %:server %:port %:nick
+     vm, vm-imap, wl, mh, mew, rmail, |  %:type %:subject %:message-id
+     gnus, notmuch                    |  %:from %:fromname %:fromaddress
+                                      |  %:to   %:toname   %:toaddress
+                                      |  %:date <span class="roman">(message date header field)</span>
+                                      |  %:date-timestamp <span class="roman">(date as active timestamp)</span>
+                                      |  %:date-timestamp-inactive <span class="roman">(date as inactive timestamp)</span>
+                                      |  %:fromto <span class="roman">(either "to NAME" or "from NAME")<a rel="footnote" href="Template-expansion.html#fn-3" name="fnd-3"><sup>3</sup></a></span>
+     gnus                             |  %:group, <span class="roman">for messages also all email fields</span>
+     eww, w3, w3m                     |  %:url
+     info                             |  %:file %:node
+     calendar                         |  %:date
+</pre>
+   <p class="noindent">To place the cursor after template expansion use:
+
+<pre class="smallexample">     %?          <span class="roman">After completing the template, position cursor here.</span>
+</pre>
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Template-expansion.html#fnd-1">1</a>]</small> If you need one of
+these sequences literally, escape the <kbd>%</kbd> with a backslash.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Template-expansion.html#fnd-2">2</a>]</small> If you define your own link types (see <a href="Adding-hyperlink-types.html#Adding-hyperlink-types">Adding hyperlink types</a>), any property you store with
+<code>org-store-link-props</code> can be accessed in capture templates in a
+similar way.</p>
+
+   <p class="footnote"><small>[<a name="fn-3" href="Template-expansion.html#fnd-3">3</a>]</small> This will always be the other, not the user.  See the variable <code>org-from-is-user-regexp</code>.</p>
+
+   <hr></div>
+
+   </body></html>
+

@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+<title>Using capture - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Capture.html#Capture" title="Capture">
+<link rel="prev" href="Setting-up-capture.html#Setting-up-capture" title="Setting up capture">
+<link rel="next" href="Capture-templates.html#Capture-templates" title="Capture templates">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Using-capture"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Capture-templates.html#Capture-templates">Capture templates</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Setting-up-capture.html#Setting-up-capture">Setting up capture</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Capture.html#Capture">Capture</a>
+<hr>
+</div>
+
+<h4 class="subsection">9.1.2 Using capture</h4>
+
+     
+<a name="index-C_002dc-c-978"></a>
+<a name="index-org_002dcapture-979"></a>
+<dl><dt><kbd>C-c c &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-capture</code><kbd>)</kbd><dd>
+Call the command <code>org-capture</code>.  Note that this key binding is global and
+not active by default: you need to install it.  If you have templates
+<a name="index-date-tree-980"></a>defined see <a href="Capture-templates.html#Capture-templates">Capture templates</a>, it will offer these templates for
+selection or use a new Org outline node as the default template.  It will
+insert the template into the target file and switch to an indirect buffer
+narrowed to this new node.  You may then insert the information you want.
+
+     <p><a name="index-C_002dc-C_002dc-981"></a><a name="index-org_002dcapture_002dfinalize-982"></a><br><dt><kbd>C-c C-c &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-capture-finalize</code><kbd>)</kbd><dd>
+Once you have finished entering information into the capture buffer, <kbd>C-c
+C-c</kbd> will return you to the window configuration before the capture process,
+so that you can resume your work without further distraction.  When called
+with a prefix arg, finalize and then jump to the captured item.
+
+     <p><a name="index-C_002dc-C_002dw-983"></a><a name="index-org_002dcapture_002drefile-984"></a><br><dt><kbd>C-c C-w &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-capture-refile</code><kbd>)</kbd><dd>
+Finalize the capture process by refiling (see <a href="Refile-and-copy.html#Refile-and-copy">Refile and copy</a>) the note to
+a different place.  Please realize that this is a normal refiling command
+that will be executed&mdash;so the cursor position at the moment you run this
+command is important.  If you have inserted a tree with a parent and
+children, first move the cursor back to the parent.  Any prefix argument
+given to this command will be passed on to the <code>org-refile</code> command.
+
+     <p><a name="index-C_002dc-C_002dk-985"></a><a name="index-org_002dcapture_002dkill-986"></a><br><dt><kbd>C-c C-k &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-capture-kill</code><kbd>)</kbd><dd>
+Abort the capture process and return to the previous state.
+
+</dl>
+
+   <p>You can also call <code>org-capture</code> in a special way from the agenda, using
+the <kbd>k c</kbd> key combination.  With this access, any timestamps inserted by
+the selected capture template will default to the cursor date in the agenda,
+rather than to the current date.
+
+   <p>To find the locations of the last stored capture, use <code>org-capture</code> with
+prefix commands:
+
+     
+<a name="index-C_002du-C_002dc-c-987"></a>
+<dl><dt><kbd>C-u C-c c</kbd><dd>
+Visit the target location of a capture template.  You get to select the
+template in the usual way. 
+<a name="index-C_002du-C_002du-C_002dc-c-988"></a><br><dt><kbd>C-u C-u C-c c</kbd><dd>
+Visit the last stored capture item in its buffer. 
+</dl>
+
+   <p><a name="index-org_002dcapture_002dbookmark-989"></a><a name="index-org_002dcapture_002dlast_002dstored-990"></a>You can also jump to the bookmark <code>org-capture-last-stored</code>, which will
+automatically be created unless you set <code>org-capture-bookmark</code> to
+<code>nil</code>.
+
+   <p>To insert the capture at point in an Org buffer, call <code>org-capture</code> with
+a <code>C-0</code> prefix argument.
+
+   </body></html>
+

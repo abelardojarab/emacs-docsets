@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+<title>Results of evaluation - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="prev" href="Header-arguments.html#Header-arguments" title="Header arguments">
+<link rel="next" href="Noweb-reference-syntax.html#Noweb-reference-syntax" title="Noweb reference syntax">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Results-of-evaluation"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Header-arguments.html#Header-arguments">Header arguments</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.9 Results of evaluation</h3>
+
+<p><a name="index-code-block_002c-results-of-evaluation-2093"></a><a name="index-source-code_002c-results-of-evaluation-2094"></a>
+How Org handles results of a code block execution depends on many header
+arguments working together.  Here is only a summary of these.  For an
+enumeration of all the header arguments that affect results, see
+<a href="results.html#results">results</a>.
+
+   <p>The primary determinant is the execution context.  Is it in a <code>:session</code>
+or not?  Orthogonal to that is if the expected result is a <code>:results
+value</code> or <code>:results output</code>, which is a concatenation of output from
+start to finish of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block's evaluation.
+
+   <p><table summary=""><tr align="left"><td valign="top" width="26%"></td><td valign="top" width="33%"><b>Non-session</b> </td><td valign="top" width="41%"><b>Session</b>
+<br></td></tr><tr align="left"><td valign="top" width="26%"><code>:results value</code> </td><td valign="top" width="33%">value of last expression </td><td valign="top" width="41%">value of last expression
+<br></td></tr><tr align="left"><td valign="top" width="26%"><code>:results output</code> </td><td valign="top" width="33%">contents of STDOUT </td><td valign="top" width="41%">concatenation of interpreter output
+   <br></td></tr></table>
+
+   <p>For <code>:session</code> and non-session, the <code>:results value</code> turns the
+results into an Org mode table format.  Single values are wrapped in a one
+dimensional vector.  Rows and columns of a table are wrapped in a
+two-dimensional vector.
+
+<h4 class="subsection">14.9.1 Non-session</h4>
+
+<h5 class="subsubsection">14.9.1.1 <code>:results value</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003aresults_007d_002c-src-header-argument-2095"></a>Default.  Org gets the value by wrapping the code in a function definition in
+the language of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block.  That is why when using <code>:results
+value</code>, code should execute like a function and return a value.  For
+languages like Python, an explicit <code>return</code> statement is mandatory when
+using <code>:results value</code>.
+
+   <p>This is one of four evaluation contexts where Org automatically wraps the
+code in a function definition.
+
+<h5 class="subsubsection">14.9.1.2 <code>:results output</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003aresults_007d_002c-src-header-argument-2096"></a>For <code>:results output</code>, the code is passed to an external process running
+the interpreter.  Org returns the contents of the standard output stream as
+as text results.
+
+<h4 class="subsection">14.9.2 Session</h4>
+
+<h5 class="subsubsection">14.9.2.1 <code>:results value</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003aresults_007d_002c-src-header-argument-2097"></a>For <code>:results value</code> from a <code>:session</code>, Org passes the code to an
+interpreter running as an interactive Emacs inferior process.  So only
+languages that provide interactive evaluation can have session support.  Not
+all languages provide this support, such as &lsquo;<samp><span class="samp">C</span></samp>&rsquo; and &lsquo;<samp><span class="samp">ditaa</span></samp>&rsquo;.  Even
+those that do support, such as &lsquo;<samp><span class="samp">Python</span></samp>&rsquo; and &lsquo;<samp><span class="samp">Haskell</span></samp>&rsquo;, they impose
+limitations on allowable language constructs that can run interactively.  Org
+inherits those limitations for those &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks running in a
+<code>:session</code>.
+
+   <p>Org gets the value from the source code interpreter's last statement
+output.  Org has to use language-specific methods to obtain the value.  For
+example, from the variable <code>_</code> in &lsquo;<samp><span class="samp">Python</span></samp>&rsquo; and &lsquo;<samp><span class="samp">Ruby</span></samp>&rsquo;, and the
+value of <code>.Last.value</code> in &lsquo;<samp><span class="samp">R</span></samp>&rsquo;).
+
+<h5 class="subsubsection">14.9.2.2 <code>:results output</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003aresults_007d_002c-src-header-argument-2098"></a>For <code>:results output</code>, Org passes the code to the interpreter running as
+an interactive Emacs inferior process.  Org concatenates whatever text output
+emitted by the interpreter to return the collection as a result.  Note that
+this collection is not the same as collected from <code>STDOUT</code> of a
+non-interactive interpreter running as an external process.  Compare for
+example these two blocks:
+
+<pre class="example">     #+BEGIN_SRC python :results output
+      print "hello"
+      2
+      print "bye"
+     #+END_SRC
+     
+     #+RESULTS:
+     : hello
+     : bye
+</pre>
+   <p>In the above non-session mode, the &ldquo;2&rdquo; is not printed; so does not appear
+in results.
+
+<pre class="example">     #+BEGIN_SRC python :results output :session
+      print "hello"
+      2
+      print "bye"
+     #+END_SRC
+     
+     #+RESULTS:
+     : hello
+     : 2
+     : bye
+</pre>
+   <p>In the above <code>:session</code> mode, the interactive interpreter receives and
+prints &ldquo;2&rdquo;.  Results show that.
+
+   </body></html>
+

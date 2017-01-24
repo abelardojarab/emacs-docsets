@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+<title>Breaking down tasks - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="TODO-items.html#TODO-items" title="TODO items">
+<link rel="prev" href="Priorities.html#Priorities" title="Priorities">
+<link rel="next" href="Checkboxes.html#Checkboxes" title="Checkboxes">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Breaking-down-tasks"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Checkboxes.html#Checkboxes">Checkboxes</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Priorities.html#Priorities">Priorities</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="TODO-items.html#TODO-items">TODO items</a>
+<hr>
+</div>
+
+<h3 class="section">5.5 Breaking tasks down into subtasks</h3>
+
+<p><a name="index-tasks_002c-breaking-down-621"></a><a name="index-statistics_002c-for-TODO-items-622"></a>
+<a name="index-org_002dagenda_002dtodo_002dlist_002dsublevels-623"></a>It is often advisable to break down large tasks into smaller, manageable
+subtasks.  You can do this by creating an outline tree below a TODO item,
+with detailed subtasks on the tree<a rel="footnote" href="Breaking-down-tasks.html#fn-1" name="fnd-1"><sup>1</sup></a>.  To keep
+the overview over the fraction of subtasks that are already completed, insert
+either &lsquo;<samp><span class="samp">[/]</span></samp>&rsquo; or &lsquo;<samp><span class="samp">[%]</span></samp>&rsquo; anywhere in the headline.  These cookies will
+be updated each time the TODO status of a child changes, or when pressing
+<kbd>C-c C-c</kbd> on the cookie.  For example:
+
+<pre class="example">     * Organize Party [33%]
+     ** TODO Call people [1/2]
+     *** TODO Peter
+     *** DONE Sarah
+     ** TODO Buy food
+     ** DONE Talk to neighbor
+</pre>
+   <p><a name="index-property_002c-COOKIE_005fDATA-624"></a>If a heading has both checkboxes and TODO children below it, the meaning of
+the statistics cookie become ambiguous.  Set the property
+<code>COOKIE_DATA</code> to either &lsquo;<samp><span class="samp">checkbox</span></samp>&rsquo; or &lsquo;<samp><span class="samp">todo</span></samp>&rsquo; to resolve
+this issue.
+
+   <p><a name="index-org_002dhierarchical_002dtodo_002dstatistics-625"></a>If you would like to have the statistics cookie count any TODO entries in the
+subtree (not just direct children), configure
+<code>org-hierarchical-todo-statistics</code>.  To do this for a single subtree,
+include the word &lsquo;<samp><span class="samp">recursive</span></samp>&rsquo; into the value of the <code>COOKIE_DATA</code>
+property.
+
+<pre class="example">     * Parent capturing statistics [2/20]
+       :PROPERTIES:
+       :COOKIE_DATA: todo recursive
+       :END:
+</pre>
+   <p>If you would like a TODO entry to automatically change to DONE
+when all children are done, you can use the following setup:
+
+<pre class="example">     (defun org-summary-todo (n-done n-not-done)
+       "Switch entry to DONE when all subentries are done, to TODO otherwise."
+       (let (org-log-done org-log-states)   ; turn off logging
+         (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
+     
+     (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
+</pre>
+   <p>Another possibility is the use of checkboxes to identify (a hierarchy of) a
+large number of subtasks (see <a href="Checkboxes.html#Checkboxes">Checkboxes</a>).
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Breaking-down-tasks.html#fnd-1">1</a>]</small> To keep subtasks out of the
+global TODO list, see the <code>org-agenda-todo-list-sublevels</code>.</p>
+
+   <hr></div>
+
+   </body></html>
+

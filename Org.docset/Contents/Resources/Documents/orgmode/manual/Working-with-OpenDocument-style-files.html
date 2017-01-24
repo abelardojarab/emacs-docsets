@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+<title>Working with OpenDocument style files - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Advanced-topics-in-ODT-export.html#Advanced-topics-in-ODT-export" title="Advanced topics in ODT export">
+<link rel="prev" href="Configuring-a-document-converter.html#Configuring-a-document-converter" title="Configuring a document converter">
+<link rel="next" href="Creating-one_002doff-styles.html#Creating-one_002doff-styles" title="Creating one-off styles">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Working-with-OpenDocument-style-files"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Creating-one_002doff-styles.html#Creating-one_002doff-styles">Creating one-off styles</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Configuring-a-document-converter.html#Configuring-a-document-converter">Configuring a document converter</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Advanced-topics-in-ODT-export.html#Advanced-topics-in-ODT-export">Advanced topics in ODT export</a>
+<hr>
+</div>
+
+<h5 class="subsubheading">Working with OpenDocument style files</h5>
+
+<p><a name="index-styles_002c-custom-1905"></a><a name="index-template_002c-custom-1906"></a>
+This section explores the internals of the ODT exporter and the
+means by which it produces styled documents.  Read this section if you are
+interested in exploring the automatic and custom OpenDocument styles used by
+the exporter.
+
+   <p><a name="x_002dfactory_002dstyles"></a>
+
+<h5 class="subsubheading">a) Factory styles</h5>
+
+<p>The ODT exporter relies on two files for generating its output. 
+These files are bundled with the distribution under the directory pointed to
+by the variable <code>org-odt-styles-dir</code>.  The two files are:
+
+     <ul>
+<a name="x_002dorgodtstyles_002dxml"></a><li><samp><span class="file">OrgOdtStyles.xml</span></samp>
+
+     <p>This file contributes to the <samp><span class="file">styles.xml</span></samp> file of the final &lsquo;<samp><span class="samp">ODT</span></samp>&rsquo;
+document.  This file gets modified for the following purposes:
+          <ol type=1 start=1>
+
+          <li>To control outline numbering based on user settings.
+
+          <li>To add styles generated by <samp><span class="file">htmlfontify.el</span></samp> for fontification of code
+blocks.
+          </ol>
+
+     <p><a name="x_002dorgodtcontenttemplate_002dxml"></a><li><samp><span class="file">OrgOdtContentTemplate.xml</span></samp>
+
+     <p>This file contributes to the <samp><span class="file">content.xml</span></samp> file of the final &lsquo;<samp><span class="samp">ODT</span></samp>&rsquo;
+document.  The contents of the Org outline are inserted between the
+&lsquo;<samp><span class="samp">&lt;office:text&gt;</span></samp>&rsquo;<small class="dots">...</small>&lsquo;<samp><span class="samp">&lt;/office:text&gt;</span></samp>&rsquo; elements of this file.
+
+     <p>Apart from serving as a template file for the final <samp><span class="file">content.xml</span></samp>, the
+file serves the following purposes:
+          <ol type=1 start=1>
+
+          <li>It contains automatic styles for formatting of tables which are referenced by
+the exporter.
+
+          <li>It contains &lsquo;<samp><span class="samp">&lt;text:sequence-decl&gt;</span></samp>&rsquo;<small class="dots">...</small>&lsquo;<samp><span class="samp">&lt;/text:sequence-decl&gt;</span></samp>&rsquo;
+elements that control how various entities&mdash;tables, images, equations,
+etc.&mdash;are numbered.
+          </ol>
+</ul>
+
+   <p><a name="x_002doverriding_002dfactory_002dstyles"></a>
+
+<h5 class="subsubheading">b) Overriding factory styles</h5>
+
+<p>The following two variables control the location from which the ODT
+exporter picks up the custom styles and content template files.  You can
+customize these variables to override the factory styles used by the
+exporter.
+
+     <ul>
+<a name="x_002dorg_002dodt_002dstyles_002dfile"></a><li><code>org-odt-styles-file</code>
+
+     <p>Use this variable to specify the <samp><span class="file">styles.xml</span></samp> that will be used in the
+final output.  You can specify one of the following values:
+
+          <ol type=1 start=1>
+<li>A <samp><span class="file">styles.xml</span></samp> file
+
+          <p>Use this file instead of the default <samp><span class="file">styles.xml</span></samp>
+
+          <li>A <samp><span class="file">.odt</span></samp> or <samp><span class="file">.ott</span></samp> file
+
+          <p>Use the <samp><span class="file">styles.xml</span></samp> contained in the specified OpenDocument Text or
+Template file
+
+          <li>A <samp><span class="file">.odt</span></samp> or <samp><span class="file">.ott</span></samp> file and a subset of files contained within them
+
+          <p>Use the <samp><span class="file">styles.xml</span></samp> contained in the specified OpenDocument Text or
+Template file.  Additionally extract the specified member files and embed
+those within the final &lsquo;<samp><span class="samp">ODT</span></samp>&rsquo; document.
+
+          <p>Use this option if the <samp><span class="file">styles.xml</span></samp> file references additional files
+like header and footer images.
+
+          <li><code>nil</code>
+
+          <p>Use the default <samp><span class="file">styles.xml</span></samp>
+          </ol>
+
+     <p><a name="x_002dorg_002dodt_002dcontent_002dtemplate_002dfile"></a><li><code>org-odt-content-template-file</code>
+
+     <p>Use this variable to specify the blank <samp><span class="file">content.xml</span></samp> that will be used
+in the final output. 
+</ul>
+
+   </body></html>
+

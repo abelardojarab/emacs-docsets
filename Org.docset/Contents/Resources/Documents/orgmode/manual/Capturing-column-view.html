@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+<title>Capturing column view - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Column-view.html#Column-view" title="Column view">
+<link rel="prev" href="Using-column-view.html#Using-column-view" title="Using column view">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Capturing-column-view"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Using-column-view.html#Using-column-view">Using column view</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Column-view.html#Column-view">Column view</a>
+<hr>
+</div>
+
+<h4 class="subsection">7.5.3 Capturing column view</h4>
+
+<p>Since column view is just an overlay over a buffer, it cannot be
+exported or printed directly.  If you want to capture a column view, use
+a <code>columnview</code> dynamic block (see <a href="Dynamic-blocks.html#Dynamic-blocks">Dynamic blocks</a>).  The frame
+of this block looks like this:
+
+   <p><a name="index-g_t_0023_002bBEGIN_002c-columnview-786"></a>
+<pre class="example">     * The column view
+     #+BEGIN: columnview :hlines 1 :id "label"
+     
+     #+END:
+</pre>
+   <p class="noindent">This dynamic block has the following parameters:
+
+     <dl>
+<dt><code>:id</code><dd>This is the most important parameter.  Column view is a feature that is
+often localized to a certain (sub)tree, and the capture block might be
+at a different location in the file.  To identify the tree whose view to
+capture, you can use 4 values:
+<a name="index-property_002c-ID-787"></a>
+     <pre class="example">          local     <span class="roman">use the tree in which the capture block is located</span>
+          global    <span class="roman">make a global view, including all headings in the file</span>
+          "file:<var>path-to-file</var>"
+                    <span class="roman">run column view at the top of this file</span>
+          "<var>ID</var>"      <span class="roman">call column view in the tree that has an </span><code>:ID:</code>
+                    <span class="roman">property with the value </span><i>label</i><span class="roman">.  You can use</span>
+                    <kbd>M-x org-id-copy RET</kbd><span class="roman"> to create a globally unique ID for</span>
+                    <span class="roman">the current entry and copy it to the kill-ring.</span>
+</pre>
+     <br><dt><code>:hlines</code><dd>When <code>t</code>, insert an hline after every line.  When a number <var>N</var>, insert
+an hline before each headline with level <code>&lt;= </code><var>N</var>. 
+<br><dt><code>:vlines</code><dd>When set to <code>t</code>, force column groups to get vertical lines. 
+<br><dt><code>:maxlevel</code><dd>When set to a number, don't capture entries below this level. 
+<br><dt><code>:skip-empty-rows</code><dd>When set to <code>t</code>, skip rows where the only non-empty specifier of the
+column view is <code>ITEM</code>. 
+<br><dt><code>:indent</code><dd>When non-<code>nil</code>, indent each <code>ITEM</code> field according to its level.
+
+   </dl>
+
+<p class="noindent">The following commands insert or update the dynamic block:
+
+     
+<a name="index-C_002dc-C_002dx-i-788"></a>
+<a name="index-org_002dinsert_002dcolumns_002ddblock-789"></a>
+<dl><dt><kbd>C-c C-x i &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-insert-columns-dblock</code><kbd>)</kbd><dd>
+Insert a dynamic block capturing a column view.  You will be prompted
+for the scope or ID of the view. 
+<a name="index-C_002dc-C_002dc-790"></a><a name="index-C_002dc-C_002dx-C_002du-791"></a><a name="index-org_002ddblock_002dupdate-792"></a><br><dt><kbd>C-c C-c  </kbd><span class="roman">or</span><kbd>  C-c C-x C-u &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-dblock-update</code><kbd>)</kbd><dd>
+Update dynamic block at point.  The cursor needs to be in the
+<code>#+BEGIN</code> line of the dynamic block. 
+<a name="index-C_002du-C_002dc-C_002dx-C_002du-793"></a><a name="index-org_002dupdate_002dall_002ddblocks-794"></a><br><dt><kbd>C-u C-c C-x C-u &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-update-all-dblocks</code><kbd>)</kbd><dd>
+Update all dynamic blocks (see <a href="Dynamic-blocks.html#Dynamic-blocks">Dynamic blocks</a>).  This is useful if
+you have several clock table blocks, column-capturing blocks or other dynamic
+blocks in a buffer. 
+</dl>
+
+   <p>You can add formulas to the column view table and you may add plotting
+instructions in front of the table&mdash;these will survive an update of the
+block.  If there is a <code>#+TBLFM:</code> after the table, the table will
+actually be recalculated automatically after an update.
+
+   <p>An alternative way to capture and process property values into a table is
+provided by Eric Schulte's <samp><span class="file">org-collector.el</span></samp> which is a contributed
+package<a rel="footnote" href="Capturing-column-view.html#fn-1" name="fnd-1"><sup>1</sup></a>.  It provides a general API to collect
+properties from entries in a certain scope, and arbitrary Lisp expressions to
+process these values before inserting them into a table or a dynamic block.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Capturing-column-view.html#fnd-1">1</a>]</small> Contributed packages are not part of Emacs, but are
+distributed with the main distribution of Org (visit
+<a href="http://orgmode.org">http://orgmode.org</a>).</p>
+
+   <hr></div>
+
+   </body></html>
+

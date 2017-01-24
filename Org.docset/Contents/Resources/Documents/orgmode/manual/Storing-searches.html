@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+<title>Storing searches - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Custom-agenda-views.html#Custom-agenda-views" title="Custom agenda views">
+<link rel="next" href="Block-agenda.html#Block-agenda" title="Block agenda">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Storing-searches"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Block-agenda.html#Block-agenda">Block agenda</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Custom-agenda-views.html#Custom-agenda-views">Custom agenda views</a>
+<hr>
+</div>
+
+<h4 class="subsection">10.6.1 Storing searches</h4>
+
+<p>The first application of custom searches is the definition of keyboard
+shortcuts for frequently used searches, either creating an agenda
+buffer, or a sparse tree (the latter covering of course only the current
+buffer). 
+<a name="index-C_002dc-a-C-1460"></a><a name="index-org_002dagenda_002dcustom_002dcommands-1461"></a><a name="index-agenda-views_002c-main-example-1462"></a><a name="index-agenda_002c-as-an-agenda-views-1463"></a><a name="index-agenda_002a_002c-as-an-agenda-views-1464"></a><a name="index-tags_002c-as-an-agenda-view-1465"></a><a name="index-todo_002c-as-an-agenda-view-1466"></a><a name="index-tags_002dtodo-1467"></a><a name="index-todo_002dtree-1468"></a><a name="index-occur_002dtree-1469"></a><a name="index-tags_002dtree-1470"></a>
+Custom commands are configured in the variable
+<code>org-agenda-custom-commands</code>.  You can customize this variable, for
+example by pressing <kbd>C-c a C</kbd>.  You can also directly set it with Emacs
+Lisp in the Emacs init file.  The following example contains all valid agenda
+views:
+
+<pre class="lisp">     (setq org-agenda-custom-commands
+           '(("x" agenda)
+             ("y" agenda*)
+             ("w" todo "WAITING")
+             ("W" todo-tree "WAITING")
+             ("u" tags "+boss-urgent")
+             ("v" tags-todo "+boss-urgent")
+             ("U" tags-tree "+boss-urgent")
+             ("f" occur-tree "\\&lt;FIXME\\&gt;")
+             ("h" . "HOME+Name tags searches") ; description for "h" prefix
+             ("hl" tags "+home+Lisa")
+             ("hp" tags "+home+Peter")
+             ("hk" tags "+home+Kim")))
+</pre>
+   <p class="noindent">The initial string in each entry defines the keys you have to press
+after the dispatcher command <kbd>C-c a</kbd> in order to access the command. 
+Usually this will be just a single character, but if you have many
+similar commands, you can also define two-letter combinations where the
+first character is the same in several combinations and serves as a
+prefix key<a rel="footnote" href="Storing-searches.html#fn-1" name="fnd-1"><sup>1</sup></a>.  The second
+parameter is the search type, followed by the string or regular
+expression to be used for the matching.  The example above will
+therefore define:
+
+     <dl>
+<dt><kbd>C-c a x</kbd><dd>as a global search for agenda entries planned<a rel="footnote" href="Storing-searches.html#fn-2" name="fnd-2"><sup>2</sup></a> this week/day. 
+<br><dt><kbd>C-c a y</kbd><dd>as a global search for agenda entries planned this week/day, but only those
+with an hour specification like <code>[h]h:mm</code>&mdash;think of them as appointments. 
+<br><dt><kbd>C-c a w</kbd><dd>as a global search for TODO entries with &lsquo;<samp><span class="samp">WAITING</span></samp>&rsquo; as the TODO
+keyword
+<br><dt><kbd>C-c a W</kbd><dd>as the same search, but only in the current buffer and displaying the
+results as a sparse tree
+<br><dt><kbd>C-c a u</kbd><dd>as a global tags search for headlines marked &lsquo;<samp><span class="samp">:boss:</span></samp>&rsquo; but not
+&lsquo;<samp><span class="samp">:urgent:</span></samp>&rsquo;
+<br><dt><kbd>C-c a v</kbd><dd>as the same search as <kbd>C-c a u</kbd>, but limiting the search to
+headlines that are also TODO items
+<br><dt><kbd>C-c a U</kbd><dd>as the same search as <kbd>C-c a u</kbd>, but only in the current buffer and
+displaying the result as a sparse tree
+<br><dt><kbd>C-c a f</kbd><dd>to create a sparse tree (again: current buffer only) with all entries
+containing the word &lsquo;<samp><span class="samp">FIXME</span></samp>&rsquo;
+<br><dt><kbd>C-c a h</kbd><dd>as a prefix command for a HOME tags search where you have to press an
+additional key (<kbd>l</kbd>, <kbd>p</kbd> or <kbd>k</kbd>) to select a name (Lisa,
+Peter, or Kim) as additional tag to match. 
+</dl>
+
+   <p>Note that the <code>*-tree</code> agenda views need to be called from an
+Org buffer as they operate on the current buffer only.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Storing-searches.html#fnd-1">1</a>]</small> You can provide a description for a prefix key by
+inserting a cons cell with the prefix and the description.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Storing-searches.html#fnd-2">2</a>]</small> <em>Planned</em> means
+here that these entries have some planning information attached to them, like
+a time-stamp, a scheduled or a deadline string.  See
+<code>org-agenda-entry-types</code> on how to set what planning information will be
+taken into account.</p>
+
+   <hr></div>
+
+   </body></html>
+

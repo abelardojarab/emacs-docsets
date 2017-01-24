@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+<title>The spreadsheet - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Tables.html#Tables" title="Tables">
+<link rel="prev" href="Orgtbl-mode.html#Orgtbl-mode" title="Orgtbl mode">
+<link rel="next" href="Org_002dPlot.html#Org_002dPlot" title="Org-Plot">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="The-spreadsheet"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Org_002dPlot.html#Org_002dPlot">Org-Plot</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Orgtbl-mode.html#Orgtbl-mode">Orgtbl mode</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Tables.html#Tables">Tables</a>
+<hr>
+</div>
+
+<h3 class="section">3.5 The spreadsheet</h3>
+
+<p><a name="index-calculations_002c-in-tables-333"></a><a name="index-spreadsheet-capabilities-334"></a><a name="index-g_t_0040file_007bcalc_007d-package-335"></a>
+The table editor makes use of the Emacs <samp><span class="file">calc</span></samp> package to implement
+spreadsheet-like capabilities.  It can also evaluate Emacs Lisp forms to
+derive fields from other fields.  While fully featured, Org's implementation
+is not identical to other spreadsheets.  For example, Org knows the concept
+of a <em>column formula</em> that will be applied to all non-header fields in a
+column without having to copy the formula to each relevant field.  There is
+also a formula debugger, and a formula editor with features for highlighting
+fields in the table corresponding to the references at the point in the
+formula, moving these references by arrow keys
+
+<ul class="menu">
+<li><a accesskey="1" href="References.html#References">References</a>:                   How to refer to another field or range
+<li><a accesskey="2" href="Formula-syntax-for-Calc.html#Formula-syntax-for-Calc">Formula syntax for Calc</a>:      Using Calc to compute stuff
+<li><a accesskey="3" href="Formula-syntax-for-Lisp.html#Formula-syntax-for-Lisp">Formula syntax for Lisp</a>:      Writing formulas in Emacs Lisp
+<li><a accesskey="4" href="Durations-and-time-values.html#Durations-and-time-values">Durations and time values</a>:    How to compute durations and time values
+<li><a accesskey="5" href="Field-and-range-formulas.html#Field-and-range-formulas">Field and range formulas</a>:     Formula for specific (ranges of) fields
+<li><a accesskey="6" href="Column-formulas.html#Column-formulas">Column formulas</a>:              Formulas valid for an entire column
+<li><a accesskey="7" href="Lookup-functions.html#Lookup-functions">Lookup functions</a>:             Lookup functions for searching tables
+<li><a accesskey="8" href="Editing-and-debugging-formulas.html#Editing-and-debugging-formulas">Editing and debugging formulas</a>:   Fixing formulas
+<li><a accesskey="9" href="Updating-the-table.html#Updating-the-table">Updating the table</a>:           Recomputing all dependent fields
+<li><a href="Advanced-features.html#Advanced-features">Advanced features</a>:            Field and column names, parameters and automatic recalc
+</ul>
+
+   </body></html>
+

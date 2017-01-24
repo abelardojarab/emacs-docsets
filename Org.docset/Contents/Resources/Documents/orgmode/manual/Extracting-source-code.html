@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+<title>Extracting source code - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="prev" href="Exporting-code-blocks.html#Exporting-code-blocks" title="Exporting code blocks">
+<link rel="next" href="Evaluating-code-blocks.html#Evaluating-code-blocks" title="Evaluating code blocks">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Extracting-source-code"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Evaluating-code-blocks.html#Evaluating-code-blocks">Evaluating code blocks</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Exporting-code-blocks.html#Exporting-code-blocks">Exporting code blocks</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.4 Extracting source code</h3>
+
+<p><a name="index-tangling-2036"></a><a name="index-source-code_002c-extracting-2037"></a><a name="index-code-block_002c-extracting-source-code-2038"></a>
+Extracting source code from code blocks is a basic task in literate
+programming.  Org has features to make this easy.  In literate programming
+parlance, documents on creation are <em>woven</em> with code and documentation,
+and on export, the code is <em>tangled</em> for execution by a computer.  Org
+facilitates weaving and tangling for producing, maintaining, sharing, and
+exporting literate programming documents.  Org provides extensive
+customization options for extracting source code.
+
+   <p>When Org tangles &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks, it expands, merges, and transforms
+them.  Then Org recomposes them into one or more separate files, as
+configured through the options.  During this <em>tangling</em> process, Org
+expands variables in the source code, and resolves any &ldquo;noweb&rdquo; style
+references (see <a href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>).
+
+<h5 class="subsubheading">Header arguments</h5>
+
+     
+<a name="index-g_t_0040code_007b_003atangle_007d_002c-src-header-argument-2039"></a>
+<dl><dt><code>:tangle no</code><dd>By default, Org does not tangle the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block on export. 
+<br><dt><code>:tangle yes</code><dd>Org extracts the contents of the code block for the tangled output.  By
+default, the output file name is the same as the Org file but with a file
+extension derived from the language identifier of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block. 
+<br><dt><code>:tangle filename</code><dd>Override the default file name with this one for the tangled output. 
+</dl>
+
+   <p><a name="index-C_002dc-C_002dv-t-2040"></a>
+
+<h5 class="subsubheading">Functions</h5>
+
+     <dl>
+<dt><code>org-babel-tangle</code><dd>Tangle the current file.  Bound to <kbd>C-c C-v t</kbd>.
+
+     <p>With prefix argument only tangle the current &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block. 
+<br><dt><code>org-babel-tangle-file</code><dd>Choose a file to tangle.  Bound to <kbd>C-c C-v f</kbd>. 
+</dl>
+
+<h5 class="subsubheading">Hooks</h5>
+
+     <dl>
+<dt><code>org-babel-post-tangle-hook</code><dd>This hook runs from within code tangled by <code>org-babel-tangle</code>, making it
+suitable for post-processing, compilation, and evaluation of code in the
+tangled files. 
+</dl>
+
+<h5 class="subsubheading">Jumping between code and Org</h5>
+
+<p>Debuggers normally link errors and messages back to the source code.  But for
+tangled files, we want to link back to the Org file, not to the tangled
+source file.  To make this extra jump, Org uses
+<code>org-babel-tangle-jump-to-org</code> function with two additional source code
+block header arguments: One, set <code>padline</code> (see <a href="padline.html#padline">padline</a>) to true
+(the default setting).  Two, set <code>comments</code> (see <a href="comments.html#comments">comments</a>) to
+<code>link</code>, which makes Org insert links to the Org file.
+
+   </body></html>
+

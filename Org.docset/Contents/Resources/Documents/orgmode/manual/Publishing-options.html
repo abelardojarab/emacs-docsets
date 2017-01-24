@@ -1,0 +1,312 @@
+<html lang="en">
+<head>
+<title>Publishing options - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Configuration.html#Configuration" title="Configuration">
+<link rel="prev" href="Publishing-action.html#Publishing-action" title="Publishing action">
+<link rel="next" href="Publishing-links.html#Publishing-links" title="Publishing links">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Publishing-options"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Publishing-links.html#Publishing-links">Publishing links</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Publishing-action.html#Publishing-action">Publishing action</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Configuration.html#Configuration">Configuration</a>
+<hr>
+</div>
+
+<h4 class="subsection">13.1.5 Options for the exporters</h4>
+
+<p><a name="index-options_002c-for-publishing-1997"></a>
+The property list can be used to set export options during the publishing
+process.  In most cases, these properties correspond to user variables in
+Org.  While some properties are available for all export back-ends, most of
+them are back-end specific.  The following sections list properties along
+with the variable they belong to.  See the documentation string of these
+options for details.
+
+   <p><a name="index-org_002dpublish_002dproject_002dalist-1998"></a>When a property is given a value in <code>org-publish-project-alist</code>, its
+setting overrides the value of the corresponding user variable (if any)
+during publishing.  Options set within a file (see <a href="Export-settings.html#Export-settings">Export settings</a>),
+however, override everything.
+
+<h5 class="subsubheading">Generic properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:archived-trees</code>        </td><td valign="top"><code>org-export-with-archived-trees</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:exclude-tags</code>          </td><td valign="top"><code>org-export-exclude-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:headline-levels</code>       </td><td valign="top"><code>org-export-headline-levels</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:language</code>              </td><td valign="top"><code>org-export-default-language</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:preserve-breaks</code>       </td><td valign="top"><code>org-export-preserve-breaks</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:section-numbers</code>       </td><td valign="top"><code>org-export-with-section-numbers</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:select-tags</code>           </td><td valign="top"><code>org-export-select-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-author</code>           </td><td valign="top"><code>org-export-with-author</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-broken-links</code>     </td><td valign="top"><code>org-export-with-broken-links</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-clocks</code>           </td><td valign="top"><code>org-export-with-clocks</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-creator</code>          </td><td valign="top"><code>org-export-with-creator</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-date</code>             </td><td valign="top"><code>org-export-with-date</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-drawers</code>          </td><td valign="top"><code>org-export-with-drawers</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-email</code>            </td><td valign="top"><code>org-export-with-email</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-emphasize</code>        </td><td valign="top"><code>org-export-with-emphasize</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-fixed-width</code>      </td><td valign="top"><code>org-export-with-fixed-width</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-footnotes</code>        </td><td valign="top"><code>org-export-with-footnotes</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-latex</code>            </td><td valign="top"><code>org-export-with-latex</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-planning</code>         </td><td valign="top"><code>org-export-with-planning</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-priority</code>         </td><td valign="top"><code>org-export-with-priority</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-properties</code>       </td><td valign="top"><code>org-export-with-properties</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-special-strings</code>  </td><td valign="top"><code>org-export-with-special-strings</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-sub-superscript</code>  </td><td valign="top"><code>org-export-with-sub-superscripts</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-tables</code>           </td><td valign="top"><code>org-export-with-tables</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-tags</code>             </td><td valign="top"><code>org-export-with-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-tasks</code>            </td><td valign="top"><code>org-export-with-tasks</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-timestamps</code>       </td><td valign="top"><code>org-export-with-timestamps</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-title</code>            </td><td valign="top"><code>org-export-with-title</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-toc</code>              </td><td valign="top"><code>org-export-with-toc</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:with-todo-keywords</code>    </td><td valign="top"><code>org-export-with-todo-keywords</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">ASCII specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:ascii-bullets</code>                       </td><td valign="top"><code>org-ascii-bullets</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-caption-above</code>                 </td><td valign="top"><code>org-ascii-caption-above</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-charset</code>                       </td><td valign="top"><code>org-ascii-charset</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-global-margin</code>                 </td><td valign="top"><code>org-ascii-global-margin</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-format-drawer-function</code>        </td><td valign="top"><code>org-ascii-format-drawer-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-format-inlinetask-function</code>    </td><td valign="top"><code>org-ascii-format-inlinetask-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-headline-spacing</code>              </td><td valign="top"><code>org-ascii-headline-spacing</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-indented-line-width</code>           </td><td valign="top"><code>org-ascii-indented-line-width</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-inlinetask-width</code>              </td><td valign="top"><code>org-ascii-inlinetask-width</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-inner-margin</code>                  </td><td valign="top"><code>org-ascii-inner-margin</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-links-to-notes</code>                </td><td valign="top"><code>org-ascii-links-to-notes</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-list-margin</code>                   </td><td valign="top"><code>org-ascii-list-margin</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-paragraph-spacing</code>             </td><td valign="top"><code>org-ascii-paragraph-spacing</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-quote-margin</code>                  </td><td valign="top"><code>org-ascii-quote-margin</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-table-keep-all-vertical-lines</code> </td><td valign="top"><code>org-ascii-table-keep-all-vertical-lines</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-table-use-ascii-art</code>           </td><td valign="top"><code>org-ascii-table-use-ascii-art</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-table-widen-columns</code>           </td><td valign="top"><code>org-ascii-table-widen-columns</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-text-width</code>                    </td><td valign="top"><code>org-ascii-text-width</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-underline</code>                     </td><td valign="top"><code>org-ascii-underline</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:ascii-verbatim-format</code>               </td><td valign="top"><code>org-ascii-verbatim-format</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">Beamer specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:beamer-theme</code>                 </td><td valign="top"><code>org-beamer-theme</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-column-view-format</code>    </td><td valign="top"><code>org-beamer-column-view-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-environments-extra</code>    </td><td valign="top"><code>org-beamer-environments-extra</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-frame-default-options</code> </td><td valign="top"><code>org-beamer-frame-default-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-outline-frame-options</code> </td><td valign="top"><code>org-beamer-outline-frame-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-outline-frame-title</code>   </td><td valign="top"><code>org-beamer-outline-frame-title</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:beamer-subtitle-format</code>       </td><td valign="top"><code>org-beamer-subtitle-format</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">HTML specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:html-allow-name-attribute-in-anchors</code> </td><td valign="top"><code>org-html-allow-name-attribute-in-anchors</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-checkbox-type</code>              </td><td valign="top"><code>org-html-checkbox-type</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-container</code>                  </td><td valign="top"><code>org-html-container-element</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-divs</code>                       </td><td valign="top"><code>org-html-divs</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-doctype</code>                    </td><td valign="top"><code>org-html-doctype</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-extension</code>                  </td><td valign="top"><code>org-html-extension</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-footnote-format</code>            </td><td valign="top"><code>org-html-footnote-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-footnote-separator</code>         </td><td valign="top"><code>org-html-footnote-separator</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-footnotes-section</code>          </td><td valign="top"><code>org-html-footnotes-section</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-format-drawer-function</code>     </td><td valign="top"><code>org-html-format-drawer-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-format-headline-function</code>   </td><td valign="top"><code>org-html-format-headline-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-format-inlinetask-function</code> </td><td valign="top"><code>org-html-format-inlinetask-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-head-extra</code>                 </td><td valign="top"><code>org-html-head-extra</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-head-include-default-style</code> </td><td valign="top"><code>org-html-head-include-default-style</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-head-include-scripts</code>       </td><td valign="top"><code>org-html-head-include-scripts</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-head</code>                       </td><td valign="top"><code>org-html-head</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-home/up-format</code>             </td><td valign="top"><code>org-html-home/up-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-html5-fancy</code>                </td><td valign="top"><code>org-html-html5-fancy</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-indent</code>                     </td><td valign="top"><code>org-html-indent</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-infojs-options</code>             </td><td valign="top"><code>org-html-infojs-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-infojs-template</code>            </td><td valign="top"><code>org-html-infojs-template</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-inline-image-rules</code>         </td><td valign="top"><code>org-html-inline-image-rules</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-inline-images</code>              </td><td valign="top"><code>org-html-inline-images</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-link-home</code>                  </td><td valign="top"><code>org-html-link-home</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-link-org-files-as-html</code>     </td><td valign="top"><code>org-html-link-org-files-as-html</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-link-up</code>                    </td><td valign="top"><code>org-html-link-up</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-link-use-abs-url</code>           </td><td valign="top"><code>org-html-link-use-abs-url</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-mathjax-options</code>            </td><td valign="top"><code>org-html-mathjax-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-mathjax-template</code>           </td><td valign="top"><code>org-html-mathjax-template</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-metadata-timestamp-format</code>  </td><td valign="top"><code>org-html-metadata-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-postamble-format</code>           </td><td valign="top"><code>org-html-postamble-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-postamble</code>                  </td><td valign="top"><code>org-html-postamble</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-preamble-format</code>            </td><td valign="top"><code>org-html-preamble-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-preamble</code>                   </td><td valign="top"><code>org-html-preamble</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-align-individual-fields</code> </td><td valign="top"><code>org-html-table-align-individual-fields</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-attributes</code>           </td><td valign="top"><code>org-html-table-default-attributes</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-caption-above</code>        </td><td valign="top"><code>org-html-table-caption-above</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-data-tags</code>            </td><td valign="top"><code>org-html-table-data-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-header-tags</code>          </td><td valign="top"><code>org-html-table-header-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-row-tags</code>             </td><td valign="top"><code>org-html-table-row-tags</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-table-use-header-tags-for-first-column</code> </td><td valign="top"><code>org-html-table-use-header-tags-for-first-column</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-tag-class-prefix</code>           </td><td valign="top"><code>org-html-tag-class-prefix</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-text-markup-alist</code>          </td><td valign="top"><code>org-html-text-markup-alist</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-todo-kwd-class-prefix</code>      </td><td valign="top"><code>org-html-todo-kwd-class-prefix</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-toplevel-hlevel</code>            </td><td valign="top"><code>org-html-toplevel-hlevel</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-use-infojs</code>                 </td><td valign="top"><code>org-html-use-infojs</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-validation-link</code>            </td><td valign="top"><code>org-html-validation-link</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-viewport</code>                   </td><td valign="top"><code>org-html-viewport</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:html-xml-declaration</code>            </td><td valign="top"><code>org-html-xml-declaration</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">LaTeX specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:latex-active-timestamp-format</code>    </td><td valign="top"><code>org-latex-active-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-caption-above</code>              </td><td valign="top"><code>org-latex-caption-above</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-classes</code>                    </td><td valign="top"><code>org-latex-classes</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-class</code>                      </td><td valign="top"><code>org-latex-default-class</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-compiler</code>                   </td><td valign="top"><code>org-latex-compiler</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-default-figure-position</code>    </td><td valign="top"><code>org-latex-default-figure-position</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-default-table-environment</code>  </td><td valign="top"><code>org-latex-default-table-environment</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-default-table-mode</code>         </td><td valign="top"><code>org-latex-default-table-mode</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-diary-timestamp-format</code>     </td><td valign="top"><code>org-latex-diary-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-footnote-defined-format</code>    </td><td valign="top"><code>org-latex-footnote-defined-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-footnote-separator</code>         </td><td valign="top"><code>org-latex-footnote-separator</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-format-drawer-function</code>     </td><td valign="top"><code>org-latex-format-drawer-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-format-headline-function</code>   </td><td valign="top"><code>org-latex-format-headline-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-format-inlinetask-function</code> </td><td valign="top"><code>org-latex-format-inlinetask-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-hyperref-template</code>          </td><td valign="top"><code>org-latex-hyperref-template</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-image-default-height</code>       </td><td valign="top"><code>org-latex-image-default-height</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-image-default-option</code>       </td><td valign="top"><code>org-latex-image-default-option</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-image-default-width</code>        </td><td valign="top"><code>org-latex-image-default-width</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-images-centered</code>            </td><td valign="top"><code>org-latex-images-centered</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-inactive-timestamp-format</code>  </td><td valign="top"><code>org-latex-inactive-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-inline-image-rules</code>         </td><td valign="top"><code>org-latex-inline-image-rules</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-link-with-unknown-path-format</code> </td><td valign="top"><code>org-latex-link-with-unknown-path-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-listings-langs</code>             </td><td valign="top"><code>org-latex-listings-langs</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-listings-options</code>           </td><td valign="top"><code>org-latex-listings-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-listings</code>                   </td><td valign="top"><code>org-latex-listings</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-minted-langs</code>               </td><td valign="top"><code>org-latex-minted-langs</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-minted-options</code>             </td><td valign="top"><code>org-latex-minted-options</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-prefer-user-labels</code>         </td><td valign="top"><code>org-latex-prefer-user-labels</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-subtitle-format</code>            </td><td valign="top"><code>org-latex-subtitle-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-subtitle-separate</code>          </td><td valign="top"><code>org-latex-subtitle-separate</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-table-scientific-notation</code>  </td><td valign="top"><code>org-latex-table-scientific-notation</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-tables-booktabs</code>            </td><td valign="top"><code>org-latex-tables-booktabs</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-tables-centered</code>            </td><td valign="top"><code>org-latex-tables-centered</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-text-markup-alist</code>          </td><td valign="top"><code>org-latex-text-markup-alist</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-title-command</code>              </td><td valign="top"><code>org-latex-title-command</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:latex-toc-command</code>                </td><td valign="top"><code>org-latex-toc-command</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">Markdown specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:md-footnote-format</code> </td><td valign="top"><code>org-md-footnote-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:md-footnotes-section</code> </td><td valign="top"><code>org-md-footnotes-section</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:md-headline-style</code> </td><td valign="top"><code>org-md-headline-style</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">ODT specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:odt-content-template-file</code>      </td><td valign="top"><code>org-odt-content-template-file</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-display-outline-level</code>      </td><td valign="top"><code>org-odt-display-outline-level</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-fontify-srcblocks</code>          </td><td valign="top"><code>org-odt-fontify-srcblocks</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-format-drawer-function</code>     </td><td valign="top"><code>org-odt-format-drawer-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-format-headline-function</code>   </td><td valign="top"><code>org-odt-format-headline-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-format-inlinetask-function</code> </td><td valign="top"><code>org-odt-format-inlinetask-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-inline-formula-rules</code>       </td><td valign="top"><code>org-odt-inline-formula-rules</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-inline-image-rules</code>         </td><td valign="top"><code>org-odt-inline-image-rules</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-pixels-per-inch</code>            </td><td valign="top"><code>org-odt-pixels-per-inch</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-styles-file</code>                </td><td valign="top"><code>org-odt-styles-file</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-table-styles</code>               </td><td valign="top"><code>org-odt-table-styles</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:odt-use-date-fields</code>            </td><td valign="top"><code>org-odt-use-date-fields</code>
+<br></td></tr></table>
+
+<h5 class="subsubheading">Texinfo specific properties</h5>
+
+<p><table summary=""><tr align="left"><td valign="top"><code>:texinfo-active-timestamp-format</code>    </td><td valign="top"><code>org-texinfo-active-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-classes</code>                    </td><td valign="top"><code>org-texinfo-classes</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-class</code>                      </td><td valign="top"><code>org-texinfo-default-class</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-def-table-markup</code>           </td><td valign="top"><code>org-texinfo-def-table-markup</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-diary-timestamp-format</code>     </td><td valign="top"><code>org-texinfo-diary-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-filename</code>                   </td><td valign="top"><code>org-texinfo-filename</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-format-drawer-function</code>     </td><td valign="top"><code>org-texinfo-format-drawer-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-format-headline-function</code>   </td><td valign="top"><code>org-texinfo-format-headline-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-format-inlinetask-function</code> </td><td valign="top"><code>org-texinfo-format-inlinetask-function</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-inactive-timestamp-format</code>  </td><td valign="top"><code>org-texinfo-inactive-timestamp-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-link-with-unknown-path-format</code> </td><td valign="top"><code>org-texinfo-link-with-unknown-path-format</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-node-description-column</code>    </td><td valign="top"><code>org-texinfo-node-description-column</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-table-scientific-notation</code>  </td><td valign="top"><code>org-texinfo-table-scientific-notation</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-tables-verbatim</code>            </td><td valign="top"><code>org-texinfo-tables-verbatim</code>
+<br></td></tr><tr align="left"><td valign="top"><code>:texinfo-text-markup-alist</code>          </td><td valign="top"><code>org-texinfo-text-markup-alist</code>
+<br></td></tr></table>
+
+   </body></html>
+

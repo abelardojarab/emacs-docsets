@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+<title>Installation - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Introduction.html#Introduction" title="Introduction">
+<link rel="prev" href="Summary.html#Summary" title="Summary">
+<link rel="next" href="Activation.html#Activation" title="Activation">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Installation"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Activation.html#Activation">Activation</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Summary.html#Summary">Summary</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Introduction.html#Introduction">Introduction</a>
+<hr>
+</div>
+
+<h3 class="section">1.2 Installation</h3>
+
+<p><a name="index-installation-5"></a>
+Org is part of recent distributions of GNU Emacs, so you normally don't need
+to install it.  If, for one reason or another, you want to install Org on top
+of this pre-packaged version, there are three ways to do it:
+
+     <ul>
+<li>By using Emacs package system. 
+<li>By downloading Org as an archive. 
+<li>By using Org's git repository. 
+</ul>
+
+   <p>We <b>strongly recommend</b> to stick to a single installation method.
+
+<h5 class="subsubheading">Using Emacs packaging system</h5>
+
+<p>Recent Emacs distributions include a packaging system which lets you install
+Elisp libraries.  You can install Org with <kbd>M-x package-install RET org</kbd>.
+
+<p class="noindent"><b>Important</b>: you need to do this in a session where no <code>.org</code> file has
+been visited, i.e., where no Org built-in function have been loaded. 
+Otherwise autoload Org functions will mess up the installation.
+
+   <p>Then, to make sure your Org configuration is taken into account, initialize
+the package system with <code>(package-initialize)</code> in your Emacs init file
+before setting any Org option.  If you want to use Org's package repository,
+check out the <a href="http://orgmode.org/elpa.html">Org ELPA page</a>.
+
+<h5 class="subsubheading">Downloading Org as an archive</h5>
+
+<p>You can download Org latest release from <a href="http://orgmode.org/">Org's website</a>.  In this case, make sure you set the load-path correctly in your
+Emacs init file:
+
+<pre class="lisp">     (add-to-list 'load-path "~/path/to/orgdir/lisp")
+</pre>
+   <p>The downloaded archive contains contributed libraries that are not included
+in Emacs.  If you want to use them, add the <samp><span class="file">contrib</span></samp> directory to your
+load-path:
+
+<pre class="lisp">     (add-to-list 'load-path "~/path/to/orgdir/contrib/lisp" t)
+</pre>
+   <p>Optionally, you can compile the files and/or install them in your system. 
+Run <code>make help</code> to list compilation and installation options.
+
+<h5 class="subsubheading">Using Org's git repository</h5>
+
+<p>You can clone Org's repository and install Org like this:
+
+<pre class="example">     $ cd ~/src/
+     $ git clone git://orgmode.org/org-mode.git
+     $ make autoloads
+</pre>
+   <p>Note that in this case, <code>make autoloads</code> is mandatory: it defines Org's
+version in <samp><span class="file">org-version.el</span></samp> and Org's autoloads in
+<samp><span class="file">org-loaddefs.el</span></samp>.
+
+   <p>Remember to add the correct load-path as described in the method above.
+
+   <p>You can also compile with <code>make</code>, generate the documentation with
+<code>make doc</code>, create a local configuration with <code>make config</code> and
+install Org with <code>make install</code>.  Please run <code>make help</code> to get
+the list of compilation/installation options.
+
+   <p>For more detailed explanations on Org's build system, please check the Org
+Build System page on <a href="http://orgmode.org/worg/dev/org-build-system.html">Worg</a>.
+
+   </body></html>
+

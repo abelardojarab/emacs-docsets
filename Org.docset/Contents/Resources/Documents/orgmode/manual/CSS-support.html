@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+<title>CSS support - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="HTML-export.html#HTML-export" title="HTML export">
+<link rel="prev" href="Text-areas-in-HTML-export.html#Text-areas-in-HTML-export" title="Text areas in HTML export">
+<link rel="next" href="JavaScript-support.html#JavaScript-support" title="JavaScript support">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="CSS-support"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="JavaScript-support.html#JavaScript-support">JavaScript support</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Text-areas-in-HTML-export.html#Text-areas-in-HTML-export">Text areas in HTML export</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="HTML-export.html#HTML-export">HTML export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.9.11 CSS support</h4>
+
+<p><a name="index-CSS_002c-for-HTML-export-1764"></a><a name="index-HTML-export_002c-CSS-1765"></a>
+<a name="index-org_002dhtml_002dtodo_002dkwd_002dclass_002dprefix-1766"></a><a name="index-org_002dhtml_002dtag_002dclass_002dprefix-1767"></a>You can modify the CSS style definitions for the exported file.  The HTML
+exporter assigns the following special CSS classes<a rel="footnote" href="CSS-support.html#fn-1" name="fnd-1"><sup>1</sup></a> to appropriate parts of the document&mdash;your style
+specifications may change these, in addition to any of the standard classes
+like for headlines, tables, etc.
+<pre class="example">     p.author            <span class="roman">author information, including email</span>
+     p.date              <span class="roman">publishing date</span>
+     p.creator           <span class="roman">creator info, about org mode version</span>
+     .title              <span class="roman">document title</span>
+     .subtitle           <span class="roman">document subtitle</span>
+     .todo               <span class="roman">TODO keywords, all not-done states</span>
+     .done               <span class="roman">the DONE keywords, all states that count as done</span>
+     .WAITING            <span class="roman">each TODO keyword also uses a class named after itself</span>
+     .timestamp          <span class="roman">timestamp</span>
+     .timestamp-kwd      <span class="roman">keyword associated with a timestamp, like SCHEDULED</span>
+     .timestamp-wrapper  <span class="roman">span around keyword plus timestamp</span>
+     .tag                <span class="roman">tag in a headline</span>
+     ._HOME              <span class="roman">each tag uses itself as a class, "@" replaced by "_"</span>
+     .target             <span class="roman">target for links</span>
+     .linenr             <span class="roman">the line number in a code example</span>
+     .code-highlighted   <span class="roman">for highlighting referenced code lines</span>
+     div.outline-N       <span class="roman">div for outline level N (headline plus text))</span>
+     div.outline-text-N  <span class="roman">extra div for text at outline level N</span>
+     .section-number-N   <span class="roman">section number in headlines, different for each level</span>
+     .figure-number      <span class="roman">label like "Figure 1:"</span>
+     .table-number       <span class="roman">label like "Table 1:"</span>
+     .listing-number     <span class="roman">label like "Listing 1:"</span>
+     div.figure          <span class="roman">how to format an inlined image</span>
+     pre.src             <span class="roman">formatted source code</span>
+     pre.example         <span class="roman">normal example</span>
+     p.verse             <span class="roman">verse paragraph</span>
+     div.footnotes       <span class="roman">footnote section headline</span>
+     p.footnote          <span class="roman">footnote definition paragraph, containing a footnote</span>
+     .footref            <span class="roman">a footnote reference number (always a &lt;sup&gt;)</span>
+     .footnum            <span class="roman">footnote number in footnote definition (always &lt;sup&gt;)</span>
+     .org-svg            <span class="roman">default class for a linked </span><samp><span class="file">.svg</span></samp><span class="roman"> image</span>
+</pre>
+   <p><a name="index-org_002dhtml_002dstyle_002ddefault-1768"></a><a name="index-org_002dhtml_002dhead_002dinclude_002ddefault_002dstyle-1769"></a><a name="index-org_002dhtml_002dhead-1770"></a><a name="index-org_002dhtml_002dhead_002dextra-1771"></a><a name="index-g_t_0023_002bHTML_005fINCLUDE_005fSTYLE-1772"></a>Each exported file contains a compact default style that defines these
+classes in a basic way<a rel="footnote" href="CSS-support.html#fn-2" name="fnd-2"><sup>2</sup></a>.  You may overwrite these settings, or
+add to them by using the variables <code>org-html-head</code> and
+<code>org-html-head-extra</code>.  You can override the global values of these
+variables for each file by using these keywords:
+
+   <p><a name="index-g_t_0023_002bHTML_005fHEAD-1773"></a><a name="index-g_t_0023_002bHTML_005fHEAD_005fEXTRA-1774"></a>
+<pre class="example">     #+HTML_HEAD: &lt;link rel="stylesheet" type="text/css" href="style1.css" /&gt;
+     #+HTML_HEAD_EXTRA: &lt;link rel="alternate stylesheet" type="text/css" href="style2.css" /&gt;
+</pre>
+   <p class="noindent">For longer style definitions, you can use several such lines.  You could also
+directly write a <code>&lt;style&gt;</code> <code>&lt;/style&gt;</code> section in this way, without
+referring to an external file.
+
+   <p>In order to add styles to a subtree, use the <code>:HTML_CONTAINER_CLASS:</code>
+property to assign a class to the tree.  In order to specify CSS styles for a
+particular headline, you can use the id specified in a <code>:CUSTOM_ID:</code>
+property.
+
+<!-- FIXME: More about header and footer styles -->
+<!-- FIXME: Talk about links and targets. -->
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="CSS-support.html#fnd-1">1</a>]</small> If the classes on
+TODO keywords and tags lead to conflicts, use the variables
+<code>org-html-todo-kwd-class-prefix</code> and <code>org-html-tag-class-prefix</code> to
+make them unique.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="CSS-support.html#fnd-2">2</a>]</small> This style is defined in the constant
+<code>org-html-style-default</code>, which you should not modify.  To turn
+inclusion of these defaults off, customize
+<code>org-html-head-include-default-style</code> or set <code>html-style</code> to
+<code>nil</code> in an <code>OPTIONS</code> line.</p>
+
+   <hr></div>
+
+   </body></html>
+

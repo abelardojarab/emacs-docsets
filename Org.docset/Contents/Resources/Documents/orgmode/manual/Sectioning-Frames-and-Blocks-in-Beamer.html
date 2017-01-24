@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+<title>Sectioning Frames and Blocks in Beamer - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Beamer-export.html#Beamer-export" title="Beamer export">
+<link rel="prev" href="Beamer-specific-export-settings.html#Beamer-specific-export-settings" title="Beamer specific export settings">
+<link rel="next" href="Beamer-specific-syntax.html#Beamer-specific-syntax" title="Beamer specific syntax">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Sectioning-Frames-and-Blocks-in-Beamer"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Beamer-specific-syntax.html#Beamer-specific-syntax">Beamer specific syntax</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Beamer-specific-export-settings.html#Beamer-specific-export-settings">Beamer specific export settings</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Beamer-export.html#Beamer-export">Beamer export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.8.3 Sectioning, Frames and Blocks in Beamer</h4>
+
+<p>Any tree with not-too-deep level nesting should in principle be exportable as
+a Beamer presentation.  Headlines fall into three categories: sectioning
+elements, frames and blocks.
+
+     <ul>
+<li><a name="index-org_002dbeamer_002dframe_002dlevel-1687"></a>Headlines become frames when their level is equal to
+<code>org-beamer-frame-level</code> or <code>H</code> value in an <code>OPTIONS</code> line
+(see <a href="Export-settings.html#Export-settings">Export settings</a>).
+
+     <p><a name="index-property_002c-BEAMER_005fENV-1688"></a>Though, if a headline in the current tree has a <code>BEAMER_ENV</code> property
+set to either to <code>frame</code> or <code>fullframe</code>, its level overrides the
+variable.  A <code>fullframe</code> is a frame with an empty (ignored) title.
+
+     <li><a name="index-org_002dbeamer_002denvironments_002ddefault-1689"></a><a name="index-org_002dbeamer_002denvironments_002dextra-1690"></a>All frame's children become <code>block</code> environments.  Special block types
+can be enforced by setting headline's <code>BEAMER_ENV</code> property<a rel="footnote" href="Sectioning-Frames-and-Blocks-in-Beamer.html#fn-1" name="fnd-1"><sup>1</sup></a> to an appropriate value (see <code>org-beamer-environments-default</code> for
+supported values and <code>org-beamer-environments-extra</code> for adding more).
+
+     <li><a name="index-property_002c-BEAMER_005fREF-1691"></a>As a special case, if the <code>BEAMER_ENV</code> property is set to either
+<code>appendix</code>, <code>note</code>, <code>noteNH</code> or <code>againframe</code>, the
+headline will become, respectively, an appendix, a note (within frame or
+between frame, depending on its level), a note with its title ignored or an
+<code>\againframe</code> command.  In the latter case, a <code>BEAMER_REF</code> property
+is mandatory in order to refer to the frame being resumed, and contents are
+ignored.
+
+     <p>Also, a headline with an <code>ignoreheading</code> environment will have its
+contents only inserted in the output.  This special value is useful to have
+data between frames, or to properly close a <code>column</code> environment. 
+</ul>
+
+   <p><a name="index-property_002c-BEAMER_005fACT-1692"></a><a name="index-property_002c-BEAMER_005fOPT-1693"></a>Headlines also support <code>BEAMER_ACT</code> and <code>BEAMER_OPT</code> properties. 
+The former is translated as an overlay/action specification, or a default
+overlay specification when enclosed within square brackets.  The latter
+specifies options<a rel="footnote" href="Sectioning-Frames-and-Blocks-in-Beamer.html#fn-2" name="fnd-2"><sup>2</sup></a> for the
+current frame or block.  The export back-end will automatically wrap
+properties within angular or square brackets when appropriate.
+
+   <p><a name="index-property_002c-BEAMER_005fCOL-1694"></a>Moreover, headlines handle the <code>BEAMER_COL</code> property.  Its value should
+be a decimal number representing the width of the column as a fraction of the
+total text width.  If the headline has no specific environment, its title
+will be ignored and its contents will fill the column created.  Otherwise,
+the block will fill the whole column and the title will be preserved.  Two
+contiguous headlines with a non-<code>nil</code> <code>BEAMER_COL</code> value share the same
+<code>columns</code> LaTeX environment.  It will end before the next headline
+without such a property.  This environment is generated automatically. 
+Although, it can also be explicitly created, with a special <code>columns</code>
+value for <code>BEAMER_ENV</code> property (if it needs to be set up with some
+specific options, for example).
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Sectioning-Frames-and-Blocks-in-Beamer.html#fnd-1">1</a>]</small> If
+this property is set, the entry will also get a <code>:B_environment:</code> tag to
+make this visible.  This tag has no semantic meaning, it is only a visual
+aid.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Sectioning-Frames-and-Blocks-in-Beamer.html#fnd-2">2</a>]</small> The <code>fragile</code> option is added automatically
+if it contains code that requires a verbatim environment, though.</p>
+
+   <hr></div>
+
+   </body></html>
+

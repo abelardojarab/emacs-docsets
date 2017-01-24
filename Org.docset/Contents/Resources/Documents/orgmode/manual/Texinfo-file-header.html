@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+<title>Texinfo file header - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Texinfo-export.html#Texinfo-export" title="Texinfo export">
+<link rel="prev" href="Texinfo-specific-export-settings.html#Texinfo-specific-export-settings" title="Texinfo specific export settings">
+<link rel="next" href="Texinfo-title-and-copyright-page.html#Texinfo-title-and-copyright-page" title="Texinfo title and copyright page">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Texinfo-file-header"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Texinfo-title-and-copyright-page.html#Texinfo-title-and-copyright-page">Texinfo title and copyright page</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Texinfo-specific-export-settings.html#Texinfo-specific-export-settings">Texinfo specific export settings</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Texinfo-export.html#Texinfo-export">Texinfo export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.14.3 Texinfo file header</h4>
+
+<p><a name="index-g_t_0023_002bTEXINFO_005fFILENAME-1934"></a>Upon creating the header of a Texinfo file, the back-end guesses a name for
+the Info file to be compiled.  This may not be a sensible choice, e.g., if
+you want to produce the final document in a different directory.  Specify an
+alternate path with <code>#+TEXINFO_FILENAME</code> keyword to override the default
+destination.
+
+   <p><a name="index-org_002dtexinfo_002dcoding_002dsystem-1935"></a><a name="index-org_002dtexinfo_002dclasses-1936"></a><a name="index-g_t_0023_002bTEXINFO_005fHEADER-1937"></a><a name="index-g_t_0023_002bTEXINFO_005fCLASS-1938"></a>Along with the output file name, the header contains information about the
+language (see <a href="Export-settings.html#Export-settings">Export settings</a>) and current encoding used<a rel="footnote" href="Texinfo-file-header.html#fn-1" name="fnd-1"><sup>1</sup></a>.  Insert
+a <code>#+TEXINFO_HEADER</code> keyword for each additional command needed, e.g.,
+@code{@synindex}.
+
+   <p>If you happen to regularly install the same set of commands, it may be easier
+to define your own class in <code>org-texinfo-classes</code>.  Set
+<code>#+TEXINFO_CLASS</code> keyword accordingly in your document to activate it.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Texinfo-file-header.html#fnd-1">1</a>]</small> See
+<code>org-texinfo-coding-system</code> for more information.</p>
+
+   <hr></div>
+
+   </body></html>
+

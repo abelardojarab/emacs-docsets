@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+<title>Deadlines and scheduling - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Dates-and-times.html#Dates-and-times" title="Dates and times">
+<link rel="prev" href="Creating-timestamps.html#Creating-timestamps" title="Creating timestamps">
+<link rel="next" href="Clocking-work-time.html#Clocking-work-time" title="Clocking work time">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Deadlines-and-scheduling"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Clocking-work-time.html#Clocking-work-time">Clocking work time</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Creating-timestamps.html#Creating-timestamps">Creating timestamps</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Dates-and-times.html#Dates-and-times">Dates and times</a>
+<hr>
+</div>
+
+<h3 class="section">8.3 Deadlines and scheduling</h3>
+
+<p>A timestamp may be preceded by special keywords to facilitate planning.  Both
+the timestamp and the keyword have to be positioned immediatly after the task
+they refer to.
+
+     <dl>
+<dt><var>DEADLINE</var><dd><a name="index-DEADLINE-keyword-870"></a>
+Meaning: the task (most likely a TODO item, though not necessarily) is supposed
+to be finished on that date.
+
+     <p><a name="index-org_002ddeadline_002dwarning_002ddays-871"></a><a name="index-org_002dagenda_002dskip_002ddeadline_002dprewarning_002dif_002dscheduled-872"></a>On the deadline date, the task will be listed in the agenda.  In
+addition, the agenda for <em>today</em> will carry a warning about the
+approaching or missed deadline, starting
+<code>org-deadline-warning-days</code> before the due date, and continuing
+until the entry is marked DONE.  An example:
+
+     <pre class="example">          *** TODO write article about the Earth for the Guide
+              DEADLINE: &lt;2004-02-29 Sun&gt;
+              The editor in charge is [[bbdb:Ford Prefect]]
+</pre>
+     <p>You can specify a different lead time for warnings for a specific
+deadline using the following syntax.  Here is an example with a warning
+period of 5 days <code>DEADLINE: &lt;2004-02-29 Sun -5d&gt;</code>.  This warning is
+deactivated if the task gets scheduled and you set
+<code>org-agenda-skip-deadline-prewarning-if-scheduled</code> to <code>t</code>.
+
+     <br><dt><var>SCHEDULED</var><dd><a name="index-SCHEDULED-keyword-873"></a>
+Meaning: you are planning to start working on that task on the given
+date.
+
+     <p><a name="index-org_002dagenda_002dskip_002dscheduled_002dif_002ddone-874"></a>The headline will be listed under the given date<a rel="footnote" href="Deadlines-and-scheduling.html#fn-1" name="fnd-1"><sup>1</sup></a>.  In
+addition, a reminder that the scheduled date has passed will be present
+in the compilation for <em>today</em>, until the entry is marked DONE, i.e.,
+the task will automatically be forwarded until completed.
+
+     <pre class="example">          *** TODO Call Trillian for a date on New Years Eve.
+              SCHEDULED: &lt;2004-12-25 Sat&gt;
+</pre>
+     <p><a name="index-org_002dscheduled_002ddelay_002ddays-875"></a><a name="index-org_002dagenda_002dskip_002dscheduled_002ddelay_002dif_002ddeadline-876"></a>If you want to <em>delay</em> the display of this task in the agenda, use
+<code>SCHEDULED: &lt;2004-12-25 Sat -2d&gt;</code>: the task is still scheduled on the
+25th but will appear two days later.  In case the task contains a repeater,
+the delay is considered to affect all occurrences; if you want the delay to
+only affect the first scheduled occurrence of the task, use <code>--2d</code>
+instead.  See <code>org-scheduled-delay-days</code> and
+<code>org-agenda-skip-scheduled-delay-if-deadline</code> for details on how to
+control this globally or per agenda.
+
+     <p class="noindent"><b>Important:</b> Scheduling an item in Org mode should <i>not</i> be
+understood in the same way that we understand <i>scheduling a meeting</i>. 
+Setting a date for a meeting is just a simple appointment, you should
+mark this entry with a simple plain timestamp, to get this item shown
+on the date where it applies.  This is a frequent misunderstanding by
+Org users.  In Org mode, <i>scheduling</i> means setting a date when you
+want to start working on an action item. 
+</dl>
+
+   <p>You may use timestamps with repeaters in scheduling and deadline
+entries.  Org mode will issue early and late warnings based on the
+assumption that the timestamp represents the <i>nearest instance</i> of
+the repeater.  However, the use of diary sexp entries like
+<code>&lt;%%(diary-float t 42)&gt;</code>
+in scheduling and deadline timestamps is limited.  Org mode does not
+know enough about the internals of each sexp function to issue early and
+late warnings.  However, it will show the item on each day where the
+sexp entry matches.
+
+<ul class="menu">
+<li><a accesskey="1" href="Inserting-deadline_002fschedule.html#Inserting-deadline_002fschedule">Inserting deadline/schedule</a>:   Planning items
+<li><a accesskey="2" href="Repeated-tasks.html#Repeated-tasks">Repeated tasks</a>:               Items that show up again and again
+</ul>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Deadlines-and-scheduling.html#fnd-1">1</a>]</small> It will still
+be listed on that date after it has been marked DONE.  If you don't like
+this, set the variable <code>org-agenda-skip-scheduled-if-done</code>.</p>
+
+   <hr></div>
+
+   </body></html>
+

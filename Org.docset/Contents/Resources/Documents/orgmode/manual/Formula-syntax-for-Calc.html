@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+<title>Formula syntax for Calc - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-spreadsheet.html#The-spreadsheet" title="The spreadsheet">
+<link rel="prev" href="References.html#References" title="References">
+<link rel="next" href="Formula-syntax-for-Lisp.html#Formula-syntax-for-Lisp" title="Formula syntax for Lisp">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Formula-syntax-for-Calc"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Formula-syntax-for-Lisp.html#Formula-syntax-for-Lisp">Formula syntax for Lisp</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="References.html#References">References</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>
+<hr>
+</div>
+
+<h4 class="subsection">3.5.2 Formula syntax for Calc</h4>
+
+<p><a name="index-formula-syntax_002c-Calc-360"></a><a name="index-syntax_002c-of-formulas-361"></a>
+A formula can be any algebraic expression understood by the Emacs <samp><span class="file">Calc</span></samp>
+package.  Note that <samp><span class="file">calc</span></samp> has the non-standard convention that &lsquo;<samp><span class="samp">/</span></samp>&rsquo;
+has lower precedence than &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, so that &lsquo;<samp><span class="samp">a/b*c</span></samp>&rsquo; is interpreted as
+&lsquo;<samp><span class="samp">a/(b*c)</span></samp>&rsquo;.  Before evaluation by <code>calc-eval</code> (see <a href="http://orgmode.org/calc/Calling-Calc-from-Your-Programs.html#Calling-Calc-from-Your-Programs">calc-eval</a>), variable substitution takes place according to the
+rules described above. 
+<a name="index-vectors_002c-in-table-calculations-362"></a>The range vectors can be directly fed into the Calc vector functions
+like &lsquo;<samp><span class="samp">vmean</span></samp>&rsquo; and &lsquo;<samp><span class="samp">vsum</span></samp>&rsquo;.
+
+   <p><a name="index-format-specifier-363"></a><a name="index-mode_002c-for-_0040file_007bcalc_007d-364"></a><a name="index-org_002dcalc_002ddefault_002dmodes-365"></a>A formula can contain an optional mode string after a semicolon.  This
+string consists of flags to influence Calc and other modes during
+execution.  By default, Org uses the standard Calc modes (precision
+12, angular units degrees, fraction and symbolic modes off).  The display
+format, however, has been changed to <code>(float 8)</code> to keep tables
+compact.  The default settings can be configured using the option
+<code>org-calc-default-modes</code>.
+
+<p class="noindent">List of modes:
+
+     <dl>
+<dt><code>p20</code><dd>Set the internal Calc calculation precision to 20 digits. 
+<br><dt><code>n3</code>, <code>s3</code>, <code>e2</code>, <code>f4</code><dd>Normal, scientific, engineering or fixed format of the result of Calc passed
+back to Org.  Calc formatting is unlimited in precision as long as the Calc
+calculation precision is greater. 
+<br><dt><code>D</code>, <code>R</code><dd>Degree and radian angle modes of Calc. 
+<br><dt><code>F</code>, <code>S</code><dd>Fraction and symbolic modes of Calc. 
+<br><dt><code>T</code>, <code>t</code><dd>Duration computations in Calc or Lisp, see <a href="Durations-and-time-values.html#Durations-and-time-values">Durations and time values</a>. 
+<br><dt><code>E</code><dd>If and how to consider empty fields.  Without &lsquo;<samp><span class="samp">E</span></samp>&rsquo; empty fields in range
+references are suppressed so that the Calc vector or Lisp list contains only
+the non-empty fields.  With &lsquo;<samp><span class="samp">E</span></samp>&rsquo; the empty fields are kept.  For empty
+fields in ranges or empty field references the value &lsquo;<samp><span class="samp">nan</span></samp>&rsquo; (not a
+number) is used in Calc formulas and the empty string is used for Lisp
+formulas.  Add &lsquo;<samp><span class="samp">N</span></samp>&rsquo; to use 0 instead for both formula types.  For the
+value of a field the mode &lsquo;<samp><span class="samp">N</span></samp>&rsquo; has higher precedence than &lsquo;<samp><span class="samp">E</span></samp>&rsquo;. 
+<br><dt><code>N</code><dd>Interpret all fields as numbers, use 0 for non-numbers.  See the next section
+to see how this is essential for computations with Lisp formulas.  In Calc
+formulas it is used only occasionally because there number strings are
+already interpreted as numbers without &lsquo;<samp><span class="samp">N</span></samp>&rsquo;. 
+<br><dt><code>L</code><dd>Literal, for Lisp formulas only.  See the next section. 
+</dl>
+
+<p class="noindent">Unless you use large integer numbers or high-precision-calculation and
+-display for floating point numbers you may alternatively provide a
+&lsquo;<samp><span class="samp">printf</span></samp>&rsquo; format specifier to reformat the Calc result after it has been
+passed back to Org instead of letting Calc already do the
+formatting<a rel="footnote" href="Formula-syntax-for-Calc.html#fn-1" name="fnd-1"><sup>1</sup></a>.  A
+few examples:
+
+<pre class="example">     $1+$2                <span class="roman">Sum of first and second field</span>
+     $1+$2;%.2f           <span class="roman">Same, format result to two decimals</span>
+     exp($2)+exp($1)      <span class="roman">Math functions can be used</span>
+     $0;%.1f              <span class="roman">Reformat current cell to 1 decimal</span>
+     ($3-32)*5/9          <span class="roman">Degrees F -&gt; C conversion</span>
+     $c/$1/$cm            <span class="roman">Hz -&gt; cm conversion, using </span><samp><span class="file">constants.el</span></samp>
+     tan($1);Dp3s1        <span class="roman">Compute in degrees, precision 3, display SCI 1</span>
+     sin($1);Dp3%.1e      <span class="roman">Same, but use printf specifier for display</span>
+     taylor($3,x=7,2)     <span class="roman">Taylor series of $3, at x=7, second degree</span>
+</pre>
+   <p>Calc also contains a complete set of logical operations, (see <a href="http://orgmode.org/calc/Logical-Operations.html#Logical-Operations">Logical Operations</a>).  For example
+
+     <dl>
+<dt><code>if($1 &lt; 20, teen, string(""))</code><dd>"teen" if age $1 is less than 20, else the Org table result field is set to
+empty with the empty string. 
+<br><dt><code>if("$1" == "nan" || "$2" == "nan", string(""), $1 + $2); E f-1</code><dd>Sum of the first two columns.  When at least one of the input fields is empty
+the Org table result field is set to empty.  &lsquo;<samp><span class="samp">E</span></samp>&rsquo; is required to not
+convert empty fields to 0.  &lsquo;<samp><span class="samp">f-1</span></samp>&rsquo; is an optional Calc format string
+similar to &lsquo;<samp><span class="samp">%.1f</span></samp>&rsquo; but leaves empty results empty. 
+<br><dt><code>if(typeof(vmean($1..$7)) == 12, string(""), vmean($1..$7); E</code><dd>Mean value of a range unless there is any empty field.  Every field in the
+range that is empty is replaced by &lsquo;<samp><span class="samp">nan</span></samp>&rsquo; which lets &lsquo;<samp><span class="samp">vmean</span></samp>&rsquo; result
+in &lsquo;<samp><span class="samp">nan</span></samp>&rsquo;.  Then &lsquo;<samp><span class="samp">typeof == 12</span></samp>&rsquo; detects the &lsquo;<samp><span class="samp">nan</span></samp>&rsquo; from
+&lsquo;<samp><span class="samp">vmean</span></samp>&rsquo; and the Org table result field is set to empty.  Use this when
+the sample set is expected to never have missing values. 
+<br><dt><code>if("$1..$7" == "[]", string(""), vmean($1..$7))</code><dd>Mean value of a range with empty fields skipped.  Every field in the range
+that is empty is skipped.  When all fields in the range are empty the mean
+value is not defined and the Org table result field is set to empty.  Use
+this when the sample set can have a variable size. 
+<br><dt><code>vmean($1..$7); EN</code><dd>To complete the example before: Mean value of a range with empty fields
+counting as samples with value 0.  Use this only when incomplete sample sets
+should be padded with 0 to the full size. 
+</dl>
+
+   <p>You can add your own Calc functions defined in Emacs Lisp with <code>defmath</code>
+and use them in formula syntax for Calc.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Formula-syntax-for-Calc.html#fnd-1">1</a>]</small> The &lsquo;<samp><span class="samp">printf</span></samp>&rsquo; reformatting is limited in precision
+because the value passed to it is converted into an &lsquo;<samp><span class="samp">integer</span></samp>&rsquo; or
+&lsquo;<samp><span class="samp">double</span></samp>&rsquo;.  The &lsquo;<samp><span class="samp">integer</span></samp>&rsquo; is limited in size by truncating the
+signed value to 32 bits.  The &lsquo;<samp><span class="samp">double</span></samp>&rsquo; is limited in precision to 64
+bits overall which leaves approximately 16 significant decimal digits.</p>
+
+   <hr></div>
+
+   </body></html>
+

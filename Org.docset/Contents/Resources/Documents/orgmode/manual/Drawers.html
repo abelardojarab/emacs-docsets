@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+<title>Drawers - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Document-structure.html#Document-structure" title="Document structure">
+<link rel="prev" href="Plain-lists.html#Plain-lists" title="Plain lists">
+<link rel="next" href="Blocks.html#Blocks" title="Blocks">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Drawers"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Blocks.html#Blocks">Blocks</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Plain-lists.html#Plain-lists">Plain lists</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Document-structure.html#Document-structure">Document structure</a>
+<hr>
+</div>
+
+<h3 class="section">2.8 Drawers</h3>
+
+<p><a name="index-drawers-231"></a><a name="index-visibility-cycling_002c-drawers-232"></a>
+<a name="index-org_002dinsert_002ddrawer-233"></a><a name="index-C_002dc-C_002dx-d-234"></a>Sometimes you want to keep information associated with an entry, but you
+normally don't want to see it.  For this, Org mode has <em>drawers</em>.  They
+can contain anything but a headline and another drawer.  Drawers look like
+this:
+
+<pre class="example">     ** This is a headline
+        Still outside the drawer
+        :DRAWERNAME:
+        This is inside the drawer.
+        :END:
+        After the drawer.
+</pre>
+   <p>You can interactively insert drawers at point by calling
+<code>org-insert-drawer</code>, which is bound to &lt;C-c C-x d&gt;.  With an active
+region, this command will put the region inside the drawer.  With a prefix
+argument, this command calls <code>org-insert-property-drawer</code> and add a
+property drawer right below the current headline.  Completion over drawer
+keywords is also possible using &lt;M-TAB&gt;.
+
+   <p>Visibility cycling (see <a href="Visibility-cycling.html#Visibility-cycling">Visibility cycling</a>) on the headline will hide and
+show the entry, but keep the drawer collapsed to a single line.  In order to
+look inside the drawer, you need to move the cursor to the drawer line and
+press &lt;TAB&gt; there.  Org mode uses the <code>PROPERTIES</code> drawer for
+storing properties (see <a href="Properties-and-columns.html#Properties-and-columns">Properties and columns</a>), and you can also arrange
+for state change notes (see <a href="Tracking-TODO-state-changes.html#Tracking-TODO-state-changes">Tracking TODO state changes</a>) and clock times
+(see <a href="Clocking-work-time.html#Clocking-work-time">Clocking work time</a>) to be stored in a drawer <code>LOGBOOK</code>.  If you
+want to store a quick note in the LOGBOOK drawer, in a similar way to state
+changes, use
+
+     
+<a name="index-C_002dc-C_002dz-235"></a>
+<dl><dt><kbd>C-c C-z</kbd><dd>Add a time-stamped note to the LOGBOOK drawer. 
+</dl>
+
+   <p><a name="index-org_002dexport_002dwith_002ddrawers-236"></a><a name="index-org_002dexport_002dwith_002dproperties-237"></a>You can select the name of the drawers which should be exported with
+<code>org-export-with-drawers</code>.  In that case, drawer contents will appear in
+export output.  Property drawers are not affected by this variable: configure
+<code>org-export-with-properties</code> instead.
+
+   </body></html>
+

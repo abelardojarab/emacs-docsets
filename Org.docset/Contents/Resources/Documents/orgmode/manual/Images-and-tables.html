@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+<title>Images and tables - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Markup.html#Markup" title="Markup">
+<link rel="prev" href="Horizontal-rules.html#Horizontal-rules" title="Horizontal rules">
+<link rel="next" href="Literal-examples.html#Literal-examples" title="Literal examples">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Images-and-tables"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Literal-examples.html#Literal-examples">Literal examples</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Horizontal-rules.html#Horizontal-rules">Horizontal rules</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Markup.html#Markup">Markup</a>
+<hr>
+</div>
+
+<h3 class="section">11.4 Images and Tables</h3>
+
+<p><a name="index-tables_002c-markup-rules-1514"></a><a name="index-g_t_0023_002bCAPTION-1515"></a><a name="index-g_t_0023_002bNAME-1516"></a>Both the native Org mode tables (see <a href="Tables.html#Tables">Tables</a>) and tables formatted with
+the <samp><span class="file">table.el</span></samp> package will be exported properly.  For Org mode tables,
+the lines before the first horizontal separator line will become table header
+lines.  You can use the following lines somewhere before the table to assign
+a caption and a label for cross references, and in the text you can refer to
+the object with <code>[[tab:basic-data]]</code> (see <a href="Internal-links.html#Internal-links">Internal links</a>):
+
+<pre class="example">     #+CAPTION: This is the caption for the next table (or link)
+     #+NAME:   tab:basic-data
+        | ... | ...|
+        |-----|----|
+</pre>
+   <p>Optionally, the caption can take the form:
+<pre class="example">     #+CAPTION[Caption for list of tables]: Caption for table.
+</pre>
+   <p><a name="index-inlined-images_002c-markup-rules-1517"></a>Some back-ends allow you to directly include images into the exported
+document.  Org does this, if a link to an image files does not have
+a description part, for example <code>[[./img/a.jpg]]</code>.  If you wish to
+define a caption for the image and maybe a label for internal cross
+references, make sure that the link is on a line by itself and precede it
+with <code>#+CAPTION</code> and <code>#+NAME</code> as follows:
+
+<pre class="example">     #+CAPTION: This is the caption for the next figure link (or table)
+     #+NAME:   fig:SED-HR4049
+     [[./img/a.jpg]]
+</pre>
+   <p class="noindent">Such images can be displayed within the buffer.  See <a href="Handling-links.html#Handling-links">the discussion of image links</a>.
+
+   <p>Even though images and tables are prominent examples of captioned structures,
+the same caption mechanism can apply to many others (e.g., LaTeX
+equations, source code blocks).  Depending on the export back-end, those may
+or may not be handled.
+
+   </body></html>
+

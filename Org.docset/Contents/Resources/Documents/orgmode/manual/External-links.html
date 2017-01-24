@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+<title>External links - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Hyperlinks.html#Hyperlinks" title="Hyperlinks">
+<link rel="prev" href="Internal-links.html#Internal-links" title="Internal links">
+<link rel="next" href="Handling-links.html#Handling-links" title="Handling links">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="External-links"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Handling-links.html#Handling-links">Handling links</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Internal-links.html#Internal-links">Internal links</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Hyperlinks.html#Hyperlinks">Hyperlinks</a>
+<hr>
+</div>
+
+<h3 class="section">4.3 External links</h3>
+
+<p><a name="index-links_002c-external-466"></a><a name="index-external-links-467"></a><a name="index-Gnus-links-468"></a><a name="index-BBDB-links-469"></a><a name="index-IRC-links-470"></a><a name="index-URL-links-471"></a><a name="index-file-links-472"></a><a name="index-RMAIL-links-473"></a><a name="index-MH_002dE-links-474"></a><a name="index-USENET-links-475"></a><a name="index-SHELL-links-476"></a><a name="index-Info-links-477"></a><a name="index-Elisp-links-478"></a>
+Org supports links to files, websites, Usenet and email messages, BBDB
+database entries and links to both IRC conversations and their logs. 
+External links are URL-like locators.  They start with a short identifying
+string followed by a colon.  There can be no space after the colon.  The
+following list shows examples for each link type.
+
+<pre class="example">     http://www.astro.uva.nl/~dominik          <span class="roman">on the web</span>
+     doi:10.1000/182                           <span class="roman">DOI for an electronic resource</span>
+     file:/home/dominik/images/jupiter.jpg     <span class="roman">file, absolute path</span>
+     /home/dominik/images/jupiter.jpg          <span class="roman">same as above</span>
+     file:papers/last.pdf                      <span class="roman">file, relative path</span>
+     ./papers/last.pdf                         <span class="roman">same as above</span>
+     file:/myself@some.where:papers/last.pdf   <span class="roman">file, path on remote machine</span>
+     /myself@some.where:papers/last.pdf        <span class="roman">same as above</span>
+     file:sometextfile::NNN                    <span class="roman">file, jump to line number</span>
+     file:projects.org                         <span class="roman">another Org file</span>
+     file:projects.org::some words             <span class="roman">text search in Org file</span><a rel="footnote" href="External-links.html#fn-1" name="fnd-1"><sup>1</sup></a>
+     file:projects.org::*task title <span class="roman">heading search in Org
+     file</span><a rel="footnote" href="External-links.html#fn-2" name="fnd-2"><sup>2</sup></a>
+     docview:papers/last.pdf::NNN              <span class="roman">open in doc-view mode at page</span>
+     id:B7423F4D-2E8A-471B-8810-C40F074717E9   <span class="roman">Link to heading by ID</span>
+     news:comp.emacs                           <span class="roman">Usenet link</span>
+     mailto:adent@galaxy.net                   <span class="roman">Mail link</span>
+     mhe:folder                                <span class="roman">MH-E folder link</span>
+     mhe:folder#id                             <span class="roman">MH-E message link</span>
+     rmail:folder                              <span class="roman">RMAIL folder link</span>
+     rmail:folder#id                           <span class="roman">RMAIL message link</span>
+     gnus:group                                <span class="roman">Gnus group link</span>
+     gnus:group#id                             <span class="roman">Gnus article link</span>
+     bbdb:R.*Stallman                          <span class="roman">BBDB link (with regexp)</span>
+     irc:/irc.com/#emacs/bob                   <span class="roman">IRC link</span>
+     info:org#External links                   <span class="roman">Info node or index link</span>
+     shell:ls *.org                            <span class="roman">A shell command</span>
+     elisp:org-agenda                          <span class="roman">Interactive Elisp command</span>
+     elisp:(find-file-other-frame "Elisp.org") <span class="roman">Elisp form to evaluate</span>
+</pre>
+   <p><a name="index-VM-links-479"></a><a name="index-WANDERLUST-links-480"></a>On top of these built-in link types, some are available through the
+<code>contrib/</code> directory (see <a href="Installation.html#Installation">Installation</a>).  For example, these links
+to VM or Wanderlust messages are available when you load the corresponding
+libraries from the <code>contrib/</code> directory:
+
+<pre class="example">     vm:folder                                 <span class="roman">VM folder link</span>
+     vm:folder#id                              <span class="roman">VM message link</span>
+     vm://myself@some.where.org/folder#id      <span class="roman">VM on remote machine</span>
+     vm-imap:account:folder                    <span class="roman">VM IMAP folder link</span>
+     vm-imap:account:folder#id                 <span class="roman">VM IMAP message link</span>
+     wl:folder                                 <span class="roman">WANDERLUST folder link</span>
+     wl:folder#id                              <span class="roman">WANDERLUST message link</span>
+</pre>
+   <p>For customizing Org to add new link types <a href="Adding-hyperlink-types.html#Adding-hyperlink-types">Adding hyperlink types</a>.
+
+   <p>A link should be enclosed in double brackets and may contain a descriptive
+text to be displayed instead of the URL (see <a href="Link-format.html#Link-format">Link format</a>), for example:
+
+<pre class="example">     [[http://www.gnu.org/software/emacs/][GNU Emacs]]
+</pre>
+   <p class="noindent">If the description is a file name or URL that points to an image, HTML
+export (see <a href="HTML-export.html#HTML-export">HTML export</a>) will inline the image as a clickable
+button.  If there is no description at all and the link points to an
+image,
+that image will be inlined into the exported HTML file.
+
+   <p><a name="index-square-brackets_002c-around-links-481"></a><a name="index-plain-text-external-links-482"></a>Org also finds external links in the normal text and activates them
+as links.  If spaces must be part of the link (for example in
+&lsquo;<samp><span class="samp">bbdb:Richard Stallman</span></samp>&rsquo;), or if you need to remove ambiguities
+about the end of the link, enclose them in square brackets.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="External-links.html#fnd-1">1</a>]</small> 
+The actual behavior of the search will depend on the value of
+the option <code>org-link-search-must-match-exact-headline</code>.  If its value
+is <code>nil</code>, then a fuzzy text search will be done.  If it is t, then only the
+exact headline will be matched, ignoring spaces and cookies.  If the value is
+<code>query-to-create</code>, then an exact headline will be searched; if it is not
+found, then the user will be queried to create it.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="External-links.html#fnd-2">2</a>]</small> Headline searches always match the exact headline, ignoring
+spaces and cookies.  If the headline is not found and the value of the option
+<code>org-link-search-must-match-exact-headline</code> is <code>query-to-create</code>,
+then the user will be queried to create it.</p>
+
+   <hr></div>
+
+   </body></html>
+

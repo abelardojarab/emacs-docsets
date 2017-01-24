@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+<title>Clean view - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Miscellaneous.html#Miscellaneous" title="Miscellaneous">
+<link rel="prev" href="The-very-busy-C_002dc-C_002dc-key.html#The-very-busy-C_002dc-C_002dc-key" title="The very busy C-c C-c key">
+<link rel="next" href="TTY-keys.html#TTY-keys" title="TTY keys">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Clean-view"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="TTY-keys.html#TTY-keys">TTY keys</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="The-very-busy-C_002dc-C_002dc-key.html#The-very-busy-C_002dc-C_002dc-key">The very busy C-c C-c key</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Miscellaneous.html#Miscellaneous">Miscellaneous</a>
+<hr>
+</div>
+
+<h3 class="section">15.8 A cleaner outline view</h3>
+
+<p><a name="index-hiding-leading-stars-2266"></a><a name="index-dynamic-indentation-2267"></a><a name="index-odd_002dlevels_002donly-outlines-2268"></a><a name="index-clean-outline-view-2269"></a>
+Org's default outline with stars and no indents can become too cluttered for
+short documents.  For <em>book-like</em> long documents, the effect is not as
+noticeable.  Org provides an alternate stars and indentation scheme, as shown
+on the right in the following table.  It uses only one star and indents text
+to line with the heading:
+
+<pre class="example">     * Top level headline             |    * Top level headline
+     ** Second level                  |      * Second level
+     *** 3rd level                    |        * 3rd level
+     some text                        |          some text
+     *** 3rd level                    |        * 3rd level
+     more text                        |          more text
+     * Another top level headline     |    * Another top level headline
+</pre>
+   <p class="noindent">To turn this mode on, use the minor mode, <code>org-indent-mode</code>.  Text lines
+that are not headlines are prefixed with spaces to vertically align with the
+headline text<a rel="footnote" href="Clean-view.html#fn-1" name="fnd-1"><sup>1</sup></a>.
+
+   <p>To make more horizontal space, the headlines are shifted by two stars.  This
+can be configured by the <code>org-indent-indentation-per-level</code> variable. 
+Only one star on each headline is visible, the rest are masked with the same
+font color as the background.  This font face can be configured with the
+<code>org-hide</code> variable.
+
+   <p>Note that turning on <code>org-indent-mode</code> sets
+<code>org-hide-leading-stars</code> to <code>t</code> and <code>org-adapt-indentation</code> to
+<code>nil</code>; &lsquo;<samp><span class="samp">2.</span></samp>&rsquo; below shows how this works.
+
+   <p>To globally turn on <code>org-indent-mode</code> for all files, customize the
+variable <code>org-startup-indented</code>.
+
+   <p>To turn on indenting for individual files, use <code>#+STARTUP</code> option as
+follows:
+
+<pre class="example">     #+STARTUP: indent
+</pre>
+   <p>Indent on startup makes Org use hard spaces to align text with headings as
+shown in examples below.
+
+     <ol type=1 start=1>
+<li><em>Indentation of text below headlines</em><br>
+Indent text to align with the headline.
+
+     <pre class="example">          *** 3rd level
+              more text, now indented
+</pre>
+     <p><a name="index-org_002dadapt_002dindentation-2270"></a>Org adapts indentations with paragraph filling, line wrapping, and structure
+editing<a rel="footnote" href="Clean-view.html#fn-2" name="fnd-2"><sup>2</sup></a>.
+
+     <li><a name="index-org_002dhide_002dleading_002dstars-2271"></a><em>Hiding leading stars</em><br> Org can make leading stars invisible.  For
+global preference, configure the variable <code>org-hide-leading-stars</code>.  For
+per-file preference, use these file <code>#+STARTUP</code> options:
+
+     <pre class="example">          #+STARTUP: hidestars
+          #+STARTUP: showstars
+</pre>
+     <p>With stars hidden, the tree is shown as:
+
+     <pre class="example">          * Top level headline
+           * Second level
+            * 3rd level
+            ...
+</pre>
+     <p class="noindent"><a name="index-org_002dhide-_0040r_007b_0028face_0029_007d-2272"></a>Because Org makes the font color same as the background color to hide to
+stars, sometimes <code>org-hide</code> face may need tweaking to get the effect
+right.  For some black and white combinations, <code>grey90</code> on a white
+background might mask the stars better.
+
+     <li><a name="index-org_002dodd_002dlevels_002donly-2273"></a>Using stars for only odd levels, 1, 3, 5, <small class="dots">...</small>, can also clean up the
+clutter.  This removes two stars from each level<a rel="footnote" href="Clean-view.html#fn-3" name="fnd-3"><sup>3</sup></a>.  For Org
+to properly handle this cleaner structure during edits and exports, configure
+the variable <code>org-odd-levels-only</code>.  To set this per-file, use either
+one of the following lines:
+
+     <pre class="example">          #+STARTUP: odd
+          #+STARTUP: oddeven
+</pre>
+     <p>To switch between single and double stars layouts, use <kbd>M-x
+org-convert-to-odd-levels RET</kbd> and <kbd>M-x org-convert-to-oddeven-levels</kbd>.
+        </ol>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Clean-view.html#fnd-1">1</a>]</small> The <code>org-indent-mode</code> also sets the
+<code>wrap-prefix</code> correctly for indenting and wrapping long lines of
+headlines or text.  This minor mode handles <code>visual-line-mode</code> and
+directly applied settings through <code>word-wrap</code>.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Clean-view.html#fnd-2">2</a>]</small> Also see the variable <code>org-adapt-indentation</code>.</p>
+
+   <p class="footnote"><small>[<a name="fn-3" href="Clean-view.html#fnd-3">3</a>]</small> Because
+&lsquo;<samp><span class="samp">LEVEL=2</span></samp>&rsquo; has 3 stars, &lsquo;<samp><span class="samp">LEVEL=3</span></samp>&rsquo; has 4 stars, and so on</p>
+
+   <hr></div>
+
+   </body></html>
+

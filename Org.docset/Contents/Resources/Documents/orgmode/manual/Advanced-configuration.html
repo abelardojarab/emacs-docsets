@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+<title>Advanced configuration - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Exporting.html#Exporting" title="Exporting">
+<link rel="prev" href="Other-built_002din-back_002dends.html#Other-built_002din-back_002dends" title="Other built-in back-ends">
+<link rel="next" href="Export-in-foreign-buffers.html#Export-in-foreign-buffers" title="Export in foreign buffers">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Advanced-configuration"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Export-in-foreign-buffers.html#Export-in-foreign-buffers">Export in foreign buffers</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Other-built_002din-back_002dends.html#Other-built_002din-back_002dends">Other built-in back-ends</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Exporting.html#Exporting">Exporting</a>
+<hr>
+</div>
+
+<h3 class="section">12.17 Advanced configuration</h3>
+
+<h4 class="subheading">Hooks</h4>
+
+<p><a name="index-org_002dexport_002dbefore_002dprocessing_002dhook-1987"></a><a name="index-org_002dexport_002dbefore_002dparsing_002dhook-1988"></a>Two hooks are run during the first steps of the export process.  The first
+one, <code>org-export-before-processing-hook</code> is called before expanding
+macros, Babel code and include keywords in the buffer.  The second one,
+<code>org-export-before-parsing-hook</code>, as its name suggests, happens just
+before parsing the buffer.  Their main use is for heavy duties, that is
+duties involving structural modifications of the document.  For example, one
+may want to remove every headline in the buffer during export.  The following
+code can achieve this:
+
+<pre class="lisp">     (defun my-headline-removal (backend)
+       "Remove all headlines in the current buffer.
+     BACKEND is the export back-end being used, as a symbol."
+       (org-map-entries
+        (lambda () (delete-region (point) (progn (forward-line) (point))))))
+     
+     (add-hook 'org-export-before-parsing-hook 'my-headline-removal)
+</pre>
+   <p>Note that functions used in these hooks require a mandatory argument,
+a symbol representing the back-end used.
+
+<h4 class="subheading">Filters</h4>
+
+<p><a name="index-Filters_002c-exporting-1989"></a>Filters are lists of functions applied on a specific part of the output from
+a given back-end.  More explicitly, each time a back-end transforms an Org
+object or element into another language, all functions within a given filter
+type are called in turn on the string produced.  The string returned by the
+last function will be the one used in the final output.
+
+   <p>There are filter sets for each type of element or object, for plain text,
+for the parse tree, for the export options and for the final output.  They
+are all named after the same scheme: <code>org-export-filter-TYPE-functions</code>,
+where <code>TYPE</code> is the type targeted by the filter.  Valid types are:
+
+   <p><table summary=""><tr align="left"><td valign="top" width="33%">body
+</td><td valign="top" width="33%">bold
+</td><td valign="top" width="33%">babel-call
+<br></td></tr><tr align="left"><td valign="top" width="33%">center-block
+</td><td valign="top" width="33%">clock
+</td><td valign="top" width="33%">code
+<br></td></tr><tr align="left"><td valign="top" width="33%">diary-sexp
+</td><td valign="top" width="33%">drawer
+</td><td valign="top" width="33%">dynamic-block
+<br></td></tr><tr align="left"><td valign="top" width="33%">entity
+</td><td valign="top" width="33%">example-block
+</td><td valign="top" width="33%">export-block
+<br></td></tr><tr align="left"><td valign="top" width="33%">export-snippet
+</td><td valign="top" width="33%">final-output
+</td><td valign="top" width="33%">fixed-width
+<br></td></tr><tr align="left"><td valign="top" width="33%">footnote-definition
+</td><td valign="top" width="33%">footnote-reference
+</td><td valign="top" width="33%">headline
+<br></td></tr><tr align="left"><td valign="top" width="33%">horizontal-rule
+</td><td valign="top" width="33%">inline-babel-call
+</td><td valign="top" width="33%">inline-src-block
+<br></td></tr><tr align="left"><td valign="top" width="33%">inlinetask
+</td><td valign="top" width="33%">italic
+</td><td valign="top" width="33%">item
+<br></td></tr><tr align="left"><td valign="top" width="33%">keyword
+</td><td valign="top" width="33%">latex-environment
+</td><td valign="top" width="33%">latex-fragment
+<br></td></tr><tr align="left"><td valign="top" width="33%">line-break
+</td><td valign="top" width="33%">link
+</td><td valign="top" width="33%">node-property
+<br></td></tr><tr align="left"><td valign="top" width="33%">options
+</td><td valign="top" width="33%">paragraph
+</td><td valign="top" width="33%">parse-tree
+<br></td></tr><tr align="left"><td valign="top" width="33%">plain-list
+</td><td valign="top" width="33%">plain-text
+</td><td valign="top" width="33%">planning
+<br></td></tr><tr align="left"><td valign="top" width="33%">property-drawer
+</td><td valign="top" width="33%">quote-block
+</td><td valign="top" width="33%">radio-target
+<br></td></tr><tr align="left"><td valign="top" width="33%">section
+</td><td valign="top" width="33%">special-block
+</td><td valign="top" width="33%">src-block
+<br></td></tr><tr align="left"><td valign="top" width="33%">statistics-cookie
+</td><td valign="top" width="33%">strike-through
+</td><td valign="top" width="33%">subscript
+<br></td></tr><tr align="left"><td valign="top" width="33%">superscript
+</td><td valign="top" width="33%">table
+</td><td valign="top" width="33%">table-cell
+<br></td></tr><tr align="left"><td valign="top" width="33%">table-row
+</td><td valign="top" width="33%">target
+</td><td valign="top" width="33%">timestamp
+<br></td></tr><tr align="left"><td valign="top" width="33%">underline
+</td><td valign="top" width="33%">verbatim
+</td><td valign="top" width="33%">verse-block
+   <br></td></tr></table>
+
+   <p>For example, the following snippet allows me to use non-breaking spaces in
+the Org buffer and get them translated into LaTeX without using the
+<code>\nbsp</code> macro (where <code>_</code> stands for the non-breaking space):
+
+<pre class="lisp">     (defun my-latex-filter-nobreaks (text backend info)
+       "Ensure \"_\" are properly handled in LaTeX export."
+       (when (org-export-derived-backend-p backend 'latex)
+             (replace-regexp-in-string "_" "~" text)))
+     
+     (add-to-list 'org-export-filter-plain-text-functions
+                  'my-latex-filter-nobreaks)
+</pre>
+   <p>Three arguments must be provided to a filter: the code being changed, the
+back-end used, and some information about the export process.  You can safely
+ignore the third argument for most purposes.  Note the use of
+<code>org-export-derived-backend-p</code>, which ensures that the filter will only
+be applied when using <code>latex</code> back-end or any other back-end derived
+from it (e.g., <code>beamer</code>).
+
+<h4 class="subheading">Defining filters for individual files</h4>
+
+<p>You can customize the export for just a specific file by binding export
+filter variables using <code>#+BIND</code>.  Here is an example where we introduce
+two filters, one to remove brackets from time stamps, and one to entirely
+remove any strike-through text.  The functions doing the filtering are
+defined in an src block that allows the filter function definitions to exist
+in the file itself and ensures that the functions will be there when needed.
+
+<pre class="example">     #+BIND: org-export-filter-timestamp-functions (tmp-f-timestamp)
+     #+BIND: org-export-filter-strike-through-functions (tmp-f-strike-through)
+     #+begin_src emacs-lisp :exports results :results none
+       (defun tmp-f-timestamp (s backend info)
+         (replace-regexp-in-string "&amp;[lg]t;\\|[][]" "" s))
+       (defun tmp-f-strike-through (s backend info) "")
+     #+end_src
+</pre>
+   <h4 class="subheading">Extending an existing back-end</h4>
+
+<p>This is obviously the most powerful customization, since the changes happen
+at the parser level.  Indeed, some export back-ends are built as extensions
+of other ones (e.g., Markdown back-end an extension of HTML back-end).
+
+   <p>Extending a back-end means that if an element type is not transcoded by the
+new back-end, it will be handled by the original one.  Hence you can extend
+specific parts of a back-end without too much work.
+
+   <p>As an example, imagine we want the <code>ascii</code> back-end to display the
+language used in a source block, when it is available, but only when some
+attribute is non-<code>nil</code>, like the following:
+
+<pre class="example">     #+ATTR_ASCII: :language t
+</pre>
+   <p>Because that back-end is lacking in that area, we are going to create a new
+back-end, <code>my-ascii</code> that will do the job.
+
+<pre class="lisp">     (defun my-ascii-src-block (src-block contents info)
+       "Transcode a SRC-BLOCK element from Org to ASCII.
+     CONTENTS is nil.  INFO is a plist used as a communication
+     channel."
+       (if (not (org-export-read-attribute :attr_ascii src-block :language))
+         (org-export-with-backend 'ascii src-block contents info)
+       (concat
+        (format ",--[ %s ]--\n%s`----"
+                (org-element-property :language src-block)
+                (replace-regexp-in-string
+                 "^" "| "
+                 (org-element-normalize-string
+                  (org-export-format-code-default src-block info)))))))
+     
+     (org-export-define-derived-backend 'my-ascii 'ascii
+       :translate-alist '((src-block . my-ascii-src-block)))
+</pre>
+   <p>The <code>my-ascii-src-block</code> function looks at the attribute above the
+element.  If it isn't true, it gives hand to the <code>ascii</code> back-end. 
+Otherwise, it creates a box around the code, leaving room for the language. 
+A new back-end is then created.  It only changes its behavior when
+translating <code>src-block</code> type element.  Now, all it takes to use the new
+back-end is calling the following from an Org buffer:
+
+<pre class="smalllisp">     (org-export-to-buffer 'my-ascii "*Org MY-ASCII Export*")
+</pre>
+   <p>It is obviously possible to write an interactive function for this, install
+it in the export dispatcher menu, and so on.
+
+   </body></html>
+

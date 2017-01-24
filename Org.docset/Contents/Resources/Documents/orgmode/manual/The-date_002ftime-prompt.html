@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+<title>The date/time prompt - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Creating-timestamps.html#Creating-timestamps" title="Creating timestamps">
+<link rel="next" href="Custom-time-format.html#Custom-time-format" title="Custom time format">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="The-date%2ftime-prompt"></a>
+<a name="The-date_002ftime-prompt"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Custom-time-format.html#Custom-time-format">Custom time format</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Creating-timestamps.html#Creating-timestamps">Creating timestamps</a>
+<hr>
+</div>
+
+<h4 class="subsection">8.2.1 The date/time prompt</h4>
+
+<p><a name="index-date_002c-reading-in-minibuffer-840"></a><a name="index-time_002c-reading-in-minibuffer-841"></a>
+<a name="index-org_002dread_002ddate_002dprefer_002dfuture-842"></a>When Org mode prompts for a date/time, the default is shown in default
+date/time format, and the prompt therefore seems to ask for a specific
+format.  But it will in fact accept date/time information in a variety of
+formats.  Generally, the information should start at the beginning of the
+string.  Org mode will find whatever information is in
+there and derive anything you have not specified from the <em>default date
+and time</em>.  The default is usually the current date and time, but when
+modifying an existing timestamp, or when entering the second stamp of a
+range, it is taken from the stamp in the buffer.  When filling in
+information, Org mode assumes that most of the time you will want to enter a
+date in the future: if you omit the month/year and the given day/month is
+<i>before</i> today, it will assume that you mean a future date<a rel="footnote" href="The-date_002ftime-prompt.html#fn-1" name="fnd-1"><sup>1</sup></a>.  If the date has been automatically shifted into the future, the
+time prompt will show this with &lsquo;<samp><span class="samp">(=&gt;F).</span></samp>&rsquo;
+
+   <p>For example, let's assume that today is <b>June 13, 2006</b>.  Here is how
+various inputs will be interpreted, the items filled in by Org mode are
+in <b>bold</b>.
+
+<pre class="example">     3-2-5         &rArr; 2003-02-05
+     2/5/3         &rArr; 2003-02-05
+     14            &rArr; <b>2006</b>-<b>06</b>-14
+     12            &rArr; <b>2006</b>-<b>07</b>-12
+     2/5           &rArr; <b>2007</b>-02-05
+     Fri           &rArr; nearest Friday after the default date
+     sep 15        &rArr; <b>2006</b>-09-15
+     feb 15        &rArr; <b>2007</b>-02-15
+     sep 12 9      &rArr; 2009-09-12
+     12:45         &rArr; <b>2006</b>-<b>06</b>-<b>13</b> 12:45
+     22 sept 0:34  &rArr; <b>2006</b>-09-22 00:34
+     w4            &rArr; ISO week four of the current year <b>2006</b>
+     2012 w4 fri   &rArr; Friday of ISO week 4 in 2012
+     2012-w04-5    &rArr; Same as above
+</pre>
+   <p>Furthermore you can specify a relative date by giving, as the <em>first</em>
+thing in the input: a plus/minus sign, a number and a letter ([hdwmy]) to
+indicate change in hours, days, weeks, months, or years.  With a single plus
+or minus, the date is always relative to today.  With a double plus or minus,
+it is relative to the default date.  If instead of a single letter, you use
+the abbreviation of day name, the date will be the Nth such day, e.g.:
+
+<pre class="example">     +0            &rArr; today
+     .             &rArr; today
+     +4d           &rArr; four days from today
+     +4            &rArr; same as above
+     +2w           &rArr; two weeks from today
+     ++5           &rArr; five days from default date
+     +2tue         &rArr; second Tuesday from now
+     -wed          &rArr; last Wednesday
+</pre>
+   <p><a name="index-parse_002dtime_002dmonths-843"></a><a name="index-parse_002dtime_002dweekdays-844"></a>The function understands English month and weekday abbreviations.  If
+you want to use unabbreviated names and/or other languages, configure
+the variables <code>parse-time-months</code> and <code>parse-time-weekdays</code>.
+
+   <p><a name="index-org_002dread_002ddate_002dforce_002dcompatible_002ddates-845"></a>Not all dates can be represented in a given Emacs implementation.  By default
+Org mode forces dates into the compatibility range 1970&ndash;2037 which works on
+all Emacs implementations.  If you want to use dates outside of this range,
+read the docstring of the variable
+<code>org-read-date-force-compatible-dates</code>.
+
+   <p>You can specify a time range by giving start and end times or by giving a
+start time and a duration (in HH:MM format).  Use one or two dash(es) as the
+separator in the former case and use '+' as the separator in the latter
+case, e.g.:
+
+<pre class="example">     11am-1:15pm    &rArr; 11:00-13:15
+     11am--1:15pm   &rArr; same as above
+     11am+2:15      &rArr; same as above
+</pre>
+   <p><a name="index-calendar_002c-for-selecting-date-846"></a><a name="index-org_002dpopup_002dcalendar_002dfor_002ddate_002dprompt-847"></a>Parallel to the minibuffer prompt, a calendar is popped up<a rel="footnote" href="The-date_002ftime-prompt.html#fn-2" name="fnd-2"><sup>2</sup></a>.  When you exit the date
+prompt, either by clicking on a date in the calendar, or by pressing
+&lt;RET&gt;, the date selected in the calendar will be combined with the
+information entered at the prompt.  You can control the calendar fully
+from the minibuffer:
+
+   <p><a name="index-g_t_003c-848"></a><a name="index-g_t_003e-849"></a><a name="index-M_002dv-850"></a><a name="index-C_002dv-851"></a><a name="index-mouse_002d1-852"></a><a name="index-S_002d_0040key_007bright_007d-853"></a><a name="index-S_002d_0040key_007bleft_007d-854"></a><a name="index-S_002d_0040key_007bdown_007d-855"></a><a name="index-S_002d_0040key_007bup_007d-856"></a><a name="index-M_002dS_002d_0040key_007bright_007d-857"></a><a name="index-M_002dS_002d_0040key_007bleft_007d-858"></a><a name="index-g_t_0040key_007bRET_007d-859"></a><a name="index-M_002dS_002d_0040key_007bdown_007d-860"></a><a name="index-M_002dS_002d_0040key_007bup_007d-861"></a>
+<pre class="example">     &lt;RET&gt;              <span class="roman">Choose date at cursor in calendar.</span>
+     mouse-1            <span class="roman">Select date by clicking on it.</span>
+     S-&lt;right&gt;/&lt;left&gt;   <span class="roman">One day forward/backward.</span>
+     S-&lt;down&gt;/&lt;up&gt;      <span class="roman">One week forward/backward.</span>
+     M-S-&lt;right&gt;/&lt;left&gt; <span class="roman">One month forward/backward.</span>
+     &gt; / &lt;              <span class="roman">Scroll calendar forward/backward by one month.</span>
+     M-v / C-v          <span class="roman">Scroll calendar forward/backward by 3 months.</span>
+     M-S-&lt;down&gt;/&lt;up&gt;    <span class="roman">Scroll calendar forward/backward by one year.</span>
+</pre>
+   <p><a name="index-org_002dread_002ddate_002ddisplay_002dlive-862"></a>The actions of the date/time prompt may seem complex, but I assure you they
+will grow on you, and you will start getting annoyed by pretty much any other
+way of entering a date/time out there.  To help you understand what is going
+on, the current interpretation of your input will be displayed live in the
+minibuffer<a rel="footnote" href="The-date_002ftime-prompt.html#fn-3" name="fnd-3"><sup>3</sup></a>.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="The-date_002ftime-prompt.html#fnd-1">1</a>]</small> See the
+variable <code>org-read-date-prefer-future</code>.  You may set that variable to
+the symbol <code>time</code> to even make a time before now shift the date to
+tomorrow.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="The-date_002ftime-prompt.html#fnd-2">2</a>]</small> If
+you don't need/want the calendar, configure the variable
+<code>org-popup-calendar-for-date-prompt</code>.</p>
+
+   <p class="footnote"><small>[<a name="fn-3" href="The-date_002ftime-prompt.html#fnd-3">3</a>]</small> If you find this distracting, turn the display off with
+<code>org-read-date-display-live</code>.</p>
+
+   <hr></div>
+
+   </body></html>
+

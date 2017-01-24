@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+<title>Advanced features - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-spreadsheet.html#The-spreadsheet" title="The spreadsheet">
+<link rel="prev" href="Updating-the-table.html#Updating-the-table" title="Updating the table">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Advanced-features"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Updating-the-table.html#Updating-the-table">Updating the table</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>
+<hr>
+</div>
+
+<h4 class="subsection">3.5.10 Advanced features</h4>
+
+<p>If you want the recalculation of fields to happen automatically, or if you
+want to be able to assign <i>names</i><a rel="footnote" href="Advanced-features.html#fn-1" name="fnd-1"><sup>1</sup></a> to
+fields and columns, you need to reserve the first column of the table for
+special marking characters.
+
+     
+<a name="index-C_002d_0023-449"></a>
+<a name="index-org_002dtable_002drotate_002drecalc_002dmarks-450"></a>
+<dl><dt><kbd>C-# &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-rotate-recalc-marks</code><kbd>)</kbd><dd>
+Rotate the calculation mark in first column through the states &lsquo;<samp> </samp>&rsquo;,
+&lsquo;<samp><span class="samp">#</span></samp>&rsquo;, &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, &lsquo;<samp><span class="samp">!</span></samp>&rsquo;, &lsquo;<samp><span class="samp">$</span></samp>&rsquo;.  When there is an active region,
+change all marks in the region. 
+</dl>
+
+   <p>Here is an example of a table that collects exam results of students and
+makes use of these features:
+
+<pre class="example">     |---+---------+--------+--------+--------+-------+------|
+     |   | Student | Prob 1 | Prob 2 | Prob 3 | Total | Note |
+     |---+---------+--------+--------+--------+-------+------|
+     | ! |         |     P1 |     P2 |     P3 |   Tot |      |
+     | # | Maximum |     10 |     15 |     25 |    50 | 10.0 |
+     | ^ |         |     m1 |     m2 |     m3 |    mt |      |
+     |---+---------+--------+--------+--------+-------+------|
+     | # | Peter   |     10 |      8 |     23 |    41 |  8.2 |
+     | # | Sam     |      2 |      4 |      3 |     9 |  1.8 |
+     |---+---------+--------+--------+--------+-------+------|
+     |   | Average |        |        |        |  25.0 |      |
+     | ^ |         |        |        |        |    at |      |
+     | $ | max=50  |        |        |        |       |      |
+     |---+---------+--------+--------+--------+-------+------|
+     #+TBLFM: $6=vsum($P1..$P3)::$7=10*$Tot/$max;%.1f::$at=vmean(@-II..@-I);%.1f
+</pre>
+   <p class="noindent"><b>Important</b>: please note that for these special tables,
+recalculating the table with <kbd>C-u C-c *</kbd> will only affect rows that
+are marked &lsquo;<samp><span class="samp">#</span></samp>&rsquo; or &lsquo;<samp><span class="samp">*</span></samp>&rsquo;, and fields that have a formula assigned
+to the field itself.  The column formulas are not applied in rows with
+empty first field.
+
+   <p><a name="index-marking-characters_002c-tables-451"></a>The marking characters have the following meaning:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">!</span></samp>&rsquo;<dd>The fields in this line define names for the columns, so that you may
+refer to a column as &lsquo;<samp><span class="samp">$Tot</span></samp>&rsquo; instead of &lsquo;<samp><span class="samp">$6</span></samp>&rsquo;. 
+<br><dt>&lsquo;<samp><span class="samp">^</span></samp>&rsquo;<dd>This row defines names for the fields <em>above</em> the row.  With such
+a definition, any formula in the table may use &lsquo;<samp><span class="samp">$m1</span></samp>&rsquo; to refer to
+the value &lsquo;<samp><span class="samp">10</span></samp>&rsquo;.  Also, if you assign a formula to a names field, it
+will be stored as &lsquo;<samp><span class="samp">$name=...</span></samp>&rsquo;. 
+<br><dt>&lsquo;<samp><span class="samp">_</span></samp>&rsquo;<dd>Similar to &lsquo;<samp><span class="samp">^</span></samp>&rsquo;, but defines names for the fields in the row
+<em>below</em>. 
+<br><dt>&lsquo;<samp><span class="samp">$</span></samp>&rsquo;<dd>Fields in this row can define <em>parameters</em> for formulas.  For
+example, if a field in a &lsquo;<samp><span class="samp">$</span></samp>&rsquo; row contains &lsquo;<samp><span class="samp">max=50</span></samp>&rsquo;, then
+formulas in this table can refer to the value 50 using &lsquo;<samp><span class="samp">$max</span></samp>&rsquo;. 
+Parameters work exactly like constants, only that they can be defined on
+a per-table basis. 
+<br><dt>&lsquo;<samp><span class="samp">#</span></samp>&rsquo;<dd>Fields in this row are automatically recalculated when pressing
+&lt;TAB&gt; or &lt;RET&gt; or <kbd>S-&lt;TAB&gt;</kbd> in this row.  Also, this row
+is selected for a global recalculation with <kbd>C-u C-c *</kbd>.  Unmarked
+lines will be left alone by this command. 
+<br><dt>&lsquo;<samp><span class="samp">*</span></samp>&rsquo;<dd>Selects this line for global recalculation with <kbd>C-u C-c *</kbd>, but
+not for automatic recalculation.  Use this when automatic
+recalculation slows down editing too much. 
+<br><dt>&lsquo;<samp><span class="samp">&nbsp;<!-- /@w --></span></samp>&rsquo;<dd>Unmarked lines are exempt from recalculation with <kbd>C-u C-c *</kbd>. 
+All lines that should be recalculated should be marked with &lsquo;<samp><span class="samp">#</span></samp>&rsquo;
+or &lsquo;<samp><span class="samp">*</span></samp>&rsquo;. 
+<br><dt>&lsquo;<samp><span class="samp">/</span></samp>&rsquo;<dd>Do not export this line.  Useful for lines that contain the narrowing
+&lsquo;<samp><span class="samp">&lt;N&gt;</span></samp>&rsquo; markers or column group markers. 
+</dl>
+
+   <p>Finally, just to whet your appetite for what can be done with the
+fantastic <samp><span class="file">calc.el</span></samp> package, here is a table that computes the Taylor
+series of degree <code>n</code> at location <code>x</code> for a couple of
+functions.
+
+<pre class="example">     |---+-------------+---+-----+--------------------------------------|
+     |   | Func        | n | x   | Result                               |
+     |---+-------------+---+-----+--------------------------------------|
+     | # | exp(x)      | 1 | x   | 1 + x                                |
+     | # | exp(x)      | 2 | x   | 1 + x + x^2 / 2                      |
+     | # | exp(x)      | 3 | x   | 1 + x + x^2 / 2 + x^3 / 6            |
+     | # | x^2+sqrt(x) | 2 | x=0 | x*(0.5 / 0) + x^2 (2 - 0.25 / 0) / 2 |
+     | # | x^2+sqrt(x) | 2 | x=1 | 2 + 2.5 x - 2.5 + 0.875 (x - 1)^2    |
+     | * | tan(x)      | 3 | x   | 0.0175 x + 1.77e-6 x^3               |
+     |---+-------------+---+-----+--------------------------------------|
+     #+TBLFM: $5=taylor($2,$4,$3);n3
+</pre>
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Advanced-features.html#fnd-1">1</a>]</small> Such names must start by an
+alphabetic character and use only alphanumeric/underscore characters.</p>
+
+   <hr></div>
+
+   </body></html>
+

@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+<title>@LaTeX{} specific export settings - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-export.html#g_t_0040LaTeX_007b_007d-export" title="@LaTeX{} export">
+<link rel="prev" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-export-commands.html#g_t_0040LaTeX_007b_007d-export-commands" title="@LaTeX{} export commands">
+<link rel="next" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-header-and-sectioning.html#g_t_0040LaTeX_007b_007d-header-and-sectioning" title="@LaTeX{} header and sectioning">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="LaTeX-specific-export-settings"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="LaTeX-header-and-sectioning.html#LaTeX-header-and-sectioning">LaTeX header and sectioning</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="LaTeX-export-commands.html#LaTeX-export-commands">LaTeX export commands</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="LaTeX-export.html#LaTeX-export">LaTeX export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.10.2 LaTeX specific export settings</h4>
+
+<p>The LaTeX exporter introduces a number of keywords, similar to the general
+options settings described in <a href="Export-settings.html#Export-settings">Export settings</a>.
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">DESCRIPTION</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bDESCRIPTION-_0028_0040LaTeX_007b_007d_0029-1790"></a>The document description.  By default these are inserted as metadata using
+&lsquo;<samp><span class="samp">hyperref</span></samp>&rsquo;.  Document metadata can be configured via
+<code>org-latex-hyperref-template</code>.  Description can also be typeset as part
+of the front matter via <code>org-latex-title-command</code>.  You can use several
+<code>#+DESCRIPTION</code> keywords if the description is is long.
+
+     <br><dt>&lsquo;<samp><span class="samp">LATEX_CLASS</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bLATEX_005fCLASS-1791"></a><a name="index-org_002dlatex_002ddefault_002dclass-1792"></a><a name="index-org_002dlatex_002dclasses-1793"></a>The predefined preamble and headline level mapping to use
+(<code>org-latex-default-class</code>).  Must be an element in
+<code>org-latex-classes</code>.
+
+     <br><dt>&lsquo;<samp><span class="samp">LATEX_CLASS_OPTIONS</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bLATEX_005fCLASS_005fOPTIONS-1794"></a>Options given to the LaTeX document class.
+
+     <br><dt>&lsquo;<samp><span class="samp">LATEX_COMPILER</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bLATEX_005fCOMPILER-1795"></a><a name="index-org_002dlatex_002dcompiler-1796"></a>The compiler used to produce the PDF (<code>org-latex-compiler</code>).
+
+     <br><dt>&lsquo;<samp><span class="samp">LATEX_HEADER</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bLATEX_005fHEADER-1797"></a><a name="index-org_002dlatex_002dclasses-1798"></a>Arbitrary lines added to the preamble of the document, before the
+&lsquo;<samp><span class="samp">hyperref</span></samp>&rsquo; settings.  The location can be controlled via
+<code>org-latex-classes</code>.
+
+     <br><dt>&lsquo;<samp><span class="samp">LATEX_HEADER_EXTRA</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bLATEX_005fHEADER_005fEXTRA-1799"></a><a name="index-org_002dlatex_002dclasses-1800"></a>Arbitrary lines added to the preamble of the document, before the
+&lsquo;<samp><span class="samp">hyperref</span></samp>&rsquo; settings.  The location can be controlled via
+<code>org-latex-classes</code>.
+
+     <br><dt>&lsquo;<samp><span class="samp">KEYWORDS</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bKEYWORDS-_0028_0040LaTeX_007b_007d_0029-1801"></a>The keywords defining the contents of the document.  By default these are
+inserted as metadata using &lsquo;<samp><span class="samp">hyperref</span></samp>&rsquo;.  Document metadata can be
+configured via <code>org-latex-hyperref-template</code>.  Description can also be
+typeset as part of the front matter via <code>org-latex-title-command</code>.  You
+can use several <code>#+KEYWORDS</code> if the description is is long.
+
+     <br><dt>&lsquo;<samp><span class="samp">SUBTITLE</span></samp>&rsquo;<dd><a name="index-g_t_0023_002bSUBTITLE-_0028_0040LaTeX_007b_007d_0029-1802"></a><a name="index-org_002dlatex_002dsubtitle_002dseparate-1803"></a><a name="index-org_002dlatex_002dsubtitle_002dformat-1804"></a>The document subtitle.  This is typeset according to
+<code>org-latex-subtitle-format</code>.  If <code>org-latex-subtitle-separate</code>
+is non-<code>nil</code> it is typed as part of the &lsquo;<samp><span class="samp">\title</span></samp>&rsquo;-macro.  It
+can also access via <code>org-latex-hyperref-template</code> or typeset as
+part of the front matter via <code>org-latex-title-command</code>. 
+</dl>
+
+   <p>These keywords are treated in details in the following sections.
+
+   </body></html>
+

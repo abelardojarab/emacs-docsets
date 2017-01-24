@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+<title>results - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Specific-header-arguments.html#Specific-header-arguments" title="Specific header arguments">
+<link rel="prev" href="var.html#var" title="var">
+<link rel="next" href="file.html#file" title="file">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="results"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="file.html#file">file</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="var.html#var">var</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Specific-header-arguments.html#Specific-header-arguments">Specific header arguments</a>
+<hr>
+</div>
+
+<h5 class="subsubsection">14.8.2.2 <code>:results</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003aresults_007d_002c-src-header-argument-2066"></a>
+There are four classes of <code>:results</code> header arguments.  Each &lsquo;<samp><span class="samp">src</span></samp>&rsquo;
+code block can take only one option per class.
+
+     <ul>
+<li><b>collection</b> for how the results should be collected from the &lsquo;<samp><span class="samp">src</span></samp>&rsquo;
+code block
+<li><b>type</b> for which type of result the code block will return; affects how Org
+processes and inserts results in the Org buffer
+<li><b>format</b> for the result; affects how Org processes and inserts results in
+the Org buffer
+<li><b>handling</b> for processing results after evaluation of the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code
+block
+</ul>
+
+<h5 class="subsubheading">Collection</h5>
+
+<p>Collection options specify the results.  Choose one of the options; they are
+mutually exclusive.
+
+     <ul>
+<li><code>value</code>
+Default.  Functional mode.  Result is the value returned by the last
+statement in the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  Languages like Python may require an
+explicit <code>return</code> statement in the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  Usage
+example: <code>:results value</code>. 
+<li><code>output</code>
+Scripting mode.  Result is collected from STDOUT during execution of the code
+in the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  Usage example: <code>:results output</code>. 
+</ul>
+
+<h5 class="subsubheading">Type</h5>
+
+<p>Type tells what result types to expect from the execution of the code
+block.  Choose one of the options; they are mutually exclusive.  The default
+behavior is to automatically determine the result type.
+
+     <ul>
+<li><code>table</code>, <code>vector</code>
+Interpret the results as an Org table.  If the result is a single value,
+create a table with one row and one column.  Usage example: <code>:results
+value table</code>. 
+<li><code>list</code>
+Interpret the results as an Org list.  If the result is a single value,
+create a list of one element. 
+<li><code>scalar</code>, <code>verbatim</code>
+Interpret literally and insert as quoted text.  Do not create a table.  Usage
+example: <code>:results value verbatim</code>. 
+<li><code>file</code>
+Interpret as path to a file.  Inserts a link to the file.  Usage example:
+<code>:results value file</code>. 
+</ul>
+
+<h5 class="subsubheading">Format</h5>
+
+<p>Format pertains to the type of the result returned by the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code
+block.  Choose one of the options; they are mutually exclusive.  The default
+follows from the type specified above.
+
+     <ul>
+<li><code>raw</code>
+Interpreted as raw Org mode.  Inserted directly into the buffer.  Aligned if
+it is a table.  Usage example: <code>:results value raw</code>. 
+<li><code>org</code>
+Results enclosed in a <code>BEGIN_SRC org</code> block.  For comma-escape, either
+<kbd>TAB</kbd> in the block, or export the file.  Usage example: <code>:results
+value org</code>. 
+<li><code>html</code>
+Results enclosed in a <code>BEGIN_EXPORT html</code> block.  Usage example:
+<code>:results value html</code>. 
+<li><code>latex</code>
+Results enclosed in a <code>BEGIN_EXPORT latex</code> block.  Usage example:
+<code>:results value latex</code>. 
+<li><code>code</code>
+Result enclosed in a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  Useful for parsing.  Usage
+example: <code>:results value code</code>. 
+<li><code>pp</code>
+Result converted to pretty-print source code.  Enclosed in a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code
+block.  Languages supported: Emacs Lisp, Python, and Ruby.  Usage example:
+<code>:results value pp</code>. 
+<li><code>drawer</code>
+Result wrapped in a RESULTS drawer.  Useful for containing <code>raw</code> or
+<code>org</code> results for later scripting and automated processing.  Usage
+example: <code>:results value drawer</code>. 
+</ul>
+
+<h5 class="subsubheading">Handling</h5>
+
+<p>Handling options after collecting the results.
+
+     <ul>
+<li><code>silent</code>
+Do not insert results in the Org mode buffer, but echo them in the
+minibuffer.  Usage example: <code>:results output silent</code>. 
+<li><code>replace</code>
+Default.  Insert results in the Org buffer.  Remove previous results.  Usage
+example: <code>:results output replace</code>. 
+<li><code>append</code>
+Append results to the Org buffer.  Latest results are at the bottom.  Does
+not remove previous results.  Usage example: <code>:results output append</code>. 
+<li><code>prepend</code>
+Prepend results to the Org buffer.  Latest results are at the top.  Does not
+remove previous results.  Usage example: <code>:results output prepend</code>. 
+</ul>
+
+   </body></html>
+

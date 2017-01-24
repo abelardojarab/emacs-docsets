@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+<title>cache - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Specific-header-arguments.html#Specific-header-arguments" title="Specific header arguments">
+<link rel="prev" href="noweb_002dsep.html#noweb_002dsep" title="noweb-sep">
+<link rel="next" href="sep.html#sep" title="sep">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="cache"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="sep.html#sep">sep</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="noweb_002dsep.html#noweb_002dsep">noweb-sep</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Specific-header-arguments.html#Specific-header-arguments">Specific header arguments</a>
+<hr>
+</div>
+
+<h5 class="subsubsection">14.8.2.18 <code>:cache</code></h5>
+
+<p><a name="index-g_t_0040code_007b_003acache_007d_002c-src-header-argument-2081"></a>
+The <code>:cache</code> header argument is for caching results of evaluating code
+blocks.  Caching results can avoid re-evaluating &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks that
+have not changed since the previous run.  To benefit from the cache and avoid
+redundant evaluations, the source block must have a result already present in
+the buffer, and neither the header arguments (including the value of
+<code>:var</code> references) nor the text of the block itself has changed since
+the result was last computed.  This feature greatly helps avoid long-running
+calculations.  For some edge cases, however, the cached results may not be
+reliable.
+
+   <p>The caching feature is best for when &lsquo;<samp><span class="samp">src</span></samp>&rsquo; blocks are pure functions,
+that is functions that return the same value for the same input arguments
+(see <a href="var.html#var">var</a>), and that do not have side effects, and do not rely on external
+variables other than the input arguments.  Functions that depend on a timer,
+file system objects, and random number generators are clearly unsuitable for
+caching.
+
+   <p>A note of warning: when <code>:cache</code> is used for a <code>:session</code>, caching
+may cause unexpected results.
+
+   <p>When the caching mechanism tests for any source code changes, it will not
+expand &ldquo;noweb&rdquo; style references (see <a href="Noweb-reference-syntax.html#Noweb-reference-syntax">Noweb reference syntax</a>).  For
+reasons why, see <a href="http://thread.gmane.org/gmane.emacs.orgmode/79046">http://thread.gmane.org/gmane.emacs.orgmode/79046</a>.
+
+   <p>The <code>:cache</code> header argument can have one of two values: <code>yes</code> or
+<code>no</code>.
+
+     <ul>
+<li><code>no</code>
+Default.  No caching of results; &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block evaluated every time. 
+<li><code>yes</code>
+Whether to run the code or return the cached results is determined by
+comparing the SHA1 hash value of the combined &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block and
+arguments passed to it.  This hash value is packed on the <code>#+RESULTS:</code>
+line from previous evaluation.  When hash values match, Org does not evaluate
+the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block.  When hash values mismatch, Org evaluates the
+&lsquo;<samp><span class="samp">src</span></samp>&rsquo; code block, inserts the results, recalculates the hash value, and
+updates <code>#+RESULTS:</code> line. 
+</ul>
+
+   <p>In this example, both functions are cached.  But <code>caller</code> runs only if
+the result from <code>random</code> has changed since the last run.
+
+<pre class="example">      #+NAME: random
+      #+BEGIN_SRC R :cache yes
+      runif(1)
+      #+END_SRC
+     
+      #+RESULTS[a2a72cd647ad44515fab62e144796432793d68e1]: random
+      0.4659510825295
+     
+      #+NAME: caller
+      #+BEGIN_SRC emacs-lisp :var x=random :cache yes
+      x
+      #+END_SRC
+     
+      #+RESULTS[bec9c8724e397d5df3b696502df3ed7892fc4f5f]: caller
+      0.254227238707244
+</pre>
+   </body></html>
+

@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+<title>Applying custom styles - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="OpenDocument-Text-export.html#OpenDocument-Text-export" title="OpenDocument Text export">
+<link rel="prev" href="Extending-ODT-export.html#Extending-ODT-export" title="Extending ODT export">
+<link rel="next" href="Links-in-ODT-export.html#Links-in-ODT-export" title="Links in ODT export">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Applying-custom-styles"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Links-in-ODT-export.html#Links-in-ODT-export">Links in ODT export</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Extending-ODT-export.html#Extending-ODT-export">Extending ODT export</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="OpenDocument-Text-export.html#OpenDocument-Text-export">OpenDocument Text export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.12.5 Applying custom styles</h4>
+
+<p><a name="index-styles_002c-custom-1877"></a><a name="index-template_002c-custom-1878"></a>
+The ODT exporter ships with a set of OpenDocument styles
+(see <a href="Working-with-OpenDocument-style-files.html#Working-with-OpenDocument-style-files">Working with OpenDocument style files</a>) that ensure a well-formatted
+output.  These factory styles, however, may not cater to your specific
+tastes.  To customize the output, you can either modify the above styles
+files directly, or generate the required styles using an application like
+LibreOffice.  The latter method is suitable for expert and non-expert
+users alike, and is described here.
+
+<h5 class="subsubheading">Applying custom styles: the easy way</h5>
+
+     <ol type=1 start=1>
+<li>Create a sample <samp><span class="file">example.org</span></samp> file with the below settings and export it
+to ODT format.
+
+     <pre class="example">          #+OPTIONS: H:10 num:t
+</pre>
+     <li>Open the above <samp><span class="file">example.odt</span></samp> using LibreOffice.  Use the <samp><span class="file">Stylist</span></samp>
+to locate the target styles&mdash;these typically have the &lsquo;<samp><span class="samp">Org</span></samp>&rsquo; prefix&mdash;and
+modify those to your taste.  Save the modified file either as an
+OpenDocument Text (<samp><span class="file">.odt</span></samp>) or OpenDocument Template (<samp><span class="file">.ott</span></samp>) file.
+
+     <li><a name="index-g_t_0023_002bODT_005fSTYLES_005fFILE-1879"></a><a name="index-org_002dodt_002dstyles_002dfile-1880"></a>Customize the variable <code>org-odt-styles-file</code> and point it to the
+newly created file.  For additional configuration options
+see <a href="x_002doverriding_002dfactory_002dstyles.html#x_002doverriding_002dfactory_002dstyles">Overriding factory styles</a>.
+
+     <p>If you would like to choose a style on a per-file basis, you can use the
+<code>#+ODT_STYLES_FILE</code> option.  A typical setting will look like
+
+     <pre class="example">          #+ODT_STYLES_FILE: "/path/to/example.ott"
+</pre>
+     <p>or
+
+     <pre class="example">          #+ODT_STYLES_FILE: ("/path/to/file.ott" ("styles.xml" "image/hdr.png"))
+</pre>
+     </ol>
+
+<h5 class="subsubheading">Using third-party styles and templates</h5>
+
+<p>You can use third-party styles and templates for customizing your output. 
+This will produce the desired output only if the template provides all
+style names that the &lsquo;<samp><span class="samp">ODT</span></samp>&rsquo; exporter relies on.  Unless this condition is
+met, the output is going to be less than satisfactory.  So it is highly
+recommended that you only work with templates that are directly derived from
+the factory settings.
+
+   </body></html>
+

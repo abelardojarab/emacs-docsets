@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+<title>Exporting - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Markup.html#Markup" title="Markup">
+<link rel="next" href="Publishing.html#Publishing" title="Publishing">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Exporting"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Publishing.html#Publishing">Publishing</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Markup.html#Markup">Markup</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">12 Exporting</h2>
+
+<p><a name="index-exporting-1566"></a>
+Sometimes, you may want to pretty print your notes, publish them on the web
+or even share them with people not using Org.  In these cases, the Org export
+facilities can be used to convert your documents to a variety of other
+formats, while retaining as much structure (see <a href="Document-structure.html#Document-structure">Document structure</a>) and
+markup (see <a href="Markup.html#Markup">Markup</a>) as possible.
+
+   <p><a name="index-export-back_002dend-1567"></a>Libraries responsible for such translation are called back-ends.  Org ships
+with the following ones
+
+     <ul>
+<li>ascii (ASCII format)
+<li>beamer (LaTeX Beamer format)
+<li>html (HTML format)
+<li>icalendar (iCalendar format)
+<li>latex (LaTeX format)
+<li>md (Markdown format)
+<li>odt (OpenDocument Text format)
+<li>org (Org format)
+<li>texinfo (Texinfo format)
+<li>man (Man page format)
+</ul>
+
+<p class="noindent">More of them can be found in the <code>contrib/</code> directory
+(see <a href="Installation.html#Installation">Installation</a>) or through the Emacs packaging system<a rel="footnote" href="Exporting.html#fn-1" name="fnd-1"><sup>1</sup></a>.
+
+   <p><a name="index-org_002dexport_002dbackends-1568"></a>By default, the following five back-ends are loaded: <code>ascii</code>,
+<code>html</code>, <code>icalendar</code>, <code>latex</code> and <code>odt</code>.  Others need to
+be specifically loaded, either by customizing <code>org-export-backends</code>, or
+by requiring the associated library, e.g.,
+
+<pre class="lisp">     (require 'ox-md)
+</pre>
+   <p>Eventually, you can these facilities can be used with <code>orgtbl-mode</code> or
+<code>orgstruct-mode</code> in foreign buffers so you can author tables and lists
+in Org syntax and convert them in place to the target language.
+
+<ul class="menu">
+<li><a accesskey="1" href="The-export-dispatcher.html#The-export-dispatcher">The export dispatcher</a>:        The main exporter interface
+<li><a accesskey="2" href="Export-settings.html#Export-settings">Export settings</a>:              Generic export settings
+<li><a accesskey="3" href="Table-of-contents.html#Table-of-contents">Table of contents</a>:            The if and where of the table of contents
+<li><a accesskey="4" href="Include-files.html#Include-files">Include files</a>:                Include additional files into a document
+<li><a accesskey="5" href="Macro-replacement.html#Macro-replacement">Macro replacement</a>:            Use macros to create templates
+<li><a accesskey="6" href="Comment-lines.html#Comment-lines">Comment lines</a>:                What will not be exported
+<li><a accesskey="7" href="ASCII_002fLatin_002d1_002fUTF_002d8-export.html#ASCII_002fLatin_002d1_002fUTF_002d8-export">ASCII/Latin-1/UTF-8 export</a>:   Exporting to flat files with encoding
+<li><a accesskey="8" href="Beamer-export.html#Beamer-export">Beamer export</a>:                Exporting as a Beamer presentation
+<li><a accesskey="9" href="HTML-export.html#HTML-export">HTML export</a>:                  Exporting to HTML
+<li><a href="LaTeX-export.html#LaTeX-export">LaTeX export</a>:              Exporting to LaTeX, and processing to PDF
+<li><a href="Markdown-export.html#Markdown-export">Markdown export</a>:              Exporting to Markdown
+<li><a href="OpenDocument-Text-export.html#OpenDocument-Text-export">OpenDocument Text export</a>:     Exporting to OpenDocument Text
+<li><a href="Org-export.html#Org-export">Org export</a>:                   Exporting to Org
+<li><a href="Texinfo-export.html#Texinfo-export">Texinfo export</a>:               Exporting to Texinfo
+<li><a href="iCalendar-export.html#iCalendar-export">iCalendar export</a>:             Exporting to iCalendar
+<li><a href="Other-built_002din-back_002dends.html#Other-built_002din-back_002dends">Other built-in back-ends</a>:     Exporting to a man page
+<li><a href="Advanced-configuration.html#Advanced-configuration">Advanced configuration</a>:       Fine-tuning the export output
+<li><a href="Export-in-foreign-buffers.html#Export-in-foreign-buffers">Export in foreign buffers</a>:    Author tables and lists in Org syntax
+</ul>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Exporting.html#fnd-1">1</a>]</small> These
+libraries traditionnaly appear as <samp><span class="file">ox-NAME</span></samp>, e.g., <samp><span class="file">ox-koma-letter</span></samp>
+for <code>koma-letter</code> back-end.</p>
+
+   <hr></div>
+
+   </body></html>
+

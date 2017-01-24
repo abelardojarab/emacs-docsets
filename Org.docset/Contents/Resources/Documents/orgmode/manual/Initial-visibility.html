@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+<title>Initial visibility - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Visibility-cycling.html#Visibility-cycling" title="Visibility cycling">
+<link rel="prev" href="Global-and-local-cycling.html#Global-and-local-cycling" title="Global and local cycling">
+<link rel="next" href="Catching-invisible-edits.html#Catching-invisible-edits" title="Catching invisible edits">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Initial-visibility"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Catching-invisible-edits.html#Catching-invisible-edits">Catching invisible edits</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Global-and-local-cycling.html#Global-and-local-cycling">Global and local cycling</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Visibility-cycling.html#Visibility-cycling">Visibility cycling</a>
+<hr>
+</div>
+
+<h4 class="subsection">2.3.2 Initial visibility</h4>
+
+<p><a name="index-visibility_002c-initialize-77"></a><a name="index-org_002dstartup_002dfolded-78"></a><a name="index-org_002dagenda_002dinhibit_002dstartup-79"></a><a name="index-g_t_0040code_007boverview_007d_002c-STARTUP-keyword-80"></a><a name="index-g_t_0040code_007bcontent_007d_002c-STARTUP-keyword-81"></a><a name="index-g_t_0040code_007bshowall_007d_002c-STARTUP-keyword-82"></a><a name="index-g_t_0040code_007bshoweverything_007d_002c-STARTUP-keyword-83"></a>
+When Emacs first visits an Org file, the global state is set to OVERVIEW,
+i.e., only the top level headlines are visible<a rel="footnote" href="Initial-visibility.html#fn-1" name="fnd-1"><sup>1</sup></a>.  This can be configured through the variable
+<code>org-startup-folded</code>, or on a per-file basis by adding one of the
+following lines anywhere in the buffer:
+
+<pre class="example">     #+STARTUP: overview
+     #+STARTUP: content
+     #+STARTUP: showall
+     #+STARTUP: showeverything
+</pre>
+   <p><a name="index-property_002c-VISIBILITY-84"></a>Furthermore, any entries with a &lsquo;<samp><span class="samp">VISIBILITY</span></samp>&rsquo; property (see <a href="Properties-and-columns.html#Properties-and-columns">Properties and columns</a>) will get their visibility adapted accordingly.  Allowed values
+for this property are <code>folded</code>, <code>children</code>, <code>content</code>, and
+<code>all</code>.
+
+     
+<a name="index-C_002du-C_002du-_0040key_007bTAB_007d-85"></a>
+<a name="index-org_002dset_002dstartup_002dvisibility-86"></a>
+<dl><dt><kbd>C-u C-u &lt;TAB&gt;</kbd> &nbsp;&nbsp;&nbsp;&nbsp;(<code>org-set-startup-visibility</code>)<dd>
+Switch back to the startup visibility of the buffer, i.e., whatever is
+requested by startup options and &lsquo;<samp><span class="samp">VISIBILITY</span></samp>&rsquo; properties in individual
+entries. 
+</dl>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Initial-visibility.html#fnd-1">1</a>]</small> When
+<code>org-agenda-inhibit-startup</code> is non-<code>nil</code>, Org will not honor the default
+visibility state when first opening a file for the agenda (see <a href="Speeding-up-your-agendas.html#Speeding-up-your-agendas">Speeding up your agendas</a>).</p>
+
+   <hr></div>
+
+   </body></html>
+

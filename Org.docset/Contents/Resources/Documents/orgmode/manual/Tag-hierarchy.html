@@ -1,0 +1,180 @@
+<html lang="en">
+<head>
+<title>Tag hierarchy - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Tags.html#Tags" title="Tags">
+<link rel="prev" href="Setting-tags.html#Setting-tags" title="Setting tags">
+<link rel="next" href="Tag-searches.html#Tag-searches" title="Tag searches">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Tag-hierarchy"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Tag-searches.html#Tag-searches">Tag searches</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Setting-tags.html#Setting-tags">Setting tags</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Tags.html#Tags">Tags</a>
+<hr>
+</div>
+
+<h3 class="section">6.3 Tag hierarchy</h3>
+
+<p><a name="index-group-tags-676"></a><a name="index-tags_002c-groups-677"></a><a name="index-tag-hierarchy-678"></a>Tags can be defined in hierarchies.  A tag can be defined as a <em>group
+tag</em> for a set of other tags.  The group tag can be seen as the &ldquo;broader
+term&rdquo; for its set of tags.  Defining multiple <em>group tags</em> and nesting
+them creates a tag hierarchy.
+
+   <p>One use-case is to create a taxonomy of terms (tags) that can be used to
+classify nodes in a document or set of documents.
+
+   <p>When you search for a group tag, it will return matches for all members in
+the group and its subgroups.  In an agenda view, filtering by a group tag
+will display or hide headlines tagged with at least one of the members of the
+group or any of its subgroups.  This makes tag searches and filters even more
+flexible.
+
+   <p>You can set group tags by using brackets and inserting a colon between the
+group tag and its related tags&mdash;beware that all whitespaces are mandatory so
+that Org can parse this line correctly:
+
+<pre class="example">     #+TAGS: [ GTD : Control Persp ]
+</pre>
+   <p>In this example, &lsquo;<samp><span class="samp">GTD</span></samp>&rsquo; is the <em>group tag</em> and it is related to two
+other tags: &lsquo;<samp><span class="samp">Control</span></samp>&rsquo;, &lsquo;<samp><span class="samp">Persp</span></samp>&rsquo;.  Defining &lsquo;<samp><span class="samp">Control</span></samp>&rsquo; and
+&lsquo;<samp><span class="samp">Persp</span></samp>&rsquo; as group tags creates an hierarchy of tags:
+
+<pre class="example">     #+TAGS: [ Control : Context Task ]
+     #+TAGS: [ Persp : Vision Goal AOF Project ]
+</pre>
+   <p>That can conceptually be seen as a hierarchy of tags:
+
+<pre class="example">     - GTD
+       - Persp
+         - Vision
+         - Goal
+         - AOF
+         - Project
+       - Control
+         - Context
+         - Task
+</pre>
+   <p>You can use the <code>:startgrouptag</code>, <code>:grouptags</code> and
+<code>:endgrouptag</code> keyword directly when setting <code>org-tag-alist</code>
+directly:
+
+<pre class="lisp">     (setq org-tag-alist '((:startgrouptag)
+                           ("GTD")
+                           (:grouptags)
+                           ("Control")
+                           ("Persp")
+                           (:endgrouptag)
+                           (:startgrouptag)
+                           ("Control")
+                           (:grouptags)
+                           ("Context")
+                           ("Task")
+                           (:endgrouptag)))
+</pre>
+   <p>The tags in a group can be mutually exclusive if using the same group syntax
+as is used for grouping mutually exclusive tags together; using curly
+brackets.
+
+<pre class="example">     #+TAGS: { Context : @Home @Work @Call }
+</pre>
+   <p>When setting <code>org-tag-alist</code> you can use <code>:startgroup</code> &amp;
+<code>:endgroup</code> instead of <code>:startgrouptag</code> &amp; <code>:endgrouptag</code> to
+make the tags mutually exclusive.
+
+   <p>Furthermore, the members of a <em>group tag</em> can also be regular
+expressions, creating the possibility of a more dynamic and rule-based
+tag structure.  The regular expressions in the group must be specified
+within { }.  Here is an expanded example:
+
+<pre class="example">     #+TAGS: [ Vision : {V@.+} ]
+     #+TAGS: [ Goal : {G@.+} ]
+     #+TAGS: [ AOF : {AOF@.+} ]
+     #+TAGS: [ Project : {P@.+} ]
+</pre>
+   <p>Searching for the tag &lsquo;<samp><span class="samp">Project</span></samp>&rsquo; will now list all tags also including
+regular expression matches for &lsquo;<samp><span class="samp">P@.+</span></samp>&rsquo;, and similarly for tag searches on
+&lsquo;<samp><span class="samp">Vision</span></samp>&rsquo;, &lsquo;<samp><span class="samp">Goal</span></samp>&rsquo; and &lsquo;<samp><span class="samp">AOF</span></samp>&rsquo;.  For example, this would work well
+for a project tagged with a common project-identifier, e.g. &lsquo;<samp><span class="samp">P@2014_OrgTags</span></samp>&rsquo;.
+
+   <p><a name="index-C_002dc-C_002dx-q-679"></a><a name="index-org_002dgroup_002dtags-680"></a>If you want to ignore group tags temporarily, toggle group tags support
+with <samp><span class="command">org-toggle-tags-groups</span></samp>, bound to <kbd>C-c C-x q</kbd>.  If you
+want to disable tag groups completely, set <code>org-group-tags</code> to <code>nil</code>.
+
+   </body></html>
+

@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+<title>Images in @LaTeX{} export - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-export.html#g_t_0040LaTeX_007b_007d-export" title="@LaTeX{} export">
+<link rel="prev" href="http://orgmode.org/manual/Tables-in-_0040LaTeX_007b_007d-export.html#Tables-in-_0040LaTeX_007b_007d-export" title="Tables in @LaTeX{} export">
+<link rel="next" href="http://orgmode.org/manual/Plain-lists-in-_0040LaTeX_007b_007d-export.html#Plain-lists-in-_0040LaTeX_007b_007d-export" title="Plain lists in @LaTeX{} export">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Images-in-LaTeX-export"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Plain-lists-in-LaTeX-export.html#Plain-lists-in-LaTeX-export">Plain lists in LaTeX export</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Tables-in-LaTeX-export.html#Tables-in-LaTeX-export">Tables in LaTeX export</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="LaTeX-export.html#LaTeX-export">LaTeX export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.10.6 Images in LaTeX export</h4>
+
+<p><a name="index-images_002c-inline-in-_0040LaTeX_007b_007d-1828"></a><a name="index-inlining-images-in-_0040LaTeX_007b_007d-1829"></a><a name="index-g_t_0023_002bATTR_005fLATEX_002c-in-images-1830"></a>
+Images that are linked to without a description part in the link, like
+&lsquo;<samp><span class="samp">[[file:img.jpg]]</span></samp>&rsquo; or &lsquo;<samp><span class="samp">[[./img.jpg]]</span></samp>&rsquo; will be inserted into the PDF
+output file resulting from LaTeX processing.  Org will use an
+<code>\includegraphics</code> macro to insert the image<a rel="footnote" href="Images-in-LaTeX-export.html#fn-1" name="fnd-1"><sup>1</sup></a>.
+
+   <p>You can specify image width or height with, respectively, <code>:width</code> and
+<code>:height</code> attributes.  It is also possible to add any other option with
+the <code>:options</code> attribute, as shown in the following example:
+
+<pre class="example">     #+ATTR_LATEX: :width 5cm :options angle=90
+     [[./img/sed-hr4049.pdf]]
+</pre>
+   <p>If you need a specific command for the caption, use <code>:caption</code>
+attribute.  It will override standard <code>#+CAPTION</code> value, if any.
+
+<pre class="example">     #+ATTR_LATEX: :caption \bicaption{HeadingA}{HeadingB}
+     [[./img/sed-hr4049.pdf]]
+</pre>
+   <p>If you have specified a caption as described in <a href="Images-and-tables.html#Images-and-tables">Images and tables</a>, the
+picture will be wrapped into a <code>figure</code> environment and thus become
+a floating element.  You can also ask Org to export an image as a float
+without specifying caption by setting the <code>:float</code> attribute.  You may
+also set it to:
+     <ul>
+<li><code>t</code>: if you want to use the standard &lsquo;<samp><span class="samp">figure</span></samp>&rsquo; environment.  It is
+used by default if you provide a caption to the image. 
+<li><code>multicolumn</code>: if you wish to include an image which spans multiple
+columns in a page.  This will export the image wrapped in a <code>figure*</code>
+environment. 
+<li><code>wrap</code>: if you would like to let text flow around the image.  It will
+make the figure occupy the left half of the page. 
+<li><code>sideways</code>: if you would like the image to appear alone on a separate
+page rotated ninety degrees using the <code>sidewaysfigure</code>
+environment.  Setting this <code>:float</code> option will ignore the
+<code>:placement</code> setting. 
+<li><code>nil</code>: if you need to avoid any floating environment, even when
+a caption is provided. 
+</ul>
+   To modify the placement option of any floating environment, set the
+<code>placement</code> attribute.
+
+<pre class="example">     #+ATTR_LATEX: :float wrap :width 0.38\textwidth :placement {r}{0.4\textwidth}
+     [[./img/hst.png]]
+</pre>
+   <p><a name="index-org_002dlatex_002dimages_002dcentered-1831"></a><a name="index-center-image-_0028_0040LaTeX_007b_007d-export_0029-1832"></a><a name="index-image_002c-centering-_0028_0040LaTeX_007b_007d-export_0029-1833"></a>Images are centered by default.  However, one can disable this behavior by
+setting <code>:center</code> attribute to <code>nil</code>.  To prevent any image from
+being centered throughout a document, set <code>org-latex-images-centered</code>
+instead.
+
+   <p>Eventually, if the <code>:comment-include</code> attribute is set to
+a non-<code>nil</code> value, the LaTeX <code>\includegraphics</code> macro will be
+commented out.
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Images-in-LaTeX-export.html#fnd-1">1</a>]</small> In the case of
+TikZ (<a href="http://sourceforge.net/projects/pgf/">http://sourceforge.net/projects/pgf/</a>) images, it will become an
+<code>\input</code> macro wrapped within a <code>tikzpicture</code> environment.</p>
+
+   <hr></div>
+
+   </body></html>
+

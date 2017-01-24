@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+<title>@LaTeX{} header and sectioning - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-export.html#g_t_0040LaTeX_007b_007d-export" title="@LaTeX{} export">
+<link rel="prev" href="http://orgmode.org/manual/_0040LaTeX_007b_007d-specific-export-settings.html#g_t_0040LaTeX_007b_007d-specific-export-settings" title="@LaTeX{} specific export settings">
+<link rel="next" href="http://orgmode.org/manual/Quoting-_0040LaTeX_007b_007d-code.html#Quoting-_0040LaTeX_007b_007d-code" title="Quoting @LaTeX{} code">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="LaTeX-header-and-sectioning"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Quoting-LaTeX-code.html#Quoting-LaTeX-code">Quoting LaTeX code</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="LaTeX-specific-export-settings.html#LaTeX-specific-export-settings">LaTeX specific export settings</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="LaTeX-export.html#LaTeX-export">LaTeX export</a>
+<hr>
+</div>
+
+<h4 class="subsection">12.10.3 LaTeX header and sectioning structure</h4>
+
+<p><a name="index-g_t_0040LaTeX_007b_007d-class-1805"></a><a name="index-g_t_0040LaTeX_007b_007d-sectioning-structure-1806"></a><a name="index-g_t_0040LaTeX_007b_007d-header-1807"></a><a name="index-header_002c-for-_0040LaTeX_007b_007d-files-1808"></a><a name="index-sectioning-structure_002c-for-_0040LaTeX_007b_007d-export-1809"></a>
+By default, the first three outline levels become headlines, defining a
+general document structure.  Additional levels are exported as <code>itemize</code>
+or <code>enumerate</code> lists.  The transition can also occur at a different
+level (see <a href="Export-settings.html#Export-settings">Export settings</a>).
+
+   <p>By default, the LaTeX output uses the class <code>article</code>.
+
+   <p><a name="index-org_002dlatex_002ddefault_002dclass-1810"></a><a name="index-org_002dlatex_002dclasses-1811"></a><a name="index-org_002dlatex_002ddefault_002dpackages_002dalist-1812"></a><a name="index-org_002dlatex_002dpackages_002dalist-1813"></a>You can change this globally by setting a different value for
+<code>org-latex-default-class</code> or locally by adding an option like
+<code>#+LATEX_CLASS: myclass</code> in your file, or with
+a <code>EXPORT_LATEX_CLASS</code> property that applies when exporting a region
+containing only this (sub)tree.  The class must be listed in
+<code>org-latex-classes</code>.  This variable defines a header template for each
+class<a rel="footnote" href="LaTeX-header-and-sectioning.html#fn-1" name="fnd-1"><sup>1</sup></a>, and allows you to define the sectioning structure for each
+class.  You can also define your own classes there.
+
+   <p><a name="index-g_t_0023_002bLATEX_005fCLASS-1814"></a><a name="index-g_t_0023_002bLATEX_005fCLASS_005fOPTIONS-1815"></a><a name="index-property_002c-EXPORT_005fLATEX_005fCLASS-1816"></a><a name="index-property_002c-EXPORT_005fLATEX_005fCLASS_005fOPTIONS-1817"></a>The <code>LATEX_CLASS_OPTIONS</code> keyword or <code>EXPORT_LATEX_CLASS_OPTIONS</code>
+property can specify the options for the <code>\documentclass</code> macro.  These
+options have to be provided, as expected by LaTeX, within square brackets.
+
+   <p><a name="index-g_t_0023_002bLATEX_005fHEADER-1818"></a><a name="index-g_t_0023_002bLATEX_005fHEADER_005fEXTRA-1819"></a>You can also use the <code>LATEX_HEADER</code> and
+<code>LATEX_HEADER_EXTRA</code><a rel="footnote" href="LaTeX-header-and-sectioning.html#fn-2" name="fnd-2"><sup>2</sup></a> keywords in order
+to add lines to the header.  See the docstring of <code>org-latex-classes</code> for
+more information.
+
+   <p>An example is shown below.
+
+<pre class="example">     #+LATEX_CLASS: article
+     #+LATEX_CLASS_OPTIONS: [a4paper]
+     #+LATEX_HEADER: \usepackage{xyz}
+     
+     * Headline 1
+       some text
+</pre>
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="LaTeX-header-and-sectioning.html#fnd-1">1</a>]</small> Into which the values of
+<code>org-latex-default-packages-alist</code> and <code>org-latex-packages-alist</code>
+are spliced.</p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="LaTeX-header-and-sectioning.html#fnd-2">2</a>]</small> Unlike <code>LATEX_HEADER</code>, contents
+from <code>LATEX_HEADER_EXTRA</code> keywords will not be loaded when previewing
+LaTeX snippets (see <a href="Previewing-LaTeX-fragments.html#Previewing-LaTeX-fragments">Previewing LaTeX fragments</a>).</p>
+
+   <hr></div>
+
+   </body></html>
+

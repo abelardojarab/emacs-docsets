@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+<title>Tracking your habits - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Progress-logging.html#Progress-logging" title="Progress logging">
+<link rel="prev" href="Tracking-TODO-state-changes.html#Tracking-TODO-state-changes" title="Tracking TODO state changes">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Tracking-your-habits"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Tracking-TODO-state-changes.html#Tracking-TODO-state-changes">Tracking TODO state changes</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Progress-logging.html#Progress-logging">Progress logging</a>
+<hr>
+</div>
+
+<h4 class="subsection">5.3.3 Tracking your habits</h4>
+
+<p><a name="index-habits-607"></a>
+Org has the ability to track the consistency of a special category of TODOs,
+called &ldquo;habits&rdquo;.  A habit has the following properties:
+
+     <ol type=1 start=1>
+<li>You have enabled the <code>habits</code> module by customizing <code>org-modules</code>. 
+<li>The habit is a TODO item, with a TODO keyword representing an open state. 
+<li>The property <code>STYLE</code> is set to the value <code>habit</code>. 
+<li>The TODO has a scheduled date, usually with a <code>.+</code> style repeat
+interval.  A <code>++</code> style may be appropriate for habits with time
+constraints, e.g., must be done on weekends, or a <code>+</code> style for an
+unusual habit that can have a backlog, e.g., weekly reports. 
+<li>The TODO may also have minimum and maximum ranges specified by using the
+syntax &lsquo;<samp><span class="samp">.+2d/3d</span></samp>&rsquo;, which says that you want to do the task at least every
+three days, but at most every two days. 
+<li>You must also have state logging for the <code>DONE</code> state enabled
+(see <a href="Tracking-TODO-state-changes.html#Tracking-TODO-state-changes">Tracking TODO state changes</a>), in order for historical data to be
+represented in the consistency graph.  If it is not enabled it is not an
+error, but the consistency graphs will be largely meaningless.
+        </ol>
+
+   <p>To give you an idea of what the above rules look like in action, here's an
+actual habit with some history:
+
+<pre class="example">     ** TODO Shave
+        SCHEDULED: &lt;2009-10-17 Sat .+2d/4d&gt;
+        :PROPERTIES:
+        :STYLE:    habit
+        :LAST_REPEAT: [2009-10-19 Mon 00:36]
+        :END:
+        - State "DONE"       from "TODO"       [2009-10-15 Thu]
+        - State "DONE"       from "TODO"       [2009-10-12 Mon]
+        - State "DONE"       from "TODO"       [2009-10-10 Sat]
+        - State "DONE"       from "TODO"       [2009-10-04 Sun]
+        - State "DONE"       from "TODO"       [2009-10-02 Fri]
+        - State "DONE"       from "TODO"       [2009-09-29 Tue]
+        - State "DONE"       from "TODO"       [2009-09-25 Fri]
+        - State "DONE"       from "TODO"       [2009-09-19 Sat]
+        - State "DONE"       from "TODO"       [2009-09-16 Wed]
+        - State "DONE"       from "TODO"       [2009-09-12 Sat]
+</pre>
+   <p>What this habit says is: I want to shave at most every 2 days (given by the
+<code>SCHEDULED</code> date and repeat interval) and at least every 4 days.  If
+today is the 15th, then the habit first appears in the agenda on Oct 17,
+after the minimum of 2 days has elapsed, and will appear overdue on Oct 19,
+after four days have elapsed.
+
+   <p>What's really useful about habits is that they are displayed along with a
+consistency graph, to show how consistent you've been at getting that task
+done in the past.  This graph shows every day that the task was done over the
+past three weeks, with colors for each day.  The colors used are:
+
+     <dl>
+<dt><code>Blue</code><dd>If the task wasn't to be done yet on that day. 
+<br><dt><code>Green</code><dd>If the task could have been done on that day. 
+<br><dt><code>Yellow</code><dd>If the task was going to be overdue the next day. 
+<br><dt><code>Red</code><dd>If the task was overdue on that day. 
+</dl>
+
+   <p>In addition to coloring each day, the day is also marked with an asterisk if
+the task was actually done that day, and an exclamation mark to show where
+the current day falls in the graph.
+
+   <p>There are several configuration variables that can be used to change the way
+habits are displayed in the agenda.
+
+     <dl>
+<dt><code>org-habit-graph-column</code><dd>The buffer column at which the consistency graph should be drawn.  This will
+overwrite any text in that column, so it is a good idea to keep your habits'
+titles brief and to the point. 
+<br><dt><code>org-habit-preceding-days</code><dd>The amount of history, in days before today, to appear in consistency graphs. 
+<br><dt><code>org-habit-following-days</code><dd>The number of days after today that will appear in consistency graphs. 
+<br><dt><code>org-habit-show-habits-only-for-today</code><dd>If non-<code>nil</code>, only show habits in today's agenda view.  This is set to true by
+default. 
+</dl>
+
+   <p>Lastly, pressing <kbd>K</kbd> in the agenda buffer will cause habits to
+temporarily be disabled and they won't appear at all.  Press <kbd>K</kbd> again to
+bring them back.  They are also subject to tag filtering, if you have habits
+which should only be done in certain contexts, for example.
+
+   </body></html>
+

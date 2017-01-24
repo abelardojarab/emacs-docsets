@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+<title>Conventions - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Introduction.html#Introduction" title="Introduction">
+<link rel="prev" href="Feedback.html#Feedback" title="Feedback">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Conventions"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Feedback.html#Feedback">Feedback</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Introduction.html#Introduction">Introduction</a>
+<hr>
+</div>
+
+<h3 class="section">1.5 Typesetting conventions used in this manual</h3>
+
+<h5 class="subsubheading">TODO keywords, tags, properties, etc.</h5>
+
+<p>Org mainly uses three types of keywords: TODO keywords, tags and property
+names.  In this manual we use the following conventions:
+
+     <dl>
+<dt><code>TODO</code><dt><code>WAITING</code><dd>TODO keywords are written with all capitals, even if they are
+user-defined. 
+<br><dt><code>boss</code><dt><code>ARCHIVE</code><dd>User-defined tags are written in lowercase; built-in tags with special
+meaning are written with all capitals. 
+<br><dt><code>Release</code><dt><code>PRIORITY</code><dd>User-defined properties are capitalized; built-in properties with
+special meaning are written with all capitals. 
+</dl>
+
+   <p>Moreover, Org uses <i>option keywords</i> (like <code>#+TITLE</code> to set the title)
+and <i>environment keywords</i> (like <code>#+BEGIN_EXPORT html</code> to start
+a <code>HTML</code> environment).  They are written in uppercase in the manual to
+enhance its readability, but you can use lowercase in your Org file.
+
+<h5 class="subsubheading">Key bindings and commands</h5>
+
+<p><a name="index-C_002dc-a-22"></a><a name="index-org_002dagenda-23"></a><a name="index-C_002dc-c-24"></a><a name="index-org_002dcapture-25"></a>
+The manual suggests a few global key bindings, in particular <kbd>C-c a</kbd> for
+<code>org-agenda</code> and <kbd>C-c c</kbd> for <code>org-capture</code>.  These are only
+suggestions, but the rest of the manual assumes that these key bindings are in
+place in order to list commands by key access.
+
+   <p>Also, the manual lists both the keys and the corresponding commands for
+accessing a functionality.  Org mode often uses the same key for different
+functions, depending on context.  The command that is bound to such keys has
+a generic name, like <code>org-metaright</code>.  In the manual we will, wherever
+possible, give the function that is internally called by the generic command. 
+For example, in the chapter on document structure, <kbd>M-&lt;right&gt;</kbd> will
+be listed to call <code>org-do-demote</code>, while in the chapter on tables, it
+will be listed to call <code>org-table-move-column-right</code>.  If you prefer,
+you can compile the manual without the command names by unsetting the flag
+<code>cmdnames</code> in <samp><span class="file">org.texi</span></samp>.
+
+   </body></html>
+

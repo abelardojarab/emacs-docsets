@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+<title>Languages - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-with-source-code.html#Working-with-source-code" title="Working with source code">
+<link rel="prev" href="Library-of-Babel.html#Library-of-Babel" title="Library of Babel">
+<link rel="next" href="Header-arguments.html#Header-arguments" title="Header arguments">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Languages"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Header-arguments.html#Header-arguments">Header arguments</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Library-of-Babel.html#Library-of-Babel">Library of Babel</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-with-source-code.html#Working-with-source-code">Working with source code</a>
+<hr>
+</div>
+
+<h3 class="section">14.7 Languages</h3>
+
+<p><a name="index-babel_002c-languages-2050"></a><a name="index-source-code_002c-languages-2051"></a><a name="index-code-block_002c-languages-2052"></a>
+Org supports the following languages for the &lsquo;<samp><span class="samp">src</span></samp>&rsquo; code blocks:
+
+   <p><table summary=""><tr align="left"><th valign="top" width="25%"><b>Language</b> </th><th valign="top" width="25%"><b>Identifier</b> </th><th valign="top" width="25%"><b>Language</b> </th><th valign="top" width="25%"><b>Identifier</b>
+<br></th></tr><tr align="left"><td valign="top" width="25%">Asymptote </td><td valign="top" width="25%">asymptote </td><td valign="top" width="25%">Awk </td><td valign="top" width="25%">awk
+<br></td></tr><tr align="left"><td valign="top" width="25%">C </td><td valign="top" width="25%">C </td><td valign="top" width="25%">C++ </td><td valign="top" width="25%">C++
+<br></td></tr><tr align="left"><td valign="top" width="25%">Clojure </td><td valign="top" width="25%">clojure </td><td valign="top" width="25%">CSS </td><td valign="top" width="25%">css
+<br></td></tr><tr align="left"><td valign="top" width="25%">D </td><td valign="top" width="25%">d </td><td valign="top" width="25%">ditaa </td><td valign="top" width="25%">ditaa
+<br></td></tr><tr align="left"><td valign="top" width="25%">Graphviz </td><td valign="top" width="25%">dot </td><td valign="top" width="25%">Emacs Calc </td><td valign="top" width="25%">calc
+<br></td></tr><tr align="left"><td valign="top" width="25%">Emacs Lisp </td><td valign="top" width="25%">emacs-lisp </td><td valign="top" width="25%">Fortran </td><td valign="top" width="25%">fortran
+<br></td></tr><tr align="left"><td valign="top" width="25%">gnuplot </td><td valign="top" width="25%">gnuplot </td><td valign="top" width="25%">Haskell </td><td valign="top" width="25%">haskell
+<br></td></tr><tr align="left"><td valign="top" width="25%">Java </td><td valign="top" width="25%">java </td><td valign="top" width="25%">Javascript </td><td valign="top" width="25%">js
+<br></td></tr><tr align="left"><td valign="top" width="25%">LaTeX </td><td valign="top" width="25%">latex </td><td valign="top" width="25%">Ledger </td><td valign="top" width="25%">ledger
+<br></td></tr><tr align="left"><td valign="top" width="25%">Lisp </td><td valign="top" width="25%">lisp </td><td valign="top" width="25%">Lilypond </td><td valign="top" width="25%">lilypond
+<br></td></tr><tr align="left"><td valign="top" width="25%">Lua </td><td valign="top" width="25%">lua </td><td valign="top" width="25%">MATLAB </td><td valign="top" width="25%">matlab
+<br></td></tr><tr align="left"><td valign="top" width="25%">Mscgen </td><td valign="top" width="25%">mscgen </td><td valign="top" width="25%">Objective Caml </td><td valign="top" width="25%">ocaml
+<br></td></tr><tr align="left"><td valign="top" width="25%">Octave </td><td valign="top" width="25%">octave </td><td valign="top" width="25%">Org mode </td><td valign="top" width="25%">org
+<br></td></tr><tr align="left"><td valign="top" width="25%">Oz </td><td valign="top" width="25%">oz </td><td valign="top" width="25%">Perl </td><td valign="top" width="25%">perl
+<br></td></tr><tr align="left"><td valign="top" width="25%">Plantuml </td><td valign="top" width="25%">plantuml </td><td valign="top" width="25%">Processing.js </td><td valign="top" width="25%">processing
+<br></td></tr><tr align="left"><td valign="top" width="25%">Python </td><td valign="top" width="25%">python </td><td valign="top" width="25%">R </td><td valign="top" width="25%">R
+<br></td></tr><tr align="left"><td valign="top" width="25%">Ruby </td><td valign="top" width="25%">ruby </td><td valign="top" width="25%">Sass </td><td valign="top" width="25%">sass
+<br></td></tr><tr align="left"><td valign="top" width="25%">Scheme </td><td valign="top" width="25%">scheme </td><td valign="top" width="25%">GNU Screen </td><td valign="top" width="25%">screen
+<br></td></tr><tr align="left"><td valign="top" width="25%">Sed </td><td valign="top" width="25%">sed </td><td valign="top" width="25%">shell </td><td valign="top" width="25%">sh
+<br></td></tr><tr align="left"><td valign="top" width="25%">SQL </td><td valign="top" width="25%">sql </td><td valign="top" width="25%">SQLite </td><td valign="top" width="25%">sqlite
+   <br></td></tr></table>
+
+   <p>Additional documentation for some languages are at
+<a href="http://orgmode.org/worg/org-contrib/babel/languages.html">http://orgmode.org/worg/org-contrib/babel/languages.html</a>.
+
+   <p>By default, only <code>emacs-lisp</code> is enabled for evaluation.  To enable or
+disable other languages, customize the <code>org-babel-load-languages</code>
+variable either through the Emacs customization interface, or by adding code
+to the init file as shown next:
+
+   <p>In this example, evaluation is disabled for <code>emacs-lisp</code>, and enabled
+for <code>R</code>.
+
+<pre class="lisp">     (org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . nil)
+        (R . t)))
+</pre>
+   <p>Note that this is not the only way to enable a language.  Org also enables
+languages when loaded with <code>require</code> statement.  For example, the
+following enables execution of <code>clojure</code> code blocks:
+
+<pre class="lisp">     (require 'ob-clojure)
+</pre>
+   </body></html>
+

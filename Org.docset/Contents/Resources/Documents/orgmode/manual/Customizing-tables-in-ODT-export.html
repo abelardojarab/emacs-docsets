@@ -1,0 +1,248 @@
+<html lang="en">
+<head>
+<title>Customizing tables in ODT export - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Advanced-topics-in-ODT-export.html#Advanced-topics-in-ODT-export" title="Advanced topics in ODT export">
+<link rel="prev" href="Creating-one_002doff-styles.html#Creating-one_002doff-styles" title="Creating one-off styles">
+<link rel="next" href="Validating-OpenDocument-XML.html#Validating-OpenDocument-XML" title="Validating OpenDocument XML">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Customizing-tables-in-ODT-export"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Validating-OpenDocument-XML.html#Validating-OpenDocument-XML">Validating OpenDocument XML</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Creating-one_002doff-styles.html#Creating-one_002doff-styles">Creating one-off styles</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Advanced-topics-in-ODT-export.html#Advanced-topics-in-ODT-export">Advanced topics in ODT export</a>
+<hr>
+</div>
+
+<h5 class="subsubheading">Customizing tables in ODT export</h5>
+
+<p><a name="index-tables_002c-in-ODT-export-1907"></a>
+<a name="index-g_t_0023_002bATTR_005fODT-1908"></a>You can override the default formatting of the table by specifying a custom
+table style with the <code>#+ATTR_ODT</code> line.  For a discussion on default
+formatting of tables see <a href="Tables-in-ODT-export.html#Tables-in-ODT-export">Tables in ODT export</a>.
+
+   <p>This feature closely mimics the way table templates are defined in the
+OpenDocument-v1.2
+specification.<a rel="footnote" href="Customizing-tables-in-ODT-export.html#fn-1" name="fnd-1"><sup>1</sup></a>
+
+   <p><a name="index-org_002dodt_002dtable_002dstyles-1909"></a>To have a quick preview of this feature, install the below setting and
+export the table that follows:
+
+<pre class="lisp">     (setq org-odt-table-styles
+           (append org-odt-table-styles
+                 '(("TableWithHeaderRowAndColumn" "Custom"
+                     ((use-first-row-styles . t)
+                      (use-first-column-styles . t)))
+                     ("TableWithFirstRowandLastRow" "Custom"
+                      ((use-first-row-styles . t)
+                      (use-last-row-styles . t))))))
+</pre>
+   <pre class="example">     #+ATTR_ODT: :style TableWithHeaderRowAndColumn
+     | Name  | Phone | Age |
+     | Peter |  1234 |  17 |
+     | Anna  |  4321 |  25 |
+</pre>
+   <p>In the above example, you used a template named &lsquo;<samp><span class="samp">Custom</span></samp>&rsquo; and installed
+two table styles with the names &lsquo;<samp><span class="samp">TableWithHeaderRowAndColumn</span></samp>&rsquo; and
+&lsquo;<samp><span class="samp">TableWithFirstRowandLastRow</span></samp>&rsquo;.  (<strong>Important:</strong> The OpenDocument
+styles needed for producing the above template have been pre-defined for
+you.  These styles are available under the section marked &lsquo;<samp><span class="samp">Custom
+Table Template</span></samp>&rsquo; in <samp><span class="file">OrgOdtContentTemplate.xml</span></samp>
+(see <a href="x_002dorgodtcontenttemplate_002dxml.html#x_002dorgodtcontenttemplate_002dxml">Factory styles</a>).  If you need
+additional templates you have to define these styles yourselves.
+
+   <p>To use this feature proceed as follows:
+
+     <ol type=1 start=1>
+<li>Create a table template<a rel="footnote" href="Customizing-tables-in-ODT-export.html#fn-2" name="fnd-2"><sup>2</sup></a>
+
+     <p>A table template is nothing but a set of &lsquo;<samp><span class="samp">table-cell</span></samp>&rsquo; and
+&lsquo;<samp><span class="samp">paragraph</span></samp>&rsquo; styles for each of the following table cell categories:
+
+          <ul>
+<li>Body
+<li>First column
+<li>Last column
+<li>First row
+<li>Last row
+<li>Even row
+<li>Odd row
+<li>Even column
+<li>Odd Column
+</ul>
+
+     <p>The names for the above styles must be chosen based on the name of the table
+template using a well-defined convention.
+
+     <p>The naming convention is better illustrated with an example.  For a table
+template with the name &lsquo;<samp><span class="samp">Custom</span></samp>&rsquo;, the needed style names are listed in
+the following table.
+
+     <p><table summary=""><tr align="left"><th valign="top">Table cell type
+</th><th valign="top"><code>table-cell</code> style
+</th><th valign="top"><code>paragraph</code> style
+<br></th></tr><tr align="left"><td valign="top"></td><td valign="top">
+</td><td valign="top">
+<br></td></tr><tr align="left"><td valign="top">Body
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">First column
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomFirstColumnTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomFirstColumnTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Last column
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomLastColumnTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomLastColumnTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">First row
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomFirstRowTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomFirstRowTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Last row
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomLastRowTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomLastRowTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Even row
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomEvenRowTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomEvenRowTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Odd row
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomOddRowTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomOddRowTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Even column
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomEvenColumnTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomEvenColumnTableParagraph</span></samp>&rsquo;
+<br></td></tr><tr align="left"><td valign="top">Odd column
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomOddColumnTableCell</span></samp>&rsquo;
+</td><td valign="top">&lsquo;<samp><span class="samp">CustomOddColumnTableParagraph</span></samp>&rsquo;
+     <br></td></tr></table>
+
+     <p>To create a table template with the name &lsquo;<samp><span class="samp">Custom</span></samp>&rsquo;, define the above
+styles in the
+<code>&lt;office:automatic-styles&gt;</code>...<code>&lt;/office:automatic-styles&gt;</code> element
+of the content template file (see <a href="x_002dorgodtcontenttemplate_002dxml.html#x_002dorgodtcontenttemplate_002dxml">Factory styles</a>).
+
+     <li>Define a table style<a rel="footnote" href="Customizing-tables-in-ODT-export.html#fn-3" name="fnd-3"><sup>3</sup></a>
+
+     <p><a name="index-org_002dodt_002dtable_002dstyles-1910"></a>To define a table style, create an entry for the style in the variable
+<code>org-odt-table-styles</code> and specify the following:
+
+          <ul>
+<li>the name of the table template created in step (1)
+<li>the set of cell styles in that template that are to be activated
+</ul>
+
+     <p>For example, the entry below defines two different table styles
+&lsquo;<samp><span class="samp">TableWithHeaderRowAndColumn</span></samp>&rsquo; and &lsquo;<samp><span class="samp">TableWithFirstRowandLastRow</span></samp>&rsquo;
+based on the same template &lsquo;<samp><span class="samp">Custom</span></samp>&rsquo;.  The styles achieve their intended
+effect by selectively activating the individual cell styles in that template.
+
+     <pre class="lisp">          (setq org-odt-table-styles
+                (append org-odt-table-styles
+                        '(("TableWithHeaderRowAndColumn" "Custom"
+                           ((use-first-row-styles . t)
+                            (use-first-column-styles . t)))
+                          ("TableWithFirstRowandLastRow" "Custom"
+                           ((use-first-row-styles . t)
+                            (use-last-row-styles . t))))))
+</pre>
+     <li>Associate a table with the table style
+
+     <p>To do this, specify the table style created in step (2) as part of
+the <code>ATTR_ODT</code> line as shown below.
+
+     <pre class="example">          #+ATTR_ODT: :style "TableWithHeaderRowAndColumn"
+          | Name  | Phone | Age |
+          | Peter |  1234 |  17 |
+          | Anna  |  4321 |  25 |
+</pre>
+     </ol>
+
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="Customizing-tables-in-ODT-export.html#fnd-1">1</a>]</small> <a href="http://docs.oasis-open.org/office/v1.2/OpenDocument-v1.2.html">OpenDocument-v1.2 Specification</a></p>
+
+   <p class="footnote"><small>[<a name="fn-2" href="Customizing-tables-in-ODT-export.html#fnd-2">2</a>]</small> See the <code>&lt;table:table-template&gt;</code>
+element of the OpenDocument-v1.2 specification</p>
+
+   <p class="footnote"><small>[<a name="fn-3" href="Customizing-tables-in-ODT-export.html#fnd-3">3</a>]</small> See the attributes <code>table:template-name</code>,
+<code>table:use-first-row-styles</code>, <code>table:use-last-row-styles</code>,
+<code>table:use-first-column-styles</code>, <code>table:use-last-column-styles</code>,
+<code>table:use-banding-rows-styles</code>, and
+<code>table:use-banding-column-styles</code> of the <code>&lt;table:table&gt;</code> element in
+the OpenDocument-v1.2 specification</p>
+
+   <hr></div>
+
+   </body></html>
+

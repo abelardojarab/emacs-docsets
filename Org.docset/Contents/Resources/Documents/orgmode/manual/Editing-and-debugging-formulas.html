@@ -1,0 +1,217 @@
+<html lang="en">
+<head>
+<title>Editing and debugging formulas - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-spreadsheet.html#The-spreadsheet" title="The spreadsheet">
+<link rel="prev" href="Lookup-functions.html#Lookup-functions" title="Lookup functions">
+<link rel="next" href="Updating-the-table.html#Updating-the-table" title="Updating the table">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 9.0.3 (release_9.0.3).
+
+Copyright (C) 2004--2016 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover Texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="../org-manual.css" type="text/css" />
+<script type="text/javascript" src="../org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Editing-and-debugging-formulas"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Updating-the-table.html#Updating-the-table">Updating the table</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Lookup-functions.html#Lookup-functions">Lookup functions</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>
+<hr>
+</div>
+
+<h4 class="subsection">3.5.8 Editing and debugging formulas</h4>
+
+<p><a name="index-formula-editing-386"></a><a name="index-editing_002c-of-table-formulas-387"></a>
+<a name="index-org_002dtable_002duse_002dstandard_002dreferences-388"></a>You can edit individual formulas in the minibuffer or directly in the field. 
+Org can also prepare a special buffer with all active formulas of a table. 
+When offering a formula for editing, Org converts references to the standard
+format (like <code>B3</code> or <code>D&amp;</code>) if possible.  If you prefer to only work
+with the internal format (like <code>@3$2</code> or <code>$4</code>), configure the
+option <code>org-table-use-standard-references</code>.
+
+     
+<a name="index-C_002dc-_003d-389"></a>
+<a name="index-C_002du-C_002dc-_003d-390"></a>
+<a name="index-org_002dtable_002deval_002dformula-391"></a>
+<dl><dt><kbd>C-c =  </kbd><span class="roman">or</span><kbd>  C-u C-c = &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-eval-formula</code><kbd>)</kbd><dd>
+Edit the formula associated with the current column/field in the
+minibuffer.  See <a href="Column-formulas.html#Column-formulas">Column formulas</a>, and <a href="Field-and-range-formulas.html#Field-and-range-formulas">Field and range formulas</a>. 
+<a name="index-C_002du-C_002du-C_002dc-_003d-392"></a><a name="index-org_002dtable_002deval_002dformula-393"></a><br><dt><kbd>C-u C-u C-c = &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-eval-formula</code><kbd>)</kbd><dd>
+Re-insert the active formula (either a
+field formula, or a column formula) into the current field, so that you
+can edit it directly in the field.  The advantage over editing in the
+minibuffer is that you can use the command <kbd>C-c ?</kbd>. 
+<a name="index-C_002dc-_003f-394"></a><a name="index-org_002dtable_002dfield_002dinfo-395"></a><br><dt><kbd>C-c ? &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-field-info</code><kbd>)</kbd><dd>
+While editing a formula in a table field, highlight the field(s)
+referenced by the reference at the cursor position in the formula. 
+<a name="index-C_002dc-_0040_007d-396"></a><a name="index-org_002dtable_002dtoggle_002dcoordinate_002doverlays-397"></a><br><dt><kbd>C-c }</kbd><dd>Toggle the display of row and column numbers for a table, using overlays
+(<samp><span class="command">org-table-toggle-coordinate-overlays</span></samp>).  These are updated each
+time the table is aligned; you can force it with <kbd>C-c C-c</kbd>. 
+<a name="index-C_002dc-_0040_007b-398"></a><a name="index-org_002dtable_002dtoggle_002dformula_002ddebugger-399"></a><br><dt><kbd>C-c {</kbd><dd>Toggle the formula debugger on and off
+(<samp><span class="command">org-table-toggle-formula-debugger</span></samp>).  See below. 
+<a name="index-C_002dc-_0027-400"></a><a name="index-org_002dtable_002dedit_002dformulas-401"></a><br><dt><kbd>C-c ' &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-edit-formulas</code><kbd>)</kbd><dd>
+Edit all formulas for the current table in a special buffer, where the
+formulas will be displayed one per line.  If the current field has an
+active formula, the cursor in the formula editor will mark it. 
+While inside the special buffer, Org will automatically highlight
+any field or range reference at the cursor position.  You may edit,
+remove and add formulas, and use the following commands:
+
+          
+<a name="index-C_002dc-C_002dc-402"></a>
+<a name="index-C_002dx-C_002ds-403"></a>
+<a name="index-org_002dtable_002dfedit_002dfinish-404"></a>
+<dl><dt><kbd>C-c C-c  </kbd><span class="roman">or</span><kbd>  C-x C-s &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-finish</code><kbd>)</kbd><dd>
+Exit the formula editor and store the modified formulas.  With <kbd>C-u</kbd>
+prefix, also apply the new formulas to the entire table. 
+<a name="index-C_002dc-C_002dq-405"></a><a name="index-org_002dtable_002dfedit_002dabort-406"></a><br><dt><kbd>C-c C-q &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-abort</code><kbd>)</kbd><dd>
+Exit the formula editor without installing changes. 
+<a name="index-C_002dc-C_002dr-407"></a><a name="index-org_002dtable_002dfedit_002dtoggle_002dref_002dtype-408"></a><br><dt><kbd>C-c C-r &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-toggle-ref-type</code><kbd>)</kbd><dd>
+Toggle all references in the formula editor between standard (like
+<code>B3</code>) and internal (like <code>@3$2</code>). 
+<a name="index-g_t_0040key_007bTAB_007d-409"></a><a name="index-org_002dtable_002dfedit_002dlisp_002dindent-410"></a><br><dt><kbd>&lt;TAB&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-lisp-indent</code><kbd>)</kbd><dd>
+Pretty-print or indent Lisp formula at point.  When in a line containing
+a Lisp formula, format the formula according to Emacs Lisp rules. 
+Another &lt;TAB&gt; collapses the formula back again.  In the open
+formula, &lt;TAB&gt; re-indents just like in Emacs Lisp mode. 
+<a name="index-M_002d_0040key_007bTAB_007d-411"></a><a name="index-lisp_002dcomplete_002dsymbol-412"></a><br><dt><kbd>M-&lt;TAB&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>lisp-complete-symbol</code><kbd>)</kbd><dd>
+Complete Lisp symbols, just like in Emacs Lisp mode. 
+<a name="index-S_002d_0040key_007bup_007d-413"></a><a name="index-S_002d_0040key_007bdown_007d-414"></a><a name="index-S_002d_0040key_007bleft_007d-415"></a><a name="index-S_002d_0040key_007bright_007d-416"></a><a name="index-org_002dtable_002dfedit_002dref_002dup-417"></a><a name="index-org_002dtable_002dfedit_002dref_002ddown-418"></a><a name="index-org_002dtable_002dfedit_002dref_002dleft-419"></a><a name="index-org_002dtable_002dfedit_002dref_002dright-420"></a><br><dt><kbd>S-&lt;up&gt;/&lt;down&gt;/&lt;left&gt;/&lt;right&gt;</kbd><dd>Shift the reference at point.  For example, if the reference is
+<code>B3</code> and you press <kbd>S-&lt;right&gt;</kbd>, it will become <code>C3</code>. 
+This also works for relative references and for hline references. 
+<a name="index-M_002dS_002d_0040key_007bup_007d-421"></a><a name="index-M_002dS_002d_0040key_007bdown_007d-422"></a><a name="index-org_002dtable_002dfedit_002dline_002dup-423"></a><a name="index-org_002dtable_002dfedit_002dline_002ddown-424"></a><br><dt><kbd>M-S-&lt;up&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-line-up</code><kbd>)</kbd><dt><kbd>M-S-&lt;down&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-line-down</code><kbd>)</kbd><dd>
+Move the test line for column formulas in the Org buffer up and
+down. 
+<a name="index-M_002d_0040key_007bup_007d-425"></a><a name="index-M_002d_0040key_007bdown_007d-426"></a><a name="index-org_002dtable_002dfedit_002dscroll_002ddown-427"></a><a name="index-org_002dtable_002dfedit_002dscroll_002dup-428"></a><br><dt><kbd>M-&lt;up&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-scroll-down</code><kbd>)</kbd><dt><kbd>M-&lt;down&gt; &nbsp;&nbsp;&nbsp;&nbsp;(</kbd><code>org-table-fedit-scroll-up</code><kbd>)</kbd><dd>
+Scroll the window displaying the table. 
+<a name="index-C_002dc-_0040_007d-429"></a><a name="index-org_002dtable_002dtoggle_002dcoordinate_002doverlays-430"></a><br><dt><kbd>C-c }</kbd><dd>Turn the coordinate grid in the table on and off. 
+</dl>
+     </dl>
+
+   <p>Making a table field blank does not remove the formula associated with
+the field, because that is stored in a different line (the &lsquo;<samp><span class="samp">#+TBLFM</span></samp>&rsquo;
+line)&mdash;during the next recalculation the field will be filled again. 
+To remove a formula from a field, you have to give an empty reply when
+prompted for the formula, or to edit the &lsquo;<samp><span class="samp">#+TBLFM</span></samp>&rsquo; line.
+
+   <p><a name="index-C_002dc-C_002dc-431"></a>You may edit the &lsquo;<samp><span class="samp">#+TBLFM</span></samp>&rsquo; directly and re-apply the changed
+equations with <kbd>C-c C-c</kbd> in that line or with the normal
+recalculation commands in the table.
+
+   <p><a name="Using-multiple-_0023_002bTBLFM-lines"></a>
+
+<h5 class="subsubheading">Using multiple #+TBLFM lines</h5>
+
+<p><a name="index-g_t_0023_002bTBLFM-line_002c-multiple-432"></a><a name="index-g_t_0023_002bTBLFM-433"></a><a name="index-g_t_0023_002bTBLFM_002c-switching-434"></a><a name="index-C_002dc-C_002dc-435"></a>
+You may apply the formula temporarily.  This is useful when you
+switch the formula.  Place multiple &lsquo;<samp><span class="samp">#+TBLFM</span></samp>&rsquo; lines right
+after the table, and then press <kbd>C-c C-c</kbd> on the formula to
+apply.  Here is an example:
+
+<pre class="example">     | x | y |
+     |---+---|
+     | 1 |   |
+     | 2 |   |
+     #+TBLFM: $2=$1*1
+     #+TBLFM: $2=$1*2
+</pre>
+   <p class="noindent">Pressing <kbd>C-c C-c</kbd> in the line of &lsquo;<samp><span class="samp">#+TBLFM: $2=$1*2</span></samp>&rsquo; yields:
+
+<pre class="example">     | x | y |
+     |---+---|
+     | 1 | 2 |
+     | 2 | 4 |
+     #+TBLFM: $2=$1*1
+     #+TBLFM: $2=$1*2
+</pre>
+   <p class="noindent">Note: If you recalculate this table (with <kbd>C-u C-c *</kbd>, for example), you
+will get the following result of applying only the first &lsquo;<samp><span class="samp">#+TBLFM</span></samp>&rsquo; line.
+
+<pre class="example">     | x | y |
+     |---+---|
+     | 1 | 1 |
+     | 2 | 2 |
+     #+TBLFM: $2=$1*1
+     #+TBLFM: $2=$1*2
+</pre>
+   <h5 class="subsubheading">Debugging formulas</h5>
+
+<p><a name="index-formula-debugging-436"></a><a name="index-debugging_002c-of-table-formulas-437"></a>When the evaluation of a formula leads to an error, the field content
+becomes the string &lsquo;<samp><span class="samp">#ERROR</span></samp>&rsquo;.  If you would like see what is going
+on during variable substitution and calculation in order to find a bug,
+turn on formula debugging in the <code>Tbl</code> menu and repeat the
+calculation, for example by pressing <kbd>C-u C-u C-c = &lt;RET&gt;</kbd> in a
+field.  Detailed information will be displayed.
+
+   </body></html>
+
